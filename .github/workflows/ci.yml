@@ -73,6 +73,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-15]
+        sanitizer: [""]
         include:
           - os: ubuntu-latest
             sanitizer: address
@@ -87,7 +88,7 @@ jobs:
       - if: runner.os != 'Windows' && matrix.sanitizer != 'address'
         run: cmake -S hail-source -B hail-build -DCMAKE_BUILD_TYPE=Release -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DHA_BACKEND_ALSA=OFF -DHA_BACKEND_PIPEWIRE=OFF
       - if: matrix.sanitizer == 'address'
-        run: cmake -S hail-source -B hail-build -DCMAKE_C_COMPILER=clang -DHA_SANITIZER=address -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF
+        run: cmake -S hail-source -B hail-build -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DHA_SANITIZER=address -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF
       - if: runner.os == 'Windows'
         run: cmake -S hail-source -B hail-build -T ClangCL -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF
       - run: cmake --build hail-build --config Release --parallel
@@ -95,13 +96,13 @@ jobs:
       - if: matrix.sanitizer != 'address'
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_HAIL=ON -DBF_WITH_SPEEXDSP=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - if: matrix.sanitizer == 'address'
-        run: cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DBF_SANITIZER=address -DBF_WITH_HAIL=ON -DBF_WITH_SPEEXDSP=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DBF_SANITIZER=address -DBF_WITH_HAIL=ON -DBF_WITH_SPEEXDSP=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - run: cmake --build build --config Release --parallel
       - run: cmake --install build --config Release --prefix "${{ github.workspace }}/installed"
       - if: matrix.sanitizer != 'address'
         run: cmake -S examples/hail-consumer -B consumer -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - if: matrix.sanitizer == 'address'
-        run: cmake -S examples/hail-consumer -B consumer -DCMAKE_C_COMPILER=clang -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+        run: cmake -S examples/hail-consumer -B consumer -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - run: cmake --build consumer --config Release --parallel
       - run: ctest --test-dir consumer -C Release --output-on-failure
   fuzz-analysis:
