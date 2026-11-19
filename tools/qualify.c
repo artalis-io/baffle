@@ -1,0 +1,199 @@
+/* Offline WAV qualification. File access and allocation occur outside DSP calls.
+ * Input files must be independently aligned and have documented provenance. */
+#include <baffle.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
+#include <math.h>
+typedef struct wav {
+    uint32_t rate, channels, frames;
+    float *pcm;
+} wav;
+static FILE *open_file(const char *path, const char *mode)
+{
+#ifdef _MSC_VER
+    FILE *f = NULL;
+    if (fopen_s(&f, path, mode))
+        return NULL;
+    return f;
+#else
+    return fopen(path, mode);
+#endif
+}
+static void fail(const char *s)
+{
+    fprintf(stderr, "%s\n", s);
+    exit(1);
+}
+static uint32_t u32(const unsigned char *p)
+{
+    return (uint32_t)p[0] | (uint32_t)p[1] << 8 | (uint32_t)p[2] << 16 | (uint32_t)p[3] << 24;
+}
+static uint32_t u16(const unsigned char *p)
+{
+    return (uint32_t)p[0] | (uint32_t)p[1] << 8;
+}
+static wav load(const char *path)
+{
+    FILE *f = open_file(path, "rb");
+    if (!f)
+        fail("cannot open WAV");
+    if (fseek(f, 0, SEEK_END))
+        fail("seek");
+    long length = ftell(f);
+    if (length < 44 || length > 256 * 1024 * 1024)
+        fail("WAV size limit 256 MiB");
+    rewind(f);
+    unsigned char *p = malloc((size_t)length);
+    if (!p || fread(p, 1, (size_t)length, f) != (size_t)length)
+        fail("read");
+    fclose(f);
+    if (memcmp(p, "RIFF", 4) || memcmp(p + 8, "WAVE", 4) || u32(p + 4) != (uint32_t)length - 8)
+        fail("expected RIFF WAVE");
+    uint32_t rate = 0, ch = 0;
+    const unsigned char *pcm = NULL;
+    size_t bytes = 0;
+    for (size_t i = 12; i + 8 <= (size_t)length;) {
+        uint32_t n = u32(p + i + 4);
+        if (n > (size_t)length - i - 8)
+            fail("invalid WAV chunk");
+        if (!memcmp(p + i, "fmt ", 4)) {
+            if (n < 16 || u16(p + i + 8) != 1 || u16(p + i + 22) != 16)
+                fail("only PCM16 WAV supported");
+            ch = u16(p + i + 10);
+            rate = u32(p + i + 12);
+            if (ch < 1 || ch > 2 || u16(p + i + 20) != ch * 2)
+                fail("mono/stereo only");
+        }
+        if (!memcmp(p + i, "data", 4)) {
+            pcm = p + i + 8;
+            bytes = n;
+        }
+        i += 8 + (size_t)n + (n & 1u);
+    }
+    if (!rate || !ch || !pcm || bytes % (ch * 2u) || rate < 8000 || rate > 48000 || rate % 100)
+        fail("unsupported WAV format");
+    wav w = {rate, ch, (uint32_t)(bytes / (ch * 2u)), NULL};
+    w.pcm = malloc((size_t)w.frames * ch * sizeof(float));
+    if (!w.pcm)
+        fail("allocation");
+    for (size_t i = 0; i < (size_t)w.frames * ch; ++i) {
+        uint32_t v = u16(pcm + 2 * i);
+        int32_t s = v >= 32768 ? (int32_t)v - 65536 : (int32_t)v;
+        w.pcm[i] = (float)s / 32768;
+    }
+    free(p);
+    return w;
+}
+static void put(FILE *f, uint32_t v, uint32_t bytes)
+{
+    for (uint32_t i = 0; i < bytes; ++i)
+        if (fputc((int)((v >> (8 * i)) & 255u), f) == EOF)
+            fail("write");
+}
+int main(int argc, char **argv)
+{
+    if (argc != 4 && argc != 6) {
+        fprintf(stderr, "usage: baffle_qualify capture.wav aligned-reference.wav output.wav "
+                        "[far_only_first_frame far_only_frames]\n");
+        return 2;
+    }
+    wav a = load(argv[1]), r = load(argv[2]);
+    if (a.rate != r.rate || a.frames != r.frames || !a.frames)
+        fail("files require identical rate, length and independently established alignment");
+    uint64_t first = 0, count = 0;
+    if (argc == 6) {
+        first = strtoull(argv[4], NULL, 10);
+        count = strtoull(argv[5], NULL, 10);
+        if (!count || first > a.frames || count > a.frames - first)
+            fail("invalid annotated far-only interval");
+    }
+    bf_aec_config c = BF_INIT(bf_aec_config);
+    c.sample_rate = a.rate;
+    c.frame_frames = a.rate / 100;
+    c.capture_channels = a.channels;
+    c.reference_channels = r.channels;
+    c.tail_ms = 200;
+    c.backend = BF_AEC_SPEEXDSP;
+    size_t bytes;
+    if (bf_aec_size(&c, &bytes) != BF_OK)
+        fail("enable BF_WITH_SPEEXDSP for qualification");
+    unsigned char *raw = malloc(bytes + BF_ALIGNMENT);
+    if (!raw)
+        fail("allocation");
+    void *p = (void *)(((uintptr_t)raw + BF_ALIGNMENT - 1u) & ~(uintptr_t)(BF_ALIGNMENT - 1u));
+    bf_aec *s;
+    if (bf_aec_init(p, bytes, &c, &s) != BF_OK)
+        fail("AEC init");
+    float near[960 * 2], far[960 * 2], out[960 * 2];
+    bf_audio_timing nt = BF_INIT(bf_audio_timing), ft = BF_INIT(bf_audio_timing);
+    nt.stream_id = 1;
+    ft.stream_id = 2;
+    nt.clock_domain = 1;
+    ft.clock_domain = 2;
+    nt.epoch = ft.epoch = 1;
+    nt.uncertainty_ns = ft.uncertainty_ns = UINT64_MAX;
+    FILE *f = open_file(argv[3], "wb");
+    if (!f)
+        fail("output open");
+    uint32_t data_bytes = a.frames * a.channels * 2u;
+    fwrite("RIFF", 1, 4, f);
+    put(f, 36 + data_bytes, 4);
+    fwrite("WAVEfmt ", 1, 8, f);
+    put(f, 16, 4);
+    put(f, 1, 2);
+    put(f, a.channels, 2);
+    put(f, a.rate, 4);
+    put(f, a.rate * a.channels * 2, 4);
+    put(f, a.channels * 2, 2);
+    put(f, 16, 2);
+    fwrite("data", 1, 4, f);
+    put(f, data_bytes, 4);
+    double input_energy = 0, output_energy = 0;
+    for (uint32_t pos = 0; pos < a.frames; pos += c.frame_frames) {
+        uint32_t n = a.frames - pos;
+        if (n > c.frame_frames)
+            n = c.frame_frames;
+        memset(near, 0, sizeof(near));
+        memset(far, 0, sizeof(far));
+        memcpy(near, a.pcm + (size_t)pos * a.channels, (size_t)n * a.channels * sizeof(float));
+        memcpy(far, r.pcm + (size_t)pos * r.channels, (size_t)n * r.channels * sizeof(float));
+        nt.frame_position = ft.frame_position = pos;
+        bf_aec_info info = BF_INIT(bf_aec_info);
+        if (bf_aec_process(s, near, &nt, far, &ft, out, &info) != BF_OK)
+            fail("AEC process");
+        for (uint32_t i = 0; i < n; ++i)
+            for (uint32_t ch = 0; ch < a.channels; ++ch) {
+                size_t j = (size_t)i * a.channels + ch;
+                float x = out[j];
+                if (!isfinite(x))
+                    fail("nonfinite output");
+                int32_t v = x >= 32767.0f / 32768 ? 32767
+                            : x <= -1             ? -32768
+                                                  : (int32_t)lrintf(x * 32768);
+                put(f, (uint32_t)(uint16_t)v, 2);
+                if (pos + i >= first && (uint64_t)(pos + i) - first < count) {
+                    input_energy += (double)near[j] * near[j];
+                    output_energy += (double)x * x;
+                }
+            }
+    }
+    if (fclose(f))
+        fail("output close");
+    if (bf_aec_deinit(s) != BF_OK)
+        fail("deinit");
+    free(raw);
+    free(a.pcm);
+    free(r.pcm);
+    printf("rate=%u capture_channels=%u reference_channels=%u real_frames=%u workspace_bytes=%zu\n",
+           a.rate, a.channels, r.channels, a.frames, bytes);
+    if (count && input_energy > 0 && output_energy > 0)
+        printf("annotated_far_only_erle_db=%.4f interval_first=%llu interval_frames=%llu\n",
+               10 * log10(input_energy / output_energy), (unsigned long long)first,
+               (unsigned long long)count);
+    else
+        puts("ERLE unavailable: supply an independently annotated far-only interval with nonzero "
+             "energy");
+    return 0;
+}

@@ -293,13 +293,15 @@ bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const b
         value.flags |= value.aec.flags;
     }
     bf_audio_timing timing = in->timing;
+    timing.flags |= value.flags & (BF_AUDIO_SANITIZED | BF_AUDIO_CLIPPED);
     if (s->noise) {
         r = bf_noise_process(s->noise, s->work, s->work, s->activity);
         if (r != BF_OK)
             return r;
         value.priming = !s->metadata_valid;
+        bf_audio_timing next = timing;
         timing = s->delayed;
-        s->delayed = in->timing;
+        s->delayed = next;
         s->metadata_valid = 1;
     }
     s->last = in->timing;

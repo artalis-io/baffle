@@ -65,7 +65,10 @@ jobs:
           repository: artalis-io/hail
           ref: 7ef6142ba4b8c8be15d1e7d704502db01abc5113
           path: hail-source
-      - run: cmake -S hail-source -B hail-build -DCMAKE_BUILD_TYPE=Release -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DHA_ENABLE_ALSA=OFF -DHA_ENABLE_PIPEWIRE=OFF
+      - if: runner.os != 'Windows'
+        run: cmake -S hail-source -B hail-build -DCMAKE_BUILD_TYPE=Release -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DHA_BACKEND_ALSA=OFF -DHA_BACKEND_PIPEWIRE=OFF
+      - if: runner.os == 'Windows'
+        run: cmake -S hail-source -B hail-build -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DCMAKE_C_FLAGS=/experimental:c11atomics
       - run: cmake --build hail-build --config Release --parallel
       - run: cmake --install hail-build --config Release --prefix "${{ github.workspace }}/installed"
       - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_HAIL=ON -DBF_WITH_SPEEXDSP=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
