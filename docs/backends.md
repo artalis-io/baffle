@@ -46,8 +46,9 @@ channels, 40..500 ms tails. Multichannel delay readback is unsupported because
 the pinned upstream impulse-response accessor is not multichannel-safe. Mono
 readback reports the dominant adapted tap, not measured hardware latency.
 
-Its BSD-style COPYING is installed as `SpeexDSP-COPYING`; upstream per-file
-copyright/license notices remain in the pinned source. Baffle's MIT license
+Its pinned BSD-style COPYING is installed as `SpeexDSP-COPYING`; per-file
+copyright/license comments also ship in `SpeexDSP-source-notices.txt`, including
+the older smallft attribution. Notices remain in the pinned source. Baffle's MIT license
 does not relicense Speex. WebRTC BSD/PATENTS were evaluated, but no WebRTC code
 is integrated. Neural NS/VAD, explicit SIMD and beamforming remain unimplemented.
 Compiler auto-vectorization may occur in optimized scalar C builds; no runtime

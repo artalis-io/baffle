@@ -4,3 +4,6 @@ adapted from Hail (https://github.com/artalis-io/hail), Copyright (c) 2026
 Artalis, MIT. Its applicable license notice is retained in LICENSE.
 No Hail audio device implementation is incorporated into Baffle.
 Third-party algorithm backends retain their own licenses; see docs/backends.md.
+Speex-enabled binary packages install SpeexDSP-COPYING and
+SpeexDSP-source-notices.txt, including individual MDF/FFT/header notices
+and OggVorbis smallft attribution (1994-2001 XIPHOPHORUS Company).
