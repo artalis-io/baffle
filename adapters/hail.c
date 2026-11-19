@@ -571,6 +571,7 @@ bf_result bf_hail_adapter_flush(bf_hail_adapter *s, bf_audio_buffer *out, bf_pro
     if (out->format.channels != c || out->format.sample_rate != s->config.pipeline.sample_rate)
         return BF_ERROR_UNSUPPORTED;
     s->flushing = 1;
+    uint32_t consumed = 0, flags = 0, discarded = 0;
     /* At most two pending capture blocks plus the noise overlap tail. A
        priming result is internal: zero frames means fully drained to callers. */
     for (uint32_t step = 0; step < 3; ++step) {
@@ -609,11 +610,18 @@ bf_result bf_hail_adapter_flush(bf_hail_adapter *s, bf_audio_buffer *out, bf_pro
                 out->frames = s->delayed_valid_frames;
             s->delayed_valid_frames = 0;
         }
+        consumed += info->consumed_frames;
+        flags |= info->flags;
+        discarded += info->discarded_frames;
         if (out->frames || (!s->capture_count && !s->delayed_valid_frames))
             break;
     }
+    info->consumed_frames = consumed;
+    info->flags |= flags;
+    info->discarded_frames = discarded;
     info->algorithmic_delay_frames += s->capture_delay;
     count(&s->status.processed_frames, out->frames);
+    count(&s->status.discarded_capture_frames, discarded);
     return BF_OK;
 }
 bf_result bf_hail_adapter_status(const bf_hail_adapter *s, bf_hail_status *out)

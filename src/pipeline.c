@@ -183,10 +183,12 @@ static bf_result finish(bf_pipeline *s, bf_audio_buffer *out, bf_process_info *i
 {
     bf_result r;
     uint32_t f = s->config.frame_frames, c = s->config.channels;
+    uint32_t output_flags = 0;
     for (size_t i = 0; i < (size_t)f * c; ++i) {
         if (fabsf(s->work[i]) > 16) {
             s->work[i] = fmaxf(-16, fminf(16, s->work[i]));
             info->flags |= BF_AUDIO_CLIPPED;
+            output_flags |= BF_AUDIO_CLIPPED;
         }
     }
     if (s->agc) {
@@ -201,10 +203,16 @@ static bf_result finish(bf_pipeline *s, bf_audio_buffer *out, bf_process_info *i
         s->activity = info->vad.probability;
     }
     for (uint32_t i = 0; i < f; ++i)
-        for (uint32_t j = 0; j < c; ++j)
+        for (uint32_t j = 0; j < c; ++j) {
+            float x = s->work[(size_t)i * c + j];
+            if (out->format.sample_format == BF_PCM_S16 && (x > 32767.0f / 32768.0f || x < -1))
+                output_flags |= BF_AUDIO_CLIPPED;
             baffle_store(out, i, j, s->work[(size_t)i * c + j]);
+        }
     out->frames = f;
     baffle_record(&out->timing, timing, sizeof(*timing));
+    out->timing.flags |= output_flags;
+    info->flags |= output_flags;
     return BF_OK;
 }
 bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const bf_audio_buffer *ref,

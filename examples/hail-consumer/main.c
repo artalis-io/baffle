@@ -265,6 +265,7 @@ static void scenario(uint32_t rate, uint32_t playback_rate, uint32_t channels,
         pump(a, rate, channels, !aec);
     tail = output(rate, channels);
     CHECK(bf_hail_adapter_flush(a, &tail, &tail_info) == BF_OK && tail.frames == 17);
+    CHECK(tail_info.consumed_frames == 17 && (tail_info.flags & BF_AUDIO_PADDING));
     CHECK(tail.timing.stream_id == reopened.stream_id && tail.timing.frame_position == 0);
     CHECK(tail.timing.flags & BF_AUDIO_PADDING);
     if (!aec)

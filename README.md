@@ -12,8 +12,38 @@ cmake --install build --prefix /your/prefix
 ```
 
 Installed consumers use `find_package(Baffle 0.1.0 EXACT CONFIG REQUIRED)` and
-`Baffle::baffle`. ABI 0.1 is provisional. Foundation is implemented; DSP gates
-are tracked in [verification](docs/verification.md), not implied by this README.
+`Baffle::baffle`. ABI 0.1 is provisional. Static and shared builds are supported
+(`-DBF_BUILD_SHARED=ON`). Set `BF_BUILD_TESTS=OFF` for a C-only build; the session
+stress test uses C++ threads. The library creates no background threads.
+
+Implemented: streaming windowed-sinc resampling and smooth drift adjustment,
+channel matrices/delays, linked AGC/limiting, classical VAD, spectral noise
+suppression, and optional mature SpeexDSP AEC. All processors use caller-owned
+storage, without heap allocation, locks, I/O or worker waits during processing.
+
+Enable the reviewed, pinned CPU AEC explicitly:
+
+```sh
+cmake -S . -B build-aec -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON
+cmake --build build-aec --parallel
+ctest --test-dir build-aec --output-on-failure
+```
+
+This option fetches SpeexDSP 1.2.1 at a pinned commit. Offline builds can supply
+`BF_SPEEXDSP_SOURCE_DIR`; selected files must match reviewed hashes. Default
+builds need no network. No GPU backend is implemented.
+
+See the independent [installed PCM consumer](examples/pcm-pipeline), optional
+[installed-Hail consumer](examples/hail-consumer), [API contract](docs/api.md),
+[architecture](docs/architecture.md), [backend assessment](docs/backends.md),
+[measurements](docs/performance.md), and [gate evidence](docs/verification.md).
+`BF_WITH_HAIL=ON` builds separate `Baffle::hail_adapter` against installed Hail.
+The core neither includes nor links Hail.
+
+Speech conditioning and AEC have deterministic synthetic evidence. Recorded-speech
+quality, physical acoustic behavior, device timing and audible interruption tails
+remain unqualified. **This working DSP implementation is not a production-readiness
+certification.** See [qualification](docs/qualification.md) for the remaining work.
 
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.

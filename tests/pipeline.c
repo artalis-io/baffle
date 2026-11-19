@@ -102,6 +102,13 @@ int main(void)
             ++in.timing.epoch;
             CHECK(bf_pipeline_process(s, &in, NULL, &out, &info) == BF_OK);
             CHECK(info.discarded_frames == ((mask & BF_STAGE_NOISE) ? 160u : 0u));
+            if (!mask) {
+                capture[0] = 2;
+                out.format.sample_format = BF_PCM_S16;
+                CHECK(bf_pipeline_process(s, &in, NULL, &out, &info) == BF_OK);
+                CHECK((info.flags & BF_AUDIO_CLIPPED) && (out.timing.flags & BF_AUDIO_CLIPPED));
+                capture[0] = 0;
+            }
             CHECK(bf_pipeline_deinit(s) == BF_OK);
             CHECK(bf_pipeline_process(s, &in, &ref, &out, &info) == BF_ERROR_INVALID);
             free(base);
