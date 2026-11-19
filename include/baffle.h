@@ -215,6 +215,35 @@ BF_API bf_result bf_aec_process(bf_aec *aec,const float *capture,const bf_audio_
 BF_API bf_result bf_aec_estimate_delay(bf_aec *aec,uint32_t *delay_frames);
 /* No free: retires backend, then caller may release its own storage. */
 BF_API bf_result bf_aec_deinit(bf_aec *aec);
+#define BF_STAGE_AEC 1u
+#define BF_STAGE_NOISE 2u
+#define BF_STAGE_AGC 4u
+#define BF_STAGE_VAD 8u
+#define BF_STAGE_ALL 15u
+typedef struct bf_pipeline bf_pipeline;
+typedef struct bf_pipeline_config {
+    uint32_t struct_size,struct_version;
+    uint32_t sample_rate,channels,reference_channels,frame_frames,stages,aec_tail_ms,nonfinite_policy;
+    float noise_strength_db,agc_target_dbfs;
+} bf_pipeline_config;
+typedef struct bf_process_info {
+    uint32_t struct_size,struct_version;
+    uint32_t flags,priming,algorithmic_delay_frames,consumed_frames;
+    bf_vad_info vad;
+    bf_level_info level;
+    bf_aec_info aec; /* reference admitted THIS call, not a delayed-output receipt */
+} bf_process_info;
+BF_API bf_result bf_pipeline_size(const bf_pipeline_config *config,size_t *bytes);
+BF_API bf_result bf_pipeline_init(void *storage,size_t bytes,const bf_pipeline_config *config,bf_pipeline **out);
+/* Stage order AEC -> spectral NS -> AGC -> VAD; no hidden inter-stage queue.
+ * Fixed frame_frames input. Output format/rate/channel count must match capture
+ * except S16/F32/layout conversion. NS emits zero frames on its first call;
+ * subsequent output keeps the preceding input's real timing, never fake time. */
+BF_API bf_result bf_pipeline_process(bf_pipeline *pipeline,const bf_audio_buffer *capture,
+                                    const bf_audio_buffer *aligned_reference,bf_audio_buffer *output,bf_process_info *info);
+BF_API bf_result bf_pipeline_reset(bf_pipeline *pipeline,uint32_t stage_mask);
+BF_API bf_result bf_pipeline_flush(bf_pipeline *pipeline,bf_audio_buffer *output,bf_process_info *info);
+BF_API bf_result bf_pipeline_deinit(bf_pipeline *pipeline);
 #ifdef __cplusplus
 }
 #endif
