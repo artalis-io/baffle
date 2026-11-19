@@ -25,6 +25,17 @@ int main(void)
     t.host_time_ns=UINT64_MAX; CHECK(bf_timing_advance(&t,48,48000,&out.timing)==BF_ERROR_OVERFLOW);
     in.format.channels=33; CHECK(bf_pcm_validate(&in)==BF_ERROR_INVALID);
     {
+        bf_channel_delay *d; size_t bytes; uint32_t delays[]={0,2};
+        float samples[]={1,10,2,20,3,30,4,40},result[8];
+        CHECK(bf_channel_delay_size(2,2,&bytes)==BF_OK);
+        unsigned char *raw=malloc(bytes+BF_ALIGNMENT); CHECK(raw);
+        void *p=(void *)(((uintptr_t)raw+BF_ALIGNMENT-1u)&~(uintptr_t)(BF_ALIGNMENT-1u));
+        CHECK(bf_channel_delay_init(p,bytes,2,2,delays,&d)==BF_OK);
+        CHECK(bf_channel_delay_process(d,samples,result,4)==BF_OK);
+        CHECK(result[0]==1 && result[1]==0 && result[3]==0 && result[5]==10 && result[7]==20);
+        CHECK(bf_channel_delay_reset(d)==BF_OK); free(raw);
+    }
+    {
         unsigned char *memory=malloc(bf_clock_tracker_size()+BF_ALIGNMENT); bf_clock_tracker *tracker;
         void *aligned=(void *)(((uintptr_t)memory+BF_ALIGNMENT-1u)&~(uintptr_t)(BF_ALIGNMENT-1u));
         bf_clock_estimate e=BF_INIT(bf_clock_estimate);
