@@ -96,6 +96,32 @@ int main(void)
         energy += (double)whole[i] * whole[i];
     printf("SRC 48->16k 12kHz stopband_db=%.3f\n", 10 * log10(energy / (n - 1000) / .125));
     CHECK(energy / (n - 1000) / .125 < 1e-8);
+    {
+        const double tones[] = {100, 1000, 3000, 6000, 9000, 12000, 18000};
+        const uint32_t inputs[] = {44100, 48000};
+        for (unsigned rate = 0; rate < 2; ++rate)
+            for (unsigned tone = 0; tone < 7; ++tone) {
+                double frequency = tones[tone];
+                for (unsigned i = 0; i < 48000; ++i)
+                    input[i] = (float)(.5 * sin(2 * pi * frequency * i / inputs[rate]));
+                n = run(inputs[rate], 16000, 0, 0, whole);
+                double measured = 0, expected = 0;
+                for (unsigned i = 1000; i < n; ++i) {
+                    measured += (double)whole[i] * whole[i];
+                    double oracle =
+                        .5 * sin(2 * pi * frequency * ((double)i * inputs[rate] / 16000 - 95.5) /
+                                 inputs[rate]);
+                    expected += oracle * oracle;
+                }
+                double ratio = measured / expected;
+                printf("SRC %u->16000 tone %.0f gain_db=%.3f\n", inputs[rate], frequency,
+                       10 * log10(ratio));
+                if (frequency <= 6000)
+                    CHECK(ratio > .98 && ratio < 1.02);
+                else
+                    CHECK(ratio < 1e-6);
+            }
+    }
     for (unsigned i = 0; i < 48000; ++i)
         input[i] = (float)(.25 * sin(2 * pi * 700 * i / 16000));
     n = run(16000, 48000, 0, 1000, whole);
@@ -103,6 +129,46 @@ int main(void)
     CHECK(m == n && n < 144000 && n > 143800 && !memcmp(whole, split, n * sizeof(float)));
     n = run(16000, 48000, 1, -1000, whole);
     CHECK(n > 144000 && n < 144200);
+    /* Additional nominal rates and extreme downsampling retain exact accounting
+       and agree bit-for-bit across arbitrary input/output boundaries. */
+    const uint32_t rates[][2] = {
+        {44100, 16000}, {48000, 44100}, {96000, 16000}, {192000, 8000}, {8000, 16000}};
+    for (size_t pair = 0; pair < sizeof(rates) / sizeof(rates[0]); ++pair) {
+        uint32_t ir = rates[pair][0], out_rate = rates[pair][1];
+        for (unsigned i = 0; i < 48000; ++i)
+            input[i] = (float)(.25 * sin(2 * pi * 700 * i / ir));
+        n = run(ir, out_rate, 0, 0, whole);
+        m = run(ir, out_rate, 1, 0, split);
+        CHECK(n == (uint32_t)(((uint64_t)48000 * out_rate + ir - 1) / ir));
+        CHECK(n == m && !memcmp(whole, split, n * sizeof(float)));
+        for (unsigned i = 0; i < n; ++i)
+            CHECK(isfinite(whole[i]) && fabsf(whole[i]) < .3f);
+    }
     puts("SRC accounting, chunk invariance, drift, nonfinite rejection, flush and reset passed");
+    {
+        bf_resampler_config c = BF_INIT(bf_resampler_config);
+        c.input_rate = 16000;
+        c.output_rate = 48000;
+        c.channels = 32;
+        c.max_input_frames = 160;
+        size_t bytes;
+        CHECK(bf_resampler_size(&c, &bytes) == BF_OK);
+        unsigned char *raw = malloc(bytes + BF_ALIGNMENT);
+        CHECK(raw);
+        void *memory =
+            (void *)(((uintptr_t)raw + BF_ALIGNMENT - 1u) & ~(uintptr_t)(BF_ALIGNMENT - 1u));
+        bf_resampler *s;
+        CHECK(bf_resampler_init(memory, bytes, &c, &s) == BF_OK);
+        float source[160 * 32] = {0}, result[512 * 32];
+        for (unsigned ch = 0; ch < 32; ++ch)
+            source[ch] = 1.0f / (float)(ch + 1);
+        bf_resample_info info = BF_INIT(bf_resample_info);
+        CHECK(bf_resampler_process(s, source, 160, result, 512, &info) == BF_OK);
+        CHECK(info.consumed == 160 && info.produced == 480);
+        for (unsigned i = 0; i < info.produced; ++i)
+            for (unsigned ch = 0; ch < 32; ++ch)
+                CHECK(fabsf(result[i * 32 + ch] * (float)(ch + 1) - result[i * 32]) < 2e-7f);
+        free(raw);
+    }
     return 0;
 }
