@@ -111,6 +111,20 @@ int main(void)
             }
             CHECK(bf_pipeline_deinit(s) == BF_OK);
             CHECK(bf_pipeline_process(s, &in, &ref, &out, &info) == BF_ERROR_INVALID);
+            c.nonfinite_policy = BF_NONFINITE_ZERO;
+            CHECK(bf_pipeline_init(memory, bytes, &c, &s) == BF_OK);
+            out.format.sample_format = BF_PCM_F32;
+            capture[0] = INFINITY;
+            reference[0] = -INFINITY;
+            CHECK(bf_pipeline_process(s, &in, &ref, &out, &info) == BF_OK);
+            CHECK(info.flags & BF_AUDIO_SANITIZED);
+            if (!out.frames)
+                CHECK(bf_pipeline_flush(s, &out, &info) == BF_OK);
+            CHECK(out.frames == 160 && (out.timing.flags & BF_AUDIO_SANITIZED));
+            for (unsigned i = 0; i < out.frames * channels; ++i)
+                CHECK(isfinite(output[i]));
+            capture[0] = reference[0] = 0;
+            CHECK(bf_pipeline_deinit(s) == BF_OK);
             free(base);
         }
     puts("Pipeline stage combinations, channels, timing, exact EOS drain, reset and missing "

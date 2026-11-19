@@ -13,6 +13,14 @@ static void session(unsigned id)
     c.reference_channels = 1;
     c.frame_frames = 160;
     c.stages = BF_STAGE_NOISE | BF_STAGE_AGC | BF_STAGE_VAD;
+    bf_library_info library = BF_INIT(bf_library_info);
+    if (bf_library_query(&library) != BF_OK) {
+        ++failures;
+        return;
+    }
+    if (library.features & BF_FEATURE_SPEEXDSP)
+        c.stages |= BF_STAGE_AEC;
+    c.aec_tail_ms = 200;
     c.noise_strength_db = 18;
     c.agc_target_dbfs = -18;
     size_t bytes = 0;
@@ -29,9 +37,11 @@ static void session(unsigned id)
         ++failures;
         return;
     }
-    float input[160], output[160];
+    float input[160], output[160], reference[160];
     for (unsigned i = 0; i < 160; ++i)
         input[i] = .01f * static_cast<float>(id + 1);
+    for (unsigned i = 0; i < 160; ++i)
+        reference[i] = .005f;
     bf_audio_buffer a = BF_INIT(bf_audio_buffer), b = BF_INIT(bf_audio_buffer);
     a.format = BF_INIT(bf_pcm_format);
     a.timing = BF_INIT(bf_audio_timing);
@@ -47,14 +57,18 @@ static void session(unsigned id)
     a.timing.epoch = 1;
     b = a;
     b.data = output;
+    bf_audio_buffer ref = a;
+    ref.data = reference;
+    ref.timing.clock_domain = 100 + id;
     for (unsigned i = 0; i < 2000; ++i) {
         bf_process_info info = BF_INIT(bf_process_info);
-        if (bf_pipeline_process(s, &a, nullptr, &b, &info) != BF_OK)
+        if (bf_pipeline_process(s, &a, &ref, &b, &info) != BF_OK)
             ++failures;
         for (unsigned j = 0; j < b.frames; ++j)
             if (!std::isfinite(output[j]))
                 ++failures;
         a.timing.frame_position += 160;
+        ref.timing.frame_position += 160;
         if (i % 173 == 0 && bf_pipeline_reset(s, BF_STAGE_ALL) != BF_OK)
             ++failures;
     }

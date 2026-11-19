@@ -46,9 +46,19 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
     a.timing.clock_domain = 1;
     bf_audio_buffer b = a;
     b.data = output;
+    bf_result expected = BF_OK;
+    for (size_t i = 0; i < (size_t)c.frame_frames * c.channels; ++i)
+        if (isfinite(input[i]) && fabsf(input[i]) > 16)
+            expected = BF_ERROR_INVALID;
+    if (c.nonfinite_policy == BF_NONFINITE_REJECT)
+        for (size_t i = 0; i < (size_t)c.frame_frames * c.channels; ++i)
+            if (!isfinite(input[i]))
+                expected = BF_ERROR_NONFINITE;
     for (unsigned i = 0; i < 4; ++i) {
         bf_process_info info = BF_INIT(bf_process_info);
         bf_result r = bf_pipeline_process(s, &a, NULL, &b, &info);
+        if (r != expected)
+            abort();
         if (r == BF_OK)
             for (size_t j = 0; j < (size_t)b.frames * c.channels; ++j)
                 if (!isfinite(output[j]))

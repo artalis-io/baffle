@@ -247,12 +247,14 @@ bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const b
             return r;
     }
     for (uint32_t i = 0; i < f; ++i) {
-        for (uint32_t j = 0; j < c; ++j)
-            if (fabsf(baffle_sample(in, i, j)) > 16)
+        for (uint32_t j = 0; j < c; ++j) {
+            float x = baffle_sample(in, i, j);
+            if (isfinite(x) && fabsf(x) > 16)
                 return BF_ERROR_INVALID;
+        }
         if (ref)
             for (uint32_t j = 0; j < k; ++j)
-                if (fabsf(baffle_sample(ref, i, j)) > 16)
+                if (isfinite(baffle_sample(ref, i, j)) && fabsf(baffle_sample(ref, i, j)) > 16)
                     return BF_ERROR_INVALID;
     }
     bf_process_info value = BF_INIT(bf_process_info);
