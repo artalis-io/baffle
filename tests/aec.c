@@ -129,6 +129,33 @@ int main(void)
     CHECK(bf_aec_init(memory, bytes, &c, &s) == BF_OK);
     CHECK(bf_aec_reset(s) == BF_OK && bf_aec_deinit(s) == BF_OK);
     free(base);
+    /* Common rates, both hop durations, tail extremes and channel extremes:
+       verify the pinned allocator plan and finite real backend execution. */
+    const uint32_t rates[] = {8000, 16000, 44100, 48000};
+    float quiet[960 * 8] = {0}, far_quiet[960 * 2] = {0}, processed[960 * 8];
+    for (unsigned ri = 0; ri < 4; ++ri)
+        for (unsigned hop = 1; hop <= 2; ++hop)
+            for (unsigned shape = 0; shape < 4; ++shape) {
+                c.sample_rate = rates[ri];
+                c.frame_frames = rates[ri] / 100 * hop;
+                c.capture_channels = shape & 1u ? 8u : 1u;
+                c.reference_channels = shape & 2u ? 2u : 1u;
+                c.tail_ms = shape & 1u ? 500u : 40u;
+                CHECK(bf_aec_size(&c, &bytes) == BF_OK);
+                base = malloc(bytes + BF_ALIGNMENT);
+                CHECK(base);
+                memory = (void *)(((uintptr_t)base + BF_ALIGNMENT - 1u) &
+                                  ~(uintptr_t)(BF_ALIGNMENT - 1u));
+                CHECK(bf_aec_init(memory, bytes, &c, &s) == BF_OK);
+                near_time.frame_position = far_time.frame_position = 0;
+                CHECK(bf_aec_process(s, quiet, &near_time, far_quiet, &far_time, processed,
+                                     &info) == BF_OK);
+                CHECK(info.backend_arena_used <= info.backend_arena_capacity);
+                for (unsigned sample = 0; sample < c.frame_frames * c.capture_channels; ++sample)
+                    CHECK(isfinite(processed[sample]));
+                CHECK(bf_aec_reset(s) == BF_OK && bf_aec_deinit(s) == BF_OK);
+                free(base);
+            }
     puts("Mature MDF backend: bounded arena, double-talk, path recovery, missing references and "
          "generations passed");
     return 0;
