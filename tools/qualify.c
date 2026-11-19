@@ -92,22 +92,91 @@ static void put(FILE *f, uint32_t v, uint32_t bytes)
         if (fputc((int)((v >> (8 * i)) & 255u), f) == EOF)
             fail("write");
 }
+static void resample(wav *w, uint32_t rate)
+{
+    if (w->rate == rate)
+        return;
+    bf_resampler_config c = BF_INIT(bf_resampler_config);
+    c.input_rate = w->rate;
+    c.output_rate = rate;
+    c.channels = w->channels;
+    c.max_input_frames = BF_MAX_FRAMES;
+    size_t bytes;
+    if (bf_resampler_size(&c, &bytes) != BF_OK)
+        fail("SRC configuration");
+    uint64_t frames = ((uint64_t)w->frames * rate + w->rate - 1u) / w->rate;
+    if (frames > UINT32_MAX || frames > SIZE_MAX / w->channels / sizeof(float))
+        fail("SRC output size");
+    unsigned char *raw = malloc(bytes + BF_ALIGNMENT);
+    float *output = malloc((size_t)frames * w->channels * sizeof(float));
+    if (!raw || !output)
+        fail("SRC allocation");
+    void *memory = (void *)(((uintptr_t)raw + BF_ALIGNMENT - 1u) & ~(uintptr_t)(BF_ALIGNMENT - 1u));
+    bf_resampler *s;
+    if (bf_resampler_init(memory, bytes, &c, &s) != BF_OK)
+        fail("SRC init");
+    uint32_t used = 0, made = 0;
+    float terminal[BF_MAX_CHANNELS];
+    for (uint64_t calls = 0; calls <= (uint64_t)w->frames + frames; ++calls) {
+        if (used == w->frames && made == frames)
+            break;
+        uint32_t n = w->frames - used, capacity = (uint32_t)frames - made;
+        if (n > BF_MAX_FRAMES)
+            n = BF_MAX_FRAMES;
+        if (capacity > BF_MAX_FRAMES)
+            capacity = BF_MAX_FRAMES;
+        float *destination = output + (size_t)made * w->channels;
+        if (!capacity) {
+            capacity = 1;
+            destination = terminal;
+        }
+        bf_resample_info info = BF_INIT(bf_resample_info);
+        bf_result result = bf_resampler_process(s, w->pcm + (size_t)used * w->channels, n,
+                                                destination, capacity, &info);
+        if ((result != BF_OK && result != BF_NEED_OUTPUT) || (!info.consumed && !info.produced))
+            fail("SRC progress");
+        used += info.consumed;
+        made += info.produced;
+        if (made > frames)
+            fail("SRC produced beyond nominal duration");
+    }
+    if (used != w->frames || made != frames)
+        fail("SRC accounting");
+    uint32_t twice;
+    if (bf_resampler_latency(&c, &twice) != BF_OK)
+        fail("SRC delay");
+    printf("offline_src=%u->%u group_delay_input_frames=%.1f\n", w->rate, rate, (double)twice / 2);
+    free(raw);
+    free(w->pcm);
+    w->pcm = output;
+    w->frames = (uint32_t)frames;
+    w->rate = rate;
+}
 int main(int argc, char **argv)
 {
-    if (argc != 4 && argc != 6) {
+    if (argc != 4 && argc != 6 && argc != 7) {
         fprintf(stderr, "usage: baffle_qualify capture.wav aligned-reference.wav output.wav "
-                        "[far_only_first_frame far_only_frames]\n");
+                        "[far_only_first_frame far_only_frames [processing_rate]]\n");
         return 2;
     }
     wav a = load(argv[1]), r = load(argv[2]);
     if (a.rate != r.rate || a.frames != r.frames || !a.frames)
         fail("files require identical rate, length and independently established alignment");
     uint64_t first = 0, count = 0;
-    if (argc == 6) {
+    if (argc >= 6) {
         first = strtoull(argv[4], NULL, 10);
         count = strtoull(argv[5], NULL, 10);
         if (!count || first > a.frames || count > a.frames - first)
             fail("invalid annotated far-only interval");
+    }
+    if (argc == 7) {
+        uint32_t rate = (uint32_t)strtoul(argv[6], NULL, 10);
+        if (rate < 8000 || rate > 48000 || rate % 100)
+            fail("unsupported processing rate");
+        first = first * rate / a.rate;
+        count = count * rate / a.rate;
+        resample(&a, rate);
+        resample(&r, rate);
     }
     bf_aec_config c = BF_INIT(bf_aec_config);
     c.sample_rate = a.rate;

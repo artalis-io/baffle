@@ -36,6 +36,13 @@ with tempfile.TemporaryDirectory(prefix="baffle-wav-") as directory:
     with wave.open(str(root / "out.wav"), "rb") as output:
         assert output.getnframes() == len(near)
         assert output.getframerate() == 16000
+    for length in (len(near), len(near)-1):
+        write(root / "capture.wav", near[:length])
+        write(root / "reference.wav", far[:length])
+        converted = subprocess.run(args + ["64000", "64000", "8000"], capture_output=True, text=True, check=True)
+        with wave.open(str(root / "out.wav"), "rb") as output:
+            assert output.getframerate() == 8000
+            assert output.getnframes() == (length+1)//2
     write(root / "reference.wav", far, rate=48000)
     assert subprocess.run(args, capture_output=True).returncode != 0
     (root / "reference.wav").write_bytes(b"RIFF" + bytes(40))
