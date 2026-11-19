@@ -98,6 +98,10 @@ int main(void)
             CHECK(bf_pipeline_process(s, &in, NULL, &out, &info) == BF_OK);
             if (mask & BF_STAGE_AEC)
                 CHECK(info.flags & BF_REFERENCE_MISSING);
+            /* Independent capture epoch reset discards exactly the NS overlap. */
+            ++in.timing.epoch;
+            CHECK(bf_pipeline_process(s, &in, NULL, &out, &info) == BF_OK);
+            CHECK(info.discarded_frames == ((mask & BF_STAGE_NOISE) ? 160u : 0u));
             CHECK(bf_pipeline_deinit(s) == BF_OK);
             CHECK(bf_pipeline_process(s, &in, &ref, &out, &info) == BF_ERROR_INVALID);
             free(base);

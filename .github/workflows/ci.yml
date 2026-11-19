@@ -83,7 +83,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DBF_BUILD_FUZZER=ON -DBF_BUILD_TESTS=OFF -DBF_BUILD_BENCHMARKS=OFF
       - run: cmake --build build --parallel
-      - run: build/baffle_fuzz_transport -runs=30000 -max_len=4096 -seed=721
-      - run: build/baffle_fuzz_pipeline -runs=30000 -max_len=4096 -seed=722
+      - run: python3 tools/fuzz_corpus.py build/corpus
+      - run: build/baffle_fuzz_transport build/corpus/transport -runs=30000 -max_len=4096 -seed=721
+      - run: build/baffle_fuzz_pipeline build/corpus/pipeline -runs=30000 -max_len=4096 -seed=722
       - run: cmake -S . -B analysis -DCMAKE_C_COMPILER=gcc -DBF_BUILD_TESTS=OFF -DCMAKE_C_FLAGS=-fanalyzer
       - run: cmake --build analysis --parallel

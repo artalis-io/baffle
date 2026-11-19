@@ -85,6 +85,11 @@ static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t 
                    size_t bytes, double *times, uint32_t n, double elapsed, double used,
                    double delay_ms)
 {
+#ifdef _WIN32
+    /* GetThreadTimes accounting is coarse. Short trials cannot resolve CPU use. */
+    if (elapsed < .25)
+        used = NAN;
+#endif
     double total = 0, jitter = 0;
     uint32_t misses = 0;
     for (uint32_t i = 0; i < n; ++i) {
