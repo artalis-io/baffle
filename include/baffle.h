@@ -183,6 +183,38 @@ BF_API bf_result bf_noise_reset(bf_noise *noise);
  * 0 permits noise learning, 1 freezes it, -1 uses conservative minimum statistics.
  * First output after reset is priming silence. In-place supported. */
 BF_API bf_result bf_noise_process(bf_noise *noise,const float *input,float *output,float speech_probability);
+#define BF_AEC_SPEEXDSP 1u
+#define BF_REFERENCE_GENERATION_CHANGED 1024u
+#define BF_AUDIO_CLIPPED 2048u
+#define BF_FEATURE_RESAMPLER 1u
+#define BF_FEATURE_CONDITIONING 2u
+#define BF_FEATURE_SPEEXDSP 4u
+typedef struct bf_aec bf_aec;
+typedef struct bf_aec_config {
+    uint32_t struct_size,struct_version;
+    uint32_t sample_rate,frame_frames,capture_channels,reference_channels,tail_ms,backend;
+} bf_aec_config;
+typedef struct bf_aec_info {
+    uint32_t struct_size,struct_version;
+    uint32_t flags,reserved;
+    uint64_t resets,reference_generation,backend_arena_used,backend_arena_capacity;
+    float input_rms,output_rms;
+} bf_aec_info;
+BF_API bf_result bf_aec_size(const bf_aec_config *config,size_t *bytes);
+BF_API bf_result bf_aec_init(void *storage,size_t bytes,const bf_aec_config *config,bf_aec **out);
+BF_API bf_result bf_aec_reset(bf_aec *aec);
+/* Caller supplies aligned equal-rate, equal-frame-count interleaved audio.
+ * Clock IDs/origins are never compared across legs. Missing reference NULL
+ * bypasses cancellation and freezes adaptation; it does not mean actual silence.
+ * Backend uses saturated S16 internally. Input F32 headroom +/-16, not NaN/Inf. */
+BF_API bf_result bf_aec_process(bf_aec *aec,const float *capture,const bf_audio_timing *capture_timing,
+                                const float *reference,const bf_audio_timing *reference_timing,
+                                float *output,bf_aec_info *info);
+/* Control/measurement operation, single mono capture/reference only. Returns
+ * dominant adapted filter tap, not a calibrated hardware latency receipt. */
+BF_API bf_result bf_aec_estimate_delay(bf_aec *aec,uint32_t *delay_frames);
+/* No free: retires backend, then caller may release its own storage. */
+BF_API bf_result bf_aec_deinit(bf_aec *aec);
 #ifdef __cplusplus
 }
 #endif

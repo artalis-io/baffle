@@ -5,6 +5,10 @@ bf_result bf_library_query(bf_library_info *info)
     bf_library_info value = BF_INIT(bf_library_info);
     if (!info || info->struct_size < sizeof(*info) || info->struct_version != BF_STRUCT_VERSION) return BF_ERROR_INVALID;
     value.major=BF_VERSION_MAJOR; value.minor=BF_VERSION_MINOR; value.patch=BF_VERSION_PATCH;
+    value.features=BF_FEATURE_RESAMPLER|BF_FEATURE_CONDITIONING;
+#if BF_HAVE_SPEEXDSP
+    value.features|=BF_FEATURE_SPEEXDSP;
+#endif
     memcpy((unsigned char *)info+8,(const unsigned char *)&value+8,sizeof(value)-8);
     return BF_OK;
 }
