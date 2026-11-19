@@ -49,12 +49,14 @@ int main(void)
         a.frame_time_denominator = UINT64_C(48000) * 1001000;
         a.time_remainder = 17001;
         a.flags |= BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY;
+        a.lost_frames = 19;
         CHECK(bf_timing_advance(&a, 137, 48000, &b) == BF_OK);
         CHECK(bf_timing_advance(&b, 311, 48000, &b) == BF_OK);
         CHECK(bf_timing_advance(&a, 448, 48000, &combined) == BF_OK);
         CHECK(b.host_time_ns == combined.host_time_ns &&
               b.time_remainder == combined.time_remainder);
         CHECK(!(b.flags & (BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY)));
+        CHECK(b.lost_frames == 0);
         in.timing.frame_time_numerator = 1;
         CHECK(bf_pcm_validate(&in) == BF_ERROR_INVALID);
         in.timing = t;

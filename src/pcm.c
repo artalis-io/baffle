@@ -126,8 +126,10 @@ bf_result bf_timing_advance(const bf_audio_timing *in, uint32_t frames, uint32_t
         ((value.flags & BF_TIME_DEVICE_VALID) && value.device_position > UINT64_MAX - frames))
         return BF_ERROR_OVERFLOW;
     value.frame_position += frames;
-    if (frames)
+    if (frames) {
         value.flags &= ~(BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY);
+        value.lost_frames = 0;
+    }
     if (value.flags & BF_TIME_DEVICE_VALID)
         value.device_position += frames;
     if (value.flags & BF_TIME_HOST_VALID) {
