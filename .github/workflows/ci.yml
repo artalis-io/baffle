@@ -2,6 +2,9 @@ name: native DSP
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+concurrency:
+  group: native-dsp-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   portable:
     strategy:
@@ -22,6 +25,9 @@ jobs:
       - run: cmake -S tests/consumer -B consumer -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - run: cmake --build consumer --config Release --parallel
       - run: ctest --test-dir consumer -C Release --output-on-failure
+      - run: cmake -S examples/pcm-pipeline -B pcm-consumer -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+      - run: cmake --build pcm-consumer --config Release --parallel
+      - run: ctest --test-dir pcm-consumer -C Release --output-on-failure
   sanitizers:
     runs-on: ubuntu-latest
     strategy:
