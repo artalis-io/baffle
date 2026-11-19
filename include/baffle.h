@@ -138,6 +138,51 @@ BF_API bf_result bf_channel_delay_init(void *storage,size_t bytes,uint32_t chann
                                       const uint32_t *delays,bf_channel_delay **out);
 BF_API bf_result bf_channel_delay_reset(bf_channel_delay *delay);
 BF_API bf_result bf_channel_delay_process(bf_channel_delay *delay,const float *input,float *output,uint32_t frames);
+typedef struct bf_agc bf_agc;
+typedef struct bf_vad bf_vad;
+typedef struct bf_noise bf_noise;
+typedef struct bf_agc_config {
+    uint32_t struct_size, struct_version;
+    uint32_t sample_rate,channels,max_frames,reserved;
+    float target_dbfs,min_gain_db,max_gain_db,attack_ms,release_ms,gate_dbfs,limit_dbfs;
+} bf_agc_config;
+typedef struct bf_level_info {
+    uint32_t struct_size, struct_version;
+    float gain,input_rms,output_rms,output_peak;
+    uint32_t limited_samples,reserved;
+} bf_level_info;
+typedef struct bf_vad_config {
+    uint32_t struct_size, struct_version;
+    uint32_t sample_rate,channels,max_frames,onset_ms,hangover_ms;
+    float threshold,noise_floor_dbfs;
+} bf_vad_config;
+typedef struct bf_vad_info {
+    uint32_t struct_size, struct_version;
+    float probability,noise_rms;
+    uint32_t active,reserved;
+} bf_vad_info;
+typedef struct bf_noise_config {
+    uint32_t struct_size, struct_version;
+    uint32_t sample_rate,channels,frame_frames;
+    float strength_db;
+} bf_noise_config;
+BF_API size_t bf_agc_size(void);
+BF_API bf_result bf_agc_init(void *storage,size_t bytes,const bf_agc_config *config,bf_agc **out);
+BF_API bf_result bf_agc_reset(bf_agc *agc);
+/* Probability -1 selects energy gating, otherwise [0,1] gates gain increases.
+ * Linked multichannel gain, causal limiter, zero lookahead; exact in-place OK. */
+BF_API bf_result bf_agc_process(bf_agc *agc,const float *input,float *output,uint32_t frames,float speech_probability,bf_level_info *info);
+BF_API size_t bf_vad_size(void);
+BF_API bf_result bf_vad_init(void *storage,size_t bytes,const bf_vad_config *config,bf_vad **out);
+BF_API bf_result bf_vad_reset(bf_vad *vad);
+BF_API bf_result bf_vad_process(bf_vad *vad,const float *input,uint32_t frames,bf_vad_info *info);
+BF_API bf_result bf_noise_size(const bf_noise_config *config,size_t *bytes);
+BF_API bf_result bf_noise_init(void *storage,size_t bytes,const bf_noise_config *config,bf_noise **out);
+BF_API bf_result bf_noise_reset(bf_noise *noise);
+/* Exactly frame_frames interleaved F32. One-hop algorithmic delay. Probability
+ * 0 permits noise learning, 1 freezes it, -1 uses conservative minimum statistics.
+ * First output after reset is priming silence. In-place supported. */
+BF_API bf_result bf_noise_process(bf_noise *noise,const float *input,float *output,float speech_probability);
 #ifdef __cplusplus
 }
 #endif
