@@ -111,6 +111,18 @@ int main(void)
     far_time.frame_position += 160;
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
           info.resets == 1);
+    CHECK(bf_aec_reset(s) == BF_OK);
+    memset(near, 0, sizeof(near));
+    memset(far_signal, 0, 160 * sizeof(float));
+    near[0] = far_signal[0] = -1;
+    near[1] = far_signal[1] = 32767.0f / 32768;
+    CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
+          !(info.flags & BF_AUDIO_CLIPPED));
+    near_time.frame_position += 160;
+    far_time.frame_position += 160;
+    near[0] = far_signal[0] = 1;
+    CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
+          (info.flags & BF_AUDIO_CLIPPED));
     near[0] = NAN;
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) ==
           BF_ERROR_NONFINITE);

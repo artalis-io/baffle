@@ -189,13 +189,13 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
     for (size_t i = 0; i < (size_t)f * c; ++i) {
         s->near_pcm[i] = pcm16(near[i]);
         ip += (double)near[i] * near[i];
-        if (fabsf(near[i]) >= 1)
+        if (near[i] > 32767.0f / 32768 || near[i] < -1)
             v.flags |= BF_AUDIO_CLIPPED;
     }
     if (far) {
         for (size_t i = 0; i < (size_t)f * k; ++i) {
             s->far_pcm[i] = pcm16(far[i]);
-            if (fabsf(far[i]) >= 1)
+            if (far[i] > 32767.0f / 32768 || far[i] < -1)
                 v.flags |= BF_AUDIO_CLIPPED;
         }
         speex_echo_cancellation(s->echo, s->near_pcm, s->far_pcm, s->out_pcm);
