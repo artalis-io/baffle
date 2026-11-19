@@ -48,9 +48,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_SHARED=${{ matrix.shared }}
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_TOOLS=ON -DBF_BUILD_SHARED=${{ matrix.shared }}
       - run: cmake --build build --config Release --parallel
       - run: ctest --test-dir build -C Release --output-on-failure
+      - if: runner.os == 'Linux' && matrix.shared == 'OFF'
+        run: python3 tools/check_realtime_symbols.py build/libbaffle.a
+      - if: runner.os == 'Linux' && matrix.shared == 'ON'
+        run: python3 tools/check_exports.py include/baffle.h build/libbaffle.so
+      - if: runner.os == 'macOS' && matrix.shared == 'ON'
+        run: python3 tools/check_exports.py include/baffle.h build/libbaffle.dylib
+      - if: runner.os == 'Windows'
+        run: python tests/wav_qualification.py build/Release/baffle_qualify.exe
+      - if: runner.os != 'Windows'
+        run: python3 tests/wav_qualification.py build/baffle_qualify
       - run: cmake --install build --config Release --prefix "${{ github.workspace }}/installed"
       - if: runner.os == 'Windows'
         shell: pwsh
@@ -74,7 +84,7 @@ jobs:
       - if: runner.os != 'Windows'
         run: cmake -S hail-source -B hail-build -DCMAKE_BUILD_TYPE=Release -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DHA_BACKEND_ALSA=OFF -DHA_BACKEND_PIPEWIRE=OFF
       - if: runner.os == 'Windows'
-        run: cmake -S hail-source -B hail-build -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF -DCMAKE_C_FLAGS=/experimental:c11atomics
+        run: cmake -S hail-source -B hail-build -T ClangCL -DHA_BUILD_TESTS=OFF -DHA_BUILD_EXAMPLES=OFF
       - run: cmake --build hail-build --config Release --parallel
       - run: cmake --install hail-build --config Release --prefix "${{ github.workspace }}/installed"
       - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_HAIL=ON -DBF_WITH_SPEEXDSP=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
