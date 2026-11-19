@@ -5,6 +5,8 @@
 #include <float.h>
 #include <string.h>
 #include <limits.h>
+_Static_assert(sizeof(float) == 4 && FLT_RADIX == 2 && FLT_MANT_DIG == 24,
+               "Baffle requires IEEE binary32 float");
 #define BAFFLE_PI 3.14159265358979323846
 static inline int baffle_header(const void *p, size_t size)
 {

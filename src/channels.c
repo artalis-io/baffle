@@ -25,16 +25,21 @@ bf_result bf_channel_matrix(const bf_audio_buffer *in, bf_audio_buffer *out, con
     for (size_t i = 0; i < (size_t)in->format.channels * out->format.channels; ++i)
         if (!isfinite(matrix[i]) || fabsf(matrix[i]) > 16)
             return BF_ERROR_INVALID;
+    uint32_t flags = 0;
     for (uint32_t i = 0; i < in->frames; ++i)
         for (uint32_t o = 0; o < out->format.channels; ++o) {
             double sum = 0;
             for (uint32_t c = 0; c < in->format.channels; ++c)
                 sum += (double)baffle_clean(baffle_sample(in, i, c)) *
                        matrix[(size_t)o * in->format.channels + c];
+            if (fabs(sum) > limit || (out->format.sample_format == BF_PCM_S16 &&
+                                      (sum > 32767.0 / 32768.0 || sum < -1.0)))
+                flags |= BF_AUDIO_CLIPPED;
             baffle_store(out, i, o, (float)fmax(-(double)limit, fmin((double)limit, sum)));
         }
     out->frames = in->frames;
     baffle_record(&out->timing, &in->timing, sizeof(in->timing));
+    out->timing.flags |= flags;
     return BF_OK;
 }
 bf_result bf_channel_delay_size(uint32_t channels, uint32_t max_delay, size_t *bytes)

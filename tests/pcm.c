@@ -42,6 +42,23 @@ int main(void)
     CHECK(interleaved[0] == INT16_MIN && interleaved[1] == 8192 && interleaved[4] == 16384 &&
           interleaved[6] == INT16_MAX);
     CHECK(out.timing.host_time_ns == t.host_time_ns && out.timing.uncertainty_ns == UINT64_MAX);
+    CHECK(out.timing.flags & BF_AUDIO_CLIPPED);
+    {
+        bf_audio_timing a = t, b = t, combined = t;
+        a.frame_time_numerator = UINT64_C(1000000000000000);
+        a.frame_time_denominator = UINT64_C(48000) * 1001000;
+        a.time_remainder = 17001;
+        a.flags |= BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY;
+        CHECK(bf_timing_advance(&a, 137, 48000, &b) == BF_OK);
+        CHECK(bf_timing_advance(&b, 311, 48000, &b) == BF_OK);
+        CHECK(bf_timing_advance(&a, 448, 48000, &combined) == BF_OK);
+        CHECK(b.host_time_ns == combined.host_time_ns &&
+              b.time_remainder == combined.time_remainder);
+        CHECK(!(b.flags & (BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY)));
+        in.timing.frame_time_numerator = 1;
+        CHECK(bf_pcm_validate(&in) == BF_ERROR_INVALID);
+        in.timing = t;
+    }
     left[3] = NAN;
     memset(interleaved, 0x5a, sizeof(interleaved));
     CHECK(bf_pcm_convert(&in, &out, 0) == BF_ERROR_NONFINITE && interleaved[0] == 0x5a5a);
@@ -83,6 +100,10 @@ int main(void)
         t.frame_position = 48048;
         CHECK(bf_clock_tracker_observe(tracker, &t, 48000, &e) == BF_OK && e.valid && e.uncertain &&
               fabs(e.observed_ppm - 1000) < 1e-6);
+        t.host_time_ns += 1000000000;
+        t.frame_position += 47952;
+        CHECK(bf_clock_tracker_observe(tracker, &t, 48000, &e) == BF_OK && e.valid &&
+              fabs(e.observed_ppm + 1000) < 1e-6);
         ++t.epoch;
         CHECK(bf_clock_tracker_observe(tracker, &t, 48000, &e) == BF_OK && !e.valid);
         t.host_time_ns += 1000000000;

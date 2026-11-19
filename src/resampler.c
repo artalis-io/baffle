@@ -32,6 +32,18 @@ bf_result bf_resampler_size(const bf_resampler_config *c, size_t *bytes)
         return BF_ERROR_INVALID;
     return resample_plan(c, &taps, bytes);
 }
+bf_result bf_resampler_latency(const bf_resampler_config *c, uint32_t *delay)
+{
+    uint32_t taps;
+    size_t bytes;
+    if (!delay)
+        return BF_ERROR_INVALID;
+    bf_result r = resample_plan(c, &taps, &bytes);
+    if (r != BF_OK)
+        return r;
+    *delay = taps - 1u;
+    return BF_OK;
+}
 bf_result bf_resampler_init(void *p, size_t bytes, const bf_resampler_config *c, bf_resampler **out)
 {
     size_t need;

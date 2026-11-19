@@ -2,6 +2,7 @@
 struct bf_clock_tracker {
     uint32_t magic, rate, seen;
     bf_audio_timing first, last;
+    bf_clock_estimate estimate;
 };
 size_t bf_clock_tracker_size(void)
 {
@@ -32,6 +33,7 @@ bf_result bf_clock_tracker_observe(bf_clock_tracker *s, const bf_audio_timing *t
         rate > 192000)
         return BF_ERROR_INVALID;
     v.uncertainty_ns = UINT64_MAX;
+    v.uncertain = 1;
     if (!(t->flags & BF_TIME_HOST_VALID)) {
         s->seen = 0;
         baffle_record(out, &v, sizeof(v));
@@ -46,18 +48,28 @@ bf_result bf_clock_tracker_observe(bf_clock_tracker *s, const bf_audio_timing *t
         s->first = *t;
         s->rate = rate;
         s->seen = 1;
+        s->estimate = v;
     } else {
         uint64_t span = t->host_time_ns - s->first.host_time_ns;
-        v.observation_ns = span;
+        uint64_t uncertainty = UINT64_MAX;
         if (t->uncertainty_ns != UINT64_MAX &&
             s->first.uncertainty_ns <= UINT64_MAX - t->uncertainty_ns)
-            v.uncertainty_ns = t->uncertainty_ns + s->first.uncertainty_ns;
-        v.uncertain = v.uncertainty_ns == UINT64_MAX || v.uncertainty_ns > span / 100u;
+            uncertainty = t->uncertainty_ns + s->first.uncertainty_ns;
+        v = s->estimate;
         if (span >= UINT64_C(100000000)) {
+            v.observation_ns = span;
+            v.uncertainty_ns = uncertainty;
+            v.uncertain = uncertainty == UINT64_MAX || uncertainty > span / 100u;
             double ratio = (double)(t->frame_position - s->first.frame_position) * 1e9 /
                            (double)span / (double)rate;
             v.observed_ppm = (ratio - 1.0) * 1e6;
             v.valid = (uint32_t)isfinite(v.observed_ppm);
+            s->estimate = v;
+            if (span >= UINT64_C(1000000000))
+                s->first = *t;
+        } else if (uncertainty == UINT64_MAX) {
+            v.uncertain = 1;
+            v.uncertainty_ns = UINT64_MAX;
         }
     }
     s->last = *t;

@@ -78,6 +78,7 @@ typedef struct bf_audio_timing {
     uint32_t struct_size, struct_version;
     uint64_t stream_id, clock_domain, epoch, generation, frame_position;
     uint64_t device_position, host_time_ns, uncertainty_ns, lost_frames;
+    uint64_t frame_time_numerator, frame_time_denominator, time_remainder;
     uint32_t flags, reserved;
 } bf_audio_timing;
 typedef struct bf_audio_buffer {
@@ -122,6 +123,9 @@ typedef struct bf_resample_info {
     uint64_t output_position, source_frame_position, source_phase, source_phase_denominator;
 } bf_resample_info;
 BF_API bf_result bf_resampler_size(const bf_resampler_config *config, size_t *bytes);
+/* Exact linear-phase FIR group delay in half input-frame units, before init. */
+BF_API bf_result bf_resampler_latency(const bf_resampler_config *config,
+                                      uint32_t *twice_input_frames);
 BF_API bf_result bf_resampler_init(void *storage, size_t bytes, const bf_resampler_config *config,
                                    bf_resampler **out);
 BF_API bf_result bf_resampler_reset(bf_resampler *resampler);
@@ -205,6 +209,7 @@ BF_API bf_result bf_noise_process(bf_noise *noise, const float *input, float *ou
 #define BF_AEC_SPEEXDSP 1u
 #define BF_REFERENCE_GENERATION_CHANGED 1024u
 #define BF_AUDIO_CLIPPED 2048u
+#define BF_AUDIO_PADDING 4096u
 #define BF_FEATURE_RESAMPLER 1u
 #define BF_FEATURE_CONDITIONING 2u
 #define BF_FEATURE_SPEEXDSP 4u
@@ -253,7 +258,8 @@ typedef struct bf_process_info {
     uint32_t flags, priming, algorithmic_delay_frames, consumed_frames;
     bf_vad_info vad;
     bf_level_info level;
-    bf_aec_info aec; /* reference admitted THIS call, not a delayed-output receipt */
+    bf_aec_info aec;           /* reference admitted THIS call, not a delayed-output receipt */
+    uint32_t discarded_frames; /* buffered capture discarded on automatic reset */
 } bf_process_info;
 BF_API bf_result bf_pipeline_size(const bf_pipeline_config *config, size_t *bytes);
 BF_API bf_result bf_pipeline_init(void *storage, size_t bytes, const bf_pipeline_config *config,

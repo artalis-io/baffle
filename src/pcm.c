@@ -7,12 +7,18 @@ bf_result bf_pcm_validate(const bf_audio_buffer *b)
     f = &b->format;
     if (!BAFFLE_HEADER(f) || !BAFFLE_HEADER(&b->timing) || f->sample_rate < 8000 ||
         f->sample_rate > 192000 || !f->channels || f->channels > BF_MAX_CHANNELS || f->reserved ||
-        b->frames > b->capacity_frames || b->capacity_frames > BF_MAX_FRAMES ||
+        b->timing.reserved || b->frames > b->capacity_frames ||
+        b->capacity_frames > BF_MAX_FRAMES ||
         (f->sample_format != BF_PCM_F32 && f->sample_format != BF_PCM_S16) ||
         (f->storage != BF_INTERLEAVED && f->storage != BF_PLANAR) ||
         !((f->channel_layout == BF_LAYOUT_MONO && f->channels == 1) ||
           (f->channel_layout == BF_LAYOUT_STEREO && f->channels == 2) ||
           f->channel_layout == BF_LAYOUT_DISCRETE))
+        return BF_ERROR_INVALID;
+    if ((b->timing.frame_time_numerator == 0) != (b->timing.frame_time_denominator == 0) ||
+        (b->timing.frame_time_denominator &&
+         b->timing.time_remainder >= b->timing.frame_time_denominator) ||
+        (!b->timing.frame_time_denominator && b->timing.time_remainder))
         return BF_ERROR_INVALID;
     if (b->capacity_frames) {
         if (f->storage == BF_INTERLEAVED && !b->data)
@@ -87,18 +93,23 @@ bf_result bf_pcm_convert(const bf_audio_buffer *in, bf_audio_buffer *out, uint32
     r = baffle_finite(in, policy);
     if (r != BF_OK)
         return r;
-    uint32_t sanitized = 0;
+    uint32_t sanitized = 0, clipped = 0;
     for (uint32_t i = 0; i < in->frames; ++i)
         for (uint32_t c = 0; c < in->format.channels; ++c) {
             float x = baffle_sample(in, i, c), clean = baffle_clean(x);
             if (!isfinite(x) || (x != 0 && fabsf(x) < FLT_MIN))
                 sanitized = 1;
+            if (out->format.sample_format == BF_PCM_S16 &&
+                (clean > 32767.0f / 32768.0f || clean < -1.0f))
+                clipped = 1;
             baffle_store(out, i, c, clean);
         }
     out->frames = in->frames;
     baffle_record(&out->timing, &in->timing, sizeof(in->timing));
     if (sanitized)
         out->timing.flags |= BF_AUDIO_SANITIZED;
+    if (clipped)
+        out->timing.flags |= BF_AUDIO_CLIPPED;
     return BF_OK;
 }
 bf_result bf_timing_advance(const bf_audio_timing *in, uint32_t frames, uint32_t rate,
@@ -110,14 +121,33 @@ bf_result bf_timing_advance(const bf_audio_timing *in, uint32_t frames, uint32_t
         rate > 192000)
         return BF_ERROR_INVALID;
     value = *in;
-    delta = (uint64_t)frames * UINT64_C(1000000000) / rate;
+    delta = 0;
     if (value.frame_position > UINT64_MAX - frames ||
         ((value.flags & BF_TIME_DEVICE_VALID) && value.device_position > UINT64_MAX - frames))
         return BF_ERROR_OVERFLOW;
     value.frame_position += frames;
+    if (frames)
+        value.flags &= ~(BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY);
     if (value.flags & BF_TIME_DEVICE_VALID)
         value.device_position += frames;
     if (value.flags & BF_TIME_HOST_VALID) {
+        uint64_t numerator = value.frame_time_numerator, denominator = value.frame_time_denominator;
+        if (!numerator && !denominator) {
+            numerator = UINT64_C(1000000000);
+            denominator = rate;
+        }
+        if (!numerator || !denominator || value.time_remainder >= denominator)
+            return BF_ERROR_INVALID;
+        if (frames && numerator > UINT64_MAX / frames)
+            return BF_ERROR_OVERFLOW;
+        uint64_t total = (uint64_t)frames * numerator;
+        if (value.time_remainder > UINT64_MAX - total)
+            return BF_ERROR_OVERFLOW;
+        total += value.time_remainder;
+        delta = total / denominator;
+        value.time_remainder = total % denominator;
+        value.frame_time_numerator = numerator;
+        value.frame_time_denominator = denominator;
         if (value.host_time_ns > UINT64_MAX - delta)
             return BF_ERROR_OVERFLOW;
         value.host_time_ns += delta;

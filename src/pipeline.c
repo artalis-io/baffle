@@ -253,12 +253,14 @@ bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const b
     value.aec = (bf_aec_info)BF_INIT(bf_aec_info);
     value.algorithmic_delay_frames = s->noise ? f : 0;
     value.consumed_frames = f;
+    value.flags = in->timing.flags & (BF_AUDIO_SANITIZED | BF_AUDIO_CLIPPED);
     if (s->seen &&
         (in->timing.stream_id != s->last.stream_id ||
          in->timing.clock_domain != s->last.clock_domain || in->timing.epoch != s->last.epoch ||
          in->timing.frame_position != s->last.frame_position + f ||
          (in->timing.flags & (BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY)))) {
         uint32_t mask = BF_STAGE_NOISE | BF_STAGE_VAD;
+        value.discarded_frames = s->metadata_valid ? f : 0;
         if (in->timing.stream_id != s->last.stream_id)
             mask |= BF_STAGE_AGC;
         r = bf_pipeline_reset(s, mask);
@@ -269,14 +271,14 @@ bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const b
     for (uint32_t i = 0; i < f; ++i) {
         for (uint32_t j = 0; j < c; ++j) {
             float x = baffle_sample(in, i, j);
-            if (!isfinite(x))
+            if (!isfinite(x) || (x != 0 && fabsf(x) < FLT_MIN))
                 value.flags |= BF_AUDIO_SANITIZED;
             s->work[(size_t)i * c + j] = baffle_clean(x);
         }
         if (ref)
             for (uint32_t j = 0; j < k; ++j) {
                 float x = baffle_sample(ref, i, j);
-                if (!isfinite(x))
+                if (!isfinite(x) || (x != 0 && fabsf(x) < FLT_MIN))
                     value.flags |= BF_AUDIO_SANITIZED;
                 s->reference[(size_t)i * k + j] = baffle_clean(x);
             }
