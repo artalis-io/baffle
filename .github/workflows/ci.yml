@@ -1,0 +1,35 @@
+name: native DSP
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-15-intel, macos-15]
+        shared: [ON, OFF]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_BUILD_SHARED=${{ matrix.shared }}
+      - run: cmake --build build --config Release --parallel
+      - run: ctest --test-dir build -C Release --output-on-failure
+      - run: cmake --install build --config Release --prefix "${{ github.workspace }}/installed"
+      - if: runner.os == 'Windows'
+        shell: pwsh
+        run: Add-Content -Path $env:GITHUB_PATH -Value "$env:GITHUB_WORKSPACE/installed/bin"
+      - run: cmake -S tests/consumer -B consumer -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+      - run: cmake --build consumer --config Release --parallel
+      - run: ctest --test-dir consumer -C Release --output-on-failure
+  sanitizers:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sanitizer: [address, undefined, thread]
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -DBF_SANITIZER=${{ matrix.sanitizer }}
+      - run: cmake --build build --parallel
+      - run: ctest --test-dir build --output-on-failure

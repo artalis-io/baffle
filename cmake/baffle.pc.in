@@ -1,0 +1,9 @@
+prefix=${pcfiledir}/../..
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+Name: Baffle
+Description: Bounded CPU-first real-time DSP
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lbaffle
+Libs.private: -lm
+Cflags: -I${includedir}

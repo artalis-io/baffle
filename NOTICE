@@ -1,0 +1,6 @@
+Baffle is Copyright (c) 2026 Artalis, MIT licensed.
+Repository layout, CMake packaging and versioned C-record conventions are
+adapted from Hail (https://github.com/artalis-io/hail), Copyright (c) 2026
+Artalis, MIT. Its applicable license notice is retained in LICENSE.
+No Hail audio device implementation is incorporated into Baffle.
+Third-party algorithm backends retain their own licenses; see docs/backends.md.
