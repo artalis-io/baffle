@@ -120,7 +120,7 @@ int main(void)
           !(info.flags & BF_AUDIO_CLIPPED));
     near_time.frame_position += 160;
     far_time.frame_position += 160;
-    near[0] = far_signal[0] = 1;
+    near[0] = far_signal[0] = nextafterf(1.0f, 0.0f); /* saturates below +1 */
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
           (info.flags & BF_AUDIO_CLIPPED));
     near[0] = NAN;

@@ -175,6 +175,16 @@ static void scenario(uint32_t rate, uint32_t playback_rate, uint32_t channels,
         CHECK(bs.missing_reference_frames < bs.processed_frames / 5u);
     CHECK(fabs(bs.capture_clock.observed_ppm - ppm) < .1 &&
           fabs(bs.reference_clock.observed_ppm + ppm) < .1);
+    if (aec) {
+        bf_audio_timing last = BF_INIT(bf_audio_timing);
+        CHECK(bs.last_aligned_reference.flags & BF_TIME_HOST_VALID);
+        CHECK(bf_timing_advance(&bs.last_aligned_reference, rate / 100u - 1u, rate, &last) ==
+              BF_OK);
+        double expected =
+            (double)(rate / 100u - 1u) * 1e15 / ((double)rate * (double)(1000000 + ppm));
+        double duration = (double)(last.host_time_ns - bs.last_aligned_reference.host_time_ns);
+        CHECK(fabs(duration - expected) < 150.0);
+    }
     CHECK(!status(s).capture_lost_frames && !status(s).playback_underrun_frames &&
           !status(s).reference_lost_frames);
     uint64_t epoch = bs.last_capture_source.epoch;

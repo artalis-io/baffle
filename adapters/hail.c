@@ -263,6 +263,7 @@ static bf_audio_timing point_time(bf_hail_adapter *s, const bf_resample_info *ri
     t.flags &= ~(BF_TIME_DEVICE_VALID | BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY);
     t.flags |= BF_TIME_ESTIMATED | BF_TIME_INTERPOLATED;
     t.device_position = 0;
+    t.lost_frames = 0; /* raw source loss remains in last_reference_source */
     t.frame_time_numerator = 1000000000u;
     t.frame_time_denominator = s->config.pipeline.sample_rate;
     t.time_remainder = 0;
@@ -429,6 +430,15 @@ static int select_reference(bf_hail_adapter *s, bf_audio_timing *timing, uint32_
     if (s->history_count < f)
         return 0;
     bf_audio_timing first = s->points[s->history_read];
+    bf_audio_timing *last = &s->points[(s->history_read + f - 1u) % cap];
+    if (f < 2 || !(last->flags & BF_TIME_HOST_VALID) || last->host_time_ns <= first.host_time_ns)
+        return 0;
+    /* Drift slews make the output period nonconstant. Fit this admitted block's
+       observed endpoints, then bound every intermediate interpolation error. */
+    first.frame_time_numerator = last->host_time_ns - first.host_time_ns;
+    first.frame_time_denominator = f - 1u;
+    first.time_remainder = 0;
+    uint64_t uncertainty = first.uncertainty_ns;
     for (uint32_t i = 0; i < f; ++i) {
         uint32_t index = (s->history_read + i) % cap;
         bf_audio_timing *p = &s->points[index];
@@ -446,7 +456,21 @@ static int select_reference(bf_hail_adapter *s, bf_audio_timing *timing, uint32_
             p->frame_position != first.frame_position + i || error > period / 2 + 4u ||
             !uncertainty_ok(s, &s->capture_origin, p, flags))
             return 0;
+        bf_audio_timing interpolated = BF_INIT(bf_audio_timing);
+        if (bf_timing_advance(&first, i, s->config.pipeline.sample_rate, &interpolated) != BF_OK)
+            return 0;
+        uint64_t model_error = p->host_time_ns > interpolated.host_time_ns
+                                   ? p->host_time_ns - interpolated.host_time_ns
+                                   : interpolated.host_time_ns - p->host_time_ns;
+        uint64_t bound = p->uncertainty_ns > UINT64_MAX - model_error
+                             ? UINT64_MAX
+                             : p->uncertainty_ns + model_error;
+        if (bound > uncertainty)
+            uncertainty = bound;
     }
+    first.uncertainty_ns = uncertainty;
+    if (!uncertainty_ok(s, &s->capture_origin, &first, flags))
+        return 0;
     for (uint32_t i = 0; i < f; ++i)
         memcpy(s->aligned + (size_t)i * k, s->history + (size_t)((s->history_read + i) % cap) * k,
                k * sizeof(float));
