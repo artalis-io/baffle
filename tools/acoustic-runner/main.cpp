@@ -228,7 +228,7 @@ int main(int argc, char **argv) try
         if (pipeline) {
             bf_process_info info=BF_INIT(bf_process_info);
             check(bf_pipeline_process(pipeline,&n,missing_reference ? nullptr:&r,&o,&info));
-            if (!o.frames) std::fill(out,out+frames,0);
+            if (!o.frames) std::fill(out,out+frames,0.0f);
             return info.flags;
         }
 #ifdef BF_COMPARE_WEBRTC
@@ -259,7 +259,7 @@ int main(int argc, char **argv) try
     for (size_t call=0;call<calls;++call) {
         size_t offset=call*frames;
         size_t count=seconds ? frames : std::min<size_t>(frames,mic.size()-offset);
-        std::fill(near,near+frames,0); std::fill(far,far+frames,0);
+        std::fill(near,near+frames,0.0f); std::fill(far,far+frames,0.0f);
         for (size_t i=0;i<count;++i) { near[i]=mic[(offset+i)%mic.size()]; far[i]=ref[(offset+i)%ref.size()]; }
         auto release=seconds ? origin+std::chrono::milliseconds(call*10) : Clock::now();
         if (seconds) waiter.wait(release);
