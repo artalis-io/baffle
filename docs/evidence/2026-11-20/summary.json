@@ -1,0 +1,43 @@
+{
+  "source_revision": "63d7a41a35789db679582c984fd32df72b11dfb5",
+  "date_utc": "2026-11-20",
+  "overall_verdict": "PARTIAL",
+  "production_ready": false,
+  "changes": [
+    "Missing-reference receipts require observed PCM for clipping/generation events",
+    "NULL reference timing accepted only with missing reference",
+    "Direct unaligned S16 decoding regression",
+    "Controlled recorded-speech diagnostic retains failed raw target"
+  ],
+  "verification": {
+    "windows_x64_clang_cl_19": "Release static AEC 7/7; Debug shared AEC 7/7; Debug static default 7/7; installed static Hail consumer 3/3",
+    "linux_arm64_clang_18": "ASan+UBSan 8/8; TSan 8/8, including bounded heap guard",
+    "ci": "Expanded 27-job current matrix pending; no new CI success claimed"
+  },
+  "quality": {
+    "raw_target_met": false,
+    "snr_improvement_db": 6.64842623259821,
+    "required_db": 8,
+    "physical_qualification": false,
+    "note": "Known near component includes recorded noise; processed control is diagnostic, not clean-speech ground truth"
+  },
+  "native_tool_sha256": "bec55b2cc2380afab44d1ba39613053820d30d43a13079e29e47636c4a74ce68",
+  "artifact_sha256": {
+    "missing-reference-original-failure.txt": "ba2cf9969fa94dc8fbfca700e4435ac52385642732ec6db7d1ac0b592cbeb1aa",
+    "missing-reference-windows-release.log": "86860e6ca133be5266195480dfbe4c0f3c07ec6847e9085dd69779cbfe17e365",
+    "missing-reference-windows-debug.log": "847405c97ddb1d5036acfe26e1db92f8c60b093c13aa0eb6412c67be395d2056",
+    "missing-reference-default.log": "b1f69f79e649f227bf5e78a3309e5fbdde2733ae0a2deb238eddd9ca667f75ec",
+    "missing-reference-windows-installed.log": "e72fccc791b99d7eb74141b8fb3a85e253369bd3d16c0a2a78aaeb8970c7b09c",
+    "baffle-missing-reference-asan.log": "14b3815ef54067faebf4748477a3fc76f812a6bb3c4a977182e2d6c023ce8b5d",
+    "baffle-missing-reference-tsan.log": "37cd99b4ab6f47f335aa88886138acb8799111539354f26814fcfa3b65196fcc",
+    "controlled-doubletalk-portable.json": "63a68ae5ec8c93d64beabb1dda14c8da7899006a59559ed913ec3e8f7ba240ec"
+  },
+  "source_sha256_lf": {
+    "src/aec.c": "fbe1eb03449189b09adf012eb4d7614a12b12101fa9e1028af20eb0fc461992b",
+    "src/pipeline.c": "0cf74814b49bd95f0d76a714775ec1117a526f8c37d96ac186b16abbab2679a4",
+    "include/baffle.h": "1480a7185a0bbdc9283f557cadff79ea576f7ad838d38d206d40bfffca4e771e",
+    "tests/aec.c": "0d2d017920b6cbe5352e245419df4805d5b08cca793397ccec8b794a8deb5d6f",
+    "tests/pcm.c": "7d01d5c124b898868cc9bfeb478d16e26dd378dcb113151ad3048f597b783cbb",
+    "tools/controlled_aec.py": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225"
+  }
+}

@@ -53,6 +53,13 @@ rate's complete response curve or a stable ABI release.
 
 ## Executed verification
 
+The [November 20 convergence evidence](evidence/2026-11-20/summary.json) records
+the missing-reference correction, direct S16 decoder regression and controlled
+recorded-speech diagnostic. Windows Release static/Debug shared AEC and Debug
+static default each passed 7/7; installed static Hail consumers passed 3/3.
+Linux ARM64 ASan+UBSan and TSan each passed 8/8. The controlled raw-component
+quality target failed and is retained separately from correctness test passes.
+
 Windows x86-64 clang-cl 19.1.5 Release optional AEC: 7/7 tests static/shared;
 independent installed Hail/PCM consumers passed. Earlier Debug core checks passed.
 The installed Hail consumer also drives callbacks/writes/cancellation on one
