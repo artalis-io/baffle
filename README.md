@@ -48,5 +48,12 @@ remain unqualified. Exploratory real-recording AEC trials were weak and are
 documented alongside synthetic results. **This working DSP implementation is not a production-readiness
 certification.** See [qualification](docs/qualification.md) for the remaining work.
 
+[Real-world convergence](docs/real-world-qualification.md) adds a controlled AEC3
+comparison, seeded transcript fixtures and actual external ASR/TTS/LLM contention
+measurements. Real-room cancellation and interruption quality remain PARTIAL;
+blank ASR hypotheses, epoch-reset tails and missing reviewed onset labels are
+retained. The optional [acoustic tools](tools/acoustic-runner) build against
+installed public libraries without changing the core dependencies.
+
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.

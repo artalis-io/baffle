@@ -1,0 +1,92 @@
+{
+  "models": [
+    {
+      "kind": "whisper",
+      "repository": "csukuangfj/sherpa-onnx-whisper-tiny.en",
+      "revision": "d026532c022fa99fd789d6b32446a1df7b6bfc43",
+      "files": [
+        {
+          "file": "whisper/test_wavs/0.wav",
+          "bytes": 212044,
+          "sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f"
+        },
+        {
+          "file": "whisper/test_wavs/trans.txt",
+          "bytes": 449,
+          "sha256": "b9ac44e7b794abb1a2d5faf0005e98a665971e7ac2ed15435832cc34edaa9100"
+        },
+        {
+          "file": "whisper/tiny.en-decoder.int8.onnx",
+          "bytes": 89853865,
+          "sha256": "06c0e6ff6348d427e51839219d1c886c18cfdf411e629e33f5e1679bff9c1527"
+        },
+        {
+          "file": "whisper/tiny.en-encoder.int8.onnx",
+          "bytes": 12937772,
+          "sha256": "0ce578b827c94a961aacb8fa14b02f096504b337e5c94be37c36238cbe3e8bc6"
+        },
+        {
+          "file": "whisper/tiny.en-tokens.txt",
+          "bytes": 835554,
+          "sha256": "306cd27f03c1a714eca7108e03d66b7dc042abe8c258b44c199a7ed9838dd930"
+        }
+      ]
+    },
+    {
+      "kind": "parakeet",
+      "repository": "csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8",
+      "revision": "ed5d745623472f97cfc2e6c2916ee248798fc5a8",
+      "files": [
+        {
+          "file": "parakeet/decoder.int8.onnx",
+          "bytes": 11845274,
+          "sha256": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5"
+        },
+        {
+          "file": "parakeet/encoder.int8.onnx",
+          "bytes": 652282294,
+          "sha256": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479"
+        },
+        {
+          "file": "parakeet/joiner.int8.onnx",
+          "bytes": 6355277,
+          "sha256": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98"
+        },
+        {
+          "file": "parakeet/README.md",
+          "bytes": 4905,
+          "sha256": "701a3375e3fe77308d280c673d34146162d2f1602b44f97d99086e3f537a1119"
+        },
+        {
+          "file": "parakeet/tokens.txt",
+          "bytes": 93939,
+          "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+        }
+      ]
+    },
+    {
+      "kind": "piper",
+      "repository": "rhasspy/piper-voices",
+      "revision": "42301ec547bc2939386cf0ae9f9050ca05b1d3af",
+      "files": [
+        {
+          "file": "piper/en/en_US/lessac/low/en_US-lessac-low.onnx",
+          "bytes": 63201294,
+          "sha256": "f7d01dde371555732c4c314111ac79672b1a5ce2fc19266ab42178fd8df7f375"
+        },
+        {
+          "file": "piper/en/en_US/lessac/low/en_US-lessac-low.onnx.json",
+          "bytes": 4882,
+          "sha256": "45754dfdebb3b8661c3fc564713772deec6e064feeb5b4e9594857dc7305193a"
+        },
+        {
+          "file": "piper/en/en_US/lessac/low/MODEL_CARD",
+          "bytes": 345,
+          "sha256": "f4f5b5ab354ab71dd2c71b571bcd0879b259ddfabaa5169b968a60427d0b73f3"
+        }
+      ]
+    }
+  ],
+  "redistributed": false,
+  "licensing": "External QA only. Review model/voice and dataset terms independently; no commercial clearance asserted."
+}

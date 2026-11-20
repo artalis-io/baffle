@@ -1,0 +1,241 @@
+{
+  "jobs": [
+    {
+      "name": "normal",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "normal-mic.f32",
+      "reference": "normal-ref.f32",
+      "oracle": "normal-oracle.f64",
+      "mic_sha256": "8c672365f3352487c4645bf45aeb6c45ca0ad87f51319557ff210ef3fc9528a4",
+      "reference_sha256": "bbfbc0981a37a5078b6a5800b31d57ba4cfe7699794739d3cd87990245eb1c90",
+      "oracle_sha256": "97239ae631896990346ba021b782f08d53e330557dd4a6d556a4b725bb9856cb",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": null,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.2,
+        "far_peak": 0.25,
+        "phoneme_onset_labels": null
+      }
+    },
+    {
+      "name": "quiet-near",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "quiet-near-mic.f32",
+      "reference": "quiet-near-ref.f32",
+      "oracle": "quiet-near-oracle.f64",
+      "mic_sha256": "0c7f367c7f52df6a61f0cbde902421836bd7ae6431ab604f28fa4fa3fe0f2535",
+      "reference_sha256": "17d34233379490913df553c786eb2dce6ec57ccef2d874d34cd9488701ef2bf3",
+      "oracle_sha256": "11b83d41ee60ac1e43bd6636cdf4681a8e5b4f85af798b3a5b418fc842c22c3e",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.025,
+        "far_peak": 0.5,
+        "phoneme_onset_labels": null
+      }
+    },
+    {
+      "name": "through-cancel",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "through-cancel-mic.f32",
+      "reference": "through-cancel-ref.f32",
+      "oracle": "through-cancel-oracle.f64",
+      "mic_sha256": "19db04dca0db72454cec5d96bbbcf90ac815c7ee7f3538c7a6cacb4430d94a19",
+      "reference_sha256": "95e77d97f0d446f0832fd9d6691c540ea987887435bed28a90e63807f881e0e8",
+      "oracle_sha256": "3632491b6154ce0393a776f0eb9a82caf48289ba6a876a17c8142bcd582fd912",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.15,
+        "far_peak": 0.3,
+        "phoneme_onset_labels": null
+      }
+    },
+    {
+      "name": "epoch-flush",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "epoch-flush-mic.f32",
+      "reference": "epoch-flush-ref.f32",
+      "oracle": "epoch-flush-oracle.f64",
+      "mic_sha256": "19db04dca0db72454cec5d96bbbcf90ac815c7ee7f3538c7a6cacb4430d94a19",
+      "reference_sha256": "95e77d97f0d446f0832fd9d6691c540ea987887435bed28a90e63807f881e0e8",
+      "oracle_sha256": "3632491b6154ce0393a776f0eb9a82caf48289ba6a876a17c8142bcd582fd912",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.15,
+        "far_peak": 0.3,
+        "phoneme_onset_labels": null
+      },
+      "transport_events": "epoch-flush-events.txt",
+      "transport_events_sha256": "c3acaf0d88347f7544fc954305e222e67c6e1b1d4946f7802af166ff0134da67",
+      "event_semantics": "Capture epoch unchanged; render epoch/generation advance at cancellation; acoustic FIR tail continues"
+    },
+    {
+      "name": "epoch-restart",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "epoch-restart-mic.f32",
+      "reference": "epoch-restart-ref.f32",
+      "oracle": "epoch-restart-oracle.f64",
+      "mic_sha256": "08ab288844319abe890c4d4c16b45a112fc47ab1fc47adecb58c9d6bf6a41348",
+      "reference_sha256": "7534efd46081620220812c73258b3060b1d2a9a38f37e3c35479181c13fdbc02",
+      "oracle_sha256": "3632491b6154ce0393a776f0eb9a82caf48289ba6a876a17c8142bcd582fd912",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.15,
+        "far_peak": 0.3,
+        "phoneme_onset_labels": null
+      },
+      "transport_events": "epoch-restart-events.txt",
+      "transport_events_sha256": "c3acaf0d88347f7544fc954305e222e67c6e1b1d4946f7802af166ff0134da67",
+      "event_semantics": "Capture epoch unchanged; render epoch/generation advance at cancellation; acoustic FIR tail continues"
+    }
+  ],
+  "source_sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f",
+  "transcript_sha256": "b9ac44e7b794abb1a2d5faf0005e98a665971e7ac2ed15435832cc34edaa9100",
+  "source_revision": "HF d026532c022fa99fd789d6b32446a1df7b6bfc43 test_wavs/0.wav + trans.txt",
+  "tts_model_sha256": "f7d01dde371555732c4c314111ac79672b1a5ce2fc19266ab42178fd8df7f375",
+  "annotation_scope": "Provider word transcript only, no independently timed phoneme labels",
+  "no_physical_measurement": true
+}

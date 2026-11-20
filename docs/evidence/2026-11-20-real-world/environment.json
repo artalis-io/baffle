@@ -1,0 +1,142 @@
+{
+  "windows": {
+    "cpu": {
+      "Name": "AMD Ryzen 9 5950X 16-Core Processor            ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32
+    },
+    "os": {
+      "Caption": "Microsoft Windows 11 Pro",
+      "Version": "10.0.26300",
+      "BuildNumber": "26300",
+      "TotalVisibleMemorySize": 134114624
+    },
+    "compiler": "clang-cl 19.1.5; MSVC smoke 19.44.35229",
+    "flags": "Release /O2 /Ob2 /DNDEBUG; scalar Baffle, reviewed SpeexDSP 1.2.1",
+    "baffle_sdk_files": [
+      {
+        "file": "include/baffle.h",
+        "bytes": 14686,
+        "sha256": "1480a7185a0bbdc9283f557cadff79ea576f7ad838d38d206d40bfffca4e771e"
+      },
+      {
+        "file": "lib/baffle.lib",
+        "bytes": 159378,
+        "sha256": "01f538f68b80b608cf664f20bc2b89d656782577b718d3c74682d84895fbcf31"
+      },
+      {
+        "file": "lib/baffle_hail_adapter.lib",
+        "bytes": 21902,
+        "sha256": "ea41915065fdbb6fa38c5d32f096616cd8255f317955558cdf585684ee38765d"
+      },
+      {
+        "file": "include/baffle/hail.h",
+        "bytes": 3001,
+        "sha256": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500"
+      }
+    ],
+    "hail_sdk_files": [
+      {
+        "file": "include/hail.h",
+        "bytes": 13521,
+        "sha256": "b8a7ac1d4fb331e5aa748f5f306e19644e02879ab80402ad8812324ab43b18aa"
+      },
+      {
+        "file": "lib/hail.lib",
+        "bytes": 85980,
+        "sha256": "21745f6e3af6167a845fd34cf08b4cdf4dcc2ee7b4286053505eeb3b414cd025"
+      },
+      {
+        "file": "include/hail/virtual.h",
+        "bytes": 2840,
+        "sha256": "133cf2096d849bd455b51cf95f9c8f96a106b73b642a80568ab2a3049ba94585"
+      }
+    ],
+    "hail_sdk_source_revision": "not embedded; exact installed bits hashed, do not infer from sibling working tree"
+  },
+  "linux_arm64": {
+    "hostname": "spark-7468",
+    "hardware": "20 CPU: 10 Cortex-X925 + 10 Cortex-A725; GB10-class unified platform",
+    "os": "Ubuntu 24.04, Linux 7.0.0-1024-nvidia",
+    "compiler": "GCC 13.3.0 Release -O3 -DNDEBUG; Clang18 sanitizers",
+    "hail_source": "7ef6142ba4b8c8be15d1e7d704502db01abc5113",
+    "root": "/tmp/baffle.fVOhT0",
+    "qa_root": "/tmp/baffle-acoustic-tools",
+    "raw_environment": "spark-environment.txt"
+  },
+  "webrtc": {
+    "release": "2.1",
+    "url": "https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-2.1.tar.xz",
+    "sha256": "ae9302824b2038d394f10213cab05312c564a038434269f11dbf68f511f9f9fe",
+    "meson": "1.9.0",
+    "flags": "Release -O3 -DNDEBUG; ARM64 NEON; debug dump 0",
+    "abseil_release": "20240722.0",
+    "abseil_tar_sha256": "f50e5ac311a81382da7fa75b97310e4b9006474f9560ac46f54a9967f07d4ae3",
+    "abseil_wrap_patch_sha256": "12dd8df1488a314c53e3751abd2750cf233b830651d168b6a9f15e7d0cf71f7b",
+    "upstream_linear_diagnostic_patch": "tools/acoustic-runner/webrtc-2.1-linear-output.patch",
+    "main_comparison_unpatched": true
+  },
+  "inference": {
+    "whisper": "tiny.en int8 encoder/decoder; CPU sherpa-onnx/core 1.12.40, 2 threads",
+    "parakeet": "NeMo TDT 0.6b v3 int8 transducer; CPU sherpa-onnx/core 1.12.40, 2 threads",
+    "piper": "Lessac low ONNX; piper-tts 1.3.0, CPU onnxruntime 1.23.2, intra 2/inter 1",
+    "llm": "Existing qwen38-fp4 service, vLLM 0.1.dev21830+g8244d1c44.d20261108; configured modelopt_mixed/BF16/FP8 KV; model weights not independently audited",
+    "llm_service_changes": false
+  },
+  "commands": [
+    "ctest --test-dir build-adapter --output-log build-acoustic/core-final.log",
+    "ctest --test-dir build-hail-consumer --output-log build-acoustic/hail-final.log",
+    "python tools/controlled_aec.py build-adapter/baffle_qualify.exe build-recorded build-acoustic/baseline-controlled.json --assert-raw-target",
+    "python tools/room_replay.py prepare build-recorded build-acoustic/rooms",
+    "LD_PRELOAD=./compare-release/libbaffle_qa_alloc_probe.so python tools/room_replay.py replay compare-release/baffle_acoustic_runner rooms results",
+    "python tools/room_replay.py replay compare-release/baffle_acoustic_runner rooms tail-results --backends baffle-40ms baffle-500ms",
+    "python tools/room_replay.py replay compare-linear/baffle_acoustic_runner rooms linear-results --backends aec3-linear",
+    "python tools/calibrated_backend_scores.py build-acoustic/rooms/manifest.json build-acoustic/backend-report.json build-acoustic build-acoustic/calibrated-scores.json --linear-report build-acoustic/linear-report.json",
+    "python tools/word_qualification.py prepare build-acoustic/models build-acoustic/word-seeded-a",
+    "python tools/room_replay.py replay compare-release/baffle_acoustic_runner word-seeded-a word-results-seeded --backends baffle aec3 pipeline",
+    "python tools/word_qualification.py score build-acoustic/models build-acoustic/word-seeded-a build-acoustic/word-results-seeded build-acoustic/word-wer-seeded.json",
+    "python tools/cancellation_tail_scores.py build-acoustic/word-seeded-a build-acoustic/word-results-seeded build-acoustic/cancellation-tail.json",
+    "python tools/inference_contention.py build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/models tests/fixtures/osr/OSR_us_000_0010_8k.wav build-acoustic/rooms/controlled-16000-mic.f32 build-acoustic/rooms/controlled-16000-ref.f32 build-acoustic/contention-final --seconds 30 --wait-policy highres",
+    "python tools/inference_contention.py build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/models tests/fixtures/osr/OSR_us_000_0010_8k.wav build-acoustic/rooms/controlled-16000-mic.f32 build-acoustic/rooms/controlled-16000-ref.f32 build-acoustic/contention-stress --seconds 120 --wait-policy highres --workloads whisper+parakeet+piper",
+    "python tools/onset_qualification.py tests/fixtures/onset-review.example.json build-acoustic/onset-unqualified-final.json",
+    "cmake --build build-asan --parallel && ctest --test-dir build-asan --output-on-failure",
+    "cmake --build build-tsan --parallel && ctest --test-dir build-tsan --output-on-failure",
+    "build-aec-fuzz/baffle_fuzz_aec build-aec-fuzz/corpus -runs=10000 -max_len=4096 -seed=723",
+    "cmake --build build-analysis --parallel"
+  ],
+  "command_scope": "Reports and native receipts retain actual absolute argv. Examples above use equivalent cache-relative paths. Export external library/pkgconfig paths described in the tools guide. Original failed and passing cached audio identities are distinct.",
+  "qa_tool_source_sha256": {
+    "tools/acoustic-runner/allocation_probe.c": "756a285d119b98773db7b7e9eae8fd4653c40d996f96b30c9bc17527e2925115",
+    "tools/acoustic-runner/CMakeLists.txt": "1f2375380d88d4f6e4caf9789ef9058c36f8aef992f492c401ca91a6d43e3a69",
+    "tools/acoustic-runner/hail_acquire.cpp": "ba93068c410f04b0daa0abe7cc77189e05bf00fa1b3f0273cb5b0eadc971cae0",
+    "tools/acoustic-runner/main.cpp": "f819679a9ed4fa4aff9e690d7c5df02154e816d5655f7e8101687d063fe164ce",
+    "tools/acoustic-runner/vad_trace.c": "53664e8cf3a4ef9c3fef0e33e68396eb95df76fb96fd1be15ca2abd5deeb27f5",
+    "tools/acoustic-runner/webrtc-2.1-linear-output.patch": "02338ea2e21bba9691213772e46a6a3ec2eb634e9338d782b803783a8bb698d2",
+    "tools/acquire_room.py": "7e4315c8a376cacc3659651af987eb8635a65e5da03a44701176d50fff86fce6",
+    "tools/aec_diagnostics.py": "247ca13143091ec77d37078afc9facb56e01f7cf7161cc0f8cb80fe7d355a5f9",
+    "tools/asr_boundary_diagnostics.py": "d0b0a574bca6f6e697e1b7df16ee6ece2fac33ea6570b7d2c8fd49b56697f6b0",
+    "tools/benchmark.py": "a13764beed21c2facf59d4e969d89ca5921ecdb7e7135f0e8f25bf00a1b16ba3",
+    "tools/calibrated_backend_scores.py": "80a3a578c418705a36ed93e9c6b28d53922e354b1c6506787343a488dfb4e364",
+    "tools/cancellation_tail_scores.py": "3038cdada0cb77600f30c814e85fdf00eb2aa0cf0a2b579bea99f2c4dab251f3",
+    "tools/check_exports.py": "518040c0095ce556db06a13bb03e954276f17ba5cd6c2c119b0ba4e564b65c11",
+    "tools/check_latency_receipts.py": "8082e8cbbbead0638c79ea3a731ef7d8d460c60fb13bfe67993d04268dac8e86",
+    "tools/check_realtime_symbols.py": "4f8c18c7e3769d0411100cd1401917f4c7d02e98ae4a2b6f9ce04c023e404f3b",
+    "tools/controlled_aec.py": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+    "tools/fuzz_corpus.py": "4b982a213c225363de75616d08fc01ed9f6efdb1a3fccec24bc07a83d7406b5a",
+    "tools/inference_contention.py": "87ad876e150fccdef110aaaf3bcdb48c08f01c7c4b72fd0daba96d7c396cf485",
+    "tools/llm_contention.py": "f2ae3f12ae544f8c902c2c081a14adc40fde91ab4ec6d8f313fdaee40e00fb87",
+    "tools/onset_qualification.py": "bff1543c0d2d6afaa13fc6d5ddb81abd5b42a8aa602b774ffecb67e5d06f7759",
+    "tools/qualify.c": "73413669497cfa47ea615480309ccd5f273d20ae6898ba35206e4dbce21e4796",
+    "tools/recorded_aec.py": "736c2ebbed0b13290a710f214975ca52008d26aa04a965418385716215bdf162",
+    "tools/requirements-qualification.txt": "ec86a66cb9c918d5d077dac5d906add130e23cb8994de1111335c956abfbdc5b",
+    "tools/room_replay.py": "eb169c088da2a4b622b15453a5789238154309b035202e539c60beb65e181f72",
+    "tools/speech_quality.py": "befcaeeda2c51071aa0a221effc47a5723d877389916b848036a480c92ea4a0f",
+    "tools/word_qualification.py": "7ec66fac1abc15c5d80560f3d81a819440a67bedf2aef8cf003685dba532e007"
+  },
+  "inference_input_sha256": {
+    "wav": "a4bf9becd046d7aedb6d05b6e12347a6294a44f74d263089c636fb0a2b1e6561",
+    "microphone": "bfce645036b28b8ae59600e14e80db37cddc8ebc04f82969a89a1b40781883d7",
+    "render": "3838996d658e9ad08532e412c834cd4796c8e1f08d98b61eae404245a061856b"
+  },
+  "llm_reproduction": "python tools/llm_contention.py compare-release/baffle_acoustic_runner rooms/controlled-16000-mic.f32 rooms/controlled-16000-ref.f32 llm-trials --seconds 30 --endpoint http://127.0.0.1:8086/v1 --model qwen38-fp4"
+}

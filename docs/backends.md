@@ -1,5 +1,10 @@
 # Algorithm backend assessment
 
+An executed [WebRTC AEC3 2.1 comparison](real-world-qualification.md#webrtc-aec3-comparison-and-backend-decision)
+now supplements this initial assessment. Its recorded far-only advantage trades
+against near-end losses, 8–9 ms observed peak delay and blocking APM mutexes.
+The external diagnostic build is not a shipped or qualified Baffle backend.
+
 WebRTC AEC3 is a strong candidate for modern speech applications, with explicit
 delay, near-end and clock-drift components. Its upstream GN/C++ build and broad
 dependency surface require an isolated integration; do not silently import a

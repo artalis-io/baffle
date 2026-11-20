@@ -1,5 +1,11 @@
 # Reproducible speech and acoustic qualification
 
+The [2026-11-20 real-world report](real-world-qualification.md) retains actual
+recorded-room/backend comparisons, seeded word-recognition failures and real
+inference-contention measurements. See the [external acquisition/replay guide](../tools/acoustic-runner/README.md)
+for executable physical acquisition and independently reviewed onset admission.
+These observations do not complete calibrated room/onset qualification.
+
 No physical acoustic, recorded-speech corpus, audible-tail or device-timestamp
 accuracy claim is made by this repository's synthetic tests. The following work
 is required before deployment readiness, independently of Hail's own Gate E.

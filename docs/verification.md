@@ -1,9 +1,16 @@
 # Engineering gates and acceptance evidence
 
+The [real-world convergence report](real-world-qualification.md) supersedes the
+absence of actual inference-contention evidence below: external CPU ASR/TTS and
+GPU LLM trials are now retained. Complete live device/inference, calibrated
+acoustic and independently reviewed phone-onset qualification remain open.
+The new external tools have model-free installed-consumer CI smoke coverage.
+
 Overall verdict: **PARTIAL; not production-qualified and ABI not frozen**.
 Working code exists for every required DSP/transport area. Recorded-speech and
-physical acoustic evidence, actual inference contention and deployment soak are
-outstanding. Green CI does not close these requirements.
+actual inference replay now have partial evidence; calibrated physical/onset,
+complete connected-workload qualification and deployment soak remain outstanding.
+Green CI does not close these requirements.
 
 ## Gate matrix
 

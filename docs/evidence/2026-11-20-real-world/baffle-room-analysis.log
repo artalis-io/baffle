@@ -1,0 +1,5 @@
+[ 71%] Built target baffle
+[ 78%] Building C object CMakeFiles/baffle_latency.dir/bench/latency.c.o
+[ 92%] Built target baffle_qualify
+[100%] Linking C executable baffle_latency
+[100%] Built target baffle_latency

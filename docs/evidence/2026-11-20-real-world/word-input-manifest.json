@@ -1,0 +1,145 @@
+{
+  "jobs": [
+    {
+      "name": "normal",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "normal-mic.f32",
+      "reference": "normal-ref.f32",
+      "oracle": "normal-oracle.f64",
+      "mic_sha256": "a155e496f77643013eaf5105342f1692e780a3f0cc09975204208afd71fc3818",
+      "reference_sha256": "d78f135c278a13adcb3ac848651ee59e717af0ef5a170393a11a7a24c9445c38",
+      "oracle_sha256": "97239ae631896990346ba021b782f08d53e330557dd4a6d556a4b725bb9856cb",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": null,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.2,
+        "far_peak": 0.25,
+        "phoneme_onset_labels": null
+      }
+    },
+    {
+      "name": "quiet-near",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "quiet-near-mic.f32",
+      "reference": "quiet-near-ref.f32",
+      "oracle": "quiet-near-oracle.f64",
+      "mic_sha256": "011e3497f8ce87f26c7b8a15caaa3baa5914ce56c792739ea9bb057e8a31c52f",
+      "reference_sha256": "52bf70df0b2203027e152df4bd2f4bd88cf5a9a12d4a058f2924025af15be2b9",
+      "oracle_sha256": "11b83d41ee60ac1e43bd6636cdf4681a8e5b4f85af798b3a5b418fc842c22c3e",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.025,
+        "far_peak": 0.5,
+        "phoneme_onset_labels": null
+      }
+    },
+    {
+      "name": "through-cancel",
+      "rate": 16000,
+      "frames": 384000,
+      "mic": "through-cancel-mic.f32",
+      "reference": "through-cancel-ref.f32",
+      "oracle": "through-cancel-oracle.f64",
+      "mic_sha256": "8e72eb3beea90bd6b75267066bf9cdc896410456ad79522092f94362e5e49809",
+      "reference_sha256": "f1351693308a24144a82e0cbff02494e13554317b4c2fc6641f0a9c365def2f4",
+      "oracle_sha256": "3632491b6154ce0393a776f0eb9a82caf48289ba6a876a17c8142bcd582fd912",
+      "scope": "simulated-echo-provider-transcript",
+      "far_only_interval_s": [
+        6,
+        8
+      ],
+      "near_interval_s": [
+        8,
+        14.625
+      ],
+      "asr_interval_frames": [
+        120000,
+        242000
+      ],
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "metadata": {
+        "cancel_s": 10.0,
+        "tail_taps": [
+          [
+            48,
+            0.6
+          ],
+          [
+            320,
+            0.2
+          ],
+          [
+            1280,
+            -0.1
+          ]
+        ],
+        "near_peak": 0.15,
+        "far_peak": 0.3,
+        "phoneme_onset_labels": null
+      }
+    }
+  ],
+  "source_sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f",
+  "transcript_sha256": "b9ac44e7b794abb1a2d5faf0005e98a665971e7ac2ed15435832cc34edaa9100",
+  "source_revision": "HF d026532c022fa99fd789d6b32446a1df7b6bfc43 test_wavs/0.wav + trans.txt",
+  "tts_model_sha256": "f7d01dde371555732c4c314111ac79672b1a5ce2fc19266ab42178fd8df7f375",
+  "annotation_scope": "Provider word transcript only, no independently timed phoneme labels",
+  "no_physical_measurement": true
+}

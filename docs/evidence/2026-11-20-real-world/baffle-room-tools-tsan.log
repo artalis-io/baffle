@@ -1,0 +1,30 @@
+-- The C compiler identification is Clang 18.1.3
+-- The CXX compiler identification is Clang 18.1.3
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /tmp/hail-gate-e-final.lTzsbV/compiler/usr/bin/clang-18 - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /tmp/hail-gate-e-final.lTzsbV/compiler/usr/bin/clang++-18 - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/baffle.fVOhT0/build-room-tools-tsan
+[ 12%] Building C object CMakeFiles/baffle_vad_trace.dir/vad_trace.c.o
+[ 25%] Building CXX object CMakeFiles/baffle_hail_acquire.dir/hail_acquire.cpp.o
+[ 37%] Building CXX object CMakeFiles/baffle_acoustic_runner.dir/main.cpp.o
+[ 50%] Building C object CMakeFiles/baffle_qa_alloc_probe.dir/allocation_probe.c.o
+[ 62%] Linking C executable baffle_vad_trace
+[ 75%] Linking C shared library libbaffle_qa_alloc_probe.so
+[ 75%] Built target baffle_qa_alloc_probe
+[ 75%] Built target baffle_vad_trace
+[ 87%] Linking CXX executable baffle_acoustic_runner
+[100%] Linking CXX executable baffle_hail_acquire
+[100%] Built target baffle_acoustic_runner
+[100%] Built target baffle_hail_acquire
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+PASS raw replay/EOS, VAD receipts, retained-output guard and unreviewed-onset rejection; optional virtual cancellation

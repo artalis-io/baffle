@@ -1,0 +1,58 @@
+The Meson build system
+Version: 1.9.0
+Source dir: /tmp/baffle-acoustic-tools/webrtc-audio-processing-2.1
+Build dir: /tmp/baffle-acoustic-tools/webrtc-build
+Build type: native build
+Project name: webrtc-audio-processing
+Project version: 2.1
+C compiler for the host machine: ccache cc (gcc 13.3.0 "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0")
+C linker for the host machine: cc ld.bfd 2.42
+C++ compiler for the host machine: ccache c++ (gcc 13.3.0 "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0")
+C++ linker for the host machine: c++ ld.bfd 2.42
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Found pkg-config: YES (/usr/bin/pkg-config) 1.8.1
+Found CMake: /usr/bin/cmake (3.28.3)
+Run-time dependency absl_base found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency absl_base
+Downloading abseil-cpp source from https://github.com/abseil/abseil-cpp/releases/download/20240722.0/abseil-cpp-20240722.0.tar.gz
+Downloading abseil-cpp patch from https://wrapdb.mesonbuild.com/v2/abseil-cpp_20240722.0-3/get_patch
+
+Executing subproject abseil-cpp 
+
+abseil-cpp| Project name: abseil-cpp
+abseil-cpp| Project version: 20240722.0
+abseil-cpp| C++ compiler for the host machine: ccache c++ (gcc 13.3.0 "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0")
+abseil-cpp| C++ linker for the host machine: c++ ld.bfd 2.42
+abseil-cpp| Compiler for C++ supports arguments /DNOMINMAX: NO
+abseil-cpp| Compiler for C++ supports arguments -Wno-sign-compare: YES
+abseil-cpp| Compiler for C++ supports arguments -Wno-gcc-compat: NO
+abseil-cpp| Checking for size of "void*" : 8
+abseil-cpp| Compiler for C++ supports arguments -march=armv8-a+crypto: YES
+abseil-cpp| Checking if "atomic builtins" links: YES
+abseil-cpp| Run-time dependency threads found: YES
+abseil-cpp| Run-time dependency appleframeworks found: NO (tried framework)
+abseil-cpp| Build targets in project: 15
+abseil-cpp| Subproject abseil-cpp finished.
+
+Dependency absl_base from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Dependency absl_flags from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Dependency absl_strings from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Dependency absl_numeric from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Dependency absl_synchronization from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Dependency absl_bad_optional_access from subproject subprojects/abseil-cpp-20240722.0 found: YES 20240722.0
+Library rt found: YES
+Dependency threads found: YES unknown (cached)
+Fetching value of define "_MSC_VER" : (undefined) 
+Build targets in project: 24
+
+webrtc-audio-processing 2.1
+
+  Subprojects
+    abseil-cpp: YES
+
+  User defined options
+    buildtype : release
+    prefix    : /tmp/baffle-acoustic-tools/installed
+
+Found ninja-1.11.1 at /usr/bin/ninja

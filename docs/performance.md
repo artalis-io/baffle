@@ -1,5 +1,11 @@
 # Processing latency and resource evidence
 
+The [real-world report](real-world-qualification.md#actual-inference-contention)
+adds paced full-pipeline trials under actual CPU Whisper/Parakeet/Piper and a
+separate GPU LLM workload. Those measurements separate execution from scheduling
+and retain the additional 10 ms NS buffering. The older unpaced and CPU-proxy
+measurements below remain historical, different configurations.
+
 The native [benchmark](../bench/latency.c) measures synchronous 10/20 ms calls,
 after 100 pipeline warm-up calls, with preallocated buffers and no measured I/O.
 CSV contains median/P95/P99/max, mean adjacent processing-cost difference,

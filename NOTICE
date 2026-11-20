@@ -10,3 +10,8 @@ and OggVorbis smallft attribution (1994-2001 XIPHOPHORUS Company).
 The source-only recorded test fixtures under tests/fixtures/osr are from
 Open Speech Repository and retain its attribution-required conditions;
 see tests/fixtures/osr/README.md. They are not relicensed under MIT.
+Optional external qualification tools can use separately installed WebRTC
+AudioProcessing (BSD-3-Clause), ASR/TTS runtimes, voices and model datasets.
+These are not linked into the Baffle core or redistributed as model/audio
+assets. Their independent license and dataset terms apply; see
+tools/acoustic-runner/README.md and retained model/source identities.

@@ -1,0 +1,26 @@
+[OUTPUT] 
+Internal ctest changing into directory: /tmp/baffle.fVOhT0/build-tsan
+
+[HANDLER_OUTPUT] 
+Test project /tmp/baffle.fVOhT0/build-tsan
+
+    Start 1: conformance
+1/8 Test #1: conformance ......................   Passed    0.01 sec
+    Start 2: pcm
+2/8 Test #2: pcm ..............................   Passed    0.01 sec
+    Start 3: numerical
+3/8 Test #3: numerical ........................   Passed    2.85 sec
+    Start 4: conditioning
+4/8 Test #4: conditioning .....................   Passed    0.23 sec
+    Start 5: aec
+5/8 Test #5: aec ..............................   Passed    3.87 sec
+    Start 6: pipeline
+6/8 Test #6: pipeline .........................   Passed    5.05 sec
+    Start 7: concurrency
+7/8 Test #7: concurrency ......................   Passed    2.15 sec
+    Start 8: noalloc
+8/8 Test #8: noalloc ..........................   Passed    2.73 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =  16.90 sec

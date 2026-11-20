@@ -92,6 +92,21 @@ def worker(kind,models,wav_path,seconds,begin,stop,ready,path):
         path.write_text(json.dumps(failure,indent=2)+"\n"); ready.put(failure)
 
 
+def worker_receipt_error(kinds,workers,directory):
+    """Do not admit a trial whose worker failed after its initial ready signal."""
+    for kind,worker_process in zip(kinds,workers):
+        path=directory/(kind+".json")
+        if worker_process.exitcode!=0 or not path.is_file():
+            return kind+": worker did not complete with a retained receipt"
+        try:
+            receipt=json.loads(path.read_text(encoding="utf-8"))
+        except (ValueError,OSError) as exc:
+            return kind+": invalid worker receipt: "+str(exc)
+        if receipt.get("error") or not receipt.get("events"):
+            return kind+": worker failed or performed no inference: "+str(receipt.get("error"))
+    return None
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("runner",type=pathlib.Path); p.add_argument("models",type=pathlib.Path)
@@ -146,7 +161,9 @@ def main():
             for w in workers:
                 w.join(timeout=10)
                 if w.is_alive(): w.terminate(); w.join(timeout=5)
+        if error is None: error=worker_receipt_error(kinds,workers,directory)
         report={"scenario":scenario,"command":command,"versions":versions(),"worker_status":statuses,
+            "worker_completion":[{"kind":kind,"exitcode":w.exitcode} for kind,w in zip(kinds,workers)],
             "runner_sha256":hashlib.sha256(args.runner.read_bytes()).hexdigest(),"error":error,
             "limitations":["ASR is bounded-window offline re-decoding, not native streaming",
                 "Piper increments by sentence; modeled queue is not device occupancy",

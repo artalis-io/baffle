@@ -11,16 +11,26 @@ import pathlib
 import subprocess
 import sys
 import tempfile
+import types
 
 root=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(root/"tools"))
 import onset_qualification
+import inference_contention
 
 runner,vad=map(lambda x:pathlib.Path(x).resolve(),sys.argv[1:3])
 parent=root/"build-acoustic-tests"; parent.mkdir(exist_ok=True)
 with tempfile.TemporaryDirectory(prefix="owned-",dir=parent) as temporary:
     d=pathlib.Path(temporary).resolve()
     assert d.is_relative_to(parent.resolve()) # Scope automatic recursive cleanup.
+    # A ready signal is insufficient: a later worker failure must fail the trial.
+    worker=types.SimpleNamespace(exitcode=0); receipt=d/"whisper.json"
+    receipt.write_text(json.dumps({"error":"late inference failure"}))
+    assert inference_contention.worker_receipt_error(["whisper"],[worker],d)
+    receipt.write_text(json.dumps({"events":[]}))
+    assert inference_contention.worker_receipt_error(["whisper"],[worker],d)
+    receipt.write_text(json.dumps({"events":[{"decode_ms":1}]}))
+    assert inference_contention.worker_receipt_error(["whisper"],[worker],d) is None
     mic=d/"mic.f32"; ref=d/"ref.f32"; out=d/"out.f32"; raw=d/"raw.csv"; summary=d/"summary.json"
     x=array.array("f",[0]*161); x[-1]=.2
     if sys.byteorder!="little": x.byteswap()
