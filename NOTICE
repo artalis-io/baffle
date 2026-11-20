@@ -7,3 +7,6 @@ Third-party algorithm backends retain their own licenses; see docs/backends.md.
 Speex-enabled binary packages install SpeexDSP-COPYING and
 SpeexDSP-source-notices.txt, including individual MDF/FFT/header notices
 and OggVorbis smallft attribution (1994-2001 XIPHOPHORUS Company).
+The source-only recorded test fixtures under tests/fixtures/osr are from
+Open Speech Repository and retain its attribution-required conditions;
+see tests/fixtures/osr/README.md. They are not relicensed under MIT.

@@ -4,7 +4,7 @@ import struct
 import sys
 
 root = pathlib.Path(sys.argv[1])
-for harness in ("transport", "pipeline"):
+for harness in ("transport", "pipeline", "aec"):
     target = root / harness
     target.mkdir(parents=True, exist_ok=True)
     for index, word in enumerate((0, 1, 0x3dcccccd, 0x7fc00000, 0x7f800000, 0xff800000, 0x41800000)):

@@ -61,6 +61,10 @@ jobs:
         run: python tests/wav_qualification.py build/Release/baffle_qualify.exe
       - if: runner.os != 'Windows'
         run: python3 tests/wav_qualification.py build/baffle_qualify
+      - if: runner.os == 'Windows'
+        run: python tools/speech_quality.py build/Release/baffle_qualify.exe build/speech-quality build/speech-quality.json --assert-preservation
+      - if: runner.os != 'Windows'
+        run: python3 tools/speech_quality.py build/baffle_qualify build/speech-quality build/speech-quality.json --assert-preservation
       - run: cmake --install build --config Release --prefix "${{ github.workspace }}/installed"
       - if: runner.os == 'Windows'
         shell: pwsh
@@ -119,5 +123,8 @@ jobs:
       - run: python3 tools/fuzz_corpus.py build/corpus
       - run: build/baffle_fuzz_transport build/corpus/transport -runs=30000 -max_len=4096 -seed=721
       - run: build/baffle_fuzz_pipeline build/corpus/pipeline -runs=30000 -max_len=4096 -seed=722
+      - run: cmake -S . -B fuzz-aec -DCMAKE_C_COMPILER=clang -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_FUZZER=ON -DBF_BUILD_TESTS=OFF -DBF_BUILD_BENCHMARKS=OFF
+      - run: cmake --build fuzz-aec --parallel
+      - run: fuzz-aec/baffle_fuzz_aec build/corpus/aec -runs=10000 -max_len=4096 -seed=723
       - run: cmake -S . -B analysis -DCMAKE_C_COMPILER=gcc -DBF_BUILD_TESTS=OFF -DCMAKE_C_FLAGS=-fanalyzer
       - run: cmake --build analysis --parallel

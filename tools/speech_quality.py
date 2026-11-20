@@ -129,9 +129,13 @@ def main():
     p.add_argument("tool",type=pathlib.Path)
     p.add_argument("directory",type=pathlib.Path)
     p.add_argument("report",type=pathlib.Path)
+    p.add_argument("--assert-preservation",action="store_true")
     args = p.parse_args()
     args.directory.mkdir(parents=True,exist_ok=True)
-    args.report.write_text(json.dumps(run(args.tool,args.directory),indent=2)+"\n")
+    report = run(args.tool,args.directory)
+    args.report.write_text(json.dumps(report,indent=2)+"\n")
+    if args.assert_preservation and not all(c["near_projection_within_original_bounds"] for c in report["cases"]):
+        raise SystemExit("Recorded-source projection outside unchanged .8..1.2 bounds; report retained")
 
 
 if __name__ == "__main__":

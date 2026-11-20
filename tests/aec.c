@@ -189,8 +189,20 @@ int main(void)
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
           (info.flags & BF_AUDIO_CLIPPED));
     near[0] = NAN;
+    unsigned char *snapshot = malloc(bytes);
+    CHECK(snapshot);
+    memcpy(snapshot, memory, bytes);
+    float previous[160];
+    memcpy(previous, out, sizeof(previous));
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) ==
           BF_ERROR_NONFINITE);
+    CHECK(!memcmp(snapshot, memory, bytes) && !memcmp(previous, out, sizeof(previous)));
+    near[0] = 0;
+    far_signal[0] = INFINITY;
+    CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) ==
+          BF_ERROR_NONFINITE);
+    CHECK(!memcmp(snapshot, memory, bytes) && !memcmp(previous, out, sizeof(previous)));
+    free(snapshot);
     CHECK(bf_aec_deinit(s) == BF_OK);
     free(base);
     /* Exercise worst supported channel/tail pool bound, not acoustic quality. */
