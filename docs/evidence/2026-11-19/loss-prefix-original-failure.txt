@@ -1,0 +1,3 @@
+revision=ded3483; first-sample loss regression before correction
+exit=3221226505
+C:\Users\Mark\artalis.io\src\baffle\tests\pcm.c:59: b.lost_frames == 0

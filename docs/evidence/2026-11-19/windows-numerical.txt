@@ -1,0 +1,17 @@
+SRC 48->16k 1kHz relative_error_db=-154.837
+SRC 48->16k 12kHz stopband_db=-133.076
+SRC 44100->16000 tone 100 gain_db=-0.000
+SRC 44100->16000 tone 1000 gain_db=-0.000
+SRC 44100->16000 tone 3000 gain_db=-0.000
+SRC 44100->16000 tone 6000 gain_db=-0.000
+SRC 44100->16000 tone 9000 gain_db=-114.288
+SRC 44100->16000 tone 12000 gain_db=-143.565
+SRC 44100->16000 tone 18000 gain_db=-146.271
+SRC 48000->16000 tone 100 gain_db=-0.000
+SRC 48000->16000 tone 1000 gain_db=0.000
+SRC 48000->16000 tone 3000 gain_db=-0.000
+SRC 48000->16000 tone 6000 gain_db=0.000
+SRC 48000->16000 tone 9000 gain_db=-111.871
+SRC 48000->16000 tone 12000 gain_db=-133.076
+SRC 48000->16000 tone 18000 gain_db=-157.065
+SRC accounting, chunk invariance, drift, nonfinite rejection, flush and reset passed

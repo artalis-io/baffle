@@ -1,0 +1,11 @@
+{
+  "platform": "Linux-7.0.0-1024-nvidia-aarch64-with-glibc2.39",
+  "machine": "aarch64",
+  "processor": "aarch64",
+  "logical_cpus": 20,
+  "proxy_cpu_workers": 4,
+  "iterations": 10000,
+  "elapsed_seconds": 15.896571223856881,
+  "load_kind": "SHA256 CPU proxy; no ASR/TTS/LLM or GPU workload",
+  "executable_sha256": "10c5843d3f72e4206376f7a471d78e6ffc569abc1d0c5fbc118e0e58cff84747"
+}

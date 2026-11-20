@@ -23,10 +23,55 @@ valid nonzero far-only annotation ERLE is unavailable. ERLE on double-talk is
 not a speech-preservation metric. Files are limited to 256 MiB each; loading and
 file I/O are offline control work, outside DSP processing.
 
+An optional seventh argument, `processing_rate`, applies Baffle's own streaming
+SRC identically to both legs before AEC. Interval arguments remain in original
+input-frame units and are converted by the nominal ratio. The FIR delay is
+reported; no source clock/drift calibration is inferred. No artificial SRC tail
+is appended. Both even/odd partial endings are regression-tested at 16->8 kHz.
+
 The Python regression generates explicitly synthetic broadband echo, tests ERLE
 >20 dB after training, verifies a 17-frame partial ending and rejects malformed/
-mismatched files. It is not a recorded acoustic fixture. No license-vetted real
-recording was supplied or incorporated; acquiring one remains outstanding.
+mismatched files. It is not a recorded acoustic fixture.
+
+## Exploratory real-recording evidence
+
+[Microsoft AEC Challenge](https://github.com/microsoft/AEC-Challenge) provides
+real test recordings separately from synthetic data. The optional runner
+`tools/recorded_aec.py` selects four fixed ICASSP2022 cases at upstream commit
+`8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac`, verifies their Git LFS hashes and
+records source lengths, tail crops and commands. Review upstream dataset terms
+before opting into download; its code license is not a blanket dataset license.
+No audio or derived WAV is redistributed in this repository, and this optional
+experiment is excluded from normal builds/CI. Cached runs need no network.
+
+```sh
+python3 tools/recorded_aec.py build-quality/baffle_qualify build-recorded report-48k.json --fetch
+python3 tools/recorded_aec.py build-quality/baffle_qualify build-recorded report-16k.json --processing-rate 16000
+```
+
+Three far-end-only cases are scored on seconds 6..22, with a 200 ms Speex tail.
+A fourth double-talk case exercises data delivery/finite output only: it has no
+clean near-end oracle, so no speech-preservation score or double-talk ERLE is
+reported. Unequal file tails are explicitly cropped to their common prefix;
+index zero is unchanged. A 1 kHz block-mean correlation probes positive signal
+lags 0..500 ms in windows starting at 0/8/16 seconds; this is a coarse diagnostic,
+not device timestamps or calibrated alignment. No waveform shift, drift
+correction or score-driven parameter search was applied.
+
+| Fixed far-only case prefix | 48k energy reduction (dB) | Both legs resampled to 16k (dB) |
+| --- | --- | --- |
+| 00113069 | .8234 | 1.1194 |
+| 00dPPLGk, movement | .0101 | -.0087 |
+| 02462e78 | 6.6208 | 6.6474 |
+
+These weak results do **not** qualify AEC quality. Lowering the rate alone did
+not resolve them. The movement case also has weak/variable correlation, and
+the recordings provide no clock observations, clean near-end oracle or calibrated
+noise floor. Their full energy ratio is not a pure residual-echo measure. The
+next quality work must establish delay/drift alignment and echo/noise ground
+truth, then compare cancellation/double-talk performance and consider AEC3 if
+needed. Synthetic success cannot override this recorded-evidence limitation.
+Full manifests/results are retained in the evidence directory.
 
 ## Physical procedure and required records
 

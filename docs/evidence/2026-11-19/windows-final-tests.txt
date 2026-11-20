@@ -1,0 +1,19 @@
+Test project C:/Users/Mark/artalis.io/src/baffle/build-adapter
+    Start 1: conformance
+1/7 Test #1: conformance ......................   Passed    0.02 sec
+    Start 2: pcm
+2/7 Test #2: pcm ..............................   Passed    0.02 sec
+    Start 3: numerical
+3/7 Test #3: numerical ........................   Passed    0.28 sec
+    Start 4: conditioning
+4/7 Test #4: conditioning .....................   Passed    0.03 sec
+    Start 5: aec
+5/7 Test #5: aec ..............................   Passed    0.10 sec
+    Start 6: pipeline
+6/7 Test #6: pipeline .........................   Passed    0.22 sec
+    Start 7: concurrency
+7/7 Test #7: concurrency ......................   Passed    0.10 sec
+
+100% tests passed out of 7
+
+Total Test time (real) =   0.87 sec

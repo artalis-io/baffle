@@ -48,7 +48,10 @@ Rational nanoseconds-per-source-frame numerator/denominator plus remainder
 preserve fractional timing across split buffers. Both zero select nominal
 1e9/sample_rate. Incomplete pairs and out-of-range remainders are invalid.
 Positive prefix advancement clears first-sample gap/discontinuity flags while
-preserving identity, epoch, generation and uncertainty. Overflow returns an error.
+preserving identity, epoch, generation and uncertainty. It also clears
+`lost_frames`, which counts missing source frames immediately before the original
+first frame; this receipt must not be counted again for suffixes. Zero advancement
+preserves it. Unknown loss count is UINT64_MAX with the gap flag. Overflow returns an error.
 
 Clock trackers require 100 ms observation intervals and use rolling one-second
 anchors. Cached slopes bridge shorter intervals. Identity/rate/epoch/gap or
@@ -61,6 +64,12 @@ SRC source phase is reported before subtracting its FIR delay. Reference
 alignment subtracts that delay; unsupported priming has no valid host time.
 Derived observations are flagged estimated/interpolated and raw Hail source
 metadata remains in status. No device clock reading is manufactured.
+An aligned reference block's rational period fits its observed endpoint times.
+Its uncertainty additionally covers the largest intermediate fitting error and
+provider uncertainty, including nonconstant periods during drift slew. This
+interpolation contract applies within the admitted block; do not extrapolate its
+period beyond that block. Strict alignment can bypass a block whose fitted
+uncertainty exceeds the configured budget.
 
 ## Output, drain and reset
 
@@ -102,6 +111,14 @@ Missing/unsupported alignment bypasses AEC explicitly and preserves capture.
 `reference_delay_ns` is caller calibration, not a measured acoustic delay by
 default. References are Hail's selected render PCM, with Hail's pre-mixer/device
 limitations. Cancellation acknowledgements never establish acoustic silence.
+
+Shared adapter builds are qualified with a matching shared Hail installation.
+Keep Baffle's core and adapter libraries together; the adapter uses `$ORIGIN` on
+ELF and `@loader_path` on macOS to resolve its core without a direct application
+reference. Windows consumers must place both packages' DLL directories on the
+loader search path. Separate dependency prefixes still require the application's
+normal platform loader configuration. Static/shared mixed-Hail configurations
+are not part of the qualified matrix.
 
 ## ABI assessment
 

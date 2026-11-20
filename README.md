@@ -42,7 +42,8 @@ The core neither includes nor links Hail.
 
 Speech conditioning and AEC have deterministic synthetic evidence. Recorded-speech
 quality, physical acoustic behavior, device timing and audible interruption tails
-remain unqualified. **This working DSP implementation is not a production-readiness
+remain unqualified. Exploratory real-recording AEC trials were weak and are
+documented alongside synthetic results. **This working DSP implementation is not a production-readiness
 certification.** See [qualification](docs/qualification.md) for the remaining work.
 
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,

@@ -1,0 +1,60 @@
+Start testing: Nov 20 13:58 Central Europe Standard Time
+----------------------------------------------------------
+1/3 Testing: installed_hail_duplex
+1/3 Test: installed_hail_duplex
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer/baffle_hail_consumer.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer
+"installed_hail_duplex" start time: Nov 20 13:58 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=0 steps=8000 aec=0 caller_bytes=42064 missing_reference_frames=0
+PASS installed Hail duplex rate=48000 playback=48000 channels=4/2 drift=1000 steps=8000 aec=0 caller_bytes=152192 missing_reference_frames=0
+PASS installed Hail duplex rate=44100 playback=48000 channels=8/2 drift=-1000 steps=8000 aec=0 caller_bytes=213968 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=32/32 drift=100 steps=2000 aec=0 caller_bytes=393024 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=100 steps=280000 aec=0 caller_bytes=42064 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=0 steps=8000 aec=1 caller_bytes=932896 missing_reference_frames=5600
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=1000 steps=16000 aec=1 caller_bytes=932896 missing_reference_frames=6880
+PASS installed Hail duplex rate=48000 playback=48000 channels=2/2 drift=-1000 steps=8000 aec=1 caller_bytes=2555328 missing_reference_frames=18720
+PASS installed Hail duplex rate=44100 playback=48000 channels=8/2 drift=100 steps=4000 aec=1 caller_bytes=4353080 missing_reference_frames=10143
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=100 steps=280000 aec=1 caller_bytes=932896 missing_reference_frames=7360
+<end of output>
+Test time =  15.02 sec
+----------------------------------------------------------
+Test Passed.
+"installed_hail_duplex" end time: Nov 20 13:59 Central Europe Standard Time
+"installed_hail_duplex" time elapsed: 00:00:15
+----------------------------------------------------------
+
+2/3 Testing: installed_hail_concurrent
+2/3 Test: installed_hail_concurrent
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer/baffle_hail_concurrent.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer
+"installed_hail_concurrent" start time: Nov 20 13:59 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+PASS concurrent installed Hail callbacks/DSP: overlap_pumps=2076 emitted=2400 bounded_bytes=932896
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"installed_hail_concurrent" end time: Nov 20 13:59 Central Europe Standard Time
+"installed_hail_concurrent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: installed_hail_minimal
+3/3 Test: installed_hail_minimal
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer/baffle_hail_minimal.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-shared-bridge-consumer
+"installed_hail_minimal" start time: Nov 20 13:59 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+PASS adapter-only installed consumer; copied PCM survives deinit
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"installed_hail_minimal" end time: Nov 20 13:59 Central Europe Standard Time
+"installed_hail_minimal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 20 13:59 Central Europe Standard Time

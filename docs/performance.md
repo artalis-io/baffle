@@ -36,6 +36,8 @@ Linux 7.0.0-1024-nvidia, glibc 2.39, GCC 13.3, Release. CPU affinity/governor we
 not pinned, and other system activity was not controlled. Each row has 10,000
 iterations (100 seconds of modeled audio); trials were repeated once with the
 explicit proxy load. These are initial baselines, not confidence intervals.
+The benchmark source revision is `28d3dd8`; the evidence manifest distinguishes
+that measured snapshot from subsequent metadata and packaging corrections.
 
 Full pipeline = AEC + 18 dB spectral NS + AGC + VAD, stereo reference, 200 ms AEC
 tail. Workspace includes processor state and scratch, excludes caller PCM, test
@@ -45,21 +47,21 @@ claimed as measured quantities.
 
 | Host/load | Capture | Sessions | P50 / P95 / P99 / max (ms) | Workspace bytes | Deadline misses |
 | --- | --- | --- | --- | --- | --- |
-| Windows, idle | 16k mono | 1 | .0562 / .0619 / .0635 / .0996 | 218128 | 0 |
-| Windows, 4 workers | 16k mono | 1 | .0571 / .0629 / .0657 / .1009 | 218128 | 0 |
-| Windows, idle | 48k mono | 1 | .1747 / .1797 / .2012 / .3005 | 625168 | 0 |
-| Windows, 4 workers | 48k mono | 1 | .1787 / .3462 / .3526 / .5210 | 625168 | 0 |
-| Windows, idle | 48k 8ch | 1 | 1.1838 / 1.3010 / 1.7903 / 1.9371 | 3034736 | 0 |
-| Windows, 4 workers | 48k 8ch | 1 | 2.1834 / 2.3564 / 2.3804 / 2.7485 | 3034736 | 0 |
-| Windows, 4 workers | 16k mono | 8 | .9113 / .9697 / .9891 / 1.0962 | 1745024 | 0 |
-| ARM64, idle | 16k mono | 1 | .0301 / .0310 / .0318 / .0523 | 218128 | 0 |
-| ARM64, 4 workers | 48k 8ch | 1 | .6665 / .6687 / .6699 / .6836 | 3034736 | 0 |
+| Windows, idle | 16k mono | 1 | .0569 / .0624 / .0652 / .1111 | 218128 | 0 |
+| Windows, 4 workers | 16k mono | 1 | .0581 / .0639 / .0666 / .1024 | 218128 | 0 |
+| Windows, idle | 48k mono | 1 | .1789 / .1866 / .2401 / .4689 | 625168 | 0 |
+| Windows, 4 workers | 48k mono | 1 | .1810 / .3507 / .3561 / .4204 | 625168 | 0 |
+| Windows, idle | 48k 8ch | 1 | 1.2022 / 1.3142 / 1.6955 / 2.1825 | 3034736 | 0 |
+| Windows, 4 workers | 48k 8ch | 1 | 2.1372 / 2.3777 / 2.4163 / 3.2702 | 3034736 | 0 |
+| Windows, 4 workers | 16k mono | 8 | .9167 / .9835 / .9960 / 1.1454 | 1745024 | 0 |
+| ARM64, idle | 16k mono | 1 | .0303 / .0313 / .0330 / .0728 | 218128 | 0 |
+| ARM64, 4 workers | 48k 8ch | 1 | .6717 / .6744 / .6762 / .7267 | 3034736 | 0 |
 
 CSV also records 48k stereo/4-channel, standalone 48->16k SRC, 8->1 matrix, and
 single-stage pipeline masks 1=AEC, 2=NS, 4=AGC, 8=VAD. The latter include pipeline
 validation/copy overhead and are not pure kernel-only benchmarks. Windows idle
-16k AEC/NS/AGC/VAD P99 costs were .0477/.0158/.0042/.0031 ms respectively;
-48->16k mono SRC .0437 ms, 8->1 channel matrix .0099 ms. No GPU is selected;
+16k AEC/NS/AGC/VAD P99 costs were .0531/.0175/.0043/.0033 ms respectively;
+48->16k mono SRC .0456 ms, 8->1 channel matrix .0099 ms. No GPU is selected;
 GPU utilization and SIMD speedup are not measured.
 
 Initial engineering budgets for these representative shapes: mono P99 <=2.5 ms,
