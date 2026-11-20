@@ -182,6 +182,10 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
     if (nt->frame_position > UINT64_MAX - f || (far && ft->frame_position > UINT64_MAX - f))
         return BF_ERROR_OVERFLOW;
     bf_aec_info v = BF_INIT(bf_aec_info);
+    /* Reset clears seen/reference bookkeeping. Preserve the independently
+     * observable generation transition when an epoch change also resets AEC. */
+    int generation_changed = far && s->seen && !s->reference_missing &&
+                             ft->generation != s->reference.generation;
     if (s->seen && (changed(nt, &s->capture, f) ||
                     (far && (s->reference_missing || changed(ft, &s->reference, f))))) {
         bf_result r = bf_aec_reset(s);
@@ -189,7 +193,7 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
             return r;
         v.flags |= BF_AUDIO_DISCONTINUITY;
     }
-    if (far && s->seen && ft->generation != s->reference.generation)
+    if (generation_changed)
         v.flags |= BF_REFERENCE_GENERATION_CHANGED;
     double ip = 0, op = 0;
     for (size_t i = 0; i < (size_t)f * c; ++i) {

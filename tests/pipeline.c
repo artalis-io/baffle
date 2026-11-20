@@ -26,8 +26,53 @@ static bf_audio_buffer buffer(float *data, uint32_t channels)
     b.data = data;
     return b;
 }
+static void reference_isolation(void)
+{
+    /* Render-only transitions cannot reset near-leg NS/AGC/VAD state. Disable
+     * AEC to isolate that contract from legitimate changes in its residual. */
+    bf_pipeline_config config = BF_INIT(bf_pipeline_config);
+    config.sample_rate = 16000; config.channels = config.reference_channels = 1;
+    config.frame_frames = 160; config.stages = BF_STAGE_NOISE | BF_STAGE_AGC | BF_STAGE_VAD;
+    config.noise_strength_db = 18; config.agc_target_dbfs = -18;
+    size_t bytes;
+    CHECK(bf_pipeline_size(&config, &bytes) == BF_OK);
+    void *raw[2]; bf_pipeline *states[2]; float result[2][160];
+    for (unsigned k = 0; k < 2; ++k) {
+        raw[k] = malloc(bytes + BF_ALIGNMENT); CHECK(raw[k]);
+        void *aligned = (void *)(((uintptr_t)raw[k] + BF_ALIGNMENT - 1u) & ~(uintptr_t)(BF_ALIGNMENT - 1u));
+        CHECK(bf_pipeline_init(aligned, bytes, &config, &states[k]) == BF_OK);
+    }
+    bf_audio_buffer in = buffer(capture, 1), ref = buffer(reference, 1);
+    in.timing.stream_id = 1; in.timing.clock_domain = 11; in.timing.epoch = 1;
+    ref.timing.stream_id = 2; ref.timing.clock_domain = 22; ref.timing.epoch = 1;
+    for (unsigned frame = 0; frame < 30; ++frame) {
+        in.timing.frame_position = ref.timing.frame_position = (uint64_t)frame * 160;
+        for (unsigned i = 0; i < 160; ++i) capture[i] = .03f * (float)sin((frame * 160u + i) * .13);
+        bf_process_info info[2];
+        for (unsigned k = 0; k < 2; ++k) {
+            bf_audio_buffer out = buffer(result[k], 1);
+            bf_audio_buffer far = ref;
+            if (k && frame >= 10) { far.timing.epoch = 2; far.timing.generation = 2; }
+            if (k && frame == 10) far.timing.flags = BF_AUDIO_DISCONTINUITY;
+            info[k] = (bf_process_info)BF_INIT(bf_process_info);
+            CHECK(bf_pipeline_process(states[k], &in, k && frame >= 11 && frame <= 13 ? NULL : &far,
+                                      &out, &info[k]) == BF_OK);
+            CHECK(info[k].priming == (frame == 0) && info[k].discarded_frames == 0);
+        }
+        CHECK(info[0].vad.active == info[1].vad.active && info[0].level.gain == info[1].level.gain);
+        if (frame) CHECK(!memcmp(result[0], result[1], sizeof(result[0])));
+    }
+    in.timing.frame_position += 160; in.timing.epoch = 2;
+    bf_audio_buffer out = buffer(result[1], 1);
+    bf_process_info info = BF_INIT(bf_process_info);
+    CHECK(bf_pipeline_process(states[1], &in, NULL, &out, &info) == BF_OK);
+    CHECK(info.priming && info.discarded_frames == 160 && !out.frames);
+    CHECK(info.flags & BF_AUDIO_DISCONTINUITY);
+    for (unsigned k = 0; k < 2; ++k) { CHECK(bf_pipeline_deinit(states[k]) == BF_OK); free(raw[k]); }
+}
 int main(void)
 {
+    reference_isolation();
     bf_library_info library = BF_INIT(bf_library_info);
     CHECK(bf_library_query(&library) == BF_OK);
     for (uint32_t channels = 1; channels <= BF_MAX_CHANNELS; channels *= 2)

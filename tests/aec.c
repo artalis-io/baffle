@@ -162,6 +162,13 @@ int main(void)
     far_time.frame_position += 160;
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
           info.resets == 1);
+    near_time.frame_position += 160;
+    far_time.frame_position += 160;
+    ++far_time.epoch;
+    ++far_time.generation;
+    CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
+          info.resets == 2 && (info.flags & BF_AUDIO_DISCONTINUITY) &&
+          (info.flags & BF_REFERENCE_GENERATION_CHANGED));
     bf_audio_timing missing = BF_INIT(bf_audio_timing);
     missing.uncertainty_ns = UINT64_MAX;
     near_time.frame_position += 160;

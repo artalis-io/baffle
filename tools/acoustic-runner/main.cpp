@@ -100,7 +100,12 @@ static int64_t rss_kib()
     return -1;
 #endif
 }
-struct Receipt { int64_t release, start, end, allocations; uint32_t flags; };
+struct Receipt {
+    int64_t release, start, end, allocations;
+    uint32_t flags, priming, discarded, vad_active;
+    float vad_probability, gain;
+    uint64_t aec_resets;
+};
 struct Transport { uint64_t frame,capture_epoch,reference_epoch,generation; uint32_t missing; };
 static bf_audio_buffer view(float *data, uint32_t rate, uint32_t frames, uint64_t domain)
 {
@@ -127,7 +132,16 @@ int main(int argc, char **argv) try
     if (argc==10 && !highres && std::string(argv[9])!="default") throw std::runtime_error("unknown wait policy");
     if ((rate!=8000 && rate!=16000 && rate!=32000 && rate!=48000) || (argc>=9 && !seconds))
         throw std::runtime_error("unsupported rate/duration");
-    const uint32_t frames=rate/100;
+    const uint32_t frames=backend=="ns5" ? rate/200:rate/100;
+    if(backend=="ns5"&&seconds) throw std::runtime_error("ns5 is offline delay/quality diagnostic only");
+    const bool pipeline_backend=backend=="pipeline"||backend=="aec-ns"||backend=="aec-ns-agc"||
+        backend=="aec-vad"||backend=="ns-only"||backend=="ns-zero"||backend=="ns5";
+    uint32_t stages=BF_STAGE_ALL;
+    if(backend=="aec-ns") stages=BF_STAGE_AEC|BF_STAGE_NOISE;
+    if(backend=="aec-ns-agc") stages=BF_STAGE_AEC|BF_STAGE_NOISE|BF_STAGE_AGC;
+    if(backend=="aec-vad") stages=BF_STAGE_AEC|BF_STAGE_VAD;
+    if(backend=="ns-only"||backend=="ns-zero"||backend=="ns5") stages=BF_STAGE_NOISE;
+    const uint32_t pipeline_delay=pipeline_backend&&(stages&BF_STAGE_NOISE) ? frames:0;
     WaitPolicy waiter(highres);
     auto mic=load(argv[3]), ref=load(argv[4]);
     if (mic.size()!=ref.size()) throw std::runtime_error("input duration mismatch");
@@ -153,7 +167,7 @@ int main(int argc, char **argv) try
         }
         if(!file.eof()) throw std::runtime_error("malformed transport event");
     }
-    std::vector<float> result(seconds ? 0 : mic.size()+(backend=="pipeline" ? frames:0));
+    std::vector<float> result(seconds ? 0 : mic.size()+pipeline_delay);
     std::vector<Receipt> receipts(calls);
     float near[480]={0}, far[480]={0}, out[480]={0}, reverse[480]={0};
     (void)reverse;
@@ -174,10 +188,10 @@ int main(int argc, char **argv) try
         c.sample_rate=rate; c.frame_frames=frames; c.capture_channels=c.reference_channels=1;
         c.tail_ms=tail_ms; c.backend=BF_AEC_SPEEXDSP;
         check(bf_aec_size(&c,&bytes)); check(bf_aec_init(memory(),bytes,&c,&aec));
-    } else if (backend=="pipeline") {
+    } else if (pipeline_backend) {
         bf_pipeline_config c=BF_INIT(bf_pipeline_config);
         c.sample_rate=rate; c.frame_frames=frames; c.channels=c.reference_channels=1;
-        c.stages=BF_STAGE_ALL; c.aec_tail_ms=200; c.noise_strength_db=18; c.agc_target_dbfs=-18;
+        c.stages=stages; c.aec_tail_ms=200; c.noise_strength_db=backend=="ns-zero" ? 0.0f:18.0f; c.agc_target_dbfs=-18;
         check(bf_pipeline_size(&c,&bytes)); check(bf_pipeline_init(memory(),bytes,&c,&pipeline));
     } else if (backend=="aec3" || backend=="aec3-linear") {
 #ifdef BF_COMPARE_WEBRTC
@@ -210,7 +224,9 @@ int main(int argc, char **argv) try
 #endif
     bf_audio_buffer n=view(near,rate,frames,1), r=view(far,rate,frames,2), o=view(out,rate,frames,1);
     size_t transport_index=0; bool missing_reference=false;
+    Receipt observed{};
     auto process=[&](uint64_t position) -> uint32_t {
+        observed={}; observed.gain=1;
         n.timing.frame_position=r.timing.frame_position=position;
         n.timing.flags=r.timing.flags=0;
         if(transport_index<transport.size()&&transport[transport_index].frame==position) {
@@ -223,11 +239,15 @@ int main(int argc, char **argv) try
         if (aec) {
             bf_aec_info info=BF_INIT(bf_aec_info);
             check(bf_aec_process(aec,near,&n.timing,missing_reference ? nullptr:far,missing_reference ? nullptr:&r.timing,out,&info));
+            observed.aec_resets=info.resets;
             return info.flags;
         }
         if (pipeline) {
             bf_process_info info=BF_INIT(bf_process_info);
             check(bf_pipeline_process(pipeline,&n,missing_reference ? nullptr:&r,&o,&info));
+            observed.priming=info.priming; observed.discarded=info.discarded_frames;
+            observed.vad_active=info.vad.active; observed.vad_probability=info.vad.probability;
+            observed.gain=info.level.gain; observed.aec_resets=info.aec.resets;
             if (!o.frames) std::fill(out,out+frames,0.0f);
             return info.flags;
         }
@@ -254,7 +274,7 @@ int main(int argc, char **argv) try
         size_t source=static_cast<size_t>(o.timing.frame_position);
         if(source>=mic.size()) return;
         size_t count=std::min<size_t>(o.frames,mic.size()-source);
-        std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(source+frames));
+        std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(source+pipeline_delay));
     };
     for (size_t call=0;call<calls;++call) {
         size_t offset=call*frames;
@@ -269,7 +289,8 @@ int main(int argc, char **argv) try
         int64_t allocations=alloc_begin && alloc_end ? static_cast<int64_t>(alloc_end()) : -1;
         auto end=Clock::now();
         auto ns=[&](Clock::time_point t) { return std::chrono::duration_cast<std::chrono::nanoseconds>(t-origin).count(); };
-        receipts[call]={ns(release),ns(start),ns(end),allocations,flags};
+        observed.release=ns(release); observed.start=ns(start); observed.end=ns(end);
+        observed.allocations=allocations; observed.flags=flags; receipts[call]=observed;
         for (uint32_t i=0;i<frames;++i) if (!std::isfinite(out[i])) throw std::runtime_error("nonfinite output");
         if (!seconds) {
             if(pipeline) store_pipeline();
@@ -297,13 +318,15 @@ int main(int argc, char **argv) try
     if (pipeline) check(bf_pipeline_deinit(pipeline));
     std::ofstream output(argv[5],std::ios::binary), raw(argv[6]), summary(argv[7]);
     output.write(reinterpret_cast<const char *>(result.data()),static_cast<std::streamsize>(result.size()*4));
-    raw << "frame,release_ns,start_ns,end_ns,processing_ns,start_lateness_ns,completion_deadline_miss,allocation_calls,flags\n";
+    raw << "frame,release_ns,start_ns,end_ns,processing_ns,start_lateness_ns,completion_deadline_miss,allocation_calls,flags,priming,discarded_frames,vad_active,vad_probability,gain,aec_resets\n";
     uint32_t misses=0, execution_misses=0;
     for (size_t i=0;i<calls;++i) {
         auto t=receipts[i]; bool missed=seconds && t.end>t.release+10000000;
         misses+=missed; execution_misses+=(t.end-t.start)>10000000;
         raw << i << ',' << t.release << ',' << t.start << ',' << t.end << ',' << t.end-t.start << ','
-            << (seconds ? std::max<int64_t>(0,t.start-t.release):0) << ',' << missed << ',' << t.allocations << ',' << t.flags << '\n';
+            << (seconds ? std::max<int64_t>(0,t.start-t.release):0) << ',' << missed << ',' << t.allocations << ',' << t.flags
+            << ',' << t.priming << ',' << t.discarded << ',' << t.vad_active << ',' << t.vad_probability
+            << ',' << t.gain << ',' << t.aec_resets << '\n';
     }
     summary << "{\"rate\":"<<rate<<",\"frames\":"<<frames<<",\"calls\":"<<calls
             <<",\"wait_policy\":\""<<(highres ? "private-windows-highres" : "standard-sleep")<<"\""
@@ -312,7 +335,7 @@ int main(int argc, char **argv) try
             <<",\"rss_before_init_kib\":"<<before<<",\"rss_after_init_kib\":"<<initialized
             <<",\"rss_after_process_kib\":"<<final_rss<<",\"process_peak_rss_kib\":"<<peak
             <<",\"completion_deadline_misses\":"<<misses<<",\"execution_deadline_misses\":"<<execution_misses
-            <<",\"added_pipeline_delay_frames\":"<<(pipeline ? frames:0)<<"}\n";
+            <<",\"added_pipeline_delay_frames\":"<<pipeline_delay<<",\"stage_mask\":"<<(pipeline_backend ? stages:BF_STAGE_AEC)<<"}\n";
     if (!output || !raw || !summary) throw std::runtime_error("output write");
     return 0;
 } catch (const std::exception &e) { std::cerr << e.what() << '\n'; return 1; }

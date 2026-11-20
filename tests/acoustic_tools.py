@@ -17,12 +17,18 @@ root=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(root/"tools"))
 import onset_qualification
 import inference_contention
+import asr_metrics
 
 runner,vad=map(lambda x:pathlib.Path(x).resolve(),sys.argv[1:3])
 parent=root/"build-acoustic-tests"; parent.mkdir(exist_ok=True)
 with tempfile.TemporaryDirectory(prefix="owned-",dir=parent) as temporary:
     d=pathlib.Path(temporary).resolve()
     assert d.is_relative_to(parent.resolve()) # Scope automatic recursive cleanup.
+    counts=asr_metrics.metrics("a b","a c d")["word"]
+    assert counts["errors"]==2 and counts["substitutions"]==1 and counts["insertions"]==1
+    assert asr_metrics.metrics("Árvíztűrő", "ÁRVI\u0301ZTU\u030bRO\u030b")["word"]["errors"]==0
+    assert asr_metrics.metrics("speech", "")["word"]["deletions"]==1
+    assert asr_metrics.metrics("", "assistant")["word"]["insertions"]==1
     # A ready signal is insufficient: a later worker failure must fail the trial.
     worker=types.SimpleNamespace(exitcode=0); receipt=d/"whisper.json"
     receipt.write_text(json.dumps({"error":"late inference failure"}))
@@ -47,6 +53,12 @@ with tempfile.TemporaryDirectory(prefix="owned-",dir=parent) as temporary:
     if sys.byteorder!="little": samples.byteswap()
     assert all(v==0 for v in samples[:160])
     assert abs(samples[-1])>1e-5 # EOS must deliver the final real input impulse.
+    for backend,delay in (("aec-ns",160),("aec-ns-agc",160),("aec-vad",0),("ns5",80)):
+        staged=base.copy();staged[1]=backend
+        subprocess.run(staged,check=True)
+        assert out.stat().st_size==(161+delay)*4
+        assert json.loads(summary.read_text())["added_pipeline_delay_frames"]==delay
+    subprocess.run(pipeline,check=True) # Restore the original complete-pipeline VAD fixture.
     trace=d/"vad.csv"; subprocess.run([str(vad),"16000",str(out),str(trace)],check=True)
     rows=list(csv.DictReader(trace.open())); assert sum(int(r["frames"]) for r in rows)==321
     before=hashlib.sha256(trace.read_bytes()).hexdigest()
