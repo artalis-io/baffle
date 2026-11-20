@@ -83,7 +83,7 @@ static bf_audio_buffer buffer(float *p, uint32_t rate, uint32_t ch, uint32_t fra
 }
 static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t sessions,
                    size_t bytes, double *times, uint32_t n, double elapsed, double used,
-                   double delay_ms)
+                   double delay_ms, uint32_t hop_ms)
 {
 #ifdef _WIN32
     /* GetThreadTimes accounting is coarse. Short trials cannot resolve CPU use. */
@@ -94,25 +94,26 @@ static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t 
     uint32_t misses = 0;
     for (uint32_t i = 0; i < n; ++i) {
         total += times[i];
-        if (times[i] > .010)
+        if (times[i] > (double)hop_ms / 1000)
             ++misses;
         if (i)
             jitter += fabs(times[i] - times[i - 1]);
     }
     qsort(times, n, sizeof(*times), compare);
-    printf("%s,%u,%u,%u,%u,%zu,%.4f,%.4f,%.4f,%.4f,%.4f,%u,%.6f,%.3f,%.3f,%.4f\n", name, rate,
+    printf("%s,%u,%u,%u,%u,%zu,%.4f,%.4f,%.4f,%.4f,%.4f,%u,%.6f,%.3f,%.3f,%.4f,%u\n", name, rate,
            channels, sessions, n, bytes, times[n / 2] * 1e3, times[(n - 1) * 95 / 100] * 1e3,
            times[(n - 1) * 99 / 100] * 1e3, times[n - 1] * 1e3, jitter / (n - 1) * 1e3, misses,
-           total / ((double)n * .01), used / ((double)n * .01) * 100,
-           elapsed > 0 ? used / elapsed * 100 : 0, delay_ms);
+           total / ((double)n * hop_ms / 1000), used / ((double)n * hop_ms / 1000) * 100,
+           elapsed > 0 ? used / elapsed * 100 : 0, delay_ms, hop_ms);
 }
-static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t sessions, uint32_t n)
+static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t sessions, uint32_t n,
+                     uint32_t hop_ms)
 {
     bf_pipeline_config c = BF_INIT(bf_pipeline_config);
     c.sample_rate = rate;
     c.channels = ch;
     c.reference_channels = 2;
-    c.frame_frames = rate / 100;
+    c.frame_frames = rate / 1000 * hop_ms;
     c.stages = mask;
     c.aec_tail_ms = 200;
     c.noise_strength_db = 18;
@@ -161,7 +162,7 @@ static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t session
     char name[40];
     snprintf(name, sizeof(name), "pipeline-mask-%u", mask);
     report(name, rate, ch, sessions, bytes * sessions, t, n, elapsed, used,
-           (mask & BF_STAGE_NOISE) ? 10 : 0);
+           (mask & BF_STAGE_NOISE) ? hop_ms : 0, hop_ms);
     for (uint32_t s = 0; s < sessions; ++s) {
         check(bf_pipeline_deinit(p[s]));
         free(raw[s]);
@@ -201,7 +202,7 @@ static void primitives(uint32_t n)
             exit(1);
     }
     double used = cpu() - thread;
-    report("resampler-48-to-16", 48000, 1, 1, bytes, t, n, now() - start, used, 95.5 / 48.0);
+    report("resampler-48-to-16", 48000, 1, 1, bytes, t, n, now() - start, used, 95.5 / 48.0, 10);
     free(raw);
     bf_audio_buffer a = buffer(input, 48000, 8, 480), b = buffer(output, 48000, 1, 480);
     start = now();
@@ -212,7 +213,7 @@ static void primitives(uint32_t n)
         t[i] = now() - begin;
     }
     used = cpu() - thread;
-    report("matrix-8-to-1", 48000, 8, 1, 0, t, n, now() - start, used, 0);
+    report("matrix-8-to-1", 48000, 8, 1, 0, t, n, now() - start, used, 0, 10);
     free(t);
 }
 int main(int argc, char **argv)
@@ -224,18 +225,23 @@ int main(int argc, char **argv)
     check(bf_library_query(&lib));
     puts("case,rate,channels,sessions,iterations,workspace_bytes,p50_ms,p95_ms,p99_ms,max_ms,mean_"
          "adjacent_cost_jitter_ms,deadline_misses,wall_rtf,thread_cpu_percent_audio,thread_cpu_"
-         "percent_unpaced_run,algorithmic_delay_ms");
+         "percent_unpaced_run,algorithmic_delay_ms,frame_ms");
     primitives(n);
-    pipeline(16000, 1, BF_STAGE_AGC, 1, n);
-    pipeline(16000, 1, BF_STAGE_VAD, 1, n);
-    pipeline(16000, 1, BF_STAGE_NOISE, 1, n);
+    pipeline(16000, 1, BF_STAGE_AGC, 1, n, 10);
+    pipeline(16000, 1, BF_STAGE_VAD, 1, n, 10);
+    pipeline(16000, 1, BF_STAGE_NOISE, 1, n, 10);
     if (lib.features & BF_FEATURE_SPEEXDSP)
-        pipeline(16000, 1, BF_STAGE_AEC, 1, n);
+        pipeline(16000, 1, BF_STAGE_AEC, 1, n, 10);
     uint32_t mask =
         (lib.features & BF_FEATURE_SPEEXDSP) ? BF_STAGE_ALL : BF_STAGE_ALL & ~BF_STAGE_AEC;
-    pipeline(16000, 1, mask, 1, n);
+    pipeline(16000, 1, mask, 1, n, 10);
     for (uint32_t ch = 1; ch <= 8; ch *= 2)
-        pipeline(48000, ch, mask, 1, n);
-    pipeline(16000, 1, mask, 8, n);
+        pipeline(48000, ch, mask, 1, n, 10);
+    pipeline(16000, 1, mask, 8, n, 10);
+    if (lib.features & BF_FEATURE_SPEEXDSP)
+        for (uint32_t rate = 16000; rate <= 48000; rate += 32000) {
+            pipeline(rate, 1, BF_STAGE_AEC, 1, n, 20);
+            pipeline(rate, 1, BF_STAGE_AEC, 8, n, 20);
+        }
     return 0;
 }

@@ -4,6 +4,7 @@
 #endif
 #if BF_HAVE_SPEEXDSP
 #include <speex/speex_echo.h>
+void baffle_speex_configure_capture(SpeexEchoState *s);
 typedef struct baffle_speex_arena {
     unsigned char *data;
     size_t used, capacity;
@@ -115,6 +116,7 @@ bf_result bf_aec_init(void *p, size_t bytes, const bf_aec_config *c, bf_aec **ou
     int rate = (int)c->sample_rate;
     if (speex_echo_ctl(s->echo, SPEEX_ECHO_SET_SAMPLING_RATE, &rate))
         return BF_ERROR_STATE;
+    baffle_speex_configure_capture(s->echo);
     s->magic = 0x42464145u;
     *out = s;
     return BF_OK;

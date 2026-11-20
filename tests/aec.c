@@ -11,6 +11,56 @@
         }                                                                                          \
     } while (0)
 static float far_signal[400000];
+static void near_only_response(void)
+{
+    /* No echo: require near-end fidelity, independently of ERLE. A 20 Hz
+     * pole-radius model predicts >13.9 dB error SNR at 200 Hz at these rates.
+     * Leave 0.9 dB for S16 quantization and finite-precision filter state. */
+    const uint32_t rates[] = {8000, 16000, 48000};
+    float in[960], zero[960] = {0}, out[960];
+    for (unsigned ri = 0; ri < 3; ++ri)
+        for (unsigned hop = 1; hop <= 2; ++hop) {
+            bf_aec_config c = BF_INIT(bf_aec_config);
+            c.sample_rate = rates[ri];
+            c.frame_frames = rates[ri] / 100 * hop;
+            c.capture_channels = c.reference_channels = 1;
+            c.tail_ms = 200;
+            c.backend = BF_AEC_SPEEXDSP;
+            size_t bytes;
+            CHECK(bf_aec_size(&c, &bytes) == BF_OK);
+            void *raw = malloc(bytes + BF_ALIGNMENT);
+            CHECK(raw);
+            void *memory = (void *)(((uintptr_t)raw + BF_ALIGNMENT - 1u) &
+                                   ~(uintptr_t)(BF_ALIGNMENT - 1u));
+            bf_aec *s;
+            CHECK(bf_aec_init(memory, bytes, &c, &s) == BF_OK);
+            bf_audio_timing nt = BF_INIT(bf_audio_timing), ft = BF_INIT(bf_audio_timing);
+            double power = 0, error = 0, mean = 0;
+            for (unsigned frame = 0; frame < 300 / hop; ++frame) {
+                uint32_t start = frame * c.frame_frames;
+                for (uint32_t i = 0; i < c.frame_frames; ++i)
+                    in[i] = .02f + .1f * (float)sin(2 * 3.141592653589793 * 200 *
+                                                     (start + i) / c.sample_rate);
+                nt.frame_position = ft.frame_position = start;
+                bf_aec_info info = BF_INIT(bf_aec_info);
+                CHECK(bf_aec_process(s, in, &nt, zero, &ft, out, &info) == BF_OK);
+                if (frame >= 100 / hop)
+                    for (uint32_t i = 0; i < c.frame_frames; ++i) {
+                        double voice = (double)in[i] - .02;
+                        power += voice * voice;
+                        error += (out[i] - voice) * (out[i] - voice);
+                        mean += out[i];
+                    }
+            }
+            double snr = 10 * log10(power / error);
+            printf("AEC near-only rate=%u hop_ms=%u raw_error_snr_db=%.3f dc_mean=%.8f\n",
+                   c.sample_rate, hop * 10, snr, mean / (2 * c.sample_rate));
+            fflush(stdout);
+            CHECK(snr > 13 && fabs(mean / (2 * c.sample_rate)) < .0001);
+            CHECK(bf_aec_deinit(s) == BF_OK);
+            free(raw);
+        }
+}
 int main(void)
 {
     bf_aec_config c = BF_INIT(bf_aec_config);
@@ -30,6 +80,7 @@ int main(void)
         puts("AEC backend explicitly unavailable in CPU-core-only build");
         return 0;
     }
+    near_only_response();
     CHECK(bf_aec_size(&c, &bytes) == BF_OK);
     void *base = malloc(bytes + BF_ALIGNMENT);
     CHECK(base);

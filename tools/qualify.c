@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
+#include <errno.h>
 typedef struct wav {
     uint32_t rate, channels, frames;
     float *pcm;
@@ -25,6 +26,15 @@ static void fail(const char *s)
 {
     fprintf(stderr, "%s\n", s);
     exit(1);
+}
+static uint64_t unsigned_argument(const char *text, uint64_t maximum)
+{
+    char *end;
+    errno = 0;
+    unsigned long long v = strtoull(text, &end, 10);
+    if (!*text || *text < '0' || *text > '9' || *end || errno || v > maximum)
+        fail("invalid unsigned argument");
+    return (uint64_t)v;
 }
 static uint32_t u32(const unsigned char *p)
 {
@@ -154,9 +164,9 @@ static void resample(wav *w, uint32_t rate)
 }
 int main(int argc, char **argv)
 {
-    if (argc != 4 && argc != 6 && argc != 7) {
+    if (argc != 4 && (argc < 6 || argc > 9)) {
         fprintf(stderr, "usage: baffle_qualify capture.wav aligned-reference.wav output.wav "
-                        "[far_only_first_frame far_only_frames [processing_rate]]\n");
+                        "[far_only_first_frame far_only_frames [processing_rate [tail_ms [hop_ms]]]]\n");
         return 2;
     }
     wav a = load(argv[1]), r = load(argv[2]);
@@ -164,13 +174,13 @@ int main(int argc, char **argv)
         fail("files require identical rate, length and independently established alignment");
     uint64_t first = 0, count = 0;
     if (argc >= 6) {
-        first = strtoull(argv[4], NULL, 10);
-        count = strtoull(argv[5], NULL, 10);
+        first = unsigned_argument(argv[4], UINT64_MAX);
+        count = unsigned_argument(argv[5], UINT64_MAX);
         if (!count || first > a.frames || count > a.frames - first)
             fail("invalid annotated far-only interval");
     }
-    if (argc == 7) {
-        uint32_t rate = (uint32_t)strtoul(argv[6], NULL, 10);
+    if (argc >= 7) {
+        uint32_t rate = (uint32_t)unsigned_argument(argv[6], UINT32_MAX);
         if (rate < 8000 || rate > 48000 || rate % 100)
             fail("unsupported processing rate");
         first = first * rate / a.rate;
@@ -184,6 +194,14 @@ int main(int argc, char **argv)
     c.capture_channels = a.channels;
     c.reference_channels = r.channels;
     c.tail_ms = 200;
+    if (argc >= 8)
+        c.tail_ms = (uint32_t)unsigned_argument(argv[7], UINT32_MAX);
+    if (argc >= 9) {
+        uint32_t hop = (uint32_t)unsigned_argument(argv[8], UINT32_MAX);
+        if (hop != 10 && hop != 20)
+            fail("hop_ms must be 10 or 20");
+        c.frame_frames = a.rate / 100 * (hop / 10);
+    }
     c.backend = BF_AEC_SPEEXDSP;
     size_t bytes;
     if (bf_aec_size(&c, &bytes) != BF_OK)
@@ -250,13 +268,17 @@ int main(int argc, char **argv)
     }
     if (fclose(f))
         fail("output close");
+    uint32_t delay;
+    if (bf_aec_estimate_delay(s, &delay) == BF_OK)
+        printf("dominant_adapted_tap=%u (not hardware latency)\n", delay);
     if (bf_aec_deinit(s) != BF_OK)
         fail("deinit");
     free(raw);
     free(a.pcm);
     free(r.pcm);
-    printf("rate=%u capture_channels=%u reference_channels=%u real_frames=%u workspace_bytes=%zu\n",
-           a.rate, a.channels, r.channels, a.frames, bytes);
+    printf("rate=%u capture_channels=%u reference_channels=%u real_frames=%u workspace_bytes=%zu "
+           "frame_frames=%u tail_ms=%u\n",
+           a.rate, a.channels, r.channels, a.frames, bytes, c.frame_frames, c.tail_ms);
     if (count && input_energy > 0 && output_energy > 0)
         printf("annotated_far_only_erle_db=%.4f interval_first=%llu interval_frames=%llu\n",
                10 * log10(input_energy / output_energy), (unsigned long long)first,
