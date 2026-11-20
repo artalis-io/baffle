@@ -67,7 +67,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
         if (data[5] & (1u << i))
             ++a.timing.epoch;
         if (data[6] & (1u << i))
-            (void)bf_pipeline_reset(s, BF_STAGE_ALL);
+            (void)bf_pipeline_reset(s, (data[7] & 0x80u) ? BF_STAGE_NOISE : BF_STAGE_ALL);
     }
     bf_process_info info = BF_INIT(bf_process_info);
     (void)bf_pipeline_flush(s, &b, &info);
