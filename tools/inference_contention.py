@@ -54,7 +54,7 @@ def worker(kind,models,wav_path,seconds,begin,stop,ready,path):
             d=pathlib.Path(models)/"piper/en/en_US/lessac/low/en_US-lessac-low.onnx"
             opts=ort.SessionOptions(); opts.intra_op_num_threads=2; opts.inter_op_num_threads=1
             model=PiperVoice(session=ort.InferenceSession(str(d),sess_options=opts,providers=["CPUExecutionProvider"]),
-                config=PiperConfig.from_dict(json.loads(pathlib.Path(str(d)+".json").read_text())))
+                config=PiperConfig.from_dict(json.loads(pathlib.Path(str(d)+".json").read_text(encoding="utf-8"))))
             list(model.synthesize("Ready."))
         ready.put({"kind":kind,"ready":True,"pid":os.getpid()})
         begin.wait(); origin=time.perf_counter(); due=origin; audio_available=origin
@@ -94,6 +94,7 @@ def main():
     p.add_argument("runner",type=pathlib.Path); p.add_argument("models",type=pathlib.Path)
     p.add_argument("audio",type=pathlib.Path); p.add_argument("mic",type=pathlib.Path); p.add_argument("reference",type=pathlib.Path)
     p.add_argument("output",type=pathlib.Path); p.add_argument("--seconds",type=int,default=30)
+    p.add_argument("--wait-policy",choices=["default","highres"],default="default")
     p.add_argument("--workloads",nargs="+",default=["alone","whisper","parakeet","piper","whisper+piper","parakeet+piper"])
     args=p.parse_args()
     if not 5<=args.seconds<=300: p.error("duration must be 5..300 seconds")
@@ -109,7 +110,7 @@ def main():
                  begin,stop,ready,directory/(k+".json"))) for k in kinds]
         samples=[]; process=None; statuses=[]; error=None
         command=[str(args.runner.resolve()),"pipeline","16000",str(args.mic.resolve()),str(args.reference.resolve()),
-                 str(directory/"unused.f32"),str(directory/"dsp.csv"),str(directory/"native.json"),str(args.seconds)]
+                 str(directory/"unused.f32"),str(directory/"dsp.csv"),str(directory/"native.json"),str(args.seconds),args.wait_policy]
         try:
             for w in workers: w.start()
             for _ in workers:

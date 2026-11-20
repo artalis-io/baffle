@@ -13,6 +13,18 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <array>
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#include <windows.h>
+#ifdef near
+#undef near
+#endif
+#ifdef far
+#undef far
+#endif
+#endif
 #ifdef __linux__
 #include <sys/resource.h>
 #include <unistd.h>
@@ -23,6 +35,39 @@
 #include <api/scoped_refptr.h>
 #endif
 using Clock = std::chrono::steady_clock;
+class WaitPolicy {
+#ifdef _WIN32
+    HANDLE timer=nullptr;
+#endif
+public:
+    explicit WaitPolicy(bool highres) {
+        if (!highres) return;
+#ifdef _WIN32
+        timer=CreateWaitableTimerExW(nullptr,nullptr,0x00000002u,TIMER_ALL_ACCESS);
+        if (!timer) throw std::runtime_error("high-resolution private timer unavailable");
+#else
+        throw std::runtime_error("highres wait policy is Windows-only");
+#endif
+    }
+    ~WaitPolicy() {
+#ifdef _WIN32
+        if (timer) CloseHandle(timer);
+#endif
+    }
+    void wait(Clock::time_point release) {
+#ifdef _WIN32
+        if (timer) {
+            auto remaining=std::chrono::duration_cast<std::chrono::nanoseconds>(release-Clock::now()).count();
+            if (remaining<=0) return;
+            LARGE_INTEGER due; due.QuadPart=-(remaining+99)/100;
+            if (!SetWaitableTimer(timer,&due,0,nullptr,nullptr,FALSE) || WaitForSingleObject(timer,INFINITE)!=WAIT_OBJECT_0)
+                throw std::runtime_error("private timer wait failed");
+            return;
+        }
+#endif
+        std::this_thread::sleep_until(release);
+    }
+};
 static void check(bf_result r) { if (r != BF_OK) throw std::runtime_error("Baffle status " + std::to_string(r)); }
 static uint32_t number(const char *s, uint32_t max)
 {
@@ -69,15 +114,19 @@ static bf_audio_buffer view(float *data, uint32_t rate, uint32_t frames, uint64_
 }
 int main(int argc, char **argv) try
 {
-    if (argc != 8 && argc != 9) throw std::runtime_error(
-        "usage: runner baffle|pipeline|aec3 rate mic.f32 ref.f32 out.f32 receipts.csv summary.json [paced_seconds:1..600]");
+    if (argc < 8 || argc > 10) throw std::runtime_error(
+        "usage: runner baffle|pipeline|aec3|aec3-linear rate mic.f32 ref.f32 out.f32 receipts.csv summary.json [paced_seconds:1..600 [default|highres]]");
     uint16_t endian=1;
     if (*reinterpret_cast<unsigned char *>(&endian)!=1) throw std::runtime_error("little-endian host required");
     std::string backend=argv[1];
-    uint32_t rate=number(argv[2],48000), seconds=argc==9 ? number(argv[8],600) : 0;
-    if ((rate!=8000 && rate!=16000 && rate!=32000 && rate!=48000) || (argc==9 && !seconds))
+    uint32_t rate=number(argv[2],48000), seconds=argc>=9 ? number(argv[8],600) : 0;
+    bool highres=argc==10 && std::string(argv[9])=="highres";
+    if (backend=="pipeline"&&!seconds) throw std::runtime_error("pipeline mode is paced-only; no offline EOS/drain implied");
+    if (argc==10 && !highres && std::string(argv[9])!="default") throw std::runtime_error("unknown wait policy");
+    if ((rate!=8000 && rate!=16000 && rate!=32000 && rate!=48000) || (argc>=9 && !seconds))
         throw std::runtime_error("unsupported rate/duration");
     const uint32_t frames=rate/100;
+    WaitPolicy waiter(highres);
     auto mic=load(argv[3]), ref=load(argv[4]);
     if (mic.size()!=ref.size()) throw std::runtime_error("input duration mismatch");
     size_t calls=seconds ? static_cast<size_t>(seconds)*100 : (mic.size()+frames-1)/frames;
@@ -95,6 +144,7 @@ int main(int argc, char **argv) try
 #ifdef BF_COMPARE_WEBRTC
     rtc::scoped_refptr<webrtc::AudioProcessing> apm;
     webrtc::StreamConfig stream(static_cast<int>(rate),1);
+    std::array<float,160> linear{};
 #endif
     if (backend=="baffle") {
         bf_aec_config c=BF_INIT(bf_aec_config);
@@ -106,13 +156,18 @@ int main(int argc, char **argv) try
         c.sample_rate=rate; c.frame_frames=frames; c.channels=c.reference_channels=1;
         c.stages=BF_STAGE_ALL; c.aec_tail_ms=200; c.noise_strength_db=18; c.agc_target_dbfs=-18;
         check(bf_pipeline_size(&c,&bytes)); check(bf_pipeline_init(memory(),bytes,&c,&pipeline));
-    } else if (backend=="aec3") {
+    } else if (backend=="aec3" || backend=="aec3-linear") {
 #ifdef BF_COMPARE_WEBRTC
+#ifndef BF_COMPARE_WEBRTC_LINEAR
+        if (backend=="aec3-linear") throw std::runtime_error("linear export requires the separately patched diagnostic package");
+#endif
         apm=webrtc::AudioProcessingBuilder().Create();
         if (!apm) throw std::runtime_error("AEC3 creation");
         webrtc::AudioProcessing::Config c;
         c.echo_canceller.enabled=true; c.echo_canceller.mobile_mode=false;
         c.echo_canceller.enforce_high_pass_filtering=false;
+        c.echo_canceller.export_linear_aec_output=backend=="aec3-linear";
+        if (backend=="aec3-linear" && rate!=16000) throw std::runtime_error("linear diagnostic requires 16k");
         c.high_pass_filter.enabled=false; c.noise_suppression.enabled=false;
         c.gain_controller1.enabled=false; c.gain_controller2.enabled=false;
         apm->ApplyConfig(c);
@@ -149,6 +204,11 @@ int main(int argc, char **argv) try
         float *rp[]={reverse}, *op[]={out};
         if (apm->ProcessReverseStream(fp,stream,stream,rp) || apm->set_stream_delay_ms(0) ||
             apm->ProcessStream(np,stream,stream,op)) throw std::runtime_error("AEC3 processing");
+        if (backend=="aec3-linear") {
+            if (!apm->GetLinearAecOutput(rtc::ArrayView<std::array<float,160>>(&linear,1)))
+                throw std::runtime_error("AEC3 linear output unavailable");
+            std::copy(linear.begin(),linear.end(),out);
+        }
 #endif
         return 0;
     };
@@ -163,7 +223,7 @@ int main(int argc, char **argv) try
         std::fill(near,near+frames,0); std::fill(far,far+frames,0);
         for (size_t i=0;i<count;++i) { near[i]=mic[(offset+i)%mic.size()]; far[i]=ref[(offset+i)%ref.size()]; }
         auto release=seconds ? origin+std::chrono::milliseconds(call*10) : Clock::now();
-        if (seconds) std::this_thread::sleep_until(release);
+        if (seconds) waiter.wait(release);
         auto start=Clock::now();
         if (alloc_begin && alloc_end) alloc_begin();
         uint32_t flags=process(position);
@@ -192,6 +252,7 @@ int main(int argc, char **argv) try
             << (seconds ? std::max<int64_t>(0,t.start-t.release):0) << ',' << missed << ',' << t.allocations << ',' << t.flags << '\n';
     }
     summary << "{\"rate\":"<<rate<<",\"frames\":"<<frames<<",\"calls\":"<<calls
+            <<",\"wait_policy\":\""<<(highres ? "private-windows-highres" : "standard-sleep")<<"\""
             <<",\"paced_seconds\":"<<seconds<<",\"workspace_bytes\":"<<bytes
             <<",\"rss_before_init_kib\":"<<before<<",\"rss_after_init_kib\":"<<initialized
             <<",\"rss_after_process_kib\":"<<final_rss<<",\"process_peak_rss_kib\":"<<peak
