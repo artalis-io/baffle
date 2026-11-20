@@ -23,6 +23,17 @@ def versions():
     return {p:importlib.metadata.version(p) for p in ("sherpa-onnx","sherpa-onnx-core","piper-tts","onnxruntime","numpy","scipy","psutil")}
 
 
+def load_asr(kind,models):
+    import sherpa_onnx
+    d=pathlib.Path(models)/kind
+    if kind=="whisper":
+        return sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(d/"tiny.en-encoder.int8.onnx"),
+            decoder=str(d/"tiny.en-decoder.int8.onnx"),tokens=str(d/"tiny.en-tokens.txt"),num_threads=2,provider="cpu")
+    return sherpa_onnx.OfflineRecognizer.from_transducer(encoder=str(d/"encoder.int8.onnx"),
+        decoder=str(d/"decoder.int8.onnx"),joiner=str(d/"joiner.int8.onnx"),tokens=str(d/"tokens.txt"),
+        num_threads=2,model_type="nemo_transducer",provider="cpu")
+
+
 def worker(kind,models,wav_path,seconds,begin,stop,ready,path):
     os.environ["OMP_NUM_THREADS"]="2"; os.environ["OPENBLAS_NUM_THREADS"]="1"
     events=[]
@@ -31,15 +42,7 @@ def worker(kind,models,wav_path,seconds,begin,stop,ready,path):
         import soundfile as sf
         from scipy.signal import resample_poly
         if kind in ("whisper","parakeet"):
-            import sherpa_onnx
-            d=pathlib.Path(models)/kind
-            if kind=="whisper":
-                model=sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(d/"tiny.en-encoder.int8.onnx"),
-                    decoder=str(d/"tiny.en-decoder.int8.onnx"),tokens=str(d/"tiny.en-tokens.txt"),num_threads=2,provider="cpu")
-            else:
-                model=sherpa_onnx.OfflineRecognizer.from_transducer(encoder=str(d/"encoder.int8.onnx"),
-                    decoder=str(d/"decoder.int8.onnx"),joiner=str(d/"joiner.int8.onnx"),
-                    tokens=str(d/"tokens.txt"),num_threads=2,model_type="nemo_transducer",provider="cpu")
+            model=load_asr(kind,models)
             audio,rate=sf.read(wav_path,dtype="float32")
             if audio.ndim!=1: raise ValueError("mono fixture required")
             if rate!=16000: audio=resample_poly(audio,16000,rate).astype(np.float32)

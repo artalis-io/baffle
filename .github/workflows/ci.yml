@@ -79,6 +79,12 @@ jobs:
       - run: cmake -S tests/consumer -B consumer -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - run: cmake --build consumer --config Release --parallel
       - run: ctest --test-dir consumer -C Release --output-on-failure
+      - run: cmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+      - run: cmake --build acoustic-tools --config Release --parallel
+      - if: runner.os == 'Windows'
+        run: python tests/acoustic_tools.py acoustic-tools/Release/baffle_acoustic_runner.exe acoustic-tools/Release/baffle_vad_trace.exe
+      - if: runner.os != 'Windows'
+        run: python3 tests/acoustic_tools.py acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_vad_trace
   hail-public-consumer:
     strategy:
       fail-fast: false
@@ -121,6 +127,15 @@ jobs:
         run: cmake -S examples/hail-consumer -B consumer -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
       - run: cmake --build consumer --config Release --parallel
       - run: ctest --test-dir consumer -C Release --output-on-failure
+      - if: matrix.sanitizer != 'address'
+        run: cmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DBF_QUALIFY_HAIL=ON -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+      - if: matrix.sanitizer == 'address'
+        run: cmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DBF_QUALIFY_HAIL=ON -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
+      - run: cmake --build acoustic-tools --config Release --parallel
+      - if: runner.os == 'Windows'
+        run: python tests/acoustic_tools.py acoustic-tools/Release/baffle_acoustic_runner.exe acoustic-tools/Release/baffle_vad_trace.exe acoustic-tools/Release/baffle_hail_acquire.exe
+      - if: runner.os != 'Windows'
+        run: python3 tests/acoustic_tools.py acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_vad_trace acoustic-tools/baffle_hail_acquire
   fuzz-analysis:
     runs-on: ubuntu-latest
     steps:

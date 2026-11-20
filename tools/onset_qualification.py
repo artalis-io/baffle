@@ -16,6 +16,7 @@ def admission(case):
     reasons=[]
     if case.get("fixture_kind") not in ("physical","recorded-acoustic","simulated-with-recorded-source","synthetic-self-test"):
         reasons.append("fixture provenance kind unavailable")
+    if case.get("pcm_format")!="f32le-mono": reasons.append("canonical PCM declaration unavailable")
     rate=case.get("sample_rate")
     if isinstance(rate,bool) or rate not in (8000,16000,32000,48000): reasons.append("supported sample rate unavailable")
     for key in ("source","processed","vad_trace"):
@@ -23,6 +24,8 @@ def admission(case):
         path=pathlib.Path(entry.get("path",""))
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=entry.get("sha256"):
             reasons.append(key+" identity unavailable/mismatched")
+        elif key!="vad_trace" and (path.stat().st_size==0 or path.stat().st_size%4 or path.stat().st_size>256*1024*1024):
+            reasons.append(key+" canonical PCM size invalid")
     labels=case.get("labels",{})
     if labels.get("method") not in ("human-reviewed","independent-reviewed-corpus") or not labels.get("reviewer"):
         reasons.append("independent label review unavailable")
@@ -33,7 +36,7 @@ def admission(case):
         reasons.append("labels exceed declared F32 source duration")
     if not labels.get("evidence_identity") or labels.get("uncertainty_frames") is None:
         reasons.append("annotation provenance/uncertainty unavailable")
-    elif not isinstance(labels["uncertainty_frames"],int) or labels["uncertainty_frames"]<0:
+    elif not isinstance(labels["uncertainty_frames"],int) or isinstance(labels["uncertainty_frames"],bool) or labels["uncertainty_frames"]<0:
         reasons.append("invalid annotation uncertainty")
     if labels.get("no_near_speech_before_onset") is not True:
         reasons.append("far-only prefix is not independently verified")
@@ -57,6 +60,13 @@ def score(case):
     if reasons: return {"verdict":"UNQUALIFIED","reasons":reasons,"measurements":None}
     rate=case["sample_rate"]; onset=case["labels"]["onset_frame"]
     rows=list(csv.DictReader(open(case["vad_trace"]["path"])))
+    expected=0
+    for row in rows:
+        if int(row["first_frame"])!=expected or int(row["frames"])<=0 or int(row["active"]) not in (0,1):
+            return {"verdict":"UNQUALIFIED","reasons":["invalid VAD coverage/identity"],"measurements":None}
+        expected+=int(row["frames"])
+    if expected!=pathlib.Path(case["processed"]["path"]).stat().st_size//4:
+        return {"verdict":"UNQUALIFIED","reasons":["VAD coverage does not match processed PCM"],"measurements":None}
     previous=[r for r in rows if int(r["first_frame"])+int(r["frames"])<=onset]
     false_events=sum(int(r["active"]) and (i==0 or not int(previous[i-1]["active"])) for i,r in enumerate(previous))
     active_at_onset=bool(previous and int(previous[-1]["active"]))

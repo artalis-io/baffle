@@ -1,5 +1,6 @@
 {
   "fixture_kind": "simulated-with-recorded-source",
+  "pcm_format": "f32le-mono",
   "sample_rate": 16000,
   "scenario": "near speech through cancellation; fill independently verified labels",
   "source": {"path": "", "sha256": ""},

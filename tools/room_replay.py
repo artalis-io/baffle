@@ -9,6 +9,7 @@ import hashlib
 import json
 import pathlib
 import subprocess
+import os
 
 import numpy as np
 from scipy import signal
@@ -115,16 +116,30 @@ def replay(runner,directory,output,backends):
     output.mkdir(parents=True,exist_ok=True)
     manifest=json.loads((directory/"manifest.json").read_text()); results=[]
     for job in manifest["jobs"]:
-        for key in ("mic","reference"):
+        for key in ("mic","reference")+(("oracle",) if "oracle" in job else ()):
             if digest(directory/job[key]) != job[key+"_sha256"]: raise ValueError("input hash mismatch")
         mic=np.fromfile(directory/job["mic"],dtype="<f4"); rate=job["rate"]
         for backend in backends:
+            if job.get("transport_events") and backend.startswith("aec3"):
+                results.append({"job":job["name"],"backend":backend,"scope":job["scope"],
+                    "status":"UNSUPPORTED_TRANSPORT_CONTRACT","reason":"No qualified AEC3 generation/epoch adapter is implemented"})
+                continue
             stem=output/(job["name"]+"-"+backend)
             command=[str(runner.resolve()),backend,str(rate),str(directory/job["mic"]),str(directory/job["reference"]),
                      str(stem)+".f32",str(stem)+".csv",str(stem)+".json"]
-            run=subprocess.run(command,capture_output=True,text=True,check=True)
+            env=dict(os.environ); env.pop("BF_QUALIFICATION_TRANSPORT_EVENTS",None)
+            if job.get("transport_events"):
+                events=directory/job["transport_events"]
+                if digest(events)!=job["transport_events_sha256"]: raise ValueError("event identity mismatch")
+                env["BF_QUALIFICATION_TRANSPORT_EVENTS"]=str(events.resolve())
+            run=subprocess.run(command,capture_output=True,text=True,env=env)
+            if run.returncode:
+                results.append({"job":job["name"],"scope":job["scope"],"backend":backend,"status":"FAILED",
+                    "returncode":run.returncode,"command":command,"stdout":run.stdout,"stderr":run.stderr})
+                continue
             out=np.fromfile(str(stem)+".f32",dtype="<f4").astype(np.float64)
-            if len(out)!=len(mic): raise ValueError("backend frame accounting")
+            expected=len(mic)+(rate//100 if backend=="pipeline" else 0)
+            if len(out)!=expected: raise ValueError("backend frame accounting")
             metrics={}
             if job["far_only_interval_s"]:
                 a,b=[int(t*rate) for t in job["far_only_interval_s"]]
@@ -149,8 +164,11 @@ def replay(runner,directory,output,backends):
                             "output_sha256":digest(pathlib.Path(str(stem)+".f32")),"raw_receipts_sha256":digest(pathlib.Path(str(stem)+".csv"))})
     report={"runner_sha256":digest(runner),"manifest_sha256":digest(directory/"manifest.json"),
             "metric_note":"Raw common-frame indexing; no output delay shifting or perceptual/phoneme inference",
+            "execution_verdict":"FAIL" if any(r.get("status")=="FAILED" for r in results) else
+                "PARTIAL" if any(r.get("status")=="UNSUPPORTED_TRANSPORT_CONTRACT" for r in results) else "COMPLETE_MEASUREMENT",
             "results":results}
     (output/"report.json").write_text(json.dumps(report,indent=2)+"\n")
+    if report["execution_verdict"]=="FAIL": raise SystemExit("Backend failures retained in report.json")
 
 
 if __name__=="__main__":

@@ -14,6 +14,7 @@
 #include <thread>
 #include <vector>
 #include <array>
+#include <cstdlib>
 #ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
@@ -100,6 +101,7 @@ static int64_t rss_kib()
 #endif
 }
 struct Receipt { int64_t release, start, end, allocations; uint32_t flags; };
+struct Transport { uint64_t frame,capture_epoch,reference_epoch,generation; uint32_t missing; };
 static bf_audio_buffer view(float *data, uint32_t rate, uint32_t frames, uint64_t domain)
 {
     bf_audio_buffer b = BF_INIT(bf_audio_buffer);
@@ -119,9 +121,9 @@ int main(int argc, char **argv) try
     uint16_t endian=1;
     if (*reinterpret_cast<unsigned char *>(&endian)!=1) throw std::runtime_error("little-endian host required");
     std::string backend=argv[1];
+    uint32_t tail_ms=backend=="baffle-40ms" ? 40u:backend=="baffle-500ms" ? 500u:200u;
     uint32_t rate=number(argv[2],48000), seconds=argc>=9 ? number(argv[8],600) : 0;
     bool highres=argc==10 && std::string(argv[9])=="highres";
-    if (backend=="pipeline"&&!seconds) throw std::runtime_error("pipeline mode is paced-only; no offline EOS/drain implied");
     if (argc==10 && !highres && std::string(argv[9])!="default") throw std::runtime_error("unknown wait policy");
     if ((rate!=8000 && rate!=16000 && rate!=32000 && rate!=48000) || (argc>=9 && !seconds))
         throw std::runtime_error("unsupported rate/duration");
@@ -130,7 +132,28 @@ int main(int argc, char **argv) try
     auto mic=load(argv[3]), ref=load(argv[4]);
     if (mic.size()!=ref.size()) throw std::runtime_error("input duration mismatch");
     size_t calls=seconds ? static_cast<size_t>(seconds)*100 : (mic.size()+frames-1)/frames;
-    std::vector<float> result(seconds ? 0 : mic.size());
+    std::vector<Transport> transport;
+    std::string event_path;
+#ifdef _MSC_VER
+    char *environment=nullptr; size_t environment_size=0;
+    if(_dupenv_s(&environment,&environment_size,"BF_QUALIFICATION_TRANSPORT_EVENTS"))
+        throw std::runtime_error("transport environment read");
+    if(environment) {event_path=environment;std::free(environment);}
+#else
+    if(const char *path=std::getenv("BF_QUALIFICATION_TRANSPORT_EVENTS")) event_path=path;
+#endif
+    if(!event_path.empty()) {
+        if(seconds||backend.rfind("aec3",0)==0) throw std::runtime_error("transport injection supports offline public Baffle API only");
+        std::ifstream file(event_path); if(!file) throw std::runtime_error("transport event input");
+        Transport event{};
+        while(file>>event.frame>>event.capture_epoch>>event.reference_epoch>>event.generation>>event.missing) {
+            if(transport.size()>=128 || event.frame>=mic.size() || event.frame%frames || event.missing>1 ||
+               (!transport.empty()&&event.frame<=transport.back().frame)) throw std::runtime_error("bounded ordered frame-aligned events required");
+            transport.push_back(event);
+        }
+        if(!file.eof()) throw std::runtime_error("malformed transport event");
+    }
+    std::vector<float> result(seconds ? 0 : mic.size()+(backend=="pipeline" ? frames:0));
     std::vector<Receipt> receipts(calls);
     float near[480]={0}, far[480]={0}, out[480]={0}, reverse[480]={0};
     (void)reverse;
@@ -146,10 +169,10 @@ int main(int argc, char **argv) try
     webrtc::StreamConfig stream(static_cast<int>(rate),1);
     std::array<float,160> linear{};
 #endif
-    if (backend=="baffle") {
+    if (backend=="baffle"||backend=="baffle-40ms"||backend=="baffle-500ms") {
         bf_aec_config c=BF_INIT(bf_aec_config);
         c.sample_rate=rate; c.frame_frames=frames; c.capture_channels=c.reference_channels=1;
-        c.tail_ms=200; c.backend=BF_AEC_SPEEXDSP;
+        c.tail_ms=tail_ms; c.backend=BF_AEC_SPEEXDSP;
         check(bf_aec_size(&c,&bytes)); check(bf_aec_init(memory(),bytes,&c,&aec));
     } else if (backend=="pipeline") {
         bf_pipeline_config c=BF_INIT(bf_pipeline_config);
@@ -186,16 +209,25 @@ int main(int argc, char **argv) try
     alloc_end=reinterpret_cast<unsigned long long (*)()>(dlsym(RTLD_DEFAULT,"bf_qa_alloc_end"));
 #endif
     bf_audio_buffer n=view(near,rate,frames,1), r=view(far,rate,frames,2), o=view(out,rate,frames,1);
+    size_t transport_index=0; bool missing_reference=false;
     auto process=[&](uint64_t position) -> uint32_t {
         n.timing.frame_position=r.timing.frame_position=position;
+        n.timing.flags=r.timing.flags=0;
+        if(transport_index<transport.size()&&transport[transport_index].frame==position) {
+            auto e=transport[transport_index++];
+            if(e.capture_epoch!=n.timing.epoch) n.timing.flags|=BF_AUDIO_DISCONTINUITY;
+            if(e.reference_epoch!=r.timing.epoch) r.timing.flags|=BF_AUDIO_DISCONTINUITY;
+            n.timing.epoch=e.capture_epoch; r.timing.epoch=e.reference_epoch; r.timing.generation=e.generation;
+            missing_reference=e.missing!=0;
+        }
         if (aec) {
             bf_aec_info info=BF_INIT(bf_aec_info);
-            check(bf_aec_process(aec,near,&n.timing,far,&r.timing,out,&info));
+            check(bf_aec_process(aec,near,&n.timing,missing_reference ? nullptr:far,missing_reference ? nullptr:&r.timing,out,&info));
             return info.flags;
         }
         if (pipeline) {
             bf_process_info info=BF_INIT(bf_process_info);
-            check(bf_pipeline_process(pipeline,&n,&r,&o,&info));
+            check(bf_pipeline_process(pipeline,&n,missing_reference ? nullptr:&r,&o,&info));
             if (!o.frames) std::fill(out,out+frames,0);
             return info.flags;
         }
@@ -217,6 +249,13 @@ int main(int argc, char **argv) try
     uint64_t position=0;
     if (seconds) for (unsigned i=0;i<100;++i) { process(position); position+=frames; }
     auto origin=Clock::now();
+    auto store_pipeline=[&]() {
+        if(!o.frames) return;
+        size_t source=static_cast<size_t>(o.timing.frame_position);
+        if(source>=mic.size()) return;
+        size_t count=std::min<size_t>(o.frames,mic.size()-source);
+        std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(source+frames));
+    };
     for (size_t call=0;call<calls;++call) {
         size_t offset=call*frames;
         size_t count=seconds ? frames : std::min<size_t>(frames,mic.size()-offset);
@@ -232,8 +271,23 @@ int main(int argc, char **argv) try
         auto ns=[&](Clock::time_point t) { return std::chrono::duration_cast<std::chrono::nanoseconds>(t-origin).count(); };
         receipts[call]={ns(release),ns(start),ns(end),allocations,flags};
         for (uint32_t i=0;i<frames;++i) if (!std::isfinite(out[i])) throw std::runtime_error("nonfinite output");
-        if (!seconds) std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(offset));
+        if (!seconds) {
+            if(pipeline) store_pipeline();
+            else std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(offset));
+        }
         position+=frames;
+    }
+    if(pipeline&&!seconds) {
+        // EOS control outside timed process calls. Retain an explicit priming
+        // prefix and the final real source samples, trimming terminal padding.
+        bool drained=false;
+        for(unsigned i=0;i<3;++i) {
+            bf_process_info info=BF_INIT(bf_process_info);
+            check(bf_pipeline_flush(pipeline,&o,&info));
+            if(!o.frames) {drained=true;break;}
+            store_pipeline();
+        }
+        if(!drained) throw std::runtime_error("bounded pipeline drain failed");
     }
     int64_t final_rss=rss_kib(), peak=-1;
 #ifdef __linux__
@@ -254,6 +308,7 @@ int main(int argc, char **argv) try
     summary << "{\"rate\":"<<rate<<",\"frames\":"<<frames<<",\"calls\":"<<calls
             <<",\"wait_policy\":\""<<(highres ? "private-windows-highres" : "standard-sleep")<<"\""
             <<",\"paced_seconds\":"<<seconds<<",\"workspace_bytes\":"<<bytes
+            <<",\"baffle_tail_ms\":"<<(backend.rfind("baffle",0)==0 ? tail_ms:0)
             <<",\"rss_before_init_kib\":"<<before<<",\"rss_after_init_kib\":"<<initialized
             <<",\"rss_after_process_kib\":"<<final_rss<<",\"process_peak_rss_kib\":"<<peak
             <<",\"completion_deadline_misses\":"<<misses<<",\"execution_deadline_misses\":"<<execution_misses
