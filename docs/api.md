@@ -91,6 +91,12 @@ and clipping is flagged. Named mono/stereo validate count; discrete order does
 not imply physical geometry. Store array calibration externally; no automatic
 downmix or beamforming discards it.
 
+For direct AEC, a missing reference may also have NULL reference timing. It
+bypasses the backend, preserves F32 headroom and reports reference generation
+zero as unavailable, with `BF_REFERENCE_MISSING`. It cannot establish a generation
+change or S16 clipping. Present references require timing. Returning after a
+missing reference resets adaptation; absent PCM never represents acoustic silence.
+
 ## Optional Hail ownership and alignment
 
 `BF_WITH_HAIL=ON` requires installed Hail 0.1.0. Independent consumers use

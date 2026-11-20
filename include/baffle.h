@@ -231,6 +231,9 @@ BF_API bf_result bf_aec_reset(bf_aec *aec);
 /* Caller supplies aligned equal-rate, equal-frame-count interleaved audio.
  * Clock IDs/origins are never compared across legs. Missing reference NULL
  * bypasses cancellation and freezes adaptation; it does not mean actual silence.
+ * reference_timing may be NULL only when reference is NULL. Missing-reference
+ * receipts have reference_generation=0 and never infer a generation change.
+ * Bypass preserves F32 headroom; S16 clipping flags describe processed audio only.
  * Backend uses saturated S16 internally. Input F32 headroom +/-16, not NaN/Inf. */
 BF_API bf_result bf_aec_process(bf_aec *aec, const float *capture,
                                 const bf_audio_timing *capture_timing, const float *reference,

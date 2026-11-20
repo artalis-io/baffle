@@ -155,6 +155,12 @@ Assertions were retained while correcting:
     `--as-needed`, and the adapter lacked a transitive loader path. A clean build
     of `bfd782f` reproduced the loader failure. Co-located loader paths and an
     independent minimal consumer now cover both normal and relocated installs.
+14. Missing-reference AEC converted unused S16 scratch and compared placeholder
+    generation zero with the last reference, reporting clipping/cancellation
+    despite unchanged F32 bypass output and no admitted reference. A regression
+    failed before correction. Conversion and generation comparison now require
+    actual reference PCM; NULL timing is accepted only for missing references.
+    An unaligned S16-to-planar-F32 regression also exercises the decoder directly.
 
 Superseded CI runs were cancelled to avoid redundant matrix work. Failed logs and
 verification limits remain in the evidence ledger, not suppressed by tolerances.

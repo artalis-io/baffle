@@ -111,6 +111,20 @@ int main(void)
     far_time.frame_position += 160;
     CHECK(bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK &&
           info.resets == 1);
+    bf_audio_timing missing = BF_INIT(bf_audio_timing);
+    missing.uncertainty_ns = UINT64_MAX;
+    near_time.frame_position += 160;
+    near[0] = 1.25f;
+    CHECK(bf_aec_process(s, near, &near_time, NULL, &missing, out, &info) == BF_OK);
+    CHECK((info.flags & BF_REFERENCE_MISSING) &&
+          !(info.flags & (BF_REFERENCE_GENERATION_CHANGED | BF_AUDIO_CLIPPED)) &&
+          !info.reference_generation && !memcmp(near, out, sizeof(out)));
+    near_time.frame_position += 160;
+    CHECK(bf_aec_process(s, near, &near_time, NULL, NULL, out, &info) == BF_OK);
+    CHECK((info.flags & BF_REFERENCE_MISSING) &&
+          !(info.flags & (BF_REFERENCE_GENERATION_CHANGED | BF_AUDIO_CLIPPED)) &&
+          !info.reference_generation && !memcmp(near, out, sizeof(out)));
+    CHECK(bf_aec_process(s, near, &near_time, far_signal, NULL, out, &info) == BF_ERROR_INVALID);
     CHECK(bf_aec_reset(s) == BF_OK);
     memset(near, 0, sizeof(near));
     memset(far_signal, 0, 160 * sizeof(float));

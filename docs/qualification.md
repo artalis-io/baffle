@@ -73,6 +73,30 @@ truth, then compare cancellation/double-talk performance and consider AEC3 if
 needed. Synthetic success cannot override this recorded-evidence limitation.
 Full manifests/results are retained in the evidence directory.
 
+## Controlled recorded-speech diagnostic
+
+```sh
+python3 tools/controlled_aec.py build-quality/baffle_qualify build-recorded controlled.json --fetch
+# Optional acceptance check retains the original threshold and currently fails:
+python3 tools/controlled_aec.py build-quality/baffle_qualify build-recorded controlled.json --assert-raw-target
+```
+
+Two fixed, hash-verified recordings from the same upstream pin provide far-end
+speech and a known near component (including its recorded noise). The tool
+constructs a same-clock linear echo with taps 32@0.6 and 93@-0.15 at 48 kHz,
+adds near speech during seconds 8..18, and runs a 200 ms AEC tail. This removes
+unknown relative clocks from this experiment; it does not model a real room or
+provide clean speech/perceptual ground truth. No audio is redistributed.
+
+The measured near-component projection was **0.9084**, with raw-component SNR
+improvement **6.6484 dB**, below the predeclared **8 dB** target. That failure is
+retained. Far-only ERLE at seconds 6..8 was **25.8454 dB**. A zero-reference
+near-only control had **8.1676 dB** raw-component SNR, exposing the selected
+Speex DC-notch/preemphasis/deemphasis response. Error SNR relative to that
+backend-processed near control was **20.4415 dB**; this diagnostic does not
+replace the failed raw target or establish speech quality. Further recorded
+double-talk, moving-path and physical acoustic qualification remains required.
+
 ## Physical procedure and required records
 
 Use Hail's existing [qualification infrastructure](https://github.com/artalis-io/hail/blob/main/docs/gate-e.md),

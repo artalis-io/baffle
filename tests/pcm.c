@@ -43,6 +43,16 @@ int main(void)
           interleaved[6] == INT16_MAX);
     CHECK(out.timing.host_time_ns == t.host_time_ns && out.timing.uncertainty_ns == UINT64_MAX);
     CHECK(out.timing.flags & BF_AUDIO_CLIPPED);
+    /* Exercise the public S16 decoder, including unaligned sample storage. */
+    {
+        unsigned char unaligned[sizeof(interleaved) + 1];
+        memcpy(unaligned + 1, interleaved, sizeof(interleaved));
+        bf_audio_buffer encoded = out;
+        encoded.data = unaligned + 1;
+        CHECK(bf_pcm_convert(&encoded, &in, BF_NONFINITE_REJECT) == BF_OK);
+        CHECK(left[0] == -1 && right[0] == .25f && left[2] == .5f && left[3] == 32767.0f / 32768 &&
+              right[3] == -.5f);
+    }
     {
         bf_audio_timing a = t, b = t, combined = t;
         a.frame_time_numerator = UINT64_C(1000000000000000);

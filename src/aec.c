@@ -155,6 +155,10 @@ static int16_t pcm16(float x)
 bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt, const float *far,
                          const bf_audio_timing *ft, float *out, bf_aec_info *info)
 {
+    bf_audio_timing unknown = BF_INIT(bf_audio_timing);
+    unknown.uncertainty_ns = UINT64_MAX;
+    if (!far && !ft)
+        ft = &unknown;
     if (!s || s->magic != 0x42464145u || !near || !out || !BAFFLE_HEADER(nt) ||
         !BAFFLE_HEADER(ft) || !BAFFLE_HEADER(info))
         return BF_ERROR_INVALID;
@@ -183,14 +187,16 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
             return r;
         v.flags |= BF_AUDIO_DISCONTINUITY;
     }
-    if (s->seen && ft->generation != s->reference.generation)
+    if (far && s->seen && ft->generation != s->reference.generation)
         v.flags |= BF_REFERENCE_GENERATION_CHANGED;
     double ip = 0, op = 0;
     for (size_t i = 0; i < (size_t)f * c; ++i) {
-        s->near_pcm[i] = pcm16(near[i]);
         ip += (double)near[i] * near[i];
-        if (near[i] > 32767.0f / 32768 || near[i] < -1)
-            v.flags |= BF_AUDIO_CLIPPED;
+        if (far) {
+            s->near_pcm[i] = pcm16(near[i]);
+            if (near[i] > 32767.0f / 32768 || near[i] < -1)
+                v.flags |= BF_AUDIO_CLIPPED;
+        }
     }
     if (far) {
         for (size_t i = 0; i < (size_t)f * k; ++i) {
@@ -212,7 +218,7 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
     s->seen = 1;
     s->reference_missing = far == NULL;
     v.resets = s->resets;
-    v.reference_generation = ft->generation;
+    v.reference_generation = far ? ft->generation : 0;
     v.backend_arena_used = s->arena.used;
     v.backend_arena_capacity = s->arena.capacity;
     v.input_rms = (float)sqrt(ip / ((double)f * c));

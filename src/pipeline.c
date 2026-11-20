@@ -294,10 +294,8 @@ bf_result bf_pipeline_process(bf_pipeline *s, const bf_audio_buffer *in, const b
             }
     }
     if (s->aec) {
-        bf_audio_timing unknown = BF_INIT(bf_audio_timing);
-        unknown.uncertainty_ns = UINT64_MAX;
         r = bf_aec_process(s->aec, s->work, &in->timing, ref ? s->reference : NULL,
-                           ref ? &ref->timing : &unknown, s->work, &value.aec);
+                           ref ? &ref->timing : NULL, s->work, &value.aec);
         if (r != BF_OK)
             return r;
         value.flags |= value.aec.flags;

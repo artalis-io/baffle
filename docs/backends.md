@@ -46,6 +46,15 @@ channels, 40..500 ms tails. Multichannel delay readback is unsupported because
 the pinned upstream impulse-response accessor is not multichannel-safe. Mono
 readback reports the dominant adapted tap, not measured hardware latency.
 
+The selected MDF source also applies a DC-notch filter and preemphasis/
+deemphasis. An all-zero reference still exercises this signal conditioning;
+it is not a unity-transfer oracle. Missing-reference bypass skips the backend
+and copies the original F32 capture, so its transfer response differs from
+processing with a zero reference. Zero additional frame buffering does not mean
+zero signal phase response. The controlled recorded-speech diagnostic in
+[qualification](qualification.md) separates these effects without hiding the
+failed raw-waveform target.
+
 Its pinned BSD-style COPYING is installed as `SpeexDSP-COPYING`; per-file
 copyright/license comments also ship in `SpeexDSP-source-notices.txt`, including
 the older smallft attribution. Notices remain in the pinned source. Baffle's MIT license
