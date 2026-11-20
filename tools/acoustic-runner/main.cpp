@@ -1,0 +1,202 @@
+/* Offline / paced qualification, never linked into Baffle core. Input/output:
+ * little-endian IEEE F32 mono, caller-aligned equal-rate reference. No inferred
+ * physical timestamps. All file I/O/allocation occurs outside measured calls. */
+#include <baffle.h>
+#include <algorithm>
+#include <chrono>
+#include <cmath>
+#include <cstdint>
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <thread>
+#include <vector>
+#ifdef __linux__
+#include <sys/resource.h>
+#include <unistd.h>
+#include <dlfcn.h>
+#endif
+#ifdef BF_COMPARE_WEBRTC
+#include <api/audio/audio_processing.h>
+#include <api/scoped_refptr.h>
+#endif
+using Clock = std::chrono::steady_clock;
+static void check(bf_result r) { if (r != BF_OK) throw std::runtime_error("Baffle status " + std::to_string(r)); }
+static uint32_t number(const char *s, uint32_t max)
+{
+    size_t end;
+    auto v = std::stoull(s, &end);
+    if (s[0] < '0' || s[0] > '9' || s[end] || v > max) throw std::runtime_error("invalid integer");
+    return static_cast<uint32_t>(v);
+}
+static std::vector<float> load(const char *path)
+{
+    std::ifstream f(path, std::ios::binary | std::ios::ate);
+    auto bytes = f.tellg();
+    if (!f || bytes <= 0 || bytes > 256*1024*1024 || bytes % 4) throw std::runtime_error("invalid F32 input size");
+    std::vector<float> v(static_cast<size_t>(bytes)/4);
+    f.seekg(0);
+    f.read(reinterpret_cast<char *>(v.data()), bytes);
+    if (!f) throw std::runtime_error("input read");
+    for (float x : v) if (!std::isfinite(x) || std::fabs(x)>16) throw std::runtime_error("invalid PCM");
+    return v;
+}
+static int64_t rss_kib()
+{
+#ifdef __linux__
+    std::ifstream f("/proc/self/statm");
+    int64_t virtual_pages=0, resident=0;
+    f >> virtual_pages >> resident;
+    return resident * sysconf(_SC_PAGESIZE) / 1024;
+#else
+    return -1;
+#endif
+}
+struct Receipt { int64_t release, start, end, allocations; uint32_t flags; };
+static bf_audio_buffer view(float *data, uint32_t rate, uint32_t frames, uint64_t domain)
+{
+    bf_audio_buffer b = BF_INIT(bf_audio_buffer);
+    b.format = BF_INIT(bf_pcm_format);
+    b.timing = BF_INIT(bf_audio_timing);
+    b.format.sample_rate=rate; b.format.channels=1; b.format.sample_format=BF_PCM_F32;
+    b.format.storage=BF_INTERLEAVED; b.format.channel_layout=BF_LAYOUT_MONO;
+    b.data=data; b.frames=b.capacity_frames=frames;
+    b.timing.stream_id=domain; b.timing.clock_domain=domain; b.timing.epoch=1;
+    b.timing.uncertainty_ns=UINT64_MAX;
+    return b;
+}
+int main(int argc, char **argv) try
+{
+    if (argc != 8 && argc != 9) throw std::runtime_error(
+        "usage: runner baffle|pipeline|aec3 rate mic.f32 ref.f32 out.f32 receipts.csv summary.json [paced_seconds:1..600]");
+    uint16_t endian=1;
+    if (*reinterpret_cast<unsigned char *>(&endian)!=1) throw std::runtime_error("little-endian host required");
+    std::string backend=argv[1];
+    uint32_t rate=number(argv[2],48000), seconds=argc==9 ? number(argv[8],600) : 0;
+    if ((rate!=8000 && rate!=16000 && rate!=32000 && rate!=48000) || (argc==9 && !seconds))
+        throw std::runtime_error("unsupported rate/duration");
+    const uint32_t frames=rate/100;
+    auto mic=load(argv[3]), ref=load(argv[4]);
+    if (mic.size()!=ref.size()) throw std::runtime_error("input duration mismatch");
+    size_t calls=seconds ? static_cast<size_t>(seconds)*100 : (mic.size()+frames-1)/frames;
+    std::vector<float> result(seconds ? 0 : mic.size());
+    std::vector<Receipt> receipts(calls);
+    float near[480]={0}, far[480]={0}, out[480]={0}, reverse[480]={0};
+    (void)reverse;
+    int64_t before=rss_kib();
+    bf_aec *aec=nullptr;
+    bf_pipeline *pipeline=nullptr;
+    size_t bytes=0;
+    std::vector<unsigned char> storage;
+    auto memory=[&]() -> void * { storage.resize(bytes+BF_ALIGNMENT); return reinterpret_cast<void *>(
+        (reinterpret_cast<uintptr_t>(storage.data())+BF_ALIGNMENT-1u)&~static_cast<uintptr_t>(BF_ALIGNMENT-1u)); };
+#ifdef BF_COMPARE_WEBRTC
+    rtc::scoped_refptr<webrtc::AudioProcessing> apm;
+    webrtc::StreamConfig stream(static_cast<int>(rate),1);
+#endif
+    if (backend=="baffle") {
+        bf_aec_config c=BF_INIT(bf_aec_config);
+        c.sample_rate=rate; c.frame_frames=frames; c.capture_channels=c.reference_channels=1;
+        c.tail_ms=200; c.backend=BF_AEC_SPEEXDSP;
+        check(bf_aec_size(&c,&bytes)); check(bf_aec_init(memory(),bytes,&c,&aec));
+    } else if (backend=="pipeline") {
+        bf_pipeline_config c=BF_INIT(bf_pipeline_config);
+        c.sample_rate=rate; c.frame_frames=frames; c.channels=c.reference_channels=1;
+        c.stages=BF_STAGE_ALL; c.aec_tail_ms=200; c.noise_strength_db=18; c.agc_target_dbfs=-18;
+        check(bf_pipeline_size(&c,&bytes)); check(bf_pipeline_init(memory(),bytes,&c,&pipeline));
+    } else if (backend=="aec3") {
+#ifdef BF_COMPARE_WEBRTC
+        apm=webrtc::AudioProcessingBuilder().Create();
+        if (!apm) throw std::runtime_error("AEC3 creation");
+        webrtc::AudioProcessing::Config c;
+        c.echo_canceller.enabled=true; c.echo_canceller.mobile_mode=false;
+        c.echo_canceller.enforce_high_pass_filtering=false;
+        c.high_pass_filter.enabled=false; c.noise_suppression.enabled=false;
+        c.gain_controller1.enabled=false; c.gain_controller2.enabled=false;
+        apm->ApplyConfig(c);
+        webrtc::ProcessingConfig p;
+        p.input_stream()=p.output_stream()=p.reverse_input_stream()=p.reverse_output_stream()=stream;
+        if (apm->Initialize(p)) throw std::runtime_error("AEC3 initialization");
+#else
+        throw std::runtime_error("AEC3 unavailable: configure BF_COMPARE_WEBRTC against external package");
+#endif
+    } else throw std::runtime_error("unknown backend");
+    int64_t initialized=rss_kib();
+    void (*alloc_begin)()=nullptr;
+    unsigned long long (*alloc_end)()=nullptr;
+#ifdef __linux__
+    alloc_begin=reinterpret_cast<void (*)()>(dlsym(RTLD_DEFAULT,"bf_qa_alloc_begin"));
+    alloc_end=reinterpret_cast<unsigned long long (*)()>(dlsym(RTLD_DEFAULT,"bf_qa_alloc_end"));
+#endif
+    bf_audio_buffer n=view(near,rate,frames,1), r=view(far,rate,frames,2), o=view(out,rate,frames,1);
+    auto process=[&](uint64_t position) -> uint32_t {
+        n.timing.frame_position=r.timing.frame_position=position;
+        if (aec) {
+            bf_aec_info info=BF_INIT(bf_aec_info);
+            check(bf_aec_process(aec,near,&n.timing,far,&r.timing,out,&info));
+            return info.flags;
+        }
+        if (pipeline) {
+            bf_process_info info=BF_INIT(bf_process_info);
+            check(bf_pipeline_process(pipeline,&n,&r,&o,&info));
+            if (!o.frames) std::fill(out,out+frames,0);
+            return info.flags;
+        }
+#ifdef BF_COMPARE_WEBRTC
+        const float *fp[]={far}, *np[]={near};
+        float *rp[]={reverse}, *op[]={out};
+        if (apm->ProcessReverseStream(fp,stream,stream,rp) || apm->set_stream_delay_ms(0) ||
+            apm->ProcessStream(np,stream,stream,op)) throw std::runtime_error("AEC3 processing");
+#endif
+        return 0;
+    };
+    // Paced transport trial warms state before the measured interval; offline
+    // quality replay always starts cold and never omits scored samples.
+    uint64_t position=0;
+    if (seconds) for (unsigned i=0;i<100;++i) { process(position); position+=frames; }
+    auto origin=Clock::now();
+    for (size_t call=0;call<calls;++call) {
+        size_t offset=call*frames;
+        size_t count=seconds ? frames : std::min<size_t>(frames,mic.size()-offset);
+        std::fill(near,near+frames,0); std::fill(far,far+frames,0);
+        for (size_t i=0;i<count;++i) { near[i]=mic[(offset+i)%mic.size()]; far[i]=ref[(offset+i)%ref.size()]; }
+        auto release=seconds ? origin+std::chrono::milliseconds(call*10) : Clock::now();
+        if (seconds) std::this_thread::sleep_until(release);
+        auto start=Clock::now();
+        if (alloc_begin && alloc_end) alloc_begin();
+        uint32_t flags=process(position);
+        int64_t allocations=alloc_begin && alloc_end ? static_cast<int64_t>(alloc_end()) : -1;
+        auto end=Clock::now();
+        auto ns=[&](Clock::time_point t) { return std::chrono::duration_cast<std::chrono::nanoseconds>(t-origin).count(); };
+        receipts[call]={ns(release),ns(start),ns(end),allocations,flags};
+        for (uint32_t i=0;i<frames;++i) if (!std::isfinite(out[i])) throw std::runtime_error("nonfinite output");
+        if (!seconds) std::copy(out,out+count,result.begin()+static_cast<ptrdiff_t>(offset));
+        position+=frames;
+    }
+    int64_t final_rss=rss_kib(), peak=-1;
+#ifdef __linux__
+    struct rusage usage{}; if (!getrusage(RUSAGE_SELF,&usage)) peak=usage.ru_maxrss;
+#endif
+    if (aec) check(bf_aec_deinit(aec));
+    if (pipeline) check(bf_pipeline_deinit(pipeline));
+    std::ofstream output(argv[5],std::ios::binary), raw(argv[6]), summary(argv[7]);
+    output.write(reinterpret_cast<const char *>(result.data()),static_cast<std::streamsize>(result.size()*4));
+    raw << "frame,release_ns,start_ns,end_ns,processing_ns,start_lateness_ns,completion_deadline_miss,allocation_calls,flags\n";
+    uint32_t misses=0, execution_misses=0;
+    for (size_t i=0;i<calls;++i) {
+        auto t=receipts[i]; bool missed=seconds && t.end>t.release+10000000;
+        misses+=missed; execution_misses+=(t.end-t.start)>10000000;
+        raw << i << ',' << t.release << ',' << t.start << ',' << t.end << ',' << t.end-t.start << ','
+            << (seconds ? std::max<int64_t>(0,t.start-t.release):0) << ',' << missed << ',' << t.allocations << ',' << t.flags << '\n';
+    }
+    summary << "{\"rate\":"<<rate<<",\"frames\":"<<frames<<",\"calls\":"<<calls
+            <<",\"paced_seconds\":"<<seconds<<",\"workspace_bytes\":"<<bytes
+            <<",\"rss_before_init_kib\":"<<before<<",\"rss_after_init_kib\":"<<initialized
+            <<",\"rss_after_process_kib\":"<<final_rss<<",\"process_peak_rss_kib\":"<<peak
+            <<",\"completion_deadline_misses\":"<<misses<<",\"execution_deadline_misses\":"<<execution_misses
+            <<",\"added_pipeline_delay_frames\":"<<(pipeline ? frames:0)<<"}\n";
+    if (!output || !raw || !summary) throw std::runtime_error("output write");
+    return 0;
+} catch (const std::exception &e) { std::cerr << e.what() << '\n'; return 1; }
