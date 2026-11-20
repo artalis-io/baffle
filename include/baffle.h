@@ -203,7 +203,9 @@ BF_API bf_result bf_noise_init(void *storage, size_t bytes, const bf_noise_confi
 BF_API bf_result bf_noise_reset(bf_noise *noise);
 /* Exactly frame_frames interleaved F32. One-hop algorithmic delay. Probability
  * 0 permits noise learning, 1 freezes it, -1 uses conservative minimum statistics.
- * First output after reset is priming silence. In-place supported. */
+ * Freeze applies to initial noise bootstrapping after init/reset too: protected
+ * foreground is not a noise observation. First output after reset is priming
+ * silence. In-place supported. */
 BF_API bf_result bf_noise_process(bf_noise *noise, const float *input, float *output,
                                   float speech_probability);
 #define BF_AEC_SPEEXDSP 1u

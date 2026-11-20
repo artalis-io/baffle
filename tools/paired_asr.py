@@ -11,6 +11,7 @@ from inference_contention import load_asr,versions
 from asr_metrics import words,edits,metrics
 
 STAGES=("raw","baffle","aec-ns","aec-ns-agc","pipeline")
+AVAILABLE_STAGES=STAGES+("ns-only","agc-only","aec-agc","ns-agc")
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def dump(p,x):p.write_text(json.dumps(x,indent=2)+"\n",encoding="utf-8")
 def audio_stats(x,rate):
@@ -78,14 +79,16 @@ def prepare(models,seeded,output):
         "preparation_script_sha256":sha(pathlib.Path(__file__)),"policy":policy,"sources":sources,"jobs":jobs})
 
 
-def run(runner,vad,models,input_dir,output):
+def run(runner,vad,models,input_dir,output,stages=STAGES):
+    if "raw" not in stages or len(set(stages))!=len(stages) or any(s not in AVAILABLE_STAGES for s in stages):
+        raise ValueError("unique supported stages including raw are required")
     if output.exists() and any(output.iterdir()):raise ValueError("Use a fresh results directory; prior measurements must be retained")
     output.mkdir(parents=True,exist_ok=True);manifest=json.loads((input_dir/"manifest.json").read_text())
     records=[];asr={kind:load_asr(kind,models) for kind in ("whisper","parakeet")}
     for job in manifest["jobs"]:
         for key in ("mic","reference","oracle"):
             if sha(input_dir/job[key])!=job[key+"_sha256"]:raise ValueError("fixture mismatch")
-        for stage in STAGES:
+        for stage in stages:
             stem=output/(job["name"]+"-"+stage);native=None;delay=0;raw=input_dir/job["mic"]
             if stage!="raw":
                 env=os.environ.copy();env.pop("BF_QUALIFICATION_TRANSPORT_EVENTS",None)
@@ -133,6 +136,7 @@ if __name__=="__main__":
     for key in ("models","seeded","output"):a.add_argument(key,type=pathlib.Path)
     a=s.add_parser("run")
     for key in ("runner","vad","models","input","output"):a.add_argument(key,type=pathlib.Path)
+    a.add_argument("--stages",nargs="+",choices=AVAILABLE_STAGES,default=STAGES)
     a=p.parse_args()
     if a.command=="prepare":prepare(a.models,a.seeded,a.output)
-    else:run(a.runner,a.vad,a.models,a.input,a.output)
+    else:run(a.runner,a.vad,a.models,a.input,a.output,a.stages)

@@ -50,6 +50,26 @@ int main(void)
     }
     printf("NS disabled overlap-add relative_error_db=%.2f\n", 10 * log10(error / signal));
     CHECK(error / signal < 1e-10);
+    /* A protected foreground frame must not seed a noise estimate after init
+     * or reset. With no previously learned noise, frozen NS is unity WOLA. */
+    nc.strength_db = 18;
+    CHECK(bf_noise_init(p, bytes, &nc, &ns) == BF_OK);
+    uint32_t saved_random_state = random_state;
+    for (unsigned pass = 0; pass < 2; ++pass) {
+        if (pass) CHECK(bf_noise_reset(ns) == BF_OK);
+        memset(previous, 0, sizeof(previous)); error = signal = 0;
+        for (unsigned frame = 0; frame < 40; ++frame) {
+            for (unsigned i = 0; i < 160; ++i) in[i] = .02f * noise();
+            CHECK(bf_noise_process(ns, in, out, 1) == BF_OK);
+            for (unsigned i = 0; i < 160; ++i) {
+                double d = out[i] - previous[i]; error += d * d;
+                signal += (double)previous[i] * previous[i];
+            }
+            memcpy(previous, in, sizeof(in));
+        }
+        CHECK(error / signal < 1e-10);
+    }
+    random_state = saved_random_state; /* Preserve the original quality fixtures. */
     nc.strength_db = 20;
     CHECK(bf_noise_init(p, bytes, &nc, &ns) == BF_OK);
     double input_energy = 0, output_energy = 0;

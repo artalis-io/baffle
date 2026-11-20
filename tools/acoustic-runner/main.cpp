@@ -135,11 +135,15 @@ int main(int argc, char **argv) try
     const uint32_t frames=backend=="ns5" ? rate/200:rate/100;
     if(backend=="ns5"&&seconds) throw std::runtime_error("ns5 is offline delay/quality diagnostic only");
     const bool pipeline_backend=backend=="pipeline"||backend=="aec-ns"||backend=="aec-ns-agc"||
-        backend=="aec-vad"||backend=="ns-only"||backend=="ns-zero"||backend=="ns5";
+        backend=="aec-vad"||backend=="ns-only"||backend=="ns-zero"||backend=="ns5"||
+        backend=="agc-only"||backend=="aec-agc"||backend=="ns-agc";
     uint32_t stages=BF_STAGE_ALL;
     if(backend=="aec-ns") stages=BF_STAGE_AEC|BF_STAGE_NOISE;
     if(backend=="aec-ns-agc") stages=BF_STAGE_AEC|BF_STAGE_NOISE|BF_STAGE_AGC;
     if(backend=="aec-vad") stages=BF_STAGE_AEC|BF_STAGE_VAD;
+    if(backend=="agc-only") stages=BF_STAGE_AGC;
+    if(backend=="aec-agc") stages=BF_STAGE_AEC|BF_STAGE_AGC;
+    if(backend=="ns-agc") stages=BF_STAGE_NOISE|BF_STAGE_AGC;
     if(backend=="ns-only"||backend=="ns-zero"||backend=="ns5") stages=BF_STAGE_NOISE;
     const uint32_t pipeline_delay=pipeline_backend&&(stages&BF_STAGE_NOISE) ? frames:0;
     WaitPolicy waiter(highres);

@@ -138,13 +138,17 @@ def replay(runner,directory,output,backends):
                     "returncode":run.returncode,"command":command,"stdout":run.stdout,"stderr":run.stderr})
                 continue
             out=np.fromfile(str(stem)+".f32",dtype="<f4").astype(np.float64)
-            expected=len(mic)+(rate//100 if backend=="pipeline" else 0)
+            native_summary=json.loads(pathlib.Path(str(stem)+".json").read_text())
+            delay=native_summary.get("added_pipeline_delay_frames",0)
+            expected=len(mic)+delay
             if len(out)!=expected: raise ValueError("backend frame accounting")
             metrics={}
             if job["far_only_interval_s"]:
                 a,b=[int(t*rate) for t in job["far_only_interval_s"]]
                 metrics["far_only_mic_to_output_ratio_db"]=float(10*np.log10(np.sum(mic[a:b].astype(np.float64)**2)/max(np.sum(out[a:b]**2),1e-30)))
                 metrics["total_output_power"]=float(np.mean(out[a:b]**2))
+                if delay:
+                    metrics["documented_delay_compensated_far_ratio_db"]=float(10*np.log10(np.sum(mic[a:b].astype(np.float64)**2)/max(np.sum(out[a+delay:b+delay]**2),1e-30)))
             if "oracle" in job:
                 oracle=np.fromfile(directory/job["oracle"],dtype="<f8"); a,b=[int(t*rate) for t in job["near_interval_s"]]
                 target=oracle[a:b]; error=out[a:b]-target; before=mic[a:b].astype(np.float64)-target

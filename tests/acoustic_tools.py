@@ -59,6 +59,12 @@ with tempfile.TemporaryDirectory(prefix="owned-",dir=parent) as temporary:
         assert out.stat().st_size==(161+delay)*4
         assert json.loads(summary.read_text())["added_pipeline_delay_frames"]==delay
     subprocess.run(pipeline,check=True) # Restore the original complete-pipeline VAD fixture.
+    probe=runner.with_name("baffle_noise_order"+runner.suffix)
+    probe_out=d/"probe.f32";probe_info=d/"probe.json"
+    for mode in ("protected","agc-ns"):
+        subprocess.run([str(probe),mode,"16000",str(mic),str(probe_out),str(probe_info)],check=True)
+        assert probe_out.stat().st_size==321*4
+        assert json.loads(probe_info.read_text())["algorithmic_delay_frames"]==160
     trace=d/"vad.csv"; subprocess.run([str(vad),"16000",str(out),str(trace)],check=True)
     rows=list(csv.DictReader(trace.open())); assert sum(int(r["frames"]) for r in rows)==321
     before=hashlib.sha256(trace.read_bytes()).hexdigest()

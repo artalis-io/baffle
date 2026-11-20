@@ -143,7 +143,9 @@ bf_result bf_noise_process(bf_noise *s, const float *in, float *out, float speec
             size_t j = (size_t)c * s->bins + k;
             float power = s->real[k] * s->real[k] + s->imag[k] * s->imag[k];
             if (!s->seen) {
-                s->noise[j] = power * .01f;
+                /* A foreground/frozen hint applies to bootstrap too. With no
+                 * learned noise, do not classify protected speech as noise. */
+                s->noise[j] = speech >= .2f ? 0 : power * .01f;
                 s->smooth[j] = s->minimum[j] = power;
             }
             s->smooth[j] = .8f * s->smooth[j] + .2f * power;
