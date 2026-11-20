@@ -164,6 +164,34 @@ int main(void)
     CHECK(!vi.active);
     CHECK(bf_vad_reset(vad) == BF_OK);
     free(base);
+    /* Public AGC time constants, isolated from NS/VAD and limiter. A constant
+     * level has an analytic RMS target, so no recognizer/fixture tuning enters. */
+    for (unsigned rate_index = 0; rate_index < 2; ++rate_index) {
+        uint32_t rate = rate_index ? 48000u : 16000u, frames = rate / 100u;
+        bf_agc_config step = BF_INIT(bf_agc_config);
+        step.sample_rate = rate; step.channels = 1; step.max_frames = frames;
+        step.target_dbfs = -18; step.min_gain_db = -20; step.max_gain_db = 6;
+        step.attack_ms = 5; step.release_ms = 250; step.gate_dbfs = -60; step.limit_dbfs = -1;
+        bf_agc *gain; float source[480], result[480];
+        p = memory(bf_agc_size(), &base);
+        CHECK(bf_agc_init(p, bf_agc_size(), &step, &gain) == BF_OK);
+        for (unsigned i = 0; i < frames; ++i) source[i] = .01f;
+        for (unsigned block = 0; block < 200; ++block)
+            CHECK(bf_agc_process(gain, source, result, frames, -1, &li) == BF_OK);
+        double start_gain = li.gain, target = pow(10.0, -18.0 / 20.0) / .2;
+        for (unsigned i = 0; i < frames; ++i) source[i] = .2f;
+        CHECK(bf_agc_process(gain, source, result, frames, -1, &li) == BF_OK);
+        CHECK(fabs(li.gain - (target + (start_gain - target) * exp(-.01 / .005))) < 1e-4);
+        CHECK(!li.limited_samples);
+        start_gain = li.gain; target = pow(10.0, 6.0 / 20.0);
+        for (unsigned i = 0; i < frames; ++i) source[i] = .01f;
+        CHECK(bf_agc_process(gain, source, result, frames, -1, &li) == BF_OK);
+        CHECK(fabs(li.gain - (target + (start_gain - target) * exp(-.01 / .25))) < 1e-4);
+        start_gain = li.gain;
+        CHECK(bf_agc_process(gain, source, result, frames, 0, &li) == BF_OK);
+        CHECK(fabs(li.gain - start_gain) < 1e-4);
+        free(base);
+    }
     /* Same freeze contract at 48 kHz stereo, including reset and independent
      * interleaved channel history. Original 16 kHz fixtures above are unchanged. */
     {
