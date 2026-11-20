@@ -11,7 +11,9 @@ import numpy as np
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     for k in ("input","results","output"):p.add_argument(k,type=pathlib.Path)
-    a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
+    a=p.parse_args()
+    if a.output.exists() and any(a.output.iterdir()):raise ValueError("Use a fresh review directory; never replace human annotations")
+    a.output.mkdir(parents=True,exist_ok=True)
     manifest=json.loads((a.input/"manifest.json").read_text());index=[]
     template=json.loads((pathlib.Path(__file__).resolve().parents[1]/"tests/fixtures/onset-review.example.json").read_text())
     for job in manifest["jobs"]:
@@ -20,7 +22,7 @@ if __name__=="__main__":
         source=a.input/job["mic"];processed=a.results/(job["name"]+"-pipeline.f32")
         trace=a.results/(job["name"]+"-pipeline-vad.csv")
         case=json.loads(json.dumps(template));case["scenario"]=job["scenario"]
-        for key,path in (("source",source),("processed",processed),("vad_trace",trace)):
+        for key,path in (("source",source),("processed",processed),("clean_near_component",a.input/job["oracle"]),("vad_trace",trace)):
             target=directory/path.name;shutil.copyfile(path,target)
             case[key]={"path":str(target.resolve()),"sha256":hashlib.sha256(target.read_bytes()).hexdigest()}
             if key=="vad_trace":continue

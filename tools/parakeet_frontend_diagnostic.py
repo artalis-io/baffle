@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# TDT control flow adapted from sherpa-onnx v1.12.40,
+# offline-transducer-greedy-search-nemo-decoder.cc, Copyright 2024 Xiaomi Corp.
+# Python diagnostic implementation Copyright 2026 Artalis.
+# See parakeet-diagnostic-LICENSE. This is never linked into Baffle.
 """External one-factor NeMo normalization diagnostic; never a Baffle stage.
 
 Pinned sherpa 1.12.40 uses float E[x*x]-E[x]^2. Compare that cancellation-prone

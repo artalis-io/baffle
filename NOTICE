@@ -15,3 +15,7 @@ AudioProcessing (BSD-3-Clause), ASR/TTS runtimes, voices and model datasets.
 These are not linked into the Baffle core or redistributed as model/audio
 assets. Their independent license and dataset terms apply; see
 tools/acoustic-runner/README.md and retained model/source identities.
+The optional tools/parakeet_frontend_diagnostic.py uses Apache-2.0 for its
+adaptation of sherpa-onnx's TDT greedy control flow (Copyright 2024 Xiaomi
+Corporation). See tools/parakeet-diagnostic-LICENSE. This exception does not
+change the core library license or introduce a core runtime dependency.

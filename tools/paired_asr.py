@@ -79,6 +79,7 @@ def prepare(models,seeded,output):
 
 
 def run(runner,vad,models,input_dir,output):
+    if output.exists() and any(output.iterdir()):raise ValueError("Use a fresh results directory; prior measurements must be retained")
     output.mkdir(parents=True,exist_ok=True);manifest=json.loads((input_dir/"manifest.json").read_text())
     records=[];asr={kind:load_asr(kind,models) for kind in ("whisper","parakeet")}
     for job in manifest["jobs"]:
