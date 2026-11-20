@@ -1,10 +1,10 @@
 # Processing latency and resource evidence
 
-The native [benchmark](../bench/latency.c) measures each synchronous 10 ms call,
+The native [benchmark](../bench/latency.c) measures synchronous 10/20 ms calls,
 after 100 pipeline warm-up calls, with preallocated buffers and no measured I/O.
 CSV contains median/P95/P99/max, mean adjacent processing-cost difference,
-10 ms deadline misses, wall real-time factor, thread CPU accounting and queried
-workspace. Eight-session rows measure the whole serial batch against one 10 ms
+per-row frame deadline misses, wall real-time factor, thread CPU accounting and queried
+workspace. Eight-session rows measure the whole serial batch against one frame
 deadline. This is unpaced processing cost, not paced device jitter, scheduler
 wakeup latency, an inference workload, OS resident-memory peak or physical RTT.
 
@@ -16,6 +16,8 @@ cmake --build build-perf --parallel
 build-perf/baffle_latency 10000 > idle.csv
 # Optional QA launcher; not a build/runtime dependency:
 python3 tools/benchmark.py build-perf/baffle_latency loaded.csv --iterations 10000 --workers 4
+# Retain every frame cost before percentile sorting (offline I/O after each case):
+python3 tools/benchmark.py build-perf/baffle_latency loaded.csv --iterations 10000 --workers 4 --raw-output raw.csv
 ```
 
 The four SHA256 CPU workers are a contention proxy, not Whisper/Parakeet/TTS/LLM
@@ -26,6 +28,58 @@ as NaN, and small values above 100% in longer raw accounting reflect quantizatio
 not physically meaningful utilization above one core. Wall percentiles remain
 the primary cost measurements. No hard WCET guarantee follows from an observed
 maximum or sanitizer success.
+
+## AEC convergence measurements, 2026-11-20
+
+The coefficient-only correction in [AEC convergence](aec-quality.md) raises the
+unchanged controlled speech target from 6.6484 to 14.6034 dB. It adds no processing
+operations or buffering frames: the new `expf` executes only at initialization.
+The table below measures mono capture/stereo reference, 200 ms tails, Release,
+four SHA256 CPU workers, 10,000 iterations per case. Quality fixtures use mono
+references; these costs are not a joint physical or inference-workload measurement.
+
+Windows host/compiler are the same Ryzen 5950X / Windows 11 26300 / clang-cl
+19.1.5 as the historical baseline. Linux ARM64 uses the GB10-class CPU and GCC
+13.3. New raw frame receipts and before/after manifests are retained under
+`docs/evidence/2026-11-20-aec/`; percentiles can be recomputed from unsorted costs.
+Timer quantization and uncontrolled affinity/governor/system activity remain
+limitations. Earlier idle explorations overlapped unrelated builds and are
+labelled as exploratory; they are not used for causal performance comparisons.
+
+| Windows corrected case | Hop ms | P50 ms | P95 ms | P99 ms | Max ms | Caller state+scratch bytes |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 16k AEC | 10 | .0431 | .0489 | .0635 | .2172 | 204896 |
+| 16k AEC | 20 | .0630 | .0651 | .0676 | .1154 | 234288 |
+| 48k AEC | 10 | .1474 | .1514 | .1557 | .2800 | 596576 |
+| 48k AEC | 20 | .2182 | .2257 | .2531 | .3779 | 684848 |
+| 16k full pipeline | 10 | .0584 | .0661 | .0903 | .1704 | 218128 |
+| 48k full pipeline | 10 | .1829 | .3650 | .3716 | .4113 | 625168 |
+| Eight 16k full sessions, serial batch | 10 | .4876 | .5322 | .5417 | .7115 | 1745024 |
+
+Windows AEC thread CPU/audio-duration accounting was about .438% of one core
+at 16k/10 ms and 1.484% at 48k/10 ms; this is coarse sampled accounting, not a
+machine-wide CPU percentage. ARM64 corrected single-session AEC P99 was .0244 /
+.0375 ms at 16k with 10/20 ms hops, and .0798/.1236 ms at 48k. All three final
+raw campaigns (Windows before/after and ARM64 corrected) observed zero per-frame
+budget misses. This is an observation, not a hard real-time guarantee.
+
+Raw before/after Windows P99 varies substantially across some cases: e.g.
+48k/10 ms AEC .3007 versus .1557 ms, and 16k full .0704 versus .0903 ms. The
+steady-state work is unchanged and clocks/affinity were not controlled; no
+speedup, regression attribution or statistical confidence is inferred from this
+single pair. Scalar/reference execution remains the baseline; no explicit SIMD
+or GPU implementation was introduced.
+
+Queried workspace bounds persistent state and reusable scratch in the caller
+arena, with no growth after initialization. Heap guards include real AEC process
+and reset. Separate persistent/scratch high-water counters and OS RSS peaks were
+not measured; the reported bytes exclude caller PCM, benchmark vectors and Hail
+history. The correction does not change workspace sizes. AEC adds no queued
+frame; NS adds one hop, and 48->16k reference SRC/alignment adds about 2 ms.
+Ten versus twenty millisecond frame assembly is an application latency tradeoff;
+the measured CPU saving does not justify silently adding another 10 ms of audio
+waiting. There is no measured physical end-to-end DSP/device latency or actual
+concurrent Whisper/Parakeet/TTS/LLM workload in these trials.
 
 ## 2026-11-19 measurements
 

@@ -39,6 +39,16 @@ def preservation(target, output):
             "si_sdr_db": db_ratio(gain*gain*power(t), power([b-gain*a for a,b in zip(t,o)]))}
 
 
+def sustained_ratio(windows, first, last, threshold):
+    # First three consecutive full one-second windows at/above the threshold.
+    # This includes noise/pauses, not a subsecond adaptive-state observation.
+    for start in range(first,last-2):
+        values = [w["far_only_mic_to_output_ratio_db"] for w in windows[start:start+3]]
+        if all(v is not None and v >= threshold for v in values):
+            return start+3-first
+    return None
+
+
 def run(tool, directory):
     sources, identities = [], []
     for name, digest in FIXTURES:
@@ -111,6 +121,9 @@ def run(tool, directory):
                               "noise_peak":noise_level,"taps":taps,"path_step_samples_at_18s":80 if name == "room-noise-path-change" else 0,
                               "doubletalk_interval_frames":[begin,end],"quality":quality,
                               "near_projection_within_original_bounds":.8<=quality["projection"]<=1.2,
+                              "initial_20db_three_window_settling_s":sustained_ratio(windows,0,8,20),
+                              "changed_path_15db_three_window_recovery_s":sustained_ratio(windows,18,24,15)
+                                if name == "room-noise-path-change" else None,
                               "windows":windows,"command":command,"native_stdout":result.stdout,
                               "capture_sha256":hashlib.sha256(mic.read_bytes()).hexdigest(),
                               "reference_sha256":hashlib.sha256(ref.read_bytes()).hexdigest(),
@@ -120,6 +133,7 @@ def run(tool, directory):
             "holdout_policy":"20 Hz policy fixed before inspecting OSR results; no tuning on these cases",
             "onset_note":"First energy >-60dBFS window can include pre-speech noise/DC; not annotated speech onset, VAD or ASR accuracy",
             "far_only_note":"Mic/output power ratio includes injected and recorded noise; total output power is not isolated residual echo",
+            "settling_note":"Three consecutive one-second energy-ratio windows; None means not met within observation, noise included",
             "physical_qualification":False,"hungarian": "unavailable: no reviewed fixture included",
             "asr_wer":"unavailable: no external recognizer configured","cases":cases}
 

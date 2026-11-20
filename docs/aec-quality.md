@@ -87,6 +87,14 @@ No evidence justifies changing MDF precision, adaptation or double-talk settings
 for this defect. Longer filters, residual suppressors and AEC3 are not substitutes
 for establishing this causal result.
 
+The broadband synthetic regression remains above its unchanged thresholds, but
+its path-change ERLE falls from 40.702 to 38.180 dB; initial ERLE changes from
+34.841 to 34.728 dB. Near-tone projection improves from .91382 to .98942.
+These tradeoffs remain visible alongside the primary speech-fidelity correction.
+Even the original zero-reference near-only control would imply just 6.8588 dB
+improvement against the original mixture error, explaining why additional echo
+attenuation alone did not close that raw-component target.
+
 ## Recorded-source evaluation and remaining quality limits
 
 Two unchanged, attributed [Open Speech Repository files](../tests/fixtures/osr/README.md)
@@ -105,7 +113,11 @@ a complete speech-quality gate. Reports also retain raw error SNR, zero-mean
 SI-SDR, output power and far-only microphone/output energy ratios. With noise,
 the last ratio includes noise; it is not isolated residual echo. Near-only input
 has zero pre-AEC error, so its SNR improvement is unavailable rather than an
-invented finite score. High near/weak echo can already have excellent input SNR;
+invented finite score. Coarse convergence/recovery receipts use three consecutive
+one-second energy-ratio windows at >=20/15 dB, respectively; missing receipts
+mean the criterion was not met in the observation interval. Noise stays included,
+so these are not subsecond adaptive-state or isolated-echo guarantees.
+High near/weak echo can already have excellent input SNR;
 phase distortion can reduce raw SNR despite preserved gain. Those cases remain
 in the report, without a universal 8 dB improvement claim for every new scenario.
 
@@ -121,6 +133,9 @@ The four existing Microsoft real acoustic traces must still be considered
 separately. Their uncertain delay/drift/noise and weak results are not replaced
 by the controlled or OSR simulated-room scores. Production acceptance remains
 PARTIAL until calibrated, deployment-representative quality is demonstrated.
+Corrected 48 kHz energy reductions on the three far-only traces were .8045,
+-.0102 and 6.6032 dB, versus .8234, .0101 and 6.6208 dB before correction.
+This integration fix does not solve their uncalibrated acoustic quality gap.
 
 ## Transport and real-time contracts
 
