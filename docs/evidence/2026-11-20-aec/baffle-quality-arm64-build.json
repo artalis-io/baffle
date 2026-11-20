@@ -1,0 +1,24 @@
+{
+  "platform": "Linux-7.0.0-1024-nvidia-aarch64-with-glibc2.39",
+  "compiler_flags": [
+    {
+      "directory": "/tmp/baffle.fVOhT0/build-aec",
+      "command": "/usr/bin/cc -DEXPORT=\"\" -DFLOATING_POINT -DOS_SUPPORT_CUSTOM -DRELEASE -DUSE_SMALLFT -D_USE_MATH_DEFINES -Dspeex_echo_cancel=baffle_speex_echo_cancel -Dspeex_echo_cancellation=baffle_speex_echo_cancellation -Dspeex_echo_capture=baffle_speex_echo_capture -Dspeex_echo_ctl=baffle_speex_echo_ctl -Dspeex_echo_get_residual=baffle_speex_echo_get_residual -Dspeex_echo_playback=baffle_speex_echo_playback -Dspeex_echo_state_destroy=baffle_speex_echo_state_destroy -Dspeex_echo_state_init=baffle_speex_echo_state_init -Dspeex_echo_state_init_mc=baffle_speex_echo_state_init_mc -Dspeex_echo_state_reset=baffle_speex_echo_state_reset -Dspx_drft_backward=baffle_spx_drft_backward -Dspx_drft_clear=baffle_spx_drft_clear -Dspx_drft_forward=baffle_spx_drft_forward -Dspx_drft_init=baffle_spx_drft_init -Dspx_fft=baffle_spx_fft -Dspx_fft_destroy=baffle_spx_fft_destroy -Dspx_fft_float=baffle_spx_fft_float -Dspx_fft_init=baffle_spx_fft_init -Dspx_ifft=baffle_spx_ifft -Dspx_ifft_float=baffle_spx_ifft_float -I/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/include -I/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp -I/tmp/baffle.fVOhT0/build-aec/speex-config -I/tmp/baffle.fVOhT0/src/speex -O3 -DNDEBUG -fPIC -fvisibility=hidden -o CMakeFiles/baffle_speex_kernel.dir/src/speex/mdf_baffle.c.o -c /tmp/baffle.fVOhT0/src/speex/mdf_baffle.c",
+      "file": "/tmp/baffle.fVOhT0/src/speex/mdf_baffle.c",
+      "output": "CMakeFiles/baffle_speex_kernel.dir/src/speex/mdf_baffle.c.o"
+    },
+    {
+      "directory": "/tmp/baffle.fVOhT0/build-aec",
+      "command": "/usr/bin/cc -DEXPORT=\"\" -DFLOATING_POINT -DOS_SUPPORT_CUSTOM -DRELEASE -DUSE_SMALLFT -D_USE_MATH_DEFINES -Dspeex_echo_cancel=baffle_speex_echo_cancel -Dspeex_echo_cancellation=baffle_speex_echo_cancellation -Dspeex_echo_capture=baffle_speex_echo_capture -Dspeex_echo_ctl=baffle_speex_echo_ctl -Dspeex_echo_get_residual=baffle_speex_echo_get_residual -Dspeex_echo_playback=baffle_speex_echo_playback -Dspeex_echo_state_destroy=baffle_speex_echo_state_destroy -Dspeex_echo_state_init=baffle_speex_echo_state_init -Dspeex_echo_state_init_mc=baffle_speex_echo_state_init_mc -Dspeex_echo_state_reset=baffle_speex_echo_state_reset -Dspx_drft_backward=baffle_spx_drft_backward -Dspx_drft_clear=baffle_spx_drft_clear -Dspx_drft_forward=baffle_spx_drft_forward -Dspx_drft_init=baffle_spx_drft_init -Dspx_fft=baffle_spx_fft -Dspx_fft_destroy=baffle_spx_fft_destroy -Dspx_fft_float=baffle_spx_fft_float -Dspx_fft_init=baffle_spx_fft_init -Dspx_ifft=baffle_spx_ifft -Dspx_ifft_float=baffle_spx_ifft_float -I/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/include -I/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp -I/tmp/baffle.fVOhT0/build-aec/speex-config -I/tmp/baffle.fVOhT0/src/speex -O3 -DNDEBUG -fPIC -fvisibility=hidden -o CMakeFiles/baffle_speex_kernel.dir/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c.o -c /tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c",
+      "file": "/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c",
+      "output": "CMakeFiles/baffle_speex_kernel.dir/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c.o"
+    },
+    {
+      "directory": "/tmp/baffle.fVOhT0/build-aec",
+      "command": "/usr/bin/cc -DBF_BUILDING_LIBRARY -DBF_HAVE_SPEEXDSP=1 -DBF_STATIC -Dspeex_echo_cancel=baffle_speex_echo_cancel -Dspeex_echo_cancellation=baffle_speex_echo_cancellation -Dspeex_echo_capture=baffle_speex_echo_capture -Dspeex_echo_ctl=baffle_speex_echo_ctl -Dspeex_echo_get_residual=baffle_speex_echo_get_residual -Dspeex_echo_playback=baffle_speex_echo_playback -Dspeex_echo_state_destroy=baffle_speex_echo_state_destroy -Dspeex_echo_state_init=baffle_speex_echo_state_init -Dspeex_echo_state_init_mc=baffle_speex_echo_state_init_mc -Dspeex_echo_state_reset=baffle_speex_echo_state_reset -Dspx_drft_backward=baffle_spx_drft_backward -Dspx_drft_clear=baffle_spx_drft_clear -Dspx_drft_forward=baffle_spx_drft_forward -Dspx_drft_init=baffle_spx_drft_init -Dspx_fft=baffle_spx_fft -Dspx_fft_destroy=baffle_spx_fft_destroy -Dspx_fft_float=baffle_spx_fft_float -Dspx_fft_init=baffle_spx_fft_init -Dspx_ifft=baffle_spx_ifft -Dspx_ifft_float=baffle_spx_ifft_float -I/tmp/baffle.fVOhT0/include -I/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/include -I/tmp/baffle.fVOhT0/build-aec/speex-config -O3 -DNDEBUG -fvisibility=hidden -Wall -Wextra -Wpedantic -Werror -Wshadow -Wconversion -fno-fast-math -o CMakeFiles/baffle.dir/src/aec.c.o -c /tmp/baffle.fVOhT0/src/aec.c",
+      "file": "/tmp/baffle.fVOhT0/src/aec.c",
+      "output": "CMakeFiles/baffle.dir/src/aec.c.o"
+    }
+  ],
+  "source_revision": "7ddc8da"
+}

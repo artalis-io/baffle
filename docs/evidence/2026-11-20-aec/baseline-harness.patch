@@ -1,0 +1,235 @@
+diff --git a/bench/latency.c b/bench/latency.c
+index b835695..d7663d6 100644
+--- a/bench/latency.c
++++ b/bench/latency.c
+@@ -5,6 +5,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <math.h>
++static FILE *raw_trace;
+ #ifdef _WIN32
+ #define WIN32_LEAN_AND_MEAN
+ #include <windows.h>
+@@ -83,7 +84,7 @@ static bf_audio_buffer buffer(float *p, uint32_t rate, uint32_t ch, uint32_t fra
+ }
+ static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t sessions,
+                    size_t bytes, double *times, uint32_t n, double elapsed, double used,
+-                   double delay_ms)
++                   double delay_ms, uint32_t hop_ms)
+ {
+ #ifdef _WIN32
+     /* GetThreadTimes accounting is coarse. Short trials cannot resolve CPU use. */
+@@ -94,25 +95,32 @@ static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t
+     uint32_t misses = 0;
+     for (uint32_t i = 0; i < n; ++i) {
+         total += times[i];
+-        if (times[i] > .010)
++        if (times[i] > (double)hop_ms / 1000)
+             ++misses;
+         if (i)
+             jitter += fabs(times[i] - times[i - 1]);
+     }
++    /* Optional offline receipt after the entire measured case, before sorting.
++     * File I/O is outside all timed processing calls and elapsed CPU intervals. */
++    if (raw_trace)
++        for (uint32_t i = 0; i < n; ++i)
++            fprintf(raw_trace, "%s,%u,%u,%u,%u,%u,%.0f\n", name, rate, channels, sessions,
++                    hop_ms, i, times[i] * 1e9);
+     qsort(times, n, sizeof(*times), compare);
+-    printf("%s,%u,%u,%u,%u,%zu,%.4f,%.4f,%.4f,%.4f,%.4f,%u,%.6f,%.3f,%.3f,%.4f\n", name, rate,
++    printf("%s,%u,%u,%u,%u,%zu,%.4f,%.4f,%.4f,%.4f,%.4f,%u,%.6f,%.3f,%.3f,%.4f,%u\n", name, rate,
+            channels, sessions, n, bytes, times[n / 2] * 1e3, times[(n - 1) * 95 / 100] * 1e3,
+            times[(n - 1) * 99 / 100] * 1e3, times[n - 1] * 1e3, jitter / (n - 1) * 1e3, misses,
+-           total / ((double)n * .01), used / ((double)n * .01) * 100,
+-           elapsed > 0 ? used / elapsed * 100 : 0, delay_ms);
++           total / ((double)n * hop_ms / 1000), used / ((double)n * hop_ms / 1000) * 100,
++           elapsed > 0 ? used / elapsed * 100 : 0, delay_ms, hop_ms);
+ }
+-static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t sessions, uint32_t n)
++static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t sessions, uint32_t n,
++                     uint32_t hop_ms)
+ {
+     bf_pipeline_config c = BF_INIT(bf_pipeline_config);
+     c.sample_rate = rate;
+     c.channels = ch;
+     c.reference_channels = 2;
+-    c.frame_frames = rate / 100;
++    c.frame_frames = rate / 1000 * hop_ms;
+     c.stages = mask;
+     c.aec_tail_ms = 200;
+     c.noise_strength_db = 18;
+@@ -161,7 +169,7 @@ static void pipeline(uint32_t rate, uint32_t ch, uint32_t mask, uint32_t session
+     char name[40];
+     snprintf(name, sizeof(name), "pipeline-mask-%u", mask);
+     report(name, rate, ch, sessions, bytes * sessions, t, n, elapsed, used,
+-           (mask & BF_STAGE_NOISE) ? 10 : 0);
++           (mask & BF_STAGE_NOISE) ? hop_ms : 0, hop_ms);
+     for (uint32_t s = 0; s < sessions; ++s) {
+         check(bf_pipeline_deinit(p[s]));
+         free(raw[s]);
+@@ -201,7 +209,7 @@ static void primitives(uint32_t n)
+             exit(1);
+     }
+     double used = cpu() - thread;
+-    report("resampler-48-to-16", 48000, 1, 1, bytes, t, n, now() - start, used, 95.5 / 48.0);
++    report("resampler-48-to-16", 48000, 1, 1, bytes, t, n, now() - start, used, 95.5 / 48.0, 10);
+     free(raw);
+     bf_audio_buffer a = buffer(input, 48000, 8, 480), b = buffer(output, 48000, 1, 480);
+     start = now();
+@@ -212,7 +220,7 @@ static void primitives(uint32_t n)
+         t[i] = now() - begin;
+     }
+     used = cpu() - thread;
+-    report("matrix-8-to-1", 48000, 8, 1, 0, t, n, now() - start, used, 0);
++    report("matrix-8-to-1", 48000, 8, 1, 0, t, n, now() - start, used, 0, 10);
+     free(t);
+ }
+ int main(int argc, char **argv)
+@@ -220,22 +228,46 @@ int main(int argc, char **argv)
+     uint32_t n = argc > 1 ? (uint32_t)strtoul(argv[1], NULL, 10) : 3000;
+     if (n < 100 || n > 1000000)
+         return 2;
++    if (argc > 2) {
++#ifdef _MSC_VER
++        if (fopen_s(&raw_trace, argv[2], "w"))
++            return 2;
++#else
++        raw_trace = fopen(argv[2], "w");
++#endif
++        if (!raw_trace)
++            return 2;
++        fputs("case,rate,channels,sessions,frame_ms,iteration,processing_ns\n", raw_trace);
++    }
+     bf_library_info lib = BF_INIT(bf_library_info);
+     check(bf_library_query(&lib));
+     puts("case,rate,channels,sessions,iterations,workspace_bytes,p50_ms,p95_ms,p99_ms,max_ms,mean_"
+          "adjacent_cost_jitter_ms,deadline_misses,wall_rtf,thread_cpu_percent_audio,thread_cpu_"
+-         "percent_unpaced_run,algorithmic_delay_ms");
++         "percent_unpaced_run,algorithmic_delay_ms,frame_ms");
+     primitives(n);
+-    pipeline(16000, 1, BF_STAGE_AGC, 1, n);
+-    pipeline(16000, 1, BF_STAGE_VAD, 1, n);
+-    pipeline(16000, 1, BF_STAGE_NOISE, 1, n);
++    pipeline(16000, 1, BF_STAGE_AGC, 1, n, 10);
++    pipeline(16000, 1, BF_STAGE_VAD, 1, n, 10);
++    pipeline(16000, 1, BF_STAGE_NOISE, 1, n, 10);
+     if (lib.features & BF_FEATURE_SPEEXDSP)
+-        pipeline(16000, 1, BF_STAGE_AEC, 1, n);
++        pipeline(16000, 1, BF_STAGE_AEC, 1, n, 10);
+     uint32_t mask =
+         (lib.features & BF_FEATURE_SPEEXDSP) ? BF_STAGE_ALL : BF_STAGE_ALL & ~BF_STAGE_AEC;
+-    pipeline(16000, 1, mask, 1, n);
++    pipeline(16000, 1, mask, 1, n, 10);
+     for (uint32_t ch = 1; ch <= 8; ch *= 2)
+-        pipeline(48000, ch, mask, 1, n);
+-    pipeline(16000, 1, mask, 8, n);
++        pipeline(48000, ch, mask, 1, n, 10);
++    pipeline(16000, 1, mask, 8, n, 10);
++    if (lib.features & BF_FEATURE_SPEEXDSP)
++        for (uint32_t rate = 16000; rate <= 48000; rate += 32000) {
++            if (rate == 48000)
++                pipeline(rate, 1, BF_STAGE_AEC, 1, n, 10);
++            pipeline(rate, 1, BF_STAGE_AEC, 8, n, 10);
++            pipeline(rate, 1, BF_STAGE_AEC, 1, n, 20);
++            pipeline(rate, 1, BF_STAGE_AEC, 8, n, 20);
++        }
++    if (raw_trace) {
++        int failed = ferror(raw_trace);
++        if (fclose(raw_trace) || failed)
++            return 1;
++    }
+     return 0;
+ }
+diff --git a/tools/qualify.c b/tools/qualify.c
+index 7fb2d54..cb71cd9 100644
+--- a/tools/qualify.c
++++ b/tools/qualify.c
+@@ -6,6 +6,7 @@
+ #include <stdint.h>
+ #include <string.h>
+ #include <math.h>
++#include <errno.h>
+ typedef struct wav {
+     uint32_t rate, channels, frames;
+     float *pcm;
+@@ -26,6 +27,15 @@ static void fail(const char *s)
+     fprintf(stderr, "%s\n", s);
+     exit(1);
+ }
++static uint64_t unsigned_argument(const char *text, uint64_t maximum)
++{
++    char *end;
++    errno = 0;
++    unsigned long long v = strtoull(text, &end, 10);
++    if (!*text || *text < '0' || *text > '9' || *end || errno || v > maximum)
++        fail("invalid unsigned argument");
++    return (uint64_t)v;
++}
+ static uint32_t u32(const unsigned char *p)
+ {
+     return (uint32_t)p[0] | (uint32_t)p[1] << 8 | (uint32_t)p[2] << 16 | (uint32_t)p[3] << 24;
+@@ -154,9 +164,9 @@ static void resample(wav *w, uint32_t rate)
+ }
+ int main(int argc, char **argv)
+ {
+-    if (argc != 4 && argc != 6 && argc != 7) {
++    if (argc != 4 && (argc < 6 || argc > 9)) {
+         fprintf(stderr, "usage: baffle_qualify capture.wav aligned-reference.wav output.wav "
+-                        "[far_only_first_frame far_only_frames [processing_rate]]\n");
++                        "[far_only_first_frame far_only_frames [processing_rate [tail_ms [hop_ms]]]]\n");
+         return 2;
+     }
+     wav a = load(argv[1]), r = load(argv[2]);
+@@ -164,13 +174,13 @@ int main(int argc, char **argv)
+         fail("files require identical rate, length and independently established alignment");
+     uint64_t first = 0, count = 0;
+     if (argc >= 6) {
+-        first = strtoull(argv[4], NULL, 10);
+-        count = strtoull(argv[5], NULL, 10);
++        first = unsigned_argument(argv[4], UINT64_MAX);
++        count = unsigned_argument(argv[5], UINT64_MAX);
+         if (!count || first > a.frames || count > a.frames - first)
+             fail("invalid annotated far-only interval");
+     }
+-    if (argc == 7) {
+-        uint32_t rate = (uint32_t)strtoul(argv[6], NULL, 10);
++    if (argc >= 7) {
++        uint32_t rate = (uint32_t)unsigned_argument(argv[6], UINT32_MAX);
+         if (rate < 8000 || rate > 48000 || rate % 100)
+             fail("unsupported processing rate");
+         first = first * rate / a.rate;
+@@ -184,6 +194,14 @@ int main(int argc, char **argv)
+     c.capture_channels = a.channels;
+     c.reference_channels = r.channels;
+     c.tail_ms = 200;
++    if (argc >= 8)
++        c.tail_ms = (uint32_t)unsigned_argument(argv[7], UINT32_MAX);
++    if (argc >= 9) {
++        uint32_t hop = (uint32_t)unsigned_argument(argv[8], UINT32_MAX);
++        if (hop != 10 && hop != 20)
++            fail("hop_ms must be 10 or 20");
++        c.frame_frames = a.rate / 100 * (hop / 10);
++    }
+     c.backend = BF_AEC_SPEEXDSP;
+     size_t bytes;
+     if (bf_aec_size(&c, &bytes) != BF_OK)
+@@ -250,13 +268,17 @@ int main(int argc, char **argv)
+     }
+     if (fclose(f))
+         fail("output close");
++    uint32_t delay;
++    if (bf_aec_estimate_delay(s, &delay) == BF_OK)
++        printf("dominant_adapted_tap=%u (not hardware latency)\n", delay);
+     if (bf_aec_deinit(s) != BF_OK)
+         fail("deinit");
+     free(raw);
+     free(a.pcm);
+     free(r.pcm);
+-    printf("rate=%u capture_channels=%u reference_channels=%u real_frames=%u workspace_bytes=%zu\n",
+-           a.rate, a.channels, r.channels, a.frames, bytes);
++    printf("rate=%u capture_channels=%u reference_channels=%u real_frames=%u workspace_bytes=%zu "
++           "frame_frames=%u tail_ms=%u\n",
++           a.rate, a.channels, r.channels, a.frames, bytes, c.frame_frames, c.tail_ms);
+     if (count && input_energy > 0 && output_energy > 0)
+         printf("annotated_far_only_erle_db=%.4f interval_first=%llu interval_frames=%llu\n",
+                10 * log10(input_energy / output_energy), (unsigned long long)first,

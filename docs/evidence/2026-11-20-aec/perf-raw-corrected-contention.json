@@ -1,0 +1,18 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD",
+  "logical_cpus": 32,
+  "proxy_cpu_workers": 4,
+  "iterations": 10000,
+  "elapsed_seconds": 75.5026094999921,
+  "load_kind": "SHA256 CPU proxy; no ASR/TTS/LLM or GPU workload",
+  "started_utc": "2026-11-20T14:23:24.229858+00:00",
+  "command": [
+    "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_latency.exe",
+    "10000",
+    "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\raw-corrected-contention.csv"
+  ],
+  "executable_sha256": "a18047797031e6b3980aa4a7625eb82e16d37139157cf5aa242480df5fd27508",
+  "raw_output_sha256": "ab5b229d3ac54fff59539fbbf6613dee59d42d21eeae4373cda4846aef2d4fc0"
+}

@@ -58,6 +58,15 @@ failure, the independent near-only tone regression and corrected 14.6034 dB pass
 The source-only OSR holdouts and adversarial AEC fuzzer extend verification;
 original signal-quality and physical limits are not replaced by these passes.
 
+The [final AEC evidence manifest](evidence/2026-11-20-aec/summary.json) contains
+source/build hashes, the original failure, one-factor experiments, OSR evaluation,
+weak real-acoustic reruns, Windows static/shared and ARM64 sanitizer verification,
+both-library ASan/TSan integration, and 10,000 instrumented AEC fuzz runs.
+Three final processing-cost campaigns each retain 190,000 raw timings; the
+independent checker reproduces all percentiles and deadline counts. Current
+cross-platform CI completion remains separate and pending; no acoustic or
+production qualification follows from these software checks.
+
 The [November 20 convergence evidence](evidence/2026-11-20/summary.json) records
 the missing-reference correction, direct S16 decoder regression and controlled
 recorded-speech diagnostic. Windows Release static/Debug shared AEC and Debug

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\Mark\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "tools/controlled_aec.py",
+    "build-aec-convergence/baseline/baffle_qualify.exe",
+    "build-recorded",
+    "build-aec-convergence/original-rerun.json",
+    "--assert-raw-target"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Raw-component target not met; see the retained result and control diagnostic\n"
+}

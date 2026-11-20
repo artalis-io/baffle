@@ -1,0 +1,4859 @@
+{
+  "scope": "Recorded English OSR source components with simulated echo/noise; not physical acoustics",
+  "fixtures": [
+    {
+      "file": "OSR_us_000_0010_8k.wav",
+      "sha256": "a4bf9becd046d7aedb6d05b6e12347a6294a44f74d263089c636fb0a2b1e6561",
+      "frames": 268985,
+      "rate": 8000
+    },
+    {
+      "file": "OSR_us_000_0030_8k.wav",
+      "sha256": "d3e1cfba98a44ddfc6e99508e663794c8dc41bdb2baced224f779c453143b622",
+      "frames": 375421,
+      "rate": 8000
+    }
+  ],
+  "tool_sha256": "d70d4f0ee28fd3b8d689974f111857a1397c3e48298c40cbd4e8831d4b7ba3a5",
+  "holdout_policy": "20 Hz policy fixed before inspecting OSR results; no tuning on these cases",
+  "onset_note": "First energy >-60dBFS window can include pre-speech noise/DC; not annotated speech onset, VAD or ASR accuracy",
+  "far_only_note": "Mic/output power ratio includes injected and recorded noise; total output power is not isolated residual echo",
+  "settling_note": "Three consecutive one-second energy-ratio windows; None means not met within observation, noise included",
+  "physical_qualification": false,
+  "hungarian": "unavailable: no reviewed fixture included",
+  "asr_wer": "unavailable: no external recognizer configured",
+  "cases": [
+    {
+      "case": "voice0-near-only",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9659554829660777,
+        "raw_error_snr_db": 12.929715641677886,
+        "si_sdr_db": 12.72891277649376,
+        "raw_snr_improvement_db": null,
+        "first_energy_100ms": {
+          "projection": 0.1373438135589497,
+          "raw_error_snr_db": -0.19166400767747144,
+          "si_sdr_db": -12.070370549936797
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 1,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 2,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 3,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 4,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 5,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 6,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 7,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 8,
+          "input_power": 0.0005969361722043175,
+          "output_power": 0.0005789999919943511,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.002865221479701157,
+          "output_power": 0.002842429062933661,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009276497890482266,
+          "output_power": 0.0009086751363938674,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4016018834648232e-05,
+          "output_power": 1.407845551148057e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0016031862690062098,
+          "output_power": 0.0015888099131407215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007136539609837524,
+          "output_power": 0.0006989400067832321,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00014401485132877517,
+          "output_power": 0.0001308350213803351,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.000290227413221316,
+          "output_power": 0.00027629294549115003,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0015978306388615153,
+          "output_power": 0.001579627789440565,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0003157961805630868,
+          "output_power": 0.00030410542665049433,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0,
+          "output_power": 1.5688245184719562e-08,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 19,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 20,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 21,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 22,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 23,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-near-only-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-near-only-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-near-only-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "rate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nERLE unavailable: supply an independently annotated far-only interval with nonzero energy\n",
+      "capture_sha256": "a40b828012837be3826cbba938123993c15cf0c3901e194a2a6ad8dadd43676c",
+      "reference_sha256": "7f81ab7656af6047b5324dece71b552ff3b24534c920e727c321cdff8f99845d",
+      "output_sha256": "fe406cf47f7d0a59a99cadc14951be751ee69807fca462275c932e818fc05568"
+    },
+    {
+      "case": "voice0-near-only",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9659554829660777,
+        "raw_error_snr_db": 12.929715641677886,
+        "si_sdr_db": 12.72891277649376,
+        "raw_snr_improvement_db": null,
+        "first_energy_100ms": {
+          "projection": 0.1373438135589497,
+          "raw_error_snr_db": -0.19166400767747144,
+          "si_sdr_db": -12.070370549936797
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 1,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 2,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 3,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 4,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 5,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 6,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 7,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 8,
+          "input_power": 0.0005969361722043175,
+          "output_power": 0.0005789999919943511,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.002865221479701157,
+          "output_power": 0.002842429062933661,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009276497890482266,
+          "output_power": 0.0009086751363938674,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4016018834648232e-05,
+          "output_power": 1.407845551148057e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0016031862690062098,
+          "output_power": 0.0015888099131407215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007136539609837524,
+          "output_power": 0.0006989400067832321,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00014401485132877517,
+          "output_power": 0.0001308350213803351,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.000290227413221316,
+          "output_power": 0.00027629294549115003,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0015978306388615153,
+          "output_power": 0.001579627789440565,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0003157961805630868,
+          "output_power": 0.00030410542665049433,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0,
+          "output_power": 1.5688245184719562e-08,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 19,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 20,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 21,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 22,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 23,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-near-only-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-near-only-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-near-only-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "rate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nERLE unavailable: supply an independently annotated far-only interval with nonzero energy\n",
+      "capture_sha256": "a40b828012837be3826cbba938123993c15cf0c3901e194a2a6ad8dadd43676c",
+      "reference_sha256": "7f81ab7656af6047b5324dece71b552ff3b24534c920e727c321cdff8f99845d",
+      "output_sha256": "fe406cf47f7d0a59a99cadc14951be751ee69807fca462275c932e818fc05568"
+    },
+    {
+      "case": "voice0-doubletalk",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9644084911759321,
+        "raw_error_snr_db": 12.394900316539497,
+        "si_sdr_db": 12.176759859964132,
+        "raw_snr_improvement_db": 4.325189841319736,
+        "first_energy_100ms": {
+          "projection": 0.13065404039808648,
+          "raw_error_snr_db": -0.205202054853441,
+          "si_sdr_db": -12.377170952945438
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 8,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.635533740743995e-07,
+          "far_only_mic_to_output_ratio_db": 0.7597992216042124
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 4.8174626543186605e-05,
+          "far_only_mic_to_output_ratio_db": 9.749222287875867
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 6.690292735584081e-06,
+          "far_only_mic_to_output_ratio_db": 13.955255158234605
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.981570036150515e-06,
+          "far_only_mic_to_output_ratio_db": 19.326303201207335
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 2.255474333651364e-06,
+          "far_only_mic_to_output_ratio_db": 22.44583718694189
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.9825070630759e-06,
+          "far_only_mic_to_output_ratio_db": 21.453902868846882
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 1.1351063149049878e-06,
+          "far_only_mic_to_output_ratio_db": 20.58526798818031
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008330152797231549,
+          "output_power": 0.0005789100170368329,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030418041736511294,
+          "output_power": 0.0028403539477149025,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010633799227121202,
+          "output_power": 0.0009099802856799215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4646376121301602e-05,
+          "output_power": 1.4190763118676841e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0018139516290149552,
+          "output_power": 0.0015930571496719495,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007524745290795979,
+          "output_power": 0.0007056969506666064,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00031711632675551435,
+          "output_power": 0.0001363365282304585,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003007859492880327,
+          "output_power": 0.0002770036003785208,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018027072458484008,
+          "output_power": 0.0015835893215844408,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004452028514052888,
+          "output_power": 0.0003161871578777209,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 2.581913024187088e-06,
+          "far_only_mic_to_output_ratio_db": 14.451293569640711
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 1.1071603512391447e-06,
+          "far_only_mic_to_output_ratio_db": 16.1287081590128
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 5.83148910664022e-07,
+          "far_only_mic_to_output_ratio_db": 23.248760344833318
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 2.1056154510006307e-06,
+          "far_only_mic_to_output_ratio_db": 20.317885959407786
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 6.044071633368731e-07,
+          "far_only_mic_to_output_ratio_db": 24.482074213290975
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 4.4765893835574387e-07,
+          "far_only_mic_to_output_ratio_db": 21.915389330729894
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=21.1574 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "9b1c9e3e18f77d493ded7662b6ca29cc95bc92c8e826c5c27c72b2372f205515",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "e0cc09a68428badb1fe9cba36e850d8c1b5c4c7e67bbab6e5566f48fad9f99ed"
+    },
+    {
+      "case": "voice0-doubletalk",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9660510345063246,
+        "raw_error_snr_db": 12.855849938218286,
+        "si_sdr_db": 12.65367173533992,
+        "raw_snr_improvement_db": 4.786139462998525,
+        "first_energy_100ms": {
+          "projection": 0.13048541674107103,
+          "raw_error_snr_db": -0.22229295311730543,
+          "si_sdr_db": -12.447211497722478
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.709580870345235e-07,
+          "far_only_mic_to_output_ratio_db": 0.7227185151704173
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 6.892958143725991e-05,
+          "far_only_mic_to_output_ratio_db": 8.193349440877595
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 4.188437247648835e-06,
+          "far_only_mic_to_output_ratio_db": 15.9891862357615
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.0379862505942584e-06,
+          "far_only_mic_to_output_ratio_db": 22.134481458798994
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 1.538854674436152e-06,
+          "far_only_mic_to_output_ratio_db": 24.106239999778765
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.269919564947486e-06,
+          "far_only_mic_to_output_ratio_db": 23.388288159578
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 6.761394906789064e-07,
+          "far_only_mic_to_output_ratio_db": 22.835270364685215
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008330152797231549,
+          "output_power": 0.0005797548803966493,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030418041736511294,
+          "output_power": 0.002842265639919788,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010633799227121202,
+          "output_power": 0.0009082533259643241,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4646376121301602e-05,
+          "output_power": 1.416731288190931e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0018139516290149552,
+          "output_power": 0.0015893367872340605,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007524745290795979,
+          "output_power": 0.0006986566415289417,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00031711632675551435,
+          "output_power": 0.00013316831470001488,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003007859492880327,
+          "output_power": 0.00027672547136899084,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018027072458484008,
+          "output_power": 0.0015817572105443105,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004452028514052888,
+          "output_power": 0.00030837268952745944,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 2.3449581349268556e-06,
+          "far_only_mic_to_output_ratio_db": 14.869358716844655
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 7.671719649806619e-07,
+          "far_only_mic_to_output_ratio_db": 17.72188616792591
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 5.365499528124929e-07,
+          "far_only_mic_to_output_ratio_db": 23.610453421634414
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 1.1328627588227392e-06,
+          "far_only_mic_to_output_ratio_db": 23.009903544917776
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 3.043529577553272e-07,
+          "far_only_mic_to_output_ratio_db": 27.46159497555869
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 1.1860067024827004e-07,
+          "far_only_mic_to_output_ratio_db": 27.683990501329433
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-doubletalk-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.2041 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "9b1c9e3e18f77d493ded7662b6ca29cc95bc92c8e826c5c27c72b2372f205515",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "df54cbb835f876dab1e9a5ed872bf20b917e34c1f0ee5625b6998e662609d241"
+    },
+    {
+      "case": "voice0-low-near",
+      "hop_ms": 10,
+      "near_peak": 0.02,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9612242575650611,
+        "raw_error_snr_db": 10.01465417053041,
+        "si_sdr_db": 9.737319031879057,
+        "raw_snr_improvement_db": 21.94494369531065,
+        "first_energy_100ms": {
+          "projection": 0.8973764176666224,
+          "raw_error_snr_db": 7.731218981851145,
+          "si_sdr_db": 7.389380063590157
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 8,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.635533740743995e-07,
+          "far_only_mic_to_output_ratio_db": 0.7597992216042124
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 4.8174626543186605e-05,
+          "far_only_mic_to_output_ratio_db": 9.749222287875867
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 6.690292735584081e-06,
+          "far_only_mic_to_output_ratio_db": 13.955255158234605
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.981570036150515e-06,
+          "far_only_mic_to_output_ratio_db": 19.326303201207335
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 2.255474333651364e-06,
+          "far_only_mic_to_output_ratio_db": 22.44583718694189
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.9825070630759e-06,
+          "far_only_mic_to_output_ratio_db": 21.453902868846882
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 1.1351063149049878e-06,
+          "far_only_mic_to_output_ratio_db": 20.58526798818031
+        },
+        {
+          "second": 8,
+          "input_power": 0.00024852651075281737,
+          "output_power": 6.060020648874342e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00023797073741861372,
+          "output_power": 2.8378373128362e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00014496696935092484,
+          "output_power": 9.526085923425853e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 4.2290703491475673e-07,
+          "output_power": 1.6375852283090352e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.00028017965433312645,
+          "output_power": 1.626240345649421e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 4.5180958445231856e-05,
+          "output_power": 7.530727772973478e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.000179336369019167,
+          "output_power": 1.5412707580253483e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 1.5111077423400708e-05,
+          "output_power": 3.1864948105067014e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.00020759005213978802,
+          "output_power": 1.645189558621496e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0001375005607339965,
+          "output_power": 3.6913772346451877e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 2.1394190844148398e-07,
+          "far_only_mic_to_output_ratio_db": 25.26775099692284
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 3.3910456113517284e-07,
+          "far_only_mic_to_output_ratio_db": 21.267477093708287
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 1.5191349666565656e-07,
+          "far_only_mic_to_output_ratio_db": 29.090591429577213
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 8.878817316144704e-07,
+          "far_only_mic_to_output_ratio_db": 24.068125343738384
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 3.743281122297049e-07,
+          "far_only_mic_to_output_ratio_db": 26.562845801417396
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 3.010336076840758e-07,
+          "far_only_mic_to_output_ratio_db": 23.638712101397445
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-low-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-low-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-low-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=21.1574 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "634f4b419e6fa33f056a0c6f94e00ee4fa1003cd6bba485a138ed610caefd370",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "6cbdf284e3488a4bb51409f2f6cd59f690a625b8c538fe987010fa641626e644"
+    },
+    {
+      "case": "voice0-low-near",
+      "hop_ms": 20,
+      "near_peak": 0.02,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9662768305364862,
+        "raw_error_snr_db": 10.698194313710099,
+        "si_sdr_db": 10.458923384615746,
+        "raw_snr_improvement_db": 22.62848383849034,
+        "first_energy_100ms": {
+          "projection": 0.899508196145863,
+          "raw_error_snr_db": 7.821185185213402,
+          "si_sdr_db": 7.549047388752152
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.709580870345235e-07,
+          "far_only_mic_to_output_ratio_db": 0.7227185151704173
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 6.892958143725991e-05,
+          "far_only_mic_to_output_ratio_db": 8.193349440877595
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 4.188437247648835e-06,
+          "far_only_mic_to_output_ratio_db": 15.9891862357615
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.0379862505942584e-06,
+          "far_only_mic_to_output_ratio_db": 22.134481458798994
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 1.538854674436152e-06,
+          "far_only_mic_to_output_ratio_db": 24.106239999778765
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.269919564947486e-06,
+          "far_only_mic_to_output_ratio_db": 23.388288159578
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 6.761394906789064e-07,
+          "far_only_mic_to_output_ratio_db": 22.835270364685215
+        },
+        {
+          "second": 8,
+          "input_power": 0.00024852651075281737,
+          "output_power": 6.154077243991196e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00023797073741861372,
+          "output_power": 2.86206224700436e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00014496696935092484,
+          "output_power": 9.580458165146411e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 4.2290703491475673e-07,
+          "output_power": 1.5960622113198043e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.00028017965433312645,
+          "output_power": 1.6085525858215987e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 4.5180958445231856e-05,
+          "output_power": 7.233978481963277e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.000179336369019167,
+          "output_power": 1.5033577801659704e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 1.5111077423400708e-05,
+          "output_power": 3.0217670137062668e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.00020759005213978802,
+          "output_power": 1.650076545774937e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0001375005607339965,
+          "output_power": 3.5318926675245165e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 1.1469144374132156e-07,
+          "far_only_mic_to_output_ratio_db": 27.975399455536156
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 1.578794326633215e-07,
+          "far_only_mic_to_output_ratio_db": 24.5875578358052
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 9.700877126306295e-08,
+          "far_only_mic_to_output_ratio_db": 31.03844499433826
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 4.722747253254056e-07,
+          "far_only_mic_to_output_ratio_db": 26.809729506295756
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 2.0186242181807755e-07,
+          "far_only_mic_to_output_ratio_db": 29.244815448753307
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 1.3338855933398008e-07,
+          "far_only_mic_to_output_ratio_db": 27.17367611527251
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-low-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-low-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-low-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.2041 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "634f4b419e6fa33f056a0c6f94e00ee4fa1003cd6bba485a138ed610caefd370",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "a40d57d4b1cf1cd7c07445390649bc66e7dd1f1b203292b373ac6407fd61ff89"
+    },
+    {
+      "case": "voice0-high-near",
+      "hop_ms": 10,
+      "near_peak": 0.6,
+      "far_peak": 0.15,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9645730161490624,
+        "raw_error_snr_db": 12.747785553559892,
+        "si_sdr_db": 12.53842900898211,
+        "raw_snr_improvement_db": -9.301325008380244,
+        "first_energy_100ms": {
+          "projection": 0.13601228953423314,
+          "raw_error_snr_db": -0.19365085380057556,
+          "si_sdr_db": -12.127519171299753
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 8,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 3.876801446918957e-07,
+          "output_power": 1.768172951415181e-07,
+          "far_only_mic_to_output_ratio_db": 3.409488162083962
+        },
+        {
+          "second": 1,
+          "input_power": 3.703152595175255e-07,
+          "output_power": 3.14206350594759e-07,
+          "far_only_mic_to_output_ratio_db": 0.7135664976286772
+        },
+        {
+          "second": 2,
+          "input_power": 0.00016369789173906684,
+          "output_power": 2.3948448710143567e-05,
+          "far_only_mic_to_output_ratio_db": 8.347656994714463
+        },
+        {
+          "second": 3,
+          "input_power": 5.987880677802654e-05,
+          "output_power": 3.0341855017468335e-06,
+          "far_only_mic_to_output_ratio_db": 12.952310086167016
+        },
+        {
+          "second": 4,
+          "input_power": 6.108607871141482e-05,
+          "output_power": 8.358239429071545e-07,
+          "far_only_mic_to_output_ratio_db": 18.63827439701957
+        },
+        {
+          "second": 5,
+          "input_power": 0.00014260150493449462,
+          "output_power": 9.449219796806574e-07,
+          "far_only_mic_to_output_ratio_db": 21.78728157672719
+        },
+        {
+          "second": 6,
+          "input_power": 9.974876581735843e-05,
+          "output_power": 7.342570461332798e-07,
+          "far_only_mic_to_output_ratio_db": 21.330594080803284
+        },
+        {
+          "second": 7,
+          "input_power": 4.6759067260357674e-05,
+          "output_power": 4.617957165464759e-07,
+          "far_only_mic_to_output_ratio_db": 20.05415939126881
+        },
+        {
+          "second": 8,
+          "input_power": 0.0054470491621265394,
+          "output_power": 0.0052106214105151595,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.02579818576125779,
+          "output_power": 0.025547111875843256,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.008397774409078561,
+          "output_power": 0.008188334935577586,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.00021708727483916543,
+          "output_power": 0.00012695709825493394,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.014419140060044123,
+          "output_power": 0.014281663149478846,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.006438102892184998,
+          "output_power": 0.006304627144359983,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0013507786009859784,
+          "output_power": 0.0012133489430416376,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0026132073644167084,
+          "output_power": 0.0024873909456655384,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.014475455106246054,
+          "output_power": 0.014146060247905552,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0028808545416331116,
+          "output_power": 0.002751160153420642,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 2.5904395731714285e-05,
+          "output_power": 7.962287752889097e-06,
+          "far_only_mic_to_output_ratio_db": 5.123355973077791
+        },
+        {
+          "second": 19,
+          "input_power": 1.6344959222799997e-05,
+          "output_power": 2.5737829273566604e-06,
+          "far_only_mic_to_output_ratio_db": 8.02811925693775
+        },
+        {
+          "second": 20,
+          "input_power": 4.4356574927145314e-05,
+          "output_power": 1.5417224494740367e-06,
+          "far_only_mic_to_output_ratio_db": 14.589518076002868
+        },
+        {
+          "second": 21,
+          "input_power": 8.155867385035675e-05,
+          "output_power": 3.222142346203327e-06,
+          "far_only_mic_to_output_ratio_db": 14.033254329525771
+        },
+        {
+          "second": 22,
+          "input_power": 6.107163190192903e-05,
+          "output_power": 5.471183685585857e-07,
+          "far_only_mic_to_output_ratio_db": 20.477582292696994
+        },
+        {
+          "second": 23,
+          "input_power": 2.5048902035773222e-05,
+          "output_power": 3.0661758501082657e-07,
+          "far_only_mic_to_output_ratio_db": 19.121916355464258
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-high-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-high-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-high-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=20.8811 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "a2c4fe0fbeedf6a6e07bcdef54474fc280a7b6e6df2de22cc06dc867b430143e",
+      "reference_sha256": "8ab0d881ae8bfa730f2ebc92de79f45f48bae3e02f6631eee57d31368eb31279",
+      "output_sha256": "da233a577952b6e77314621d9ea49cad267650337a108ef226a833cbf349543f"
+    },
+    {
+      "case": "voice0-high-near",
+      "hop_ms": 20,
+      "near_peak": 0.6,
+      "far_peak": 0.15,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9656322675927257,
+        "raw_error_snr_db": 12.879612985335122,
+        "si_sdr_db": 12.676651776095705,
+        "raw_snr_improvement_db": -9.169497576605014,
+        "first_energy_100ms": {
+          "projection": 0.1357864455082861,
+          "raw_error_snr_db": -0.19704181197570766,
+          "si_sdr_db": -12.148472640097621
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 3.876801446918957e-07,
+          "output_power": 1.768172951415181e-07,
+          "far_only_mic_to_output_ratio_db": 3.409488162083962
+        },
+        {
+          "second": 1,
+          "input_power": 3.703152595175255e-07,
+          "output_power": 3.1581544317305086e-07,
+          "far_only_mic_to_output_ratio_db": 0.6913824540282043
+        },
+        {
+          "second": 2,
+          "input_power": 0.00016369789173906684,
+          "output_power": 3.399593394715339e-05,
+          "far_only_mic_to_output_ratio_db": 6.826161094297968
+        },
+        {
+          "second": 3,
+          "input_power": 5.987880677802654e-05,
+          "output_power": 2.594216726720333e-06,
+          "far_only_mic_to_output_ratio_db": 13.63266882242992
+        },
+        {
+          "second": 4,
+          "input_power": 6.108607871141482e-05,
+          "output_power": 5.290170665830373e-07,
+          "far_only_mic_to_output_ratio_db": 20.624725644271912
+        },
+        {
+          "second": 5,
+          "input_power": 0.00014260150493449462,
+          "output_power": 7.082743104547262e-07,
+          "far_only_mic_to_output_ratio_db": 23.039226188790764
+        },
+        {
+          "second": 6,
+          "input_power": 9.974876581735843e-05,
+          "output_power": 5.424052942544221e-07,
+          "far_only_mic_to_output_ratio_db": 22.64583611007786
+        },
+        {
+          "second": 7,
+          "input_power": 4.6759067260357674e-05,
+          "output_power": 3.417950356379151e-07,
+          "far_only_mic_to_output_ratio_db": 21.36100088793875
+        },
+        {
+          "second": 8,
+          "input_power": 0.0054470491621265394,
+          "output_power": 0.005212079874705523,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.02579818576125779,
+          "output_power": 0.02556518472766038,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.008397774409078561,
+          "output_power": 0.008176628854940646,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.00021708727483916543,
+          "output_power": 0.0001269250747282058,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.014419140060044123,
+          "output_power": 0.014280932967667468,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.006438102892184998,
+          "output_power": 0.006291969013400376,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0013507786009859784,
+          "output_power": 0.0011807741730008275,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0026132073644167084,
+          "output_power": 0.0024867567860055715,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.014475455106246054,
+          "output_power": 0.014215673118596896,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0028808545416331116,
+          "output_power": 0.00276369080808945,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 2.5904395731714285e-05,
+          "output_power": 5.558343837037682e-06,
+          "far_only_mic_to_output_ratio_db": 6.6842805744954195
+        },
+        {
+          "second": 19,
+          "input_power": 1.6344959222799997e-05,
+          "output_power": 1.6214840579777955e-06,
+          "far_only_mic_to_output_ratio_db": 10.034711582890978
+        },
+        {
+          "second": 20,
+          "input_power": 4.4356574927145314e-05,
+          "output_power": 9.666424011811615e-07,
+          "far_only_mic_to_output_ratio_db": 16.6169216265679
+        },
+        {
+          "second": 21,
+          "input_power": 8.155867385035675e-05,
+          "output_power": 2.152858185581863e-06,
+          "far_only_mic_to_output_ratio_db": 15.784547328568747
+        },
+        {
+          "second": 22,
+          "input_power": 6.107163190192903e-05,
+          "output_power": 4.259289707988501e-07,
+          "far_only_mic_to_output_ratio_db": 21.565023441006467
+        },
+        {
+          "second": 23,
+          "input_power": 2.5048902035773222e-05,
+          "output_power": 1.13455462269485e-07,
+          "far_only_mic_to_output_ratio_db": 23.43963284600248
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-high-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-high-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-high-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=22.1931 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "a2c4fe0fbeedf6a6e07bcdef54474fc280a7b6e6df2de22cc06dc867b430143e",
+      "reference_sha256": "8ab0d881ae8bfa730f2ebc92de79f45f48bae3e02f6631eee57d31368eb31279",
+      "output_sha256": "558927734ee8b9fabcfc37e4ed84ff910637c28a4cff86d86d000c5aa1ea3243"
+    },
+    {
+      "case": "voice0-room-noise-path-change",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0.001,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ],
+        [
+          160,
+          0.1
+        ],
+        [
+          233,
+          -0.07
+        ],
+        [
+          371,
+          0.05
+        ],
+        [
+          517,
+          -0.03
+        ],
+        [
+          683,
+          0.02
+        ]
+      ],
+      "path_step_samples_at_18s": 80,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9644246136204744,
+        "raw_error_snr_db": 12.30984592527285,
+        "si_sdr_db": 12.089870694159032,
+        "raw_snr_improvement_db": 4.387569665107796,
+        "first_energy_100ms": {
+          "projection": 0.1314332734034263,
+          "raw_error_snr_db": -0.26461194432877916,
+          "si_sdr_db": -12.55418396321366
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.415444346741967e-06,
+          "output_power": 7.779926527291536e-07,
+          "far_only_mic_to_output_ratio_db": 2.5991730261243777
+        },
+        {
+          "second": 1,
+          "input_power": 1.4274965026506637e-06,
+          "output_power": 1.2469060020521284e-06,
+          "far_only_mic_to_output_ratio_db": 0.5874133745864449
+        },
+        {
+          "second": 2,
+          "input_power": 0.0005398868912634122,
+          "output_power": 5.6720733758993445e-05,
+          "far_only_mic_to_output_ratio_db": 9.785609423069957
+        },
+        {
+          "second": 3,
+          "input_power": 0.00017802744442452405,
+          "output_power": 9.166802978143096e-06,
+          "far_only_mic_to_output_ratio_db": 12.882690604383317
+        },
+        {
+          "second": 4,
+          "input_power": 0.00017775237667906241,
+          "output_power": 2.926689339801669e-06,
+          "far_only_mic_to_output_ratio_db": 17.83438790585339
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004738644057146365,
+          "output_power": 3.502829815261066e-06,
+          "far_only_mic_to_output_ratio_db": 21.312350502671556
+        },
+        {
+          "second": 6,
+          "input_power": 0.0003084389654793652,
+          "output_power": 3.0176998116075994e-06,
+          "far_only_mic_to_output_ratio_db": 20.094932020530678
+        },
+        {
+          "second": 7,
+          "input_power": 0.0001373210922049592,
+          "output_power": 1.8214138690382241e-06,
+          "far_only_mic_to_output_ratio_db": 18.773286098374022
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008267259248738512,
+          "output_power": 0.0005797237548977137,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030413823402642742,
+          "output_power": 0.0028436213084496557,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010688503232296495,
+          "output_power": 0.0009163147076033056,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4857402347561314e-05,
+          "output_power": 1.4427592046558857e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0018526452224439975,
+          "output_power": 0.0015939052886096761,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.000754730012428479,
+          "output_power": 0.0007077523318585008,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0003091247559366116,
+          "output_power": 0.00013733131566550584,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003017246122316927,
+          "output_power": 0.00027764006273355333,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018121640327239175,
+          "output_power": 0.001581982174073346,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004450741450985381,
+          "output_power": 0.0003132439600303769,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 6.775414205865397e-05,
+          "output_power": 7.285066333133727e-05,
+          "far_only_mic_to_output_ratio_db": -0.3149766016152237
+        },
+        {
+          "second": 19,
+          "input_power": 4.648304990293008e-05,
+          "output_power": 3.420637350063771e-05,
+          "far_only_mic_to_output_ratio_db": 1.331875822888899
+        },
+        {
+          "second": 20,
+          "input_power": 0.00011876179249067826,
+          "output_power": 2.6330951368436217e-05,
+          "far_only_mic_to_output_ratio_db": 6.5421019288618485
+        },
+        {
+          "second": 21,
+          "input_power": 0.00021021206544279583,
+          "output_power": 3.632729628589004e-05,
+          "far_only_mic_to_output_ratio_db": 7.624245633630467
+        },
+        {
+          "second": 22,
+          "input_power": 0.00016658765872265598,
+          "output_power": 5.883805570192635e-06,
+          "far_only_mic_to_output_ratio_db": 14.519845114468042
+        },
+        {
+          "second": 23,
+          "input_power": 7.438697731798938e-05,
+          "output_power": 1.9107519183307887e-06,
+          "far_only_mic_to_output_ratio_db": 15.902926074279048
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=128 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=19.6434 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "58131db4df848dd254c10db629b002bec037162c5ca6e7e6a635cfceae73cc25",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "137ae1b6b2dc7776f8b0d9ea49ea5a89dd82337bdbe030e54ad4d5215d42d2ea"
+    },
+    {
+      "case": "voice0-room-noise-path-change",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0.001,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ],
+        [
+          160,
+          0.1
+        ],
+        [
+          233,
+          -0.07
+        ],
+        [
+          371,
+          0.05
+        ],
+        [
+          517,
+          -0.03
+        ],
+        [
+          683,
+          0.02
+        ]
+      ],
+      "path_step_samples_at_18s": 80,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9659135011203891,
+        "raw_error_snr_db": 12.808766540259981,
+        "si_sdr_db": 12.60507307976509,
+        "raw_snr_improvement_db": 4.886490280094927,
+        "first_energy_100ms": {
+          "projection": 0.13197841576267438,
+          "raw_error_snr_db": -0.2714523587161646,
+          "si_sdr_db": -12.558339498680613
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.415444346741967e-06,
+          "output_power": 7.779926527291536e-07,
+          "far_only_mic_to_output_ratio_db": 2.5991730261243777
+        },
+        {
+          "second": 1,
+          "input_power": 1.4274965026506637e-06,
+          "output_power": 1.2553255073726178e-06,
+          "far_only_mic_to_output_ratio_db": 0.5581869941575643
+        },
+        {
+          "second": 2,
+          "input_power": 0.0005398868912634122,
+          "output_power": 8.441719959955662e-05,
+          "far_only_mic_to_output_ratio_db": 8.058718416427467
+        },
+        {
+          "second": 3,
+          "input_power": 0.00017802744442452405,
+          "output_power": 6.78483722731471e-06,
+          "far_only_mic_to_output_ratio_db": 14.189475244968769
+        },
+        {
+          "second": 4,
+          "input_power": 0.00017775237667906241,
+          "output_power": 1.6908399993553758e-06,
+          "far_only_mic_to_output_ratio_db": 20.217129031093073
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004738644057146365,
+          "output_power": 3.5967238945886492e-06,
+          "far_only_mic_to_output_ratio_db": 21.19746987798876
+        },
+        {
+          "second": 6,
+          "input_power": 0.0003084389654793652,
+          "output_power": 2.4192172568291427e-06,
+          "far_only_mic_to_output_ratio_db": 21.054943660547067
+        },
+        {
+          "second": 7,
+          "input_power": 0.0001373210922049592,
+          "output_power": 1.2092638062313198e-06,
+          "far_only_mic_to_output_ratio_db": 20.552161945443288
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008267259248738512,
+          "output_power": 0.0005803332404466345,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030413823402642742,
+          "output_power": 0.0028434867368778215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010688503232296495,
+          "output_power": 0.0009098162621958181,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4857402347561314e-05,
+          "output_power": 1.4416705584153534e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0018526452224439975,
+          "output_power": 0.001588007165468298,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.000754730012428479,
+          "output_power": 0.0006987373509909958,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0003091247559366116,
+          "output_power": 0.00013199289178010077,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003017246122316927,
+          "output_power": 0.00027692594390828164,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018121640327239175,
+          "output_power": 0.001582878474262543,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004450741450985381,
+          "output_power": 0.000308493870543316,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 6.775414205865397e-05,
+          "output_power": 7.031479105353355e-05,
+          "far_only_mic_to_output_ratio_db": -0.1611084018790141
+        },
+        {
+          "second": 19,
+          "input_power": 4.648304990293008e-05,
+          "output_power": 2.858198864851147e-05,
+          "far_only_mic_to_output_ratio_db": 2.112021733742386
+        },
+        {
+          "second": 20,
+          "input_power": 0.00011876179249067826,
+          "output_power": 1.7404555575922132e-05,
+          "far_only_mic_to_output_ratio_db": 8.340138057659093
+        },
+        {
+          "second": 21,
+          "input_power": 0.00021021206544279583,
+          "output_power": 2.3253956460393965e-05,
+          "far_only_mic_to_output_ratio_db": 9.561607844252132
+        },
+        {
+          "second": 22,
+          "input_power": 0.00016658765872265598,
+          "output_power": 2.452929969877005e-06,
+          "far_only_mic_to_output_ratio_db": 18.319576750608192
+        },
+        {
+          "second": 23,
+          "input_power": 7.438697731798938e-05,
+          "output_power": 8.784353267401457e-07,
+          "far_only_mic_to_output_ratio_db": 19.277871188632687
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-room-noise-path-change-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=128 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=20.8938 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "58131db4df848dd254c10db629b002bec037162c5ca6e7e6a635cfceae73cc25",
+      "reference_sha256": "335274ff6c782c7a82b0402b64d91ddd6f5005d1af36e10de4ef190f75526f29",
+      "output_sha256": "70aa6c101bee4138e1e88a997287fa8170f00b11c8cdfbbdfa28b893df9bb897"
+    },
+    {
+      "case": "voice0-playback-gap",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9645967689869935,
+        "raw_error_snr_db": 12.682660111688136,
+        "si_sdr_db": 12.47180911521983,
+        "raw_snr_improvement_db": 3.5428724245528347,
+        "first_energy_100ms": {
+          "projection": 0.13065404039808648,
+          "raw_error_snr_db": -0.205202054853441,
+          "si_sdr_db": -12.377170952945438
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 8,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.635533740743995e-07,
+          "far_only_mic_to_output_ratio_db": 0.7597992216042124
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 4.8174626543186605e-05,
+          "far_only_mic_to_output_ratio_db": 9.749222287875867
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 6.690292735584081e-06,
+          "far_only_mic_to_output_ratio_db": 13.955255158234605
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.981570036150515e-06,
+          "far_only_mic_to_output_ratio_db": 19.326303201207335
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 2.255474333651364e-06,
+          "far_only_mic_to_output_ratio_db": 22.44583718694189
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.9825070630759e-06,
+          "far_only_mic_to_output_ratio_db": 21.453902868846882
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 1.1351063149049878e-06,
+          "far_only_mic_to_output_ratio_db": 20.58526798818031
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008330152797231549,
+          "output_power": 0.0005789100170368329,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030418041736511294,
+          "output_power": 0.0028403539477149025,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010633799227121202,
+          "output_power": 0.0009099802856799215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4646376121301602e-05,
+          "output_power": 1.4190763118676841e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.001603184490412392,
+          "output_power": 0.001588809475186281,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007136539609837524,
+          "output_power": 0.0006989416105207056,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00031594954108432746,
+          "output_power": 0.00013125931611284613,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003007859492880327,
+          "output_power": 0.00027654445730149744,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018027072458484008,
+          "output_power": 0.001575438115745783,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004452028514052888,
+          "output_power": 0.00031076439993921667,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 2.486370736733079e-06,
+          "far_only_mic_to_output_ratio_db": 14.615050795113797
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 1.0993662290275097e-06,
+          "far_only_mic_to_output_ratio_db": 16.159389487543763
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 5.00097987242043e-07,
+          "far_only_mic_to_output_ratio_db": 23.916003965391788
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 1.4689513482153416e-06,
+          "far_only_mic_to_output_ratio_db": 21.881602425771852
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 4.4852716382592916e-07,
+          "far_only_mic_to_output_ratio_db": 25.777482741763016
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 3.220455255359411e-07,
+          "far_only_mic_to_output_ratio_db": 23.34568924002133
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=21.1574 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "c330090899b8ba4a6878fc4464ad6a76fadb9879c92aa81e06c7ba0147429c7a",
+      "reference_sha256": "9103f9dcdb1f4435c0536b1147835681f7ce192272eae7c02c6fffa278731fac",
+      "output_sha256": "a32bd105cecb11d99568d738afd3afa88d9ffc2f063cd4c911b8403004bd2542"
+    },
+    {
+      "case": "voice0-playback-gap",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9659619291057242,
+        "raw_error_snr_db": 12.807541942006367,
+        "si_sdr_db": 12.60397735564704,
+        "raw_snr_improvement_db": 3.667754254871065,
+        "first_energy_100ms": {
+          "projection": 0.13048541674107103,
+          "raw_error_snr_db": -0.22229295311730543,
+          "si_sdr_db": -12.447211497722478
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 1.0768892908108216e-06,
+          "output_power": 4.910401767119765e-07,
+          "far_only_mic_to_output_ratio_db": 3.410540307371795
+        },
+        {
+          "second": 1,
+          "input_power": 1.028653498659793e-06,
+          "output_power": 8.709580870345235e-07,
+          "far_only_mic_to_output_ratio_db": 0.7227185151704173
+        },
+        {
+          "second": 2,
+          "input_power": 0.00045471636594185237,
+          "output_power": 6.892958143725991e-05,
+          "far_only_mic_to_output_ratio_db": 8.193349440877595
+        },
+        {
+          "second": 3,
+          "input_power": 0.0001663300188278515,
+          "output_power": 4.188437247648835e-06,
+          "far_only_mic_to_output_ratio_db": 15.9891862357615
+        },
+        {
+          "second": 4,
+          "input_power": 0.0001696835519761523,
+          "output_power": 1.0379862505942584e-06,
+          "far_only_mic_to_output_ratio_db": 22.134481458798994
+        },
+        {
+          "second": 5,
+          "input_power": 0.00039611529148470725,
+          "output_power": 1.538854674436152e-06,
+          "far_only_mic_to_output_ratio_db": 24.106239999778765
+        },
+        {
+          "second": 6,
+          "input_power": 0.0002770799050482179,
+          "output_power": 1.269919564947486e-06,
+          "far_only_mic_to_output_ratio_db": 23.388288159578
+        },
+        {
+          "second": 7,
+          "input_power": 0.000129886297945438,
+          "output_power": 6.761394906789064e-07,
+          "far_only_mic_to_output_ratio_db": 22.835270364685215
+        },
+        {
+          "second": 8,
+          "input_power": 0.0008330152797231549,
+          "output_power": 0.0005797548803966493,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.0030418041736511294,
+          "output_power": 0.002842265639919788,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010633799227121202,
+          "output_power": 0.0009082533259643241,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 2.4646376121301602e-05,
+          "output_power": 1.416731288190931e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.001603184490412392,
+          "output_power": 0.0015888114008121193,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007136539609837524,
+          "output_power": 0.0006989416105207056,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00031594954108432746,
+          "output_power": 0.00013509301003068687,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0003007859492880327,
+          "output_power": 0.0002776406822958961,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0018027072458484008,
+          "output_power": 0.0015814128520432859,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0004452028514052888,
+          "output_power": 0.00030976124841254203,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 7.195665481031747e-05,
+          "output_power": 2.8069665422663092e-06,
+          "far_only_mic_to_output_ratio_db": 14.088337291688449
+        },
+        {
+          "second": 19,
+          "input_power": 4.5402664507777766e-05,
+          "output_power": 8.453496266156435e-07,
+          "far_only_mic_to_output_ratio_db": 17.300449755084703
+        },
+        {
+          "second": 20,
+          "input_power": 0.0001232127081309592,
+          "output_power": 6.68679247610271e-07,
+          "far_only_mic_to_output_ratio_db": 22.654376580478328
+        },
+        {
+          "second": 21,
+          "input_power": 0.00022655187180654652,
+          "output_power": 1.531315385363996e-06,
+          "far_only_mic_to_output_ratio_db": 21.701030087705348
+        },
+        {
+          "second": 22,
+          "input_power": 0.0001696434219498029,
+          "output_power": 3.8329686503857373e-07,
+          "far_only_mic_to_output_ratio_db": 26.460017570141243
+        },
+        {
+          "second": 23,
+          "input_power": 6.958028343270341e-05,
+          "output_power": 1.4889263547956944e-07,
+          "far_only_mic_to_output_ratio_db": 26.69612976267167
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-mic.wav",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-ref.wav",
+        "build-aec-convergence\\holdout\\voice0-playback-gap-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.2041 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "c330090899b8ba4a6878fc4464ad6a76fadb9879c92aa81e06c7ba0147429c7a",
+      "reference_sha256": "9103f9dcdb1f4435c0536b1147835681f7ce192272eae7c02c6fffa278731fac",
+      "output_sha256": "c6efe071f3ae4e33b5db4297addb1aacb0be4a1f81ab5e104f4a58920ce73a2c"
+    },
+    {
+      "case": "voice1-near-only",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9802182498347894,
+        "raw_error_snr_db": 15.067343435379668,
+        "si_sdr_db": 14.94880032630071,
+        "raw_snr_improvement_db": null,
+        "first_energy_100ms": {
+          "projection": 0.24145300625434582,
+          "raw_error_snr_db": 0.8902204953049269,
+          "si_sdr_db": -6.468527634134719
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 1,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 2,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 3,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 4,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 5,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 6,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 7,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 8,
+          "input_power": 2.2990926053008385e-06,
+          "output_power": 8.02975264377892e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 2.0482780701954095e-06,
+          "output_power": 1.6664844006299973e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0008333024994199135,
+          "output_power": 0.0008271515747765079,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0003090229717219593,
+          "output_power": 0.00030716291314456613,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0003016301049432069,
+          "output_power": 0.00029726976540405303,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0006946401236240031,
+          "output_power": 0.0006904107332229614,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0005384650758862799,
+          "output_power": 0.0005321283543016762,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.000248514964144651,
+          "output_power": 0.00024424409493803976,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0004976053219592486,
+          "output_power": 0.000495948123978451,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.00047390907569893964,
+          "output_power": 0.00047177082824055106,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0,
+          "output_power": 2.149866195395589e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 19,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 20,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 21,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 22,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 23,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-near-only-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-near-only-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-near-only-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "rate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nERLE unavailable: supply an independently annotated far-only interval with nonzero energy\n",
+      "capture_sha256": "0e0077bea7ac364d5f1ebb1da2b7cce7a84117e312605b8deb7911de45f3077d",
+      "reference_sha256": "7f81ab7656af6047b5324dece71b552ff3b24534c920e727c321cdff8f99845d",
+      "output_sha256": "e66aec6fdba571532718c834cf146056dbbcd0725410dfc459a01a6bf841514e"
+    },
+    {
+      "case": "voice1-near-only",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9802182498347894,
+        "raw_error_snr_db": 15.067343435379668,
+        "si_sdr_db": 14.94880032630071,
+        "raw_snr_improvement_db": null,
+        "first_energy_100ms": {
+          "projection": 0.24145300625434582,
+          "raw_error_snr_db": 0.8902204953049269,
+          "si_sdr_db": -6.468527634134719
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 1,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 2,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 3,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 4,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 5,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 6,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 7,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 8,
+          "input_power": 2.2990926053008385e-06,
+          "output_power": 8.02975264377892e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 2.0482780701954095e-06,
+          "output_power": 1.6664844006299973e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0008333024994199135,
+          "output_power": 0.0008271515747765079,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0003090229717219593,
+          "output_power": 0.00030716291314456613,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0003016301049432069,
+          "output_power": 0.00029726976540405303,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0006946401236240031,
+          "output_power": 0.0006904107332229614,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0005384650758862799,
+          "output_power": 0.0005321283543016762,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.000248514964144651,
+          "output_power": 0.00024424409493803976,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.0004976053219592486,
+          "output_power": 0.000495948123978451,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.00047390907569893964,
+          "output_power": 0.00047177082824055106,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0,
+          "output_power": 2.149866195395589e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 19,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 20,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 21,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 22,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 23,
+          "input_power": 0.0,
+          "output_power": 0.0,
+          "far_only_mic_to_output_ratio_db": null
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-near-only-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-near-only-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-near-only-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "rate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nERLE unavailable: supply an independently annotated far-only interval with nonzero energy\n",
+      "capture_sha256": "0e0077bea7ac364d5f1ebb1da2b7cce7a84117e312605b8deb7911de45f3077d",
+      "reference_sha256": "7f81ab7656af6047b5324dece71b552ff3b24534c920e727c321cdff8f99845d",
+      "output_sha256": "e66aec6fdba571532718c834cf146056dbbcd0725410dfc459a01a6bf841514e"
+    },
+    {
+      "case": "voice1-doubletalk",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9785289982336334,
+        "raw_error_snr_db": 13.830878143400124,
+        "si_sdr_db": 13.691009653369477,
+        "raw_snr_improvement_db": 15.508252872658536,
+        "first_energy_100ms": {
+          "projection": 0.40023716894334177,
+          "raw_error_snr_db": 0.032912379669099386,
+          "si_sdr_db": -6.237540594567491
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 2.1305862232111393e-05,
+          "far_only_mic_to_output_ratio_db": 12.698035500950809
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.2356600956991315e-05,
+          "far_only_mic_to_output_ratio_db": 21.59945670997855
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 6.023215712048114e-06,
+          "far_only_mic_to_output_ratio_db": 20.565524046535913
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 1.1292662238702178e-06,
+          "far_only_mic_to_output_ratio_db": 10.533516162015875
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 2.440282958559692e-06,
+          "far_only_mic_to_output_ratio_db": 25.933809086305182
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.1055310498923063e-06,
+          "far_only_mic_to_output_ratio_db": 23.104363210300292
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 8.694083662703633e-07,
+          "far_only_mic_to_output_ratio_db": 20.79643878940051
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 6.333853816613554e-07,
+          "far_only_mic_to_output_ratio_db": 24.303649193423364
+        },
+        {
+          "second": 8,
+          "input_power": 0.000921167157264906,
+          "output_power": 1.8536880379542708e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020124194504511815,
+          "output_power": 2.4911456275731323e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009913517092353184,
+          "output_power": 0.000827072195475921,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0016378196725987209,
+          "output_power": 0.00030337670852895827,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0008697707151715498,
+          "output_power": 0.00030621122650336476,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007014106255250009,
+          "output_power": 0.0006913682603044435,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.001579235231759444,
+          "output_power": 0.0005425205032806844,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009394690532136553,
+          "output_power": 0.0002511686619836837,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000513616514467117,
+          "output_power": 0.0004960784682771191,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012345002842402964,
+          "output_power": 0.00047324614401441067,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 1.5487736091017723e-06,
+          "far_only_mic_to_output_ratio_db": 26.887586058216442
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 2.725571393966675e-07,
+          "far_only_mic_to_output_ratio_db": 19.643110312781886
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 4.395914729684591e-07,
+          "far_only_mic_to_output_ratio_db": 28.911185335845
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 2.751663560047746e-07,
+          "far_only_mic_to_output_ratio_db": 33.69197380096086
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 8.116778917610645e-08,
+          "far_only_mic_to_output_ratio_db": 25.67642445096287
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 4.604354035109282e-08,
+          "far_only_mic_to_output_ratio_db": 36.86988080738818
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=22.6254 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "04329de2a35c081d033e13b1c04da39c1aafff1d91972830f3d7d5e4339738ca",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "8252a5a7b9428940706de7a71aa13bd1240d9416592f6e082f87a2492789e79b"
+    },
+    {
+      "case": "voice1-doubletalk",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9803643189980775,
+        "raw_error_snr_db": 14.501632194068055,
+        "si_sdr_db": 14.376878690409349,
+        "raw_snr_improvement_db": 16.17900692332647,
+        "first_energy_100ms": {
+          "projection": 0.3553025699228355,
+          "raw_error_snr_db": -0.36401020867950185,
+          "si_sdr_db": -7.612638516248844
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 3.304906701669097e-05,
+          "far_only_mic_to_output_ratio_db": 10.791434608015997
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.667835027910769e-05,
+          "far_only_mic_to_output_ratio_db": 20.296916021723
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 9.792976430617273e-06,
+          "far_only_mic_to_output_ratio_db": 18.45466112417123
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 9.399614064022899e-07,
+          "far_only_mic_to_output_ratio_db": 11.330379324772794
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 4.248194978572428e-06,
+          "far_only_mic_to_output_ratio_db": 23.526166544540192
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.3120740661397575e-06,
+          "far_only_mic_to_output_ratio_db": 22.69796228918606
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 6.855071987956763e-07,
+          "far_only_mic_to_output_ratio_db": 21.828556741515005
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 4.596642684191465e-07,
+          "far_only_mic_to_output_ratio_db": 25.695922095329852
+        },
+        {
+          "second": 8,
+          "input_power": 0.000921167157264906,
+          "output_power": 1.6646644799038768e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020124194504511815,
+          "output_power": 2.0961033878847956e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009913517092353184,
+          "output_power": 0.0008269908037036657,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0016378196725987209,
+          "output_power": 0.0003075667538214475,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0008697707151715498,
+          "output_power": 0.0003032297306926921,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007014106255250009,
+          "output_power": 0.0006910577150993049,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.001579235231759444,
+          "output_power": 0.0005376884951256215,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009394690532136553,
+          "output_power": 0.00024526810145471245,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000513616514467117,
+          "output_power": 0.0004955928998533636,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012345002842402964,
+          "output_power": 0.0004754416547948495,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 8.922785054892301e-07,
+          "far_only_mic_to_output_ratio_db": 29.282461143374654
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 1.638612011447549e-07,
+          "far_only_mic_to_output_ratio_db": 21.85292459730948
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 3.2904173713177444e-07,
+          "far_only_mic_to_output_ratio_db": 30.16916803828463
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 1.8965615890920162e-07,
+          "far_only_mic_to_output_ratio_db": 35.30825762077114
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 4.8126792535185815e-08,
+          "far_only_mic_to_output_ratio_db": 27.946392434494363
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 3.8575497455894946e-08,
+          "far_only_mic_to_output_ratio_db": 37.63845255201546
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-doubletalk-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.8057 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "04329de2a35c081d033e13b1c04da39c1aafff1d91972830f3d7d5e4339738ca",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "76b9f169558a05df1d165191367ba3af0011e1077e3828dda2ef499bc0d2af18"
+    },
+    {
+      "case": "voice1-low-near",
+      "hop_ms": 10,
+      "near_peak": 0.02,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9741617466771328,
+        "raw_error_snr_db": 6.07217403327339,
+        "si_sdr_db": 5.856574169050304,
+        "raw_snr_improvement_db": 27.749548762531802,
+        "first_energy_100ms": {
+          "projection": 0.9381355273127403,
+          "raw_error_snr_db": 8.501258637094377,
+          "si_sdr_db": 8.062095643648862
+        },
+        "first_energy_frame": 79360
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 2.1305862232111393e-05,
+          "far_only_mic_to_output_ratio_db": 12.698035500950809
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.2356600956991315e-05,
+          "far_only_mic_to_output_ratio_db": 21.59945670997855
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 6.023215712048114e-06,
+          "far_only_mic_to_output_ratio_db": 20.565524046535913
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 1.1292662238702178e-06,
+          "far_only_mic_to_output_ratio_db": 10.533516162015875
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 2.440282958559692e-06,
+          "far_only_mic_to_output_ratio_db": 25.933809086305182
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.1055310498923063e-06,
+          "far_only_mic_to_output_ratio_db": 23.104363210300292
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 8.694083662703633e-07,
+          "far_only_mic_to_output_ratio_db": 20.79643878940051
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 6.333853816613554e-07,
+          "far_only_mic_to_output_ratio_db": 24.303649193423364
+        },
+        {
+          "second": 8,
+          "input_power": 0.0009202885689021082,
+          "output_power": 9.430814534425735e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00019924729283757916,
+          "output_power": 8.090196643024683e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00016734966201740765,
+          "output_power": 8.569022058509291e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.001355501039461124,
+          "output_power": 3.6368139553815125e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0005574370104291194,
+          "output_power": 4.37628710642457e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 1.6334132671776214e-05,
+          "output_power": 7.213686942122877e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0010572495778603192,
+          "output_power": 6.8926229141652584e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0007028807342849918,
+          "output_power": 3.8245479809120296e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 2.186256718880512e-05,
+          "output_power": 5.1275584846735e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0007762759224869885,
+          "output_power": 5.2440054714679715e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 3.4761743154376745e-07,
+          "far_only_mic_to_output_ratio_db": 33.37644999174381
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 2.224117051810026e-07,
+          "far_only_mic_to_output_ratio_db": 20.52610954003846
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 4.353146068751812e-07,
+          "far_only_mic_to_output_ratio_db": 28.953645530881435
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 2.752464497461915e-07,
+          "far_only_mic_to_output_ratio_db": 33.690709867062
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 1.4064507558941842e-07,
+          "far_only_mic_to_output_ratio_db": 23.289016312409952
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 9.68939857557416e-08,
+          "far_only_mic_to_output_ratio_db": 33.638599694060815
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-low-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-low-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-low-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=22.6254 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "e91fd2cdf560c5267dfee091ac2d06c4ff39f34436d94b6dc01157a8000a4629",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "b1a01be2785a07473d565d0529bbfb5707e6fa820dea55dcacdd29c418c25d4a"
+    },
+    {
+      "case": "voice1-low-near",
+      "hop_ms": 20,
+      "near_peak": 0.02,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9810808815191697,
+        "raw_error_snr_db": 8.49952865195717,
+        "si_sdr_db": 8.344717089255116,
+        "raw_snr_improvement_db": 30.176903381215585,
+        "first_energy_100ms": {
+          "projection": 0.9522713252299526,
+          "raw_error_snr_db": 10.608471087248919,
+          "si_sdr_db": 10.306620082729232
+        },
+        "first_energy_frame": 79360
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 3.304906701669097e-05,
+          "far_only_mic_to_output_ratio_db": 10.791434608015997
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.667835027910769e-05,
+          "far_only_mic_to_output_ratio_db": 20.296916021723
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 9.792976430617273e-06,
+          "far_only_mic_to_output_ratio_db": 18.45466112417123
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 9.399614064022899e-07,
+          "far_only_mic_to_output_ratio_db": 11.330379324772794
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 4.248194978572428e-06,
+          "far_only_mic_to_output_ratio_db": 23.526166544540192
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.3120740661397575e-06,
+          "far_only_mic_to_output_ratio_db": 22.69796228918606
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 6.855071987956763e-07,
+          "far_only_mic_to_output_ratio_db": 21.828556741515005
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 4.596642684191465e-07,
+          "far_only_mic_to_output_ratio_db": 25.695922095329852
+        },
+        {
+          "second": 8,
+          "input_power": 0.0009202885689021082,
+          "output_power": 8.036869112402201e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00019924729283757916,
+          "output_power": 4.3149280827492474e-07,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00016734966201740765,
+          "output_power": 8.43551626894623e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.001355501039461124,
+          "output_power": 3.5887389676645397e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0005574370104291194,
+          "output_power": 3.6471848143264653e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 1.6334132671776214e-05,
+          "output_power": 7.05654954072088e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0010572495778603192,
+          "output_power": 6.127023370936513e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0007028807342849918,
+          "output_power": 2.8790130745619535e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 2.186256718880512e-05,
+          "output_power": 5.015266709960997e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0007762759224869885,
+          "output_power": 5.065260571427643e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 1.5079043805599212e-07,
+          "far_only_mic_to_output_ratio_db": 37.003727426628245
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 8.886272553354502e-08,
+          "far_only_mic_to_output_ratio_db": 24.510489642794283
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 1.7233844846487045e-07,
+          "far_only_mic_to_output_ratio_db": 32.97785614390878
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 9.04100015759468e-08,
+          "far_only_mic_to_output_ratio_db": 38.52576235844875
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 4.387833178043365e-08,
+          "far_only_mic_to_output_ratio_db": 28.34776054358787
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 3.984360955655575e-08,
+          "far_only_mic_to_output_ratio_db": 37.49798114857752
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-low-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-low-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-low-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.8057 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "e91fd2cdf560c5267dfee091ac2d06c4ff39f34436d94b6dc01157a8000a4629",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "2105e2428d583189559470b9d1335a44d8fff955f85e10fa84425d6fc83c5317"
+    },
+    {
+      "case": "voice1-high-near",
+      "hop_ms": 10,
+      "near_peak": 0.6,
+      "far_peak": 0.15,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9785760959538509,
+        "raw_error_snr_db": 14.37169227236713,
+        "si_sdr_db": 14.238503163373199,
+        "raw_snr_improvement_db": 2.0696669149051665,
+        "first_energy_100ms": {
+          "projection": 0.16173017844412238,
+          "raw_error_snr_db": -0.7981545129764721,
+          "si_sdr_db": -12.812835198088894
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.00014275954835653735,
+          "output_power": 1.2720039812847972e-05,
+          "far_only_mic_to_output_ratio_db": 10.501166946969926
+        },
+        {
+          "second": 1,
+          "input_power": 0.0006429055776745082,
+          "output_power": 8.192391134798528e-06,
+          "far_only_mic_to_output_ratio_db": 18.9473651466093
+        },
+        {
+          "second": 2,
+          "input_power": 0.00024699224775371644,
+          "output_power": 5.8581051416695116e-06,
+          "far_only_mic_to_output_ratio_db": 16.24926160285016
+        },
+        {
+          "second": 3,
+          "input_power": 4.596745458208192e-06,
+          "output_power": 9.741708636283875e-07,
+          "far_only_mic_to_output_ratio_db": 6.738153194784562
+        },
+        {
+          "second": 4,
+          "input_power": 0.00034444794374335994,
+          "output_power": 2.126775565557182e-06,
+          "far_only_mic_to_output_ratio_db": 22.094019344027114
+        },
+        {
+          "second": 5,
+          "input_power": 0.00015491749720831819,
+          "output_power": 1.8503072205930948e-06,
+          "far_only_mic_to_output_ratio_db": 19.22856628455441
+        },
+        {
+          "second": 6,
+          "input_power": 3.7598471930255774e-05,
+          "output_power": 7.53900152631104e-07,
+          "far_only_mic_to_output_ratio_db": 16.978563635374336
+        },
+        {
+          "second": 7,
+          "input_power": 6.142362677177527e-05,
+          "output_power": 5.520820850506425e-07,
+          "far_only_mic_to_output_ratio_db": 20.46331801276143
+        },
+        {
+          "second": 8,
+          "input_power": 0.0003492483154188453,
+          "output_power": 8.309805882163346e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 9.009119381160369e-05,
+          "output_power": 1.570016553159803e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00755507232678028,
+          "output_power": 0.007443159310147166,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0032217909836258387,
+          "output_power": 0.0027129648979753256,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0029411534055289144,
+          "output_power": 0.0027205697420286013,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0062500109260451246,
+          "output_power": 0.006214849750278518,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00520311130512559,
+          "output_power": 0.004833324544481002,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0024702717564474347,
+          "output_power": 0.002238827221444808,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.004482811412597918,
+          "output_power": 0.004464794393163174,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.004521481519263517,
+          "output_power": 0.004239116938086227,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.00027230088090003716,
+          "output_power": 8.439541677944363e-06,
+          "far_only_mic_to_output_ratio_db": 15.087301840471916
+        },
+        {
+          "second": 19,
+          "input_power": 9.03797414325291e-06,
+          "output_power": 7.713361410424113e-07,
+          "far_only_mic_to_output_ratio_db": 10.688274137670552
+        },
+        {
+          "second": 20,
+          "input_power": 0.00012316017402894605,
+          "output_power": 1.5773382037878036e-06,
+          "far_only_mic_to_output_ratio_db": 18.92545471663547
+        },
+        {
+          "second": 21,
+          "input_power": 0.0002317902764350524,
+          "output_power": 9.508203947916627e-07,
+          "far_only_mic_to_output_ratio_db": 23.86996724792779
+        },
+        {
+          "second": 22,
+          "input_power": 1.0797635501859216e-05,
+          "output_power": 1.8432247452437877e-07,
+          "far_only_mic_to_output_ratio_db": 17.677503706346883
+        },
+        {
+          "second": 23,
+          "input_power": 8.06230625489057e-05,
+          "output_power": 8.693337440490722e-08,
+          "far_only_mic_to_output_ratio_db": 29.672727537250996
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-high-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-high-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-high-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=18.7980 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "453e5be38c3115f39aa6b2f3e8773414924600e7e5141ee35919474f6ddc04c3",
+      "reference_sha256": "1d16c1fe63b5c415d11c904fb3f1689fd35d633179688e6a120ee84cfb0631a8",
+      "output_sha256": "4b33cf10d410f29b48d1db05774b2c80c0a3386c9079e097ebe457b489bce2ae"
+    },
+    {
+      "case": "voice1-high-near",
+      "hop_ms": 20,
+      "near_peak": 0.6,
+      "far_peak": 0.15,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9798605935146012,
+        "raw_error_snr_db": 13.874055566051426,
+        "si_sdr_db": 13.740606071650454,
+        "raw_snr_improvement_db": 1.5720302085894637,
+        "first_energy_100ms": {
+          "projection": 0.14086568520920506,
+          "raw_error_snr_db": -0.8744569614497834,
+          "si_sdr_db": -13.91243885298136
+        },
+        "first_energy_frame": 64000
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.00014275954835653735,
+          "output_power": 1.745368679985404e-05,
+          "far_only_mic_to_output_ratio_db": 9.12717986881308
+        },
+        {
+          "second": 1,
+          "input_power": 0.0006429055776745082,
+          "output_power": 8.904914604499937e-06,
+          "far_only_mic_to_output_ratio_db": 18.585174345355643
+        },
+        {
+          "second": 2,
+          "input_power": 0.00024699224775371644,
+          "output_power": 8.18585162051022e-06,
+          "far_only_mic_to_output_ratio_db": 14.796194542341723
+        },
+        {
+          "second": 3,
+          "input_power": 4.596745458208192e-06,
+          "output_power": 8.239970775321126e-07,
+          "far_only_mic_to_output_ratio_db": 7.46524784252538
+        },
+        {
+          "second": 4,
+          "input_power": 0.00034444794374335994,
+          "output_power": 1.7773363506421446e-06,
+          "far_only_mic_to_output_ratio_db": 22.87353973174713
+        },
+        {
+          "second": 5,
+          "input_power": 0.00015491749720831819,
+          "output_power": 1.7519963439553976e-06,
+          "far_only_mic_to_output_ratio_db": 19.465672765118082
+        },
+        {
+          "second": 6,
+          "input_power": 3.7598471930255774e-05,
+          "output_power": 6.301036337390542e-07,
+          "far_only_mic_to_output_ratio_db": 17.757582106235713
+        },
+        {
+          "second": 7,
+          "input_power": 6.142362677177527e-05,
+          "output_power": 4.6418956480920317e-07,
+          "far_only_mic_to_output_ratio_db": 21.216400827851196
+        },
+        {
+          "second": 8,
+          "input_power": 0.0003492483154188453,
+          "output_power": 8.33044620230794e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 9.009119381160369e-05,
+          "output_power": 1.5573674463666976e-05,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.00755507232678028,
+          "output_power": 0.0074440077445469795,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0032217909836258387,
+          "output_power": 0.002755308849271387,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0029411534055289144,
+          "output_power": 0.0027028026381740347,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0062500109260451246,
+          "output_power": 0.006215205175802111,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.00520311130512559,
+          "output_power": 0.005038762512966059,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0024702717564474347,
+          "output_power": 0.0022329313908703626,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.004482811412597918,
+          "output_power": 0.004462575415382162,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.004521481519263517,
+          "output_power": 0.00426210400252603,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.00027230088090003716,
+          "output_power": 8.629433694295584e-06,
+          "far_only_mic_to_output_ratio_db": 14.99066750176209
+        },
+        {
+          "second": 19,
+          "input_power": 9.03797414325291e-06,
+          "output_power": 1.0506288381293417e-06,
+          "far_only_mic_to_output_ratio_db": 9.34621777184047
+        },
+        {
+          "second": 20,
+          "input_power": 0.00012316017402894605,
+          "output_power": 1.2715923599898816e-05,
+          "far_only_mic_to_output_ratio_db": 9.861223839898654
+        },
+        {
+          "second": 21,
+          "input_power": 0.0002317902764350524,
+          "output_power": 2.4133373517543077e-06,
+          "far_only_mic_to_output_ratio_db": 19.824771788088277
+        },
+        {
+          "second": 22,
+          "input_power": 1.0797635501859216e-05,
+          "output_power": 3.4323788713663817e-07,
+          "far_only_mic_to_output_ratio_db": 14.977334428798834
+        },
+        {
+          "second": 23,
+          "input_power": 8.06230625489057e-05,
+          "output_power": 2.8933351859450343e-07,
+          "far_only_mic_to_output_ratio_db": 24.450605427102488
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-high-near-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-high-near-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-high-near-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=19.5660 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "453e5be38c3115f39aa6b2f3e8773414924600e7e5141ee35919474f6ddc04c3",
+      "reference_sha256": "1d16c1fe63b5c415d11c904fb3f1689fd35d633179688e6a120ee84cfb0631a8",
+      "output_sha256": "5e4b5b8d5519c57910043e7bd0e99bc570ffc0c0f311793f95fe304d1e19e586"
+    },
+    {
+      "case": "voice1-room-noise-path-change",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0.001,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ],
+        [
+          160,
+          0.1
+        ],
+        [
+          233,
+          -0.07
+        ],
+        [
+          371,
+          0.05
+        ],
+        [
+          517,
+          -0.03
+        ],
+        [
+          683,
+          0.02
+        ]
+      ],
+      "path_step_samples_at_18s": 80,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9787689134565373,
+        "raw_error_snr_db": 13.790994278314752,
+        "si_sdr_db": 13.65173475668528,
+        "raw_snr_improvement_db": 15.7293429742262,
+        "first_energy_100ms": {
+          "projection": 0.29303589632802535,
+          "raw_error_snr_db": -1.479857839014104,
+          "si_sdr_db": -10.627282051991166
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.00041318234086772923,
+          "output_power": 2.5338107720017433e-05,
+          "far_only_mic_to_output_ratio_db": 12.12367573662737
+        },
+        {
+          "second": 1,
+          "input_power": 0.0019107840892769914,
+          "output_power": 1.624716422520578e-05,
+          "far_only_mic_to_output_ratio_db": 20.704340460309318
+        },
+        {
+          "second": 2,
+          "input_power": 0.0007128232178520148,
+          "output_power": 7.488453993573785e-06,
+          "far_only_mic_to_output_ratio_db": 19.78589670979405
+        },
+        {
+          "second": 3,
+          "input_power": 1.3931571002867428e-05,
+          "output_power": 1.3118138303980232e-06,
+          "far_only_mic_to_output_ratio_db": 10.261278873528518
+        },
+        {
+          "second": 4,
+          "input_power": 0.0010085293566088082,
+          "output_power": 4.3495489517226816e-06,
+          "far_only_mic_to_output_ratio_db": 23.652443213746288
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004463150032746719,
+          "output_power": 2.988986438140273e-06,
+          "far_only_mic_to_output_ratio_db": 21.741175417507602
+        },
+        {
+          "second": 6,
+          "input_power": 0.00011168401655806979,
+          "output_power": 1.2521712342277169e-06,
+          "far_only_mic_to_output_ratio_db": 19.503273017076523
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017907566494625366,
+          "output_power": 1.0288878111168742e-06,
+          "far_only_mic_to_output_ratio_db": 22.406685501476744
+        },
+        {
+          "second": 8,
+          "input_power": 0.0009667415363378773,
+          "output_power": 2.811205224134028e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020343981903022583,
+          "output_power": 2.915533841587603e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010040655301969106,
+          "output_power": 0.00082724053284619,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0017584176236384672,
+          "output_power": 0.00030409291363321244,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0008957324726269827,
+          "output_power": 0.0003065330246463418,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007017111734343821,
+          "output_power": 0.0006909954894799739,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0016930047499189452,
+          "output_power": 0.0005425666067749262,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009158712562449248,
+          "output_power": 0.0002476098348852247,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000514927375249308,
+          "output_power": 0.0004960796205559745,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012883023114175487,
+          "output_power": 0.0004779039463028312,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0008153084125361294,
+          "output_power": 0.00017960815213155003,
+          "far_only_mic_to_output_ratio_db": 6.5699587877343655
+        },
+        {
+          "second": 19,
+          "input_power": 2.800910431842205e-05,
+          "output_power": 2.480970718897879e-05,
+          "far_only_mic_to_output_ratio_db": 0.5267758243787195
+        },
+        {
+          "second": 20,
+          "input_power": 0.00035359878900600224,
+          "output_power": 0.00015169522864744067,
+          "far_only_mic_to_output_ratio_db": 3.675388480845869
+        },
+        {
+          "second": 21,
+          "input_power": 0.0007127266467833643,
+          "output_power": 2.7654946432448925e-05,
+          "far_only_mic_to_output_ratio_db": 14.111501745334444
+        },
+        {
+          "second": 22,
+          "input_power": 3.3218127654948386e-05,
+          "output_power": 5.012167384847999e-06,
+          "far_only_mic_to_output_ratio_db": 8.213495835942842
+        },
+        {
+          "second": 23,
+          "input_power": 0.00022440917094528108,
+          "output_power": 4.023921908810735e-06,
+          "far_only_mic_to_output_ratio_db": 17.463910573983622
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=128 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=21.0540 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "45c7996c2e57c17dbbe8caf33838c619fd0dbcfcfafce9867af6a3a1295817f1",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "0264f5a7b8926263d303afd6b8e54430114423faf40f5e4b254385385d7eb1cf"
+    },
+    {
+      "case": "voice1-room-noise-path-change",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0.001,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ],
+        [
+          160,
+          0.1
+        ],
+        [
+          233,
+          -0.07
+        ],
+        [
+          371,
+          0.05
+        ],
+        [
+          517,
+          -0.03
+        ],
+        [
+          683,
+          0.02
+        ]
+      ],
+      "path_step_samples_at_18s": 80,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9801666329426467,
+        "raw_error_snr_db": 12.999358469986454,
+        "si_sdr_db": 12.859587987677264,
+        "raw_snr_improvement_db": 14.937707165897901,
+        "first_energy_100ms": {
+          "projection": 0.22173199422625112,
+          "raw_error_snr_db": -1.574220659606149,
+          "si_sdr_db": -12.757736878939163
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": null,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.00041318234086772923,
+          "output_power": 3.662728774361312e-05,
+          "far_only_mic_to_output_ratio_db": 10.523369915125249
+        },
+        {
+          "second": 1,
+          "input_power": 0.0019107840892769914,
+          "output_power": 2.7071554330177604e-05,
+          "far_only_mic_to_output_ratio_db": 18.486984245667657
+        },
+        {
+          "second": 2,
+          "input_power": 0.0007128232178520148,
+          "output_power": 1.2403006316162647e-05,
+          "far_only_mic_to_output_ratio_db": 17.59454872099665
+        },
+        {
+          "second": 3,
+          "input_power": 1.3931571002867428e-05,
+          "output_power": 1.326602534390986e-06,
+          "far_only_mic_to_output_ratio_db": 10.212592700359215
+        },
+        {
+          "second": 4,
+          "input_power": 0.0010085293566088082,
+          "output_power": 4.954685340635479e-06,
+          "far_only_mic_to_output_ratio_db": 23.08672465553538
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004463150032746719,
+          "output_power": 3.2563493587076666e-06,
+          "far_only_mic_to_output_ratio_db": 21.369104941109303
+        },
+        {
+          "second": 6,
+          "input_power": 0.00011168401655806979,
+          "output_power": 1.165390945971012e-06,
+          "far_only_mic_to_output_ratio_db": 19.815193846545657
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017907566494625366,
+          "output_power": 9.323431877419352e-07,
+          "far_only_mic_to_output_ratio_db": 22.834607705069327
+        },
+        {
+          "second": 8,
+          "input_power": 0.0009667415363378773,
+          "output_power": 2.756231930106878e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020343981903022583,
+          "output_power": 2.6414652820676564e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0010040655301969106,
+          "output_power": 0.0008269805058371276,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0017584176236384672,
+          "output_power": 0.00030890828755218534,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.0008957324726269827,
+          "output_power": 0.0003039953528204933,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0007017111734343821,
+          "output_power": 0.0006906171956798062,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0016930047499189452,
+          "output_power": 0.0005754694300703705,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009158712562449248,
+          "output_power": 0.0002553925592219457,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000514927375249308,
+          "output_power": 0.0004963263107929379,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012883023114175487,
+          "output_power": 0.00047915497969370336,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0008153084125361294,
+          "output_power": 0.00018044138432014734,
+          "far_only_mic_to_output_ratio_db": 6.549857732128159
+        },
+        {
+          "second": 19,
+          "input_power": 2.800910431842205e-05,
+          "output_power": 2.24468857049942e-05,
+          "far_only_mic_to_output_ratio_db": 0.961431258469009
+        },
+        {
+          "second": 20,
+          "input_power": 0.00035359878900600224,
+          "output_power": 8.80902261706069e-05,
+          "far_only_mic_to_output_ratio_db": 6.03583043951958
+        },
+        {
+          "second": 21,
+          "input_power": 0.0007127266467833643,
+          "output_power": 1.6050677048042417e-05,
+          "far_only_mic_to_output_ratio_db": 16.47429639618928
+        },
+        {
+          "second": 22,
+          "input_power": 3.3218127654948386e-05,
+          "output_power": 2.7491498040035367e-06,
+          "far_only_mic_to_output_ratio_db": 10.82176744085887
+        },
+        {
+          "second": 23,
+          "input_power": 0.00022440917094528108,
+          "output_power": 2.8745717136189343e-06,
+          "far_only_mic_to_output_ratio_db": 18.924674535745968
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-room-noise-path-change-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=128 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=21.4178 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "45c7996c2e57c17dbbe8caf33838c619fd0dbcfcfafce9867af6a3a1295817f1",
+      "reference_sha256": "f65a033013bb1bf1b5c47f85504fef823e37f724f6dbff7abe8515a49643ab6e",
+      "output_sha256": "22ae3b64331c0bbbe9415b8ef7da7676ff83e108f2e4d3165e3925991df5b22f"
+    },
+    {
+      "case": "voice1-playback-gap",
+      "hop_ms": 10,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9780918345875534,
+        "raw_error_snr_db": 14.008002403335817,
+        "si_sdr_db": 13.868379867007757,
+        "raw_snr_improvement_db": 15.24192574938727,
+        "first_energy_100ms": {
+          "projection": 0.40023716894334177,
+          "raw_error_snr_db": 0.032912379669099386,
+          "si_sdr_db": -6.237540594567491
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 2.1305862232111393e-05,
+          "far_only_mic_to_output_ratio_db": 12.698035500950809
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.2356600956991315e-05,
+          "far_only_mic_to_output_ratio_db": 21.59945670997855
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 6.023215712048114e-06,
+          "far_only_mic_to_output_ratio_db": 20.565524046535913
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 1.1292662238702178e-06,
+          "far_only_mic_to_output_ratio_db": 10.533516162015875
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 2.440282958559692e-06,
+          "far_only_mic_to_output_ratio_db": 25.933809086305182
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.1055310498923063e-06,
+          "far_only_mic_to_output_ratio_db": 23.104363210300292
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 8.694083662703633e-07,
+          "far_only_mic_to_output_ratio_db": 20.79643878940051
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 6.333853816613554e-07,
+          "far_only_mic_to_output_ratio_db": 24.303649193423364
+        },
+        {
+          "second": 8,
+          "input_power": 0.000921167157264906,
+          "output_power": 1.8536880379542708e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020124194504511815,
+          "output_power": 2.4911456275731323e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009913517092353184,
+          "output_power": 0.000827072195475921,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0016378196725987209,
+          "output_power": 0.00030337670852895827,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.00030710009072700293,
+          "output_power": 0.0002981236265040934,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0006946401236240031,
+          "output_power": 0.0006904102525440976,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0015794067535703942,
+          "output_power": 0.0005404345352435485,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009394690532136553,
+          "output_power": 0.0002520849998109043,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000513616514467117,
+          "output_power": 0.0004960828225594014,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012345002842402964,
+          "output_power": 0.0004735926700523123,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 1.793766161426902e-06,
+          "far_only_mic_to_output_ratio_db": 26.249807185376373
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 2.9642961453646423e-07,
+          "far_only_mic_to_output_ratio_db": 19.278470044783408
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 4.515990149229765e-07,
+          "far_only_mic_to_output_ratio_db": 28.794148072117007
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 3.001583972945809e-07,
+          "far_only_mic_to_output_ratio_db": 33.31442214882698
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 8.825340773910284e-08,
+          "far_only_mic_to_output_ratio_db": 25.31294678194671
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 4.7392677515745166e-08,
+          "far_only_mic_to_output_ratio_db": 36.74445545011995
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "10"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=65328 frame_frames=80 tail_ms=200\nannotated_far_only_erle_db=22.6254 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "0939607e73c05b87f29c73daea5d7a039e93159db629c7547839b862525d61f8",
+      "reference_sha256": "05562c9744efc798d898588e20b162f16593a02af58944bf565056a520e822a9",
+      "output_sha256": "ae1be28309838553937add249ea412d3c96b78c8d78bee0ff855198439091060"
+    },
+    {
+      "case": "voice1-playback-gap",
+      "hop_ms": 20,
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "noise_peak": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          109,
+          -0.15
+        ]
+      ],
+      "path_step_samples_at_18s": 0,
+      "doubletalk_interval_frames": [
+        64000,
+        144000
+      ],
+      "quality": {
+        "projection": 0.9801244441667467,
+        "raw_error_snr_db": 14.534524822177454,
+        "si_sdr_db": 14.409187757007347,
+        "raw_snr_improvement_db": 15.768448168228907,
+        "first_energy_100ms": {
+          "projection": 0.3553025699228355,
+          "raw_error_snr_db": -0.36401020867950185,
+          "si_sdr_db": -7.612638516248844
+        },
+        "first_energy_frame": 67520
+      },
+      "near_projection_within_original_bounds": true,
+      "initial_20db_three_window_settling_s": 7,
+      "changed_path_15db_three_window_recovery_s": null,
+      "windows": [
+        {
+          "second": 0,
+          "input_power": 0.0003965543009903815,
+          "output_power": 3.304906701669097e-05,
+          "far_only_mic_to_output_ratio_db": 10.791434608015997
+        },
+        {
+          "second": 1,
+          "input_power": 0.0017858488268736338,
+          "output_power": 1.667835027910769e-05,
+          "far_only_mic_to_output_ratio_db": 20.296916021723
+        },
+        {
+          "second": 2,
+          "input_power": 0.0006860895770936568,
+          "output_power": 9.792976430617273e-06,
+          "far_only_mic_to_output_ratio_db": 18.45466112417123
+        },
+        {
+          "second": 3,
+          "input_power": 1.2768737383911645e-05,
+          "output_power": 9.399614064022899e-07,
+          "far_only_mic_to_output_ratio_db": 11.330379324772794
+        },
+        {
+          "second": 4,
+          "input_power": 0.0009567998437315556,
+          "output_power": 4.248194978572428e-06,
+          "far_only_mic_to_output_ratio_db": 23.526166544540192
+        },
+        {
+          "second": 5,
+          "input_power": 0.0004303263811342172,
+          "output_power": 2.3120740661397575e-06,
+          "far_only_mic_to_output_ratio_db": 22.69796228918606
+        },
+        {
+          "second": 6,
+          "input_power": 0.00010444019980626605,
+          "output_power": 6.855071987956763e-07,
+          "far_only_mic_to_output_ratio_db": 21.828556741515005
+        },
+        {
+          "second": 7,
+          "input_power": 0.00017062118547715352,
+          "output_power": 4.596642684191465e-07,
+          "far_only_mic_to_output_ratio_db": 25.695922095329852
+        },
+        {
+          "second": 8,
+          "input_power": 0.000921167157264906,
+          "output_power": 1.6646644799038768e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 9,
+          "input_power": 0.00020124194504511815,
+          "output_power": 2.0961033878847956e-06,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 10,
+          "input_power": 0.0009913517092353184,
+          "output_power": 0.0008269908037036657,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 11,
+          "input_power": 0.0016378196725987209,
+          "output_power": 0.0003075667538214475,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 12,
+          "input_power": 0.00030710009072700293,
+          "output_power": 0.00029783209855668245,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 13,
+          "input_power": 0.0006946401236240031,
+          "output_power": 0.0006904102525440976,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 14,
+          "input_power": 0.0015794067535703942,
+          "output_power": 0.0005375968331936746,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 15,
+          "input_power": 0.0009394690532136553,
+          "output_power": 0.0002471274946583435,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 16,
+          "input_power": 0.000513616514467117,
+          "output_power": 0.000495603593531996,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 17,
+          "input_power": 0.0012345002842402964,
+          "output_power": 0.0004767926691565663,
+          "far_only_mic_to_output_ratio_db": null
+        },
+        {
+          "second": 18,
+          "input_power": 0.0007563913358334366,
+          "output_power": 1.1110174236819147e-06,
+          "far_only_mic_to_output_ratio_db": 28.330256756516867
+        },
+        {
+          "second": 19,
+          "input_power": 2.5105483731258088e-05,
+          "output_power": 1.904050586745143e-07,
+          "far_only_mic_to_output_ratio_db": 21.20090111234891
+        },
+        {
+          "second": 20,
+          "input_power": 0.0003421115945248501,
+          "output_power": 3.1521334312856195e-07,
+          "far_only_mic_to_output_ratio_db": 30.35563200039565
+        },
+        {
+          "second": 21,
+          "input_power": 0.0006438618789862567,
+          "output_power": 2.0129373297095298e-07,
+          "far_only_mic_to_output_ratio_db": 35.04962458775815
+        },
+        {
+          "second": 22,
+          "input_power": 2.9993431949608933e-05,
+          "output_power": 5.646038334816694e-08,
+          "far_only_mic_to_output_ratio_db": 27.25282339498419
+        },
+        {
+          "second": 23,
+          "input_power": 0.0002239529515247381,
+          "output_power": 4.016293678432703e-08,
+          "far_only_mic_to_output_ratio_db": 37.46331328808296
+        }
+      ],
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-mic.wav",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-ref.wav",
+        "build-aec-convergence\\holdout\\voice1-playback-gap-out.wav",
+        "48000",
+        "16000",
+        "8000",
+        "200",
+        "20"
+      ],
+      "native_stdout": "dominant_adapted_tap=48 (not hardware latency)\nrate=8000 capture_channels=1 reference_channels=1 real_frames=192000 workspace_bytes=77136 frame_frames=160 tail_ms=200\nannotated_far_only_erle_db=23.8057 interval_first=48000 interval_frames=16000\n",
+      "capture_sha256": "0939607e73c05b87f29c73daea5d7a039e93159db629c7547839b862525d61f8",
+      "reference_sha256": "05562c9744efc798d898588e20b162f16593a02af58944bf565056a520e822a9",
+      "output_sha256": "d98fc918b2ad10a9e7d5a74d92faf7790384fd75030bf3bfdfacdecacfde7354"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-7.0.0-1024-nvidia-aarch64-with-glibc2.39",
+  "machine": "aarch64",
+  "processor": "aarch64",
+  "logical_cpus": 20,
+  "proxy_cpu_workers": 4,
+  "iterations": 10000,
+  "elapsed_seconds": 39.298909653909504,
+  "load_kind": "SHA256 CPU proxy; no ASR/TTS/LLM or GPU workload",
+  "started_utc": "2026-11-20T14:22:05.156188+00:00",
+  "command": [
+    "/tmp/baffle.fVOhT0/build-aec/baffle_latency",
+    "10000",
+    "/tmp/baffle-quality-arm64-raw.csv"
+  ],
+  "executable_sha256": "89b38dfeae8d03c280c50d6abcc61af81d9f04e3fb58808fa7344668d19a3844",
+  "raw_output_sha256": "c3bbf0fa9f37a571974ee63d6a2a613c5771e165569a584451d484ad402431bf"
+}

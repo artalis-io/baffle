@@ -4,6 +4,9 @@ Acceptance remains **PARTIAL**. The original 8 dB requirement now passes on its
 unchanged fixture. This closes a near-end conditioning limitation, not physical
 acoustic, perceptual, ASR or general production qualification.
 
+Exact commands, build flags, source/fixture hashes, raw reports and acceptance
+decisions are in the [evidence manifest](evidence/2026-11-20-aec/summary.json).
+
 ## Original failure and metric
 
 Baseline PR #1 was `feat/dsp-engine` at `29feb81`. The live 27-job matrix then

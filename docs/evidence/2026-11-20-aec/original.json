@@ -1,0 +1,56 @@
+{
+  "scope": "CONTROLLED SAME-CLOCK synthetic linear echo with recorded speech; not physical acoustics",
+  "upstream_pin": "8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac",
+  "near_source": {
+    "path": "datasets/test_set_icassp2022/nearend-singletalk/03d6ced2-3cc1-4b32-bcea-770fe2d260ff_nearend-singletalk_mic.wav",
+    "sha256": "c4aa7009d22bc0c8048a6058c3656b0d3ecc2251f19769b51cbef9790c858607",
+    "bytes": 1440044,
+    "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/nearend-singletalk/03d6ced2-3cc1-4b32-bcea-770fe2d260ff_nearend-singletalk_mic.wav"
+  },
+  "far_source": {
+    "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+    "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+    "bytes": 2304044,
+    "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+  },
+  "native_tool_sha256": "bec55b2cc2380afab44d1ba39613053820d30d43a13079e29e47636c4a74ce68",
+  "rate": 48000,
+  "frames": 1152000,
+  "doubletalk_interval": [
+    384000,
+    864000
+  ],
+  "near_source_offset_frames": 240000,
+  "far_peak": 0.25,
+  "near_peak": 0.2,
+  "echo_taps": [
+    [
+      32,
+      0.6
+    ],
+    [
+      93,
+      -0.15
+    ]
+  ],
+  "aec_tail_ms": 200,
+  "oracle": "Known original near recording including noise, before mixture/file quantization",
+  "speech_component_projection": 0.908367106887112,
+  "component_snr_before_db": 1.3087701656251525,
+  "component_snr_after_db": 7.957196398223363,
+  "snr_improvement_db": 6.64842623259821,
+  "far_only_erle_db": 25.845387174023582,
+  "zero_reference_control_snr_db": 8.167590131834135,
+  "error_snr_relative_to_backend_processed_oracle_db": 20.44148132312182,
+  "initial_raw_targets": {
+    "projection": [
+      0.8,
+      1.2
+    ],
+    "snr_improvement_db_min": 8
+  },
+  "raw_target_met": false,
+  "diagnostic_note": "Raw targets are retained; control isolates Speex DC-notch/preemphasis/deemphasis response",
+  "physical_acoustic_qualification": false,
+  "no_audio_redistributed": true
+}
