@@ -137,6 +137,21 @@ Corrected 48 kHz energy reductions on the three far-only traces were .8045,
 -.0102 and 6.6032 dB, versus .8234, .0101 and 6.6208 dB before correction.
 This integration fix does not solve their uncalibrated acoustic quality gap.
 
+The first exploratory suite reports used a 1e-30 numerical floor for zero
+pre-AEC near-only error, producing meaningless finite SNR improvements around
+-300 dB. Those reports are retained as exploratory artifacts. The corrected
+method marks that one undefined improvement unavailable; raw error SNR,
+projection, SI-SDR and every nonzero-error scenario are unchanged. The early
+`first_active_100ms` label was also corrected to `first_energy_100ms` without
+moving its window: it cannot identify annotated speech. Neither correction
+changes the original Microsoft fixture or its 8 dB metric.
+
+The three-window 20 dB energy-ratio criterion was first met at 7..8 seconds in
+several simple OSR cases, but not within the horizon in others. None of the
+noisy path-change cases met the three-window 15 dB recovery criterion within
+six seconds. These results include noise/pauses and remain explicit quality
+limits, not fast-convergence or interruption guarantees.
+
 ## Transport and real-time contracts
 
 Capture/reference metadata, epochs and clock domains remain independent. Hail's
