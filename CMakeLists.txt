@@ -135,6 +135,13 @@ if(BF_WITH_HAIL)
   endif()
   target_compile_features(baffle_hail_adapter PRIVATE c_std_11)
   set_target_properties(baffle_hail_adapter PROPERTIES C_EXTENSIONS OFF C_VISIBILITY_PRESET hidden)
+  # Adapter-only consumers can drop a direct core dependency with --as-needed.
+  # The installed adapter must locate its co-located core transitively.
+  if(APPLE)
+    set_target_properties(baffle_hail_adapter PROPERTIES INSTALL_RPATH "@loader_path")
+  elseif(UNIX)
+    set_target_properties(baffle_hail_adapter PROPERTIES INSTALL_RPATH "$ORIGIN")
+  endif()
   if(MSVC)
     target_compile_options(baffle_hail_adapter PRIVATE /W4 /WX)
   else()
