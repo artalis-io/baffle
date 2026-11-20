@@ -1,0 +1,701 @@
+{
+  "windows": [
+    {
+      "scenario": "alone",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\alone\\unused.f32",
+        "build-gate-h\\contention\\alone\\dsp.csv",
+        "build-gate-h\\contention\\alone\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [],
+      "worker_completion": [],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.06369999999999999,
+        "p95": 0.08990499999999997,
+        "p99": 0.1101329999999992,
+        "max": 0.1562
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.18284999999999998,
+        "p95": 0.496,
+        "p99": 0.5235,
+        "max": 1.0091999999999999
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 16724,
+          "mean_cpu_percent_excluding_first": 0.44272727272727275,
+          "peak_sampled_rss_bytes": 7966720
+        }
+      ]
+    },
+    {
+      "scenario": "parakeet",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\parakeet\\unused.f32",
+        "build-gate-h\\contention\\parakeet\\dsp.csv",
+        "build-gate-h\\contention\\parakeet\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "parakeet",
+          "ready": true,
+          "pid": 37284
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "parakeet",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.0655,
+        "p95": 0.09420499999999997,
+        "p99": 0.11300099999999996,
+        "max": 0.1598
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.25575,
+        "p95": 0.49820499999999995,
+        "p99": 0.5313039999999999,
+        "max": 1.2628
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 37900,
+          "mean_cpu_percent_excluding_first": 0.7583333333333334,
+          "peak_sampled_rss_bytes": 7974912
+        },
+        {
+          "pid": 37284,
+          "mean_cpu_percent_excluding_first": 147.8935185185185,
+          "peak_sampled_rss_bytes": 879202304
+        }
+      ]
+    },
+    {
+      "scenario": "parakeet+piper",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\parakeet+piper\\unused.f32",
+        "build-gate-h\\contention\\parakeet+piper\\dsp.csv",
+        "build-gate-h\\contention\\parakeet+piper\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "piper",
+          "ready": true,
+          "pid": 8544
+        },
+        {
+          "kind": "parakeet",
+          "ready": true,
+          "pid": 34904
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "parakeet",
+          "exitcode": 0
+        },
+        {
+          "kind": "piper",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.0644,
+        "p95": 0.09400499999999998,
+        "p99": 0.11649999999999999,
+        "max": 0.159
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.2355,
+        "p95": 0.491405,
+        "p99": 0.5242049999999999,
+        "max": 0.9919
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 33284,
+          "mean_cpu_percent_excluding_first": 0.6878504672897195,
+          "peak_sampled_rss_bytes": 7987200
+        },
+        {
+          "pid": 34904,
+          "mean_cpu_percent_excluding_first": 148.9299065420561,
+          "peak_sampled_rss_bytes": 879566848
+        },
+        {
+          "pid": 8544,
+          "mean_cpu_percent_excluding_first": 10.163551401869158,
+          "peak_sampled_rss_bytes": 253931520
+        }
+      ]
+    },
+    {
+      "scenario": "piper",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\piper\\unused.f32",
+        "build-gate-h\\contention\\piper\\dsp.csv",
+        "build-gate-h\\contention\\piper\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "piper",
+          "ready": true,
+          "pid": 33032
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "piper",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.0602,
+        "p95": 0.09080499999999997,
+        "p99": 0.11070299999999993,
+        "max": 0.6254
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.21835,
+        "p95": 0.4896199999999999,
+        "p99": 0.5232039999999999,
+        "max": 0.873
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 26800,
+          "mean_cpu_percent_excluding_first": 0.6541284403669726,
+          "peak_sampled_rss_bytes": 7979008
+        },
+        {
+          "pid": 33032,
+          "mean_cpu_percent_excluding_first": 10.50275229357798,
+          "peak_sampled_rss_bytes": 290025472
+        }
+      ]
+    },
+    {
+      "scenario": "whisper",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\whisper\\unused.f32",
+        "build-gate-h\\contention\\whisper\\dsp.csv",
+        "build-gate-h\\contention\\whisper\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "whisper",
+          "ready": true,
+          "pid": 37700
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "whisper",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.06699999999999999,
+        "p95": 0.1088,
+        "p99": 0.13470699999999983,
+        "max": 0.2276
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.2355,
+        "p95": 0.5030049999999999,
+        "p99": 0.524101,
+        "max": 1.4435
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 14908,
+          "mean_cpu_percent_excluding_first": 1.0851851851851853,
+          "peak_sampled_rss_bytes": 7983104
+        },
+        {
+          "pid": 37700,
+          "mean_cpu_percent_excluding_first": 83.91203703703704,
+          "peak_sampled_rss_bytes": 360185856
+        }
+      ]
+    },
+    {
+      "scenario": "whisper+piper",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\contention\\whisper+piper\\unused.f32",
+        "build-gate-h\\contention\\whisper+piper\\dsp.csv",
+        "build-gate-h\\contention\\whisper+piper\\native.json",
+        "30",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "whisper",
+          "ready": true,
+          "pid": 24472
+        },
+        {
+          "kind": "piper",
+          "ready": true,
+          "pid": 36644
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "whisper",
+          "exitcode": 0
+        },
+        {
+          "kind": "piper",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.0673,
+        "p95": 0.10870499999999997,
+        "p99": 0.13400099999999995,
+        "max": 0.1929
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.22394999999999998,
+        "p95": 0.4932199999999999,
+        "p99": 0.5305049999999999,
+        "max": 1.4797
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 30,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "contention",
+      "resource_summary": [
+        {
+          "pid": 33392,
+          "mean_cpu_percent_excluding_first": 0.2566037735849057,
+          "peak_sampled_rss_bytes": 8077312
+        },
+        {
+          "pid": 24472,
+          "mean_cpu_percent_excluding_first": 85.40849056603774,
+          "peak_sampled_rss_bytes": 360910848
+        },
+        {
+          "pid": 36644,
+          "mean_cpu_percent_excluding_first": 11.747169811320752,
+          "peak_sampled_rss_bytes": 292540416
+        }
+      ]
+    },
+    {
+      "scenario": "whisper+parakeet+piper",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-h\\stress\\whisper+parakeet+piper\\unused.f32",
+        "build-gate-h\\stress\\whisper+parakeet+piper\\dsp.csv",
+        "build-gate-h\\stress\\whisper+parakeet+piper\\native.json",
+        "120",
+        "highres"
+      ],
+      "versions": {
+        "sherpa-onnx": "1.12.40",
+        "sherpa-onnx-core": "1.12.40",
+        "piper-tts": "1.3.0",
+        "onnxruntime": "1.23.2",
+        "numpy": "2.3.5",
+        "scipy": "1.16.3",
+        "psutil": "7.1.3"
+      },
+      "worker_status": [
+        {
+          "kind": "whisper",
+          "ready": true,
+          "pid": 37060
+        },
+        {
+          "kind": "piper",
+          "ready": true,
+          "pid": 38280
+        },
+        {
+          "kind": "parakeet",
+          "ready": true,
+          "pid": 38000
+        }
+      ],
+      "worker_completion": [
+        {
+          "kind": "whisper",
+          "exitcode": 0
+        },
+        {
+          "kind": "parakeet",
+          "exitcode": 0
+        },
+        {
+          "kind": "piper",
+          "exitcode": 0
+        }
+      ],
+      "runner_sha256": "8925a17390508d812aedb67fc6a59425a05281dfad9b596fec2719842c6f2c65",
+      "error": null,
+      "limitations": [
+        "ASR is bounded-window offline re-decoding, not native streaming",
+        "Piper increments by sentence; modeled queue is not device occupancy",
+        "Concurrent inference replay, not a connected live conversational/audio device pipeline"
+      ],
+      "execution_ms": {
+        "p50": 0.0784,
+        "p95": 0.123,
+        "p99": 0.15460100000000002,
+        "max": 0.6611
+      },
+      "scheduling_lateness_ms": {
+        "p50": 0.26125,
+        "p95": 0.497,
+        "p99": 0.528301,
+        "max": 1.254
+      },
+      "completion_deadline_misses": 0,
+      "execution_deadline_misses": 0,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 12000,
+        "wait_policy": "private-windows-highres",
+        "paced_seconds": 120,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "trial": "stress",
+      "resource_summary": [
+        {
+          "pid": 9536,
+          "mean_cpu_percent_excluding_first": 0.7366265060240964,
+          "peak_sampled_rss_bytes": 8568832
+        },
+        {
+          "pid": 37060,
+          "mean_cpu_percent_excluding_first": 90.9267469879518,
+          "peak_sampled_rss_bytes": 360046592
+        },
+        {
+          "pid": 38000,
+          "mean_cpu_percent_excluding_first": 151.1344578313253,
+          "peak_sampled_rss_bytes": 879783936
+        },
+        {
+          "pid": 38280,
+          "mean_cpu_percent_excluding_first": 10.8289156626506,
+          "peak_sampled_rss_bytes": 292073472
+        }
+      ]
+    }
+  ],
+  "spark_actual_llm": [
+    {
+      "scenario": "alone",
+      "runner_sha256": "616f7650a94ca4a5f7b3c9e19d4de9a005e8aec1566c674da757a4894ef3523a",
+      "execution_ms": {
+        "p50": 0.06267099999999999,
+        "p95": 0.10064539999999995,
+        "p99": 0.11084903999999993,
+        "max": 0.17532499999999998
+      },
+      "wake_lateness_ms": {
+        "p50": 0.362724,
+        "p95": 0.7891652499999999,
+        "p99": 0.9232128799999979,
+        "max": 1.2870489999999999
+      },
+      "completion_misses": 0,
+      "requests_started": 0,
+      "requests_with_usage": 0
+    },
+    {
+      "scenario": "with-llm",
+      "runner_sha256": "616f7650a94ca4a5f7b3c9e19d4de9a005e8aec1566c674da757a4894ef3523a",
+      "execution_ms": {
+        "p50": 0.06683900000000001,
+        "p95": 0.09126614999999998,
+        "p99": 0.10844616,
+        "max": 0.144814
+      },
+      "wake_lateness_ms": {
+        "p50": 0.1972795,
+        "p95": 0.5275520499999999,
+        "p99": 0.7532427099999971,
+        "max": 1.031118
+      },
+      "completion_misses": 0,
+      "requests_started": 10,
+      "requests_with_usage": 9
+    }
+  ],
+  "scope": "Finite actual replay inference; not connected live capture-to-ASR/TTS or physical timing. NS 10 ms, mono pipeline workspace 136832. Raw CPU/RSS/GPU/queue observations archived."
+}

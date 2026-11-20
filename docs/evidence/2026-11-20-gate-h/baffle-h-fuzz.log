@@ -1,0 +1,85 @@
+[ 15%] Built target baffle_speex_kernel
+[ 21%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 26%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 31%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 36%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 42%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 47%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 52%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 57%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[ 63%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 68%] Linking C static library libbaffle.a
+[ 68%] Built target baffle
+[ 73%] Building C object CMakeFiles/baffle_fuzz_pipeline.dir/fuzz/pipeline.c.o
+[ 78%] Building C object CMakeFiles/baffle_fuzz_transport.dir/fuzz/transport.c.o
+[ 84%] Building C object CMakeFiles/baffle_fuzz_aec.dir/fuzz/aec.c.o
+[ 89%] Linking C executable baffle_fuzz_transport
+[ 94%] Linking C executable baffle_fuzz_pipeline
+[100%] Linking C executable baffle_fuzz_aec
+[100%] Built target baffle_fuzz_transport
+[100%] Built target baffle_fuzz_aec
+[100%] Built target baffle_fuzz_pipeline
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 723
+INFO: Loaded 1 modules   (7858 inline 8-bit counters): 7858 [0xc5ea9c16bac8, 0xc5ea9c16d97a), 
+INFO: Loaded 1 PC tables (7858 PCs): 7858 [0xc5ea9c16d980,0xc5ea9c18c4a0), 
+INFO:      301 files found in build-aec-fuzz/corpus
+INFO: seed corpus: files: 301 min: 1b max: 4096b total: 302164b rss: 32Mb
+#128	pulse  cov: 2881 ft: 6043 corp: 63/7244b exec/s: 64 rss: 77Mb
+#256	pulse  cov: 2883 ft: 6162 corp: 96/30Kb exec/s: 85 rss: 107Mb
+#302	INITED cov: 2883 ft: 6162 corp: 96/30Kb exec/s: 100 rss: 118Mb
+#512	pulse  cov: 2883 ft: 6162 corp: 96/30Kb lim: 1196 exec/s: 128 rss: 187Mb
+#723	REDUCE cov: 2883 ft: 6162 corp: 96/30Kb lim: 1196 exec/s: 103 rss: 253Mb L: 9/1196 MS: 1 EraseBytes-
+#810	NEW    cov: 2944 ft: 6223 corp: 97/30Kb lim: 1196 exec/s: 115 rss: 272Mb L: 16/1196 MS: 2 ChangeByte-ChangeByte-
+#815	REDUCE cov: 2944 ft: 6223 corp: 97/30Kb lim: 1196 exec/s: 116 rss: 274Mb L: 47/1196 MS: 5 ChangeBinInt-ChangeBinInt-EraseBytes-EraseBytes-CopyPart-
+#1024	pulse  cov: 2944 ft: 6223 corp: 97/30Kb lim: 1196 exec/s: 128 rss: 339Mb
+#1631	REDUCE cov: 2944 ft: 6223 corp: 97/30Kb lim: 1196 exec/s: 125 rss: 371Mb L: 50/1196 MS: 1 EraseBytes-
+#1722	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 123 rss: 375Mb L: 381/1196 MS: 1 EraseBytes-
+#1827	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 130 rss: 375Mb L: 54/1196 MS: 5 InsertByte-InsertByte-ChangeByte-ChangeBinInt-EraseBytes-
+#1951	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 130 rss: 375Mb L: 28/1196 MS: 4 ChangeBinInt-ShuffleBytes-ChangeASCIIInt-EraseBytes-
+#1974	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 131 rss: 375Mb L: 338/1196 MS: 3 EraseBytes-ChangeBinInt-InsertRepeatedBytes-
+#2048	pulse  cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 128 rss: 375Mb
+#2175	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 135 rss: 375Mb L: 39/1196 MS: 1 EraseBytes-
+#2181	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 136 rss: 375Mb L: 330/1196 MS: 1 EraseBytes-
+#2277	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 142 rss: 375Mb L: 237/1196 MS: 1 EraseBytes-
+#2464	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 136 rss: 375Mb L: 27/1196 MS: 2 ChangeBit-EraseBytes-
+#2822	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 148 rss: 375Mb L: 39/1196 MS: 3 CrossOver-ChangeBinInt-EraseBytes-
+#3068	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 153 rss: 375Mb L: 270/1196 MS: 1 EraseBytes-
+#3119	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 155 rss: 375Mb L: 33/1196 MS: 1 EraseBytes-
+#3235	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 154 rss: 375Mb L: 1078/1196 MS: 1 EraseBytes-
+#3299	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 157 rss: 375Mb L: 49/1196 MS: 4 ChangeBinInt-CopyPart-CrossOver-EraseBytes-
+#3865	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 161 rss: 375Mb L: 190/1196 MS: 1 EraseBytes-
+#4096	pulse  cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 163 rss: 375Mb
+#4333	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 166 rss: 375Mb L: 50/1196 MS: 3 EraseBytes-InsertByte-CMP- DE: "\377\377\371\\\366%\260~"-
+#4714	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 168 rss: 375Mb L: 163/1196 MS: 1 EraseBytes-
+#4865	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 167 rss: 377Mb L: 36/1196 MS: 1 EraseBytes-
+#5443	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 170 rss: 388Mb L: 558/1196 MS: 3 ChangeBit-ChangeBinInt-EraseBytes-
+#5705	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 167 rss: 388Mb L: 8/1196 MS: 2 ShuffleBytes-EraseBytes-
+#5806	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 165 rss: 388Mb L: 402/1196 MS: 1 EraseBytes-
+#6185	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 167 rss: 388Mb L: 129/1196 MS: 4 CMP-CopyPart-ChangeBinInt-EraseBytes- DE: "\000\000\000P"-
+#6241	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 164 rss: 388Mb L: 45/1196 MS: 1 EraseBytes-
+#6380	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 167 rss: 388Mb L: 27/1196 MS: 4 ChangeBinInt-InsertByte-EraseBytes-EraseBytes-
+#6606	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 165 rss: 388Mb L: 655/1196 MS: 1 EraseBytes-
+#6642	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 166 rss: 388Mb L: 33/1196 MS: 1 EraseBytes-
+#6659	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 166 rss: 388Mb L: 962/1196 MS: 2 ChangeByte-EraseBytes-
+#6917	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 157 rss: 388Mb L: 28/1196 MS: 3 EraseBytes-InsertByte-InsertByte-
+#7078	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 157 rss: 388Mb L: 945/1196 MS: 1 EraseBytes-
+#7084	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 157 rss: 388Mb L: 129/1196 MS: 1 EraseBytes-
+#7470	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 155 rss: 388Mb L: 773/1196 MS: 1 EraseBytes-
+#7830	REDUCE cov: 2944 ft: 6223 corp: 97/29Kb lim: 1196 exec/s: 153 rss: 388Mb L: 39/1196 MS: 5 ChangeByte-ChangeBit-ChangeByte-InsertByte-EraseBytes-
+#7971	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 156 rss: 388Mb L: 841/1196 MS: 1 EraseBytes-
+#8192	pulse  cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 154 rss: 388Mb
+#8287	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 156 rss: 388Mb L: 753/1196 MS: 1 EraseBytes-
+#8428	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 156 rss: 388Mb L: 282/1196 MS: 1 EraseBytes-
+#8699	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 158 rss: 388Mb L: 105/1196 MS: 1 EraseBytes-
+#8893	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 158 rss: 388Mb L: 44/1196 MS: 4 CopyPart-ShuffleBytes-ShuffleBytes-EraseBytes-
+#9000	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 157 rss: 388Mb L: 23/1196 MS: 2 InsertByte-EraseBytes-
+#9379	REDUCE cov: 2944 ft: 6223 corp: 97/28Kb lim: 1196 exec/s: 158 rss: 388Mb L: 732/1196 MS: 4 ChangeBit-CMP-ChangeByte-EraseBytes- DE: "\216\000\000\000"-
+#9752	NEW    cov: 2944 ft: 6224 corp: 98/28Kb lim: 1196 exec/s: 154 rss: 388Mb L: 173/1196 MS: 3 CrossOver-CrossOver-CopyPart-
+#10000	DONE   cov: 2944 ft: 6224 corp: 98/28Kb lim: 1196 exec/s: 156 rss: 388Mb
+###### Recommended dictionary. ######
+"\377\377\371\\\366%\260~" # Uses: 305
+"\000\000\000P" # Uses: 163
+"\216\000\000\000" # Uses: 24
+###### End of recommended dictionary. ######
+Done 10000 runs in 64 second(s)

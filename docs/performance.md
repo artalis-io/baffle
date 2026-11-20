@@ -1,5 +1,11 @@
 # Processing latency and resource evidence
 
+[Gate H](gate-h.md#performance-safety-and-acceptance) repeats actual inference
+contention with the telemetry correction: combined 120 s P99 .154601 ms, maximum
+.6611 ms, zero observed 10 ms misses and unchanged 136,832-byte mono workspace.
+NS still buffers 10 ms; a 5 ms NS-only probe worsens Whisper WER on both test
+utterances despite better error SNR, so no latency/default change was promoted.
+
 The [real-world report](real-world-qualification.md#actual-inference-contention)
 adds paced full-pipeline trials under actual CPU Whisper/Parakeet/Piper and a
 separate GPU LLM workload. Those measurements separate execution from scheduling

@@ -156,3 +156,48 @@ onset/phone/syllable labels, uncertainty, processed-audio review and downstream
 approved VAD/WER limits, then run `onset_qualification.py MANIFEST REPORT`.
 The supplied template intentionally returns UNQUALIFIED. Correlation, first-word
 recognition and near projection cannot certify first-phoneme preservation.
+
+## Gate H paired intelligibility
+
+Additional offline backends are `aec-ns`, `aec-ns-agc`, `aec-vad`, `ns-only`,
+`ns-zero` and `ns5`. They select existing public pipeline stage masks; no new
+library API exists. `aec-vad` has no PCM gating. NS backends export the explicit
+one-hop prefix plus the final real samples. `ns5` is an offline NS-only 5 ms
+probe, not a 5 ms AEC pipeline. Receipts add priming/discarded frames, gain,
+VAD and reset diagnostics. Inactive AGC is unity and unavailable VAD probability
+is -1; the earlier captured CSV's inactive zero fields must not be interpreted
+as measured attenuation/activity. Check the stage mask.
+
+Keep the previously documented model pins and download the second independent
+provider recording alongside its transcript:
+
+```sh
+hf download csukuangfj/sherpa-onnx-whisper-tiny.en test_wavs/1.wav --revision d026532c022fa99fd789d6b32446a1df7b6bfc43 --local-dir models/whisper
+python tools/word_qualification.py prepare models seeded
+python tools/paired_asr.py prepare models seeded paired-input
+python tools/paired_asr.py run acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_vad_trace models paired-input paired-results
+python tools/paired_asr_summary.py paired-input/manifest.json paired-results/results.json paired-summary.json
+python tools/paired_signal_scores.py paired-input paired-results signal-scores.json
+python tools/blank_asr_matrix.py models paired-input paired-results blank-diagnostics.json
+python tools/ns_delay_qualification.py acoustic-tools/baffle_acoustic_runner models paired-input ns-experiment
+python tools/prepare_onset_review.py paired-input paired-results human-review
+```
+
+Use fresh result/review directories; prior results and human annotation are not
+overwritten. Audio remains local, with original and processed identities retained.
+The preparation's zero-added-error/blank and false-transcript checks are
+conservative engineering targets fixed before decoding, not application-approved
+phone-onset limits. No VAD gate, gain normalization or endpoint tuning is applied
+to the paired ASR input. CER excludes whitespace; WER/CER are undefined for empty
+references, whose false transcripts/insertions are counted explicitly.
+
+`parakeet_frontend_diagnostic.py MODELS SEEDED OLD_RESULTS REPORT` is a separate
+optional diagnostic using kaldi-native-fbank 1.22.3 and ONNX Runtime. It compares
+individual feature/normalization choices with fixed weights/TDT greedy decoding.
+It is not a validated NVIDIA frontend or shipped ASR backend. Its Apache-2.0
+adaptation notice/license is separate from Baffle's MIT core. Negative diagnostic
+results remain retained; no model-specific gain workaround was added to DSP.
+
+See [Gate H](../../docs/gate-h.md) for the measured failures, calibrated-onset
+limits and actual workload timings. PCM, models and human review files are not
+automatically published or included in ordinary CI.

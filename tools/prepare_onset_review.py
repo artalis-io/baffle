@@ -33,7 +33,7 @@ if __name__=="__main__":
             case[key]["audition_note"]={"format":"PCM16 quantized audition only; metrics use original F32","clipped_samples":clipped}
         case["reference_transcript"]=job["reference_transcript"]
         case["constructed_insertion_frame_NOT_an_annotation"]=job["constructed_insertion_frame_not_reviewed_onset"]
-        case["algorithmic_delay_frames"]=160
+        case["algorithmic_delay_frames"]=job["rate"]//100
         (directory/"review.json").write_text(json.dumps(case,indent=2)+"\n")
         index.append({"case":job["name"],"manifest":str(directory/"review.json"),"status":"UNREVIEWED"})
     (a.output/"index.json").write_text(json.dumps({"reviews":index,"instruction":"Listen to raw/processed audio; independently annotate phone/syllable starts/ends and source provenance. Constructed insertion is not speech onset. No PASS without review and approved policy."},indent=2)+"\n")

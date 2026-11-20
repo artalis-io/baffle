@@ -1,5 +1,10 @@
 # Engineering gates and acceptance evidence
 
+[Gate H](gate-h.md) is **PARTIAL**: paired intelligibility and actual contention
+are measured, including failed nonregression/blank/false-transcription checks.
+The combined epoch/generation receipt defect is corrected with a failing-before
+regression. Reviewed first-phone/syllable and physical/live acceptance remain open.
+
 The [real-world convergence report](real-world-qualification.md) supersedes the
 absence of actual inference-contention evidence below: external CPU ASR/TTS and
 GPU LLM trials are now retained. Complete live device/inference, calibrated

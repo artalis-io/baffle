@@ -1,0 +1,1266 @@
+{
+  "scope": "Complete source utterance preserved in all controls; one factor changes, no production default selected",
+  "versions": {
+    "sherpa-onnx": "1.12.40",
+    "sherpa-onnx-core": "1.12.40",
+    "piper-tts": "1.3.0",
+    "onnxruntime": "1.23.2",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "psutil": "7.1.3"
+  },
+  "decoder_configs": {
+    "whisper": "OfflineRecognizerConfig(feat_config=FeatureExtractorConfig(sampling_rate=16000, feature_dim=80, low_freq=20, high_freq=-400, dither=0, normalize_samples=True, snip_edges=False), model_config=OfflineModelConfig(transducer=OfflineTransducerModelConfig(encoder_filename=\"\", decoder_filename=\"\", joiner_filename=\"\"), paraformer=OfflineParaformerModelConfig(model=\"\"), nemo_ctc=OfflineNemoEncDecCtcModelConfig(model=\"\"), whisper=OfflineWhisperModelConfig(encoder=\"build-acoustic\\models\\whisper\\tiny.en-encoder.int8.onnx\", decoder=\"build-acoustic\\models\\whisper\\tiny.en-decoder.int8.onnx\", language=\"en\", task=\"transcribe\", tail_paddings=-1, enable_token_timestamps=False, enable_segment_timestamps=False), fire_red_asr=OfflineFireRedAsrModelConfig(encoder=\"\", decoder=\"\"), tdnn=OfflineTdnnModelConfig(model=\"\"), zipformer_ctc=OfflineZipformerCtcModelConfig(model=\"\"), wenet_ctc=OfflineWenetCtcModelConfig(model=\"\"), sense_voice=OfflineSenseVoiceModelConfig(model=\"\", language=\"auto\", use_itn=False), moonshine=OfflineMoonshineModelConfig(preprocessor=\"\", encoder=\"\", uncached_decoder=\"\", cached_decoder=\"\", merged_decoder=\"\"), dolphin=OfflineDolphinModelConfig(model=\"\"), canary=OfflineCanaryModelConfig(encoder=\"\", decoder=\"\", src_lang=\"\", tgt_lang=\"\", use_pnc=True), cohere_transcribe=OfflineCohereTranscribeModelConfig(encoder=\"\", decoder=\"\", language=\"\", use_punct=True, use_itn=True), omnilingual=OfflineOmnilingualAsrCtcModelConfig(model=\"\"), funasr_nano=OfflineFunASRNanoModelConfig(encoder_adaptor=\"\", llm=\"\", embedding=\"\", tokenizer=\"\", system_prompt=\"You are a helpful assistant.\", user_prompt=\"\u8bed\u97f3\u8f6c\u5199\uff1a\", max_new_tokens=512, temperature=1e-06, top_p=0.8, seed=42, language=\"\", itn=True, hotwords=\"\"), medasr=OfflineMedAsrCtcModelConfig(model=\"\"), fire_red_asr_ctc=OfflineFireRedAsrCtcModelConfig(model=\"\"), qwen3_asr=OfflineQwen3ASRModelConfig(conv_frontend=\"\", encoder=\"\", decoder=\"\", tokenizer=\"\", hotwords=\"\", max_total_len=512, max_new_tokens=128, temperature=1e-06, top_p=0.8, seed=42), telespeech_ctc=\"\", tokens=\"build-acoustic\\models\\whisper\\tiny.en-tokens.txt\", num_threads=2, debug=False, provider=\"cpu\", model_type=\"whisper\", modeling_unit=\"cjkchar\", bpe_vocab=\"\"), lm_config=OfflineLMConfig(model=\"\", scale=0.5, lodr_scale=0.01, lodr_fst=\"\", lodr_backoff_id=-1), ctc_fst_decoder_config=OfflineCtcFstDecoderConfig(graph=\"\", max_active=3000), decoding_method=\"greedy_search\", max_active_paths=4, hotwords_file=\"\", hotwords_score=1.5, blank_penalty=0, rule_fsts=\"\", rule_fars=\"\", hr=HomophoneReplacerConfig(lexicon=\"\", rule_fsts=\"\"))",
+    "parakeet": "OfflineRecognizerConfig(feat_config=FeatureExtractorConfig(sampling_rate=16000, feature_dim=80, low_freq=20, high_freq=-400, dither=0, normalize_samples=True, snip_edges=False), model_config=OfflineModelConfig(transducer=OfflineTransducerModelConfig(encoder_filename=\"build-acoustic\\models\\parakeet\\encoder.int8.onnx\", decoder_filename=\"build-acoustic\\models\\parakeet\\decoder.int8.onnx\", joiner_filename=\"build-acoustic\\models\\parakeet\\joiner.int8.onnx\"), paraformer=OfflineParaformerModelConfig(model=\"\"), nemo_ctc=OfflineNemoEncDecCtcModelConfig(model=\"\"), whisper=OfflineWhisperModelConfig(encoder=\"\", decoder=\"\", language=\"\", task=\"transcribe\", tail_paddings=-1, enable_token_timestamps=False, enable_segment_timestamps=False), fire_red_asr=OfflineFireRedAsrModelConfig(encoder=\"\", decoder=\"\"), tdnn=OfflineTdnnModelConfig(model=\"\"), zipformer_ctc=OfflineZipformerCtcModelConfig(model=\"\"), wenet_ctc=OfflineWenetCtcModelConfig(model=\"\"), sense_voice=OfflineSenseVoiceModelConfig(model=\"\", language=\"auto\", use_itn=False), moonshine=OfflineMoonshineModelConfig(preprocessor=\"\", encoder=\"\", uncached_decoder=\"\", cached_decoder=\"\", merged_decoder=\"\"), dolphin=OfflineDolphinModelConfig(model=\"\"), canary=OfflineCanaryModelConfig(encoder=\"\", decoder=\"\", src_lang=\"\", tgt_lang=\"\", use_pnc=True), cohere_transcribe=OfflineCohereTranscribeModelConfig(encoder=\"\", decoder=\"\", language=\"\", use_punct=True, use_itn=True), omnilingual=OfflineOmnilingualAsrCtcModelConfig(model=\"\"), funasr_nano=OfflineFunASRNanoModelConfig(encoder_adaptor=\"\", llm=\"\", embedding=\"\", tokenizer=\"\", system_prompt=\"You are a helpful assistant.\", user_prompt=\"\u8bed\u97f3\u8f6c\u5199\uff1a\", max_new_tokens=512, temperature=1e-06, top_p=0.8, seed=42, language=\"\", itn=True, hotwords=\"\"), medasr=OfflineMedAsrCtcModelConfig(model=\"\"), fire_red_asr_ctc=OfflineFireRedAsrCtcModelConfig(model=\"\"), qwen3_asr=OfflineQwen3ASRModelConfig(conv_frontend=\"\", encoder=\"\", decoder=\"\", tokenizer=\"\", hotwords=\"\", max_total_len=512, max_new_tokens=128, temperature=1e-06, top_p=0.8, seed=42), telespeech_ctc=\"\", tokens=\"build-acoustic\\models\\parakeet\\tokens.txt\", num_threads=2, debug=False, provider=\"cpu\", model_type=\"nemo_transducer\", modeling_unit=\"cjkchar\", bpe_vocab=\"\"), lm_config=OfflineLMConfig(model=\"\", scale=0.1, lodr_scale=0, lodr_fst=\"\", lodr_backoff_id=-1), ctc_fst_decoder_config=OfflineCtcFstDecoderConfig(graph=\"\", max_active=3000), decoding_method=\"greedy_search\", max_active_paths=4, hotwords_file=\"\", hotwords_score=1.5, blank_penalty=0, rule_fsts=\"\", rule_fars=\"\", hr=HomophoneReplacerConfig(lexicon=\"\", rule_fsts=\"\"))"
+  },
+  "results": [
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "original",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.016373868797420175,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.012352459016393442,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 409.18479999527335,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "25461554f69d405fb83f19de982d52787dd4b3cb28c2aef092fedab6e2b938d5"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "original",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 18,
+        "substitutions": 0,
+        "deletions": 18,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 87,
+        "substitutions": 0,
+        "deletions": 87,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.016373868797420175,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.012352459016393442,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 774.9387999938335,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "25461554f69d405fb83f19de982d52787dd4b3cb28c2aef092fedab6e2b938d5"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.0016373869078833512,
+        "peak": 0.02081298828125,
+        "silence_ratio_below_1e_5_fs": 0.060516393442622954,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 471.36359999421984,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "f3a7d782dbbcae9486aef6b45ae8c569f380afa82c64328ecc5611c9a4701a6b"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "parakeet",
+      "text": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.0016373869078833512,
+        "peak": 0.02081298828125,
+        "silence_ratio_below_1e_5_fs": 0.060516393442622954,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 851.9925000146031,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "f3a7d782dbbcae9486aef6b45ae8c569f380afa82c64328ecc5611c9a4701a6b"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 106000,
+        "duration_s": 6.625,
+        "nonfinite_samples": 0,
+        "rms": 0.0175645899180271,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.00459433962264151,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 461.39969999785535,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "190196d649d5d75069876ccb28103dd2d056ba294bfc9e8feacb59889a48fb30"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "parakeet",
+      "text": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 106000,
+        "duration_s": 6.625,
+        "nonfinite_samples": 0,
+        "rms": 0.0175645899180271,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.00459433962264151,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 707.9664999910165,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "190196d649d5d75069876ccb28103dd2d056ba294bfc9e8feacb59889a48fb30"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 138000,
+        "duration_s": 8.625,
+        "nonfinite_samples": 0,
+        "rms": 0.015395424853565478,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.12686231884057972,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 504.7410000115633,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "e66430ed3eb879c4af9d680c0e1e6e1c2f52525fe81c3ab7cc2b88a939ef167c"
+    },
+    {
+      "case": "source0-doubletalk",
+      "stage": "baffle",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "parakeet",
+      "text": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothers.",
+      "word": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.05555555555555555
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.011494252873563218
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 138000,
+        "duration_s": 8.625,
+        "nonfinite_samples": 0,
+        "rms": 0.015395424853565478,
+        "peak": 0.2081298828125,
+        "silence_ratio_below_1e_5_fs": 0.12686231884057972,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 967.5377999956254,
+      "source_pcm_sha256": "733ebf920b94977b2d9873a1c8dcffba1b1b85f69795ef139c87dd9d87bbe5ce",
+      "window_sha256": "e66430ed3eb879c4af9d680c0e1e6e1c2f52525fe81c3ab7cc2b88a939ef167c"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "original",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.013773174524430262,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.07694262295081968,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 490.5729999882169,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "1da0b84626dbbb20edc6916ccda1cae3481cbe99a1e289ca5d9adf760e99183f"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "original",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 18,
+        "substitutions": 0,
+        "deletions": 18,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 87,
+        "substitutions": 0,
+        "deletions": 87,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.013773174524430262,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.07694262295081968,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 836.6146000043955,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "1da0b84626dbbb20edc6916ccda1cae3481cbe99a1e289ca5d9adf760e99183f"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.00137731747566621,
+        "peak": 0.015000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.12607377049180327,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 489.930000010645,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "84179069691766551c08d539437f74c78eef83c1b78aab258b54fdaa401d248e"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 18,
+        "substitutions": 0,
+        "deletions": 18,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 87,
+        "substitutions": 0,
+        "deletions": 87,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 122000,
+        "duration_s": 7.625,
+        "nonfinite_samples": 0,
+        "rms": 0.00137731747566621,
+        "peak": 0.015000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.12607377049180327,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 835.9424000082072,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "84179069691766551c08d539437f74c78eef83c1b78aab258b54fdaa401d248e"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 106000,
+        "duration_s": 6.625,
+        "nonfinite_samples": 0,
+        "rms": 0.01322336904800193,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.007028301886792453,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 488.2551000046078,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "2c3cf9751c904556847fa503ce4136fe3db2aecdbb66a81540c24502e7eabbba"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "parakeet",
+      "text": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothers.",
+      "word": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.05555555555555555
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.011494252873563218
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 106000,
+        "duration_s": 6.625,
+        "nonfinite_samples": 0,
+        "rms": 0.01322336904800193,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.007028301886792453,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 760.4488000215497,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "2c3cf9751c904556847fa503ce4136fe3db2aecdbb66a81540c24502e7eabbba"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "whisper",
+      "text": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 0.0
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 0.0
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 138000,
+        "duration_s": 8.625,
+        "nonfinite_samples": 0,
+        "rms": 0.01295013878572898,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.18396376811594203,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 536.0516000073403,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "1f91a602ee8f7438cbb47d1c08948047aef12937ff447546e6de787641b4bbc5"
+    },
+    {
+      "case": "source0-post-cancel",
+      "stage": "raw",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 18,
+        "substitutions": 0,
+        "deletions": 18,
+        "insertions": 0,
+        "reference_length": 18,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 87,
+        "substitutions": 0,
+        "deletions": 87,
+        "insertions": 0,
+        "reference_length": 87,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 138000,
+        "duration_s": 8.625,
+        "nonfinite_samples": 0,
+        "rms": 0.01295013878572898,
+        "peak": 0.15000000596046448,
+        "silence_ratio_below_1e_5_fs": 0.18396376811594203,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 926.2804000172764,
+      "source_pcm_sha256": "99427120f87412daf5fd103716601cb73c320a0ecf316636989267b177d4ce38",
+      "window_sha256": "1f91a602ee8f7438cbb47d1c08948047aef12937ff447546e6de787641b4bbc5"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "original",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.001325867302042036,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.09092576912221281,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1202.5956000143196,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "4aff8e335299038c803c42f4da232f754e4aea04f688054a3bb1d7f95da2213a"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "original",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 48,
+        "substitutions": 0,
+        "deletions": 48,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 202,
+        "substitutions": 0,
+        "deletions": 202,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.001325867302042036,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.09092576912221281,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1764.8174000205472,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "4aff8e335299038c803c42f4da232f754e4aea04f688054a3bb1d7f95da2213a"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.00013258673251181606,
+        "peak": 0.002077816752716899,
+        "silence_ratio_below_1e_5_fs": 0.302123906294101,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1207.0288000104483,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "ae7aac7700b79602eef2440803777f5b057b06d8dbf79f53aae02d43b964e459"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 48,
+        "substitutions": 0,
+        "deletions": 48,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 202,
+        "substitutions": 0,
+        "deletions": 202,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.00013258673251181606,
+        "peak": 0.002077816752716899,
+        "silence_ratio_below_1e_5_fs": 0.302123906294101,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1973.295000003418,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "ae7aac7700b79602eef2440803777f5b057b06d8dbf79f53aae02d43b964e459"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 267440,
+        "duration_s": 16.715,
+        "nonfinite_samples": 0,
+        "rms": 0.001364952199056277,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.03679703858809453,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1172.4344000103883,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "72f58816840ba50206b2b2518517a7ffa892e2edbe5db99a3f746faad379ffcc"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 48,
+        "substitutions": 0,
+        "deletions": 48,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 202,
+        "substitutions": 0,
+        "deletions": 202,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 267440,
+        "duration_s": 16.715,
+        "nonfinite_samples": 0,
+        "rms": 0.001364952199056277,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.03679703858809453,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1805.9328999952413,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "72f58816840ba50206b2b2518517a7ffa892e2edbe5db99a3f746faad379ffcc"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 299440,
+        "duration_s": 18.715,
+        "nonfinite_samples": 0,
+        "rms": 0.0012899584536236986,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.13950040074806305,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1243.7853000010364,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "b97d498e40f112c2b20d074049f7b0ec2d1d81164bb57e5f5b963ae93c936286"
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 48,
+        "substitutions": 0,
+        "deletions": 48,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 202,
+        "substitutions": 0,
+        "deletions": 202,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 299440,
+        "duration_s": 18.715,
+        "nonfinite_samples": 0,
+        "rms": 0.0012899584536236986,
+        "peak": 0.020778166130185127,
+        "silence_ratio_below_1e_5_fs": 0.13950040074806305,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 2023.2484999869484,
+      "source_pcm_sha256": "8a4f3c2822605a8457b973a4ef9adb8ebe0ab2f44312dbeff900670ffe2e8d8a",
+      "window_sha256": "b97d498e40f112c2b20d074049f7b0ec2d1d81164bb57e5f5b963ae93c936286"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "original",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.045199938119073836,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.003192915608241603,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1179.3381000170484,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "617002d2f385cdf593915ef15c9e11f5df93650cf5f591bb597ee35d1deebf17"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "original",
+      "recognizer": "parakeet",
+      "text": "",
+      "word": {
+        "errors": 48,
+        "substitutions": 0,
+        "deletions": 48,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 1.0
+      },
+      "character": {
+        "errors": 202,
+        "substitutions": 0,
+        "deletions": 202,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 1.0
+      },
+      "empty": true,
+      "first_word_correct": false,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.045199938119073836,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.003192915608241603,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1889.3906000012066,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "617002d2f385cdf593915ef15c9e11f5df93650cf5f591bb597ee35d1deebf17"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parrot forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 4,
+        "substitutions": 3,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.08333333333333333
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.01485148514851485
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.00451999388811719,
+        "peak": 0.061365801841020584,
+        "silence_ratio_below_1e_5_fs": 0.015068444820773356,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1191.0937000066042,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "be991c9ff23b7309acfb59763de679a6ddfb2205d57da7e7841e9f5622ecab0e"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "whole-window-gain-0.1",
+      "recognizer": "parakeet",
+      "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom, to connect her parent for ever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.020833333333333332
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 283440,
+        "duration_s": 17.715,
+        "nonfinite_samples": 0,
+        "rms": 0.00451999388811719,
+        "peak": 0.061365801841020584,
+        "silence_ratio_below_1e_5_fs": 0.015068444820773356,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 2010.960600018734,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "be991c9ff23b7309acfb59763de679a6ddfb2205d57da7e7841e9f5622ecab0e"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.0625
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 267440,
+        "duration_s": 16.715,
+        "nonfinite_samples": 0,
+        "rms": 0.04652451475503195,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.0008749626084355369,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1120.759800018277,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "a38e6d60b3036e27d4ee8a4fa28212cbe801ded588653f2b3435844204523019"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "complete-provider-utterance-without-halfsecond-context",
+      "recognizer": "parakeet",
+      "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent for ever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.020833333333333332
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 267440,
+        "duration_s": 16.715,
+        "nonfinite_samples": 0,
+        "rms": 0.04652451475503195,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.0008749626084355369,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1859.582400007639,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "a38e6d60b3036e27d4ee8a4fa28212cbe801ded588653f2b3435844204523019"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "whisper",
+      "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parrot forever with the race and descent of mortals and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 4,
+        "substitutions": 3,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.08333333333333333
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.01485148514851485
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 299440,
+        "duration_s": 18.715,
+        "nonfinite_samples": 0,
+        "rms": 0.04397577509466237,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.05645538338231365,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 1220.3297000087332,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "f2a351c36dd686da42225ea45b3e41a3ea575763a55394edb1c97828a0d84b17"
+    },
+    {
+      "case": "source1-doubletalk",
+      "stage": "pipeline",
+      "intervention": "additional-halfsecond-zero-context",
+      "recognizer": "parakeet",
+      "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom, to connect her parent for ever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+      "word": {
+        "errors": 1,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 48,
+        "rate": 0.020833333333333332
+      },
+      "character": {
+        "errors": 1,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_length": 202,
+        "rate": 0.0049504950495049506
+      },
+      "empty": false,
+      "first_word_correct": true,
+      "input": {
+        "rate": 16000,
+        "channels": 1,
+        "frames": 299440,
+        "duration_s": 18.715,
+        "nonfinite_samples": 0,
+        "rms": 0.04397577509466237,
+        "peak": 0.6136580109596252,
+        "silence_ratio_below_1e_5_fs": 0.05645538338231365,
+        "samples_above_unity": 0
+      },
+      "decode_ms": 2141.4055999775883,
+      "source_pcm_sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12",
+      "window_sha256": "f2a351c36dd686da42225ea45b3e41a3ea575763a55394edb1c97828a0d84b17"
+    }
+  ]
+}

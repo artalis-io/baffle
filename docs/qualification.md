@@ -1,5 +1,9 @@
 # Reproducible speech and acoustic qualification
 
+[Gate H](gate-h.md) records the new paired ASR protocol, conservative checks,
+retained failures and human-review export. It does not supersede earlier failed
+evidence or qualify unreviewed interruption onsets.
+
 The [2026-11-20 real-world report](real-world-qualification.md) retains actual
 recorded-room/backend comparisons, seeded word-recognition failures and real
 inference-contention measurements. See the [external acquisition/replay guide](../tools/acoustic-runner/README.md)

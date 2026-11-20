@@ -1,0 +1,117 @@
+{
+  "archived_utc": "2026-11-20T22:46:44.420475+00:00",
+  "archive_parent_revision": "83c1bbc4b7febc14c814222ee51e23d1824bc3ff",
+  "gate_h": "PARTIAL",
+  "production_ready": false,
+  "abi_stable": false,
+  "evaluations": 280,
+  "independent_phone_review": false,
+  "strict_checks": [
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "aec-ns",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "aec-ns-agc",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "near_only_regressions": [
+        "source1-near-quiet"
+      ],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "FAIL",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [
+        "source0-doubletalk",
+        "source0-loud-doubletalk"
+      ],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "PASS"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "aec-ns",
+      "near_only_regressions": [
+        "source0-near-quiet",
+        "source1-near-quiet"
+      ],
+      "new_blank_speech_cases": [
+        "source0-capture-epoch",
+        "source1-near-quiet"
+      ],
+      "near_nonregression": "FAIL",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "PASS"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "aec-ns-agc",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [
+        "source0-doubletalk",
+        "source0-loud-doubletalk",
+        "source0-capture-epoch"
+      ],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [
+        "source0-doubletalk",
+        "source0-loud-doubletalk",
+        "source0-capture-epoch",
+        "source1-doubletalk"
+      ],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    }
+  ],
+  "original_threshold_db": 8,
+  "reproduced_db": 14.60337539447629,
+  "original_fixture_code_sha256": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+  "failures_preserved": true,
+  "root_cause_status": "Blanks isolated to feature/model/greedy level/context sensitivity, not fully numerically explained; no model-specific DSP workaround",
+  "raw_audio_public": false
+}

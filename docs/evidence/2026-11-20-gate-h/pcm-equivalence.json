@@ -1,0 +1,37 @@
+{
+  "core_before": "a231983",
+  "core_after": "ee1c080",
+  "case": "source0-render-restart",
+  "results": [
+    {
+      "stage": "baffle",
+      "before_pcm_sha256": "cc966040f72d97bbbd6a36eda890817e9fdd3587f11d24badd50ed0b5a9f031a",
+      "after_pcm_sha256": "cc966040f72d97bbbd6a36eda890817e9fdd3587f11d24badd50ed0b5a9f031a",
+      "combined_epoch_generation_flag": true
+    },
+    {
+      "stage": "aec-ns",
+      "before_pcm_sha256": "d34bf07689e0845d8c7c06abe56774597d016b61f0e27cd135b5caf8ae2cafeb",
+      "after_pcm_sha256": "d34bf07689e0845d8c7c06abe56774597d016b61f0e27cd135b5caf8ae2cafeb",
+      "combined_epoch_generation_flag": true
+    },
+    {
+      "stage": "aec-ns-agc",
+      "before_pcm_sha256": "59c8c16178ac9e8519cce13c37c5204975352ee8cc6f4578c59a249b8bef56f9",
+      "after_pcm_sha256": "59c8c16178ac9e8519cce13c37c5204975352ee8cc6f4578c59a249b8bef56f9",
+      "combined_epoch_generation_flag": true
+    },
+    {
+      "stage": "pipeline",
+      "before_pcm_sha256": "1ccea428a76776c2511dfb5d8562ec87074cbe3ea047b1a105f8f38f592ef7a1",
+      "after_pcm_sha256": "1ccea428a76776c2511dfb5d8562ec87074cbe3ea047b1a105f8f38f592ef7a1",
+      "combined_epoch_generation_flag": true
+    },
+    {
+      "stage": "aec-vad",
+      "before_pcm_sha256": "cc966040f72d97bbbd6a36eda890817e9fdd3587f11d24badd50ed0b5a9f031a",
+      "after_pcm_sha256": "cc966040f72d97bbbd6a36eda890817e9fdd3587f11d24badd50ed0b5a9f031a",
+      "combined_epoch_generation_flag": true
+    }
+  ]
+}

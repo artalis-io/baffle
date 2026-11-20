@@ -55,5 +55,10 @@ blank ASR hypotheses, epoch-reset tails and missing reviewed onset labels are
 retained. The optional [acoustic tools](tools/acoustic-runner) build against
 installed public libraries without changing the core dependencies.
 
+[Gate H](docs/gate-h.md) adds stage-by-stage WER/CER on 280 paired evaluations.
+Double-talk improves over raw input, while near-only regressions, model-sensitive
+blank hypotheses and assistant-only false transcripts remain explicit failures.
+Reviewed first-phone/syllable preservation remains open; no production claim.
+
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.

@@ -226,7 +226,7 @@ int main(int argc, char **argv) try
     size_t transport_index=0; bool missing_reference=false;
     Receipt observed{};
     auto process=[&](uint64_t position) -> uint32_t {
-        observed={}; observed.gain=1;
+        observed={}; observed.gain=1; observed.vad_probability=-1;
         n.timing.frame_position=r.timing.frame_position=position;
         n.timing.flags=r.timing.flags=0;
         if(transport_index<transport.size()&&transport[transport_index].frame==position) {
@@ -246,8 +246,10 @@ int main(int argc, char **argv) try
             bf_process_info info=BF_INIT(bf_process_info);
             check(bf_pipeline_process(pipeline,&n,missing_reference ? nullptr:&r,&o,&info));
             observed.priming=info.priming; observed.discarded=info.discarded_frames;
-            observed.vad_active=info.vad.active; observed.vad_probability=info.vad.probability;
-            observed.gain=info.level.gain; observed.aec_resets=info.aec.resets;
+            observed.vad_active=info.vad.active;
+            if(stages&BF_STAGE_VAD) observed.vad_probability=info.vad.probability;
+            if(stages&BF_STAGE_AGC) observed.gain=info.level.gain;
+            observed.aec_resets=info.aec.resets;
             if (!o.frames) std::fill(out,out+frames,0.0f);
             return info.flags;
         }
