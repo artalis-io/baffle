@@ -1,5 +1,47 @@
 # Public C API and ownership
 
+## Signal interpretation and validity
+
+Baffle reports signal measurements, not user/speaker attribution or transcript
+commitment. The legacy VAD field named `probability` is a bounded **heuristic
+activity score**, not a statistically calibrated probability that a user speaks.
+Assistant residual echo can activate it. Do not interpret it as `is_user_speaking`.
+Reference levels describe supplied digital PCM at its declared provenance, not
+actual acoustic output. Queue invalidation or flush acknowledgement does not
+establish acoustic silence or remove an existing room tail.
+
+| Existing signal | Meaning and validity |
+|---|---|
+| `bf_aec_info.input_rms` | Current capture block, including near speech, echo and noise; not isolated near-end energy. Valid after a successful AEC process call. |
+| `bf_aec_info.output_rms` | Current AEC output, including near speech and remaining noise/echo; not residual-echo-only energy. |
+| Reference PCM / `BF_REFERENCE_MISSING` | Reference activity can be measured from the public PCM. Missing reference means unavailable and bypass/frozen adaptation, not silence at the loudspeaker. |
+| `reference_generation`, `resets`, AEC flags | Current admitted reference generation, cumulative reset count and observed transitions. Neither zero resets nor a dominant adapted tap proves convergence/reliability. |
+| `bf_level_info` | AGC input/output RMS, final linked gain and number of samples affected by its limiter. Valid when AGC ran; limiter engagement is distinct from digital/physical clipping. |
+| `bf_vad_info` | Signal activity score, hangover decision and tracked noise RMS. Valid for an enabled VAD with real processed frames; zero-frame calls advance no classifier evidence. |
+| `BF_AUDIO_CLIPPED` | Observable digital saturation/clamping, including backend S16 and output conversion; not proof about analog microphone/speaker clipping or nonlinear driver processing. |
+| Process flags / `discarded_frames` | Current processing events and buffered capture discarded during reset; keep source timing and epoch with each emitted block. |
+
+In the pipeline, **AEC info belongs to the current consumed input**, even while
+NS is priming. AGC/VAD info belongs to the emitted (possibly delayed) output and
+is invalid when the stage is disabled or no output frames are emitted. Flush
+can emit a pending NS block but consumes no new capture/reference: its default
+AEC record is not a current reference observation. Use stage configuration,
+`consumed_frames`, `priming` and output `frames` to determine validity. Inactive
+record zeros must not be treated as measured silence. AEC and AGC RMS from the
+same call can describe different source frames and cannot simply be divided
+to obtain ERLE. Even aligned ratios require a known far-only interval.
+
+`bf_aec_estimate_delay` reports a dominant learned mono filter tap, not calibrated
+acoustic propagation or device latency. Capture/output timing validity and
+uncertainty remain independent of signal measurements. This API exposes no
+calibrated AEC convergence/reliability or residual-echo probability. Such signals
+would require separate ground-truth validation; no speculative fields are added.
+Public PCM permits inexpensive application/DSP-side level measurements without
+expanding the provisional ABI. Existing record layouts and 45 exports remain
+unchanged in Gate I.
+
+## PCM and ownership
+
 ABI zero is provisional. Initialize every public record (including nested
 formats/timing) with BF_INIT. Required prefixes cannot be shortened; larger
 unknown tails are ignored and output size/version headers are preserved.

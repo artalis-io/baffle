@@ -13,8 +13,9 @@ def group(s):
 def summarize(records,policy):
     aggregates=[];checks=[]
     for kind in ("whisper","parakeet"):
-        for stage in ("raw","baffle","aec-ns","aec-ns-agc","pipeline"):
+        for stage in ("raw","baffle","ns-only","agc-only","aec-ns","aec-agc","ns-agc","aec-ns-agc","pipeline"):
             selected=[r for r in records if r["recognizer"]==kind and r["stage"]==stage]
+            if not selected:continue
             for name in ("near-only","doubletalk","cancellation","recovery","far-only","silence"):
                 rows=[r for r in selected if group(r["scenario"])==name]
                 if not rows:continue

@@ -164,6 +164,28 @@ int main(void)
     CHECK(!vi.active);
     CHECK(bf_vad_reset(vad) == BF_OK);
     free(base);
+    /* Same freeze contract at 48 kHz stereo, including reset and independent
+     * interleaved channel history. Original 16 kHz fixtures above are unchanged. */
+    {
+        float stereo[480 * 2], rendered[480 * 2], expected[480 * 2] = {0};
+        nc.sample_rate = 48000; nc.channels = 2; nc.frame_frames = 480; nc.strength_db = 18;
+        CHECK(bf_noise_size(&nc, &bytes) == BF_OK);
+        p = memory(bytes, &base);
+        CHECK(bf_noise_init(p, bytes, &nc, &ns) == BF_OK);
+        CHECK(bf_noise_reset(ns) == BF_OK);
+        double stereo_error = 0, stereo_signal = 0;
+        for (unsigned frame = 0; frame < 20; ++frame) {
+            for (unsigned i = 0; i < 960; ++i) stereo[i] = .02f * noise();
+            CHECK(bf_noise_process(ns, stereo, rendered, 1) == BF_OK);
+            for (unsigned i = 0; i < 960; ++i) {
+                double d = rendered[i] - expected[i]; stereo_error += d * d;
+                stereo_signal += (double)expected[i] * expected[i];
+            }
+            memcpy(expected, stereo, sizeof(expected));
+        }
+        CHECK(stereo_error / stereo_signal < 1e-10);
+        free(base);
+    }
     puts("NS numerical/quality fixtures, AGC limiting/target and classical VAD onset/hangover "
          "passed");
     return 0;
