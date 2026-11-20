@@ -13,7 +13,7 @@ outstanding. Green CI does not close these requirements.
 | B: PCM/timing/state | PASS for implemented contract | [header](../include/baffle.h), [PCM](../src/pcm.c), [clock](../src/clock.c), [metadata tests](../tests/pcm.c), [pipeline tests](../tests/pipeline.c): ownership, rational timing, independent clocks/changing slope, epochs, transactional errors, reset and exact EOS. |
 | C: numerical DSP | PASS for scalar baseline | [SRC](../src/resampler.c), [channels](../src/channels.c), [numerical tests](../tests/numerical.c): split invariance, +/-drift, common/extreme rates, 32-channel isolation, analytic tone/stopband grid, bounded tail drain. No SIMD/GPU claim. |
 | D: conditioning | PARTIAL | Real [NS](../src/noise.c)/[AGC/VAD](../src/conditioning.c), [quality tests](../tests/conditioning.c): synthetic reduction/reconstruction, clipping, gain, onset/hangover pass. Real speech/noise corpus accuracy, distortion/pumping and stage-order comparison remain unqualified. |
-| E: AEC | PARTIAL | Pinned mature SpeexDSP MDF, [AEC tests](../tests/aec.c), reference alignment, synthetic double-talk/path change/delay, WAV tooling and four exploratory real traces. Weak recorded energy reduction; calibrated quality/double-talk/tail qualification remains open. |
+| E: AEC | PARTIAL | Pinned mature SpeexDSP MDF, [AEC tests](../tests/aec.c), reference alignment, synthetic double-talk/path change/delay, WAV tooling and four exploratory real traces. [AEC convergence](aec-quality.md) closes the original 8 dB target (14.6034 dB) and adds recorded-source holdouts; calibrated quality/onset/double-talk/tail qualification remains open. |
 | F: duplex integration | PARTIAL overall; deterministic transport PASS | [adapter](../adapters/hail.c), [installed-only consumer](../examples/hail-consumer/main.c), 700 modeled seconds of both transport/full pipeline, rates/drift/epochs/generations/loss/backpressure/lifecycle/short EOS. Native recovery/alignment remains hardware qualification. |
 | G: convergence | PARTIAL | Local Windows/Linux ARM64 tests, optional AEC, static/shared, ASan/UBSan/TSan, heap guard, fuzz/analysis, performance and CPU contention proxy. Physical tests, actual inference contention, prolonged paced soak, Windows ARM64 and final ABI policy remain outstanding. |
 
@@ -52,6 +52,11 @@ rate's complete response curve or a stable ABI release.
   qualification. Details, limitations and commands are in qualification.md.
 
 ## Executed verification
+
+The later [AEC quality convergence](aec-quality.md) retains the original 6.6484 dB
+failure, the independent near-only tone regression and corrected 14.6034 dB pass.
+The source-only OSR holdouts and adversarial AEC fuzzer extend verification;
+original signal-quality and physical limits are not replaced by these passes.
 
 The [November 20 convergence evidence](evidence/2026-11-20/summary.json) records
 the missing-reference correction, direct S16 decoder regression and controlled

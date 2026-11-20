@@ -40,7 +40,9 @@ See the independent [installed PCM consumer](examples/pcm-pipeline), optional
 `BF_WITH_HAIL=ON` builds separate `Baffle::hail_adapter` against installed Hail.
 The core neither includes nor links Hail.
 
-Speech conditioning and AEC have deterministic synthetic evidence. Recorded-speech
+The unchanged original AEC quality target now passes after correcting capture
+DC rejection; [the convergence report](docs/aec-quality.md) retains the original
+failure and includes separate recorded-English holdout evidence. Speech conditioning and AEC have deterministic synthetic evidence. Recorded-speech
 quality, physical acoustic behavior, device timing and audible interruption tails
 remain unqualified. Exploratory real-recording AEC trials were weak and are
 documented alongside synthetic results. **This working DSP implementation is not a production-readiness

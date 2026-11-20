@@ -65,6 +65,13 @@ jobs:
         run: python tools/speech_quality.py build/Release/baffle_qualify.exe build/speech-quality build/speech-quality.json --assert-preservation
       - if: runner.os != 'Windows'
         run: python3 tools/speech_quality.py build/baffle_qualify build/speech-quality build/speech-quality.json --assert-preservation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: speech-quality-${{ matrix.os }}-${{ matrix.shared }}
+          path: |
+            build/speech-quality.json
+            build/Testing/Temporary/LastTest.log
       - run: cmake --install build --config Release --prefix "${{ github.workspace }}/installed"
       - if: runner.os == 'Windows'
         shell: pwsh

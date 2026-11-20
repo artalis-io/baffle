@@ -77,7 +77,7 @@ Full manifests/results are retained in the evidence directory.
 
 ```sh
 python3 tools/controlled_aec.py build-quality/baffle_qualify build-recorded controlled.json --fetch
-# Optional acceptance check retains the original threshold and currently fails:
+# Acceptance check retains the original threshold (failed at 29feb81):
 python3 tools/controlled_aec.py build-quality/baffle_qualify build-recorded controlled.json --assert-raw-target
 ```
 
@@ -88,7 +88,7 @@ adds near speech during seconds 8..18, and runs a 200 ms AEC tail. This removes
 unknown relative clocks from this experiment; it does not model a real room or
 provide clean speech/perceptual ground truth. No audio is redistributed.
 
-The measured near-component projection was **0.9084**, with raw-component SNR
+At `29feb81`, the measured near-component projection was **0.9084**, with raw-component SNR
 improvement **6.6484 dB**, below the predeclared **8 dB** target. That failure is
 retained. Far-only ERLE at seconds 6..8 was **25.8454 dB**. A zero-reference
 near-only control had **8.1676 dB** raw-component SNR, exposing the selected
@@ -96,6 +96,27 @@ Speex DC-notch/preemphasis/deemphasis response. Error SNR relative to that
 backend-processed near control was **20.4415 dB**; this diagnostic does not
 replace the failed raw target or establish speech quality. Further recorded
 double-talk, moving-path and physical acoustic qualification remains required.
+
+The [AEC convergence report](aec-quality.md) preserves that failure and isolates
+the upstream capture DC-notch response. A rate-consistent 20 Hz pole-radius
+policy now gives **14.6034 dB** improvement and **.9887** near-component projection
+on the unchanged original fixture; the **8 dB** requirement passes. This is not
+a physical or perceptual quality pass. Two attributed, redistributable English
+OSR source recordings add a separate evaluation holdout suite:
+
+```sh
+python3 tools/speech_quality.py build-quality/baffle_qualify build-osr osr.json --assert-preservation
+```
+
+Both roles, 10/20 ms frames, near-only/double-talk, low/high near levels, simulated
+room taps/noise/path change and playback gaps are retained, with complete-interval
+raw SNR/SI-SDR/projection and all one-second power windows. Source conditions and
+hashes are in `tests/fixtures/osr/README.md`. Early energy windows include noise
+and do not qualify speech onset; no Hungarian, recognizer WER or measured room
+response is supplied. The original real acoustic traces remain unqualified.
+
+The offline tool's optional eighth/ninth arguments configure tail length and
+10/20 ms framing for controlled diagnostics; existing invocations are unchanged.
 
 ## Physical procedure and required records
 

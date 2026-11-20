@@ -47,13 +47,30 @@ the pinned upstream impulse-response accessor is not multichannel-safe. Mono
 readback reports the dominant adapted tap, not measured hardware latency.
 
 The selected MDF source also applies a DC-notch filter and preemphasis/
-deemphasis. An all-zero reference still exercises this signal conditioning;
+deemphasis. Baffle's private `mdf_baffle.c` includes the hash-pinned, unmodified
+upstream file and configures the notch radius as `exp(-2*pi*20/sample_rate)` at
+initialization. The same DC rejector remains; no adaptation or suppression
+parameter changes. This corrects the rate-dependent near-end distortion
+documented in [AEC convergence](aec-quality.md). An all-zero reference still exercises this signal conditioning;
 it is not a unity-transfer oracle. Missing-reference bypass skips the backend
 and copies the original F32 capture, so its transfer response differs from
 processing with a zero reference. Zero additional frame buffering does not mean
 zero signal phase response. The controlled recorded-speech diagnostic in
 [qualification](qualification.md) separates these effects without hiding the
-failed raw-waveform target.
+historical failed raw-waveform target and its corrected result.
+
+Current AEC3 source exposes render analysis, an optional external buffer delay
+and linear output, using C++/AudioBuffer, block framing and additional runtime
+infrastructure. The official freedesktop AudioProcessing package offers a Meson
+build, BSD licensing and currently documents testing on Linux only:
+https://www.freedesktop.org/software/pulseaudio/webrtc-audio-processing/
+https://webrtc.googlesource.com/src/+/refs/heads/main/modules/audio_processing/aec3/echo_canceller3.h
+This is a source/build evaluation, **not** a measured quality/CPU comparison.
+No AEC3 binary was built or benchmarked here, and no superiority claim is made.
+The current correction is attributable to one existing conditioning coefficient;
+it does not justify a new C++ backend or mandatory dependency. AEC3 remains a
+candidate if calibrated moving-room/double-talk evaluation demonstrates need;
+its allocation, buffering, platform and licensing integration still need review.
 
 Its pinned BSD-style COPYING is installed as `SpeexDSP-COPYING`; per-file
 copyright/license comments also ship in `SpeexDSP-source-notices.txt`, including

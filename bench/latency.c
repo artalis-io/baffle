@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+static FILE *raw_trace;
 #ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
@@ -99,6 +100,12 @@ static void report(const char *name, uint32_t rate, uint32_t channels, uint32_t 
         if (i)
             jitter += fabs(times[i] - times[i - 1]);
     }
+    /* Optional offline receipt after the entire measured case, before sorting.
+     * File I/O is outside all timed processing calls and elapsed CPU intervals. */
+    if (raw_trace)
+        for (uint32_t i = 0; i < n; ++i)
+            fprintf(raw_trace, "%s,%u,%u,%u,%u,%u,%.0f\n", name, rate, channels, sessions,
+                    hop_ms, i, times[i] * 1e9);
     qsort(times, n, sizeof(*times), compare);
     printf("%s,%u,%u,%u,%u,%zu,%.4f,%.4f,%.4f,%.4f,%.4f,%u,%.6f,%.3f,%.3f,%.4f,%u\n", name, rate,
            channels, sessions, n, bytes, times[n / 2] * 1e3, times[(n - 1) * 95 / 100] * 1e3,
@@ -221,6 +228,17 @@ int main(int argc, char **argv)
     uint32_t n = argc > 1 ? (uint32_t)strtoul(argv[1], NULL, 10) : 3000;
     if (n < 100 || n > 1000000)
         return 2;
+    if (argc > 2) {
+#ifdef _MSC_VER
+        if (fopen_s(&raw_trace, argv[2], "w"))
+            return 2;
+#else
+        raw_trace = fopen(argv[2], "w");
+#endif
+        if (!raw_trace)
+            return 2;
+        fputs("case,rate,channels,sessions,frame_ms,iteration,processing_ns\n", raw_trace);
+    }
     bf_library_info lib = BF_INIT(bf_library_info);
     check(bf_library_query(&lib));
     puts("case,rate,channels,sessions,iterations,workspace_bytes,p50_ms,p95_ms,p99_ms,max_ms,mean_"
@@ -240,8 +258,16 @@ int main(int argc, char **argv)
     pipeline(16000, 1, mask, 8, n, 10);
     if (lib.features & BF_FEATURE_SPEEXDSP)
         for (uint32_t rate = 16000; rate <= 48000; rate += 32000) {
+            if (rate == 48000)
+                pipeline(rate, 1, BF_STAGE_AEC, 1, n, 10);
+            pipeline(rate, 1, BF_STAGE_AEC, 8, n, 10);
             pipeline(rate, 1, BF_STAGE_AEC, 1, n, 20);
             pipeline(rate, 1, BF_STAGE_AEC, 8, n, 20);
         }
+    if (raw_trace) {
+        int failed = ferror(raw_trace);
+        if (fclose(raw_trace) || failed)
+            return 1;
+    }
     return 0;
 }
