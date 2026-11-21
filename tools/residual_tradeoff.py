@@ -77,6 +77,32 @@ def characterize(inputs,baseline,candidate,output):
         rows.append(row)
     dump(output,{'method':'Whole registered ASR source windows; 512-point Welch/Hann, 50% overlap. Coherence is a spectral diagnostic, not calibrated user evidence. Mic/output ratios require known absent near speech. Far-only hypotheses are not commitment.','results':rows})
 
+def signal_scores(inputs,baseline,candidate,output):
+    rows=[]
+    for j in load(inputs/'manifest.json')['jobs']:
+        if not j['reference_transcript']:continue
+        first,last=j['asr_frames'];rate=j['rate'];delay=rate//100
+        near=np.fromfile(inputs/j['oracle'],dtype='<f4')[first:last].astype(float)
+        assert sha(inputs/j['oracle'])==j['oracle_sha256']
+        energy=float(near@near)
+        for label,folder in [('baseline',baseline),('candidate',candidate)]:
+            path=folder/(j['name']+'-pipeline.f32')
+            y=np.fromfile(path,dtype='<f4')[first+delay:last+delay].astype(float)
+            assert len(y)==len(near)
+            projection=float(near@y/energy)
+            freq,sp=welch(near,fs=rate,nperseg=512,noverlap=256)
+            _,sy=welch(y/max(abs(projection),1e-8),fs=rate,nperseg=512,noverlap=256)
+            mask=(freq>=300)&(freq<=7500)
+            trace=list(csv.DictReader((folder/(j['name']+'-pipeline-vad.csv')).open()))
+            act=[int(v['first_frame']) for v in trace if int(v['active'])]
+            rows.append({'case':j['name'],'scenario':j['scenario'],'variant':label,'pcm_sha256':sha(path),
+                'near_projection':projection,'near_relative_error_energy':float(np.sum((y-near)**2)/energy),
+                'gain_adjusted_welch_log_spectral_rms_db':float(np.sqrt(np.mean((10*np.log10(np.maximum(sp[mask],1e-12))-10*np.log10(np.maximum(sy[mask],1e-12)))**2))),
+                'peak':float(np.max(np.abs(y))),'above_unity':int(np.sum(np.abs(y)>1)),
+                'whole_record_vad_active_blocks':sum(int(v['active']) for v in trace),'first_active_trace_frame':act[0] if act else None,
+                'reviewed_phoneme_onset_delay':None,'asr_onset_delay':None})
+    dump(output,{'method':'Identical registered source intervals. Raw near-component projection/error includes AGC and remaining echo, not isolated near gain. Gain-adjusted 512-point Welch spectrum is not perceptual/phone preservation. First active VAD can be echo, not user onset. No reviewed onset or streaming ASR latency is invented.','results':rows})
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);s=p.add_subparsers(dest='mode',required=True)
     x=s.add_parser('control')
@@ -85,7 +111,10 @@ if __name__=='__main__':
     for k in ('baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
     x=s.add_parser('characterize')
     for k in ('input','baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
+    x=s.add_parser('signal')
+    for k in ('input','baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
     x=p.parse_args()
     if x.mode=='control':split_control(x.runner,x.input,x.baseline,x.output)
     elif x.mode=='compare':compare(x.baseline,x.candidate,x.output)
-    else:characterize(x.input,x.baseline,x.candidate,x.output)
+    elif x.mode=='characterize':characterize(x.input,x.baseline,x.candidate,x.output)
+    else:signal_scores(x.input,x.baseline,x.candidate,x.output)

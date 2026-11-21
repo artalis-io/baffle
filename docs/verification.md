@@ -200,6 +200,11 @@ verification limits remain in the evidence ledger, not suppressed by tolerances.
 
 ## Reproduction
 
+[Gate J](gate-j.md) adds a fixed external coherence experiment, split-control PCM
+identity and paired ASR/room/resource comparisons. The candidate is rejected;
+its device-free tests and sanitizer checks do not establish acoustic acceptance.
+Production DSP, public headers and Hail are unchanged from the Gate I baseline.
+
 [Gate I](gate-i.md) retains the before-fix NS regression, unchanged 8 dB AEC
 acceptance, eight-stage paired recognition, real/simulated assistant-only
 failures and fresh 16/48 kHz inference trials. Its

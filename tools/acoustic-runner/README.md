@@ -240,3 +240,28 @@ the fixed 16 kHz model rate. Use separate fresh directories for 30-second single
 workloads and longer combined trials. ASR remains rolling offline re-decoding,
 not a validated streaming engine. See [Gate I](../../docs/gate-i.md) and its
 command ledger for the executed configurations, failed cases and limitations.
+
+## Gate J isolated residual experiment
+
+`baffle_residual_runner` is external QA, not a Baffle backend or installed target.
+It has the same PCM/receipt arguments as the main runner. `pipeline` selects the
+fixed rejected coherence candidate; `residual-control` disables its mask and
+verifies the split public-API AEC+conditioning path against the original runner.
+No candidate is automatically selected by Baffle. Do not use the experiment as
+a qualified echo suppressor. See the [fixed protocol](../../docs/gate-j-protocol.md)
+and [decision](../../docs/gate-j.md).
+
+```sh
+python tests/residual_tools.py acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_residual_runner
+python tools/residual_tradeoff.py control acoustic-tools/baffle_residual_runner paired-input eight-stage split-control
+python tools/paired_asr.py run acoustic-tools/baffle_residual_runner acoustic-tools/baffle_vad_trace models paired-input residual-speech --stages raw pipeline
+python tools/residual_tradeoff.py compare eight-stage/results.json residual-speech/results.json comparison.json
+python tools/residual_tradeoff.py signal paired-input eight-stage residual-speech signal-comparison.json
+```
+
+Use the unchanged 11 assistant-only inputs and separate recorded room replays as
+documented in the Gate J ledger. `recorded_far_asr.py --stages raw pipeline`
+selects only those variants; its original four-stage default is unchanged.
+`residual_tradeoff.py characterize INPUT BASELINE CANDIDATE REPORT` requires the
+baseline's `raw`, `baffle` and `pipeline` receipts; it retains per-case spectra,
+VAD, hypotheses, resets and explicitly unavailable commitment/timing evidence.

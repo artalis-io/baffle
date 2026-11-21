@@ -67,5 +67,10 @@ Near-only recognition regressions, assistant-only false transcripts and weak
 real-room AEC remain unresolved. New CPU-only 16/48 kHz inference trials retain
 execution, scheduling and the 10 ms NS delay separately. Gate I remains PARTIAL.
 
+[Gate J](docs/gate-j.md) rejects a bounded residual-coherence experiment: it fails
+assistant-only rejection, introduces a reference-loss speech blank, and worsens
+recorded false-word counts. The production DSP remains unchanged. Failed
+experiments and resource costs are retained; acoustic readiness remains PARTIAL.
+
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.
