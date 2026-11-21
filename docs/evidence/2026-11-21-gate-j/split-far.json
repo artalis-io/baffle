@@ -1,0 +1,181 @@
+{
+  "results": [
+    {
+      "case": "room-base",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\room-base-mic.f32",
+        "build-gate-i\\far-input\\room-base-reference.f32",
+        "build-gate-j\\split-far\\room-base.f32",
+        "build-gate-j\\split-far\\room-base.csv",
+        "build-gate-j\\split-far\\room-base.json"
+      ],
+      "pcm_sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757",
+      "baseline_sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757",
+      "equal": true
+    },
+    {
+      "case": "quiet",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\quiet-mic.f32",
+        "build-gate-i\\far-input\\quiet-reference.f32",
+        "build-gate-j\\split-far\\quiet.f32",
+        "build-gate-j\\split-far\\quiet.csv",
+        "build-gate-j\\split-far\\quiet.json"
+      ],
+      "pcm_sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06",
+      "baseline_sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06",
+      "equal": true
+    },
+    {
+      "case": "loud",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\loud-mic.f32",
+        "build-gate-i\\far-input\\loud-reference.f32",
+        "build-gate-j\\split-far\\loud.f32",
+        "build-gate-j\\split-far\\loud.csv",
+        "build-gate-j\\split-far\\loud.json"
+      ],
+      "pcm_sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b",
+      "baseline_sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b",
+      "equal": true
+    },
+    {
+      "case": "long-tail",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\long-tail-mic.f32",
+        "build-gate-i\\far-input\\long-tail-reference.f32",
+        "build-gate-j\\split-far\\long-tail.f32",
+        "build-gate-j\\split-far\\long-tail.csv",
+        "build-gate-j\\split-far\\long-tail.json"
+      ],
+      "pcm_sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0",
+      "baseline_sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0",
+      "equal": true
+    },
+    {
+      "case": "nonlinear",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\nonlinear-mic.f32",
+        "build-gate-i\\far-input\\nonlinear-reference.f32",
+        "build-gate-j\\split-far\\nonlinear.f32",
+        "build-gate-j\\split-far\\nonlinear.csv",
+        "build-gate-j\\split-far\\nonlinear.json"
+      ],
+      "pcm_sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f",
+      "baseline_sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f",
+      "equal": true
+    },
+    {
+      "case": "path-change",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\path-change-mic.f32",
+        "build-gate-i\\far-input\\path-change-reference.f32",
+        "build-gate-j\\split-far\\path-change.f32",
+        "build-gate-j\\split-far\\path-change.csv",
+        "build-gate-j\\split-far\\path-change.json"
+      ],
+      "pcm_sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0",
+      "baseline_sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0",
+      "equal": true
+    },
+    {
+      "case": "delay-100ms",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\delay-100ms-mic.f32",
+        "build-gate-i\\far-input\\delay-100ms-reference.f32",
+        "build-gate-j\\split-far\\delay-100ms.f32",
+        "build-gate-j\\split-far\\delay-100ms.csv",
+        "build-gate-j\\split-far\\delay-100ms.json"
+      ],
+      "pcm_sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434",
+      "baseline_sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434",
+      "equal": true
+    },
+    {
+      "case": "startup",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\startup-mic.f32",
+        "build-gate-i\\far-input\\startup-reference.f32",
+        "build-gate-j\\split-far\\startup.f32",
+        "build-gate-j\\split-far\\startup.csv",
+        "build-gate-j\\split-far\\startup.json"
+      ],
+      "pcm_sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6",
+      "baseline_sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6",
+      "equal": true
+    },
+    {
+      "case": "cancel-tail",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\cancel-tail-mic.f32",
+        "build-gate-i\\far-input\\cancel-tail-reference.f32",
+        "build-gate-j\\split-far\\cancel-tail.f32",
+        "build-gate-j\\split-far\\cancel-tail.csv",
+        "build-gate-j\\split-far\\cancel-tail.json"
+      ],
+      "pcm_sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c",
+      "baseline_sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c",
+      "equal": true
+    },
+    {
+      "case": "restart",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\restart-mic.f32",
+        "build-gate-i\\far-input\\restart-reference.f32",
+        "build-gate-j\\split-far\\restart.f32",
+        "build-gate-j\\split-far\\restart.csv",
+        "build-gate-j\\split-far\\restart.json"
+      ],
+      "pcm_sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0",
+      "baseline_sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0",
+      "equal": true
+    },
+    {
+      "case": "reference-gap",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "residual-control",
+        "16000",
+        "build-gate-i\\far-input\\reference-gap-mic.f32",
+        "build-gate-i\\far-input\\reference-gap-reference.f32",
+        "build-gate-j\\split-far\\reference-gap.f32",
+        "build-gate-j\\split-far\\reference-gap.csv",
+        "build-gate-j\\split-far\\reference-gap.json"
+      ],
+      "pcm_sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe",
+      "baseline_sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe",
+      "equal": true
+    }
+  ],
+  "all_equal": true
+}

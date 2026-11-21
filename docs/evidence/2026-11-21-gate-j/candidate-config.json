@@ -1,0 +1,16 @@
+{
+  "control": "Original AEC+NS+AGC+VAD, 10ms, mono16/48k, 200ms AEC tail, NS18dB, AGCtarget-18dBFS",
+  "candidate": "Reference-aware removed-echo/residual coherence Wiener amplitude postfilter before NS",
+  "statistics_ms": 100,
+  "admission_blocks": 20,
+  "gain_attack_ms": 5,
+  "gain_release_ms": 50,
+  "frame_frames": "rate/100",
+  "fft": "radix2 next power >= frame, rectangular zero padding, IFFT trim same block",
+  "added_delay_frames": 0,
+  "gain_floor": null,
+  "reference_missing_or_inactive": "Reset candidate and bypass, preserve near-leg state",
+  "public_telemetry_added": false,
+  "decoding": "Pinned unchanged sherpa-onnx CPU2threads, complete registered utterance windows, no gating/normalization/transcript rejection",
+  "adoption": "REJECT; no tuning after first fixed results"
+}

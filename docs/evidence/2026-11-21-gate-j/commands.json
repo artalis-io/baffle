@@ -1,0 +1,380 @@
+{
+  "cwd": "C:/Users/Mark/artalis.io/src/baffle",
+  "fresh_directories_required": true,
+  "fixture_assets": "Unchanged Gate H/I caches; pinned preparation/download identities and licenses retained there. Do not silently replace inputs.",
+  "commands": [
+    {
+      "label": "Original unchanged 8 dB acceptance",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/controlled_aec.py",
+        "build-adapter/baffle_qualify.exe",
+        "build-recorded",
+        "build-gate-j/baseline-controlled.json",
+        "--assert-raw-target"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "baseline-far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-gate-j/runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-j/baseline-far",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "candidate-far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-gate-j/runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-j/candidate-far",
+        "--stages",
+        "raw",
+        "pipeline"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "candidate-speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-gate-j/runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-j/candidate-speech",
+        "--stages",
+        "raw",
+        "pipeline"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "split-speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "control",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-gate-h/input",
+        "build-gate-i/ablation-after",
+        "build-gate-j/split-speech"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "split-far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "control",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-gate-i/far-input",
+        "build-gate-j/baseline-far",
+        "build-gate-j/split-far"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "far compare",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "compare",
+        "build-gate-j/baseline-far/results.json",
+        "build-gate-j/candidate-far/results.json",
+        "build-gate-j/far-comparison.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "speech compare",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "compare",
+        "build-gate-i/ablation-after/results.json",
+        "build-gate-j/candidate-speech/results.json",
+        "build-gate-j/speech-comparison.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Failure characterization",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "characterize",
+        "build-gate-i/far-input",
+        "build-gate-j/baseline-far",
+        "build-gate-j/candidate-far",
+        "build-gate-j/failure-characterization.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Speech signal comparison",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/residual_tradeoff.py",
+        "signal",
+        "build-gate-h/input",
+        "build-gate-i/ablation-after",
+        "build-gate-j/candidate-speech",
+        "build-gate-j/speech-signals.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Recorded replay",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/room_replay.py",
+        "replay",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-acoustic/rooms",
+        "build-gate-j/candidate-rooms",
+        "--backends",
+        "pipeline"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Recorded ASR",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/recorded_far_asr.py",
+        "build-acoustic/models",
+        "build-acoustic/rooms",
+        "build-gate-j/candidate-rooms",
+        "build-gate-j/recorded-asr.json",
+        "--stages",
+        "raw",
+        "pipeline"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Near numerical preservation",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/speech_preservation.py",
+        "build-gate-h/input",
+        "build-gate-j/candidate-speech",
+        "build-gate-j/candidate-preservation.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Digital recovery",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/acoustic_recovery.py",
+        "build-gate-i/far-input",
+        "build-gate-j/candidate-far",
+        "build-gate-j/candidate-recovery.json"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "baseline 16000 contention",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-j/performance-baseline-16000",
+        "--sample-rate",
+        "16000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "alone",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "candidate 16000 contention",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-j/performance-candidate-16000",
+        "--sample-rate",
+        "16000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "alone",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "baseline 48000 contention",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-j/performance-baseline-48000",
+        "--sample-rate",
+        "48000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "alone",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "candidate 48000 contention",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_residual_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-j/performance-candidate-48000",
+        "--sample-rate",
+        "48000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "alone",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "build-adapter",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-adapter",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "build-shared",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-shared",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "build-hail-consumer",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-hail-consumer",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "clang-cl experiment build",
+      "argv": [
+        "cmake",
+        "-S",
+        "tools/acoustic-runner",
+        "-B",
+        "build-gate-j/runner",
+        "-G",
+        "Ninja",
+        "-DCMAKE_C_COMPILER=clang-cl",
+        "-DCMAKE_CXX_COMPILER=clang-cl",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_PREFIX_PATH=C:/Users/Mark/artalis.io/src/baffle/build-adapter/installed"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Build",
+      "argv": [
+        "cmake",
+        "--build",
+        "build-gate-j/runner",
+        "--parallel"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "Device-free experiment tests",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tests/residual_tools.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-gate-j/runner/baffle_residual_runner.exe"
+      ],
+      "note": "Reproduction command, not a complete shell transcript. Exact spawned native commands are retained in result JSON."
+    },
+    {
+      "label": "ARM64 asan",
+      "argv": [
+        "python3",
+        "tests/residual_tools.py",
+        "build-room-tools-asan/baffle_acoustic_runner",
+        "build-room-tools-asan/baffle_residual_runner"
+      ],
+      "note": "spark-7468 /tmp/baffle.fVOhT0; installed sanitizer SDK, Clang18, LD_LIBRARY_PATH=/tmp/hail-gate-e-final.lTzsbV/compiler/usr/lib/aarch64-linux-gnu. Existing CMake cache imported before rebuild; retained Gate I tool configuration is unchanged."
+    },
+    {
+      "label": "ARM64 tsan",
+      "argv": [
+        "python3",
+        "tests/residual_tools.py",
+        "build-room-tools-tsan/baffle_acoustic_runner",
+        "build-room-tools-tsan/baffle_residual_runner"
+      ],
+      "note": "spark-7468 /tmp/baffle.fVOhT0; installed sanitizer SDK, Clang18, LD_LIBRARY_PATH=/tmp/hail-gate-e-final.lTzsbV/compiler/usr/lib/aarch64-linux-gnu. Existing CMake cache imported before rebuild; retained Gate I tool configuration is unchanged."
+    }
+  ]
+}

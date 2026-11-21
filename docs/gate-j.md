@@ -156,6 +156,11 @@ RSS includes the executable/runtime and is not the DSP arena size. No isolated
 kernel or inference-latency speedup is inferred from these short measurements.
 Execution, scheduling,
 sampled process CPU/RSS, declared NS delay and modeled queue occupancy are separate.
+The native replay process's sampled mean CPU is approximately .38→1.37% at
+16 kHz and 2.70→2.77% at 48 kHz under combined load (psutil, 100% per logical
+core). These coarse process observations include transport/receipt work; they
+are not an isolated DSP CPU counter. Sampled native RSS peaks are about 7.9 MB
+at 16 kHz and 14.3 MB at 48 kHz, with inference workers measured separately.
 The candidate uses bounded preallocated spectral arrays and a separate public AEC
 context; it adds no buffered hop or mandatory GPU work. A 200-call ARM64 allocation
 probe observes zero processing allocations. This is finite evidence, not a proof

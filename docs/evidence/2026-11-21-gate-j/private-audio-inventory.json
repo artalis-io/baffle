@@ -1,0 +1,626 @@
+{
+  "redistributed": false,
+  "files": [
+    {
+      "file": "build-gate-j/baseline-far/cancel-tail-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "8b58f5684230eea73c2cfdff58c80d1a65ca988a08e47713a235e7ab67beb446"
+    },
+    {
+      "file": "build-gate-j/baseline-far/cancel-tail-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c"
+    },
+    {
+      "file": "build-gate-j/baseline-far/delay-100ms-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "312042fdf0fde1156776ce51c6899d4b9e3c4a2ee8f5c3ee1088cf3199fe2822"
+    },
+    {
+      "file": "build-gate-j/baseline-far/delay-100ms-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434"
+    },
+    {
+      "file": "build-gate-j/baseline-far/long-tail-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "77a55a4e561ffc2536b06218ac270a108c76b2cf5daf5cc63a2961f457ee2d03"
+    },
+    {
+      "file": "build-gate-j/baseline-far/long-tail-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0"
+    },
+    {
+      "file": "build-gate-j/baseline-far/loud-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "68f2951ffc87cd72dca373ba65cf3d75fe2202006609b65b695e9d8a1374e09f"
+    },
+    {
+      "file": "build-gate-j/baseline-far/loud-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b"
+    },
+    {
+      "file": "build-gate-j/baseline-far/nonlinear-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "f8745fadeb048f3a80615dd79a95f02745a0e30045013814a0e1d1ab08ec1f75"
+    },
+    {
+      "file": "build-gate-j/baseline-far/nonlinear-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f"
+    },
+    {
+      "file": "build-gate-j/baseline-far/path-change-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "5cee43c80129518195580924bf8eb3e795a783f223870be38fb18a93db549b24"
+    },
+    {
+      "file": "build-gate-j/baseline-far/path-change-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0"
+    },
+    {
+      "file": "build-gate-j/baseline-far/quiet-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "ef73c2f0901435c0780c9e46020c7ee476bddec01c4040fe470a47fa0cccc024"
+    },
+    {
+      "file": "build-gate-j/baseline-far/quiet-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06"
+    },
+    {
+      "file": "build-gate-j/baseline-far/reference-gap-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "b08d3f8e6b5f39b7fced8d8342eff0fd2a4e866d0fe8e5c94550602b57761e00"
+    },
+    {
+      "file": "build-gate-j/baseline-far/reference-gap-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe"
+    },
+    {
+      "file": "build-gate-j/baseline-far/restart-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "afd17bccb6b1658e01c0e7eb8b021eb68b8465018db5eea3b964a2faf1344578"
+    },
+    {
+      "file": "build-gate-j/baseline-far/restart-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0"
+    },
+    {
+      "file": "build-gate-j/baseline-far/room-base-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "831087db90b5b970019f60ebf8fd927d5e5cfffd0c1a8b3180ab77d3256fcef8"
+    },
+    {
+      "file": "build-gate-j/baseline-far/room-base-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757"
+    },
+    {
+      "file": "build-gate-j/baseline-far/startup-baffle.f32",
+      "bytes": 1536000,
+      "sha256": "33883d672f4ed4cfc89aabab1fcfec7b040e6b784c65bce3b02d80411dd8be9a"
+    },
+    {
+      "file": "build-gate-j/baseline-far/startup-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6"
+    },
+    {
+      "file": "build-gate-j/candidate-far/cancel-tail-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "597121c0dd836e3fe6f033439b1380c9f9758d7cbb01d10b8200f46e4088a3bf"
+    },
+    {
+      "file": "build-gate-j/candidate-far/delay-100ms-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "59095172299d58cadecafba3a553688e8a459f000454caf179611fe324ef6649"
+    },
+    {
+      "file": "build-gate-j/candidate-far/long-tail-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "ce900807c5fd3132207b9d59efac75d4db6b8b8a9c644184a1c60b747d72470e"
+    },
+    {
+      "file": "build-gate-j/candidate-far/loud-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "f5cffce9f35a91d4d93b4d861a9ef9774f760118f60760b40c6bbc7cadf9f951"
+    },
+    {
+      "file": "build-gate-j/candidate-far/nonlinear-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "e1064c195f5ea17a6927af07fdeda6332d92a7d21d2cb8b363642f160a4d08b0"
+    },
+    {
+      "file": "build-gate-j/candidate-far/path-change-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "44a036dd77badc763bbbac8419aba90a94a7ed9841144d4b56f671712f08cb87"
+    },
+    {
+      "file": "build-gate-j/candidate-far/quiet-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "8ccf39668314cfa96166c63d034626fae49984cbb74295ca12b1d3722fa4e972"
+    },
+    {
+      "file": "build-gate-j/candidate-far/reference-gap-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "979d4c290ffa682ca8329a332086ab1bc1e7c8f49a00157610ab1f1387ea5b1e"
+    },
+    {
+      "file": "build-gate-j/candidate-far/restart-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9c7603a309b0d38839083de7674f2afcf6d5193348af509b48fa8aaf3dbccdfc"
+    },
+    {
+      "file": "build-gate-j/candidate-far/room-base-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9c9d6d1da7e6f3e3f9ec637bb0fe62dd4a499596583bb1492d1eb47b36c5bf41"
+    },
+    {
+      "file": "build-gate-j/candidate-far/startup-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "69e8ab275b2597051906b0e461fa4071fc31052332656f7bac2620ce856fff3b"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-cancel-span-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "27a01260e5e8de517d9a1620393f5ac52e769ac794967a0f0ede04d68bf67e8c"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-capture-epoch-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "f6f95205552b5aeed02031112708a5ad0daa35017f486350d7fb12935b260529"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-doubletalk-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "f600358b75169edc36836f550e8934f1fe57ad9c2cf39990a0550ed5062f99e7"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-early-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "47bd28d095a790e674f799c0132b4e2412fdd8cd3a8c39350e61b907bc17da88"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-far-only-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9c9d6d1da7e6f3e3f9ec637bb0fe62dd4a499596583bb1492d1eb47b36c5bf41"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-loud-doubletalk-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9061291bcdfe3c81513f01654df5b84efe57b8f4f2bee1ded2ee876731fdf9c6"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-missing-reference-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9db6eba9589da96dd74a32d38392acaa5c31b34af5a2797ee2d33b6c3777ec35"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-near-loud-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "7259558f8f784373ae33104d7e3f1bbcc1b152d46a369f7d31104f535e2fd643"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-near-normal-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "3119de17b80a9156bdbcb89008ab9405b0a7c7220dfb4e18aec9ece1a4bbe101"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-near-quiet-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "24a2b7661f338879f42e6e5d49c3180dcd2312e2ec626f21ef7b9e24d8e8a8e5"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-post-cancel-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "e999e5d6829a6eddab2b18b0d4d05eacf085d8e5e25bdac2da83a2d8fc06bab6"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-quiet-doubletalk-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "b52a817b84d1a02f60c20ecdfce66864d29f3e1f681c41ff5cb6e77e8a64771f"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-render-restart-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "3e8da78f2ef72cd94593c651881ebcba4ca54a0d187708e5c6e36b3ed214543e"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source0-silence-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "02a3547fceb90fafb97e73c84736e1d53a3a263664871de881f83807acf730d2"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-cancel-span-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "84e720a91d1f5d0ca985726882d068c4e05c60d37b73c7634295a1ccc993565a"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-capture-epoch-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "d43790783f920c56a27193d0afe0a4420ac3ab9b59edf22349e0dbadece24aee"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-doubletalk-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "a45c03e55ff992b6db667fea8d37b32a8cf10824b14e022c3ba50de0dc98a15f"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-early-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "f1333fa69451897ae87f58ef09657d6f1cfd0745c20915c9d04b0648ee357cc5"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-far-only-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "640965cf1bb847019bbcccde26ad5a25206e098fa14daca8df10af069f8e3870"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-loud-doubletalk-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "31146de380eeb86a2d6417275482e202405bc80b3ddca043285ce2418be9af04"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-missing-reference-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "16970f4a9117d9aa010b558f9fffa20a6b242f4ed810dec24b833feb5b9f436f"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-near-loud-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "44e5484e41e125a7653864a541a8969679e131b78ae28c1b46e4677cf5639835"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-near-normal-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "360b3a414fced54b064d849bb689272e52a0881f5df4a7488d83b1acedc2bb6e"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-near-quiet-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "71f3193d107ea076d4519d8b23db747d8c5ff18211a89ebafecec9e430265e10"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-post-cancel-pipeline.f32",
+      "bytes": 1776000,
+      "sha256": "0bddc216c97faf6a6c31bbe8340adbfba381279814157ff10c95919c69650703"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-quiet-doubletalk-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "19a2390bd2054b25a63dcee7b12e2d0865daaa45f4c5693e57b88ebab32f1ab5"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-render-restart-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "cb238118e55ac908e758ae8779f93f1ffa61c6aa29a102b79eb62f75bc4e7e0b"
+    },
+    {
+      "file": "build-gate-j/candidate-speech/source1-silence-pipeline.f32",
+      "bytes": 1646720,
+      "sha256": "76cb30f0173067508dc226bec9a6694a2ec2161b37ba3a488c9909f7c24def36"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-pipeline.f32",
+      "bytes": 2496640,
+      "sha256": "591e616cba866a3a2f80c663997c9c66805b3e4cb29eb5b9bcc9d3073a55d6be"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-pipeline.f32",
+      "bytes": 7489920,
+      "sha256": "58416b6a8f215ef0591b4cf737c52c0cc86aee9f1a620d8a4efe0515ebc0ec5e"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "3ebd26f740ff49ce245330f747d7f0e627cd5d38331100df17144eaaf05aba64"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "78c4bfe6598e7de8de6ec738f13c2186845f7e2751c8dc1163b10fc62b03de11"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "3031fddbcb0bd97a909b18fb76346e9c63f21a8d5c877875f509138232e17fee"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "b9be53490aa9115e20b0c0ce774a69853c084b3953909eecec06950190932720"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "d6bedd2b583dc14da86a65cf1e22616c9f4546088f1b8d4b0442bf2027873a51"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "47adf8253aa418fff8b1e74270718db1191298f9cf59f5f945a32c75f4de5562"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-pipeline.f32",
+      "bytes": 1553280,
+      "sha256": "7a8f2c49a14ec866186f03e8f6a12cfc3e998dbfc97bbd145940d87ebfe90eb4"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-pipeline.f32",
+      "bytes": 1553280,
+      "sha256": "200f5a6dc4e7500c978dd371e45c46eb6d17ae67745d960addd129c14017c135"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-pipeline.f32",
+      "bytes": 1553280,
+      "sha256": "2d2de1dd6d58ce1d6ec972b5272435048274c7a432596993bb195ecce2848e90"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-pipeline.f32",
+      "bytes": 4659840,
+      "sha256": "8557aa229c1db6a7d88f55c2217ce5d55d44e39a94b383411e103169347f2760"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-pipeline.f32",
+      "bytes": 4659840,
+      "sha256": "914e2f9622636ced8396e19192c0a43255e03e42cc901ec74a01fd67ee90ef49"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-pipeline.f32",
+      "bytes": 4659840,
+      "sha256": "2b7327eed100f387e9a12b9d798858b8b2e0b1ab8e87ffe9558686ccc775c8fd"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9a7843097adab31ba27d165a0a45e894dfdd9cd5d912b310521ebd58d8902a1c"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "60f15171e7d414abbef3f994cb93c748a974c30447ffd37e00e131521343018b"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "9d91d52618e23102cf2197e34f3a388c81bb96b4cce0bb9b4cdf366ccffeebfc"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "cc625c18d88aa0f2fa640114d03975346fc940cec55eca71f2efc302db5a598f"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "8c3508e42527a4ceda629c2b42a0b91db13fc922bc68170e0d2454f74db9939d"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "ed32acf64871fd88809cb5b23df5c3f671fb652be41cf667a6d5d8ee42e17922"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/controlled-16000-pipeline.f32",
+      "bytes": 1536640,
+      "sha256": "c9f9446efae06ab959b8734c68a6a29b1abb5336309515ec7e0701d5983bbcab"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/controlled-48000-pipeline.f32",
+      "bytes": 4609920,
+      "sha256": "1ada303256af1ca6fb14608e182ecf1e9276f090ba1746074e60cdf8baf15bda"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/near-impulse-16000-pipeline.f32",
+      "bytes": 128640,
+      "sha256": "988f278e8e98f75d890c47b1134b12885d182406b246cd6d82b9dbd867de46b6"
+    },
+    {
+      "file": "build-gate-j/candidate-rooms/near-impulse-48000-pipeline.f32",
+      "bytes": 385920,
+      "sha256": "292dceaf61a0379fd4475123b26c307f9992d3589c344b1e3065641a1bdabab5"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-cancel-span.f32",
+      "bytes": 1536640,
+      "sha256": "187ae53959038b046ffb1cae4d306a176e3c04abc09ce6b375a75b518a5fcd36"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-capture-epoch.f32",
+      "bytes": 1536640,
+      "sha256": "b8132002f1eb45a866895803eb9a94f1df32dcb28c0c56470266575f8efddce4"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-doubletalk.f32",
+      "bytes": 1536640,
+      "sha256": "bfdb996ee6352fd109c89eb07a1de818d686a58f066cf1b5754538547504215b"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-early.f32",
+      "bytes": 1536640,
+      "sha256": "6f026ea43c8c17e39fa5611514720a9a74ac947df26d60bc8c324ebd2b0bdb28"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-far-only.f32",
+      "bytes": 1536640,
+      "sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-loud-doubletalk.f32",
+      "bytes": 1536640,
+      "sha256": "756e2c0561abd46204a8753e257211925ade05463df8ef83be0c656860f62422"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-missing-reference.f32",
+      "bytes": 1536640,
+      "sha256": "7024ebfa58ef2f8bdf6d87239708b5cccf7a95ec451fd06dd66f1d2f4b3703cc"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-near-loud.f32",
+      "bytes": 1536640,
+      "sha256": "7259558f8f784373ae33104d7e3f1bbcc1b152d46a369f7d31104f535e2fd643"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-near-normal.f32",
+      "bytes": 1536640,
+      "sha256": "3119de17b80a9156bdbcb89008ab9405b0a7c7220dfb4e18aec9ece1a4bbe101"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-near-quiet.f32",
+      "bytes": 1536640,
+      "sha256": "24a2b7661f338879f42e6e5d49c3180dcd2312e2ec626f21ef7b9e24d8e8a8e5"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-post-cancel.f32",
+      "bytes": 1536640,
+      "sha256": "b00245551c78c9cf799c7beea7ffb6293867932364ed8f146be6fbef3dc2abf6"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-quiet-doubletalk.f32",
+      "bytes": 1536640,
+      "sha256": "23695926bdac8e432eb56ed229fa572a79786316ea8f718a53b054a2e791fa2a"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-render-restart.f32",
+      "bytes": 1536640,
+      "sha256": "1ccea428a76776c2511dfb5d8562ec87074cbe3ea047b1a105f8f38f592ef7a1"
+    },
+    {
+      "file": "build-gate-j/split-speech/source0-silence.f32",
+      "bytes": 1536640,
+      "sha256": "02a3547fceb90fafb97e73c84736e1d53a3a263664871de881f83807acf730d2"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-cancel-span.f32",
+      "bytes": 1646720,
+      "sha256": "68710b72967f4b3ec553ce85ea3c8ed643ae06ae84afe5479f42249553e926b5"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-capture-epoch.f32",
+      "bytes": 1646720,
+      "sha256": "ac58d370a1cceb73e7ef4a30f4801364140ff97098f46a40e175919582ea9e11"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-doubletalk.f32",
+      "bytes": 1646720,
+      "sha256": "f87d0862dd9ca9d4c75cbee53b752a5e13b2bfeec42e76303baae3fb22068f12"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-early.f32",
+      "bytes": 1536640,
+      "sha256": "51a8f0b85cdc890c36bed41e4abedec1f92c34bcc4fa25b3086c9edb6ef475da"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-far-only.f32",
+      "bytes": 1646720,
+      "sha256": "6320cab09e4b8eab02816bcb1d7df1188db90571f01bb1e31cfa8ca704abed16"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-loud-doubletalk.f32",
+      "bytes": 1646720,
+      "sha256": "21df4679f9c686b7b3947f9d4ea8ae68ca493ecc3a665b2d35cf11b5c5b0d211"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-missing-reference.f32",
+      "bytes": 1646720,
+      "sha256": "6b061302fc69872866cf71daa40eebd878246249f4a825e50aa4cb6c057aa0a8"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-near-loud.f32",
+      "bytes": 1646720,
+      "sha256": "44e5484e41e125a7653864a541a8969679e131b78ae28c1b46e4677cf5639835"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-near-normal.f32",
+      "bytes": 1646720,
+      "sha256": "360b3a414fced54b064d849bb689272e52a0881f5df4a7488d83b1acedc2bb6e"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-near-quiet.f32",
+      "bytes": 1646720,
+      "sha256": "71f3193d107ea076d4519d8b23db747d8c5ff18211a89ebafecec9e430265e10"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-post-cancel.f32",
+      "bytes": 1776000,
+      "sha256": "a2953a3ec8c35027ef8db27f3b4a73f87167e8f01cd1671e371981c98e9a5f73"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-quiet-doubletalk.f32",
+      "bytes": 1646720,
+      "sha256": "f9e46046a1f043546db99232f19187a75dcebf97125dfe87ab1047bbf447ec0f"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-render-restart.f32",
+      "bytes": 1646720,
+      "sha256": "cffc6676caabc861d4983a55e509dd7c0f2ba3039faef45a27854d01137e7900"
+    },
+    {
+      "file": "build-gate-j/split-speech/source1-silence.f32",
+      "bytes": 1646720,
+      "sha256": "76cb30f0173067508dc226bec9a6694a2ec2161b37ba3a488c9909f7c24def36"
+    },
+    {
+      "file": "build-gate-j/split-far/cancel-tail.f32",
+      "bytes": 1536640,
+      "sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c"
+    },
+    {
+      "file": "build-gate-j/split-far/delay-100ms.f32",
+      "bytes": 1536640,
+      "sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434"
+    },
+    {
+      "file": "build-gate-j/split-far/long-tail.f32",
+      "bytes": 1536640,
+      "sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0"
+    },
+    {
+      "file": "build-gate-j/split-far/loud.f32",
+      "bytes": 1536640,
+      "sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b"
+    },
+    {
+      "file": "build-gate-j/split-far/nonlinear.f32",
+      "bytes": 1536640,
+      "sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f"
+    },
+    {
+      "file": "build-gate-j/split-far/path-change.f32",
+      "bytes": 1536640,
+      "sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0"
+    },
+    {
+      "file": "build-gate-j/split-far/quiet.f32",
+      "bytes": 1536640,
+      "sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06"
+    },
+    {
+      "file": "build-gate-j/split-far/reference-gap.f32",
+      "bytes": 1536640,
+      "sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe"
+    },
+    {
+      "file": "build-gate-j/split-far/restart.f32",
+      "bytes": 1536640,
+      "sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0"
+    },
+    {
+      "file": "build-gate-j/split-far/room-base.f32",
+      "bytes": 1536640,
+      "sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757"
+    },
+    {
+      "file": "build-gate-j/split-far/startup.f32",
+      "bytes": 1536640,
+      "sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6"
+    }
+  ],
+  "inputs": "Unchanged Gate H/I caches, manifests/hashes/pinned upstream and fixture licenses remain in their original ledgers. Raw source and processed PCM remain local."
+}
