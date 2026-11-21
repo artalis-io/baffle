@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void baffle_speex_diagnostics(SpeexEchoState *, float *);
+void baffle_speex_counter_limit(SpeexEchoState *);
 static void require(int condition) { if (!condition) { fputs("adaptive trace failure\n", stderr); exit(1); } }
 static FILE *open_file(const char *path, const char *mode)
 {
@@ -25,7 +26,7 @@ static float *read_pcm(const char *path, size_t *count)
 }
 int main(int argc, char **argv)
 {
-    require(argc == 10);
+    require(argc == 10 || argc == 11);
     const uint16_t endian=1; require(sizeof(float)==4 && *(const unsigned char *)&endian==1);
     uint32_t rate = (uint32_t)strtoul(argv[1], NULL, 10), hop = (uint32_t)strtoul(argv[2], NULL, 10);
     uint32_t tail = (uint32_t)strtoul(argv[3], NULL, 10), frames = rate/1000u*hop;
@@ -38,6 +39,7 @@ int main(int argc, char **argv)
     void *raw = malloc(bytes+BF_ALIGNMENT); require(raw != NULL);
     void *mem = (void *)(((uintptr_t)raw+BF_ALIGNMENT-1u)&~(uintptr_t)(BF_ALIGNMENT-1u));
     bf_aec *s; require(bf_aec_init(mem, bytes, &c, &s) == BF_OK);
+    if(argc==11) {require(strcmp(argv[10],"counter-limit")==0);baffle_speex_counter_limit(s->echo);}
     FILE *output = open_file(argv[6], "wb"), *trace = open_file(argv[7], "w"), *coeff = open_file(argv[8], "wb");
     require(output && trace && coeff);
     int missing = atoi(argv[9]); /* 0, or one deterministic gap at 10..10.2s. */

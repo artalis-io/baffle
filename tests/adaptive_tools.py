@@ -26,3 +26,8 @@ with tempfile.TemporaryDirectory(prefix='baffle-adaptive-') as tmp:
     for r in events:assert int(r['resets'])>0 and int(r['flags'])&16,'Native recovery must be observable through existing public fields'
     values=array.array('f');values.frombytes((p/'out.f32').read_bytes());assert len(values)==n and all(map(math.isfinite,values))
     print('PASS finite abrupt-path recovery; native reset events',len(events),'all publicly reported')
+    subprocess.run([str(tool),'16000','10','200',str(p/'mic.f32'),str(p/'ref.f32'),str(p/'limit.f32'),str(p/'limit.csv'),str(p/'limit-coeff.f32'),'0','counter-limit'],check=True)
+    initial=list(csv.DictReader((p/'limit.csv').open()))[:3]
+    assert all(0<float(r['cancel_count'])<100 for r in initial),'Signed schedule counter must be normalized without overflow'
+    assert all(int(r['resets'])==0 for r in initial),'Modulo normalization must not reset adaptive state'
+    print('PASS accelerated INT_MAX schedule boundary; no adaptive reset or signed overflow')

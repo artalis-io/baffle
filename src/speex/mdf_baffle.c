@@ -5,6 +5,7 @@
  * No adaptation, double-talk or output-suppression parameters are changed.
  * Including the source keeps its private state out of Baffle's portable API. */
 #include "mdf.c"
+#include <limits.h>
 
 void baffle_speex_configure_capture(SpeexEchoState *s)
 {
@@ -37,6 +38,16 @@ int baffle_speex_recovered(SpeexEchoState *s)
     return s->cancel_count == 0;
 }
 
+void baffle_speex_prepare(SpeexEchoState *s)
+{
+    /* This signed counter controls only the AUMDF modulo schedule. Preserve
+     * its phase without signed overflow on months-long continuous streams. */
+    if (s->cancel_count >= INT_MAX-1) {
+        int period=s->M-1;
+        s->cancel_count=period > 0 ? 1+(s->cancel_count-1)%period:1;
+    }
+}
+
 #ifdef BF_AEC_DIAGNOSTICS
 /* Offline static qualification only; never queried on a callback path. */
 void baffle_speex_diagnostics(SpeexEchoState *s, float *v)
@@ -44,5 +55,9 @@ void baffle_speex_diagnostics(SpeexEchoState *s, float *v)
     v[0]=(float)s->adapted;v[1]=(float)s->cancel_count;
     v[2]=s->leak_estimate;v[3]=s->sum_adapt;
     v[4]=(float)s->saturated;v[5]=(float)s->screwed_up;
+}
+void baffle_speex_counter_limit(SpeexEchoState *s)
+{
+    s->cancel_count=INT_MAX-1;
 }
 #endif

@@ -7,6 +7,7 @@
 void baffle_speex_configure_capture(SpeexEchoState *s);
 void baffle_speex_reset_complete(SpeexEchoState *s);
 int baffle_speex_recovered(SpeexEchoState *s);
+void baffle_speex_prepare(SpeexEchoState *s);
 typedef struct baffle_speex_arena {
     unsigned char *data;
     size_t used, capacity;
@@ -212,6 +213,7 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
             if (far[i] > 32767.0f / 32768 || far[i] < -1)
                 v.flags |= BF_AUDIO_CLIPPED;
         }
+        baffle_speex_prepare(s->echo);
         speex_echo_cancellation(s->echo, s->near_pcm, s->far_pcm, s->out_pcm);
         if (baffle_speex_recovered(s->echo)) {
             bf_result r = bf_aec_reset(s);
