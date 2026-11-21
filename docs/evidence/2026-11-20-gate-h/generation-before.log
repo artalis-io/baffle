@@ -1,0 +1,19 @@
+Test project C:/Users/Mark/artalis.io/src/baffle/build-adapter
+    Start 5: aec
+1/1 Test #5: aec ..............................Exit code 0xc0000409***Exception:   2.79 sec
+AEC near-only rate=8000 hop_ms=10 raw_error_snr_db=14.038 dc_mean=0.00000193
+AEC near-only rate=8000 hop_ms=20 raw_error_snr_db=14.038 dc_mean=0.00000193
+AEC near-only rate=16000 hop_ms=10 raw_error_snr_db=14.002 dc_mean=0.00000038
+AEC near-only rate=16000 hop_ms=20 raw_error_snr_db=14.002 dc_mean=0.00000038
+AEC near-only rate=48000 hop_ms=10 raw_error_snr_db=13.984 dc_mean=-0.00000039
+AEC near-only rate=48000 hop_ms=20 raw_error_snr_db=13.984 dc_mean=-0.00000039
+C:\Users\Mark\artalis.io\src\baffle\tests\aec.c:171: bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK && info.resets == 2 && (info.flags & BF_AUDIO_DISCONTINUITY) && (info.flags & BF_REFERENCE_GENERATION_CHANGED)
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   2.80 sec
+
+The following tests FAILED:
+	  5 - aec (Exit code 0xc0000409)
+Errors while running CTest

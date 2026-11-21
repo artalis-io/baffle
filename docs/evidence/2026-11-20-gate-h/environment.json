@@ -1,0 +1,125 @@
+{
+  "baseline": "a231983ff008f73683009218089f758e2a4a1d6e",
+  "core_correction": "ee1c080",
+  "tool_followup": "83c1bbc",
+  "windows": {
+    "cpu": {
+      "Name": "AMD Ryzen 9 5950X 16-Core Processor            ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32
+    },
+    "os": {
+      "Caption": "Microsoft Windows 11 Pro",
+      "Version": "10.0.26300",
+      "BuildNumber": "26300",
+      "TotalVisibleMemorySize": 134114624
+    },
+    "compiler": "clang-cl 19.1.5; MSVC smoke 19.44.35229",
+    "flags": "Release /O2 /Ob2 /DNDEBUG; scalar Baffle, reviewed SpeexDSP 1.2.1",
+    "baffle_sdk_files": [
+      {
+        "file": "include/baffle.h",
+        "bytes": 14827,
+        "sha256": "4e7acdb327d1a63918146dd7384d6581e20cb24398350249a0f5415fa8749604"
+      },
+      {
+        "file": "lib/baffle.lib",
+        "bytes": 159468,
+        "sha256": "32825ec07b05fadf3311d822a00335d50eedb3fe8ab70f86343b812b31ee5fa6"
+      },
+      {
+        "file": "lib/baffle_hail_adapter.lib",
+        "bytes": 21902,
+        "sha256": "ea41915065fdbb6fa38c5d32f096616cd8255f317955558cdf585684ee38765d"
+      },
+      {
+        "file": "include/baffle/hail.h",
+        "bytes": 3001,
+        "sha256": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500"
+      }
+    ],
+    "hail_sdk_files": [
+      {
+        "file": "include/hail.h",
+        "bytes": 13521,
+        "sha256": "b8a7ac1d4fb331e5aa748f5f306e19644e02879ab80402ad8812324ab43b18aa"
+      },
+      {
+        "file": "lib/hail.lib",
+        "bytes": 85980,
+        "sha256": "21745f6e3af6167a845fd34cf08b4cdf4dcc2ee7b4286053505eeb3b414cd025"
+      },
+      {
+        "file": "include/hail/virtual.h",
+        "bytes": 2840,
+        "sha256": "133cf2096d849bd455b51cf95f9c8f96a106b73b642a80568ab2a3049ba94585"
+      }
+    ],
+    "hail_sdk_source_revision": "not embedded; exact installed bits hashed, do not infer from sibling working tree"
+  },
+  "linux_arm64": {
+    "hostname": "spark-7468",
+    "hardware": "20 CPU: 10 Cortex-X925 + 10 Cortex-A725; GB10-class unified platform",
+    "os": "Ubuntu 24.04, Linux 7.0.0-1024-nvidia",
+    "compiler": "GCC 13.3.0 Release -O3 -DNDEBUG; Clang18 sanitizers",
+    "hail_source": "7ef6142ba4b8c8be15d1e7d704502db01abc5113",
+    "root": "/tmp/baffle.fVOhT0",
+    "qa_root": "/tmp/baffle-acoustic-tools",
+    "raw_environment": "spark-environment.txt"
+  },
+  "inference": {
+    "whisper": "tiny.en int8 encoder/decoder; CPU sherpa-onnx/core 1.12.40, 2 threads",
+    "parakeet": "NeMo TDT 0.6b v3 int8 transducer; CPU sherpa-onnx/core 1.12.40, 2 threads",
+    "piper": "Lessac low ONNX; piper-tts 1.3.0, CPU onnxruntime 1.23.2, intra 2/inter 1",
+    "llm": "Existing qwen38-fp4 service, vLLM 0.1.dev21830+g8244d1c44.d20261108; configured modelopt_mixed/BF16/FP8 KV; model weights not independently audited",
+    "llm_service_changes": false
+  },
+  "previous_model_identities": "../2026-11-20-real-world/model-identities.json",
+  "new_source1_sha256": "5143a6ba93c4b274e2c4ac22deb75c2c48936c853f0519add1de828b6c79cc5a",
+  "asr_versions": {
+    "sherpa-onnx": "1.12.40",
+    "sherpa-onnx-core": "1.12.40",
+    "piper-tts": "1.3.0",
+    "onnxruntime": "1.23.2",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "psutil": "7.1.3"
+  },
+  "kaldi_native_fbank": "1.22.3",
+  "upstream_source_commit": "d795ccd164bd2360ffda6c3431b1316e2c898be2",
+  "inspected_upstream_sources": {
+    "offline-stream.cc": "51f46259700c4e6c50bf108658b13748eb018fdfbf6d6b5039bb5bbb8ea6a898",
+    "offline-transducer-greedy-search-nemo-decoder.cc": "3fc6c45f3eef8641393dc7247d3bac4d103c18a54d69086e033db343660aed72",
+    "offline-transducer-nemo-model.cc": "48c4228e2e1efa6c870c8e3a4c115263dadc37d17d598a6b1d6d0353bc017dd1",
+    "offline-recognizer-transducer-nemo-impl.h": "e77bf964ae61ae1fba1d2ac4d04054f8563da28a9bae10f97212a7a0776ac3f7"
+  },
+  "source_sha256": {
+    "tools/acquire_room.py": "7e4315c8a376cacc3659651af987eb8635a65e5da03a44701176d50fff86fce6",
+    "tools/aec_diagnostics.py": "247ca13143091ec77d37078afc9facb56e01f7cf7161cc0f8cb80fe7d355a5f9",
+    "tools/asr_boundary_diagnostics.py": "d0b0a574bca6f6e697e1b7df16ee6ece2fac33ea6570b7d2c8fd49b56697f6b0",
+    "tools/asr_metrics.py": "20c085b549ef44e4918686a4957ab1064377e2a38173ffbb81bbf079cafff471",
+    "tools/benchmark.py": "a13764beed21c2facf59d4e969d89ca5921ecdb7e7135f0e8f25bf00a1b16ba3",
+    "tools/blank_asr_matrix.py": "aeaa5338be3c46334c1ec4cfb26ec38bf21c151a63daa0210b8d952f423e25c7",
+    "tools/calibrated_backend_scores.py": "80a3a578c418705a36ed93e9c6b28d53922e354b1c6506787343a488dfb4e364",
+    "tools/cancellation_tail_scores.py": "3038cdada0cb77600f30c814e85fdf00eb2aa0cf0a2b579bea99f2c4dab251f3",
+    "tools/check_exports.py": "518040c0095ce556db06a13bb03e954276f17ba5cd6c2c119b0ba4e564b65c11",
+    "tools/check_latency_receipts.py": "8082e8cbbbead0638c79ea3a731ef7d8d460c60fb13bfe67993d04268dac8e86",
+    "tools/check_realtime_symbols.py": "4f8c18c7e3769d0411100cd1401917f4c7d02e98ae4a2b6f9ce04c023e404f3b",
+    "tools/controlled_aec.py": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+    "tools/fuzz_corpus.py": "4b982a213c225363de75616d08fc01ed9f6efdb1a3fccec24bc07a83d7406b5a",
+    "tools/inference_contention.py": "87ad876e150fccdef110aaaf3bcdb48c08f01c7c4b72fd0daba96d7c396cf485",
+    "tools/llm_contention.py": "f2ae3f12ae544f8c902c2c081a14adc40fde91ab4ec6d8f313fdaee40e00fb87",
+    "tools/ns_delay_qualification.py": "7cf024da3993e0578d3fcbaf1a81f0977d1a5edbc5154afcc91ca04c1ef1b41d",
+    "tools/onset_qualification.py": "bff1543c0d2d6afaa13fc6d5ddb81abd5b42a8aa602b774ffecb67e5d06f7759",
+    "tools/paired_asr.py": "b378afe09a3fe39932c4c45524f1579244eb04f4a63a3ce2bfa7d41f74538c10",
+    "tools/paired_asr_summary.py": "258f748a0d7dc8a36e49b9da7af108f1d646b39046e0e59a353674c8648a68ef",
+    "tools/paired_signal_scores.py": "3cd3f06f21992b4ec950d68540973f732b3514e921c419026240e84610878b16",
+    "tools/parakeet_frontend_diagnostic.py": "280f8f60d59b444a7f3ace73c5f30285055303b37a0b9fac236102238642a3f7",
+    "tools/prepare_onset_review.py": "e43dfe55bf29e06f9b79c582467b49a357bb122eadc26241fc5d2e91de1e4970",
+    "tools/recorded_aec.py": "736c2ebbed0b13290a710f214975ca52008d26aa04a965418385716215bdf162",
+    "tools/room_replay.py": "eb169c088da2a4b622b15453a5789238154309b035202e539c60beb65e181f72",
+    "tools/speech_quality.py": "befcaeeda2c51071aa0a221effc47a5723d877389916b848036a480c92ea4a0f",
+    "tools/word_qualification.py": "7ec66fac1abc15c5d80560f3d81a819440a67bedf2aef8cf003685dba532e007"
+  },
+  "scope": "Paired audio collected with baseline DSP and new external stage runner; flags-only fix verified bit-identical on restart case. Inactive gain/VAD telemetry later corrected to 1/-1, no quality/performance sample changed. Prior raw CSV retained."
+}

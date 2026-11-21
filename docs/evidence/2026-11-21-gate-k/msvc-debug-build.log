@@ -1,0 +1,49 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  mdf_baffle.c
+  fftwrap.c
+  smallft.c
+  Generating Code...
+  baffle_speex_kernel.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\baffle_speex_kernel.dir\Debug\baffle_speex_kernel.lib
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  core.c
+  pcm.c
+  clock.c
+  resampler.c
+  channels.c
+  conditioning.c
+  noise.c
+  aec.c
+  pipeline.c
+  Generating Code...
+  baffle.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle.lib
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  adaptive_trace.c
+  baffle_adaptive_trace.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_adaptive_trace.exe
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt
+  conditioning.c
+  qualify.c
+  pipeline.c
+  conformance.c
+  pcm.c
+  concurrency.cpp
+  baffle_conditioning.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_conditioning.exe
+  baffle_pipeline.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_pipeline.exe
+  baffle_pcm.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_pcm.exe
+  baffle_conformance.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_conformance.exe
+  baffle_qualify.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_qualify.exe
+  baffle_concurrency.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_concurrency.exe
+  aec.c
+  baffle_aec.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_aec.exe
+  numerical.c
+  baffle_numerical.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-k\msvc-debug\Debug\baffle_numerical.exe
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/CMakeLists.txt

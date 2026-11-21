@@ -1,0 +1,13 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/tools/acoustic-runner/CMakeLists.txt
+  main.cpp
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/tools/acoustic-runner/CMakeLists.txt
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/tools/acoustic-runner/CMakeLists.txt
+  vad_trace.c
+  baffle_vad_trace.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-i\runner-msvc\Release\baffle_vad_trace.exe
+  noise_order.cpp
+  baffle_acoustic_runner.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-i\runner-msvc\Release\baffle_acoustic_runner.exe
+  baffle_noise_order.vcxproj -> C:\Users\Mark\artalis.io\src\baffle\build-gate-i\runner-msvc\Release\baffle_noise_order.exe
+  Building Custom Rule C:/Users/Mark/artalis.io/src/baffle/tools/acoustic-runner/CMakeLists.txt

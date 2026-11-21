@@ -1,0 +1,469 @@
+{
+  "original_gate_i": "../2026-11-21-gate-i/assistant-only.json",
+  "fresh_matched": [
+    {
+      "case": "room-base",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "room-base",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "room-base",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "831087db90b5b970019f60ebf8fd927d5e5cfffd0c1a8b3180ab77d3256fcef8",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "room-base",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "831087db90b5b970019f60ebf8fd927d5e5cfffd0c1a8b3180ab77d3256fcef8",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "room-base",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "room-base",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "26a03898ebe431f963003671a78fe38ac7d1102933a7d4e622bbdc692d3ee757",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "ed040119c4c9bd9a21257580d71100a79bf86cc5bf52aa640e8e0e2b3891787e",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "ed040119c4c9bd9a21257580d71100a79bf86cc5bf52aa640e8e0e2b3891787e",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "ef73c2f0901435c0780c9e46020c7ee476bddec01c4040fe470a47fa0cccc024",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "ef73c2f0901435c0780c9e46020c7ee476bddec01c4040fe470a47fa0cccc024",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "quiet",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "e2ebe0ad0232bd86f7e7509822172b859b4a7b1847fc4b878190844a4a179b06",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "4009e76347b35bd3e7c1213be2c27f4680ad6674cc5406052ea3921d4dffe84f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "4009e76347b35bd3e7c1213be2c27f4680ad6674cc5406052ea3921d4dffe84f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "68f2951ffc87cd72dca373ba65cf3d75fe2202006609b65b695e9d8a1374e09f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "68f2951ffc87cd72dca373ba65cf3d75fe2202006609b65b695e9d8a1374e09f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "loud",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "63430e8d3d412e037949cc770b49efbec2f010471c35763da045a4637e84c34b",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "026f9a4b5add9de5aa16f32fc37d39613bd1c6deebf63f6073a2e7c9c1e5fba9",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "026f9a4b5add9de5aa16f32fc37d39613bd1c6deebf63f6073a2e7c9c1e5fba9",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "77a55a4e561ffc2536b06218ac270a108c76b2cf5daf5cc63a2961f457ee2d03",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "77a55a4e561ffc2536b06218ac270a108c76b2cf5daf5cc63a2961f457ee2d03",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "long-tail",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "d7416e2508038bcafcda10974b0edf599f9c2228ed124b4ce358f7dcea7318a0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "7c53ec8ca15e0c2c5d2ffcf6ba067fade447fc14a71d12b681475cba38a31088",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "7c53ec8ca15e0c2c5d2ffcf6ba067fade447fc14a71d12b681475cba38a31088",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "f8745fadeb048f3a80615dd79a95f02745a0e30045013814a0e1d1ab08ec1f75",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "f8745fadeb048f3a80615dd79a95f02745a0e30045013814a0e1d1ab08ec1f75",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "nonlinear",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "348e3e419fa394215981bc7472c8a528d1701dbf2311497a2b1f8a805dfb751f",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "dc182df4b82e54a825ffd912c5267b79e071b46b4167e07a16583d9e1a8851ea",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "dc182df4b82e54a825ffd912c5267b79e071b46b4167e07a16583d9e1a8851ea",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "5cee43c80129518195580924bf8eb3e795a783f223870be38fb18a93db549b24",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "5cee43c80129518195580924bf8eb3e795a783f223870be38fb18a93db549b24",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "path-change",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "5d0d1213510099e6add347b918078654744cfe8b15103326b6dee796143065a0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "b68baae09328117f871972bb75da18917dcb92d5c1f05c62035fb52fafdf1e66",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "b68baae09328117f871972bb75da18917dcb92d5c1f05c62035fb52fafdf1e66",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "312042fdf0fde1156776ce51c6899d4b9e3c4a2ee8f5c3ee1088cf3199fe2822",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "312042fdf0fde1156776ce51c6899d4b9e3c4a2ee8f5c3ee1088cf3199fe2822",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "delay-100ms",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "250a399cdf9ad90a439bec8f0af3a265a9d57e1d7caa136b07b41cb1acf6f434",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "72ebfd9cab6c23635fb44a2088d834fd11a389729790abddb803c57b58b64651",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "72ebfd9cab6c23635fb44a2088d834fd11a389729790abddb803c57b58b64651",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "33883d672f4ed4cfc89aabab1fcfec7b040e6b784c65bce3b02d80411dd8be9a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "33883d672f4ed4cfc89aabab1fcfec7b040e6b784c65bce3b02d80411dd8be9a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "startup",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "1bd28d3cda7ed1a5d34da8d017143556c6e16e9ce9750e3e8c96c6b824525d81",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "1bd28d3cda7ed1a5d34da8d017143556c6e16e9ce9750e3e8c96c6b824525d81",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "8b58f5684230eea73c2cfdff58c80d1a65ca988a08e47713a235e7ab67beb446",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "8b58f5684230eea73c2cfdff58c80d1a65ca988a08e47713a235e7ab67beb446",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "cancel-tail",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "f38757308b1b3615227be1adb2ecec30b614fce574d5c6c6fbed218c9548a97c",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "ed3821c3ada4bee6c3e2227fdaa0fc9b184753ec5e586b0e453b09911cff0af2",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "ed3821c3ada4bee6c3e2227fdaa0fc9b184753ec5e586b0e453b09911cff0af2",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "afd17bccb6b1658e01c0e7eb8b021eb68b8465018db5eea3b964a2faf1344578",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "afd17bccb6b1658e01c0e7eb8b021eb68b8465018db5eea3b964a2faf1344578",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "restart",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "d40507e40dda0f87db8bf98a0c7d7422821fbb8a61d87c9cabfbeb0b0e671dc0",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "raw",
+      "recognizer": "whisper",
+      "pcm_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "raw",
+      "recognizer": "parakeet",
+      "pcm_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "baffle",
+      "recognizer": "whisper",
+      "pcm_sha256": "b08d3f8e6b5f39b7fced8d8342eff0fd2a4e866d0fe8e5c94550602b57761e00",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "baffle",
+      "recognizer": "parakeet",
+      "pcm_sha256": "b08d3f8e6b5f39b7fced8d8342eff0fd2a4e866d0fe8e5c94550602b57761e00",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "pipeline",
+      "recognizer": "whisper",
+      "pcm_sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe",
+      "hypothesis_unchanged": true
+    },
+    {
+      "case": "reference-gap",
+      "stage": "pipeline",
+      "recognizer": "parakeet",
+      "pcm_sha256": "8a0fda5c7ceb3dbde333901707099a265b0b5d63510a686708c9a15e013571fe",
+      "hypothesis_unchanged": true
+    }
+  ],
+  "missing_baffle_in_gate_i_scoring": false,
+  "note": "New baseline also scores AEC-only; control PCM hashes and full hypotheses match the unchanged Gate I baseline."
+}

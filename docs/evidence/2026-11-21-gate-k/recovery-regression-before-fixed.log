@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Mark\artalis.io\src\baffle\tests\adaptive_tools.py", line 26, in <module>
+    for r in events:assert int(r['resets'])>0 and int(r['flags'])&16,'Native recovery must be observable through existing public fields'
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Native recovery must be observable through existing public fields

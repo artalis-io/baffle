@@ -1,0 +1,40 @@
+{
+  "source_revision": "e1cd17d1f1894c5e52daae8d33ac09687ec35aa1",
+  "dsp_baseline": "86feaf956543de06565551591ee3abe6db28ceb8",
+  "archived_utc": "2026-11-20T19:35:01.889681+00:00",
+  "verdict": "PARTIAL",
+  "production_ready": false,
+  "abi_stable": false,
+  "core_header_adapter_diff_from_baseline": "",
+  "original_requirement": {
+    "threshold_db": 8,
+    "fixture_code_sha256": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+    "original_failed_db": 6.64842623259821,
+    "reproduced_db": 14.60337539447629,
+    "note": "Exact reproduced metric also retained in baseline-controlled.json; original historical summary unchanged."
+  },
+  "physical_room_qualification": "OPEN: no independently calibrated speaker/microphone route or room metadata supplied; existing remote recorded acoustics separately evaluated",
+  "interruption_onset": "OPEN: no reviewed phone/syllable labels or application-approved latency/WER policy",
+  "platforms": {
+    "windows": "Local clang-cl and MSVC qualification tools, 7 core and 3 installed Hail tests; actual CPU Whisper/Parakeet/Piper contention",
+    "linux_arm64": "Local remote ARM64 8 ASan/UBSan and 8 TSan tests, new external tool smoke with each sanitizer, WebRTC comparison and actual GPU LLM contention",
+    "linux_x86_64": "Remote CI only",
+    "macos_arm64": "Remote CI only",
+    "macos_x86_64": "Remote CI only"
+  },
+  "measurement_revisions": {
+    "first_room_comparison": "0029ee6",
+    "windows_final_contention": "be855d8",
+    "tool_msvc_warning_only_fix": "e1cd17d",
+    "native_core": "unchanged from 86feaf9; reports contain executable hashes"
+  },
+  "limitations": [
+    "Real-room attenuation remains weak in Baffle; no single confirmed hardware root cause",
+    "Default AEC3 materially attenuates near speech, adds delay and has APM blocking locks; not integrated",
+    "Seeded Parakeet recognition failures retained; no model-specific gain workaround in DSP",
+    "Human phone/syllable preservation and Hungarian not qualified",
+    "No calibrated acoustic tail, physical latency, VAD onset budget or full connected inference stack",
+    "No GPU work in DSP; observed GPU usage belongs to other software/inference",
+    "Finite trials and sanitizer evidence do not prove real-time safety or ABI stability"
+  ]
+}

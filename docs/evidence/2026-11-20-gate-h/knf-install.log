@@ -1,0 +1,5 @@
+Using Python 3.12.14 environment at: build-acoustic\venv
+Resolved 1 package in 429ms
+Prepared 1 package in 233ms
+Installed 1 package in 14ms
+ + kaldi-native-fbank==1.22.3

@@ -1,0 +1,11 @@
+{
+  "retained_findings": [
+    "Initial Python random fixture did not trigger recovery. The final standard-library PCG64 recurrence reproduces the specified NumPy seed713 stimulus without NumPy as a core-test dependency. The old wrapper then fails actual public reporting assertion.",
+    "First baseline probe compilation failed CRT fopen deprecation under /WX; portable fopen_s/fopen helper corrected it, no warning disabled. The early missing-binary log is not a before-fix algorithm result.",
+    "Initial partition preparation compared raw CRLF bytes with an approved LF pin. That failed, and partition-build/partition-paths are unchanged controls, not candidate results. partition2-* is the actual .3 candidate; normalization now exactly matches SpeexPins.cmake and original bytes are also recorded.",
+    "Initial misalignment draft truncated the oracle at filter capacity. Final metrics pad the estimate and retain out-of-capacity taps; drift/unexcited comparisons are unavailable. Old JSON retained.",
+    "Recovery grid now uses fully post-event windows, movement end16s and gap end10.2s. Draft grids retained; raw PCM/ERLE windows and original8dB calculator unchanged; neither candidate gains a pass.",
+    "Initial local build-fuzz has backend OFF: its10000 AEC inputs immediately take unsupported path and are not AEC verification. Core OFF30000 pipeline/30000 transport runs remain valid in that scope. Native backend ON10000 AEC/30000 pipeline are separately retained with kernel instrumentation.",
+    "Before-counter UBSan failure is expected reproduction of real signed overflow at an accelerated valid-state boundary, not a passing sanitizer run or observed248-day hardware execution."
+  ]
+}

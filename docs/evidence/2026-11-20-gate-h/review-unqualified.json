@@ -1,0 +1,13 @@
+{
+  "verdict": "UNQUALIFIED",
+  "reasons": [
+    "independent label review unavailable",
+    "ordered phoneme/syllable labels unavailable",
+    "annotation provenance/uncertainty unavailable",
+    "far-only prefix is not independently verified",
+    "downstream-approved onset budget unavailable",
+    "independent processed phoneme/syllable review unavailable",
+    "independent recognizer/transcript evaluation unavailable"
+  ],
+  "measurements": null
+}

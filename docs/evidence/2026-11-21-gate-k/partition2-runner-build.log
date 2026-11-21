@@ -1,0 +1,8 @@
+[1/8] Building C object CMakeFiles\baffle_vad_trace.dir\vad_trace.c.obj
+[2/8] Linking C executable baffle_vad_trace.exe
+[3/8] Building CXX object CMakeFiles\baffle_noise_order.dir\noise_order.cpp.obj
+[4/8] Linking CXX executable baffle_noise_order.exe
+[5/8] Building CXX object CMakeFiles\baffle_acoustic_runner.dir\main.cpp.obj
+[6/8] Linking CXX executable baffle_acoustic_runner.exe
+[7/8] Building CXX object CMakeFiles\baffle_residual_runner.dir\main.cpp.obj
+[8/8] Linking CXX executable baffle_residual_runner.exe

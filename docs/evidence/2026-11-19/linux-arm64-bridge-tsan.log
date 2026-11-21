@@ -1,0 +1,19 @@
+Start testing: Nov 20 13:58 CET
+----------------------------------------------------------
+2/3 Testing: installed_hail_concurrent
+2/3 Test: installed_hail_concurrent
+Command: "/tmp/baffle.fVOhT0/build-bridge-tsan-consumer/baffle_hail_concurrent"
+Directory: /tmp/baffle.fVOhT0/build-bridge-tsan-consumer
+"installed_hail_concurrent" start time: Nov 20 13:58 CET
+Output:
+----------------------------------------------------------
+PASS concurrent installed Hail callbacks/DSP: overlap_pumps=76 emitted=2400 bounded_bytes=932896
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"installed_hail_concurrent" end time: Nov 20 13:58 CET
+"installed_hail_concurrent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 20 13:58 CET

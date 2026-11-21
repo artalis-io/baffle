@@ -1,0 +1,4 @@
+source=29feb81 plus new near-only response regression
+exit=3221226505
+AEC near-only rate=8000 hop_ms=10 raw_error_snr_db=-1.134 dc_mean=0.00000076
+C:\Users\Mark\artalis.io\src\baffle\tests\aec.c:59: snr > 13 && fabs(mean / (2 * c.sample_rate)) < .0001

@@ -1,0 +1,2169 @@
+{
+  "source_pin": "8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac",
+  "training_interval_s": [
+    0,
+    6
+  ],
+  "evaluation_interval_s": [
+    6,
+    22
+  ],
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "no_physical_measurement": true,
+  "jobs": [
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original",
+      "rate": 16000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7ab5b1ac8790d70d8d5703aba609da8caeb31d9ba655b1f6200bfb29ca774682",
+      "reference_sha256": "5d275b0ed2a1e9a5d59ac276fe0581a896b5c82bec409f67b01e1771034e77d9",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset",
+      "rate": 16000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7ab5b1ac8790d70d8d5703aba609da8caeb31d9ba655b1f6200bfb29ca774682",
+      "reference_sha256": "9a17aab8c609033f1a83b4283d184a1998adc221628614fcf7ca70ffcf592a62",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine",
+      "rate": 16000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7ab5b1ac8790d70d8d5703aba609da8caeb31d9ba655b1f6200bfb29ca774682",
+      "reference_sha256": "0e82984c86d00ef16a1ee0c2e98e65fb4e1f9058e69794d8aeb268bd261e6101",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original",
+      "rate": 48000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "de6e8205faccb2d900f41b16561857a287fbf848495fc9474e914744c42069c9",
+      "reference_sha256": "d69bfc7b8d1bb433e938332c18328464b53df86b87d2cf3cabb6041d5ce3a6d7",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset",
+      "rate": 48000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "de6e8205faccb2d900f41b16561857a287fbf848495fc9474e914744c42069c9",
+      "reference_sha256": "2b44968186c37b17d8f77cd453b6c2bfc8047186b8cb2d3d39b263c6c2770ada",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine",
+      "rate": 48000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "de6e8205faccb2d900f41b16561857a287fbf848495fc9474e914744c42069c9",
+      "reference_sha256": "bc199f087bc2393d3610a3d6e2faf21a82d442a20c8559529433d89124886c0f",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.5986409262165987
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.5434220703162048
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.6756668750257799
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 195,
+              "lag_ms": 12.1875,
+              "absolute_correlation": 0.6958208930243029
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.4156481103288828
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 219,
+              "lag_ms": 13.6875,
+              "absolute_correlation": 0.5048827717529715
+            }
+          ],
+          "fixed_lag_s": 0.01278125,
+          "affine_intercept_s": 0.0121484375,
+          "affine_slope_s_per_s": 0.0002343750000000002,
+          "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+          "weighted_training_coherence_200_3400": 0.4863518257745541,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 204,
+              "lag_ms": 12.75,
+              "absolute_correlation": 0.4572474299001203
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 205,
+              "lag_ms": 12.8125,
+              "absolute_correlation": 0.40891237109775186
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+            "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+            "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+          "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+          "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original",
+      "rate": 16000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-ref.f32",
+      "frames": 388160,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7f298439005f9771c593ae2dd5328ed925723269355a2517765cf83e721c2062",
+      "reference_sha256": "803fe731afe8bef38b5d13bec20f3fa2ad13e5cb227fac46e3fe3cea28116ece",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset",
+      "rate": 16000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-ref.f32",
+      "frames": 388160,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7f298439005f9771c593ae2dd5328ed925723269355a2517765cf83e721c2062",
+      "reference_sha256": "5acb04e4fc63e28782d91599bafdb61c2f15324fa2727094ffa97aadb48ab17a",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine",
+      "rate": 16000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-ref.f32",
+      "frames": 388160,
+      "scope": "recorded-far-only",
+      "mic_sha256": "7f298439005f9771c593ae2dd5328ed925723269355a2517765cf83e721c2062",
+      "reference_sha256": "95e711d4abf6c500d6af499cee45207a440fa6b3561ba03a96d288a6fd5a3ee4",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original",
+      "rate": 48000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-ref.f32",
+      "frames": 1164480,
+      "scope": "recorded-far-only",
+      "mic_sha256": "09c2820f2b8370435772858b8bba97c0b8b5824f2a2bdc80a5709966cfc0af20",
+      "reference_sha256": "af9ee6789ac6156fa3f29debc7f38140ba5292adcf1b90ec2d12fe9202f65be3",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset",
+      "rate": 48000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-ref.f32",
+      "frames": 1164480,
+      "scope": "recorded-far-only",
+      "mic_sha256": "09c2820f2b8370435772858b8bba97c0b8b5824f2a2bdc80a5709966cfc0af20",
+      "reference_sha256": "3fd9c7f6cde43af9d4a12c3a7be51b6cc0885cd277381cf6705675214719f100",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine",
+      "rate": 48000,
+      "mic": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-mic.f32",
+      "reference": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-ref.f32",
+      "frames": 1164480,
+      "scope": "recorded-far-only",
+      "mic_sha256": "09c2820f2b8370435772858b8bba97c0b8b5824f2a2bdc80a5709966cfc0af20",
+      "reference_sha256": "d62a7b698eb924b75d0d31c7bfc80243b29f82c9e8a804811a62351d506628a6",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.33509056542186655
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 1396,
+              "lag_ms": 87.25,
+              "absolute_correlation": 0.1710756047264636
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 1393,
+              "lag_ms": 87.0625,
+              "absolute_correlation": 0.07913654711797985
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 1438,
+              "lag_ms": 89.875,
+              "absolute_correlation": 0.04381405104591958
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 2035,
+              "lag_ms": 127.18750000000001,
+              "absolute_correlation": 0.07738827534038231
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 1948,
+              "lag_ms": 121.75,
+              "absolute_correlation": 0.08273122768678057
+            }
+          ],
+          "fixed_lag_s": 0.08856249999999999,
+          "affine_intercept_s": 0.08021874999999999,
+          "affine_slope_s_per_s": 0.006937499999999999,
+          "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+          "weighted_training_coherence_200_3400": 0.015015348452900704,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 2066,
+              "lag_ms": 129.125,
+              "absolute_correlation": 0.09907060312671624
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 2160,
+              "lag_ms": 135.0,
+              "absolute_correlation": 0.0352014499924499
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+            "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+            "bytes": 2333804,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+            "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+            "bytes": 2329004,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+          "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+          "bytes": 2333804,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+          "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+          "bytes": 2329004,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original",
+      "rate": 16000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "c7b8bd3daf410654444b9026340c245bd100dc629eb5418585db5899ae9fe569",
+      "reference_sha256": "0da9e91e632fc1955f5744e7920cb170bea6ecce3f9198abd6b72fe8c8684600",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset",
+      "rate": 16000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "c7b8bd3daf410654444b9026340c245bd100dc629eb5418585db5899ae9fe569",
+      "reference_sha256": "5b89df98cea464916c2b1cc128abb1b24dfb757d4cd653b0da4107c597db27e2",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine",
+      "rate": 16000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-ref.f32",
+      "frames": 384000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "c7b8bd3daf410654444b9026340c245bd100dc629eb5418585db5899ae9fe569",
+      "reference_sha256": "81324141ccd3ef2be5b06cfed17ac29902ad23aa19298d22e5f81bb2134bb9ac",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original",
+      "rate": 48000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "344a61b53a8f6fd18805b87c15a4ffc1f1e0f7a87925cdfd79f7b79d58681d3f",
+      "reference_sha256": "74883c9c3f87bb50eccefd20ce609a75bb6c722379f82a8dea1aecef2a2f0efa",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset",
+      "rate": 48000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "344a61b53a8f6fd18805b87c15a4ffc1f1e0f7a87925cdfd79f7b79d58681d3f",
+      "reference_sha256": "f8d85665cea52500c9818d80183988a0b56234c102f3923fb40e74419a6cdba0",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "fixed-offset",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine",
+      "rate": 48000,
+      "mic": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-mic.f32",
+      "reference": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-ref.f32",
+      "frames": 1152000,
+      "scope": "recorded-far-only",
+      "mic_sha256": "344a61b53a8f6fd18805b87c15a4ffc1f1e0f7a87925cdfd79f7b79d58681d3f",
+      "reference_sha256": "a5ebd400e00f52706941af758f01ea79bc2566b9ddf38c00c317587a8676c805",
+      "far_only_interval_s": [
+        6,
+        22
+      ],
+      "metadata": {
+        "training_fit": {
+          "training_windows": [
+            {
+              "start_s": 0,
+              "lag_samples": 7246,
+              "lag_ms": 452.875,
+              "absolute_correlation": 0.03239024470545421
+            },
+            {
+              "start_s": 1,
+              "lag_samples": 497,
+              "lag_ms": 31.0625,
+              "absolute_correlation": 0.48216128486517834
+            },
+            {
+              "start_s": 2,
+              "lag_samples": 499,
+              "lag_ms": 31.1875,
+              "absolute_correlation": 0.24944572219386113
+            },
+            {
+              "start_s": 3,
+              "lag_samples": 516,
+              "lag_ms": 32.25,
+              "absolute_correlation": 0.350293541503563
+            },
+            {
+              "start_s": 4,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.26859194946331894
+            },
+            {
+              "start_s": 5,
+              "lag_samples": 515,
+              "lag_ms": 32.1875,
+              "absolute_correlation": 0.36722180473599647
+            }
+          ],
+          "fixed_lag_s": 0.032218750000000004,
+          "affine_intercept_s": 0.03165625,
+          "affine_slope_s_per_s": 0.0001250000000000001,
+          "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+          "weighted_training_coherence_200_3400": 0.15415817826633854,
+          "heldout_diagnostics_only": [
+            {
+              "start_s": 8,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2614785882909908
+            },
+            {
+              "start_s": 16,
+              "lag_samples": 528,
+              "lag_ms": 33.0,
+              "absolute_correlation": 0.2654553600313752
+            }
+          ],
+          "source_microphone": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+            "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+            "bytes": 2315564,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+          },
+          "source_reference": {
+            "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+            "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+            "bytes": 2304044,
+            "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+          },
+          "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+        },
+        "variant": "training-affine",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+          "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+          "bytes": 2315564,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+          "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+          "bytes": 2304044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original",
+      "rate": 16000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-ref.f32",
+      "frames": 624000,
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "mic_sha256": "0de9d250fb4260c715621f6c0c8f1892286587e345901a03b515856fefdcacfa",
+      "reference_sha256": "db49b9236daac2ceb892a5064d0373fbea459deff55f020b997b8c4f2ef9a79c",
+      "far_only_interval_s": null,
+      "metadata": {
+        "training_fit": null,
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav",
+          "sha256": "040bdc4a23bff026b3fd1fe53ac309c3a751079b360d997c984fa40cfd97a6b3",
+          "bytes": 3767084,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav",
+          "sha256": "b8e946385e0c1fa648dc33ba5f166c984bd51ee1de94eb70981e18e9093f1db5",
+          "bytes": 3744044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original",
+      "rate": 48000,
+      "mic": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-mic.f32",
+      "reference": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-ref.f32",
+      "frames": 1872000,
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "mic_sha256": "ef59500b32ec52d2d21d6f010de786341d2386aeb0e2414e7b3462918537f533",
+      "reference_sha256": "718a2faaff4ba1de433cdf1204c4247d1cb2ad1deec9322f0093e2c60c56318e",
+      "far_only_interval_s": null,
+      "metadata": {
+        "training_fit": null,
+        "variant": "original",
+        "source_microphone": {
+          "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav",
+          "sha256": "040bdc4a23bff026b3fd1fe53ac309c3a751079b360d997c984fa40cfd97a6b3",
+          "bytes": 3767084,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav"
+        },
+        "source_reference": {
+          "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav",
+          "sha256": "b8e946385e0c1fa648dc33ba5f166c984bd51ee1de94eb70981e18e9093f1db5",
+          "bytes": 3744044,
+          "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav"
+        }
+      }
+    },
+    {
+      "name": "controlled-16000",
+      "rate": 16000,
+      "mic": "controlled-16000-mic.f32",
+      "reference": "controlled-16000-ref.f32",
+      "frames": 384000,
+      "scope": "simulated-echo-recorded-components",
+      "mic_sha256": "bfce645036b28b8ae59600e14e80db37cddc8ebc04f82969a89a1b40781883d7",
+      "reference_sha256": "3838996d658e9ad08532e412c834cd4796c8e1f08d98b61eae404245a061856b",
+      "far_only_interval_s": null,
+      "metadata": {},
+      "oracle": "controlled-16000-oracle.f64",
+      "oracle_sha256": "3241b365e2222d479c717bb36e431d6e69dcce441ec31c2d4a5230481498694a",
+      "near_interval_s": [
+        8,
+        18
+      ]
+    },
+    {
+      "name": "controlled-48000",
+      "rate": 48000,
+      "mic": "controlled-48000-mic.f32",
+      "reference": "controlled-48000-ref.f32",
+      "frames": 1152000,
+      "scope": "simulated-echo-recorded-components",
+      "mic_sha256": "a24d9a5f5b3d265bcfc6d85692c0d7070355d863e4d06cdd139e910fa9050235",
+      "reference_sha256": "4186221bc8b22c5e59155c0483511163d13bb736c38c4e9b160607dd85144178",
+      "far_only_interval_s": null,
+      "metadata": {},
+      "oracle": "controlled-48000-oracle.f64",
+      "oracle_sha256": "cb809876b8a164dae379df3ba57576549c9230d6a08933a4954ea4136284d1fb",
+      "near_interval_s": [
+        8,
+        18
+      ]
+    },
+    {
+      "name": "near-impulse-16000",
+      "rate": 16000,
+      "mic": "near-impulse-16000-mic.f32",
+      "reference": "near-impulse-16000-ref.f32",
+      "frames": 32000,
+      "scope": "synthetic-latency-probe",
+      "mic_sha256": "20153b9f5b088c0ee4578a2327fc958c8843ff2ffe50ee374eefc88f6c97bad4",
+      "reference_sha256": "eec19bc6af0b3b6dfb97a08782c65f4bb3c3203e789a015d2008b0d689ad08be",
+      "far_only_interval_s": null,
+      "metadata": {}
+    },
+    {
+      "name": "near-impulse-48000",
+      "rate": 48000,
+      "mic": "near-impulse-48000-mic.f32",
+      "reference": "near-impulse-48000-ref.f32",
+      "frames": 96000,
+      "scope": "synthetic-latency-probe",
+      "mic_sha256": "74db9be0118127026c0c00e4379d56a5df3bd676b7c437ff69064afdaff8aa3b",
+      "reference_sha256": "fec9afb531a8e036eba1d81651896e1b2c1f78b0234dbadc8e7549563f09407b",
+      "far_only_interval_s": null,
+      "metadata": {}
+    }
+  ],
+  "diagnostics": [
+    {
+      "case": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk",
+      "training_windows": [
+        {
+          "start_s": 0,
+          "lag_samples": 195,
+          "lag_ms": 12.1875,
+          "absolute_correlation": 0.5986409262165987
+        },
+        {
+          "start_s": 1,
+          "lag_samples": 204,
+          "lag_ms": 12.75,
+          "absolute_correlation": 0.5434220703162048
+        },
+        {
+          "start_s": 2,
+          "lag_samples": 205,
+          "lag_ms": 12.8125,
+          "absolute_correlation": 0.6756668750257799
+        },
+        {
+          "start_s": 3,
+          "lag_samples": 195,
+          "lag_ms": 12.1875,
+          "absolute_correlation": 0.6958208930243029
+        },
+        {
+          "start_s": 4,
+          "lag_samples": 205,
+          "lag_ms": 12.8125,
+          "absolute_correlation": 0.4156481103288828
+        },
+        {
+          "start_s": 5,
+          "lag_samples": 219,
+          "lag_ms": 13.6875,
+          "absolute_correlation": 0.5048827717529715
+        }
+      ],
+      "fixed_lag_s": 0.01278125,
+      "affine_intercept_s": 0.0121484375,
+      "affine_slope_s_per_s": 0.0002343750000000002,
+      "waveform_lag_slope_equivalent_ppm": 234.3750000000002,
+      "weighted_training_coherence_200_3400": 0.4863518257745541,
+      "heldout_diagnostics_only": [
+        {
+          "start_s": 8,
+          "lag_samples": 204,
+          "lag_ms": 12.75,
+          "absolute_correlation": 0.4572474299001203
+        },
+        {
+          "start_s": 16,
+          "lag_samples": 205,
+          "lag_ms": 12.8125,
+          "absolute_correlation": 0.40891237109775186
+        }
+      ],
+      "source_microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+        "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+        "bytes": 2315564,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+      },
+      "source_reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+        "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+        "bytes": 2304044,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+      },
+      "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+    },
+    {
+      "case": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement",
+      "training_windows": [
+        {
+          "start_s": 0,
+          "lag_samples": 1393,
+          "lag_ms": 87.0625,
+          "absolute_correlation": 0.33509056542186655
+        },
+        {
+          "start_s": 1,
+          "lag_samples": 1396,
+          "lag_ms": 87.25,
+          "absolute_correlation": 0.1710756047264636
+        },
+        {
+          "start_s": 2,
+          "lag_samples": 1393,
+          "lag_ms": 87.0625,
+          "absolute_correlation": 0.07913654711797985
+        },
+        {
+          "start_s": 3,
+          "lag_samples": 1438,
+          "lag_ms": 89.875,
+          "absolute_correlation": 0.04381405104591958
+        },
+        {
+          "start_s": 4,
+          "lag_samples": 2035,
+          "lag_ms": 127.18750000000001,
+          "absolute_correlation": 0.07738827534038231
+        },
+        {
+          "start_s": 5,
+          "lag_samples": 1948,
+          "lag_ms": 121.75,
+          "absolute_correlation": 0.08273122768678057
+        }
+      ],
+      "fixed_lag_s": 0.08856249999999999,
+      "affine_intercept_s": 0.08021874999999999,
+      "affine_slope_s_per_s": 0.006937499999999999,
+      "waveform_lag_slope_equivalent_ppm": 6937.499999999999,
+      "weighted_training_coherence_200_3400": 0.015015348452900704,
+      "heldout_diagnostics_only": [
+        {
+          "start_s": 8,
+          "lag_samples": 2066,
+          "lag_ms": 129.125,
+          "absolute_correlation": 0.09907060312671624
+        },
+        {
+          "start_s": 16,
+          "lag_samples": 2160,
+          "lag_ms": 135.0,
+          "absolute_correlation": 0.0352014499924499
+        }
+      ],
+      "source_microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+        "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+        "bytes": 2333804,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+      },
+      "source_reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+        "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+        "bytes": 2329004,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+      },
+      "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+    },
+    {
+      "case": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk",
+      "training_windows": [
+        {
+          "start_s": 0,
+          "lag_samples": 7246,
+          "lag_ms": 452.875,
+          "absolute_correlation": 0.03239024470545421
+        },
+        {
+          "start_s": 1,
+          "lag_samples": 497,
+          "lag_ms": 31.0625,
+          "absolute_correlation": 0.48216128486517834
+        },
+        {
+          "start_s": 2,
+          "lag_samples": 499,
+          "lag_ms": 31.1875,
+          "absolute_correlation": 0.24944572219386113
+        },
+        {
+          "start_s": 3,
+          "lag_samples": 516,
+          "lag_ms": 32.25,
+          "absolute_correlation": 0.350293541503563
+        },
+        {
+          "start_s": 4,
+          "lag_samples": 528,
+          "lag_ms": 33.0,
+          "absolute_correlation": 0.26859194946331894
+        },
+        {
+          "start_s": 5,
+          "lag_samples": 515,
+          "lag_ms": 32.1875,
+          "absolute_correlation": 0.36722180473599647
+        }
+      ],
+      "fixed_lag_s": 0.032218750000000004,
+      "affine_intercept_s": 0.03165625,
+      "affine_slope_s_per_s": 0.0001250000000000001,
+      "waveform_lag_slope_equivalent_ppm": 125.00000000000011,
+      "weighted_training_coherence_200_3400": 0.15415817826633854,
+      "heldout_diagnostics_only": [
+        {
+          "start_s": 8,
+          "lag_samples": 528,
+          "lag_ms": 33.0,
+          "absolute_correlation": 0.2614785882909908
+        },
+        {
+          "start_s": 16,
+          "lag_samples": 528,
+          "lag_ms": 33.0,
+          "absolute_correlation": 0.2654553600313752
+        }
+      ],
+      "source_microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+        "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+        "bytes": 2315564,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+      },
+      "source_reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+        "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+        "bytes": 2304044,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+      },
+      "limitations": "Lag variation can be drift, movement, noise or nonlinear effects; no clock/calibration attribution"
+    }
+  ]
+}

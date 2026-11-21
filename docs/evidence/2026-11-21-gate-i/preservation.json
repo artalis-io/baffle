@@ -1,0 +1,743 @@
+{
+  "method": "Gain-sensitive and gain-adjusted near-only signal diagnostics, not phones.\n\nWhole identical source intervals retained. Log spectra use 20 ms Hann windows,\n10 ms hop, 512-point FFT, 300..7500 Hz and power floor 1e-12 FS^2. A best scalar\ngain is a diagnostic, not a changed waveform or intelligibility qualification.\n",
+  "results": [
+    {
+      "case": "source0-near-normal",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.20000000298023224,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "baffle",
+      "near_projection": 0.9806880475489131,
+      "relative_error_energy": 0.0321569106520127,
+      "gain_adjusted_relative_error": 0.03304807970096567,
+      "gain_adjusted_log_spectral_rms_db": 1.8229610823261904,
+      "output_peak": 0.20843505859375,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "ns-only",
+      "near_projection": 0.7765885411563987,
+      "relative_error_energy": 0.08894339541484109,
+      "gain_adjusted_relative_error": 0.06471792080543459,
+      "gain_adjusted_log_spectral_rms_db": 9.076563021562219,
+      "output_peak": 0.17048344016075134,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "agc-only",
+      "near_projection": 3.998239653152913,
+      "relative_error_energy": 11.116034891697291,
+      "gain_adjusted_relative_error": 0.13302918010670897,
+      "gain_adjusted_log_spectral_rms_db": 4.712911786885627,
+      "output_peak": 0.5926470160484314,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.23053
+      ],
+      "maximum_adjacent_gain_step": 2.53986
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "aec-ns",
+      "near_projection": 0.7621112356611155,
+      "relative_error_energy": 0.11402612836085098,
+      "gain_adjusted_relative_error": 0.09888726871810594,
+      "gain_adjusted_log_spectral_rms_db": 9.027458981429987,
+      "output_peak": 0.17777487635612488,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "aec-agc",
+      "near_projection": 3.9246214318061585,
+      "relative_error_energy": 11.19803113375929,
+      "gain_adjusted_relative_error": 0.17169902799342424,
+      "gain_adjusted_log_spectral_rms_db": 5.167870267937022,
+      "output_peak": 0.6220882534980774,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.252
+      ],
+      "maximum_adjacent_gain_step": 2.4458100000000007
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "ns-agc",
+      "near_projection": 3.6160058427928825,
+      "relative_error_energy": 8.137900878340663,
+      "gain_adjusted_relative_error": 0.09899540985431082,
+      "gain_adjusted_log_spectral_rms_db": 7.422020933490577,
+      "output_peak": 0.6038620471954346,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.37471
+      ],
+      "maximum_adjacent_gain_step": 2.125610000000001
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "pipeline",
+      "near_projection": 3.453139537481591,
+      "relative_error_energy": 7.617347475619474,
+      "gain_adjusted_relative_error": 0.13413541804171325,
+      "gain_adjusted_log_spectral_rms_db": 9.685519653963484,
+      "output_peak": 0.6096708178520203,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.76172
+      ],
+      "maximum_adjacent_gain_step": 1.73876
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.02500000037252903,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "baffle",
+      "near_projection": 0.9806710421492651,
+      "relative_error_energy": 0.03218837682513333,
+      "gain_adjusted_relative_error": 0.03308126138325475,
+      "gain_adjusted_log_spectral_rms_db": 5.265195014322862,
+      "output_peak": 0.026031494140625,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "ns-only",
+      "near_projection": 0.7765885411563987,
+      "relative_error_energy": 0.08894339541484109,
+      "gain_adjusted_relative_error": 0.06471792080543459,
+      "gain_adjusted_log_spectral_rms_db": 9.070082613262795,
+      "output_peak": 0.021310430020093918,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "agc-only",
+      "near_projection": 8.938923485196453,
+      "relative_error_energy": 66.43492356885136,
+      "gain_adjusted_relative_error": 0.0426562175139898,
+      "gain_adjusted_log_spectral_rms_db": 4.8116535359414145,
+      "output_peak": 0.23198309540748596,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 0.35291000000000006
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "aec-ns",
+      "near_projection": 0.7619900590105538,
+      "relative_error_energy": 0.11405639442603192,
+      "gain_adjusted_relative_error": 0.09887152939985032,
+      "gain_adjusted_log_spectral_rms_db": 8.663210344961987,
+      "output_peak": 0.02220737934112549,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "aec-agc",
+      "near_projection": 8.803928709488492,
+      "relative_error_energy": 66.61917093345556,
+      "gain_adjusted_relative_error": 0.0737702173192537,
+      "gain_adjusted_log_spectral_rms_db": 6.541800790120249,
+      "output_peak": 0.24228928983211517,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 0.35291000000000006
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "ns-agc",
+      "near_projection": 6.7327954981734015,
+      "relative_error_energy": 36.085973463008344,
+      "gain_adjusted_relative_error": 0.07105650139542297,
+      "gain_adjusted_log_spectral_rms_db": 9.207204528007216,
+      "output_peak": 0.1977463811635971,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "pipeline",
+      "near_projection": 6.818282411221453,
+      "relative_error_energy": 39.0276979366431,
+      "gain_adjusted_relative_error": 0.11132290431340838,
+      "gain_adjusted_log_spectral_rms_db": 10.064938348011614,
+      "output_peak": 0.20904217660427094,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.6499999761581421,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "baffle",
+      "near_projection": 0.9806881968096629,
+      "relative_error_energy": 0.032156527988298475,
+      "gain_adjusted_relative_error": 0.03304767775242516,
+      "gain_adjusted_log_spectral_rms_db": 1.2620782617465167,
+      "output_peak": 0.6773681640625,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "ns-only",
+      "near_projection": 0.7765885414738527,
+      "relative_error_energy": 0.08894339476612739,
+      "gain_adjusted_relative_error": 0.06471791991207171,
+      "gain_adjusted_log_spectral_rms_db": 9.076747670475292,
+      "output_peak": 0.5540712475776672,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "agc-only",
+      "near_projection": 1.3354926266179037,
+      "relative_error_energy": 0.5115321139158369,
+      "gain_adjusted_relative_error": 0.22369932105799908,
+      "gain_adjusted_log_spectral_rms_db": 6.896420828650568,
+      "output_peak": 0.6348907947540283,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.694372,
+        8.82018
+      ],
+      "maximum_adjacent_gain_step": 2.7048300000000003
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "aec-ns",
+      "near_projection": 0.762152388641689,
+      "relative_error_energy": 0.1140270887065693,
+      "gain_adjusted_relative_error": 0.09891194749517432,
+      "gain_adjusted_log_spectral_rms_db": 8.990871075313045,
+      "output_peak": 0.57773756980896,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "aec-agc",
+      "near_projection": 1.310362863390321,
+      "relative_error_energy": 0.5515744897417866,
+      "gain_adjusted_relative_error": 0.26513448164783576,
+      "gain_adjusted_log_spectral_rms_db": 7.0163187528192275,
+      "output_peak": 0.6865472793579102,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.707188,
+        8.62218
+      ],
+      "maximum_adjacent_gain_step": 2.7007399999999997
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "ns-agc",
+      "near_projection": 1.2902258795856691,
+      "relative_error_energy": 0.37224449216723404,
+      "gain_adjusted_relative_error": 0.17301399850149954,
+      "gain_adjusted_log_spectral_rms_db": 6.624247821097573,
+      "output_peak": 0.6358212828636169,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.19917
+      ],
+      "maximum_adjacent_gain_step": 3.0649000000000006
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "pipeline",
+      "near_projection": 1.1640674670891853,
+      "relative_error_energy": 0.23328818394351641,
+      "gain_adjusted_relative_error": 0.1522966554371798,
+      "gain_adjusted_log_spectral_rms_db": 8.345425228151269,
+      "output_peak": 0.6424002647399902,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        4.16361
+      ],
+      "maximum_adjacent_gain_step": 1.3420500000000004
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.20000000298023224,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "baffle",
+      "near_projection": 0.9828260659979485,
+      "relative_error_energy": 0.02626583789734689,
+      "gain_adjusted_relative_error": 0.026886456342568355,
+      "gain_adjusted_log_spectral_rms_db": 1.2461040595615944,
+      "output_peak": 0.201416015625,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "ns-only",
+      "near_projection": 0.736258521150887,
+      "relative_error_energy": 0.1021181947712429,
+      "gain_adjusted_relative_error": 0.060062778041078735,
+      "gain_adjusted_log_spectral_rms_db": 9.646144220135861,
+      "output_peak": 0.16494469344615936,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "agc-only",
+      "near_projection": 5.067262901840416,
+      "relative_error_energy": 19.354648700813975,
+      "gain_adjusted_relative_error": 0.10951452263729351,
+      "gain_adjusted_log_spectral_rms_db": 3.244608894565524,
+      "output_peak": 0.7360550165176392,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.95803
+      ],
+      "maximum_adjacent_gain_step": 3.2646299999999995
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "aec-ns",
+      "near_projection": 0.7261454394874969,
+      "relative_error_energy": 0.1195027168567791,
+      "gain_adjusted_relative_error": 0.08440636640399937,
+      "gain_adjusted_log_spectral_rms_db": 9.575364551576692,
+      "output_peak": 0.1662273406982422,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "aec-agc",
+      "near_projection": 4.972774997804614,
+      "relative_error_energy": 19.329904675996797,
+      "gain_adjusted_relative_error": 0.1434363086356656,
+      "gain_adjusted_log_spectral_rms_db": 3.6518437035031486,
+      "output_peak": 0.7440532445907593,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.95851
+      ],
+      "maximum_adjacent_gain_step": 3.2854
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "ns-agc",
+      "near_projection": 4.508769940190481,
+      "relative_error_energy": 14.441557344389762,
+      "gain_adjusted_relative_error": 0.10478086395679921,
+      "gain_adjusted_log_spectral_rms_db": 8.12601618018526,
+      "output_peak": 0.6200249791145325,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.95428
+      ],
+      "maximum_adjacent_gain_step": 3.4281499999999996
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "pipeline",
+      "near_projection": 2.9792853302497657,
+      "relative_error_energy": 5.5368125805996105,
+      "gain_adjusted_relative_error": 0.1824263661019399,
+      "gain_adjusted_log_spectral_rms_db": 9.046558558778733,
+      "output_peak": 0.603522777557373,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.72961
+      ],
+      "maximum_adjacent_gain_step": 3.19487
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.02500000037252903,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "baffle",
+      "near_projection": 0.9828081178968198,
+      "relative_error_energy": 0.026315410003168976,
+      "gain_adjusted_relative_error": 0.026938121352699296,
+      "gain_adjusted_log_spectral_rms_db": 1.5911113660599574,
+      "output_peak": 0.025177001953125,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "ns-only",
+      "near_projection": 0.736258521150887,
+      "relative_error_energy": 0.1021181947712429,
+      "gain_adjusted_relative_error": 0.060062778041078735,
+      "gain_adjusted_log_spectral_rms_db": 9.645519133220848,
+      "output_peak": 0.02061808668076992,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "agc-only",
+      "near_projection": 9.458062958923831,
+      "relative_error_energy": 74.31296766439337,
+      "gain_adjusted_relative_error": 0.031011570564099165,
+      "gain_adjusted_log_spectral_rms_db": 2.9813973671597584,
+      "output_peak": 0.24992847442626953,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 0.35291000000000006
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-ns",
+      "near_projection": 0.7261495020334954,
+      "relative_error_energy": 0.1195154454275124,
+      "gain_adjusted_relative_error": 0.08443378123062595,
+      "gain_adjusted_log_spectral_rms_db": 9.582207731032971,
+      "output_peak": 0.020778166130185127,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "aec-agc",
+      "near_projection": 9.290732659747057,
+      "relative_error_energy": 73.86934191799375,
+      "gain_adjusted_relative_error": 0.059467445129052054,
+      "gain_adjusted_log_spectral_rms_db": 3.36906051426474,
+      "output_peak": 0.25169798731803894,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        1.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 0.35291000000000006
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "ns-agc",
+      "near_projection": 6.81893426268189,
+      "relative_error_energy": 37.38545351699865,
+      "gain_adjusted_relative_error": 0.07581977372734074,
+      "gain_adjusted_log_spectral_rms_db": 9.504113317905372,
+      "output_peak": 0.20612187683582306,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "pipeline",
+      "near_projection": 5.35135290185915,
+      "relative_error_energy": 22.830609982319807,
+      "gain_adjusted_relative_error": 0.13605967508501574,
+      "gain_adjusted_log_spectral_rms_db": 9.535952175715215,
+      "output_peak": 0.18536505103111267,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.6499999761581421,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "baffle",
+      "near_projection": 0.9828239140485665,
+      "relative_error_energy": 0.026265623298217616,
+      "gain_adjusted_relative_error": 0.026886275390370713,
+      "gain_adjusted_log_spectral_rms_db": 1.3791897644420694,
+      "output_peak": 0.654571533203125,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "ns-only",
+      "near_projection": 0.7362585213109964,
+      "relative_error_energy": 0.10211819462028005,
+      "gain_adjusted_relative_error": 0.06006277789226451,
+      "gain_adjusted_log_spectral_rms_db": 9.646906087693566,
+      "output_peak": 0.5360702276229858,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "agc-only",
+      "near_projection": 1.6899035060985559,
+      "relative_error_energy": 1.0969797178970784,
+      "gain_adjusted_relative_error": 0.21745869968376436,
+      "gain_adjusted_log_spectral_rms_db": 6.013745644544648,
+      "output_peak": 0.8912509083747864,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.766582,
+        9.21901
+      ],
+      "maximum_adjacent_gain_step": 4.42401
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "aec-ns",
+      "near_projection": 0.726148053909249,
+      "relative_error_energy": 0.11950214881095059,
+      "gain_adjusted_relative_error": 0.08440739696738349,
+      "gain_adjusted_log_spectral_rms_db": 9.584805067670594,
+      "output_peak": 0.540250301361084,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "aec-agc",
+      "near_projection": 1.656600193704275,
+      "relative_error_energy": 1.138598047810088,
+      "gain_adjusted_relative_error": 0.25779542846229814,
+      "gain_adjusted_log_spectral_rms_db": 6.4660733098955925,
+      "output_peak": 0.8912509083747864,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.767037,
+        9.22787
+      ],
+      "maximum_adjacent_gain_step": 4.52862
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "ns-agc",
+      "near_projection": 1.653586783967247,
+      "relative_error_energy": 0.905218223239915,
+      "gain_adjusted_relative_error": 0.17482863196578835,
+      "gain_adjusted_log_spectral_rms_db": 6.807865998841702,
+      "output_peak": 0.7700209021568298,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.97034
+      ],
+      "maximum_adjacent_gain_step": 3.6623099999999997
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "pipeline",
+      "near_projection": 0.9631485096565404,
+      "relative_error_energy": 0.24333325225278454,
+      "gain_adjusted_relative_error": 0.2608461189112392,
+      "gain_adjusted_log_spectral_rms_db": 9.252038401643775,
+      "output_peak": 0.6429438591003418,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        7.39572
+      ],
+      "maximum_adjacent_gain_step": 3.8877500000000005
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[ 15%] Built target baffle_speex_kernel
+[ 21%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 26%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 36%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 36%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 42%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 47%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[ 52%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 57%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 63%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 68%] Linking C static library libbaffle.a
+[ 68%] Built target baffle
+[ 73%] Building C object CMakeFiles/baffle_fuzz_pipeline.dir/fuzz/pipeline.c.o
+[ 78%] Building C object CMakeFiles/baffle_fuzz_transport.dir/fuzz/transport.c.o
+[ 84%] Building C object CMakeFiles/baffle_fuzz_aec.dir/fuzz/aec.c.o
+[ 89%] Linking C executable baffle_fuzz_transport
+[ 94%] Linking C executable baffle_fuzz_pipeline
+[100%] Linking C executable baffle_fuzz_aec
+[100%] Built target baffle_fuzz_pipeline
+[100%] Built target baffle_fuzz_transport
+[100%] Built target baffle_fuzz_aec
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 723
+INFO: Loaded 1 modules   (7858 inline 8-bit counters): 7858 [0xbc75fc8bbac8, 0xbc75fc8bd97a), 
+INFO: Loaded 1 PC tables (7858 PCs): 7858 [0xbc75fc8bd980,0xbc75fc8dc4a0), 
+INFO:      344 files found in build-aec-fuzz/corpus
+INFO: seed corpus: files: 344 min: 1b max: 4096b total: 313314b rss: 32Mb
+#128	pulse  cov: 2940 ft: 6048 corp: 53/2897b exec/s: 64 rss: 79Mb
+#256	pulse  cov: 2942 ft: 6218 corp: 94/25Kb exec/s: 85 rss: 108Mb
+#345	INITED cov: 2944 ft: 6224 corp: 96/27Kb exec/s: 115 rss: 130Mb
+#512	pulse  cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 128 rss: 191Mb
+#536	REDUCE cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 107 rss: 197Mb L: 511/1196 MS: 1 EraseBytes-
+#1024	pulse  cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 128 rss: 338Mb
+#1117	REDUCE cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 124 rss: 341Mb L: 451/1196 MS: 1 EraseBytes-
+#1133	REDUCE cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 125 rss: 341Mb L: 345/1196 MS: 1 EraseBytes-
+#1549	REDUCE cov: 2944 ft: 6224 corp: 96/27Kb lim: 1196 exec/s: 129 rss: 368Mb L: 221/1196 MS: 1 EraseBytes-
+#1705	NEW    cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 131 rss: 368Mb L: 16/1196 MS: 1 ChangeByte-
+#1901	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 135 rss: 368Mb L: 373/1196 MS: 1 EraseBytes-
+#1978	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 131 rss: 368Mb L: 121/1196 MS: 2 ChangeByte-EraseBytes-
+#2048	pulse  cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 136 rss: 368Mb
+#2115	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 132 rss: 368Mb L: 26/1196 MS: 2 EraseBytes-CopyPart-
+#2206	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 129 rss: 368Mb L: 310/1196 MS: 1 EraseBytes-
+#2555	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 134 rss: 368Mb L: 21/1196 MS: 4 ShuffleBytes-ChangeByte-ChangeBinInt-EraseBytes-
+#2601	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 136 rss: 368Mb L: 993/993 MS: 1 CrossOver-
+#2668	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 133 rss: 368Mb L: 36/993 MS: 2 EraseBytes-ChangeBinInt-
+#2875	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 143 rss: 368Mb L: 581/993 MS: 2 ChangeBit-EraseBytes-
+#2956	REDUCE cov: 2944 ft: 6269 corp: 97/27Kb lim: 1196 exec/s: 147 rss: 368Mb L: 475/993 MS: 1 EraseBytes-
+#2963	NEW    cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 141 rss: 368Mb L: 24/993 MS: 2 ChangeByte-CMP- DE: "\000\000\000\000\000\000\000@"-
+#3147	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 143 rss: 369Mb L: 34/993 MS: 4 CrossOver-ShuffleBytes-CrossOver-EraseBytes-
+#3183	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 144 rss: 369Mb L: 393/993 MS: 1 EraseBytes-
+#3399	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 141 rss: 369Mb L: 21/993 MS: 1 EraseBytes-
+#3426	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 142 rss: 369Mb L: 19/993 MS: 2 ShuffleBytes-EraseBytes-
+#3768	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 144 rss: 369Mb L: 166/993 MS: 2 InsertByte-EraseBytes-
+#4096	pulse  cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 146 rss: 369Mb
+#4478	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 149 rss: 369Mb L: 30/993 MS: 4 EraseBytes-ShuffleBytes-ChangeByte-ShuffleBytes-
+#4564	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1196 exec/s: 152 rss: 369Mb L: 10/993 MS: 1 EraseBytes-
+#6385	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1206 exec/s: 152 rss: 369Mb L: 26/993 MS: 1 EraseBytes-
+#6526	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1206 exec/s: 151 rss: 369Mb L: 58/993 MS: 1 EraseBytes-
+#7293	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1206 exec/s: 158 rss: 369Mb L: 83/993 MS: 2 PersAutoDict-EraseBytes- DE: "\000\000\000\000\000\000\000@"-
+#7810	REDUCE cov: 2944 ft: 6270 corp: 98/27Kb lim: 1206 exec/s: 159 rss: 372Mb L: 365/993 MS: 2 ShuffleBytes-EraseBytes-
+#8192	pulse  cov: 2944 ft: 6270 corp: 98/27Kb lim: 1206 exec/s: 157 rss: 398Mb
+#8326	REDUCE cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 157 rss: 398Mb L: 237/993 MS: 1 EraseBytes-
+#9167	REDUCE cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 158 rss: 398Mb L: 422/993 MS: 1 EraseBytes-
+#9316	REDUCE cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 160 rss: 398Mb L: 8/993 MS: 4 CMP-EraseBytes-ChangeBit-InsertByte- DE: "\000\000\000\231"-
+#9828	REDUCE cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 163 rss: 398Mb L: 35/993 MS: 2 ChangeBinInt-EraseBytes-
+#9982	REDUCE cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 163 rss: 398Mb L: 812/993 MS: 4 ChangeBinInt-ChangeBinInt-ChangeBinInt-EraseBytes-
+#10000	DONE   cov: 2944 ft: 6270 corp: 98/26Kb lim: 1206 exec/s: 163 rss: 398Mb
+###### Recommended dictionary. ######
+"\000\000\000\000\000\000\000@" # Uses: 547
+"\000\000\000\231" # Uses: 36
+###### End of recommended dictionary. ######
+Done 10000 runs in 61 second(s)

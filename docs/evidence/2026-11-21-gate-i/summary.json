@@ -1,0 +1,20 @@
+{
+  "archive_parent_revision": "387eca516deda330a94711bf485775e2e44b1629",
+  "archived_utc": "2026-11-21T00:19:42.240956+00:00",
+  "gate_i": "PARTIAL",
+  "production_ready": false,
+  "abi_stable": false,
+  "original_aec_threshold_db": 8,
+  "reproduced_db": 14.60337539447629,
+  "original_fixture_sha256": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+  "default_hypotheses_unchanged": 448,
+  "remaining_failures": [
+    "Near-only recognition regressions unchanged",
+    "Assistant-only false transcripts",
+    "Weak real-room AEC",
+    "Physical/live/independent phone review incomplete"
+  ],
+  "public_api_fields_added": 0,
+  "hail_source_changed": false,
+  "physical_measurements_new": false
+}

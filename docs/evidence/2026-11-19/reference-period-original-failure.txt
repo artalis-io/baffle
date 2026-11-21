@@ -1,0 +1,18 @@
+Test project C:/Users/Mark/artalis.io/src/baffle/build-hail-consumer
+    Start 1: installed_hail_duplex
+1/1 Test #1: installed_hail_duplex ............***Failed    3.12 sec
+C:\Users\Mark\artalis.io\src\baffle\examples\hail-consumer\main.c:186: fabs(duration - expected) < 150.0
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=0 steps=8000 aec=0 caller_bytes=42064 missing_reference_frames=0
+PASS installed Hail duplex rate=48000 playback=48000 channels=4/2 drift=1000 steps=8000 aec=0 caller_bytes=152192 missing_reference_frames=0
+PASS installed Hail duplex rate=44100 playback=48000 channels=8/2 drift=-1000 steps=8000 aec=0 caller_bytes=213968 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=32/32 drift=100 steps=2000 aec=0 caller_bytes=393024 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=100 steps=280000 aec=0 caller_bytes=42064 missing_reference_frames=0
+PASS installed Hail duplex rate=16000 playback=48000 channels=1/2 drift=0 steps=8000 aec=1 caller_bytes=932896 missing_reference_frames=5600
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   3.13 sec
+
+The following tests FAILED:
+	  1 - installed_hail_duplex (Failed)

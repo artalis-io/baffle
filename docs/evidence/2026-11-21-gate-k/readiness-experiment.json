@@ -1,0 +1,11 @@
+{
+  "base": "f4f0fc770b07303e7762bf3166ed8bf531e44361",
+  "parameter": "readiness only",
+  "old_expression": "if (!st->adapted && st->sum_adapt > SHL32(EXTEND32(M),15) && MULT16_32_Q15(st->leak_estimate,Syy) > MULT16_32_Q15(QCONST16(.03f,15),Syy))",
+  "new_expression": "if (!st->adapted && st->sum_adapt > SHL32(EXTEND32(M),15))",
+  "upstream_lf_sha256": "a096297873dfd0a07509028d2cdd02d12edf8f1d03319fcecedda003d18d22a8",
+  "upstream_file_sha256": "39ba93c0f7b5ee016ea0a1074b7f350877834e32513833f3b964a90f9b8a246e",
+  "derived_sha256": "e4c2dd75a2405884cbb75aa036eb04c3601bff465daa9137e233c14168427f55",
+  "license": "original BSD notices retained in derived source, COPYING unchanged",
+  "production_option": false
+}

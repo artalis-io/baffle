@@ -1,0 +1,1 @@
+{"rate":16000,"frames":160,"calls":200,"wait_policy":"standard-sleep","paced_seconds":2,"workspace_bytes":147984,"baffle_tail_ms":0,"rss_before_init_kib":8436,"rss_after_init_kib":9776,"rss_after_process_kib":11480,"process_peak_rss_kib":11452,"completion_deadline_misses":0,"execution_deadline_misses":0,"added_pipeline_delay_frames":160,"stage_mask":15}

@@ -1,0 +1,722 @@
+{
+  "versions": {
+    "sherpa-onnx": "1.12.40",
+    "sherpa-onnx-core": "1.12.40",
+    "piper-tts": "1.3.0",
+    "onnxruntime": "1.23.2",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "psutil": "7.1.3"
+  },
+  "manifest_sha256": "fd0ef69276d4dd76e0c0adae5cc6f31b55f18f87a505aa337d77a86599de5fe9",
+  "native_report_sha256": "ab3281e3d5201532a03c7de6b04fee803f6a612e4244d80e3a1ae9ff8c9984fe",
+  "unavailable_backend_cases": [
+    {
+      "job": "epoch-flush",
+      "backend": "aec3",
+      "scope": "simulated-echo-provider-transcript",
+      "status": "UNSUPPORTED_TRANSPORT_CONTRACT",
+      "reason": "No qualified AEC3 generation/epoch adapter is implemented"
+    },
+    {
+      "job": "epoch-restart",
+      "backend": "aec3",
+      "scope": "simulated-echo-provider-transcript",
+      "status": "UNSUPPORTED_TRANSPORT_CONTRACT",
+      "reason": "No qualified AEC3 generation/epoch adapter is implemented"
+    }
+  ],
+  "scope": "Provider-transcript WER, simulated echo of real TTS, not physical or human phoneme/onset qualification",
+  "results": [
+    {
+      "case": "normal",
+      "recognizer": "whisper",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 347.7868999761995,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "whisper",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " Tell me what you would like to do. I can help you plan next to tell me what you would like to change.",
+      "wer": 1.2777777777777777,
+      "first_reference_word_recognized": false,
+      "decode_ms": 362.5601999810897,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "whisper",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 351.22470001806505,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "whisper",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the old pamps might have a given air this while in quarter of raffles.",
+      "wer": 0.6666666666666666,
+      "first_reference_word_recognized": true,
+      "decode_ms": 345.2544999890961,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "whisper",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 350.44229999766685,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "whisper",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 348.3790000027511,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "whisper",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " Tell me what you would like to change. We can...",
+      "wer": 0.9444444444444444,
+      "first_reference_word_recognized": false,
+      "decode_ms": 247.48099999851547,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "whisper",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 401.8551000044681,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "whisper",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " The lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.2222222222222222,
+      "first_reference_word_recognized": false,
+      "decode_ms": 349.1801999916788,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "whisper",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 398.8816000055522,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "whisper",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 401.5566000016406,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "whisper",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " Tell me what you would like to change.",
+      "wer": 0.9444444444444444,
+      "first_reference_word_recognized": false,
+      "decode_ms": 272.9692000139039,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "whisper",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 404.5128999860026,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "whisper",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the little lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.05555555555555555,
+      "first_reference_word_recognized": true,
+      "decode_ms": 402.2772000171244,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "whisper",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 405.2122999855783,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "whisper",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 387.5437999959104,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "whisper",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " Tell me what you would like to change.",
+      "wer": 0.9444444444444444,
+      "first_reference_word_recognized": false,
+      "decode_ms": 275.4469999927096,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "whisper",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 399.9861000047531,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "whisper",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 400.6908000155818,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "whisper",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 401.30430000135675,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "whisper",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " Tell me what you would like to change. We can continue where you are ready. I can help you plan the next step. Tell me what you would like to change.",
+      "wer": 1.6666666666666667,
+      "first_reference_word_recognized": false,
+      "decode_ms": 535.3434999997262,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "whisper",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 455.1506999996491,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "whisper",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": " After early nightfall, the Yitz-ams would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.1111111111111111,
+      "first_reference_word_recognized": true,
+      "decode_ms": 430.4929999925662,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "parakeet",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 806.5620000124909,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "parakeet",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "Tell me what you would like to change. We can continue when you are right. Tell me what you would like to change.",
+      "wer": 1.2777777777777777,
+      "first_reference_word_recognized": false,
+      "decode_ms": 806.1716000083834,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "parakeet",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 810.1019999885466,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "parakeet",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall, the elephants light up here and there in the swallowed quarter of Rawls.",
+      "wer": 0.3888888888888889,
+      "first_reference_word_recognized": true,
+      "decode_ms": 808.3972999884281,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "normal",
+      "recognizer": "parakeet",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 800.5344000121113,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "parakeet",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 794.02050000499,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "parakeet",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "Tell me what you would like to change.",
+      "wer": 0.9444444444444444,
+      "first_reference_word_recognized": false,
+      "decode_ms": 794.2866000230424,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "parakeet",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 801.3852000003681,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "parakeet",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "",
+      "wer": 1.0,
+      "first_reference_word_recognized": false,
+      "decode_ms": 794.9670999951195,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "quiet-near",
+      "recognizer": "parakeet",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 487.4513999966439,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "parakeet",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 494.803800014779,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "parakeet",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "",
+      "wer": 1.0,
+      "first_reference_word_recognized": false,
+      "decode_ms": 483.0467999854591,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "parakeet",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 485.9817000105977,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "parakeet",
+      "variant": "aec3",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "",
+      "wer": 1.0,
+      "first_reference_word_recognized": false,
+      "decode_ms": 484.0078999986872,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "through-cancel",
+      "recognizer": "parakeet",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 488.89799998141825,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "parakeet",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 797.1015999792144,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "parakeet",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "",
+      "wer": 1.0,
+      "first_reference_word_recognized": false,
+      "decode_ms": 794.6728999959305,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "parakeet",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 799.3838000111282,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-flush",
+      "recognizer": "parakeet",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 797.7790999866556,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "parakeet",
+      "variant": "near-oracle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 795.6709999998566,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "parakeet",
+      "variant": "microphone",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "Tell me what you would like to change. We can continue when you are ready. Tell me what you would like to change.",
+      "wer": 1.2777777777777777,
+      "first_reference_word_recognized": false,
+      "decode_ms": 806.4858000143431,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "parakeet",
+      "variant": "baffle",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 799.1680999984965,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    },
+    {
+      "case": "epoch-restart",
+      "recognizer": "parakeet",
+      "variant": "pipeline",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "first_reference_word_recognized": true,
+      "decode_ms": 797.8740999824367,
+      "complete_utterance_window_frames": [
+        120000,
+        242000
+      ],
+      "phoneme_intelligibility": "not established by word recognition"
+    }
+  ]
+}

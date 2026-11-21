@@ -1,0 +1,61 @@
+[  9%] Built target baffle_speex_kernel
+[ 19%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 19%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 19%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 25%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 25%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 29%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 32%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 35%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 38%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[ 41%] Linking C static library libbaffle.a
+[ 41%] Built target baffle
+[ 45%] Building C object CMakeFiles/baffle_conformance.dir/tests/conformance.c.o
+[ 48%] Building CXX object CMakeFiles/baffle_concurrency.dir/tests/concurrency.cpp.o
+[ 51%] Building C object CMakeFiles/baffle_numerical.dir/tests/numerical.c.o
+[ 54%] Building C object CMakeFiles/baffle_conditioning.dir/tests/conditioning.c.o
+[ 58%] Building C object CMakeFiles/baffle_aec.dir/tests/aec.c.o
+[ 61%] Building C object CMakeFiles/baffle_noalloc.dir/tests/noalloc.c.o
+[ 64%] Building C object CMakeFiles/baffle_latency.dir/bench/latency.c.o
+[ 67%] Building C object CMakeFiles/baffle_pcm.dir/tests/pcm.c.o
+[ 70%] Building C object CMakeFiles/baffle_pipeline.dir/tests/pipeline.c.o
+[ 74%] Linking C executable baffle_conformance
+[ 77%] Linking C executable baffle_conditioning
+[ 80%] Linking C executable baffle_latency
+[ 87%] Linking C executable baffle_numerical
+[ 87%] Linking C executable baffle_noalloc
+[ 93%] Linking C executable baffle_pcm
+[ 93%] Linking C executable baffle_aec
+[ 96%] Linking C executable baffle_pipeline
+[ 96%] Built target baffle_noalloc
+[ 96%] Built target baffle_conditioning
+[ 96%] Built target baffle_latency
+[ 96%] Built target baffle_pcm
+[ 96%] Built target baffle_conformance
+[ 96%] Built target baffle_numerical
+[ 96%] Built target baffle_pipeline
+[ 96%] Built target baffle_aec
+[100%] Linking CXX executable baffle_concurrency
+[100%] Built target baffle_concurrency
+Internal ctest changing into directory: /tmp/baffle.fVOhT0/build-asan
+Test project /tmp/baffle.fVOhT0/build-asan
+    Start 1: conformance
+1/8 Test #1: conformance ......................   Passed    0.01 sec
+    Start 2: pcm
+2/8 Test #2: pcm ..............................   Passed    0.01 sec
+    Start 3: numerical
+3/8 Test #3: numerical ........................   Passed    2.95 sec
+    Start 4: conditioning
+4/8 Test #4: conditioning .....................   Passed    0.26 sec
+    Start 5: aec
+5/8 Test #5: aec ..............................   Passed    4.56 sec
+    Start 6: pipeline
+6/8 Test #6: pipeline .........................   Passed    5.85 sec
+    Start 7: concurrency
+7/8 Test #7: concurrency ......................   Passed    2.37 sec
+    Start 8: noalloc
+8/8 Test #8: noalloc ..........................   Passed    3.26 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =  19.27 sec

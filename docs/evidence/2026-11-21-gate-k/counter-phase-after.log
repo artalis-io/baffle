@@ -1,0 +1,2 @@
+PASS finite abrupt-path recovery; native reset events 1 all publicly reported
+PASS accelerated INT_MAX schedule boundary; no adaptive reset or signed overflow

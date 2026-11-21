@@ -1,0 +1,142 @@
+{
+  "baseline": "96e88d4bd18fc5e50c9615b74fadb68c80c542c8",
+  "production_reset_recovery": "000d1d4",
+  "production_counter": "7a25c35",
+  "production_and_sanitizer_source": "17aea11 (same production callback code as final)",
+  "native_fuzz_instrumentation_source": "f4f0fc7",
+  "archive_parent": "cb84f5f21f6d11adf88f2f983066f258ef34c885",
+  "windows": {
+    "cpu": {
+      "Name": "AMD Ryzen 9 5950X 16-Core Processor            ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32
+    },
+    "os": {
+      "Caption": "Microsoft Windows 11 Pro",
+      "Version": "10.0.26300",
+      "BuildNumber": "26300",
+      "TotalVisibleMemorySize": 134114624
+    },
+    "compiler": "clang-cl 19.1.5; MSVC smoke 19.44.35229",
+    "flags": "Release /O2 /Ob2 /DNDEBUG; scalar Baffle, reviewed SpeexDSP 1.2.1",
+    "hail_sdk_files": [
+      {
+        "file": "include/hail.h",
+        "bytes": 13521,
+        "sha256": "b8a7ac1d4fb331e5aa748f5f306e19644e02879ab80402ad8812324ab43b18aa"
+      },
+      {
+        "file": "lib/hail.lib",
+        "bytes": 85980,
+        "sha256": "21745f6e3af6167a845fd34cf08b4cdf4dcc2ee7b4286053505eeb3b414cd025"
+      },
+      {
+        "file": "include/hail/virtual.h",
+        "bytes": 2840,
+        "sha256": "133cf2096d849bd455b51cf95f9c8f96a106b73b642a80568ab2a3049ba94585"
+      }
+    ],
+    "hail_sdk_source_revision": "not embedded; exact installed bits hashed, do not infer from sibling working tree",
+    "fresh_os_receipt": {
+      "Caption": "Microsoft Windows 11 Pro",
+      "Version": "10.0.26300",
+      "BuildNumber": "26300"
+    },
+    "fresh_cpu_receipt": {
+      "Name": "AMD Ryzen 9 5950X 16-Core Processor            ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32
+    }
+  },
+  "linux_arm64": {
+    "hostname": "spark-7468",
+    "hardware": "20 CPU: 10 Cortex-X925 + 10 Cortex-A725; GB10-class unified platform",
+    "os": "Ubuntu 24.04, Linux 7.0.0-1024-nvidia",
+    "compiler": "GCC 13.3.0 Release -O3 -DNDEBUG; Clang18 sanitizers",
+    "hail_source": "7ef6142ba4b8c8be15d1e7d704502db01abc5113",
+    "root": "/tmp/baffle.fVOhT0",
+    "qa_root": "/tmp/baffle-acoustic-tools",
+    "raw_environment": "spark-environment.txt"
+  },
+  "flags": "Windows clang-cl19.1.5 /O2 /Ob2 /DNDEBUG and /fp:precise core; MSVC19.44 Debug /W4 /WX; ARM64 Clang18 Debug ASan/UBSan/TSan; GCC13 analyzer. Raw build/configuration logs retained.",
+  "baseline_sdk": [
+    {
+      "file": "include/baffle.h",
+      "sha256": "4e7acdb327d1a63918146dd7384d6581e20cb24398350249a0f5415fa8749604"
+    },
+    {
+      "file": "lib/baffle.lib",
+      "sha256": "42c464f2792743c5ed306c15eb12e9b662f2d1e3f8d4c0a27aef3234ff28a1a0"
+    },
+    {
+      "file": "lib/baffle_hail_adapter.lib",
+      "sha256": "46a38d7388ae4ffc75d1eceaaeb0e6953575946fd16041b47d5eafadd8db397c"
+    },
+    {
+      "file": "include/baffle/hail.h",
+      "sha256": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500"
+    }
+  ],
+  "corrected_sdk": [
+    {
+      "file": "include/baffle.h",
+      "sha256": "a38bbb74e7065acbee212356ca3bc93080d9682c8bfdc78b51ea6da26ca3d6fd"
+    },
+    {
+      "file": "lib/baffle.lib",
+      "sha256": "fc39d38950a6cc2f826969c96fb9249d2535a933d6e0768f91289b8f9614cf1b"
+    },
+    {
+      "file": "lib/baffle_hail_adapter.lib",
+      "sha256": "0e426372966e532a49c6f8abfafe82ab62351d91900db19e5813e8f1b0c38c8e"
+    },
+    {
+      "file": "include/baffle/hail.h",
+      "sha256": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500"
+    }
+  ],
+  "partition_sdk": [
+    {
+      "file": "include/baffle.h",
+      "sha256": "933412e8dff1d5cf7f8c7d25f31f399127569c9bb6cd742dcd2f522e665c4703"
+    },
+    {
+      "file": "lib/baffle.lib",
+      "sha256": "bc533dc74fee9ff32c52cd7c7205867fb59a4f02d926f8ae9ee185cd460c21e2"
+    }
+  ],
+  "readiness_sdk": [
+    {
+      "file": "include/baffle.h",
+      "sha256": "d329fc1e1aca524b8de2a07d44907fc713e1364fff6da85ba68471789bdacfaa"
+    },
+    {
+      "file": "lib/baffle.lib",
+      "sha256": "3dc2788f1a8fabd6c0b62a53d481c322289deb8ea2fcc7af0fb014b47d2244b3"
+    }
+  ],
+  "versions": {
+    "sherpa-onnx": "1.12.40",
+    "sherpa-onnx-core": "1.12.40",
+    "piper-tts": "1.3.0",
+    "onnxruntime": "1.23.2",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "psutil": "7.1.3"
+  },
+  "decoder_configs": {
+    "whisper": "OfflineRecognizerConfig(feat_config=FeatureExtractorConfig(sampling_rate=16000, feature_dim=80, low_freq=20, high_freq=-400, dither=0, normalize_samples=True, snip_edges=False), model_config=OfflineModelConfig(transducer=OfflineTransducerModelConfig(encoder_filename=\"\", decoder_filename=\"\", joiner_filename=\"\"), paraformer=OfflineParaformerModelConfig(model=\"\"), nemo_ctc=OfflineNemoEncDecCtcModelConfig(model=\"\"), whisper=OfflineWhisperModelConfig(encoder=\"build-acoustic\\models\\whisper\\tiny.en-encoder.int8.onnx\", decoder=\"build-acoustic\\models\\whisper\\tiny.en-decoder.int8.onnx\", language=\"en\", task=\"transcribe\", tail_paddings=-1, enable_token_timestamps=False, enable_segment_timestamps=False), fire_red_asr=OfflineFireRedAsrModelConfig(encoder=\"\", decoder=\"\"), tdnn=OfflineTdnnModelConfig(model=\"\"), zipformer_ctc=OfflineZipformerCtcModelConfig(model=\"\"), wenet_ctc=OfflineWenetCtcModelConfig(model=\"\"), sense_voice=OfflineSenseVoiceModelConfig(model=\"\", language=\"auto\", use_itn=False), moonshine=OfflineMoonshineModelConfig(preprocessor=\"\", encoder=\"\", uncached_decoder=\"\", cached_decoder=\"\", merged_decoder=\"\"), dolphin=OfflineDolphinModelConfig(model=\"\"), canary=OfflineCanaryModelConfig(encoder=\"\", decoder=\"\", src_lang=\"\", tgt_lang=\"\", use_pnc=True), cohere_transcribe=OfflineCohereTranscribeModelConfig(encoder=\"\", decoder=\"\", language=\"\", use_punct=True, use_itn=True), omnilingual=OfflineOmnilingualAsrCtcModelConfig(model=\"\"), funasr_nano=OfflineFunASRNanoModelConfig(encoder_adaptor=\"\", llm=\"\", embedding=\"\", tokenizer=\"\", system_prompt=\"You are a helpful assistant.\", user_prompt=\"\u8bed\u97f3\u8f6c\u5199\uff1a\", max_new_tokens=512, temperature=1e-06, top_p=0.8, seed=42, language=\"\", itn=True, hotwords=\"\"), medasr=OfflineMedAsrCtcModelConfig(model=\"\"), fire_red_asr_ctc=OfflineFireRedAsrCtcModelConfig(model=\"\"), qwen3_asr=OfflineQwen3ASRModelConfig(conv_frontend=\"\", encoder=\"\", decoder=\"\", tokenizer=\"\", hotwords=\"\", max_total_len=512, max_new_tokens=128, temperature=1e-06, top_p=0.8, seed=42), telespeech_ctc=\"\", tokens=\"build-acoustic\\models\\whisper\\tiny.en-tokens.txt\", num_threads=2, debug=False, provider=\"cpu\", model_type=\"whisper\", modeling_unit=\"cjkchar\", bpe_vocab=\"\"), lm_config=OfflineLMConfig(model=\"\", scale=0.5, lodr_scale=0.01, lodr_fst=\"\", lodr_backoff_id=-1), ctc_fst_decoder_config=OfflineCtcFstDecoderConfig(graph=\"\", max_active=3000), decoding_method=\"greedy_search\", max_active_paths=4, hotwords_file=\"\", hotwords_score=1.5, blank_penalty=0, rule_fsts=\"\", rule_fars=\"\", hr=HomophoneReplacerConfig(lexicon=\"\", rule_fsts=\"\"))",
+    "parakeet": "OfflineRecognizerConfig(feat_config=FeatureExtractorConfig(sampling_rate=16000, feature_dim=80, low_freq=20, high_freq=-400, dither=0, normalize_samples=True, snip_edges=False), model_config=OfflineModelConfig(transducer=OfflineTransducerModelConfig(encoder_filename=\"build-acoustic\\models\\parakeet\\encoder.int8.onnx\", decoder_filename=\"build-acoustic\\models\\parakeet\\decoder.int8.onnx\", joiner_filename=\"build-acoustic\\models\\parakeet\\joiner.int8.onnx\"), paraformer=OfflineParaformerModelConfig(model=\"\"), nemo_ctc=OfflineNemoEncDecCtcModelConfig(model=\"\"), whisper=OfflineWhisperModelConfig(encoder=\"\", decoder=\"\", language=\"\", task=\"transcribe\", tail_paddings=-1, enable_token_timestamps=False, enable_segment_timestamps=False), fire_red_asr=OfflineFireRedAsrModelConfig(encoder=\"\", decoder=\"\"), tdnn=OfflineTdnnModelConfig(model=\"\"), zipformer_ctc=OfflineZipformerCtcModelConfig(model=\"\"), wenet_ctc=OfflineWenetCtcModelConfig(model=\"\"), sense_voice=OfflineSenseVoiceModelConfig(model=\"\", language=\"auto\", use_itn=False), moonshine=OfflineMoonshineModelConfig(preprocessor=\"\", encoder=\"\", uncached_decoder=\"\", cached_decoder=\"\", merged_decoder=\"\"), dolphin=OfflineDolphinModelConfig(model=\"\"), canary=OfflineCanaryModelConfig(encoder=\"\", decoder=\"\", src_lang=\"\", tgt_lang=\"\", use_pnc=True), cohere_transcribe=OfflineCohereTranscribeModelConfig(encoder=\"\", decoder=\"\", language=\"\", use_punct=True, use_itn=True), omnilingual=OfflineOmnilingualAsrCtcModelConfig(model=\"\"), funasr_nano=OfflineFunASRNanoModelConfig(encoder_adaptor=\"\", llm=\"\", embedding=\"\", tokenizer=\"\", system_prompt=\"You are a helpful assistant.\", user_prompt=\"\u8bed\u97f3\u8f6c\u5199\uff1a\", max_new_tokens=512, temperature=1e-06, top_p=0.8, seed=42, language=\"\", itn=True, hotwords=\"\"), medasr=OfflineMedAsrCtcModelConfig(model=\"\"), fire_red_asr_ctc=OfflineFireRedAsrCtcModelConfig(model=\"\"), qwen3_asr=OfflineQwen3ASRModelConfig(conv_frontend=\"\", encoder=\"\", decoder=\"\", tokenizer=\"\", hotwords=\"\", max_total_len=512, max_new_tokens=128, temperature=1e-06, top_p=0.8, seed=42), telespeech_ctc=\"\", tokens=\"build-acoustic\\models\\parakeet\\tokens.txt\", num_threads=2, debug=False, provider=\"cpu\", model_type=\"nemo_transducer\", modeling_unit=\"cjkchar\", bpe_vocab=\"\"), lm_config=OfflineLMConfig(model=\"\", scale=0.1, lodr_scale=0, lodr_fst=\"\", lodr_backoff_id=-1), ctc_fst_decoder_config=OfflineCtcFstDecoderConfig(graph=\"\", max_active=3000), decoding_method=\"greedy_search\", max_active_paths=4, hotwords_file=\"\", hotwords_score=1.5, blank_penalty=0, rule_fsts=\"\", rule_fars=\"\", hr=HomophoneReplacerConfig(lexicon=\"\", rule_fsts=\"\"))"
+  },
+  "model_ids": "Unchanged ../2026-11-20-real-world/model-identities.json and Gate H provider-source environment. No new weights/download or model-specific gain.",
+  "analysis_source_note": "source_revision in path score JSON identifies the scoring checkout, not an exact measured binary. runs.json records measured binary hashes; production fixes leave all 24 path PCM identical. Default/pinned code inputs and derived candidate SHA/patches are separate.",
+  "qa_scope": "Private static probe includes actual src/aec.c for backend IR/counter inspection. It is not an installed public consumer or production API. Independent Hail fixture remains public-only.",
+  "source_sha256": {
+    "src/aec.c": "b2ccc35d698d51e6be443809023ec2c96fb8954cfdc746e7d4e38ba09c196c6e",
+    "src/speex/mdf_baffle.c": "4caa3ca993ccd550d9341512b13ba20733b62c5e8d09f4e65416f1fd914b9b59",
+    "tools/adaptive_trace.c": "8a680e4a90cac003f79cd2da407894b3932c124bc00805d35597e9347cf9678d",
+    "tools/adaptive_paths.py": "90227e49a0107dbaab3a87b7553ea2f8ba2ea8e90a82bb2ed8df675f5fe580ff",
+    "tests/adaptive_tools.py": "e8d4781c57adb6de87aedc7332a04f88bf9d0b09416ce838b5c1b4b4c7aff522",
+    "tools/prepare_partition_experiment.py": "a8496a85d3adce0331ca5e5d88eacf12825789cdbd4647f59cd25fc197db8cbc"
+  }
+}

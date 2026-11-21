@@ -1,0 +1,1 @@
+PASS: exactly 45 public functions exported; backend symbols hidden

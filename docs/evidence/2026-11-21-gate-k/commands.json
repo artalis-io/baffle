@@ -1,0 +1,1044 @@
+{
+  "cwd": "C:/Users/Mark/artalis.io/src/baffle",
+  "fresh_outputs_required": true,
+  "commands": [
+    {
+      "label": "Original acceptance baseline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/controlled_aec.py",
+        "build-adapter/baffle_qualify.exe",
+        "build-recorded",
+        "build-gate-k/baseline-controlled.json",
+        "--assert-raw-target"
+      ],
+      "note": "Executed before production corrections; baseline scalar source96e88d4. Do not replace retained output on rerun."
+    },
+    {
+      "label": "Prepare fixed paths",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "prepare",
+        "build-acoustic/models",
+        "build-gate-k/input"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Prepare extra rate",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "extra-rate",
+        "build-gate-k/input",
+        "build-gate-k/extra48-input"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Prepare moving speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "moving-speech",
+        "build-gate-h/input",
+        "build-gate-k/moving-speech-input"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline paths",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/baseline-build/baffle_adaptive_trace.exe",
+        "build-gate-k/input",
+        "build-gate-k/baseline-paths"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline paths score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/input",
+        "build-gate-k/baseline-paths",
+        "build-gate-k/baseline-paths.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline extra48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/baseline-build/baffle_adaptive_trace.exe",
+        "build-gate-k/extra48-input",
+        "build-gate-k/baseline-extra48"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline extra48 score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/extra48-input",
+        "build-gate-k/baseline-extra48",
+        "build-gate-k/baseline-extra48.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected paths",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-adapter/baffle_adaptive_trace.exe",
+        "build-gate-k/input",
+        "build-gate-k/corrected-paths"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected paths score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/input",
+        "build-gate-k/corrected-paths",
+        "build-gate-k/corrected-paths.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected extra48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-adapter/baffle_adaptive_trace.exe",
+        "build-gate-k/extra48-input",
+        "build-gate-k/corrected-extra48"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected extra48 score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/extra48-input",
+        "build-gate-k/corrected-extra48",
+        "build-gate-k/corrected-extra48.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 paths",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/partition2-build/baffle_adaptive_trace.exe",
+        "build-gate-k/input",
+        "build-gate-k/partition2-paths"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 paths score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/input",
+        "build-gate-k/partition2-paths",
+        "build-gate-k/partition2-paths.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 extra48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/partition2-build/baffle_adaptive_trace.exe",
+        "build-gate-k/extra48-input",
+        "build-gate-k/partition2-extra48"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 extra48 score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/extra48-input",
+        "build-gate-k/partition2-extra48",
+        "build-gate-k/partition2-extra48.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness paths",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/readiness-build/baffle_adaptive_trace.exe",
+        "build-gate-k/input",
+        "build-gate-k/readiness-paths"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness paths score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/input",
+        "build-gate-k/readiness-paths",
+        "build-gate-k/readiness-paths.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness extra48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "replay",
+        "build-gate-k/readiness-build/baffle_adaptive_trace.exe",
+        "build-gate-k/extra48-input",
+        "build-gate-k/readiness-extra48"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness extra48 score",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/adaptive_paths.py",
+        "score",
+        "build-gate-k/extra48-input",
+        "build-gate-k/readiness-extra48",
+        "build-gate-k/readiness-extra48.json"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-gate-j/runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-k/baseline-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-gate-j/runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-k/baseline-far",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/partition2-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-k/partition2-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/partition2-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-k/partition2-far",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/readiness-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-k/readiness-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness far",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/readiness-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-k/readiness-far",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected moving speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/corrected-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-k/moving-speech-input",
+        "build-gate-k/corrected-moving-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected room replay",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/room_replay.py",
+        "replay",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/rooms",
+        "build-gate-k/corrected-rooms",
+        "--backends",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 moving speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/partition2-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-k/moving-speech-input",
+        "build-gate-k/partition2-moving-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 room replay",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/room_replay.py",
+        "replay",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/rooms",
+        "build-gate-k/partition2-rooms",
+        "--backends",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 room ASR",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/recorded_far_asr.py",
+        "build-acoustic/models",
+        "build-acoustic/rooms",
+        "build-gate-k/partition2-rooms",
+        "build-gate-k/partition2-recorded-asr.json",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness moving speech",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-gate-k/readiness-runner/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-k/moving-speech-input",
+        "build-gate-k/readiness-moving-speech",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness room replay",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/room_replay.py",
+        "replay",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/rooms",
+        "build-gate-k/readiness-rooms",
+        "--backends",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness room ASR",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/recorded_far_asr.py",
+        "build-acoustic/models",
+        "build-acoustic/rooms",
+        "build-gate-k/readiness-rooms",
+        "build-gate-k/readiness-recorded-asr.json",
+        "--stages",
+        "raw",
+        "baffle",
+        "pipeline"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition worktree",
+      "argv": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "build-gate-k/partition-source",
+        "7a25c35"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition prepare",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/prepare_partition_experiment.py",
+        "build-speex-source",
+        "build-gate-k/partition-source"
+      ],
+      "note": "Separate clean worktree only. Original normalized Speex pin and BSD source notice are verified. No production selection or combined changes."
+    },
+    {
+      "label": "readiness worktree",
+      "argv": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "build-gate-k/readiness-source",
+        "f4f0fc7"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness prepare",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/prepare_partition_experiment.py",
+        "build-speex-source",
+        "build-gate-k/readiness-source",
+        "--candidate",
+        "readiness"
+      ],
+      "note": "Separate clean worktree only. Original normalized Speex pin and BSD source notice are verified. No production selection or combined changes."
+    },
+    {
+      "label": "baseline 16000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-baseline-16000-baffle",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline 16000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-baseline-16000-pipeline",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected 16000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-corrected-16000-baffle",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected 16000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-corrected-16000-pipeline",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 16000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-partition2-16000-baffle",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 16000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-partition2-16000-pipeline",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness 16000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-readiness-16000-baffle",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness 16000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-readiness-16000-pipeline",
+        "--sample-rate",
+        "16000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline 48000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-baseline-48000-baffle",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "baseline 48000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-j/runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-baseline-48000-pipeline",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected 48000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-corrected-48000-baffle",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "corrected 48000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-corrected-48000-pipeline",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 48000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-partition2-48000-baffle",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "partition2 48000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/partition2-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-partition2-48000-pipeline",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness 48000 baffle",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-readiness-48000-baffle",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "baffle",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "readiness 48000 pipeline",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/readiness-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-k/performance-readiness-48000-pipeline",
+        "--sample-rate",
+        "48000",
+        "--backend",
+        "pipeline",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Corrected120s",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-k/corrected-runner/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-k/performance-corrected-soak",
+        "--seconds",
+        "120",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Virtual1800s",
+      "argv": [
+        "build-adapter/baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k/soak/mic.f32",
+        "build-gate-k/soak/ref.f32",
+        "build-gate-k/soak/out.f32",
+        "build-gate-k/soak/trace.csv",
+        "build-gate-k/soak/coeff.f32",
+        "0"
+      ],
+      "note": "Inputs concatenate75 fixed24s chunks cycling stationary/abrupt/gradual/gain-change/noise/doubletalk/quiet-ref/drift-positive from paths. No live/wall-clock/physical claim."
+    },
+    {
+      "label": "build-adapter",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-adapter",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "build-shared",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-shared",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "build-gate-k/hail-consumer",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-gate-k/hail-consumer",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "MSVC Debug",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-gate-k/msvc-debug",
+        "-C",
+        "Debug",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Private recovery/counter regression",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tests/adaptive_tools.py",
+        "build-adapter/baffle_adaptive_trace.exe"
+      ],
+      "note": "Reproduction array, not a complete shell transcript. Use fresh outputs. Exact spawned native commands/binary hashes are retained in runs/results/reports."
+    },
+    {
+      "label": "Native compile proof",
+      "argv": [
+        "cmake",
+        "-S",
+        ".",
+        "-B",
+        "build-k-native-fuzz",
+        "-DCMAKE_C_COMPILER=/tmp/hail-gate-e-final.lTzsbV/compiler/usr/bin/clang-18",
+        "-DBF_WITH_SPEEXDSP=ON",
+        "-DBF_BUILD_FUZZER=ON",
+        "-DBF_BUILD_TESTS=OFF",
+        "-DBF_BUILD_BENCHMARKS=OFF",
+        "-DBF_SPEEXDSP_SOURCE_DIR=/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src"
+      ],
+      "note": "Remote spark-7468 /tmp/baffle.fVOhT0 sourcef4f0fc7; build with --parallel4; LD_LIBRARY_PATH=/tmp/hail-gate-e-final.lTzsbV/compiler/usr/lib/aarch64-linux-gnu"
+    },
+    {
+      "label": "Native aec",
+      "argv": [
+        "build-k-native-fuzz/baffle_fuzz_aec",
+        "build-k-native-corpus/aec",
+        "-runs=10000",
+        "-max_len=4096",
+        "-seed=723"
+      ],
+      "note": "Remote active backend with kernel coverage/ASan/UBSan. Fresh corpus from tools/fuzz_corpus.py; retained actual build/compile/log receipts are authoritative."
+    },
+    {
+      "label": "Native pipeline",
+      "argv": [
+        "build-k-native-fuzz/baffle_fuzz_pipeline",
+        "build-k-native-corpus/pipeline",
+        "-runs=30000",
+        "-max_len=4096",
+        "-seed=722"
+      ],
+      "note": "Remote active backend with kernel coverage/ASan/UBSan. Fresh corpus from tools/fuzz_corpus.py; retained actual build/compile/log receipts are authoritative."
+    }
+  ],
+  "full_remote_sequence": "remote-validation.sh; native backend follow-up commands/flags separately retained",
+  "limitations": "Top-level reproduction commands reconstructed from executed protocol and receipts. Inputs/models must match pinned hashes and original licenses. Reruns do not overwrite historical evidence."
+}

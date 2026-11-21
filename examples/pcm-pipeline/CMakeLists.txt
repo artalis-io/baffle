@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(BafflePCMConsumer LANGUAGES C)
+find_package(Baffle 0.1.0 EXACT CONFIG REQUIRED)
+add_executable(pcm_pipeline main.c)
+target_compile_features(pcm_pipeline PRIVATE c_std_11)
+target_link_libraries(pcm_pipeline PRIVATE Baffle::baffle)
+enable_testing()
+add_test(NAME pcm_pipeline COMMAND pcm_pipeline)

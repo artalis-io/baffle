@@ -4,3 +4,18 @@ adapted from Hail (https://github.com/artalis-io/hail), Copyright (c) 2026
 Artalis, MIT. Its applicable license notice is retained in LICENSE.
 No Hail audio device implementation is incorporated into Baffle.
 Third-party algorithm backends retain their own licenses; see docs/backends.md.
+Speex-enabled binary packages install SpeexDSP-COPYING and
+SpeexDSP-source-notices.txt, including individual MDF/FFT/header notices
+and OggVorbis smallft attribution (1994-2001 XIPHOPHORUS Company).
+The source-only recorded test fixtures under tests/fixtures/osr are from
+Open Speech Repository and retain its attribution-required conditions;
+see tests/fixtures/osr/README.md. They are not relicensed under MIT.
+Optional external qualification tools can use separately installed WebRTC
+AudioProcessing (BSD-3-Clause), ASR/TTS runtimes, voices and model datasets.
+These are not linked into the Baffle core or redistributed as model/audio
+assets. Their independent license and dataset terms apply; see
+tools/acoustic-runner/README.md and retained model/source identities.
+The optional tools/parakeet_frontend_diagnostic.py uses Apache-2.0 for its
+adaptation of sherpa-onnx's TDT greedy control flow (Copyright 2024 Xiaomi
+Corporation). See tools/parakeet-diagnostic-LICENSE. This exception does not
+change the core library license or introduce a core runtime dependency.

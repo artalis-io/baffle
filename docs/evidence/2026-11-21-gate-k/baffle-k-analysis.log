@@ -1,0 +1,11 @@
+[ 10%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 20%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 30%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 40%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 50%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 60%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 70%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 80%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 90%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[100%] Linking C static library libbaffle.a
+[100%] Built target baffle

@@ -1,0 +1,652 @@
+{
+  "scope": "NS-only offline hop-size experiment; speech+synthetic noise, not an AEC pipeline change",
+  "runner_sha256": "aecea4333eab8eeec703577b9a3fd2f9105e83d234107aebaa469c5c409ae840",
+  "results": [
+    {
+      "case": "impulse",
+      "rate": 16000,
+      "backend": "ns-zero",
+      "reported_delay_frames": 160,
+      "observed_peak_delay_frames": 160,
+      "relative_error": 2.220487384458139e-14,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 201,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 14576,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-zero",
+        "16000",
+        "build-gate-h\\ns\\impulse-16000-ns-zero-mic.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-zero-ref.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-zero.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-zero.csv",
+        "build-gate-h\\ns\\impulse-16000-ns-zero.json"
+      ]
+    },
+    {
+      "case": "impulse",
+      "rate": 16000,
+      "backend": "ns-only",
+      "reported_delay_frames": 160,
+      "observed_peak_delay_frames": 160,
+      "relative_error": 2.220487384458139e-14,
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 201,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 14576,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-only",
+        "16000",
+        "build-gate-h\\ns\\impulse-16000-ns-only-mic.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-only-ref.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-only.f32",
+        "build-gate-h\\ns\\impulse-16000-ns-only.csv",
+        "build-gate-h\\ns\\impulse-16000-ns-only.json"
+      ]
+    },
+    {
+      "case": "impulse",
+      "rate": 16000,
+      "backend": "ns5",
+      "reported_delay_frames": 80,
+      "observed_peak_delay_frames": 80,
+      "relative_error": 7.296175709781542e-17,
+      "native": {
+        "rate": 16000,
+        "frames": 80,
+        "calls": 401,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 7536,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 80,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns5",
+        "16000",
+        "build-gate-h\\ns\\impulse-16000-ns5-mic.f32",
+        "build-gate-h\\ns\\impulse-16000-ns5-ref.f32",
+        "build-gate-h\\ns\\impulse-16000-ns5.f32",
+        "build-gate-h\\ns\\impulse-16000-ns5.csv",
+        "build-gate-h\\ns\\impulse-16000-ns5.json"
+      ]
+    },
+    {
+      "case": "impulse",
+      "rate": 48000,
+      "backend": "ns-zero",
+      "reported_delay_frames": 480,
+      "observed_peak_delay_frames": 480,
+      "relative_error": 8.141493494726992e-15,
+      "native": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 201,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 32496,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-zero",
+        "48000",
+        "build-gate-h\\ns\\impulse-48000-ns-zero-mic.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-zero-ref.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-zero.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-zero.csv",
+        "build-gate-h\\ns\\impulse-48000-ns-zero.json"
+      ]
+    },
+    {
+      "case": "impulse",
+      "rate": 48000,
+      "backend": "ns-only",
+      "reported_delay_frames": 480,
+      "observed_peak_delay_frames": 480,
+      "relative_error": 8.141493494726992e-15,
+      "native": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 201,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 32496,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-only",
+        "48000",
+        "build-gate-h\\ns\\impulse-48000-ns-only-mic.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-only-ref.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-only.f32",
+        "build-gate-h\\ns\\impulse-48000-ns-only.csv",
+        "build-gate-h\\ns\\impulse-48000-ns-only.json"
+      ]
+    },
+    {
+      "case": "impulse",
+      "rate": 48000,
+      "backend": "ns5",
+      "reported_delay_frames": 240,
+      "observed_peak_delay_frames": 240,
+      "relative_error": 5.8630807457313305e-15,
+      "native": {
+        "rate": 48000,
+        "frames": 240,
+        "calls": 401,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 16496,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 240,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns5",
+        "48000",
+        "build-gate-h\\ns\\impulse-48000-ns5-mic.f32",
+        "build-gate-h\\ns\\impulse-48000-ns5-ref.f32",
+        "build-gate-h\\ns\\impulse-48000-ns5.f32",
+        "build-gate-h\\ns\\impulse-48000-ns5.csv",
+        "build-gate-h\\ns\\impulse-48000-ns5.json"
+      ]
+    },
+    {
+      "case": "source0-near-normal",
+      "backend": "raw",
+      "native": null,
+      "command": null,
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "57746ba7497aadc4461bcd77b0f3a0550aca7d79a30676d2f18ba4a3b53062d9",
+      "near_error_snr_db": 6.267642086178904,
+      "asr": {
+        "whisper": {
+          "text": " After early nightfall the yellow lamps would light up here and there and a squallet quarter of the brothel.",
+          "word": {
+            "errors": 4,
+            "substitutions": 3,
+            "deletions": 0,
+            "insertions": 1,
+            "reference_length": 18,
+            "rate": 0.2222222222222222
+          },
+          "character": {
+            "errors": 8,
+            "substitutions": 5,
+            "deletions": 1,
+            "insertions": 2,
+            "reference_length": 87,
+            "rate": 0.09195402298850575
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 434.279199980665
+        },
+        "parakeet": {
+          "text": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothel.",
+          "word": {
+            "errors": 1,
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 0,
+            "reference_length": 18,
+            "rate": 0.05555555555555555
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 87,
+            "rate": 0.011494252873563218
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 755.5811000056565
+        }
+      }
+    },
+    {
+      "case": "source0-near-normal",
+      "backend": "ns-only",
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 14576,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-only",
+        "16000",
+        "build-gate-h\\ns\\source0-near-normal-ns-only-mic.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns-only-ref.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns-only.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns-only.csv",
+        "build-gate-h\\ns\\source0-near-normal-ns-only.json"
+      ],
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "84c82ff972f9ce6b8ac23ef88b1c2fe7cca58995e670bdcf63ab54aa0a10c252",
+      "near_error_snr_db": 8.449812136066981,
+      "asr": {
+        "whisper": {
+          "text": " After early nightfall the yellow lamps would light up here and there and a squallet quarter of the brothels.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 0,
+            "insertions": 1,
+            "reference_length": 18,
+            "rate": 0.16666666666666666
+          },
+          "character": {
+            "errors": 7,
+            "substitutions": 5,
+            "deletions": 0,
+            "insertions": 2,
+            "reference_length": 87,
+            "rate": 0.08045977011494253
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 555.3185000026133
+        },
+        "parakeet": {
+          "text": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothel.",
+          "word": {
+            "errors": 1,
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 0,
+            "reference_length": 18,
+            "rate": 0.05555555555555555
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 87,
+            "rate": 0.011494252873563218
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 737.3760000045877
+        }
+      }
+    },
+    {
+      "case": "source0-near-normal",
+      "backend": "ns5",
+      "native": {
+        "rate": 16000,
+        "frames": 80,
+        "calls": 4800,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 7536,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 80,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns5",
+        "16000",
+        "build-gate-h\\ns\\source0-near-normal-ns5-mic.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns5-ref.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns5.f32",
+        "build-gate-h\\ns\\source0-near-normal-ns5.csv",
+        "build-gate-h\\ns\\source0-near-normal-ns5.json"
+      ],
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "93be5f8f1ae1cad11e253e314b80499299684c8894a73605482072f22bd164c1",
+      "near_error_snr_db": 9.442727866798402,
+      "asr": {
+        "whisper": {
+          "text": " After early nightfall the yellow lamps would light up here and there and a squallet quarter of the brothel.",
+          "word": {
+            "errors": 4,
+            "substitutions": 3,
+            "deletions": 0,
+            "insertions": 1,
+            "reference_length": 18,
+            "rate": 0.2222222222222222
+          },
+          "character": {
+            "errors": 8,
+            "substitutions": 5,
+            "deletions": 1,
+            "insertions": 2,
+            "reference_length": 87,
+            "rate": 0.09195402298850575
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 566.7283000075258
+        },
+        "parakeet": {
+          "text": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothel.",
+          "word": {
+            "errors": 1,
+            "substitutions": 1,
+            "deletions": 0,
+            "insertions": 0,
+            "reference_length": 18,
+            "rate": 0.05555555555555555
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 87,
+            "rate": 0.011494252873563218
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 847.4790999898687
+        }
+      }
+    },
+    {
+      "case": "source1-near-normal",
+      "backend": "raw",
+      "native": null,
+      "command": null,
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "4f74b78bfd7bdf38fb582b2e2acbca9d255adbc5dac6db61447842657cf18861",
+      "near_error_snr_db": 4.885456244693572,
+      "asr": {
+        "whisper": {
+          "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.0625
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.0049504950495049506
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1249.2239999992307
+        },
+        "parakeet": {
+          "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.0625
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.0049504950495049506
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1966.2443000124767
+        }
+      }
+    },
+    {
+      "case": "source1-near-normal",
+      "backend": "ns-only",
+      "native": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2572,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 14576,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns-only",
+        "16000",
+        "build-gate-h\\ns\\source1-near-normal-ns-only-mic.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns-only-ref.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns-only.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns-only.csv",
+        "build-gate-h\\ns\\source1-near-normal-ns-only.json"
+      ],
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "c3ca4802b89ad5524e832501a237277174eacf6bbea4e621bc2d273903554b31",
+      "near_error_snr_db": 7.4527713066009005,
+      "asr": {
+        "whisper": {
+          "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored bosom to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.0625
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.0049504950495049506
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1408.9240999892354
+        },
+        "parakeet": {
+          "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom, to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.0625
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.0049504950495049506
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1615.1472999772523
+        }
+      }
+    },
+    {
+      "case": "source1-near-normal",
+      "backend": "ns5",
+      "native": {
+        "rate": 16000,
+        "frames": 80,
+        "calls": 5144,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 7536,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 80,
+        "stage_mask": 2
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-acoustic\\runner-final\\baffle_acoustic_runner.exe",
+        "ns5",
+        "16000",
+        "build-gate-h\\ns\\source1-near-normal-ns5-mic.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns5-ref.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns5.f32",
+        "build-gate-h\\ns\\source1-near-normal-ns5.csv",
+        "build-gate-h\\ns\\source1-near-normal-ns5.json"
+      ],
+      "noise_seed": 20261120,
+      "noise_stddev": 0.008,
+      "pcm_sha256": "28f8fb244972f2f44384bdfa245c2d4765617cfd1e1f6bb50cf1aeb2d5205724",
+      "near_error_snr_db": 8.598412073503665,
+      "asr": {
+        "whisper": {
+          "text": " God, as a direct consequence of the sin which man thus punished, had given her a lovely child whose place was on that same dishonored boson to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 4,
+            "substitutions": 3,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.08333333333333333
+          },
+          "character": {
+            "errors": 2,
+            "substitutions": 1,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.009900990099009901
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1047.6151000184473
+        },
+        "parakeet": {
+          "text": "God, as a direct consequence of the sin which man thus punished, had given her a lovely child, whose place was on that same dishonored bosom, to connect her parent forever with the race and descent of mortals, and to be finally a blessed soul in heaven.",
+          "word": {
+            "errors": 3,
+            "substitutions": 2,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 48,
+            "rate": 0.0625
+          },
+          "character": {
+            "errors": 1,
+            "substitutions": 0,
+            "deletions": 1,
+            "insertions": 0,
+            "reference_length": 202,
+            "rate": 0.0049504950495049506
+          },
+          "empty": false,
+          "first_word_correct": true,
+          "decode_ms": 1622.7460999798495
+        }
+      }
+    }
+  ]
+}

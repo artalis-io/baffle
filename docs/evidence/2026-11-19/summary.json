@@ -1,0 +1,198 @@
+{
+  "repository": "https://github.com/artalis-io/baffle",
+  "draft_pr": "https://github.com/artalis-io/baffle/pull/1",
+  "source_revision": "1f9711746490e9a18227983a4d445db087a6e989",
+  "evidence_archived_utc": "2026-11-20",
+  "measurement_date_utc": "2026-11-19",
+  "production_ready": false,
+  "overall_verdict": "PARTIAL",
+  "gates": {
+    "A": "PASS (foundation)",
+    "B": "PASS (implemented contracts)",
+    "C": "PASS (scalar baseline)",
+    "D": "PARTIAL",
+    "E": "PARTIAL",
+    "F": "PARTIAL (deterministic transport passes)",
+    "G": "PARTIAL"
+  },
+  "ci": {
+    "conclusion": "success",
+    "headSha": "bfd782f2b5d5179b3730ff5ed047eb6bc5d164ce",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "name": "hail-public-consumer (macos-15)"
+      },
+      {
+        "conclusion": "success",
+        "name": "sanitizers (thread)"
+      },
+      {
+        "conclusion": "success",
+        "name": "sanitizers (undefined)"
+      },
+      {
+        "conclusion": "success",
+        "name": "sanitizers (address)"
+      },
+      {
+        "conclusion": "success",
+        "name": "hail-public-consumer (windows-latest)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (macos-15-intel, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "hail-public-consumer (ubuntu-latest, address)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (macos-15-intel, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (ubuntu-latest, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (windows-latest, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (ubuntu-latest, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (ubuntu-latest, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "hail-public-consumer (ubuntu-latest)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (windows-latest, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (macos-15, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (macos-15-intel, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (macos-15, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (windows-latest, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (ubuntu-latest, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (macos-15-intel, ON)"
+      },
+      {
+        "conclusion": "success",
+        "name": "fuzz-analysis"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (windows-latest, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "aec-installed (macos-15, OFF)"
+      },
+      {
+        "conclusion": "success",
+        "name": "portable (macos-15, OFF)"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/artalis-io/baffle/actions/runs/44621494348"
+  },
+  "local_verification": {
+    "windows_clang_cl_19_1_5": "Release static/shared and Debug static/shared: 7/7 each",
+    "linux_arm64_gcc_13_3": "Release optional AEC: static 8/8, shared 7/7",
+    "linux_arm64_clang_18_1_3": "ASan+UBSan 8/8; TSan 8/8",
+    "installed_hail": "Windows shared 3/3; Linux ARM64 relocated shared 3/3; ASan+UBSan both libraries 2/2; cross-library TSan concurrent test 1/1",
+    "fuzzing": "Seeded instrumented transport/pipeline: 30000 each; seeds 721/722",
+    "analysis": "GCC -fanalyzer core and offline tool; selected-backend heap/import/export guards",
+    "export_count": 45,
+    "hail_pin": "7ef6142ba4b8c8be15d1e7d704502db01abc5113",
+    "arm64_tsan_note": "Clang runtime passed; earlier Hail GCC initialization failure is not a Baffle race",
+    "windows_arm64": "MSVC ARM64 runtime libraries absent locally; no build/runtime claim"
+  },
+  "benchmark_source_revision": "28d3dd88743d6361fda5d82926c9b38598b3c4d7",
+  "benchmark_scope": "Unpaced CPU cost; 10000 iterations/case, 4 SHA256 workers as proxy; no real inference load",
+  "fuzz_source_revision": "b7664d2",
+  "physical_device_measurements": [],
+  "pending_successor": "PR #1 expanded 27-job matrix includes paired shared installations; consult live checks",
+  "recorded_scope": "Four pinned upstream real recordings; no audio redistributed, no calibrated clock/clean-near-end oracle",
+  "remaining_acceptance": [
+    "Recorded AEC reductions weak: establish delay/drift/noise ground truth and improve or compare backend as needed",
+    "Real speech/noise VAD, NS, AGC and stage-order quality",
+    "Native physical reference/timing, acoustic quality and audible cancellation tails",
+    "Actual inference contention and prolonged paced deployment soak",
+    "Windows ARM64 execution and ABI stabilization/upgrade compatibility"
+  ],
+  "source_sha256_lf": {
+    "src/aec.c": "c0d124617d04e11dfd175a13bd3ff51afbaa26195b4b6f6bbfd208d92b19e7d7",
+    "src/channels.c": "43ae049f9a0b699fedd076d96e70b904a74326b703c29bc8a6001eba76a3f2c6",
+    "src/clock.c": "be5d2e9e6a458de83dc97a326471d72a63c4789b74865f3713e69cc99b5cacdf",
+    "src/conditioning.c": "ee456ef3576d2ed043ed9913ac2cbe22a7d73c8843137e558fd9d5412f3866ab",
+    "src/core.c": "3c70b8210efbcc3ee455855a57aebb59db4368b308f9892f46caeb78701bfcd7",
+    "src/noise.c": "78641d4a5ef07ba954a3a370219df2e0ebdde1cbf0246d1e3cf64d9ca8786307",
+    "src/pcm.c": "dd6bc06bd774c0aeb50f61c7abec1813676710fb6d6dce3a13d26a6f040b51fa",
+    "src/pipeline.c": "e30d5f4f0da8fc16ef076a9cc3cb668ba9f4db5811d591cb08ad5a1a41915a43",
+    "src/resampler.c": "34e33162125a43e9f3116d92bfc30567ec38637f380e62cd4fe7e5c4ed862e21",
+    "include/baffle.h": "48adf564b3ae78d0b842a9038854add7ca458914b805dddb93cd379d063a407e",
+    "include/baffle/hail.h": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500",
+    "adapters/hail.c": "524355dabaed10c4e3a46b813be203c67e59488dc80d5a6c871691b8d02a48ec",
+    "CMakeLists.txt": "461c45bea34fb0d183f9c8b0795a7024fb15a396c446fb181c32238e9cbc60c8",
+    "cmake/SpeexDSP.cmake": "d35dec07a74f238f8bdc0cf816867e6d2b8bb32e692740f48cd8ef60a37af5e7",
+    "cmake/SpeexPins.cmake": "a2f885f1276d0bc40ab9060f13b89d4e602265acf0f005b7b2712ae5331ec529"
+  },
+  "artifact_sha256": {
+    "aec-clipping-original-failure.txt": "10b763bc53d803ffb59ed9757c05aaf685ca824b67ad3c4ad3c2baac0b91a704",
+    "arm64-native-final-contention.csv": "236c17db6212043d34939b7e87bc4a6a56256859613d1303a08241345abac584",
+    "arm64-native-final-contention.json": "d5ed43724acbe372d22e271dc90be3af4c4405369b6037862a23d06c0060ab3c",
+    "arm64-native-final-idle.csv": "ad7ddfdbe2c67928f3ad6ef8fbbed534b2da7bbbc6e8d32387f51d3da095d546",
+    "arm64-native-final-idle.json": "c4e3aa1106e0c5ad4ef2fe80829b30b22525c93792f651e55b6665d12914dbd3",
+    "ci-bfd782f.json": "be74c67d3f6daec2207a5d36d256eed5da125acf0069174d48b311eb49e5b9c3",
+    "linux-arm64-bridge-tsan.log": "29d9fe0d62056d1ff69eacf2f6e4ad7bf674b10b3c4bc874c96d48d88da0ef60",
+    "loss-prefix-original-failure.txt": "40bd95b4de6ad0e63b2286d04ad82c89f8184539a19aaac193bee8737712e1f8",
+    "quality-tests.log": "0166cd46e0b72f7e4ff56177ed2757b59d0cba66e6629849f5497243c31454cc",
+    "raw.zip": "57a8f41519cf8058d1732b5b4818ebe401915cad401e79f22392d9de2bab130c",
+    "README.md": "8a9593b7fe77342d3798af999cc9dc72a6181297d5818ec17b79432d245e1063",
+    "recorded-aec-16k.json": "1fa40615148f29783d386fa3e443c6918a45ad8096b400c3c366cf3ad783f83a",
+    "recorded-aec-48k.json": "c949f0e809b8f108b2ecb21918908cf49ad433092eadd0f96192c1f2145b712b",
+    "reference-period-original-failure.txt": "317869f500581ee51cef93d9a0145b65af23391011a9a64365ff69095f20f4b2",
+    "shared-loader-original-failure.log": "941e1b335f41cfc5c8ee5cc79db00ca9a261878059ac5e61700a8112b1099f79",
+    "shared-minimal-dependencies.txt": "d72a2c1bbf83acb2ee3d21dfb246e639911fe5d2e00ccce3ed08e5c2f1221dcc",
+    "shared-relocated-consumer.log": "34327abfaffe8a86acad5fe38c54b9f15faf1fdd434236b0e9dfb0f4fa37be75",
+    "windows-debug-shared-tests.txt": "5d7a468ab8c97e5ff7239f62bfceec1be525436a1d15a550b22d9121cfa6ac31",
+    "windows-debug-static-tests.txt": "719a77333b194648ff6d410b119ec2511cd1f8eb071cbaf43989b521cb701a9f",
+    "windows-exports.txt": "54a73ee4f05b9cf1116543a9b46bd9ea63cdf9be9725d772be4d6faf66b7d8d1",
+    "windows-final-tests.txt": "25ee273a49d983bc4161fa76af9acb2da5eacf07d013f7ae8b10db917a0edf8d",
+    "windows-fitted-reference-tests.txt": "13443ed52235629806fcaaf92fb921f23eb5c5ae2fbe97073d0087c3d2aebcdc",
+    "windows-installed-hail.txt": "dc819a78ae1d7db84cb07ee4c7ac9e35817fa7e101d76060e35e8567d4b13fe8",
+    "windows-native-final-contention.csv": "46df16a78e2c0bbc73cf6678fd52e98e8098e74b72baf933c4a9dbf15c8a006b",
+    "windows-native-final-contention.json": "45b2e0a275a698b2df31960ef9daad67d3437e7a445dbe49698646426f657cb2",
+    "windows-native-final-idle.csv": "69159c391fb0a3c049b683d8e798310f1c48632a0aea1494296ef5c4f437e63f",
+    "windows-native-final-idle.json": "ea5cc8edb635f1dae82f8ac4c4c455b85e384bf5c4a0cab34f3742e6bf417533",
+    "windows-numerical.txt": "383c0876f7a08dffbba6e8181e99ea0055b300735b3c3a564a148e50eb4146b2",
+    "windows-release-shared-tests.txt": "530512f2f44bed002cd594d309af28168553db9e555e676b3c3974d7568605b2",
+    "windows-shared-bridge.log": "836d384177b8f900aa87026c4ac8564d1b0ed259649467f20e12134773463cc3",
+    "windows-wav.txt": "0bf03ce78e096c0809bd867d596fd25f51db67e858335721daa37227a3a92852",
+    "zero-policy-original-failure.txt": "6ffb6b0f7792862782d99fd828a344c734f4f38f8aed413ef0221568c671f341"
+  }
+}

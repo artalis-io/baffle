@@ -1,0 +1,197 @@
+{
+  "all_equal": true,
+  "results": [
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-baffle.f32",
+      "sha256": "0ee56ff98a746b1dfc2ebd31c98c0007543bce882945764e8bb212c9fb15e101"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-pipeline.f32",
+      "sha256": "5bbf8398249ab0d01b11985cc7cd1e88abec5397c68b40370aae24158216b4a3"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-baffle.f32",
+      "sha256": "755f8d593f1209f0883afefe9bd75d7f3771edf0c5bbe3736027dce007f4f824"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-pipeline.f32",
+      "sha256": "4c5b06e049bc1f6036ea14f7c667b4ac31cc93a09edc177c8eb205114578dc7a"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-baffle.f32",
+      "sha256": "5d03f8f566520621a950eac6f74fd1bc612ea4163d878b02135f0bc5b19ea9d3"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-pipeline.f32",
+      "sha256": "44d8f088f3825cc10cd0b6f29ff308a857278d9235ef108109e71c9c3fa0f4d0"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-baffle.f32",
+      "sha256": "6d2bd58078d3794c25ccfd65e1bfe4864a0dde300880dbd187bafa2154870f26"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-pipeline.f32",
+      "sha256": "734459d20cb5d96d00dcac5014b8544d28cd07912dbfe6bca4932e31e4ce9237"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-baffle.f32",
+      "sha256": "a72220574b62ab5f87dc1edcce68e2bcccb6ae1568d9ec33f2a1a48bc9147a7d"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-pipeline.f32",
+      "sha256": "894346c833fc7451123cbf2439bdadf6cec75efa8a92b0bde8f5d925fed733db"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-baffle.f32",
+      "sha256": "23fa3de9cf45ca3e8c065397f38b64a078037ae108067c1cb6a344bfaf45f333"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-pipeline.f32",
+      "sha256": "224ff3e4f7e3233afc77a8b086e18fe7a63dd5b734c98a5777d78c1bd669e356"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-baffle.f32",
+      "sha256": "44736478dfe914c774174149a38b8c679399ee7870af1cbcd4a72417c00d129b"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-pipeline.f32",
+      "sha256": "bde8b53dec17d54584d0a23d7d213f1fc7e7ab67dbc62e70dbb3b67c550e6c6f"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-baffle.f32",
+      "sha256": "98bede9e07420ea0197d1536a2ab47a045f1d28c484f2bf32bbd728b9bc9afd1"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-pipeline.f32",
+      "sha256": "165c810917ae95cd2c24fd764caf8c99a0a7e85c9e973b055ac13762c239b97b"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-baffle.f32",
+      "sha256": "0117e1f6f4af07989bdbdebb2979a019528dc3c3d3b35784c7f1c71e5ff29578"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-pipeline.f32",
+      "sha256": "93280b2f21de94cd249979052a158038967de3ff90979e38acd651fcb8ba54b5"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-baffle.f32",
+      "sha256": "3de7310c8f4731cd7a39f6fe59c4b3585da3c61b5af2e1a7a9f375977a6f5f10"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-pipeline.f32",
+      "sha256": "c5eac0c5eccf7e278b2ec42fce0102215f835855d75e75bd70ed170dec28f76b"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-baffle.f32",
+      "sha256": "70fa9861e08f2379d3b21a44340b70bfb0c8671a20eb815d1bdb188b81839c4a"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-pipeline.f32",
+      "sha256": "f4712d3b36dc23fa01b25eeadf8991a0e035330bf5352703d635d394158a9575"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-baffle.f32",
+      "sha256": "8e548b2563c0b2ff0d93b312387f0fb844ee050910469cf3b10e8a9b075803a5"
+    },
+    {
+      "name": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-pipeline.f32",
+      "sha256": "a42e49f0e2189855984e9fba59eafdac7aadc2c691385ea16e45a512c0e1e44c"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-baffle.f32",
+      "sha256": "34121d95f37654c76623ef16f567f623e43849319057d67df2aade43f0b7b05b"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-pipeline.f32",
+      "sha256": "7c27beb37a743b075d537215653f4804c44ec155ae8c2331c83249aa51c6a59f"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-baffle.f32",
+      "sha256": "d881ba2ef4f9b6b9d82a10cd179e998b6f26d30f8405a42c01e8a037b94b168d"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-pipeline.f32",
+      "sha256": "ee7320c269fbc4d52396a016e8ccd6d1a48329d63febfea2211c2ded0f5322eb"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-baffle.f32",
+      "sha256": "2b8b08db0517c665715a1e860d2212e6aaf84488ae2f2ceaab33fd276dd71259"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-pipeline.f32",
+      "sha256": "541b44c3aad212097e7a320305dfd358d2b64ccc8774dcf21eb302ac348271ec"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-baffle.f32",
+      "sha256": "f061bee4736c6434643b4b7833a342219934e64b35417c994ab37b1ca6bcb839"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-pipeline.f32",
+      "sha256": "035dac2491a358ea6df83903e1d5007448135da7d5634c3d2dfa87297ea35488"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-baffle.f32",
+      "sha256": "961aad2467b8791e2be5ff6085a2ad78add72e87ea295bbdfaff6633660485ef"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-pipeline.f32",
+      "sha256": "fe1faf069991681fdada299aa1ccb073670cd8ad251cdb353a4304bdca4614c1"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-baffle.f32",
+      "sha256": "b9e4a00fe9dc970a65d1a1c5e79854bd9685f82c952dffdbc8592f8baf2ac8d4"
+    },
+    {
+      "name": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-pipeline.f32",
+      "sha256": "2233f887d5fb15b94b419dcf71c8f857d56102a95d596c36df5d5aa2a7dc3471"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-baffle.f32",
+      "sha256": "d1f95edbd413a7f6bb70e7a1b50a4f7dc63ebeab150cfbe05100e46a5eb76997"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-pipeline.f32",
+      "sha256": "a458d80888541851267486b9aa036a97b2a39de957142a2c29213c2afdc076ab"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-baffle.f32",
+      "sha256": "5aaebe05dc25056919976d6f66e4514dbc622652a97233c8d8cd002041a01504"
+    },
+    {
+      "name": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-pipeline.f32",
+      "sha256": "139f6dbe2410bea7a7bf1b905cd3bceb5936fa9409f15aa6736199d186f1e361"
+    },
+    {
+      "name": "controlled-16000-baffle.f32",
+      "sha256": "d77a6b4e26275c11b4f1e5518746efb6be73eda3f592c6e6b483c41f08a054ef"
+    },
+    {
+      "name": "controlled-16000-pipeline.f32",
+      "sha256": "7cce4ca7656ec20b326a7746f905fe16c78bafd5a765326ecc0199b72ce66648"
+    },
+    {
+      "name": "controlled-48000-baffle.f32",
+      "sha256": "e5a0b914d4fd4f0bb6679c57ade61f468384b023e241423811d0563c99eac1d5"
+    },
+    {
+      "name": "controlled-48000-pipeline.f32",
+      "sha256": "5c9f13396f178f0355552f9e165a2cf935ddf6fb5171d013e1ce809f0f0f0586"
+    },
+    {
+      "name": "near-impulse-16000-baffle.f32",
+      "sha256": "aeff88cf910255c31c6ce751d98c611bbe2534d84e1a7a74fb51d16712ad98c2"
+    },
+    {
+      "name": "near-impulse-16000-pipeline.f32",
+      "sha256": "988f278e8e98f75d890c47b1134b12885d182406b246cd6d82b9dbd867de46b6"
+    },
+    {
+      "name": "near-impulse-48000-baffle.f32",
+      "sha256": "0b14cc105331be9b538a13b3dca6af84794d45859703b684472cd5c1cd5fd2c7"
+    },
+    {
+      "name": "near-impulse-48000-pipeline.f32",
+      "sha256": "292dceaf61a0379fd4475123b26c307f9992d3589c344b1e3065641a1bdabab5"
+    }
+  ]
+}

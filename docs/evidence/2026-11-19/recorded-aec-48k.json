@@ -1,0 +1,277 @@
+{
+  "dataset": "Microsoft AEC Challenge ICASSP2022 real test recordings",
+  "upstream_commit": "8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac",
+  "terms": "https://github.com/microsoft/AEC-Challenge#dataset-licenses",
+  "no_audio_redistributed": true,
+  "cases": [
+    {
+      "scenario": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk",
+      "microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav",
+        "sha256": "352396e01b9b87db4dfeaa6523fe3cd194d0800d4cd656cf76f72cd981bbf0ad",
+        "bytes": 2315564,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_mic.wav"
+      },
+      "reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav",
+        "sha256": "2527ef0e49c7e90168728365e388f09e807acc485db1becb7ba7cceba09b736a",
+        "bytes": 2304044,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk_lpb.wav"
+      },
+      "rate": 48000,
+      "input_frames": [
+        1157760,
+        1152000
+      ],
+      "common_frames": 1152000,
+      "tail_crop_frames": [
+        5760,
+        0
+      ],
+      "coarse_lag_diagnostics": [
+        {
+          "window_start_seconds": 0,
+          "coarse_positive_lag_ms": 13,
+          "absolute_correlation": 0.32496172157946346,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 8,
+          "coarse_positive_lag_ms": 16,
+          "absolute_correlation": 0.3848155343852467,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 16,
+          "coarse_positive_lag_ms": 16,
+          "absolute_correlation": 0.2588044122414461,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        }
+      ],
+      "processing_rate": 48000,
+      "far_only_interval": [
+        288000,
+        768000
+      ],
+      "far_only_energy_reduction_db": 0.8234,
+      "clean_near_end_preservation": "unavailable: no clean near-end oracle",
+      "native_tool_stdout": "rate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528\nannotated_far_only_erle_db=0.8234 interval_first=288000 interval_frames=768000\n"
+    },
+    {
+      "scenario": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement",
+      "microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav",
+        "sha256": "f58e4de71adbd9e08a75d85fc50f845f5d071d13db066bf64ceb1d10c9653871",
+        "bytes": 2333804,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_mic.wav"
+      },
+      "reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav",
+        "sha256": "a8ea00635b9b053d48c5f176359b74c0b247ed14fa6a09f7c08e2c8a73c0983e",
+        "bytes": 2329004,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement_lpb.wav"
+      },
+      "rate": 48000,
+      "input_frames": [
+        1166880,
+        1164480
+      ],
+      "common_frames": 1164480,
+      "tail_crop_frames": [
+        2400,
+        0
+      ],
+      "coarse_lag_diagnostics": [
+        {
+          "window_start_seconds": 0,
+          "coarse_positive_lag_ms": 87,
+          "absolute_correlation": 0.1123392021179974,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 8,
+          "coarse_positive_lag_ms": 139,
+          "absolute_correlation": 0.07303484317931705,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 16,
+          "coarse_positive_lag_ms": 133,
+          "absolute_correlation": 0.038775349968769066,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        }
+      ],
+      "processing_rate": 48000,
+      "far_only_interval": [
+        288000,
+        768000
+      ],
+      "far_only_energy_reduction_db": 0.0101,
+      "clean_near_end_preservation": "unavailable: no clean near-end oracle",
+      "native_tool_stdout": "rate=48000 capture_channels=1 reference_channels=1 real_frames=1164480 workspace_bytes=348528\nannotated_far_only_erle_db=0.0101 interval_first=288000 interval_frames=768000\n"
+    },
+    {
+      "scenario": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk",
+      "microphone": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav",
+        "sha256": "9890ae5512b3990cbd87c1b76cf247c01e01c3ff8ab3a223ea327a74000ad1c7",
+        "bytes": 2315564,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_mic.wav"
+      },
+      "reference": {
+        "path": "datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav",
+        "sha256": "ed48db070032d48bcfcd00613a1f9cb3401adf08bb04110c978e4205559e7055",
+        "bytes": 2304044,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/farend-singletalk/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk_lpb.wav"
+      },
+      "rate": 48000,
+      "input_frames": [
+        1157760,
+        1152000
+      ],
+      "common_frames": 1152000,
+      "tail_crop_frames": [
+        5760,
+        0
+      ],
+      "coarse_lag_diagnostics": [
+        {
+          "window_start_seconds": 0,
+          "coarse_positive_lag_ms": 33,
+          "absolute_correlation": 0.31239309001362764,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 8,
+          "coarse_positive_lag_ms": 33,
+          "absolute_correlation": 0.29780140951373557,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 16,
+          "coarse_positive_lag_ms": 33,
+          "absolute_correlation": 0.288714022149692,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        }
+      ],
+      "processing_rate": 48000,
+      "far_only_interval": [
+        288000,
+        768000
+      ],
+      "far_only_energy_reduction_db": 6.6208,
+      "clean_near_end_preservation": "unavailable: no clean near-end oracle",
+      "native_tool_stdout": "rate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528\nannotated_far_only_erle_db=6.6208 interval_first=288000 interval_frames=768000\n"
+    },
+    {
+      "scenario": "00113069-3e44-460a-be8d-9c252979a801_doubletalk",
+      "microphone": {
+        "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav",
+        "sha256": "040bdc4a23bff026b3fd1fe53ac309c3a751079b360d997c984fa40cfd97a6b3",
+        "bytes": 3767084,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_mic.wav"
+      },
+      "reference": {
+        "path": "datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav",
+        "sha256": "b8e946385e0c1fa648dc33ba5f166c984bd51ee1de94eb70981e18e9093f1db5",
+        "bytes": 3744044,
+        "upstream_pointer": "https://raw.githubusercontent.com/microsoft/AEC-Challenge/8f861f0f8ffca26a3d1d16f17f2594ea89abe7ac/datasets/test_set_icassp2022/doubletalk/00113069-3e44-460a-be8d-9c252979a801_doubletalk_lpb.wav"
+      },
+      "rate": 48000,
+      "input_frames": [
+        1883520,
+        1872000
+      ],
+      "common_frames": 1872000,
+      "tail_crop_frames": [
+        11520,
+        0
+      ],
+      "coarse_lag_diagnostics": [
+        {
+          "window_start_seconds": 0,
+          "coarse_positive_lag_ms": 170,
+          "absolute_correlation": 0.3037647521289782,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 8,
+          "coarse_positive_lag_ms": 170,
+          "absolute_correlation": 0.31779391279891445,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        },
+        {
+          "window_start_seconds": 16,
+          "coarse_positive_lag_ms": 0,
+          "absolute_correlation": 0.0,
+          "resolution_ms": 1,
+          "searched_ms": [
+            0,
+            500
+          ],
+          "input_was_shifted": false
+        }
+      ],
+      "processing_rate": 48000,
+      "far_only_interval": null,
+      "far_only_energy_reduction_db": null,
+      "clean_near_end_preservation": "unavailable: no clean near-end oracle",
+      "native_tool_stdout": "rate=48000 capture_channels=1 reference_channels=1 real_frames=1872000 workspace_bytes=348528\nERLE unavailable: supply an independently annotated far-only interval with nonzero energy\n"
+    }
+  ]
+}

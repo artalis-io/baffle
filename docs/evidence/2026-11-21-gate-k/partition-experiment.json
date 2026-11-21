@@ -1,0 +1,11 @@
+{
+  "base": "7a25c35c5df5accb8546d00896181bd7542faf8c",
+  "parameter": "partition exploration floor only",
+  "old": 0.1,
+  "new": 0.3,
+  "upstream_lf_sha256": "a096297873dfd0a07509028d2cdd02d12edf8f1d03319fcecedda003d18d22a8",
+  "upstream_file_sha256": "39ba93c0f7b5ee016ea0a1074b7f350877834e32513833f3b964a90f9b8a246e",
+  "derived_sha256": "596c7e7c6cbfe4577fcd1236224d1232fd42c6c0080b27ce57ec9f849246f013",
+  "license": "original BSD notices retained in derived source, COPYING unchanged",
+  "production_option": false
+}

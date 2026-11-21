@@ -5,5 +5,5 @@ Name: Baffle
 Description: Bounded CPU-first real-time DSP
 Version: @PROJECT_VERSION@
 Libs: -L${libdir} -lbaffle
-Libs.private: -lm
-Cflags: -I${includedir}
+Libs.private: @BF_PC_LIBM@
+Cflags: -I${includedir} @BF_PC_DEFINES@
