@@ -119,6 +119,9 @@ static bf_audio_buffer view(float *data, uint32_t rate, uint32_t frames, uint64_
     b.timing.uncertainty_ns=UINT64_MAX;
     return b;
 }
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+#include "residual_experiment.h"
+#endif
 int main(int argc, char **argv) try
 {
     if (argc < 8 || argc > 10) throw std::runtime_error(
@@ -126,6 +129,12 @@ int main(int argc, char **argv) try
     uint16_t endian=1;
     if (*reinterpret_cast<unsigned char *>(&endian)!=1) throw std::runtime_error("little-endian host required");
     std::string backend=argv[1];
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+    bool split_control=backend=="residual-control";
+    if(split_control)backend="pipeline";
+    if(backend!="pipeline")throw std::runtime_error("Residual experiment accepts pipeline or residual-control only");
+    std::unique_ptr<ResidualExperiment> residual;
+#endif
     uint32_t tail_ms=backend=="baffle-40ms" ? 40u:backend=="baffle-500ms" ? 500u:200u;
     uint32_t rate=number(argv[2],48000), seconds=argc>=9 ? number(argv[8],600) : 0;
     bool highres=argc==10 && std::string(argv[9])=="highres";
@@ -196,7 +205,14 @@ int main(int argc, char **argv) try
         bf_pipeline_config c=BF_INIT(bf_pipeline_config);
         c.sample_rate=rate; c.frame_frames=frames; c.channels=c.reference_channels=1;
         c.stages=stages; c.aec_tail_ms=200; c.noise_strength_db=backend=="ns-zero" ? 0.0f:18.0f; c.agc_target_dbfs=-18;
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+        residual=std::make_unique<ResidualExperiment>(rate,!split_control);
+        c.stages &= ~BF_STAGE_AEC;
+#endif
         check(bf_pipeline_size(&c,&bytes)); check(bf_pipeline_init(memory(),bytes,&c,&pipeline));
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+        bytes+=residual->bytes();
+#endif
     } else if (backend=="aec3" || backend=="aec3-linear") {
 #ifdef BF_COMPARE_WEBRTC
 #ifndef BF_COMPARE_WEBRTC_LINEAR
@@ -248,7 +264,13 @@ int main(int argc, char **argv) try
         }
         if (pipeline) {
             bf_process_info info=BF_INIT(bf_process_info);
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+            auto ai=residual->process(near,n.timing,missing_reference ? nullptr:far,missing_reference ? nullptr:&r.timing);
+#endif
             check(bf_pipeline_process(pipeline,&n,missing_reference ? nullptr:&r,&o,&info));
+#ifdef BF_EXPERIMENTAL_RESIDUAL
+            info.aec=ai;info.flags|=ai.flags;
+#endif
             observed.priming=info.priming; observed.discarded=info.discarded_frames;
             observed.vad_active=info.vad.active;
             if(stages&BF_STAGE_VAD) observed.vad_probability=info.vad.probability;
