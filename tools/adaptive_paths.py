@@ -79,7 +79,7 @@ def score(inputs,outputs,path):
         def settle(event):
             count=0
             for r in curves:
-                if r['end_s']<=event:continue
+                if r['end_s']-.5<event-1e-9:continue
                 count=count+1 if r['excited'] and r['far_only_erle_db'] is not None and r['far_only_erle_db']>=20 else 0
                 if count==2:return r['end_s']-event
             return None
@@ -96,7 +96,9 @@ def score(inputs,outputs,path):
             power=float(truth@truth)
             comparable=j['drift_ppm']==0 and np.any(ref!=0)
             mis.append({'time_s':sec,'raw_fir_misalignment_db':float(10*np.log10(max(np.sum((estimated-truth)**2),1e-30)/power)) if power>0 and comparable else None,'coefficient_norm':float(np.linalg.norm(h)),'dominant_tap':int(t['dominant_tap']) if int(t['delay_valid'])==1 else None,'raw_dominant_tap_error_frames':int(t['dominant_tap'])-int(np.argmax(abs(truth))) if int(t['delay_valid'])==1 and comparable else None})
-        results.append({'case':j['name'],'moving':j['moving'],'holdout':j['holdout'],'initial_20db_s':settle(0),'post_event_20db_s':settle(j['event_s']),'curves':curves,'background_ir':mis,'backend_counter_restarts':sum(int(trace[i]['cancel_count'])<int(trace[i-1]['cancel_count']) for i in range(1,len(trace))),'max_screwed_up':max(float(t['screwed_up']) for t in trace),'note':'Background filter only. Raw-FIR misalignment includes capture DC conditioning, quantization and out-of-capacity taps; it is not pure solver error or calibrated physical delay.'})
+        event=16 if j['fade']=='linear8..16' else 10.2 if j['gap'] else j['event_s']
+        moving_windows=[r['far_only_erle_db'] for r in curves if 8<r['end_s']<=16 and r['far_only_erle_db'] is not None]
+        results.append({'case':j['name'],'moving':j['moving'],'holdout':j['holdout'],'initial_20db_s':settle(0),'recovery_event_s':event,'post_event_20db_s':settle(event),'gradual_tracking_worst_500ms_erle_db':min(moving_windows) if j['fade']=='linear8..16' and moving_windows else None,'curves':curves,'background_ir':mis,'backend_counter_restarts':sum(int(trace[i]['cancel_count'])<int(trace[i-1]['cancel_count']) for i in range(1,len(trace))),'max_screwed_up':max(float(t['screwed_up']) for t in trace),'note':'Background filter only. Raw-FIR misalignment includes capture DC conditioning, quantization and out-of-capacity taps; it is not pure solver error or calibrated physical delay. Recovery uses fully post-event windows; gradual movement ends at 16s, gap at10.2s; other stationary cases use a12s observation checkpoint.'})
     dump(path,{'source_revision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'results':results,'method':'Two consecutive excited 500 ms known-far-only windows >=20dB; overlap is explicitly unavailable for ERLE; background coefficient snapshots are offline and never included in callback cost.'})
 
 if __name__=='__main__':

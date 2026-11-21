@@ -29,5 +29,6 @@ with tempfile.TemporaryDirectory(prefix='baffle-adaptive-') as tmp:
     subprocess.run([str(tool),'16000','10','200',str(p/'mic.f32'),str(p/'ref.f32'),str(p/'limit.f32'),str(p/'limit.csv'),str(p/'limit-coeff.f32'),'0','counter-limit'],check=True)
     initial=list(csv.DictReader((p/'limit.csv').open()))[:3]
     assert all(0<float(r['cancel_count'])<100 for r in initial),'Signed schedule counter must be normalized without overflow'
+    assert all(int(float(r['cancel_count']))%19==((2**31-2)+i+1)%19 for i,r in enumerate(initial)),'AUMDF constraint phase must be preserved'
     assert all(int(r['resets'])==0 for r in initial),'Modulo normalization must not reset adaptive state'
     print('PASS accelerated INT_MAX schedule boundary; no adaptive reset or signed overflow')

@@ -20,11 +20,11 @@ def split_control(runner,inputs,baseline,output):
     dump(output/'identity.json',{'results':rows,'all_equal':all(r['equal'] for r in rows)})
     if not all(r['equal'] for r in rows):raise ValueError('Split control changed PCM')
 
-def compare(baseline,candidate,output):
-    a=load(baseline)['results'];b=load(candidate)['results'];lookup={(r['case'],r['recognizer']):r for r in a if r['stage']=='pipeline'}
+def compare(baseline,candidate,output,stage='pipeline'):
+    a=load(baseline)['results'];b=load(candidate)['results'];lookup={(r['case'],r['recognizer']):r for r in a if r['stage']==stage}
     rows=[]
     for r in b:
-        if r['stage']!='pipeline':continue
+        if r['stage']!=stage:continue
         old=lookup[r['case'],r['recognizer']]
         rows.append({'case':r['case'],'scenario':r['scenario'],'recognizer':r['recognizer'],
             'baseline_word_errors':old['word']['errors'],'candidate_word_errors':r['word']['errors'],
@@ -44,7 +44,7 @@ def compare(baseline,candidate,output):
             groups.append({'recognizer':kind,'scenario':scenario,'cases':len(xs),
                 **{key:sum(r[key] for r in xs) for key in ('reference_words','reference_characters','baseline_word_errors','candidate_word_errors','baseline_character_errors','candidate_character_errors','new_blank','first_word_regression')},
                 'baseline_nonempty':sum(not r['baseline_empty'] for r in xs),'candidate_nonempty':sum(not r['candidate_empty'] for r in xs)})
-    dump(output,{'baseline':str(baseline),'candidate':str(candidate),'results':rows,'groups':groups,'reviewed_phoneme_preservation':None})
+    dump(output,{'baseline':str(baseline),'candidate':str(candidate),'stage':stage,'results':rows,'groups':groups,'reviewed_phoneme_preservation':None})
 
 def characterize(inputs,baseline,candidate,output):
     rows=[];a=load(baseline/'results.json')['results'];b=load(candidate/'results.json')['results']
@@ -109,12 +109,13 @@ if __name__=='__main__':
     for k in ('runner','input','baseline','output'):x.add_argument(k,type=pathlib.Path)
     x=s.add_parser('compare')
     for k in ('baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
+    x.add_argument('--stage',choices=('baffle','pipeline'),default='pipeline')
     x=s.add_parser('characterize')
     for k in ('input','baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
     x=s.add_parser('signal')
     for k in ('input','baseline','candidate','output'):x.add_argument(k,type=pathlib.Path)
     x=p.parse_args()
     if x.mode=='control':split_control(x.runner,x.input,x.baseline,x.output)
-    elif x.mode=='compare':compare(x.baseline,x.candidate,x.output)
+    elif x.mode=='compare':compare(x.baseline,x.candidate,x.output,x.stage)
     elif x.mode=='characterize':characterize(x.input,x.baseline,x.candidate,x.output)
     else:signal_scores(x.input,x.baseline,x.candidate,x.output)

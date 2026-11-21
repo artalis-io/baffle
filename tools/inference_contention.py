@@ -114,6 +114,7 @@ def main():
     p.add_argument("output",type=pathlib.Path); p.add_argument("--seconds",type=int,default=30)
     p.add_argument("--wait-policy",choices=["default","highres"],default="default")
     p.add_argument("--sample-rate",type=int,choices=(16000,48000),default=16000)
+    p.add_argument('--backend',choices=('pipeline','baffle'),default='pipeline')
     p.add_argument("--workloads",nargs="+",default=["alone","whisper","parakeet","piper","whisper+piper","parakeet+piper"])
     args=p.parse_args()
     if not 5<=args.seconds<=300: p.error("duration must be 5..300 seconds")
@@ -128,7 +129,7 @@ def main():
         workers=[mp.Process(target=worker,args=(k,str(args.models.resolve()),str(args.audio.resolve()),args.seconds,
                  begin,stop,ready,directory/(k+".json"))) for k in kinds]
         samples=[]; process=None; statuses=[]; error=None
-        command=[str(args.runner.resolve()),"pipeline",str(args.sample_rate),str(args.mic.resolve()),str(args.reference.resolve()),
+        command=[str(args.runner.resolve()),args.backend,str(args.sample_rate),str(args.mic.resolve()),str(args.reference.resolve()),
                  str(directory/"unused.f32"),str(directory/"dsp.csv"),str(directory/"native.json"),str(args.seconds),args.wait_policy]
         try:
             for w in workers: w.start()
