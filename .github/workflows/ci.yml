@@ -152,5 +152,8 @@ jobs:
       - run: cmake -S . -B fuzz-aec -DCMAKE_C_COMPILER=clang -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_FUZZER=ON -DBF_BUILD_TESTS=OFF -DBF_BUILD_BENCHMARKS=OFF
       - run: cmake --build fuzz-aec --parallel
       - run: fuzz-aec/baffle_fuzz_aec build/corpus/aec -runs=10000 -max_len=4096 -seed=723
+      - run: fuzz-aec/baffle_fuzz_pipeline build/corpus/pipeline -runs=30000 -max_len=4096 -seed=722
       - run: cmake -S . -B analysis -DCMAKE_C_COMPILER=gcc -DBF_BUILD_TESTS=OFF -DCMAKE_C_FLAGS=-fanalyzer
       - run: cmake --build analysis --parallel
+      - run: cmake -S . -B analysis-speex -DCMAKE_C_COMPILER=gcc -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_TESTS=OFF -DBF_BUILD_BENCHMARKS=OFF -DCMAKE_C_FLAGS=-fanalyzer
+      - run: cmake --build analysis-speex --target baffle --parallel

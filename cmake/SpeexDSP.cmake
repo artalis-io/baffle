@@ -38,5 +38,10 @@ target_include_directories(baffle PRIVATE "${BF_SPEEXDSP_SOURCE_DIR}/include" "$
 if(BF_SANITIZER)
   target_compile_options(baffle_speex_kernel PRIVATE ${BF_SAN_FLAGS})
 endif()
+if(BF_BUILD_FUZZER)
+  # Object libraries do not inherit baffle's instrumentation. Exercise the
+  # selected backend itself, including its adaptation/reset memory accesses.
+  target_compile_options(baffle_speex_kernel PRIVATE -fsanitize=fuzzer-no-link,address,undefined -fno-omit-frame-pointer)
+endif()
 install(FILES "${BF_SPEEXDSP_SOURCE_DIR}/COPYING" DESTINATION ${CMAKE_INSTALL_DATADIR}/licenses/Baffle RENAME SpeexDSP-COPYING)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/SpeexDSP-source-notices.txt" DESTINATION ${CMAKE_INSTALL_DATADIR}/licenses/Baffle)

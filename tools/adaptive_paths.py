@@ -7,6 +7,28 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def dump(p,x):p.write_text(json.dumps(x,indent=2)+'\n')
 def read(p):return json.loads(p.read_text())
 
+def moving_speech(source,out):
+    if out.exists():raise ValueError('fresh immutable directory required')
+    out.mkdir(parents=True);original=read(source/'manifest.json');jobs=[]
+    for old in original['jobs']:
+        if old['scenario'] not in ('doubletalk','quiet-doubletalk'):continue
+        for key in ('mic','reference','oracle'):assert sha(source/old[key])==old[key+'_sha256']
+        ref=np.fromfile(source/old['reference'],dtype='<f4').astype(float)
+        near=np.fromfile(source/old['oracle'],dtype='<f4').astype(float)
+        def echo(taps):
+            y=np.zeros(len(ref))
+            for d,g in taps:y[d:]+=g*ref[:-d]
+            return y
+        a=echo([(48,.6),(320,.2),(1280,-.1)]);z=echo([(960,.45),(2510,-.22)])
+        mic=near+np.where(np.arange(len(ref))<12*16000,a,z)
+        job=old.copy();job['name']='moving-'+old['name'];job['scenario']='moving-'+old['scenario']
+        for key,x in [('mic',mic),('reference',ref),('oracle',near)]:
+            path=out/(job['name']+'-'+key+'.f32');x.astype('<f4').tofile(path)
+            job[key]=path.name;job[key+'_sha256']=sha(path)
+        jobs.append(job)
+    assert len(jobs)==4
+    dump(out/'manifest.json',{'jobs':jobs,'sources':original['sources'],'policy':original['policy'],'parent_manifest_sha256':sha(source/'manifest.json'),'preparation_script_sha256':sha(pathlib.Path(__file__)),'scope':'Non-tuning extra moving-path mixtures, same independent provider transcripts and near/ref recordings. FIRs fixed by the holdout-reflections protocol, switch at12s. Not new blind speech or physical rooms.'})
+
 def prepare(models,out):
     if out.exists():raise ValueError('fresh immutable directory required')
     out.mkdir(parents=True);jobs=[]
@@ -108,7 +130,9 @@ if __name__=='__main__':
     for key in ('tool','input','output'):x.add_argument(key,type=pathlib.Path)
     x=s.add_parser('score')
     for key in ('input','results','output'):x.add_argument(key,type=pathlib.Path)
+    x=s.add_parser('moving-speech');x.add_argument('source',type=pathlib.Path);x.add_argument('output',type=pathlib.Path)
     x=p.parse_args()
     if x.mode=='prepare':prepare(x.models,x.output)
     elif x.mode=='replay':replay(x.tool,x.input,x.output)
-    else:score(x.input,x.results,x.output)
+    elif x.mode=='score':score(x.input,x.results,x.output)
+    else:moving_speech(x.source,x.output)
