@@ -11,6 +11,51 @@
         }                                                                                          \
     } while (0)
 static float far_signal[400000];
+static void multichannel_reset_case(uint32_t rate, uint32_t channels, uint32_t refs, unsigned mode)
+{
+    bf_aec_config c = BF_INIT(bf_aec_config);
+    c.sample_rate = rate; c.frame_frames = rate/100;
+    c.capture_channels = channels; c.reference_channels = refs; c.tail_ms = 40;
+    c.backend = BF_AEC_SPEEXDSP;
+    size_t bytes; CHECK(bf_aec_size(&c, &bytes) == BF_OK);
+    void *raw = malloc(bytes + BF_ALIGNMENT); CHECK(raw);
+    void *p = (void *)(((uintptr_t)raw + BF_ALIGNMENT - 1u) & ~(uintptr_t)(BF_ALIGNMENT - 1u));
+    bf_aec *s; CHECK(bf_aec_init(p, bytes, &c, &s) == BF_OK);
+    float near[480*8], far[480*2], out[480*8]; uint32_t rng = 917u;
+    bf_audio_timing nt = BF_INIT(bf_audio_timing), ft = BF_INIT(bf_audio_timing);
+    bf_aec_info info = BF_INIT(bf_aec_info);
+    for (unsigned frame = 0; frame < 400; ++frame) {
+        for (unsigned i = 0; i < c.frame_frames; ++i) {
+            for (unsigned ch = 0; ch < refs; ++ch) {
+                rng = rng * 1664525u + 1013904223u;
+                far[refs*i+ch] = ((float)(rng >> 8) / 16777216.0f - .5f) * .4f;
+            }
+            for (unsigned ch=0;ch<channels;++ch)
+                near[channels*i+ch] = .6f*far[refs*i+ch%refs] + .2f*far[refs*i+(ch+1)%refs];
+        }
+        nt.frame_position = ft.frame_position = frame * c.frame_frames;
+        CHECK(bf_aec_process(s, near, &nt, far, &ft, out, &info) == BF_OK);
+    }
+    uint64_t resets=info.resets, position=400u*c.frame_frames;
+    memset(near, 0, sizeof(near));
+    if (mode==0) CHECK(bf_aec_reset(s) == BF_OK);
+    else if(mode==1) ++nt.epoch;
+    else {
+        nt.frame_position=position;
+        CHECK(bf_aec_process(s,near,&nt,NULL,NULL,out,&info)==BF_OK);
+        position+=c.frame_frames;
+    }
+    double ghost = 0;
+    for (unsigned frame = 0; frame < 8; ++frame) {
+        nt.frame_position = ft.frame_position = position+frame*c.frame_frames;
+        CHECK(bf_aec_process(s, near, &nt, far, &ft, out, &info) == BF_OK);
+        CHECK(info.resets==resets+1);
+        for (unsigned i = 0; i < c.frame_frames*channels; ++i) ghost += (double)out[i]*out[i];
+    }
+    printf("AEC reset rate=%u shape=%ux%u mode=%u old-path ghost energy=%.12g\n", rate,channels,refs,mode,ghost); fflush(stdout);
+    CHECK(ghost == 0); /* A reset filter must not synthesize old-path echo. */
+    CHECK(bf_aec_deinit(s) == BF_OK); free(raw);
+}
 static void near_only_response(void)
 {
     /* No echo: require near-end fidelity, independently of ERLE. A 20 Hz
@@ -81,6 +126,10 @@ int main(void)
         return 0;
     }
     near_only_response();
+    for(unsigned ri=0;ri<2;++ri)
+        for(unsigned shape=0;shape<4;++shape)
+            for(unsigned mode=0;mode<3;++mode)
+                multichannel_reset_case(ri ? 48000u:16000u,shape==0 ? 1u:shape==3 ? 8u:2u,shape==1 ? 1u:2u,mode);
     CHECK(bf_aec_size(&c, &bytes) == BF_OK);
     void *base = malloc(bytes + BF_ALIGNMENT);
     CHECK(base);

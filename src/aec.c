@@ -5,6 +5,8 @@
 #if BF_HAVE_SPEEXDSP
 #include <speex/speex_echo.h>
 void baffle_speex_configure_capture(SpeexEchoState *s);
+void baffle_speex_reset_complete(SpeexEchoState *s);
+int baffle_speex_recovered(SpeexEchoState *s);
 typedef struct baffle_speex_arena {
     unsigned char *data;
     size_t used, capacity;
@@ -133,7 +135,7 @@ bf_result bf_aec_reset(bf_aec *s)
 #if BF_HAVE_SPEEXDSP
     if (s->resets == UINT64_MAX)
         return BF_ERROR_OVERFLOW;
-    speex_echo_state_reset(s->echo);
+    baffle_speex_reset_complete(s->echo);
     ++s->resets;
     s->seen = s->reference_missing = 0;
     return BF_OK;
@@ -211,6 +213,12 @@ bf_result bf_aec_process(bf_aec *s, const float *near, const bf_audio_timing *nt
                 v.flags |= BF_AUDIO_CLIPPED;
         }
         speex_echo_cancellation(s->echo, s->near_pcm, s->far_pcm, s->out_pcm);
+        if (baffle_speex_recovered(s->echo)) {
+            bf_result r = bf_aec_reset(s);
+            if (r != BF_OK)
+                return r;
+            v.flags |= BF_AUDIO_DISCONTINUITY;
+        }
         for (size_t i = 0; i < (size_t)f * c; ++i)
             out[i] = (float)s->out_pcm[i] / 32768;
     } else {
