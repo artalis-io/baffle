@@ -80,11 +80,11 @@ jobs:
       - run: cmake --build consumer --config Release --parallel
       - run: ctest --test-dir consumer -C Release --output-on-failure
       - run: cmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="${{ github.workspace }}/installed"
-        - run: cmake --build acoustic-tools --config Release --parallel
-        - if: runner.os == 'Windows'
-          run: python tests/residual_tools.py acoustic-tools/Release/baffle_acoustic_runner.exe acoustic-tools/Release/baffle_residual_runner.exe
-        - if: runner.os != 'Windows'
-          run: python3 tests/residual_tools.py acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_residual_runner
+      - run: cmake --build acoustic-tools --config Release --parallel
+      - if: runner.os == 'Windows'
+        run: python tests/residual_tools.py acoustic-tools/Release/baffle_acoustic_runner.exe acoustic-tools/Release/baffle_residual_runner.exe
+      - if: runner.os != 'Windows'
+        run: python3 tests/residual_tools.py acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_residual_runner
       - if: runner.os == 'Windows'
         run: python tests/acoustic_tools.py acoustic-tools/Release/baffle_acoustic_runner.exe acoustic-tools/Release/baffle_vad_trace.exe
       - if: runner.os != 'Windows'

@@ -12,12 +12,13 @@ from asr_metrics import words
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     for k in ("models","rooms","results","output"):p.add_argument(k,type=pathlib.Path)
+    p.add_argument('--stages',nargs='+',choices=('raw','baffle','aec-ns','pipeline'),default=('raw','baffle','aec-ns','pipeline'))
     a=p.parse_args();jobs=json.loads((a.rooms/"manifest.json").read_text())["jobs"]
     model={k:load_asr(k,a.models) for k in ("whisper","parakeet")};rows=[]
     native=json.loads((a.results/"report.json").read_text())
     for j in jobs:
         if j["scope"]!="recorded-far-only" or not j["name"].endswith("-original"):continue
-        for stage in ("raw","baffle","aec-ns","pipeline"):
+        for stage in a.stages:
             if stage=="raw":path=a.rooms/j["mic"];delay=0
             else:
                 path=a.results/(j["name"]+"-"+stage+".f32")
