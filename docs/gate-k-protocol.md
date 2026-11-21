@@ -54,3 +54,15 @@ FIR. No timestamps from independent domains are directly compared.
 
 If rejected, retain only justified correctness fixes in production and isolate
 the unsuccessful candidate in reproducible external qualification tooling.
+
+## Source-driven second candidate, before its evaluation
+
+Baseline stationary tracing ends with `adapted=0`, `sum_adapt=600`, and leakage
+at .005 despite good cancellation. The startup-to-variable-rate transition also
+requires leakage >.03. This is an observed private mode, not a calibrated quality
+state or confirmed algorithm defect. Permit one additional independent candidate:
+remove only that leakage clause, retaining the original accumulated-adaptation
+budget, .1 partition floor, regularization, update rates and foreground logic.
+Do not combine it with the rejected .3 partition candidate. The same acceptance
+criteria and complete comparisons apply; there is no threshold/parameter search.
+Previously inspected fixtures are not newly blind holdouts for this follow-up.

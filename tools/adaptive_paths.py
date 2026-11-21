@@ -1,7 +1,7 @@
 """Deterministic Gate K AEC path tracking; synthetic, not physical room claims."""
 import argparse,csv,hashlib,json,pathlib,subprocess
 import numpy as np
-from scipy.signal import lfilter
+from scipy.signal import lfilter,resample_poly
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def dump(p,x):p.write_text(json.dumps(x,indent=2)+'\n')
@@ -28,6 +28,22 @@ def moving_speech(source,out):
         jobs.append(job)
     assert len(jobs)==4
     dump(out/'manifest.json',{'jobs':jobs,'sources':original['sources'],'policy':original['policy'],'parent_manifest_sha256':sha(source/'manifest.json'),'preparation_script_sha256':sha(pathlib.Path(__file__)),'scope':'Non-tuning extra moving-path mixtures, same independent provider transcripts and near/ref recordings. FIRs fixed by the holdout-reflections protocol, switch at12s. Not new blind speech or physical rooms.'})
+
+def extra_rate(source,out):
+    if out.exists():raise ValueError('fresh immutable directory required')
+    out.mkdir(parents=True);jobs=[]
+    for old in read(source/'manifest.json')['jobs']:
+        if old['name'] not in ('stationary','abrupt','doubletalk'):continue
+        j=old.copy();j['name']=old['name']+'-48000';j['rate']=48000
+        for key in ('mic','ref','near'):
+            path=source/old[key];assert sha(path)==old[key+'_sha256']
+            x=resample_poly(np.fromfile(path,dtype='<f4').astype(float),3,1)
+            dest=out/(j['name']+'-'+key+'.f32');x.astype('<f4').tofile(dest);j[key]=dest.name;j[key+'_sha256']=sha(dest)
+        for key in ('a','z'):
+            h=np.fromfile(source/old[key],dtype='<f4');scaled=np.zeros(3*len(h),dtype='<f4');scaled[::3]=h
+            dest=out/(j['name']+'-'+key+'.f32');scaled.tofile(dest);j[key]=dest.name
+        j['scope']='Offline 16→48k polyphase SRC challenge, band limited; not a newly recorded 48k room or sensor clock';jobs.append(j)
+    dump(out/'manifest.json',{'jobs':jobs,'parent_sha256':sha(source/'manifest.json'),'scope':'Additional non-tuning rate comparison. Band-limited excitation affects raw coefficient identifiability; snapshots are not perceptual quality.'})
 
 def prepare(models,out):
     if out.exists():raise ValueError('fresh immutable directory required')
@@ -131,8 +147,10 @@ if __name__=='__main__':
     x=s.add_parser('score')
     for key in ('input','results','output'):x.add_argument(key,type=pathlib.Path)
     x=s.add_parser('moving-speech');x.add_argument('source',type=pathlib.Path);x.add_argument('output',type=pathlib.Path)
+    x=s.add_parser('extra-rate');x.add_argument('source',type=pathlib.Path);x.add_argument('output',type=pathlib.Path)
     x=p.parse_args()
     if x.mode=='prepare':prepare(x.models,x.output)
     elif x.mode=='replay':replay(x.tool,x.input,x.output)
     elif x.mode=='score':score(x.input,x.results,x.output)
-    else:moving_speech(x.source,x.output)
+    elif x.mode=='moving-speech':moving_speech(x.source,x.output)
+    else:extra_rate(x.source,x.output)

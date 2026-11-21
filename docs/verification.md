@@ -200,6 +200,13 @@ verification limits remain in the evidence ledger, not suppressed by tolerances.
 
 ## Reproduction
 
+[Gate K](gate-k.md) adds trained multichannel reset and native-recovery regressions,
+accelerated counter-boundary UBSan evidence, path/IR tracking and paired speech
+comparisons. Fuzzer-enabled Speex object files now receive their own coverage,
+ASan and UBSan instrumentation; backend-disabled fuzz counts are not AEC coverage.
+The private coefficient probe is deliberately distinct from installed public
+consumers and is not installed or part of Baffle's API.
+
 [Gate J](gate-j.md) adds a fixed external coherence experiment, split-control PCM
 identity and paired ASR/room/resource comparisons. The candidate is rejected;
 its device-free tests and sanitizer checks do not establish acoustic acceptance.

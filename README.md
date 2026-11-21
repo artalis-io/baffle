@@ -72,5 +72,11 @@ assistant-only rejection, introduces a reference-loss speech blank, and worsens
 recorded false-word counts. The production DSP remains unchanged. Failed
 experiments and resource costs are retained; acoustic readiness remains PARTIAL.
 
+[Gate K](docs/gate-k.md) fixes stale multichannel AEC state after reset, reports
+native backend recovery through existing fields, and prevents long-run signed
+schedule-counter overflow. Two isolated adaptation changes are rejected after
+path/ASR comparisons. Default adaptive parameters and buffering remain unchanged;
+moving-room and conversational readiness remain PARTIAL.
+
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.

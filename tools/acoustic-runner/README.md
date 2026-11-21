@@ -265,3 +265,46 @@ selects only those variants; its original four-stage default is unchanged.
 `residual_tradeoff.py characterize INPUT BASELINE CANDIDATE REPORT` requires the
 baseline's `raw`, `baffle` and `pipeline` receipts; it retains per-case spectra,
 VAD, hypotheses, resets and explicitly unavailable commitment/timing evidence.
+
+## Gate K adaptive-path diagnosis
+
+The separate root build `BF_WITH_SPEEXDSP=ON BF_BUILD_TOOLS=ON` produces
+`baffle_adaptive_trace` for **static-only private backend qualification**. It
+compiles the actual wrapper and queries background IR/counters without extending
+public headers. This is not an installed-header DSP integration example or an
+extra production backend. File access/IR snapshots are outside processing calls;
+use the ordinary public runner for execution/deadline measurements.
+
+```sh
+cmake -S . -B diagnostic -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_TOOLS=ON
+cmake --build diagnostic --parallel
+python tools/adaptive_paths.py prepare models paths
+python tools/adaptive_paths.py replay diagnostic/baffle_adaptive_trace paths path-results
+python tools/adaptive_paths.py score paths path-results path-scores.json
+python tests/adaptive_tools.py diagnostic/baffle_adaptive_trace
+```
+
+Native syntax is `RATE HOP_MS TAIL_MS MIC.f32 REF.f32 OUT.f32 TRACE.csv COEFF.f32
+GAP`, with rate 16000/48000, hop 10/20 and gap 0/1. Optional `counter-limit` seeds
+an accelerated schedule boundary **only in the private probe**. Snapshots every
+500 ms describe the background filter; `delay_valid=-1` means not queried,
+0 unavailable, 1 a dominant learned tap. They are not device timestamps or
+calibrated AEC confidence. Caller timing domains remain distinct and host time
+unavailable. Drifted data has no fixed raw-FIR misalignment target.
+
+`adaptive_paths.py extra-rate paths paths48` creates explicitly band-limited
+48 kHz comparisons; `moving-speech paired-input moving-input` preserves pinned
+transcripts/oracles while changing only the synthetic path. Both require fresh
+directories and are not new physical/independently reviewed speech fixtures.
+
+`prepare_partition_experiment.py SPEEX_SOURCE ISOLATED_WORKTREE` prepares the
+fixed rejected .1→.3 exploration candidate; `--candidate readiness` separately
+removes the private leakage readiness clause. Original LF-normalized source pins
+and BSD notices remain verified; neither change is available as a library option.
+Do not combine/tune these failed candidates. See [Gate K](../../docs/gate-k.md)
+and its evidence ledger for source revisions, complete comparisons and failures.
+
+For matched actual CPU inference use `inference_contention.py --backend baffle`
+for AEC-only or the unchanged default `pipeline`, independently of
+`--sample-rate 16000|48000`. Execution, scheduling and NS's 10 ms queue remain
+separate; the harness is rolling offline ASR plus sentence-incremental Piper.
