@@ -1,0 +1,3 @@
+source=1f97117; missing-reference event/headroom regression before correction
+exit=3221226505
+C:\Users\Mark\artalis.io\src\baffle\tests\aec.c:121: (info.flags & BF_REFERENCE_MISSING) && !(info.flags & (BF_REFERENCE_GENERATION_CHANGED | BF_AUDIO_CLIPPED)) && !memcmp(near, out, sizeof(out))

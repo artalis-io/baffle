@@ -1,0 +1,3 @@
+revision=4cd5a45; boundary regression before correction
+exit=3221226505
+C:\Users\Mark\artalis.io\src\baffle\tests\aec.c:120: bf_aec_process(s, near, &near_time, far_signal, &far_time, out, &info) == BF_OK && !(info.flags & BF_AUDIO_CLIPPED)

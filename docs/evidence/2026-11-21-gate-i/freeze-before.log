@@ -1,0 +1,13 @@
+Test project C:/Users/Mark/artalis.io/src/baffle/build-adapter
+    Start 4: conditioning
+1/1 Test #4: conditioning .....................Exit code 0xc0000409***Exception:   2.04 sec
+C:\Users\Mark\artalis.io\src\baffle\tests\conditioning.c:69: error / signal < 1e-10
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   2.04 sec
+
+The following tests FAILED:
+	  4 - conditioning (Exit code 0xc0000409)
+Errors while running CTest

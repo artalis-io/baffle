@@ -1,0 +1,412 @@
+﻿2026-11-20T19:16:51.7822958Z Current runner version: '2.338.2'
+2026-11-20T19:16:51.7840604Z ##[group]Runner Image Provisioner
+2026-11-20T19:16:51.7841113Z Hosted Compute Agent
+2026-11-20T19:16:51.7841458Z Version: 20261111.635
+2026-11-20T19:16:51.7841807Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-20T19:16:51.7842209Z Build Date: 2026-11-11T01:49:01Z
+2026-11-20T19:16:51.7842574Z Worker ID: {ac2beaf2-3e21-4583-9543-4f54faa76b85}
+2026-11-20T19:16:51.7842996Z Region: centralus
+2026-11-20T19:16:51.7843298Z Cloud: Azure
+2026-11-20T19:16:51.7843595Z ##[endgroup]
+2026-11-20T19:16:51.7844302Z ##[group]Operating System
+2026-11-20T19:16:51.7844640Z Microsoft Windows Server 2025
+2026-11-20T19:16:51.7844980Z 10.0.26100
+2026-11-20T19:16:51.7845265Z Datacenter
+2026-11-20T19:16:51.7845551Z ##[endgroup]
+2026-11-20T19:16:51.7845850Z ##[group]Runner Image
+2026-11-20T19:16:51.7846194Z Image: windows-2025-vs2026
+2026-11-20T19:16:51.7846534Z Version: 20261116.315.1
+2026-11-20T19:16:51.7847450Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261116.315/images/windows/Windows2025-VS2026-Readme.md
+2026-11-20T19:16:51.7848327Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261116.315
+2026-11-20T19:16:51.7848860Z ##[endgroup]
+2026-11-20T19:16:51.7849482Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T19:16:51.7850576Z Contents: read
+2026-11-20T19:16:51.7850905Z Metadata: read
+2026-11-20T19:16:51.7851204Z ##[endgroup]
+2026-11-20T19:16:51.7852436Z Secret source: Actions
+2026-11-20T19:16:51.7852934Z Cache mode: write
+2026-11-20T19:16:51.7853315Z Prepare workflow directory
+2026-11-20T19:16:51.8082374Z Prepare all required actions
+2026-11-20T19:16:51.8114402Z Getting action download info
+2026-11-20T19:16:52.0412833Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-20T19:16:52.1145590Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-20T19:16:52.3237100Z Complete job name: aec-installed (windows-latest, ON)
+2026-11-20T19:16:52.4173009Z ##[group]Run actions/checkout@v4
+2026-11-20T19:16:52.4173679Z with:
+2026-11-20T19:16:52.4173892Z   repository: artalis-io/baffle
+2026-11-20T19:16:52.4175911Z   token: ***
+2026-11-20T19:16:52.4176115Z   ssh-strict: true
+2026-11-20T19:16:52.4176325Z   ssh-user: git
+2026-11-20T19:16:52.4176543Z   persist-credentials: true
+2026-11-20T19:16:52.4176780Z   clean: true
+2026-11-20T19:16:52.4176994Z   sparse-checkout-cone-mode: true
+2026-11-20T19:16:52.4177247Z   fetch-depth: 1
+2026-11-20T19:16:52.4177455Z   fetch-tags: false
+2026-11-20T19:16:52.4177675Z   show-progress: true
+2026-11-20T19:16:52.4177890Z   lfs: false
+2026-11-20T19:16:52.4178087Z   submodules: false
+2026-11-20T19:16:52.4178307Z   set-safe-directory: true
+2026-11-20T19:16:52.4178550Z   allow-unsafe-pr-checkout: false
+2026-11-20T19:16:52.4178889Z ##[endgroup]
+2026-11-20T19:16:52.5118988Z Syncing repository: artalis-io/baffle
+2026-11-20T19:16:52.5120075Z ##[group]Getting Git version info
+2026-11-20T19:16:52.5120423Z Working directory is 'D:\a\baffle\baffle'
+2026-11-20T19:16:52.5549760Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-20T19:16:52.8321573Z git version 2.56.1.windows.1
+2026-11-20T19:16:52.8357069Z ##[endgroup]
+2026-11-20T19:16:52.8369840Z Temporarily overriding HOME='D:\a\_temp\789dedf7-974e-47dc-8803-722cd1b1af2a' before making global git config changes
+2026-11-20T19:16:52.8370572Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T19:16:52.8376391Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\baffle\baffle
+2026-11-20T19:16:52.8892400Z Deleting the contents of 'D:\a\baffle\baffle'
+2026-11-20T19:16:52.8896557Z ##[group]Initializing the repository
+2026-11-20T19:16:52.8902720Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\baffle\baffle
+2026-11-20T19:16:52.9561855Z Initialized empty Git repository in D:/a/baffle/baffle/.git/
+2026-11-20T19:16:52.9598550Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/artalis-io/baffle
+2026-11-20T19:16:53.0070387Z ##[endgroup]
+2026-11-20T19:16:53.0070943Z ##[group]Disabling automatic garbage collection
+2026-11-20T19:16:53.0076229Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-20T19:16:53.0317219Z ##[endgroup]
+2026-11-20T19:16:53.0317634Z ##[group]Setting up auth
+2026-11-20T19:16:53.0325483Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T19:16:53.0570375Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-20T19:16:54.1467316Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T19:16:54.1708006Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-20T19:16:54.5382000Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T19:16:54.5621294Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-20T19:16:54.9641401Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-20T19:16:54.9992295Z ##[endgroup]
+2026-11-20T19:16:54.9992976Z ##[group]Fetching the repository
+2026-11-20T19:16:55.0004407Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0d112c312165630dd42931453e8024a00becaebd:refs/remotes/pull/1/merge
+2026-11-20T19:16:56.2966498Z From https://github.com/artalis-io/baffle
+2026-11-20T19:16:56.2967955Z  * [new ref]         0d112c312165630dd42931453e8024a00becaebd -> pull/1/merge
+2026-11-20T19:16:56.2990493Z ##[endgroup]
+2026-11-20T19:16:56.2990728Z ##[group]Determining the checkout info
+2026-11-20T19:16:56.2992180Z ##[endgroup]
+2026-11-20T19:16:56.2999017Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-20T19:16:56.3333162Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-20T19:16:56.3565909Z ##[group]Checking out the ref
+2026-11-20T19:16:56.3571865Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/1/merge
+2026-11-20T19:16:56.4358854Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-20T19:16:56.4359198Z 
+2026-11-20T19:16:56.4359405Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-20T19:16:56.4359675Z changes and commit them, and you can discard any commits you make in this
+2026-11-20T19:16:56.4360006Z state without impacting any branches by switching back to a branch.
+2026-11-20T19:16:56.4360171Z 
+2026-11-20T19:16:56.4360278Z If you want to create a new branch to retain commits you create, you may
+2026-11-20T19:16:56.4360621Z do so (now or later) by using -c with the switch command. Example:
+2026-11-20T19:16:56.4360758Z 
+2026-11-20T19:16:56.4360852Z   git switch -c <new-branch-name>
+2026-11-20T19:16:56.4360946Z 
+2026-11-20T19:16:56.4361008Z Or undo this operation with:
+2026-11-20T19:16:56.4361093Z 
+2026-11-20T19:16:56.4361155Z   git switch -
+2026-11-20T19:16:56.4361239Z 
+2026-11-20T19:16:56.4361357Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-20T19:16:56.4361525Z 
+2026-11-20T19:16:56.4361741Z HEAD is now at 0d112c3 Merge be855d82ea53cd9f9928de8ac905c7b57eb4d3a6 into 78ce7260946c1f2d49df8d2fdfc0acc9fc15c89f
+2026-11-20T19:16:56.4408324Z ##[endgroup]
+2026-11-20T19:16:56.4705551Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-20T19:16:56.4918128Z 0d112c312165630dd42931453e8024a00becaebd
+2026-11-20T19:16:56.5214772Z ##[group]Run cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_TOOLS=ON -DBF_BUILD_SHARED=ON
+2026-11-20T19:16:56.5215338Z [36;1mcmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON -DBF_BUILD_TOOLS=ON -DBF_BUILD_SHARED=ON[0m
+2026-11-20T19:16:56.5729555Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:16:56.5730055Z ##[endgroup]
+2026-11-20T19:17:07.7839672Z -- Building for: Visual Studio 18 2026
+2026-11-20T19:17:07.7839985Z -- The C compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:07.9162704Z -- Detecting C compiler ABI info
+2026-11-20T19:17:08.7169219Z -- Detecting C compiler ABI info - done
+2026-11-20T19:17:08.7335083Z -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:08.7379877Z -- Detecting C compile features
+2026-11-20T19:17:08.7416591Z -- Detecting C compile features - done
+2026-11-20T19:17:08.8610022Z CMake Warning (author) at C:/Program Files/CMake/share/cmake-4.5/Modules/FetchContent.cmake:1968 (message):
+2026-11-20T19:17:08.8610983Z   Calling FetchContent_Populate(baffle_speex_source) is deprecated, call
+2026-11-20T19:17:08.8611390Z   FetchContent_MakeAvailable(baffle_speex_source) instead.  Policy CMP0169
+2026-11-20T19:17:08.8611775Z   can be set to OLD to allow FetchContent_Populate(baffle_speex_source) to be
+2026-11-20T19:17:08.8612157Z   called directly for now, but the ability to call it with declared details
+2026-11-20T19:17:08.8612466Z   will be removed completely in a future version.
+2026-11-20T19:17:08.8612697Z Call Stack (most recent call first):
+2026-11-20T19:17:08.8612929Z   cmake/SpeexDSP.cmake:9 (FetchContent_Populate)
+2026-11-20T19:17:08.8613170Z   CMakeLists.txt:51 (include)
+2026-11-20T19:17:08.8613502Z This warning is for project developers.  Use -Wno-author to suppress it.
+2026-11-20T19:17:08.8613744Z 
+2026-11-20T19:17:12.4473974Z -- The CXX compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:12.4608830Z -- Detecting CXX compiler ABI info
+2026-11-20T19:17:12.9261347Z -- Detecting CXX compiler ABI info - done
+2026-11-20T19:17:12.9377476Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:12.9380964Z -- Detecting CXX compile features
+2026-11-20T19:17:12.9386349Z -- Detecting CXX compile features - done
+2026-11-20T19:17:12.9638584Z -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+2026-11-20T19:17:13.6534009Z -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+2026-11-20T19:17:13.6534411Z -- Looking for pthread_create in pthreads
+2026-11-20T19:17:14.0437728Z -- Looking for pthread_create in pthreads - not found
+2026-11-20T19:17:14.0438097Z -- Looking for pthread_create in pthread
+2026-11-20T19:17:14.4245575Z -- Looking for pthread_create in pthread - not found
+2026-11-20T19:17:14.4254749Z -- Found Threads: TRUE
+2026-11-20T19:17:14.4311007Z -- Configuring done (17.1s)
+2026-11-20T19:17:14.5164225Z CMake Warning (unused-cli):
+2026-11-20T19:17:14.5164475Z   Manually-specified variables were not used by the project:
+2026-11-20T19:17:14.5164621Z 
+2026-11-20T19:17:14.5164670Z     CMAKE_BUILD_TYPE
+2026-11-20T19:17:14.5164747Z 
+2026-11-20T19:17:14.5164797Z -- Generating done (0.1s)
+2026-11-20T19:17:14.5164896Z 
+2026-11-20T19:17:14.5170417Z -- Build files have been written to: D:/a/baffle/baffle/build
+2026-11-20T19:17:14.6049506Z ##[group]Run cmake --build build --config Release --parallel
+2026-11-20T19:17:14.6049790Z [36;1mcmake --build build --config Release --parallel[0m
+2026-11-20T19:17:14.6101060Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:14.6101265Z ##[endgroup]
+2026-11-20T19:17:14.8685905Z MSBuild version 18.12.2-1.26514.2+04f6ca984 for .NET Framework
+2026-11-20T19:17:14.8962092Z 
+2026-11-20T19:17:15.0920156Z   1>Checking Build System
+2026-11-20T19:17:15.3054687Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:15.4032979Z   mdf_baffle.c
+2026-11-20T19:17:15.6082315Z   fftwrap.c
+2026-11-20T19:17:15.6449963Z   smallft.c
+2026-11-20T19:17:15.6846862Z   Generating Code...
+2026-11-20T19:17:16.3716166Z   baffle_speex_kernel.vcxproj -> D:\a\baffle\baffle\build\baffle_speex_kernel.dir\Release\baffle_speex_kernel.lib
+2026-11-20T19:17:16.6297771Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:16.6971544Z   core.c
+2026-11-20T19:17:16.7264733Z   pcm.c
+2026-11-20T19:17:16.7488199Z   clock.c
+2026-11-20T19:17:16.7662846Z   resampler.c
+2026-11-20T19:17:16.7850382Z   channels.c
+2026-11-20T19:17:16.8028253Z   conditioning.c
+2026-11-20T19:17:16.8211077Z   noise.c
+2026-11-20T19:17:16.8395955Z   aec.c
+2026-11-20T19:17:16.8581762Z   pipeline.c
+2026-11-20T19:17:16.8783127Z   Generating Code...
+2026-11-20T19:17:17.3956603Z      Creating library D:/a/baffle/baffle/build/Release/baffle.lib and object D:/a/baffle/baffle/build/Release/baffle.exp
+2026-11-20T19:17:17.4489905Z   baffle.vcxproj -> D:\a\baffle\baffle\build\Release\baffle.dll
+2026-11-20T19:17:17.4997188Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.5463204Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.5463585Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.5608172Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.6616914Z   concurrency.cpp
+2026-11-20T19:17:17.6664169Z   conditioning.c
+2026-11-20T19:17:17.6743379Z   pipeline.c
+2026-11-20T19:17:17.6874768Z   pcm.c
+2026-11-20T19:17:17.7633819Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.8178362Z   qualify.c
+2026-11-20T19:17:17.8732195Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:17.9395090Z   numerical.c
+2026-11-20T19:17:18.0633255Z   baffle_conditioning.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_conditioning.exe
+2026-11-20T19:17:18.1096250Z   baffle_pipeline.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_pipeline.exe
+2026-11-20T19:17:18.2324532Z   baffle_numerical.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_numerical.exe
+2026-11-20T19:17:18.3224830Z   baffle_qualify.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_qualify.exe
+2026-11-20T19:17:18.4320063Z   baffle_pcm.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_pcm.exe
+2026-11-20T19:17:18.4630692Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:18.5212770Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:18.5233299Z   latency.c
+2026-11-20T19:17:18.5820818Z   conformance.c
+2026-11-20T19:17:18.5978549Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:18.6553158Z   aec.c
+2026-11-20T19:17:18.7662922Z   baffle_conformance.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_conformance.exe
+2026-11-20T19:17:18.9289985Z   baffle_aec.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_aec.exe
+2026-11-20T19:17:19.1214280Z   baffle_concurrency.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_concurrency.exe
+2026-11-20T19:17:19.7125518Z   baffle_latency.vcxproj -> D:\a\baffle\baffle\build\Release\baffle_latency.exe
+2026-11-20T19:17:19.7457868Z   Building Custom Rule D:/a/baffle/baffle/CMakeLists.txt
+2026-11-20T19:17:19.9026220Z ##[group]Run ctest --test-dir build -C Release --output-on-failure
+2026-11-20T19:17:19.9026609Z [36;1mctest --test-dir build -C Release --output-on-failure[0m
+2026-11-20T19:17:19.9120860Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:19.9121132Z ##[endgroup]
+2026-11-20T19:17:21.9178459Z Test project D:/a/baffle/baffle/build
+2026-11-20T19:17:22.0352283Z     Start 1: conformance
+2026-11-20T19:17:22.0573364Z 1/7 Test #1: conformance ......................   Passed    0.02 sec
+2026-11-20T19:17:22.0887013Z     Start 2: pcm
+2026-11-20T19:17:22.0964819Z 2/7 Test #2: pcm ..............................   Passed    0.01 sec
+2026-11-20T19:17:22.0967847Z     Start 3: numerical
+2026-11-20T19:17:22.3431717Z 3/7 Test #3: numerical ........................   Passed    0.25 sec
+2026-11-20T19:17:22.3436496Z     Start 4: conditioning
+2026-11-20T19:17:22.3603516Z 4/7 Test #4: conditioning .....................   Passed    0.02 sec
+2026-11-20T19:17:22.3607673Z     Start 5: aec
+2026-11-20T19:17:22.5377249Z 5/7 Test #5: aec ..............................   Passed    0.18 sec
+2026-11-20T19:17:22.5383430Z     Start 6: pipeline
+2026-11-20T19:17:22.7621140Z 6/7 Test #6: pipeline .........................   Passed    0.22 sec
+2026-11-20T19:17:22.7625427Z     Start 7: concurrency
+2026-11-20T19:17:23.0841556Z 7/7 Test #7: concurrency ......................   Passed    0.32 sec
+2026-11-20T19:17:23.0849552Z 
+2026-11-20T19:17:23.0849808Z 100% tests passed out of 7
+2026-11-20T19:17:23.0849933Z 
+2026-11-20T19:17:23.0850028Z Total Test time (real) =   1.17 sec
+2026-11-20T19:17:23.2198857Z ##[group]Run python tests/wav_qualification.py build/Release/baffle_qualify.exe
+2026-11-20T19:17:23.2199203Z [36;1mpython tests/wav_qualification.py build/Release/baffle_qualify.exe[0m
+2026-11-20T19:17:23.2246342Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:23.2246537Z ##[endgroup]
+2026-11-20T19:17:24.4407379Z PASS SYNTHETIC WAV tool ERLE=41.821 dB; partial EOS and invalid files rejected
+2026-11-20T19:17:24.5270949Z ##[group]Run python tools/speech_quality.py build/Release/baffle_qualify.exe build/speech-quality build/speech-quality.json --assert-preservation
+2026-11-20T19:17:24.5271688Z [36;1mpython tools/speech_quality.py build/Release/baffle_qualify.exe build/speech-quality build/speech-quality.json --assert-preservation[0m
+2026-11-20T19:17:24.5319514Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:24.5319717Z ##[endgroup]
+2026-11-20T19:17:30.3837097Z ##[group]Run actions/upload-artifact@v4
+2026-11-20T19:17:30.3837283Z with:
+2026-11-20T19:17:30.3837408Z   name: speech-quality-windows-latest-ON
+2026-11-20T19:17:30.3837627Z   path: build/speech-quality.json
+build/Testing/Temporary/LastTest.log
+
+2026-11-20T19:17:30.3837833Z   if-no-files-found: warn
+2026-11-20T19:17:30.3837956Z   compression-level: 6
+2026-11-20T19:17:30.3838069Z   overwrite: false
+2026-11-20T19:17:30.3838192Z   include-hidden-files: false
+2026-11-20T19:17:30.3838321Z ##[endgroup]
+2026-11-20T19:17:30.5072061Z (node:8868) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T19:17:30.5072458Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T19:17:30.5112183Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-20T19:17:30.5113850Z The least common ancestor is D:\a\baffle\baffle\build. This will be the root directory of the artifact
+2026-11-20T19:17:30.5114176Z With the provided path, there will be 2 files uploaded
+2026-11-20T19:17:30.5116888Z Artifact name is valid!
+2026-11-20T19:17:30.5118120Z Root directory input is valid!
+2026-11-20T19:17:30.7880740Z Beginning upload of artifact content to blob storage
+2026-11-20T19:17:30.8036646Z (node:8868) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-20T19:17:31.0163847Z Uploaded bytes 20392
+2026-11-20T19:17:31.0658480Z Finished uploading artifact content to blob storage!
+2026-11-20T19:17:31.0659024Z SHA256 digest of uploaded artifact zip is e3873a113384eb79eaf7371e4b659a5e3d81b526f92190493571d52dd0154ecc
+2026-11-20T19:17:31.0660703Z Finalizing artifact upload
+2026-11-20T19:17:31.4269008Z Artifact speech-quality-windows-latest-ON.zip successfully finalized. Artifact ID 14661126957
+2026-11-20T19:17:31.4270773Z Artifact speech-quality-windows-latest-ON has been successfully uploaded! Final size is 20392 bytes. Artifact ID is 14661126957
+2026-11-20T19:17:31.4278109Z Artifact download URL: https://github.com/artalis-io/baffle/actions/runs/44800171131/artifacts/14661126957
+2026-11-20T19:17:31.4503012Z ##[group]Run cmake --install build --config Release --prefix "D:\a\baffle\baffle/installed"
+2026-11-20T19:17:31.4503386Z [36;1mcmake --install build --config Release --prefix "D:\a\baffle\baffle/installed"[0m
+2026-11-20T19:17:31.4550603Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:31.4550804Z ##[endgroup]
+2026-11-20T19:17:31.6534180Z -- Installing: D:\a\baffle\baffle/installed/share/licenses/Baffle/SpeexDSP-COPYING
+2026-11-20T19:17:31.6537602Z -- Installing: D:\a\baffle\baffle/installed/share/licenses/Baffle/SpeexDSP-source-notices.txt
+2026-11-20T19:17:31.6543331Z -- Installing: D:\a\baffle\baffle/installed/lib/baffle.lib
+2026-11-20T19:17:31.6548640Z -- Installing: D:\a\baffle\baffle/installed/bin/baffle.dll
+2026-11-20T19:17:31.6553768Z -- Installing: D:\a\baffle\baffle/installed/include/baffle.h
+2026-11-20T19:17:31.6558020Z -- Installing: D:\a\baffle\baffle/installed/share/licenses/Baffle/LICENSE
+2026-11-20T19:17:31.6561173Z -- Installing: D:\a\baffle\baffle/installed/share/licenses/Baffle/NOTICE
+2026-11-20T19:17:31.6566268Z -- Installing: D:\a\baffle\baffle/installed/lib/cmake/Baffle/BaffleTargets.cmake
+2026-11-20T19:17:31.6569736Z -- Installing: D:\a\baffle\baffle/installed/lib/cmake/Baffle/BaffleTargets-release.cmake
+2026-11-20T19:17:31.6573013Z -- Installing: D:\a\baffle\baffle/installed/lib/cmake/Baffle/BaffleConfig.cmake
+2026-11-20T19:17:31.6576614Z -- Installing: D:\a\baffle\baffle/installed/lib/cmake/Baffle/BaffleConfigVersion.cmake
+2026-11-20T19:17:31.6581020Z -- Installing: D:\a\baffle\baffle/installed/lib/pkgconfig/baffle.pc
+2026-11-20T19:17:31.7385759Z ##[group]Run Add-Content -Path $env:GITHUB_PATH -Value "$env:GITHUB_WORKSPACE/installed/bin"
+2026-11-20T19:17:31.7386208Z [36;1mAdd-Content -Path $env:GITHUB_PATH -Value "$env:GITHUB_WORKSPACE/installed/bin"[0m
+2026-11-20T19:17:31.7438449Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:31.7438661Z ##[endgroup]
+2026-11-20T19:17:31.9979590Z ##[group]Run cmake -S tests/consumer -B consumer -DCMAKE_PREFIX_PATH="D:\a\baffle\baffle/installed"
+2026-11-20T19:17:31.9980067Z [36;1mcmake -S tests/consumer -B consumer -DCMAKE_PREFIX_PATH="D:\a\baffle\baffle/installed"[0m
+2026-11-20T19:17:32.0031041Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:32.0031305Z ##[endgroup]
+2026-11-20T19:17:32.9242520Z -- Building for: Visual Studio 18 2026
+2026-11-20T19:17:32.9242811Z -- The C compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:33.3905704Z -- The CXX compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:33.4025967Z -- Detecting C compiler ABI info
+2026-11-20T19:17:33.8433701Z -- Detecting C compiler ABI info - done
+2026-11-20T19:17:33.8544574Z -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:33.8548030Z -- Detecting C compile features
+2026-11-20T19:17:33.8553651Z -- Detecting C compile features - done
+2026-11-20T19:17:33.8610775Z -- Detecting CXX compiler ABI info
+2026-11-20T19:17:34.3108408Z -- Detecting CXX compiler ABI info - done
+2026-11-20T19:17:34.3220478Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:34.3224122Z -- Detecting CXX compile features
+2026-11-20T19:17:34.3229381Z -- Detecting CXX compile features - done
+2026-11-20T19:17:34.3276824Z -- Configuring done (2.1s)
+2026-11-20T19:17:34.3473154Z -- Generating done (0.0s)
+2026-11-20T19:17:34.3478588Z -- Build files have been written to: D:/a/baffle/baffle/consumer
+2026-11-20T19:17:34.4334956Z ##[group]Run cmake --build consumer --config Release --parallel
+2026-11-20T19:17:34.4335431Z [36;1mcmake --build consumer --config Release --parallel[0m
+2026-11-20T19:17:34.4383279Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:34.4383482Z ##[endgroup]
+2026-11-20T19:17:34.7087713Z MSBuild version 18.12.2-1.26514.2+04f6ca984 for .NET Framework
+2026-11-20T19:17:34.7338727Z 
+2026-11-20T19:17:34.9341789Z   1>Checking Build System
+2026-11-20T19:17:35.0339198Z   Building Custom Rule D:/a/baffle/baffle/tests/consumer/CMakeLists.txt
+2026-11-20T19:17:35.0639398Z   Building Custom Rule D:/a/baffle/baffle/tests/consumer/CMakeLists.txt
+2026-11-20T19:17:35.1277401Z   main.cpp
+2026-11-20T19:17:35.1646833Z   main.c
+2026-11-20T19:17:35.2612949Z   consumer_cpp.vcxproj -> D:\a\baffle\baffle\consumer\Release\consumer_cpp.exe
+2026-11-20T19:17:35.2983270Z   consumer_c.vcxproj -> D:\a\baffle\baffle\consumer\Release\consumer_c.exe
+2026-11-20T19:17:35.3322278Z   Building Custom Rule D:/a/baffle/baffle/tests/consumer/CMakeLists.txt
+2026-11-20T19:17:35.4640657Z ##[group]Run ctest --test-dir consumer -C Release --output-on-failure
+2026-11-20T19:17:35.4640978Z [36;1mctest --test-dir consumer -C Release --output-on-failure[0m
+2026-11-20T19:17:35.4688688Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:35.4688889Z ##[endgroup]
+2026-11-20T19:17:35.6569751Z Test project D:/a/baffle/baffle/consumer
+2026-11-20T19:17:35.6586288Z     Start 1: consumer_c
+2026-11-20T19:17:35.6666912Z 1/2 Test #1: consumer_c .......................   Passed    0.01 sec
+2026-11-20T19:17:35.6671731Z     Start 2: consumer_cpp
+2026-11-20T19:17:35.6741040Z 2/2 Test #2: consumer_cpp .....................   Passed    0.01 sec
+2026-11-20T19:17:35.6746136Z 
+2026-11-20T19:17:35.6746250Z 100% tests passed out of 2
+2026-11-20T19:17:35.6748382Z 
+2026-11-20T19:17:35.6748538Z Total Test time (real) =   0.02 sec
+2026-11-20T19:17:35.7532652Z ##[group]Run cmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="D:\a\baffle\baffle/installed"
+2026-11-20T19:17:35.7533230Z [36;1mcmake -S tools/acoustic-runner -B acoustic-tools -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="D:\a\baffle\baffle/installed"[0m
+2026-11-20T19:17:35.7579915Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:35.7580119Z ##[endgroup]
+2026-11-20T19:17:36.5943943Z -- Building for: Visual Studio 18 2026
+2026-11-20T19:17:36.5944227Z -- The C compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:37.1050819Z -- The CXX compiler identification is MSVC 19.52.37029.0
+2026-11-20T19:17:37.1285650Z -- Detecting C compiler ABI info
+2026-11-20T19:17:37.6606904Z -- Detecting C compiler ABI info - done
+2026-11-20T19:17:37.6722289Z -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:37.6725970Z -- Detecting C compile features
+2026-11-20T19:17:37.6730189Z -- Detecting C compile features - done
+2026-11-20T19:17:37.6789053Z -- Detecting CXX compiler ABI info
+2026-11-20T19:17:38.1406282Z -- Detecting CXX compiler ABI info - done
+2026-11-20T19:17:38.1521104Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.52.37025/bin/Hostx64/x64/cl.exe - skipped
+2026-11-20T19:17:38.1526158Z -- Detecting CXX compile features
+2026-11-20T19:17:38.1533467Z -- Detecting CXX compile features - done
+2026-11-20T19:17:38.1592540Z -- Configuring done (2.2s)
+2026-11-20T19:17:38.1780173Z CMake Warning (unused-cli):
+2026-11-20T19:17:38.1780500Z   Manually-specified variables were not used by the project:
+2026-11-20T19:17:38.1780730Z 
+2026-11-20T19:17:38.1780808Z     CMAKE_BUILD_TYPE
+2026-11-20T19:17:38.1780923Z 
+2026-11-20T19:17:38.1780926Z 
+2026-11-20T19:17:38.1780999Z -- Generating done (0.0s)
+2026-11-20T19:17:38.1786088Z -- Build files have been written to: D:/a/baffle/baffle/acoustic-tools
+2026-11-20T19:17:38.2606537Z ##[group]Run cmake --build acoustic-tools --config Release --parallel
+2026-11-20T19:17:38.2607035Z [36;1mcmake --build acoustic-tools --config Release --parallel[0m
+2026-11-20T19:17:38.2654356Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-20T19:17:38.2654560Z ##[endgroup]
+2026-11-20T19:17:38.5116051Z MSBuild version 18.12.2-1.26514.2+04f6ca984 for .NET Framework
+2026-11-20T19:17:38.5347956Z 
+2026-11-20T19:17:38.6985904Z   1>Checking Build System
+2026-11-20T19:17:38.8025459Z   Building Custom Rule D:/a/baffle/baffle/tools/acoustic-runner/CMakeLists.txt
+2026-11-20T19:17:38.8072818Z   Building Custom Rule D:/a/baffle/baffle/tools/acoustic-runner/CMakeLists.txt
+2026-11-20T19:17:38.8632743Z   vad_trace.c
+2026-11-20T19:17:38.9248985Z   main.cpp
+2026-11-20T19:17:39.0138547Z   baffle_vad_trace.vcxproj -> D:\a\baffle\baffle\acoustic-tools\Release\baffle_vad_trace.exe
+2026-11-20T19:17:39.6737304Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): error C2220: the following warning is treated as an error [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6750616Z   (compiling source file '../tools/acoustic-runner/main.cpp')
+2026-11-20T19:17:39.6750922Z   
+2026-11-20T19:17:39.6869389Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): warning C4244: '=': conversion from 'const _Ty' to 'float', possible loss of data [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6870707Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): warning C4244:         with [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6871836Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): warning C4244:         [ [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6873001Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): warning C4244:             _Ty=int [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6874110Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24): warning C4244:         ] [D:\a\baffle\baffle\acoustic-tools\baffle_acoustic_runner.vcxproj]
+2026-11-20T19:17:39.6875599Z   (compiling source file '../tools/acoustic-runner/main.cpp')
+2026-11-20T19:17:39.6876078Z       C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.52.37025\include\xutility(5631,24):
+2026-11-20T19:17:39.6876389Z       the template instantiation context (the oldest one first) is
+2026-11-20T19:17:39.6876611Z           D:\a\baffle\baffle\tools\acoustic-runner\main.cpp(231,33):
+2026-11-20T19:17:39.6880707Z           see reference to function template instantiation or specialization 'void std::fill<float*,int>(const _FwdIt,const _FwdIt,const _Ty &)' being compiled
+2026-11-20T19:17:39.6881063Z           with
+2026-11-20T19:17:39.6881167Z           [
+2026-11-20T19:17:39.6881273Z               _FwdIt=float *,
+2026-11-20T19:17:39.6881403Z               _Ty=int
+2026-11-20T19:17:39.6881511Z           ]
+2026-11-20T19:17:39.6881603Z   
+2026-11-20T19:17:39.9295151Z ##[error]Process completed with exit code 1.
+2026-11-20T19:17:39.9468942Z Post job cleanup.
+2026-11-20T19:17:40.0535868Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-20T19:17:40.0787444Z git version 2.56.1.windows.1
+2026-11-20T19:17:40.0832125Z Temporarily overriding HOME='D:\a\_temp\39df0cce-e825-436c-a31a-385a8cafca1e' before making global git config changes
+2026-11-20T19:17:40.0832712Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T19:17:40.0839284Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\baffle\baffle
+2026-11-20T19:17:40.1103328Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T19:17:40.1364459Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-20T19:17:40.5528025Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T19:17:40.5753130Z http.https://github.com/.extraheader
+2026-11-20T19:17:40.5783966Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-20T19:17:40.6072285Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-20T19:17:40.9951322Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T19:17:41.0202720Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-20T19:17:41.4101014Z Cleaning up orphan processes
+2026-11-20T19:17:41.4254801Z Terminate orphan process: pid (9392) (vctip)
+2026-11-20T19:17:41.4307601Z Terminate orphan process: pid (7352) (MSBuild)
+2026-11-20T19:17:41.4342567Z Terminate orphan process: pid (8940) (conhost)
+2026-11-20T19:17:41.4364293Z Terminate orphan process: pid (6748) (MSBuild)
+2026-11-20T19:17:41.4398825Z Terminate orphan process: pid (9456) (MSBuild)
+2026-11-20T19:17:41.4507994Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

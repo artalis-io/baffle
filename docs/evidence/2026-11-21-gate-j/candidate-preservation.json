@@ -1,0 +1,185 @@
+{
+  "method": "Gain-sensitive and gain-adjusted near-only signal diagnostics, not phones.\n\nWhole identical source intervals retained. Log spectra use 20 ms Hann windows,\n10 ms hop, 512-point FFT, 300..7500 Hz and power floor 1e-12 FS^2. A best scalar\ngain is a diagnostic, not a changed waveform or intelligibility qualification.\n",
+  "results": [
+    {
+      "case": "source0-near-normal",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.20000000298023224,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-normal",
+      "stage": "pipeline",
+      "near_projection": 3.453139537481591,
+      "relative_error_energy": 7.617347475619474,
+      "gain_adjusted_relative_error": 0.13413541804171325,
+      "gain_adjusted_log_spectral_rms_db": 9.685519653963484,
+      "output_peak": 0.6096708178520203,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.76172
+      ],
+      "maximum_adjacent_gain_step": 1.73876
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.02500000037252903,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-quiet",
+      "stage": "pipeline",
+      "near_projection": 6.818282411221453,
+      "relative_error_energy": 39.0276979366431,
+      "gain_adjusted_relative_error": 0.11132290431340838,
+      "gain_adjusted_log_spectral_rms_db": 10.064938348011614,
+      "output_peak": 0.20904217660427094,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.6499999761581421,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source0-near-loud",
+      "stage": "pipeline",
+      "near_projection": 1.1640674670891853,
+      "relative_error_energy": 0.23328818394351641,
+      "gain_adjusted_relative_error": 0.1522966554371798,
+      "gain_adjusted_log_spectral_rms_db": 8.345425228151269,
+      "output_peak": 0.6424002647399902,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        4.16361
+      ],
+      "maximum_adjacent_gain_step": 1.3420500000000004
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.20000000298023224,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-normal",
+      "stage": "pipeline",
+      "near_projection": 2.9792853302497657,
+      "relative_error_energy": 5.5368125805996105,
+      "gain_adjusted_relative_error": 0.1824263661019399,
+      "gain_adjusted_log_spectral_rms_db": 9.046558558778733,
+      "output_peak": 0.603522777557373,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        8.72961
+      ],
+      "maximum_adjacent_gain_step": 3.19487
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.02500000037252903,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-quiet",
+      "stage": "pipeline",
+      "near_projection": 5.35135290185915,
+      "relative_error_energy": 22.830609982319807,
+      "gain_adjusted_relative_error": 0.13605967508501574,
+      "gain_adjusted_log_spectral_rms_db": 9.535952175715215,
+      "output_peak": 0.18536505103111267,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        9.99714
+      ],
+      "maximum_adjacent_gain_step": 1.0
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "raw",
+      "near_projection": 1.0,
+      "relative_error_energy": 0.0,
+      "gain_adjusted_relative_error": 0.0,
+      "gain_adjusted_log_spectral_rms_db": 0.0,
+      "output_peak": 0.6499999761581421,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null
+    },
+    {
+      "case": "source1-near-loud",
+      "stage": "pipeline",
+      "near_projection": 0.9631485096565404,
+      "relative_error_energy": 0.24333325225278454,
+      "gain_adjusted_relative_error": 0.2608461189112392,
+      "gain_adjusted_log_spectral_rms_db": 9.252038401643775,
+      "output_peak": 0.6429438591003418,
+      "samples_above_unity": 0,
+      "phoneme_labels": null,
+      "speech_onset_preservation": null,
+      "digital_clipping_flag_calls": 0,
+      "agc_gain_range": [
+        0.0,
+        7.39572
+      ],
+      "maximum_adjacent_gain_step": 3.8877500000000005
+    }
+  ]
+}

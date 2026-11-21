@@ -1,0 +1,5 @@
+[1/5] Building C object CMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj
+[2/5] Building C object CMakeFiles\baffle_speex_kernel.dir\src\speex\mdf_baffle.c.obj
+[3/5] Linking C static library baffle.lib
+[4/5] Linking C executable baffle_qualify.exe
+[5/5] Linking C executable baffle_adaptive_trace.exe

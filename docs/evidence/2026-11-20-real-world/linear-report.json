@@ -1,0 +1,533 @@
+{
+  "runner_sha256": "f410605e3fc66d5747f2f9e5273005973856019129ca5bf42083ae0c3a53bb56",
+  "manifest_sha256": "74255a33de5422ff24ea9348d4c4f0ad887451736a28c53c8486c5bcc8444396",
+  "metric_note": "Raw common-frame indexing; no output delay shifting or perceptual/phoneme inference",
+  "results": [
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 4.511365035386784,
+        "total_output_power": 0.017569501653388307,
+        "execution_ms": {
+          "p50": 0.092896,
+          "p95": 0.15230879999999997,
+          "p99": 0.22208175999999996,
+          "max": 0.324593
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-mic.f32",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-ref.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec3-linear.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec3-linear.csv",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 9632,
+        "rss_after_process_kib": 9708,
+        "process_peak_rss_kib": 99332,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "4e616a68b5d84f0a105ae1f91dc69005b857c901046ceea813d38479a58bc97b",
+      "raw_receipts_sha256": "2b6bcfec01cf64da5fee5666e33fbbb6d5db31ff6bf09595c3f5ec302920376f"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.5877987412386845,
+        "total_output_power": 0.027359998713430707,
+        "execution_ms": {
+          "p50": 0.08576800000000001,
+          "p95": 0.13625679999999998,
+          "p99": 0.14811232,
+          "max": 0.545664
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-mic.f32",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-ref.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec3-linear.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec3-linear.csv",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8048,
+        "rss_after_init_kib": 9624,
+        "rss_after_process_kib": 9700,
+        "process_peak_rss_kib": 107040,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "fb012f88298248c378af48ab8d57d45c43d7824a12c70bdaea99bbe49ebcec7c",
+      "raw_receipts_sha256": "85056d0dc1b3d8b60924820923bc44cd1e43bded89a8bace50091d16c5f4a6d6"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.7917607959866992,
+        "total_output_power": 0.04137327188311578,
+        "execution_ms": {
+          "p50": 0.090072,
+          "p95": 0.14221439999999996,
+          "p99": 0.21102687999999992,
+          "max": 0.331504
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-mic.f32",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-ref.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec3-linear.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec3-linear.csv",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8044,
+        "rss_after_init_kib": 9620,
+        "rss_after_process_kib": 9692,
+        "process_peak_rss_kib": 109920,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "3f8867b91a6703471303ec25747719936f370abd672d746d420da95b8b3ef980",
+      "raw_receipts_sha256": "c3965c5dede7aa9054ac5eed9c1f99c5d31ee87336222631d3e298d11aa71c87"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.5233335685239816,
+        "total_output_power": 0.0014796269457658991,
+        "execution_ms": {
+          "p50": 0.092056,
+          "p95": 0.14827600000000002,
+          "p99": 0.149948,
+          "max": 0.153344
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-mic.f32",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-ref.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec3-linear.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec3-linear.csv",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8104,
+        "rss_after_init_kib": 9684,
+        "rss_after_process_kib": 9760,
+        "process_peak_rss_kib": 111232,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "16690dad6c29ba9c0a23bf708e7f194da07cdd942f045d85609831ef72a10cba",
+      "raw_receipts_sha256": "9b205e6040dec6fdc99a17708721a99928c6fdde2055a44a43399ea24a043e80"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.5307724187140946,
+        "total_output_power": 0.001477094723381126,
+        "execution_ms": {
+          "p50": 0.09731999999999999,
+          "p95": 0.1484,
+          "p99": 0.178548,
+          "max": 0.401488
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-mic.f32",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-ref.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec3-linear.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec3-linear.csv",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8104,
+        "rss_after_init_kib": 9684,
+        "rss_after_process_kib": 9760,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "869e08a9f7808d9be4305e21f280b2d42721144efc32f525ad8b5b7137de477a",
+      "raw_receipts_sha256": "7739321eeb3660bef8927b708bace189c86bea44bcca0e79c41dad3477d971d4"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.11003150799430342,
+        "total_output_power": 0.0016273555065133014,
+        "execution_ms": {
+          "p50": 0.09716,
+          "p95": 0.14824,
+          "p99": 0.18066,
+          "max": 0.264512
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-mic.f32",
+        "linear-input/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-ref.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec3-linear.f32",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec3-linear.csv",
+        "linear-results/00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8100,
+        "rss_after_init_kib": 9684,
+        "rss_after_process_kib": 9756,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "b991a537a4522026a3ca719f54cacfb791a90b4e7ae000c9e9b9093c5726abbb",
+      "raw_receipts_sha256": "473c729027f60c6509b462a51fd19022c0071db62d4663d03c39eeb26a57166b"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 5.980862366202981,
+        "total_output_power": 0.008610541156634285,
+        "execution_ms": {
+          "p50": 0.103432,
+          "p95": 0.1544176,
+          "p99": 0.21847343999999977,
+          "max": 0.30072
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-mic.f32",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-ref.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec3-linear.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec3-linear.csv",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 9632,
+        "rss_after_process_kib": 9704,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "f1a32307a63f7f5fc6ac4a5fafd59f613545f4f426352a599e93e7036d2aefed",
+      "raw_receipts_sha256": "de8218d8bba017955b9557917d9661d534b900ba16d57ade7641c3c979c3ff32"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.8035969520767154,
+        "total_output_power": 0.028363315007263155,
+        "execution_ms": {
+          "p50": 0.099648,
+          "p95": 0.14936,
+          "p99": 0.21353823999999996,
+          "max": 0.288416
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-mic.f32",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-ref.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec3-linear.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec3-linear.csv",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 9632,
+        "rss_after_process_kib": 9704,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "8d935f5dbb1c9ba8c2e892d040efa8e7ddd53a9c863b5ca122564ece910090bf",
+      "raw_receipts_sha256": "285e5af94e053e9225e0c4114cc04a30b90b08357c7e8f543db6da4281d9bfdc"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec3-linear",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 1.4308058551053449,
+        "total_output_power": 0.024549129565809104,
+        "execution_ms": {
+          "p50": 0.09936,
+          "p95": 0.148784,
+          "p99": 0.150464,
+          "max": 0.352624
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-mic.f32",
+        "linear-input/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-ref.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec3-linear.f32",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec3-linear.csv",
+        "linear-results/02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8052,
+        "rss_after_init_kib": 9632,
+        "rss_after_process_kib": 9704,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "bda0d26fe87cb169e5a784eeb4c12f619b3a96dbdad1a53072b2bedd592407c5",
+      "raw_receipts_sha256": "4ac4e850f6d212d5255d6875a5f66d989cc866c525069351cac5afa6ec714479"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "aec3-linear",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.090664,
+          "p95": 0.151392,
+          "p99": 0.15408032,
+          "max": 0.173024
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-mic.f32",
+        "linear-input/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-ref.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec3-linear.f32",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec3-linear.csv",
+        "linear-results/00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 10924,
+        "rss_after_init_kib": 12504,
+        "rss_after_process_kib": 12576,
+        "process_peak_rss_kib": 113288,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "8582230137e83a3b7369616930c0646f93aeb10437c67a2a6125c9bc55f98aee",
+      "raw_receipts_sha256": "8c683b4a2d2c9720a90d01f515aae65bb075502f4f0e322d832f436cd1243cd2"
+    },
+    {
+      "job": "controlled-16000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "aec3-linear",
+      "metrics": {
+        "raw_component_snr_improvement_db": -3.729333708535199,
+        "near_projection": 0.15051326757446862,
+        "execution_ms": {
+          "p50": 0.094736,
+          "p95": 0.15026559999999994,
+          "p99": 0.22557919999999973,
+          "max": 0.290816
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/controlled-16000-mic.f32",
+        "linear-input/controlled-16000-ref.f32",
+        "linear-results/controlled-16000-aec3-linear.f32",
+        "linear-results/controlled-16000-aec3-linear.csv",
+        "linear-results/controlled-16000-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 9632,
+        "rss_after_process_kib": 9704,
+        "process_peak_rss_kib": 118640,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "d654970d203b004aec80d24df0f47c9e5dd6d618e856f4173ac4f324a5330c13",
+      "raw_receipts_sha256": "bde32f907418c4aed387f3dd8c09dd7d7009996e20156e89da026706a28313d0"
+    },
+    {
+      "job": "near-impulse-16000",
+      "scope": "synthetic-latency-probe",
+      "backend": "aec3-linear",
+      "metrics": {
+        "observed_near_peak_offset_frames": 64,
+        "near_peak": 0.10000000149011612,
+        "execution_ms": {
+          "p50": 0.079368,
+          "p95": 0.08109119999999999,
+          "p99": 0.08417343999999993,
+          "max": 0.099936
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-linear/baffle_acoustic_runner",
+        "aec3-linear",
+        "16000",
+        "linear-input/near-impulse-16000-mic.f32",
+        "linear-input/near-impulse-16000-ref.f32",
+        "linear-results/near-impulse-16000-aec3-linear.f32",
+        "linear-results/near-impulse-16000-aec3-linear.csv",
+        "linear-results/near-impulse-16000-aec3-linear.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "rss_before_init_kib": 3836,
+        "rss_after_init_kib": 5412,
+        "rss_after_process_kib": 5488,
+        "process_peak_rss_kib": 118640,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "e94bd40d110daf86267fafdd585df02e188fb605f65d4d544ff8908e9c57f483",
+      "raw_receipts_sha256": "7dd2087790b3aa2d69350ffde6af06528da86eb2534e1927226b75d81e336f1e"
+    }
+  ]
+}

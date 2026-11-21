@@ -1,0 +1,137 @@
+{
+  "original_report_sha256": "b855692378844f2a6100b67476bafc01b243cbb6f5f1540ea63f0e0ccfddcdf5",
+  "method": "Fixed independent impulse-peak compensation; original raw metrics retained, no universal acceptance claim",
+  "not_physical_or_phoneme_qualification": true,
+  "results": [
+    {
+      "job": "controlled-16000",
+      "backend": "baffle",
+      "legacy_raw": {
+        "raw_component_snr_improvement_db": 11.660782228478537,
+        "near_projection": 0.9843460805500246,
+        "execution_ms": {
+          "p50": 0.012512,
+          "p95": 0.026144,
+          "p99": 0.02686479999999998,
+          "max": 0.06064
+        },
+        "observed_allocation_calls": 0
+      },
+      "independent_peak_calibration": {
+        "delay_frames": 0,
+        "probe": "near-impulse-16000",
+        "output_sha256": "aeff88cf910255c31c6ce751d98c611bbe2534d84e1a7a74fb51d16712ad98c2"
+      },
+      "peak_calibrated_component_snr_improvement_db": 11.660782228478537,
+      "peak_calibrated_near_projection": 0.9843460805500263,
+      "input_interval_unchanged_frames": [
+        128000,
+        288000
+      ]
+    },
+    {
+      "job": "controlled-16000",
+      "backend": "aec3",
+      "legacy_raw": {
+        "raw_component_snr_improvement_db": -3.9018910962749738,
+        "near_projection": 0.022298926573170893,
+        "execution_ms": {
+          "p50": 0.093312,
+          "p95": 0.14393755,
+          "p99": 0.15375916,
+          "max": 0.55779
+        },
+        "observed_allocation_calls": 0
+      },
+      "independent_peak_calibration": {
+        "delay_frames": 128,
+        "probe": "near-impulse-16000",
+        "output_sha256": "a9e11b60c1c9c7aaf2c739fe50f3c050ce38c69d757150976c4e11d0565fc481"
+      },
+      "peak_calibrated_component_snr_improvement_db": 6.7746249227226,
+      "peak_calibrated_near_projection": 0.8201793662067088,
+      "input_interval_unchanged_frames": [
+        128000,
+        288000
+      ]
+    },
+    {
+      "job": "controlled-48000",
+      "backend": "baffle",
+      "legacy_raw": {
+        "raw_component_snr_improvement_db": 14.60354307931965,
+        "near_projection": 0.9887241703902687,
+        "execution_ms": {
+          "p50": 0.041088,
+          "p95": 0.08644879999999999,
+          "p99": 0.089424,
+          "max": 0.109728
+        },
+        "observed_allocation_calls": 0
+      },
+      "independent_peak_calibration": {
+        "delay_frames": 0,
+        "probe": "near-impulse-48000",
+        "output_sha256": "69ad0600c9ce0710bf01ed2dcf8e448c5033804f2e9eca37e391f578a25ac6e7"
+      },
+      "peak_calibrated_component_snr_improvement_db": 14.603543079319648,
+      "peak_calibrated_near_projection": 0.9887241703902586,
+      "input_interval_unchanged_frames": [
+        384000,
+        864000
+      ]
+    },
+    {
+      "job": "controlled-48000",
+      "backend": "aec3",
+      "legacy_raw": {
+        "raw_component_snr_improvement_db": -3.067269107909263,
+        "near_projection": 0.10991611135736068,
+        "execution_ms": {
+          "p50": 0.103576,
+          "p95": 0.15968154999999998,
+          "p99": 0.2207359599999996,
+          "max": 0.342767
+        },
+        "observed_allocation_calls": 0
+      },
+      "independent_peak_calibration": {
+        "delay_frames": 430,
+        "probe": "near-impulse-48000",
+        "output_sha256": "5ca4da487fcd401d3a06261283706f761606bd289102968fb854ddfce9533135"
+      },
+      "peak_calibrated_component_snr_improvement_db": 5.641093537722769,
+      "peak_calibrated_near_projection": 0.7592966216899583,
+      "input_interval_unchanged_frames": [
+        384000,
+        864000
+      ]
+    },
+    {
+      "job": "controlled-16000",
+      "backend": "aec3-linear",
+      "legacy_raw": {
+        "raw_component_snr_improvement_db": -3.729333708535199,
+        "near_projection": 0.15051326757446862,
+        "execution_ms": {
+          "p50": 0.094736,
+          "p95": 0.15026559999999994,
+          "p99": 0.22557919999999973,
+          "max": 0.290816
+        },
+        "observed_allocation_calls": 0
+      },
+      "independent_peak_calibration": {
+        "delay_frames": 64,
+        "probe": "near-impulse-16000",
+        "output_sha256": "e94bd40d110daf86267fafdd585df02e188fb605f65d4d544ff8908e9c57f483"
+      },
+      "peak_calibrated_component_snr_improvement_db": 10.077993909459288,
+      "peak_calibrated_near_projection": 0.9541117830825986,
+      "input_interval_unchanged_frames": [
+        128000,
+        288000
+      ]
+    }
+  ]
+}

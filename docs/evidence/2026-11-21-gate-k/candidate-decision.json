@@ -1,0 +1,36 @@
+{
+  "fixed_primary_comparison": {
+    "partition2": {
+      "primary_moving_cases": [
+        "abrupt",
+        "gradual",
+        "gain-change",
+        "delay-change",
+        "holdout-reflections"
+      ],
+      "baseline_median_s": 3.0,
+      "candidate_median_s": 3.0,
+      "improvement_fraction": 0.0,
+      "required_improvement_fraction": 0.2,
+      "target_met": false
+    },
+    "readiness": {
+      "primary_moving_cases": [
+        "abrupt",
+        "gradual",
+        "gain-change",
+        "delay-change",
+        "holdout-reflections"
+      ],
+      "baseline_median_s": 3.0,
+      "candidate_median_s": 3.0,
+      "improvement_fraction": 0.0,
+      "required_improvement_fraction": 0.2,
+      "target_met": false
+    }
+  },
+  "partition": "REJECT: misses moving-path target, slower reflection holdout, new AEC-only blanks and full word regressions",
+  "readiness": "REJECT: misses moving-path target, slower gradual recovery, no ASR/room rejection benefit",
+  "source_mode_observation": "adapted is a private mode bit, not a calibrated convergence or speaker probability",
+  "blind_generalization": false
+}

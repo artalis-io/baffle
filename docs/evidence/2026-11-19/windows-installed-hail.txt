@@ -1,0 +1,9 @@
+Test project C:/Users/Mark/artalis.io/src/baffle/build-hail-consumer
+    Start 1: installed_hail_duplex
+1/2 Test #1: installed_hail_duplex ............   Passed   15.00 sec
+    Start 2: installed_hail_concurrent
+2/2 Test #2: installed_hail_concurrent ........   Passed    0.04 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =  15.05 sec

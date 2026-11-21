@@ -1,0 +1,221 @@
+{
+  "scope": "One-factor causal diagnostics, not a replacement acceptance test",
+  "capture_sha256": "97adf37c776f0e96db2f30aa81231cc52f1472fc0de8192dc6a138b999777c7a",
+  "interval_frames": [
+    384000,
+    864000
+  ],
+  "oracle": "unchanged known near component, including recording noise",
+  "cases": [
+    {
+      "name": "baseline",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-recorded\\controlled-doubletalk-ref.wav",
+        "build-aec-convergence\\diagnostics\\baseline-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 7.957196398223363,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=25.8454 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "3f2a92b5fd0bbc17f131b8199108914a2187b55249e535d5f6395b0831aba7a3",
+      "output_sha256": "d33047ea1fac03d20e69d256b8eb448b414f5b092c31fef2f5b4be003a3d8d14"
+    },
+    {
+      "name": "tail-40",
+      "tail_ms": 40,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-recorded\\controlled-doubletalk-ref.wav",
+        "build-aec-convergence\\diagnostics\\tail-40-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "40",
+        "10"
+      ],
+      "output_error_snr_db": 8.000091131447896,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=133424 frame_frames=480 tail_ms=40\nannotated_far_only_erle_db=39.4782 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "3f2a92b5fd0bbc17f131b8199108914a2187b55249e535d5f6395b0831aba7a3",
+      "output_sha256": "b2553f9b3f73525a54e75fb57592f252c9c19de72ebb46b0bb3ba11e565af608"
+    },
+    {
+      "name": "tail-500",
+      "tail_ms": 500,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-recorded\\controlled-doubletalk-ref.wav",
+        "build-aec-convergence\\diagnostics\\tail-500-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "500",
+        "10"
+      ],
+      "output_error_snr_db": 7.99198099954385,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=751856 frame_frames=480 tail_ms=500\nannotated_far_only_erle_db=17.5112 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "3f2a92b5fd0bbc17f131b8199108914a2187b55249e535d5f6395b0831aba7a3",
+      "output_sha256": "8366433e16530e3a5f99ce083d87f9228055daa547ca97b814c047dd64b20ca2"
+    },
+    {
+      "name": "hop-20",
+      "tail_ms": 200,
+      "hop_ms": 20,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-recorded\\controlled-doubletalk-ref.wav",
+        "build-aec-convergence\\diagnostics\\hop-20-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "20"
+      ],
+      "output_error_snr_db": 7.99785853463416,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=419536 frame_frames=960 tail_ms=200\nannotated_far_only_erle_db=23.2223 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "3f2a92b5fd0bbc17f131b8199108914a2187b55249e535d5f6395b0831aba7a3",
+      "output_sha256": "2c7882d7d00d625b0b058e8d34651b91f6c4b1bedac9bee5e65bf905f2404909"
+    },
+    {
+      "name": "reference-gain-half",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-aec-convergence\\diagnostics\\reference-gain-half-ref.wav",
+        "build-aec-convergence\\diagnostics\\reference-gain-half-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 7.975849604469745,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=19.7273 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "37b37c560d64eb9d5659575ed11b59e907a923a1a8ad4a439955cf5c52c46b8e",
+      "output_sha256": "1fe513f30f237eea2b6113b375047d5cae9ec5b46652ca5b475287c0801d16b5"
+    },
+    {
+      "name": "reference-gain-double",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-aec-convergence\\diagnostics\\reference-gain-double-ref.wav",
+        "build-aec-convergence\\diagnostics\\reference-gain-double-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 7.936086316437372,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=30.4271 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "0c4bdca54327e06c650cddc305e19636ffcd988a8c1ff021782afc41651509b2",
+      "output_sha256": "adcb1d756d8adf94f2f877c9e9bf012709739bd18259efb874626d5f1767cadf"
+    },
+    {
+      "name": "reference-late-10ms",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-aec-convergence\\diagnostics\\reference-late-10ms-ref.wav",
+        "build-aec-convergence\\diagnostics\\reference-late-10ms-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 1.1369644976714564,
+      "native_stdout": "dominant_adapted_tap=67 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=0.4929 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "fec58c6fe01efed5d22fcae10914672d9d2902fe964c0fa016edd8b9f9950508",
+      "output_sha256": "6982e29e06e5ea4673d80aecb9f8f6150dcc4f3f3ba9cdefd20fb75783b1a2f7"
+    },
+    {
+      "name": "reference-early-10ms",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-aec-convergence\\diagnostics\\reference-early-10ms-ref.wav",
+        "build-aec-convergence\\diagnostics\\reference-early-10ms-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 7.915894130614318,
+      "native_stdout": "dominant_adapted_tap=512 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=22.7212 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "e2ae4ff5fefe2b01295d3a52fb5d481e9ad09b1de13aceb85417d46bffaa8bc0",
+      "output_sha256": "f7471af4fcb5ad49fbeea20e049464872de3b4ed3caeb771110207efd8ecc02f"
+    },
+    {
+      "name": "uncompensated-reference-100ppm",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baseline\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-aec-convergence\\diagnostics\\uncompensated-reference-100ppm-ref.wav",
+        "build-aec-convergence\\diagnostics\\uncompensated-reference-100ppm-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 5.861338923964232,
+      "native_stdout": "dominant_adapted_tap=139 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=7.9646 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "ec79ac2a9ab91cde9afa773403fbb19057273c2ae0c44e7f94c9c96a359d6346",
+      "reference_sha256": "6553da48af6a29f71d4ce69b4a13c8b7ca820e88ed14d3b97d0bfbe8151a5a56",
+      "output_sha256": "0b6b8acbac156c74699fc78adc9fae7f1016bb9c3ab4c22d1f37a9b5a094e5e3"
+    },
+    {
+      "name": "capture-notch-only",
+      "tail_ms": 200,
+      "hop_ms": 10,
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-adapter\\baffle_qualify.exe",
+        "build-recorded\\controlled-doubletalk-mic.wav",
+        "build-recorded\\controlled-doubletalk-ref.wav",
+        "build-aec-convergence\\diagnostics\\capture-notch-only-out.wav",
+        "288000",
+        "96000",
+        "48000",
+        "200",
+        "10"
+      ],
+      "output_error_snr_db": 15.912145560101443,
+      "native_stdout": "dominant_adapted_tap=32 (not hardware latency)\nrate=48000 capture_channels=1 reference_channels=1 real_frames=1152000 workspace_bytes=348528 frame_frames=480 tail_ms=200\nannotated_far_only_erle_db=25.8312 interval_first=288000 interval_frames=96000\n",
+      "tool_sha256": "d70d4f0ee28fd3b8d689974f111857a1397c3e48298c40cbd4e8831d4b7ba3a5",
+      "reference_sha256": "3f2a92b5fd0bbc17f131b8199108914a2187b55249e535d5f6395b0831aba7a3",
+      "output_sha256": "4e731308e77ecd6549c53323fd465d02e07ad21c27ed7a85252b8a8d773abc8f"
+    }
+  ]
+}

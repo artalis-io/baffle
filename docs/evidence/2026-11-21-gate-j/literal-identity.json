@@ -1,0 +1,590 @@
+{
+  "scope": "Typed float constants only; all measured candidate PCM unchanged",
+  "results": [
+    {
+      "case": "source0-near-normal",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-near-normal-mic.f32",
+        "build-gate-h\\input\\source0-near-normal-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-normal.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-normal.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-normal.json"
+      ],
+      "sha256": "3119de17b80a9156bdbcb89008ab9405b0a7c7220dfb4e18aec9ece1a4bbe101",
+      "equal": true
+    },
+    {
+      "case": "source0-near-quiet",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-near-quiet-mic.f32",
+        "build-gate-h\\input\\source0-near-quiet-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-quiet.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-quiet.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-quiet.json"
+      ],
+      "sha256": "24a2b7661f338879f42e6e5d49c3180dcd2312e2ec626f21ef7b9e24d8e8a8e5",
+      "equal": true
+    },
+    {
+      "case": "source0-near-loud",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-near-loud-mic.f32",
+        "build-gate-h\\input\\source0-near-loud-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-loud.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-loud.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-near-loud.json"
+      ],
+      "sha256": "7259558f8f784373ae33104d7e3f1bbcc1b152d46a369f7d31104f535e2fd643",
+      "equal": true
+    },
+    {
+      "case": "source0-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-doubletalk-mic.f32",
+        "build-gate-h\\input\\source0-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-doubletalk.json"
+      ],
+      "sha256": "f600358b75169edc36836f550e8934f1fe57ad9c2cf39990a0550ed5062f99e7",
+      "equal": true
+    },
+    {
+      "case": "source0-quiet-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-quiet-doubletalk-mic.f32",
+        "build-gate-h\\input\\source0-quiet-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-quiet-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-quiet-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-quiet-doubletalk.json"
+      ],
+      "sha256": "b52a817b84d1a02f60c20ecdfce66864d29f3e1f681c41ff5cb6e77e8a64771f",
+      "equal": true
+    },
+    {
+      "case": "source0-loud-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-loud-doubletalk-mic.f32",
+        "build-gate-h\\input\\source0-loud-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-loud-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-loud-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-loud-doubletalk.json"
+      ],
+      "sha256": "9061291bcdfe3c81513f01654df5b84efe57b8f4f2bee1ded2ee876731fdf9c6",
+      "equal": true
+    },
+    {
+      "case": "source0-early",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-early-mic.f32",
+        "build-gate-h\\input\\source0-early-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-early.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-early.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-early.json"
+      ],
+      "sha256": "47bd28d095a790e674f799c0132b4e2412fdd8cd3a8c39350e61b907bc17da88",
+      "equal": true
+    },
+    {
+      "case": "source0-cancel-span",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-cancel-span-mic.f32",
+        "build-gate-h\\input\\source0-cancel-span-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-cancel-span.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-cancel-span.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-cancel-span.json"
+      ],
+      "sha256": "27a01260e5e8de517d9a1620393f5ac52e769ac794967a0f0ede04d68bf67e8c",
+      "equal": true
+    },
+    {
+      "case": "source0-post-cancel",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-post-cancel-mic.f32",
+        "build-gate-h\\input\\source0-post-cancel-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-post-cancel.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-post-cancel.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-post-cancel.json"
+      ],
+      "sha256": "e999e5d6829a6eddab2b18b0d4d05eacf085d8e5e25bdac2da83a2d8fc06bab6",
+      "equal": true
+    },
+    {
+      "case": "source0-render-restart",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-render-restart-mic.f32",
+        "build-gate-h\\input\\source0-render-restart-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-render-restart.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-render-restart.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-render-restart.json"
+      ],
+      "sha256": "3e8da78f2ef72cd94593c651881ebcba4ca54a0d187708e5c6e36b3ed214543e",
+      "equal": true
+    },
+    {
+      "case": "source0-capture-epoch",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-capture-epoch-mic.f32",
+        "build-gate-h\\input\\source0-capture-epoch-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-capture-epoch.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-capture-epoch.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-capture-epoch.json"
+      ],
+      "sha256": "f6f95205552b5aeed02031112708a5ad0daa35017f486350d7fb12935b260529",
+      "equal": true
+    },
+    {
+      "case": "source0-missing-reference",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-missing-reference-mic.f32",
+        "build-gate-h\\input\\source0-missing-reference-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-missing-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-missing-reference.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-missing-reference.json"
+      ],
+      "sha256": "9db6eba9589da96dd74a32d38392acaa5c31b34af5a2797ee2d33b6c3777ec35",
+      "equal": true
+    },
+    {
+      "case": "source0-far-only",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-far-only-mic.f32",
+        "build-gate-h\\input\\source0-far-only-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-far-only.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-far-only.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-far-only.json"
+      ],
+      "sha256": "9c9d6d1da7e6f3e3f9ec637bb0fe62dd4a499596583bb1492d1eb47b36c5bf41",
+      "equal": true
+    },
+    {
+      "case": "source0-silence",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source0-silence-mic.f32",
+        "build-gate-h\\input\\source0-silence-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-silence.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-silence.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source0-silence.json"
+      ],
+      "sha256": "02a3547fceb90fafb97e73c84736e1d53a3a263664871de881f83807acf730d2",
+      "equal": true
+    },
+    {
+      "case": "source1-near-normal",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-near-normal-mic.f32",
+        "build-gate-h\\input\\source1-near-normal-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-normal.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-normal.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-normal.json"
+      ],
+      "sha256": "360b3a414fced54b064d849bb689272e52a0881f5df4a7488d83b1acedc2bb6e",
+      "equal": true
+    },
+    {
+      "case": "source1-near-quiet",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-near-quiet-mic.f32",
+        "build-gate-h\\input\\source1-near-quiet-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-quiet.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-quiet.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-quiet.json"
+      ],
+      "sha256": "71f3193d107ea076d4519d8b23db747d8c5ff18211a89ebafecec9e430265e10",
+      "equal": true
+    },
+    {
+      "case": "source1-near-loud",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-near-loud-mic.f32",
+        "build-gate-h\\input\\source1-near-loud-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-loud.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-loud.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-near-loud.json"
+      ],
+      "sha256": "44e5484e41e125a7653864a541a8969679e131b78ae28c1b46e4677cf5639835",
+      "equal": true
+    },
+    {
+      "case": "source1-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-doubletalk-mic.f32",
+        "build-gate-h\\input\\source1-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-doubletalk.json"
+      ],
+      "sha256": "a45c03e55ff992b6db667fea8d37b32a8cf10824b14e022c3ba50de0dc98a15f",
+      "equal": true
+    },
+    {
+      "case": "source1-quiet-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-quiet-doubletalk-mic.f32",
+        "build-gate-h\\input\\source1-quiet-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-quiet-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-quiet-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-quiet-doubletalk.json"
+      ],
+      "sha256": "19a2390bd2054b25a63dcee7b12e2d0865daaa45f4c5693e57b88ebab32f1ab5",
+      "equal": true
+    },
+    {
+      "case": "source1-loud-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-loud-doubletalk-mic.f32",
+        "build-gate-h\\input\\source1-loud-doubletalk-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-loud-doubletalk.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-loud-doubletalk.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-loud-doubletalk.json"
+      ],
+      "sha256": "31146de380eeb86a2d6417275482e202405bc80b3ddca043285ce2418be9af04",
+      "equal": true
+    },
+    {
+      "case": "source1-early",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-early-mic.f32",
+        "build-gate-h\\input\\source1-early-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-early.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-early.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-early.json"
+      ],
+      "sha256": "f1333fa69451897ae87f58ef09657d6f1cfd0745c20915c9d04b0648ee357cc5",
+      "equal": true
+    },
+    {
+      "case": "source1-cancel-span",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-cancel-span-mic.f32",
+        "build-gate-h\\input\\source1-cancel-span-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-cancel-span.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-cancel-span.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-cancel-span.json"
+      ],
+      "sha256": "84e720a91d1f5d0ca985726882d068c4e05c60d37b73c7634295a1ccc993565a",
+      "equal": true
+    },
+    {
+      "case": "source1-post-cancel",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-post-cancel-mic.f32",
+        "build-gate-h\\input\\source1-post-cancel-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-post-cancel.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-post-cancel.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-post-cancel.json"
+      ],
+      "sha256": "0bddc216c97faf6a6c31bbe8340adbfba381279814157ff10c95919c69650703",
+      "equal": true
+    },
+    {
+      "case": "source1-render-restart",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-render-restart-mic.f32",
+        "build-gate-h\\input\\source1-render-restart-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-render-restart.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-render-restart.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-render-restart.json"
+      ],
+      "sha256": "cb238118e55ac908e758ae8779f93f1ffa61c6aa29a102b79eb62f75bc4e7e0b",
+      "equal": true
+    },
+    {
+      "case": "source1-capture-epoch",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-capture-epoch-mic.f32",
+        "build-gate-h\\input\\source1-capture-epoch-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-capture-epoch.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-capture-epoch.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-capture-epoch.json"
+      ],
+      "sha256": "d43790783f920c56a27193d0afe0a4420ac3ab9b59edf22349e0dbadece24aee",
+      "equal": true
+    },
+    {
+      "case": "source1-missing-reference",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-missing-reference-mic.f32",
+        "build-gate-h\\input\\source1-missing-reference-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-missing-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-missing-reference.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-missing-reference.json"
+      ],
+      "sha256": "16970f4a9117d9aa010b558f9fffa20a6b242f4ed810dec24b833feb5b9f436f",
+      "equal": true
+    },
+    {
+      "case": "source1-far-only",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-far-only-mic.f32",
+        "build-gate-h\\input\\source1-far-only-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-far-only.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-far-only.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-far-only.json"
+      ],
+      "sha256": "640965cf1bb847019bbcccde26ad5a25206e098fa14daca8df10af069f8e3870",
+      "equal": true
+    },
+    {
+      "case": "source1-silence",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-h\\input\\source1-silence-mic.f32",
+        "build-gate-h\\input\\source1-silence-reference.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-silence.f32",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-silence.csv",
+        "build-gate-j\\literal-identity-candidate-speech\\source1-silence.json"
+      ],
+      "sha256": "76cb30f0173067508dc226bec9a6694a2ec2161b37ba3a488c9909f7c24def36",
+      "equal": true
+    },
+    {
+      "case": "room-base",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\room-base-mic.f32",
+        "build-gate-i\\far-input\\room-base-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\room-base.f32",
+        "build-gate-j\\literal-identity-candidate-far\\room-base.csv",
+        "build-gate-j\\literal-identity-candidate-far\\room-base.json"
+      ],
+      "sha256": "9c9d6d1da7e6f3e3f9ec637bb0fe62dd4a499596583bb1492d1eb47b36c5bf41",
+      "equal": true
+    },
+    {
+      "case": "quiet",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\quiet-mic.f32",
+        "build-gate-i\\far-input\\quiet-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\quiet.f32",
+        "build-gate-j\\literal-identity-candidate-far\\quiet.csv",
+        "build-gate-j\\literal-identity-candidate-far\\quiet.json"
+      ],
+      "sha256": "8ccf39668314cfa96166c63d034626fae49984cbb74295ca12b1d3722fa4e972",
+      "equal": true
+    },
+    {
+      "case": "loud",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\loud-mic.f32",
+        "build-gate-i\\far-input\\loud-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\loud.f32",
+        "build-gate-j\\literal-identity-candidate-far\\loud.csv",
+        "build-gate-j\\literal-identity-candidate-far\\loud.json"
+      ],
+      "sha256": "f5cffce9f35a91d4d93b4d861a9ef9774f760118f60760b40c6bbc7cadf9f951",
+      "equal": true
+    },
+    {
+      "case": "long-tail",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\long-tail-mic.f32",
+        "build-gate-i\\far-input\\long-tail-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\long-tail.f32",
+        "build-gate-j\\literal-identity-candidate-far\\long-tail.csv",
+        "build-gate-j\\literal-identity-candidate-far\\long-tail.json"
+      ],
+      "sha256": "ce900807c5fd3132207b9d59efac75d4db6b8b8a9c644184a1c60b747d72470e",
+      "equal": true
+    },
+    {
+      "case": "nonlinear",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\nonlinear-mic.f32",
+        "build-gate-i\\far-input\\nonlinear-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\nonlinear.f32",
+        "build-gate-j\\literal-identity-candidate-far\\nonlinear.csv",
+        "build-gate-j\\literal-identity-candidate-far\\nonlinear.json"
+      ],
+      "sha256": "e1064c195f5ea17a6927af07fdeda6332d92a7d21d2cb8b363642f160a4d08b0",
+      "equal": true
+    },
+    {
+      "case": "path-change",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\path-change-mic.f32",
+        "build-gate-i\\far-input\\path-change-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\path-change.f32",
+        "build-gate-j\\literal-identity-candidate-far\\path-change.csv",
+        "build-gate-j\\literal-identity-candidate-far\\path-change.json"
+      ],
+      "sha256": "44a036dd77badc763bbbac8419aba90a94a7ed9841144d4b56f671712f08cb87",
+      "equal": true
+    },
+    {
+      "case": "delay-100ms",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\delay-100ms-mic.f32",
+        "build-gate-i\\far-input\\delay-100ms-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\delay-100ms.f32",
+        "build-gate-j\\literal-identity-candidate-far\\delay-100ms.csv",
+        "build-gate-j\\literal-identity-candidate-far\\delay-100ms.json"
+      ],
+      "sha256": "59095172299d58cadecafba3a553688e8a459f000454caf179611fe324ef6649",
+      "equal": true
+    },
+    {
+      "case": "startup",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\startup-mic.f32",
+        "build-gate-i\\far-input\\startup-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\startup.f32",
+        "build-gate-j\\literal-identity-candidate-far\\startup.csv",
+        "build-gate-j\\literal-identity-candidate-far\\startup.json"
+      ],
+      "sha256": "69e8ab275b2597051906b0e461fa4071fc31052332656f7bac2620ce856fff3b",
+      "equal": true
+    },
+    {
+      "case": "cancel-tail",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\cancel-tail-mic.f32",
+        "build-gate-i\\far-input\\cancel-tail-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\cancel-tail.f32",
+        "build-gate-j\\literal-identity-candidate-far\\cancel-tail.csv",
+        "build-gate-j\\literal-identity-candidate-far\\cancel-tail.json"
+      ],
+      "sha256": "597121c0dd836e3fe6f033439b1380c9f9758d7cbb01d10b8200f46e4088a3bf",
+      "equal": true
+    },
+    {
+      "case": "restart",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\restart-mic.f32",
+        "build-gate-i\\far-input\\restart-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\restart.f32",
+        "build-gate-j\\literal-identity-candidate-far\\restart.csv",
+        "build-gate-j\\literal-identity-candidate-far\\restart.json"
+      ],
+      "sha256": "9c7603a309b0d38839083de7674f2afcf6d5193348af509b48fa8aaf3dbccdfc",
+      "equal": true
+    },
+    {
+      "case": "reference-gap",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-j\\runner\\baffle_residual_runner.exe",
+        "pipeline",
+        "16000",
+        "build-gate-i\\far-input\\reference-gap-mic.f32",
+        "build-gate-i\\far-input\\reference-gap-reference.f32",
+        "build-gate-j\\literal-identity-candidate-far\\reference-gap.f32",
+        "build-gate-j\\literal-identity-candidate-far\\reference-gap.csv",
+        "build-gate-j\\literal-identity-candidate-far\\reference-gap.json"
+      ],
+      "sha256": "979d4c290ffa682ca8329a332086ab1bc1e7c8f49a00157610ab1f1387ea5b1e",
+      "equal": true
+    }
+  ]
+}

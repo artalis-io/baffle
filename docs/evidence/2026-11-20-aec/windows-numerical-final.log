@@ -1,0 +1,8 @@
+AEC near-only rate=8000 hop_ms=10 raw_error_snr_db=14.038 dc_mean=0.00000193
+AEC near-only rate=8000 hop_ms=20 raw_error_snr_db=14.038 dc_mean=0.00000193
+AEC near-only rate=16000 hop_ms=10 raw_error_snr_db=14.002 dc_mean=0.00000038
+AEC near-only rate=16000 hop_ms=20 raw_error_snr_db=14.002 dc_mean=0.00000038
+AEC near-only rate=48000 hop_ms=10 raw_error_snr_db=13.984 dc_mean=-0.00000039
+AEC near-only rate=48000 hop_ms=20 raw_error_snr_db=13.984 dc_mean=-0.00000039
+AEC synthetic ERLE_db=34.728 double_talk_voice_projection=0.98942 path_change_ERLE_db=38.180 dominant_delay=32 caller_bytes=121968 backend_used=100256
+Mature MDF backend: bounded arena, double-talk, path recovery, missing references and generations passed

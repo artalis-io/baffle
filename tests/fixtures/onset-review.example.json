@@ -1,0 +1,17 @@
+{
+  "fixture_kind": "simulated-with-recorded-source",
+  "pcm_format": "f32le-mono",
+  "sample_rate": 16000,
+  "scenario": "near speech through cancellation; fill independently verified labels",
+  "source": {"path": "", "sha256": ""},
+  "processed": {"path": "", "sha256": ""},
+  "vad_trace": {"path": "", "sha256": ""},
+  "labels": {
+    "method": null, "reviewer": null, "evidence_identity": null,
+    "onset_frame": null, "first_phone_end_frame": null, "first_syllable_end_frame": null,
+    "uncertainty_frames": null, "no_near_speech_before_onset": null, "language": "en", "first_phone_class": null
+  },
+  "application_policy": {"approved_by": null, "maximum_vad_delay_ms": null, "maximum_asr_wer_delta": null},
+  "independent_output_review": {"reviewer": null, "first_phone_preserved": null, "first_syllable_preserved": null},
+  "independent_asr_evaluation": null
+}

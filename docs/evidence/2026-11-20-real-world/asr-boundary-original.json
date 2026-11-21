@@ -1,0 +1,53 @@
+{
+  "scope": "Attribution only; original full-window evaluation remains authoritative",
+  "results": [
+    {
+      "case": "normal",
+      "intervention": "fresh-original-full-window",
+      "hypothesis": "",
+      "wer": 1.0,
+      "source_sha256": "385886beed7dceb514a129a7518595ef6c2354272ddc1726072da45064adbd15",
+      "window_sha256": "9690271b98242809e87902bd759582037a6d1b56ecdc8d5726ef31416e559e9e"
+    },
+    {
+      "case": "normal",
+      "intervention": "whole-window-gain-0.1",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "source_sha256": "385886beed7dceb514a129a7518595ef6c2354272ddc1726072da45064adbd15",
+      "window_sha256": "69516a433faf296e03fb4a1d8a2c474a41efbbd5393d8c87e542623b1fd00c9a"
+    },
+    {
+      "case": "normal",
+      "intervention": "only-pre-speech-context-zeroed",
+      "hypothesis": "",
+      "wer": 1.0,
+      "source_sha256": "385886beed7dceb514a129a7518595ef6c2354272ddc1726072da45064adbd15",
+      "window_sha256": "e8e94268075bf87ef46b8e2565770446e55c432d61f204ecf2571f88b81c6930"
+    },
+    {
+      "case": "through-cancel",
+      "intervention": "fresh-original-full-window",
+      "hypothesis": "",
+      "wer": 1.0,
+      "source_sha256": "45c685bb38dc018d765a6d7d9469b478ba50194a086d98621e251d2dc020efa6",
+      "window_sha256": "e35c4af674283e47aead2eaa8899956a737b11ecff32eea9187e1e382cb131ec"
+    },
+    {
+      "case": "through-cancel",
+      "intervention": "whole-window-gain-0.1",
+      "hypothesis": "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels.",
+      "wer": 0.0,
+      "source_sha256": "45c685bb38dc018d765a6d7d9469b478ba50194a086d98621e251d2dc020efa6",
+      "window_sha256": "438e5d2e32f3e1e59e4f36931424abb90f01e2d9ec0165aad288b212aee9235f"
+    },
+    {
+      "case": "through-cancel",
+      "intervention": "only-pre-speech-context-zeroed",
+      "hypothesis": "After early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels",
+      "wer": 0.0,
+      "source_sha256": "45c685bb38dc018d765a6d7d9469b478ba50194a086d98621e251d2dc020efa6",
+      "window_sha256": "997e4a99a62429b493232e0d880d8a3ed38038e0df6e690a39e9d78ca59522eb"
+    }
+  ]
+}

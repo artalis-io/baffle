@@ -1,0 +1,11 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD",
+  "logical_cpus": 32,
+  "proxy_cpu_workers": 4,
+  "iterations": 10000,
+  "elapsed_seconds": 47.98870800000441,
+  "load_kind": "SHA256 CPU proxy; no ASR/TTS/LLM or GPU workload",
+  "executable_sha256": "1e16c3422a2e844815d3be573071bced254a8b2053c878f860ecd68ffb8092f6"
+}

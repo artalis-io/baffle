@@ -1,0 +1,21 @@
+{
+  "commands": [
+    "hf download csukuangfj/sherpa-onnx-whisper-tiny.en test_wavs/1.wav --revision d026532c022fa99fd789d6b32446a1df7b6bfc43 --local-dir build-acoustic/models/whisper",
+    "python tools/paired_asr.py prepare build-acoustic/models build-acoustic/word-seeded-a build-gate-h/input",
+    "python tools/paired_asr.py run build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/runner-final/baffle_vad_trace.exe build-acoustic/models build-gate-h/input build-gate-h/paired",
+    "python tools/paired_asr_summary.py build-gate-h/input/manifest.json build-gate-h/paired/results.json build-gate-h/paired-summary.json",
+    "python tools/paired_signal_scores.py build-gate-h/input build-gate-h/paired build-gate-h/vad-transients.json",
+    "python tools/blank_asr_matrix.py build-acoustic/models build-gate-h/input build-gate-h/paired build-gate-h/blank-matrix-expanded.json",
+    "python tools/parakeet_frontend_diagnostic.py build-acoustic/models build-acoustic/word-seeded-a build-acoustic/word-results-seeded build-gate-h/parakeet-frontend-factors.json",
+    "python tools/ns_delay_qualification.py build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/models build-gate-h/input build-gate-h/ns",
+    "python tools/prepare_onset_review.py build-gate-h/input build-gate-h/paired build-gate-h/review-v2",
+    "python tools/inference_contention.py build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/models tests/fixtures/osr/OSR_us_000_0010_8k.wav build-acoustic/rooms/controlled-16000-mic.f32 build-acoustic/rooms/controlled-16000-ref.f32 build-gate-h/contention --seconds 30 --wait-policy highres",
+    "python tools/inference_contention.py build-acoustic/runner-final/baffle_acoustic_runner.exe build-acoustic/models tests/fixtures/osr/OSR_us_000_0010_8k.wav build-acoustic/rooms/controlled-16000-mic.f32 build-acoustic/rooms/controlled-16000-ref.f32 build-gate-h/stress --seconds 120 --wait-policy highres --workloads whisper+parakeet+piper",
+    "python /tmp/baffle.fVOhT0/tools/llm_contention.py compare-release/baffle_acoustic_runner rooms/controlled-16000-mic.f32 rooms/controlled-16000-ref.f32 gate-h-llm --seconds 30",
+    "ctest --test-dir build-adapter --output-log build-gate-h/generation-after.log",
+    "ctest --test-dir build-hail-consumer --output-log build-gate-h/hail-final.log",
+    "python tools/controlled_aec.py build-adapter/baffle_qualify.exe build-recorded build-gate-h/corrected-controlled.json --assert-raw-target",
+    "./build-aec-fuzz/baffle_fuzz_aec build-aec-fuzz/corpus -runs=10000 -max_len=4096 -seed=723"
+  ],
+  "execution_note": "Windows optional Python 3.12 environment; Linux QA prefix/runtime paths and compiler flags follow prior retained environment. Use fresh output directories. Commands express the unchanged numerical protocol; earlier script imports/receipt defaults are documented separately."
+}

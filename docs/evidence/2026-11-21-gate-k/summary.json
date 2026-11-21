@@ -1,0 +1,45 @@
+{
+  "gate_k": "PARTIAL",
+  "production_ready": false,
+  "abi_stable": false,
+  "public_fields_added": 0,
+  "public_exports": 45,
+  "hail_source_changed": false,
+  "adaptation_parameter_change_adopted": false,
+  "accepted_fixes": [
+    "complete configured multichannel reset ranges",
+    "report native recovery through existing reset count and discontinuity",
+    "prevent signed schedule overflow preserving modulo phase"
+  ],
+  "original_threshold_db": 8,
+  "original_fixture_sha256": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+  "baseline_near_component_improvement_db": 14.60337539447629,
+  "fresh_asr_evaluations": 846,
+  "unchanged_public_mono_outputs": 78,
+  "unchanged_room_control_outputs": 48,
+  "unchanged_path_outputs": 24,
+  "path_configurations_per_variant": 24,
+  "variants_in_path_comparison": 4,
+  "timed_calls": 60000,
+  "timed_trials": 17,
+  "observed_completion_misses": 0,
+  "virtual_stress": {
+    "audio_seconds": 1800.0,
+    "calls": 180000,
+    "nonfinite_output": 0,
+    "peak": 0.17279052734375,
+    "native_recovery_events": 28,
+    "last_public_resets": 28,
+    "all_recovery_events_flagged": true,
+    "limits": "Accelerated virtual audio, not a 30-minute wall-clock or physical soak"
+  },
+  "new_physical_data": false,
+  "new_blind_speech_rooms": false,
+  "remaining": [
+    "ordinary mono path tracking and real-room AEC",
+    "independent reviewed phone onset / live conversation",
+    "active delay alignment confidence / valid drift mapping in deployment",
+    "quiet excitation / nonlinear acoustic quality"
+  ],
+  "archived_utc": "2026-11-21T10:36:56.320314+00:00"
+}

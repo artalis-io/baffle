@@ -1,0 +1,1663 @@
+{
+  "method": "Whole registered ASR source windows; 512-point Welch/Hann, 50% overlap. Coherence is a spectral diagnostic, not calibrated user evidence. Mic/output ratios require known absent near speech. Far-only hypotheses are not commitment.",
+  "results": [
+    {
+      "case": "room-base",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.029755382903214334,
+          "peak": 0.17750070989131927,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0004923562601047836,
+            "300-3000": 0.00032391643571937176,
+            "3000-8001": 2.060424954706148e-05
+          },
+          "source_window_sha256": "fecee1f0249c26792b80a22f3a5039d58d711229a639fcbab3a4c7ab52d88457"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.00035768067033709446,
+          "peak": 0.005279541015625,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 5.502665852344298e-08,
+            "300-3000": 3.605595043830476e-08,
+            "3000-8001": 3.360154693755286e-08
+          },
+          "source_window_sha256": "a99040d2e43fbf73cdff45cc196fc32396ef6c66a21447915489f621bd39bec4",
+          "far_only_mic_output_ratio_db": 38.40140145033014
+        },
+        "baseline": {
+          "rms": 0.0021188682256614555,
+          "peak": 0.03059658594429493,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.6905207542290625e-06,
+            "300-3000": 1.505446577608918e-06,
+            "3000-8001": 1.1890809294977813e-06
+          },
+          "source_window_sha256": "1ad83d976a3062ba43524cc25f3aeffbbe97b56e13b2835a15cf76cc4cc4c69a",
+          "far_only_mic_output_ratio_db": 22.949231898308415
+        },
+        "candidate": {
+          "rms": 0.001812846059071557,
+          "peak": 0.02906256914138794,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.187908877442686e-06,
+            "300-3000": 1.123676511683276e-06,
+            "3000-8001": 9.129316295291008e-07
+          },
+          "source_window_sha256": "8bdd1ea1edb968b97bde1e624e7a373ed87e3ae8ed3f81347c41fe42bdbbcbdb",
+          "far_only_mic_output_ratio_db": 24.304092329931382
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I hope you plan next, tell me for your life to change. We can't contain your water, but I hope you plan next, tell me for your life to change. We can't contain your water, but I hope you plan next, tell me for your life to change. We can't contain your water, but I hope you plan next, tell me for your life to change. We can't contain your water, but I hope you plan next, tell me",
+            "empty": false,
+            "vad_active_blocks": 433,
+            "word": {
+              "errors": 79,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 79,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I hope you plan. Tell me for the last change. We can change. Tell me for the last change. We can say.",
+            "empty": false,
+            "vad_active_blocks": 433,
+            "word": {
+              "errors": 22,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 22,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I hope you want this, tell me for sure I can change. We can't contain your garden. I can help you learn this, tell me for sure I can change. We can't contain your garden. I can help you learn this, tell me for sure I can change. We can't contain your garden. I can't hold this one, let's tell me for sure I can change. We can't contain your garden. I can't hold this one,",
+            "empty": false,
+            "vad_active_blocks": 436,
+            "word": {
+              "errors": 76,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 76,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I hope you want next step. Tell me for the last change. We can say the last change. We can say that.",
+            "empty": false,
+            "vad_active_blocks": 436,
+            "word": {
+              "errors": 22,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 22,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 608
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 607
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.02625596677917008
+    },
+    {
+      "case": "quiet",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.005951076580747801,
+          "peak": 0.035500142723321915,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.969425041418405e-05,
+            "300-3000": 1.2956657418610665e-05,
+            "3000-8001": 8.241699818547039e-07
+          },
+          "source_window_sha256": "c3b816ba598325e22f4bf42af16c5c5c871d37b257f90b650895c5cb3d4e1de7"
+        },
+        "reference": {
+          "rms": 0.009220131006187042,
+          "peak": 0.05000000074505806,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 4.548506615393756e-05,
+            "300-3000": 3.225101161055525e-05,
+            "3000-8001": 2.027644021769954e-06
+          },
+          "source_window_sha256": "cfc4c455a82fa1065d12ba8de3de37fc57a152be71abc30a0b9dda6589a6cc02"
+        },
+        "aec": {
+          "rms": 0.0003473391470941842,
+          "peak": 0.002838134765625,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 7.178179801981223e-08,
+            "300-3000": 3.603360118447505e-08,
+            "3000-8001": 1.2222928892324198e-08
+          },
+          "source_window_sha256": "2665f9a226bf6616a15a87669a3b210fbac0ddd30b2cfaa93bf782af3b049565",
+          "far_only_mic_output_ratio_db": 24.676836108922142
+        },
+        "baseline": {
+          "rms": 0.0025891092913927667,
+          "peak": 0.022917374968528748,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 4.931150754428131e-06,
+            "300-3000": 1.4466193716273788e-06,
+            "3000-8001": 3.3156060653774306e-07
+          },
+          "source_window_sha256": "fd784006824a2ed64756d5341d3d75bfb463639d59d4090c9d1ff8d32414f04f",
+          "far_only_mic_output_ratio_db": 7.228903114479497
+        },
+        "candidate": {
+          "rms": 0.002012536885814668,
+          "peak": 0.018826525658369064,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 2.834417847867538e-06,
+            "300-3000": 1.0227674315772262e-06,
+            "3000-8001": 1.9366544885311689e-07
+          },
+          "source_window_sha256": "3f13e12202f991e4ac4b91e8bdaa85091798e1bc8dce9064779de5afa1bf7d43",
+          "far_only_mic_output_ratio_db": 9.417033801982669
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step. Tell me what you would like to change. We can continue. I can help you plan the next step. Tell me what you would like to change. We can continue. I can help you plan the next step. Tell me what you would like to change. We can...",
+            "empty": false,
+            "vad_active_blocks": 701,
+            "word": {
+              "errors": 56,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 56,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what you would like to change. We can continue when you are written. I can help you plan the next step. Tell me what you would like to change. We can take when you are win. I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 701,
+            "word": {
+              "errors": 62,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 62,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step tell me what you would like to change we can continue when you're in I can help you plan the next step tell me what you would like to change we can continue when you're in I can help you plan the next step tell me what you would like to change we can",
+            "empty": false,
+            "vad_active_blocks": 737,
+            "word": {
+              "errors": 62,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 62,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what she would like to change. We can tell you when you are written. I can help you plan the next step. Tell me what she would like to change. We can take when you are win. I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 737,
+            "word": {
+              "errors": 63,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 63,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 944
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 986
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.09525221140603268
+    },
+    {
+      "case": "loud",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.08331507212121837,
+          "peak": 0.4970020055770874,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0038600730804234993,
+            "300-3000": 0.002539504852979957,
+            "3000-8001": 0.00016153731653113437
+          },
+          "source_window_sha256": "b02a9f9a286a1f4818a6cab353a4032f4df36f26571bac602585493389f5f14a"
+        },
+        "reference": {
+          "rms": 0.12908183402731682,
+          "peak": 0.699999988079071,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.008915072954830693,
+            "300-3000": 0.006321198269546631,
+            "3000-8001": 0.0003974182279593263
+          },
+          "source_window_sha256": "5237c91117e8d6132730470d9665a548592cfecf45e780d204a9241ecbe6ed2d"
+        },
+        "aec": {
+          "rms": 0.0011794223130721585,
+          "peak": 0.013641357421875,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 8.905584709547095e-07,
+            "300-3000": 2.313542426809617e-07,
+            "3000-8001": 2.2255523493027598e-07
+          },
+          "source_window_sha256": "7b3bd154129ffe11610a787a7d2240153f171275ea1aa5b4e8ef9dd5f1a5ec07",
+          "far_only_mic_output_ratio_db": 36.98108469633841
+        },
+        "baseline": {
+          "rms": 0.006356088738877662,
+          "peak": 0.07658179104328156,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 2.4758181262225704e-05,
+            "300-3000": 7.4541683427662085e-06,
+            "3000-8001": 7.25491209664005e-06
+          },
+          "source_window_sha256": "cfca616510c04c6934611ccfdec95b13f3ea2423111d32c3871925b6b3a486ec",
+          "far_only_mic_output_ratio_db": 22.35067245465245
+        },
+        "candidate": {
+          "rms": 0.004635118415565533,
+          "peak": 0.06814300268888474,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.1832889359979236e-05,
+            "300-3000": 4.13405071856746e-06,
+            "3000-8001": 5.058201679077164e-06
+          },
+          "source_window_sha256": "c895b6cf95dad2de75c9f1fa678cbf3798a448f204e69bc9e8db83f6e50ba4ff",
+          "far_only_mic_output_ratio_db": 25.093254817010543
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " We can help you plan next step. Tell me what you would like to change. We can't continue. What you are going to do. I can help you plan next step. Tell me what you would like to change. We can continue.",
+            "empty": false,
+            "vad_active_blocks": 442,
+            "word": {
+              "errors": 42,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 42,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. We can continue for you are ready. I can help you plan next step. Tell me what you would like to change. We can continue for you are ready. I can help you plan next steps. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 442,
+            "word": {
+              "errors": 59,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 59,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan next step. Tell me what you would like to change. We can't continue. What you are with it. I can help you plan next step. Tell me what you would like to change. We can continue. What you are with it. I can help you plan next step. Tell me what you would like to change. We can continue.",
+            "empty": false,
+            "vad_active_blocks": 330,
+            "word": {
+              "errors": 64,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 64,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. We can see for your plan next step. Tell me what you would like to change. We can see for your brain. I can help you plan next steps. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 330,
+            "word": {
+              "errors": 52,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 52,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 606
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 444
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.045279823086445126
+    },
+    {
+      "case": "long-tail",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.030492569562742468,
+          "peak": 0.18379859626293182,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0005133688855638416,
+            "300-3000": 0.00034160885929379446,
+            "3000-8001": 2.1742727916455617e-05
+          },
+          "source_window_sha256": "e99509467000c423abe975c0c12ac9b7af3d6db3925ca34238804826e98170f1"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.006857929678016529,
+          "peak": 0.040283203125,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 2.46588209089065e-05,
+            "300-3000": 1.840991747139734e-05,
+            "3000-8001": 1.222186905835683e-06
+          },
+          "source_window_sha256": "99149252e47af5729d78493c9ce60a3e72f124f4213b196862cb12afb9ee069d",
+          "far_only_mic_output_ratio_db": 12.960019914994678
+        },
+        "baseline": {
+          "rms": 0.04653277031621857,
+          "peak": 0.3185137212276459,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.001185756089089374,
+            "300-3000": 0.0008242802507915736,
+            "3000-8001": 3.664563526577684e-05
+          },
+          "source_window_sha256": "db369fa17e70008555b09c21d46616070531de3927031bc92521e35f61d0430e",
+          "far_only_mic_output_ratio_db": -3.6712977132707394
+        },
+        "candidate": {
+          "rms": 0.04524285324759278,
+          "peak": 0.31118157505989075,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.001100447876800434,
+            "300-3000": 0.0007959160175184491,
+            "3000-8001": 3.5010822329389524e-05
+          },
+          "source_window_sha256": "00cc6faf7768c69ef9774b4459cd66eb1669d47704709b949d5598cd65246cf0",
+          "far_only_mic_output_ratio_db": -3.4271192543869278
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can-",
+            "empty": false,
+            "vad_active_blocks": 1473,
+            "word": {
+              "errors": 64,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 64,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 1473,
+            "word": {
+              "errors": 62,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 62,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can- *beep* *beep* *beep* *beep* *beep* *beep",
+            "empty": false,
+            "vad_active_blocks": 1488,
+            "word": {
+              "errors": 70,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 70,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change. We can continue when you are ready. I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 1488,
+            "word": {
+              "errors": 62,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 62,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 1697
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 1719
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.0026524094022043455
+    },
+    {
+      "case": "nonlinear",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.02978549496342547,
+          "peak": 0.17861920595169067,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0004931700174102755,
+            "300-3000": 0.0003247854187957565,
+            "3000-8001": 2.0620558415758836e-05
+          },
+          "source_window_sha256": "900a97ac6a820ba1078fe9a2e8de237c55f075251d1ba2a0ea3abe855e733822"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.0003588446605457463,
+          "peak": 0.005279541015625,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 5.5080879883841e-08,
+            "300-3000": 3.6581206127258225e-08,
+            "3000-8001": 3.3801501271928126e-08
+          },
+          "source_window_sha256": "3399854cba056fa421c95aab30b46683d639ee350825ad525bfc1d39b690e68c",
+          "far_only_mic_output_ratio_db": 38.381966658506514
+        },
+        "baseline": {
+          "rms": 0.0021313173462965593,
+          "peak": 0.030528811737895012,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.7058793739038664e-06,
+            "300-3000": 1.5214833058050378e-06,
+            "3000-8001": 1.2021886088213256e-06
+          },
+          "source_window_sha256": "0f0550f55154948c1678f55ee53908a97d18a8c584e6d8d10463c4560142be69",
+          "far_only_mic_output_ratio_db": 22.90713403692869
+        },
+        "candidate": {
+          "rms": 0.001825932416639314,
+          "peak": 0.029032303020358086,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.1951007273814647e-06,
+            "300-3000": 1.1417438597355452e-06,
+            "3000-8001": 9.298734600547735e-07
+          },
+          "source_window_sha256": "a944317fb77e06664f900402870eed940360615efbf067364cc13c64768bfe2b",
+          "far_only_mic_output_ratio_db": 24.25040245004025
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan this, tell me for sure I can change. We can't contain, we're not good, we can't help you plan this, tell me for sure I can change. We can't contain, we're not good, we can't contain, we're not good, we can't contain, we're not good, we can't contain, we can't contain, we're not good, we can't contain, we can't contain,",
+            "empty": false,
+            "vad_active_blocks": 423,
+            "word": {
+              "errors": 65,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 65,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "",
+            "empty": true,
+            "vad_active_blocks": 423,
+            "word": {
+              "errors": 0,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 0,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you learn this, tell me for sure I can change. We can't contain, we're not good. We can't help you learn this, tell me for sure I can change. We can't contain, we're not good. We can't contain, we're not good. We can't contain, we're not good. We can't contain, we can't contain, we can't contain, we can't contain, we can't contain,",
+            "empty": false,
+            "vad_active_blocks": 424,
+            "word": {
+              "errors": 65,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 65,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I help you. We can change. We can say that.",
+            "empty": false,
+            "vad_active_blocks": 424,
+            "word": {
+              "errors": 10,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 10,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 590
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 591
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.025112194692922182
+    },
+    {
+      "case": "path-change",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.02948359051412943,
+          "peak": 0.18846827745437622,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00046438228531933944,
+            "300-3000": 0.0003273816894071403,
+            "3000-8001": 2.074424593923482e-05
+          },
+          "source_window_sha256": "834a40d0814dbb1eaf0c2203ef711a6be0bf7816d557c9fb998250d228b99e72"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.014535318013315566,
+          "peak": 0.207183837890625,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00010121719668889713,
+            "300-3000": 8.937217082369866e-05,
+            "3000-8001": 6.756945170425407e-06
+          },
+          "source_window_sha256": "c5ce11cadb16ad030a6a96480df12fafb8a48e95977b86d95112269dab6db789",
+          "far_only_mic_output_ratio_db": 6.1431166566680195
+        },
+        "baseline": {
+          "rms": 0.0374525357016254,
+          "peak": 0.4904923141002655,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0007151050117136334,
+            "300-3000": 0.000571983859845892,
+            "3000-8001": 4.286704990458759e-05
+          },
+          "source_window_sha256": "4d2bf3650f7aba6b3344153a19d161d3c595e076ab3f726dd93b575ddfa3606b",
+          "far_only_mic_output_ratio_db": -2.078017117080561
+        },
+        "candidate": {
+          "rms": 0.03847512664706299,
+          "peak": 0.4152098596096039,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0007804137910491071,
+            "300-3000": 0.0005880716917879916,
+            "3000-8001": 4.4872800437992905e-05
+          },
+          "source_window_sha256": "186a6f430d3604b6db1ef205f53c90eed3fecf998f704d17a8b8b64c44cae23e",
+          "far_only_mic_output_ratio_db": -2.3119937445962973
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " Help you plan the next step tell me what you would like to change we can continue when you are ready I can help you plan next step tell me what you would like to change we can continue when you are ready I can help you plan next step tell me what you are like to change we can continue when you are ready I can help you plan next step tell me what you are like to change we can be",
+            "empty": false,
+            "vad_active_blocks": 641,
+            "word": {
+              "errors": 83,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 83,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. Tell me what you would like to change. We can continue when you are ready. I can help you plan next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 641,
+            "word": {
+              "errors": 45,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 45,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " Help you plan the next step. Tell me what you would like to change. We can continue when you are in. I can help you plan next step. Tell me what you would like to change. We can continue when you are in. I can help you plan next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 636,
+            "word": {
+              "errors": 58,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 58,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. Tell me what you would like to change. We can continue when you are in. I can help you plan next step.",
+            "empty": false,
+            "vad_active_blocks": 636,
+            "word": {
+              "errors": 37,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 37,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 827
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 809
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.005973349633714953
+    },
+    {
+      "case": "delay-100ms",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.029701081519654098,
+          "peak": 0.17750070989131927,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00048284142860482564,
+            "300-3000": 0.0003299504170022511,
+            "3000-8001": 2.101280057707648e-05
+          },
+          "source_window_sha256": "7cf5e79dc0075f1e818cf361336e6a61efdf22ee7b36e180bf583044e58e2257"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.0006369410745173393,
+          "peak": 0.008392333984375,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.4362439690988724e-07,
+            "300-3000": 1.910975444534269e-07,
+            "3000-8001": 4.4187094040592e-08
+          },
+          "source_window_sha256": "6b98a5d422f416bbb426bdf5bca4e763dbf2989136b227546eb077e5002cf58c",
+          "far_only_mic_output_ratio_db": 33.3734601514673
+        },
+        "baseline": {
+          "rms": 0.003815200906928003,
+          "peak": 0.060538288205862045,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 4.423532274868982e-06,
+            "300-3000": 7.556406716613747e-06,
+            "3000-8001": 1.266436629210969e-06
+          },
+          "source_window_sha256": "b7405b74d78bdc56de82230ffea16b4c73062fd8407b0e3a1512671de1eebc70",
+          "far_only_mic_output_ratio_db": 17.825097022269922
+        },
+        "candidate": {
+          "rms": 0.0036365823221427484,
+          "peak": 0.058097295463085175,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 4.201094790577083e-06,
+            "300-3000": 6.940489619994018e-06,
+            "3000-8001": 1.041367018896162e-06
+          },
+          "source_window_sha256": "aeeeb1bc70ad31ee965d53d1ed42a4bf7d0f37be873db3dd5aa6a2b4e6d153b7",
+          "far_only_mic_output_ratio_db": 18.241576810709258
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " [Music]",
+            "empty": false,
+            "vad_active_blocks": 637,
+            "word": {
+              "errors": 1,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 1,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I hope you have for ships. We can help you last. We can see I hope you last.",
+            "empty": false,
+            "vad_active_blocks": 637,
+            "word": {
+              "errors": 18,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 18,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " [Music]",
+            "empty": false,
+            "vad_active_blocks": 642,
+            "word": {
+              "errors": 1,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 1,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I hope you have for sweat. I hope you have for swipe. I hope you have for swipe.",
+            "empty": false,
+            "vad_active_blocks": 642,
+            "word": {
+              "errors": 18,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 18,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 900
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 898
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.03641670306009083
+    },
+    {
+      "case": "startup",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        0,
+        96000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": null,
+      "measurements": {
+        "mic": {
+          "rms": 0.02412292512948562,
+          "peak": 0.17750070989131927,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0003156228658368122,
+            "300-3000": 0.00021967740034216116,
+            "3000-8001": 1.7439479722925613e-05
+          },
+          "source_window_sha256": "8dcdc2a1082419873e272ede41ed85b8197f50912026554355db83d8fc9a2bec"
+        },
+        "reference": {
+          "rms": 0.03695830250818965,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0007037780433199112,
+            "300-3000": 0.0005491343580993872,
+            "3000-8001": 4.3021385667458615e-05
+          },
+          "source_window_sha256": "efc1ed811197ab9234e48447183f1b6f5f6c13c2573a86bee9f4c85f661463bc"
+        },
+        "aec": {
+          "rms": 0.005187433874202086,
+          "peak": 0.09930419921875,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.12453809241912e-05,
+            "300-3000": 1.3923237978667988e-05,
+            "3000-8001": 1.5657023647565544e-06
+          },
+          "source_window_sha256": "a14657554885233ece96784d3a28d5e03a3dbc3f911063813866fca58cdf66c7",
+          "far_only_mic_output_ratio_db": 13.349547904861407
+        },
+        "baseline": {
+          "rms": 0.02454118014103268,
+          "peak": 0.24844667315483093,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00033754161684575765,
+            "300-3000": 0.00021712151604326085,
+            "3000-8001": 3.2770555155621004e-05
+          },
+          "source_window_sha256": "463e924512a75d41ee638d938f4a3e4d303bf256d6afba50a9fd81306efff96d",
+          "far_only_mic_output_ratio_db": -0.14930948831722082
+        },
+        "candidate": {
+          "rms": 0.017743612615488697,
+          "peak": 0.15515455603599548,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00017787212229514567,
+            "300-3000": 0.0001114023164146685,
+            "3000-8001": 1.7397879859414022e-05
+          },
+          "source_window_sha256": "6695f20bd51f84bbd8ba08384380a1e98ddf157b98fdd668a2983bc6069a7293",
+          "far_only_mic_output_ratio_db": 2.667758433380844
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 473,
+            "word": {
+              "errors": 16,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 16,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 473,
+            "word": {
+              "errors": 16,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 16,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 427,
+            "word": {
+              "errors": 16,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 16,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan the next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 427,
+            "word": {
+              "errors": 16,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 16,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 671
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0
+          ],
+          "processing_vad_active_blocks": 595
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.08148232746703528
+    },
+    {
+      "case": "cancel-tail",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        160000,
+        192000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": "cancel-tail-events.txt",
+      "measurements": {
+        "mic": {
+          "rms": 0.003141589720853694,
+          "peak": 0.10270125418901443,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.7807466066978205e-06,
+            "300-3000": 1.4791205312581528e-06,
+            "3000-8001": 2.2509117535779958e-08
+          },
+          "source_window_sha256": "2e78904197f6b5a390ff8a9d737c053eb21f546595400749a2e023bfb9a4ff7a"
+        },
+        "reference": {
+          "rms": 0.0,
+          "peak": 0.0,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0,
+            "300-3000": 0.0,
+            "3000-8001": 0.0
+          },
+          "source_window_sha256": "24a046dc04fefdb652e4077b41162490b344a4dd45f918505477f84c592f3070"
+        },
+        "aec": {
+          "rms": 7.345129996866327e-05,
+          "peak": 0.001007080078125,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 2.044733053104959e-09,
+            "300-3000": 2.2089072583783147e-09,
+            "3000-8001": 3.4665539006241777e-10
+          },
+          "source_window_sha256": "83fd370d8514d48b1c733871b8339b8932f46fc047498dad05125b5d55a263a0",
+          "far_only_mic_output_ratio_db": 32.62299961541747
+        },
+        "baseline": {
+          "rms": 0.00045108574084042134,
+          "peak": 0.006300134584307671,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 4.511704818816221e-08,
+            "300-3000": 1.2249428465375875e-07,
+            "3000-8001": 1.1020432814267576e-08
+          },
+          "source_window_sha256": "97839fd2ba0fd330df4b226c5914b3ce325ee9e7cd80953a69adcfa291c31aa7",
+          "far_only_mic_output_ratio_db": 16.857807366648107
+        },
+        "candidate": {
+          "rms": 0.00044417746583703683,
+          "peak": 0.006237940397113562,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 5.2035106169001605e-08,
+            "300-3000": 1.1206911781361816e-07,
+            "3000-8001": 8.967781248966848e-09
+          },
+          "source_window_sha256": "716445ffaaf8813b85ab50138fa5bf2808a3f3c90b3a2c8bf92034e79ecd7727",
+          "far_only_mic_output_ratio_db": 16.991858905531245
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " [ Silence ]",
+            "empty": false,
+            "vad_active_blocks": 228,
+            "word": {
+              "errors": 1,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 1,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "",
+            "empty": true,
+            "vad_active_blocks": 228,
+            "word": {
+              "errors": 0,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 0,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " [ Silence ]",
+            "empty": false,
+            "vad_active_blocks": 212,
+            "word": {
+              "errors": 1,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 1,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "",
+            "empty": true,
+            "vad_active_blocks": 212,
+            "word": {
+              "errors": 0,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 0,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 0,
+          "observed_flags": [
+            0,
+            1024
+          ],
+          "processing_vad_active_blocks": 284
+        },
+        "candidate": {
+          "final_resets": 0,
+          "observed_flags": [
+            0,
+            1024
+          ],
+          "processing_vad_active_blocks": 260
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.2717282322319536
+    },
+    {
+      "case": "restart",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": "restart-events.txt",
+      "measurements": {
+        "mic": {
+          "rms": 0.029814925040293715,
+          "peak": 0.17750070989131927,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0004949952593039135,
+            "300-3000": 0.0003239668216007221,
+            "3000-8001": 2.0613025004915e-05
+          },
+          "source_window_sha256": "2e682567832fae83653f33be5a8e3e2d4afde60b2512d26b77c82ca2196882fa"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011350321962845873,
+            "300-3000": 0.0008078465484787432,
+            "3000-8001": 5.07133929482272e-05
+          },
+          "source_window_sha256": "765a19169fdffe7f3e2b62f28b900c053c83df27993defc056d41751586f6c83"
+        },
+        "aec": {
+          "rms": 0.0052543239261714815,
+          "peak": 0.13665771484375,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.0866659544644442e-05,
+            "300-3000": 1.3905357676579288e-05,
+            "3000-8001": 1.4623117277737658e-07
+          },
+          "source_window_sha256": "725fcface2f6b396d1b6382a3dd117d1b29c559e8e4967608c69f1b4705c32cd",
+          "far_only_mic_output_ratio_db": 15.078337570071552
+        },
+        "baseline": {
+          "rms": 0.02183767177091848,
+          "peak": 0.41292983293533325,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00017629078437892212,
+            "300-3000": 0.00026651986970919746,
+            "3000-8001": 3.875357430979167e-06
+          },
+          "source_window_sha256": "62286c92018138c61811350ad8e62121dd8cf33c5aac4e6d0d4b824fa8676726",
+          "far_only_mic_output_ratio_db": 2.7045477542611236
+        },
+        "candidate": {
+          "rms": 0.015339009523837313,
+          "peak": 0.39864271879196167,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00011940926518779656,
+            "300-3000": 9.84541074697397e-05,
+            "3000-8001": 2.352393679153869e-06
+          },
+          "source_window_sha256": "da435fa936e68227a989f3a413110a47c72e2698fb714c1f803c6844ad67586e",
+          "far_only_mic_output_ratio_db": 5.772728093976371
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " continue. When you are ready, I can help you plan.",
+            "empty": false,
+            "vad_active_blocks": 569,
+            "word": {
+              "errors": 10,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 10,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. And continue when you are written. I can help you plan next step. Tell me what you would like to change. I can help you plan next set. Tell me what you want to change.",
+            "empty": false,
+            "vad_active_blocks": 569,
+            "word": {
+              "errors": 50,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 50,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " continue. When you are ready, I can help you plan next set. Tell me where she was and change. We can't do. We're worried. I can help you plan next set. Tell me where she was and change. We can't do. We're worried. I can help you plan next set. Tell me where she was and change.",
+            "empty": false,
+            "vad_active_blocks": 533,
+            "word": {
+              "errors": 57,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 57,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you want to change. And continue when you are ready. I can help you plan next step. Tell me what you want to change. I can help you plan next step. Tell me what you want to change.",
+            "empty": false,
+            "vad_active_blocks": 533,
+            "word": {
+              "errors": 48,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 48,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 1,
+          "observed_flags": [
+            0,
+            1040
+          ],
+          "processing_vad_active_blocks": 717
+        },
+        "candidate": {
+          "final_resets": 1,
+          "observed_flags": [
+            0,
+            1040
+          ],
+          "processing_vad_active_blocks": 671
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.022513094437350153
+    },
+    {
+      "case": "reference-gap",
+      "scope": "simulated acoustic far-only",
+      "rate": 16000,
+      "source_frames": [
+        96000,
+        352000
+      ],
+      "input_timing": "Public runner distinct clock domains 1/2; timestamp validity unavailable, uncertainty UINT64_MAX. Same-rate fixture, not a physical clock mapping.",
+      "events": "reference-gap-events.txt",
+      "measurements": {
+        "mic": {
+          "rms": 0.029755382903214334,
+          "peak": 0.17750070989131927,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0004923562601047836,
+            "300-3000": 0.00032391643571937176,
+            "3000-8001": 2.060424954706148e-05
+          },
+          "source_window_sha256": "fecee1f0249c26792b80a22f3a5039d58d711229a639fcbab3a4c7ab52d88457"
+        },
+        "reference": {
+          "rms": 0.04610065501956624,
+          "peak": 0.25,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.0011371266535165547,
+            "300-3000": 0.0008062752897208714,
+            "3000-8001": 5.069110053245921e-05
+          },
+          "source_window_sha256": "b7c71009a89d3b6a9af697043b3d418fe89118c18da90c28a17bbc681a3da7f5"
+        },
+        "aec": {
+          "rms": 0.004981783616585525,
+          "peak": 0.10859931260347366,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 1.4791741928708175e-05,
+            "300-3000": 7.46042803590737e-06,
+            "3000-8001": 3.28663303466373e-07
+          },
+          "source_window_sha256": "16e9d5d3277152a08cefe398381938facf4f225bb53ef3ec0f6b1a53ff195499",
+          "far_only_mic_output_ratio_db": 15.523613664750137
+        },
+        "baseline": {
+          "rms": 0.018163124133690024,
+          "peak": 0.463398277759552,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00020692258870120365,
+            "300-3000": 9.243539637094211e-05,
+            "3000-8001": 6.795256334663738e-06
+          },
+          "source_window_sha256": "e3638721bf8a505007347219736fd40b049e53c75886e37e7f1100621971b169",
+          "far_only_mic_output_ratio_db": 4.287499844230597
+        },
+        "candidate": {
+          "rms": 0.0150273425915883,
+          "peak": 0.4501062333583832,
+          "nonfinite_samples": 0,
+          "bands_power": {
+            "0-300": 0.00014655599173101275,
+            "300-3000": 5.965795445960764e-05,
+            "3000-8001": 4.4172296324471146e-06
+          },
+          "source_window_sha256": "d4dc7da4e7d0226b8944961ebb257be8cbe9115143196d1bcf73e29419413f82",
+          "far_only_mic_output_ratio_db": 5.933667115628099
+        }
+      },
+      "hypotheses": {
+        "baseline": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " And continue with your written. Like a new plan.",
+            "empty": false,
+            "vad_active_blocks": 413,
+            "word": {
+              "errors": 9,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 9,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. And continue when you are ready. I can help you plan next step. Tell me what you would like to change. We can continue when you are in. I can help you plan next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 413,
+            "word": {
+              "errors": 58,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 58,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ],
+        "candidate": [
+          {
+            "recognizer": "whisper",
+            "hypothesis": " and continue with your written. Like a new plan.",
+            "empty": false,
+            "vad_active_blocks": 416,
+            "word": {
+              "errors": 9,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 9,
+              "reference_length": 0,
+              "rate": null
+            }
+          },
+          {
+            "recognizer": "parakeet",
+            "hypothesis": "I can help you plan next step. Tell me what you would like to change. And continue when you are ready. I can help you plan next step. Tell me what you would like to change. We can continue when you are in. I can help you plan next step. Tell me what you would like to change.",
+            "empty": false,
+            "vad_active_blocks": 416,
+            "word": {
+              "errors": 58,
+              "substitutions": 0,
+              "deletions": 0,
+              "insertions": 58,
+              "reference_length": 0,
+              "rate": null
+            }
+          }
+        ]
+      },
+      "aec_state": {
+        "baseline": {
+          "final_resets": 1,
+          "observed_flags": [
+            0,
+            16,
+            256
+          ],
+          "processing_vad_active_blocks": 541
+        },
+        "candidate": {
+          "final_resets": 1,
+          "observed_flags": [
+            0,
+            16,
+            256
+          ],
+          "processing_vad_active_blocks": 544
+        }
+      },
+      "removed_echo_to_residual_welch_mean_coherence": 0.016451950385673042
+    }
+  ]
+}

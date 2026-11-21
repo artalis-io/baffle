@@ -1,0 +1,190 @@
+{
+  "source_revision": "827d41afe7a5efdd3f1395031d3d4411ba43dc76",
+  "corrective_dsp_commit": "cf1be33",
+  "baseline_dsp_commit": "29feb81",
+  "adversarial_regressions_commit": "e2d43c6",
+  "benchmark_source_commit": "7ddc8da",
+  "derived_settling_fields_commit": "d82b563",
+  "archived_utc": "2026-11-20T14:36:50.766083+00:00",
+  "overall_verdict": "PARTIAL",
+  "production_ready": false,
+  "abi_stable": false,
+  "original_requirement": {
+    "metric": "raw near-component SNR improvement, not ERLE",
+    "threshold_db": 8,
+    "baseline_db": 6.64842623259821,
+    "corrected_db": 14.60337539447629,
+    "baseline": "FAIL",
+    "corrected": "PASS",
+    "fixture_code_sha256": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+    "fixture_code_unchanged": true,
+    "public_headers_unchanged": true
+  },
+  "holdout": {
+    "source": "Open Speech Repository, attributed source WAVs in tests/fixtures/osr",
+    "cases": 24,
+    "projection_range": [
+      0.9612242575650611,
+      0.9810808815191697
+    ],
+    "gain_regression": "PASS; not annotated onset/perceptual quality",
+    "note": "Noisy path-change cases did not meet three-window >=15dB recovery within six seconds"
+  },
+  "local_verification": {
+    "Windows_x64": "Release static/shared, Debug shared and default Debug static 7/7; installed Hail static/shared 3/3; 45 exports",
+    "Linux_ARM64": "GCC13 Release 8/8 and shared 7/7; Clang18 ASan+UBSan 8/8 and TSan 8/8",
+    "cross_library": "Both installed libraries ASan+UBSan 3/3 and TSan concurrent 1/1",
+    "fuzzing": "10000 seeded AEC runs, instrumented core and pinned backend, seed723, max4096; 50 seconds",
+    "static_analysis": "GCC -fanalyzer core/offline tool; no full upstream-kernel analyzer claim",
+    "realtime": "bounded caller storage; heap guard/process/reset and import checks; not WCET proof",
+    "ci": "current successor queued; 29feb81 snapshot eight successes/19 queued, 7ddc8da snapshot27 queued",
+    "unavailable": "current x64 Linux/macOS CI completion, Windows ARM64 runtime, physical acoustic hardware qualification"
+  },
+  "resource_scope": {
+    "cpu": "portable scalar, optional compiler vectorization; no GPU; four SHA256 CPU workers, not inference",
+    "memory": "queried combined persistent state/reusable scratch; OS RSS and separate scratch high-water unmeasured",
+    "latency": "unpaced per-frame processing; no extra buffering from correction; no physical RTT/actual inference concurrency",
+    "before_after": "single runs with unpinned affinity/governor; no causal speedup/regression claim",
+    "receipts": [
+      {
+        "command": [
+          "python",
+          "tools/check_latency_receipts.py",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\perf-raw-baseline-contention.csv",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\raw-baseline-contention.csv"
+        ],
+        "result": "PASS 19 cases, 190000 raw costs: percentiles and deadline counts reproduced"
+      },
+      {
+        "command": [
+          "python",
+          "tools/check_latency_receipts.py",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\perf-raw-corrected-contention.csv",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\raw-corrected-contention.csv"
+        ],
+        "result": "PASS 19 cases, 190000 raw costs: percentiles and deadline counts reproduced"
+      },
+      {
+        "command": [
+          "python",
+          "tools/check_latency_receipts.py",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baffle-quality-arm64-contention.csv",
+          "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-aec-convergence\\baffle-quality-arm64-raw.csv"
+        ],
+        "result": "PASS 19 cases, 190000 raw costs: percentiles and deadline counts reproduced"
+      }
+    ]
+  },
+  "hail": {
+    "core_dependency": false,
+    "source_modified": false,
+    "linux_source_pin": "7ef6142ba4b8c8be15d1e7d704502db01abc5113",
+    "windows_sdk_source_pin": "not embedded; installed SDK file hashes recorded separately",
+    "no_acoustic_silence_claim": true,
+    "windows_sdk_sha256": {
+      "include/hail.h": "b8a7ac1d4fb331e5aa748f5f306e19644e02879ab80402ad8812324ab43b18aa",
+      "lib/hail.lib": "21745f6e3af6167a845fd34cf08b4cdf4dcc2ee7b4286053505eeb3b414cd025"
+    }
+  },
+  "remaining": [
+    "calibrated real-room alignment/double-talk/residual echo",
+    "annotated clean speech/onset, Hungarian and ASR WER",
+    "weak real-acoustic traces and noise-floor-limited convergence/recovery",
+    "physical audible cancellation tail and timestamp alignment",
+    "actual inference contention/prolonged paced deployment soak",
+    "broader backend comparison: AEC3 source/build assessment only, not measured",
+    "ABI upgrade policy/layout qualification"
+  ],
+  "raw_zip_member_sha256": {
+    "raw-baseline-contention.csv": "7641168185f554c6f723fc475180e7e9aee995b6b1e8b3187c0afbdcf1096623",
+    "raw-corrected-contention.csv": "ab5b229d3ac54fff59539fbbf6613dee59d42d21eeae4373cda4846aef2d4fc0",
+    "baffle-quality-arm64-raw.csv": "c3bbf0fa9f37a571974ee63d6a2a613c5771e165569a584451d484ad402431bf",
+    "baffle-quality-final-asan.log": "4b6054fce33ec0bc2b17c04e87a71426d3788e6caae202c17b0f3f77d1edc12d",
+    "baffle-quality-final-tsan.log": "abf2da3b058b7b28340b8bc75011745e7801237db4cb49da950fdacb7707c931",
+    "asan-detailed.log": "82b4f7254cb6478e9f9c5107a9ea495825aeb567491512fd81d3fb659655a9dd",
+    "tsan-detailed.log": "58d7bdb2b787d86d970f807f7ee11857995be02e4b84d167e24067345d4b8b50",
+    "baffle-quality-release-final.log": "375c39ad508485564b335e411f3cacaf5cbbfe87a5d98c2dea47af84106be4b3",
+    "baffle-quality-shared.log": "1bac3eb056464d4b513de3f494dfd9e82269e1d236643aa218c727217bd4240b",
+    "baffle-quality-hail-asan.log": "a01badd9f3c4cb8bca9bf68f15547ca8e3a59655433e081225918b25a9deab24",
+    "baffle-quality-hail-tsan.log": "0ed4f348936a8f8874a9da24b37b99e792ee421f948cde34d09f6a0e17b5db3e",
+    "baffle-quality-aec-fuzz.log": "4379a577497f12774aea13e65b37cc672eb34fa0510046151cf591a598bca273",
+    "baffle-quality-analysis.log": "b5fb1631882a0cace776ea0158d6e4775171ba9a8a7bf9d55d1851c54bfa640d"
+  },
+  "source_sha256_lf": {
+    "src/aec.c": "9f1756703a8624593a789ad1ed11d91569d47e7d729e574028b3b9ae7ba964f4",
+    "src/channels.c": "43ae049f9a0b699fedd076d96e70b904a74326b703c29bc8a6001eba76a3f2c6",
+    "src/clock.c": "be5d2e9e6a458de83dc97a326471d72a63c4789b74865f3713e69cc99b5cacdf",
+    "src/conditioning.c": "ee456ef3576d2ed043ed9913ac2cbe22a7d73c8843137e558fd9d5412f3866ab",
+    "src/core.c": "3c70b8210efbcc3ee455855a57aebb59db4368b308f9892f46caeb78701bfcd7",
+    "src/noise.c": "78641d4a5ef07ba954a3a370219df2e0ebdde1cbf0246d1e3cf64d9ca8786307",
+    "src/pcm.c": "dd6bc06bd774c0aeb50f61c7abec1813676710fb6d6dce3a13d26a6f040b51fa",
+    "src/pipeline.c": "0cf74814b49bd95f0d76a714775ec1117a526f8c37d96ac186b16abbab2679a4",
+    "src/resampler.c": "34e33162125a43e9f3116d92bfc30567ec38637f380e62cd4fe7e5c4ed862e21",
+    "src/speex/mdf_baffle.c": "eb1de3bb9e0dd7e3976f1994ef93850abdf5281548011acd4b5129e8ef9ec349",
+    "include/baffle.h": "1480a7185a0bbdc9283f557cadff79ea576f7ad838d38d206d40bfffca4e771e",
+    "include/baffle/hail.h": "d02d9db9bae92bd2b76de435121e531749b246c982fbc8aa951fcb783f335500",
+    "cmake/SpeexDSP.cmake": "d33ca9d75738ea9694f139d960ecee4094e2b6ccaad60bd680b505c3bec1a728",
+    "cmake/SpeexPins.cmake": "a2f885f1276d0bc40ab9060f13b89d4e602265acf0f005b7b2712ae5331ec529",
+    "CMakeLists.txt": "d4f961a25428a0f2ffd4f3216ed404745cff73f93bf58a66ea2ca3fedee4a0da",
+    "tools/aec_diagnostics.py": "247ca13143091ec77d37078afc9facb56e01f7cf7161cc0f8cb80fe7d355a5f9",
+    "tools/benchmark.py": "a13764beed21c2facf59d4e969d89ca5921ecdb7e7135f0e8f25bf00a1b16ba3",
+    "tools/check_exports.py": "518040c0095ce556db06a13bb03e954276f17ba5cd6c2c119b0ba4e564b65c11",
+    "tools/check_latency_receipts.py": "8082e8cbbbead0638c79ea3a731ef7d8d460c60fb13bfe67993d04268dac8e86",
+    "tools/check_realtime_symbols.py": "4f8c18c7e3769d0411100cd1401917f4c7d02e98ae4a2b6f9ce04c023e404f3b",
+    "tools/controlled_aec.py": "fa6531a93ab34b138fd8931d6cfb7f6c0acb8c54d4acfb89ead7c2c2b5ca4225",
+    "tools/fuzz_corpus.py": "4b982a213c225363de75616d08fc01ed9f6efdb1a3fccec24bc07a83d7406b5a",
+    "tools/recorded_aec.py": "736c2ebbed0b13290a710f214975ca52008d26aa04a965418385716215bdf162",
+    "tools/speech_quality.py": "befcaeeda2c51071aa0a221effc47a5723d877389916b848036a480c92ea4a0f",
+    "tools/qualify.c": "73413669497cfa47ea615480309ccd5f273d20ae6898ba35206e4dbce21e4796",
+    "bench/latency.c": "c9c9270cfca3464432b28bc784bebbc1cd5449aa5c4f56312ae5ace8baf3cfbf",
+    "tests/aec.c": "0a2ca499b5d9e0c6e0b2de9274a91ed338414be1f344280fea0cf3267c1823d0",
+    "tests/conditioning.c": "20b0216d9fa1445649d83895ea2932f6bc2943ea2aed584758d4472f877e6abc",
+    "tests/conformance.c": "614d8dd1d4b515cf7eaa023170bf6195e55ab0a59e7f632f3fd39fe21aeee259",
+    "tests/noalloc.c": "63a1e11565b450b4a7bc704cb0ba6b548723feea9014c3426bcfa81de0730a9d",
+    "tests/numerical.c": "a46669b0e9d8645cc84e243960b50c77fdf38899d590f2311f7166e03e7edae8",
+    "tests/pcm.c": "7d01d5c124b898868cc9bfeb478d16e26dd378dcb113151ad3048f597b783cbb",
+    "tests/pipeline.c": "fa071ef6cc04c383bfd32ff4be1a587441a622d37ac422367ecdbe0cefc46a64",
+    "fuzz/aec.c": "7f12b4a9cdb60a9b194a6f712b912c5c2ec55ad5e15d735d1233bab10a14f4a5",
+    "fuzz/pipeline.c": "e529848a1d3cf0c6cfedfbc0d2af8e53494b0322d41a3b29d766b55ffe9013ca",
+    "fuzz/transport.c": "8b05acc0b5b8a72bc4e53fac38e2e58ca6af568aff15ec4c409cd294a757d878"
+  },
+  "artifact_sha256": {
+    "baffle-quality-arm64-build.json": "1ff05c9700e41467ebd0cc2a3b970bf7ead88f73986aa52063d21cea770cd210",
+    "baffle-quality-arm64-contention.csv": "b3d162065e604fa1a75c2e58513ba064e56257d15a8079d270da66770da7cedd",
+    "baffle-quality-arm64-contention.json": "249531f12e33dddbd99293ba840f13488a767581dba3031b37a6ca107358ee41",
+    "baffle-quality-arm64-osr.json": "06de7ef1c8d083d32c39046a6c236e690b5a465f779240c814042d9045e04d85",
+    "baseline-ci.json": "991376f2c7843b98d3f1a060b67788e6b6ea90b62e945d906c672d1d27bc63bb",
+    "baseline-harness.patch": "0959164004efedfdaedac569f5b5c50045ceda50b22a318e01c3710f90c1de83",
+    "ci-source-7ddc8da.json": "3b3f61a0fef499d71acc8127ed35b316cf5b9e92bbb4925482f165bbe97bb797",
+    "corrected-final.json": "886efcabdf5474dffe1b174db8093d9983ca97724e9733787fb170d9d8cea466",
+    "diagnostics.json": "6dabc32205deeb9657aa2b3fa9bd71a4b2a00f0b28a11e2c1781d57ef9fa279c",
+    "holdout-baseline-final.json": "6288299c06038950406e8e83a26a8d15243be1f2b5294578b85d38e0343cf4a1",
+    "holdout-corrected-final.json": "579ace5939f72053944caeac3eabb5225a649f35d178050d25d8d42973650b9a",
+    "near-response-original-failure.log": "f4c2ef7ea310b682fe37f57c1d391ffd2fe2b1161ebdb0f00f0eb9cffa27de49",
+    "notch-experiment.patch": "b22b370554fffd95c6c233d990cea20cd4953b63ae23db2124478f2606132c01",
+    "notch20.json": "90d682837d173a3ea8cc898f64e774b8032c996911e0b6883eb2dc03a1809fbb",
+    "notch40.json": "7ede331edab431c91958b3af21b7096371eae1d7f9bb0caf4080cab00f7cae5e",
+    "original-reproduction.txt": "1745c0753c83b4cdbae2eec6d0946ed6e0080076306f2ba4d1adc075cd4041d6",
+    "original-rerun.json": "fc6b398d6608892dcabccefe5ac85943e77d9505e43fb5a05dd61a5a29515bd1",
+    "original.json": "63a68ae5ec8c93d64beabb1dda14c8da7899006a59559ed913ec3e8f7ba240ec",
+    "perf-raw-baseline-contention.csv": "2f8943ec96785a9f3c59ff27a299c9c5d8da6bbab7ca4ee15c5e03d6affe07ae",
+    "perf-raw-baseline-contention.json": "f4438b596a7f00f5c29b6f375aa62b78418f4fd8991675f211feb3fc7f1ff774",
+    "perf-raw-corrected-contention.csv": "d1202b1e4b6371803c894de7b829d1d3bb06da78c62805c5030c5f1cbcd95769",
+    "perf-raw-corrected-contention.json": "adde5e8bd156867a9456c5de34a355ef09078bdae50f1dc23a93868470058e10",
+    "public-api-and-original-fixture.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw.zip": "72fbdcefcd2489111ed5baf012506b694f4aa354b84fb6757881fa57b119e904",
+    "README.md": "b2c74c5bf044286b3758b2e9274a2a1db7d382cd8cf0b42a03f1516b9b492115",
+    "real-recorded-corrected.json": "6424726cb4ba2634cc76b87174060a7545b227f1b909dd59c3f3e12f48bbe6df",
+    "windows-build-config.json": "ff4c3ae757c172bbd833fef99ffd4278a8f8b847e24d0975bd04d88956214779",
+    "windows-debug-shared.log": "13561ffc42a41723d58512db463204dd0d1a40c7f38b0807d1706d7c35b8d3c0",
+    "windows-default-final.log": "f91483b51fafc3ce96684bcf2d01536c1c1e0ec743c948e312a952c8f3c9bb6e",
+    "windows-exports-final.log": "54a73ee4f05b9cf1116543a9b46bd9ea63cdf9be9725d772be4d6faf66b7d8d1",
+    "windows-final-tests.log": "e6d080f897686469b6fa262d381d6838178b71af62c8e00045f372288bd7068c",
+    "windows-hail.log": "5fa94ad068281c84a47da759722efe5339b5521132c8a581c4ca99c4976ffe1a",
+    "windows-hardware.json": "0210bbe3d0181dbfbdf1663d5057e1d4f5afb36dc03515cad92a71c3e33063f4",
+    "windows-numerical-final.log": "807976ce9735afe72ff6854fb3a91930df20f4f07545aa5d23cd26b3ee4a4ace",
+    "windows-shared-hail.log": "ee7aff046687455e04e75c47facd1c0632aa31b71d9b82cf87a7f8bad6bba45a",
+    "windows-shared.log": "2d800705883fa0b0e819c103a12736fb6b55c7265e8cf65f1d98e2a71b3737b4",
+    "windows-wav-final.log": "b83c65ec83f73d4051079a55166fcccf23d5f1e6775f7135610e7408483d0ea3"
+  }
+}

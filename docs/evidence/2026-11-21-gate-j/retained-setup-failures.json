@@ -1,0 +1,24 @@
+{
+  "failures": [
+    {
+      "scope": "Original controlled reproduction, first invocation",
+      "failure": "Used build-acoustic as LFS cache; pointer missing; no measured result"
+    },
+    {
+      "scope": "Original controlled reproduction, second invocation",
+      "failure": "Correct cache build-recorded, but passed F32 runner instead of baffle_qualify WAV tool; usage failure; no accepted result"
+    },
+    {
+      "scope": "Allocation probe initial invalid input",
+      "failure": "/dev/zero is not a sized finite PCM file; rejected empty/unseekable input; not counted as allocation evidence"
+    },
+    {
+      "scope": "CI 44880402245",
+      "failure": "Workflow step indentation; corrected, no tests ran"
+    },
+    {
+      "scope": "CI 44880585750",
+      "failure": "Strict MSVC19.52 std::fill float/int conversion warning treated as error; typed constants fix without suppressing /WX. Run later superseded/cancelled, not a passing matrix."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+revision=e110635; new regression test against original library
+exit=3221226505
+C:\Users\Mark\artalis.io\src\baffle\build-regression-source\tests\pipeline.c:119: bf_pipeline_process(s, &in, &ref, &out, &info) == BF_OK

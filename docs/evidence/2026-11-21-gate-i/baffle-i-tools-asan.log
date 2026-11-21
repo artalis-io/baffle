@@ -1,0 +1,17 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/baffle.fVOhT0/build-room-tools-asan
+[ 10%] Building CXX object CMakeFiles/baffle_noise_order.dir/noise_order.cpp.o
+[ 30%] Built target baffle_hail_acquire
+[ 40%] Building C object CMakeFiles/baffle_vad_trace.dir/vad_trace.c.o
+[ 50%] Building CXX object CMakeFiles/baffle_acoustic_runner.dir/main.cpp.o
+[ 70%] Built target baffle_qa_alloc_probe
+[ 80%] Linking C executable baffle_vad_trace
+[ 80%] Built target baffle_vad_trace
+[ 90%] Linking CXX executable baffle_noise_order
+[ 90%] Built target baffle_noise_order
+[100%] Linking CXX executable baffle_acoustic_runner
+[100%] Built target baffle_acoustic_runner
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+PASS raw replay/EOS, VAD receipts, retained-output guard and unreviewed-onset rejection; optional virtual cancellation

@@ -1,0 +1,417 @@
+{
+  "scope": "Assistant-only diagnostics, not physical/acoustic calibration or commitment policy",
+  "source_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+  "jobs": [
+    {
+      "name": "room-base",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "room-base-mic.f32",
+      "mic_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "reference": "room-base-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "room-base-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "quiet",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.05,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "quiet-mic.f32",
+      "mic_sha256": "ed040119c4c9bd9a21257580d71100a79bf86cc5bf52aa640e8e0e2b3891787e",
+      "reference": "quiet-reference.f32",
+      "reference_sha256": "55641ee6f319f21382356b7d4152b1e1a7b59f5f3f5e68006fb61c8447acd266",
+      "oracle": "quiet-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "loud",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.7,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "loud-mic.f32",
+      "mic_sha256": "4009e76347b35bd3e7c1213be2c27f4680ad6674cc5406052ea3921d4dffe84f",
+      "reference": "loud-reference.f32",
+      "reference_sha256": "faee5bfbe1f1e3b24900c91dd8de2052b11f8b10cf80d3544068482c24b950ef",
+      "oracle": "loud-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "long-tail",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ],
+        [
+          4800,
+          0.15
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "long-tail-mic.f32",
+      "mic_sha256": "026f9a4b5add9de5aa16f32fc37d39613bd1c6deebf63f6073a2e7c9c1e5fba9",
+      "reference": "long-tail-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "long-tail-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "nonlinear",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "nonlinear-mic.f32",
+      "mic_sha256": "7c53ec8ca15e0c2c5d2ffcf6ba067fade447fc14a71d12b681475cba38a31088",
+      "reference": "nonlinear-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "nonlinear-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "path-change",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "path-change-mic.f32",
+      "mic_sha256": "dc182df4b82e54a825ffd912c5267b79e071b46b4167e07a16583d9e1a8851ea",
+      "reference": "path-change-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "path-change-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "delay-100ms",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          1648,
+          0.6
+        ],
+        [
+          1920,
+          0.2
+        ],
+        [
+          2880,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "delay-100ms-mic.f32",
+      "mic_sha256": "b68baae09328117f871972bb75da18917dcb92d5c1f05c62035fb52fafdf1e66",
+      "reference": "delay-100ms-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "delay-100ms-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "startup",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        0,
+        96000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "startup-mic.f32",
+      "mic_sha256": "72ebfd9cab6c23635fb44a2088d834fd11a389729790abddb803c57b58b64651",
+      "reference": "startup-reference.f32",
+      "reference_sha256": "45b19f63bb293cd7e6d8101440c71e834ec1834bce45d310a4087f41669f1e71",
+      "oracle": "startup-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b"
+    },
+    {
+      "name": "cancel-tail",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        160000,
+        192000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "cancel-tail-mic.f32",
+      "mic_sha256": "1bd28d3cda7ed1a5d34da8d017143556c6e16e9ce9750e3e8c96c6b824525d81",
+      "reference": "cancel-tail-reference.f32",
+      "reference_sha256": "1fc719e0012f0dfe5ba2aafae2e7742794c6cb0c66964c8c18429e1a03d50baa",
+      "oracle": "cancel-tail-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b",
+      "events": "cancel-tail-events.txt",
+      "events_sha256": "615f5caabc8c2dc9276667a1d032c7c2846f7c551bc2f4a47257706b9d97922b"
+    },
+    {
+      "name": "restart",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "restart-mic.f32",
+      "mic_sha256": "ed3821c3ada4bee6c3e2227fdaa0fc9b184753ec5e586b0e453b09911cff0af2",
+      "reference": "restart-reference.f32",
+      "reference_sha256": "c819043fbb24ec41c8745c185f0b7ebf6298c742c556a41c76cff85f4c535144",
+      "oracle": "restart-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b",
+      "events": "restart-events.txt",
+      "events_sha256": "c3acaf0d88347f7544fc954305e222e67c6e1b1d4946f7802af166ff0134da67"
+    },
+    {
+      "name": "reference-gap",
+      "scenario": "far-only",
+      "source_id": 0,
+      "rate": 16000,
+      "frames": 384000,
+      "near_peak": 0,
+      "far_peak": 0.25,
+      "reference_transcript": "",
+      "asr_frames": [
+        96000,
+        352000
+      ],
+      "constructed_insertion_frame_not_reviewed_onset": 0,
+      "taps": [
+        [
+          48,
+          0.6
+        ],
+        [
+          320,
+          0.2
+        ],
+        [
+          1280,
+          -0.1
+        ]
+      ],
+      "scope": "simulated acoustic echo of real TTS; known no near speech",
+      "mic": "reference-gap-mic.f32",
+      "mic_sha256": "8534bc6aabe9317c62b246e2c74fa4fd83e8c59ad21b0a34bf51e9372320a83a",
+      "reference": "reference-gap-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "reference-gap-oracle.f32",
+      "oracle_sha256": "626db8bea999709c8faead0ec9d60025604676fcc44130abe6c1168b90989b3b",
+      "events": "reference-gap-events.txt",
+      "events_sha256": "0911b2d0c17f97b71439a7e0981a340ce27a5865e76db0fd418dc1995356848b"
+    }
+  ],
+  "committed_word_rate": null,
+  "policy": {
+    "far_only_target_nonempty": 0
+  },
+  "preparation_source_sha256": "6c821e17401883e2122b77fe11c469e9c11e60f64849a49e0e15698fd9f170a7"
+}

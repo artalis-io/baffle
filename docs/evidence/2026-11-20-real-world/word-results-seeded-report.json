@@ -1,0 +1,632 @@
+{
+  "runner_sha256": "49ad6e881b11a158852e85035ea2eea6b089f967e38558f10bc9a5c272ae4edf",
+  "manifest_sha256": "982da7ec85f0b73190d9495614e972500320e97f3fb9e888ccbbfc1a1d9483ad",
+  "metric_note": "Raw common-frame indexing; no output delay shifting or perceptual/phoneme inference",
+  "results": [
+    {
+      "job": "normal",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 31.920016374393448,
+        "total_output_power": 5.151776131242513e-07,
+        "raw_component_snr_improvement_db": 19.44220135138336,
+        "near_projection": 0.9806399764001895,
+        "execution_ms": {
+          "p50": 0.0123035,
+          "p95": 0.027088,
+          "p99": 0.028080959999999978,
+          "max": 0.183647
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "baffle",
+        "16000",
+        "word-seeded-a/normal-mic.f32",
+        "word-seeded-a/normal-ref.f32",
+        "word-results-seeded/normal-baffle.f32",
+        "word-results-seeded/normal-baffle.csv",
+        "word-results-seeded/normal-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": 8048,
+        "rss_after_init_kib": 8552,
+        "rss_after_process_kib": 8552,
+        "process_peak_rss_kib": 99480,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "8a84c3d46d8a640f9c64e5e777a6050f66e8091bef3e5bc7cfbcb4790af6b1a8",
+      "raw_receipts_sha256": "c9a3710126170c2cf133615051f0dd3f373ef46665807881349d6ccca3fcc143"
+    },
+    {
+      "job": "normal",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "aec3",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 38.809659142691224,
+        "total_output_power": 1.0543691875834235e-07,
+        "raw_component_snr_improvement_db": 2.8274889113425115,
+        "near_projection": -0.01536752057657768,
+        "execution_ms": {
+          "p50": 0.10117599999999999,
+          "p95": 0.151968,
+          "p99": 0.20724043999999978,
+          "max": 0.364767
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "aec3",
+        "16000",
+        "word-seeded-a/normal-mic.f32",
+        "word-seeded-a/normal-ref.f32",
+        "word-results-seeded/normal-aec3.f32",
+        "word-results-seeded/normal-aec3.csv",
+        "word-results-seeded/normal-aec3.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 9636,
+        "rss_after_process_kib": 9708,
+        "process_peak_rss_kib": 111448,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "f7f5aa3775454961b4004428959c0b006d1faacf0ece53820f36e9d1e74915b6",
+      "raw_receipts_sha256": "6406a747881b23b7da1167c3b7b48d485d634ace042062aedf3d6dac005d431b"
+    },
+    {
+      "job": "normal",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 16.078267939366743,
+        "total_output_power": 1.9775698223454988e-05,
+        "raw_component_snr_improvement_db": -6.882352321292613,
+        "near_projection": 0.24101782621368073,
+        "execution_ms": {
+          "p50": 0.02112,
+          "p95": 0.021696,
+          "p99": 0.023552,
+          "max": 0.049232
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "pipeline",
+        "16000",
+        "word-seeded-a/normal-mic.f32",
+        "word-seeded-a/normal-ref.f32",
+        "word-results-seeded/normal-pipeline.f32",
+        "word-results-seeded/normal-pipeline.csv",
+        "word-results-seeded/normal-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 8516,
+        "rss_after_process_kib": 8516,
+        "process_peak_rss_kib": 114488,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160
+      },
+      "output_sha256": "37bfcca44f37f7f8566d8e71b0da03e332f7f936ee3a5cb0f3596662cbe17861",
+      "raw_receipts_sha256": "3ef7f187085d1eba0fb56bbe140cf8d93062a40e2de1d4a656b4d28a2de0e3f7"
+    },
+    {
+      "job": "quiet-near",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 31.21171499770575,
+        "total_output_power": 2.4257559853140265e-06,
+        "raw_component_snr_improvement_db": 33.24201299437798,
+        "near_projection": 0.9792182560421983,
+        "execution_ms": {
+          "p50": 0.011936,
+          "p95": 0.012608,
+          "p99": 0.013585749999999959,
+          "max": 0.021344
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "baffle",
+        "16000",
+        "word-seeded-a/quiet-near-mic.f32",
+        "word-seeded-a/quiet-near-ref.f32",
+        "word-results-seeded/quiet-near-baffle.f32",
+        "word-results-seeded/quiet-near-baffle.csv",
+        "word-results-seeded/quiet-near-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 8564,
+        "rss_after_process_kib": 8564,
+        "process_peak_rss_kib": 115292,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "ae3b3a2cf58e227c6372b08a0362d17ecbe367548200665c9a3bd41246a41d68",
+      "raw_receipts_sha256": "4f4d3aed5d4d50b517b46422b22391af12828a0a432b57585b52ecea2b294549"
+    },
+    {
+      "job": "quiet-near",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "aec3",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 39.01254447763857,
+        "total_output_power": 4.024984049371917e-07,
+        "raw_component_snr_improvement_db": 21.20770621443458,
+        "near_projection": -0.04509068892792952,
+        "execution_ms": {
+          "p50": 0.081824,
+          "p95": 0.14974459999999998,
+          "p99": 0.15344016,
+          "max": 0.157104
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "aec3",
+        "16000",
+        "word-seeded-a/quiet-near-mic.f32",
+        "word-seeded-a/quiet-near-ref.f32",
+        "word-results-seeded/quiet-near-aec3.f32",
+        "word-results-seeded/quiet-near-aec3.csv",
+        "word-results-seeded/quiet-near-aec3.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 9636,
+        "rss_after_process_kib": 9708,
+        "process_peak_rss_kib": 118320,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "fbec352015bbda450c31703cf0b477e0655ee4bd7954ec8c4cdf8cac5ec62810",
+      "raw_receipts_sha256": "6f7808f0c5a94bc0d429acfbf4cb3baff89468c553b1edaee828e3e2be65f14f"
+    },
+    {
+      "job": "quiet-near",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 15.651850498707516,
+        "total_output_power": 8.726368760457799e-05,
+        "raw_component_snr_improvement_db": 6.003619909177131,
+        "near_projection": 0.14561606118767215,
+        "execution_ms": {
+          "p50": 0.020896,
+          "p95": 0.0468648,
+          "p99": 0.04731216,
+          "max": 0.160352
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "pipeline",
+        "16000",
+        "word-seeded-a/quiet-near-mic.f32",
+        "word-seeded-a/quiet-near-ref.f32",
+        "word-results-seeded/quiet-near-pipeline.f32",
+        "word-results-seeded/quiet-near-pipeline.csv",
+        "word-results-seeded/quiet-near-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 8576,
+        "rss_after_process_kib": 8576,
+        "process_peak_rss_kib": 118320,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160
+      },
+      "output_sha256": "2db80367b61ac6a8f53a4cce4c722d6337f8fd176155fd85a7167a5823650cdc",
+      "raw_receipts_sha256": "fbe4b23b1172670d5a46d567c47e0c6d4ed5d19563993a432c14d4bbc3d8676b"
+    },
+    {
+      "job": "through-cancel",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 31.915049087934804,
+        "total_output_power": 7.427047530654818e-07,
+        "raw_component_snr_improvement_db": 18.417247894723566,
+        "near_projection": 0.9805764062215293,
+        "execution_ms": {
+          "p50": 0.012,
+          "p95": 0.027072,
+          "p99": 0.027417439999999776,
+          "max": 0.21472
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "baffle",
+        "16000",
+        "word-seeded-a/through-cancel-mic.f32",
+        "word-seeded-a/through-cancel-ref.f32",
+        "word-results-seeded/through-cancel-baffle.f32",
+        "word-results-seeded/through-cancel-baffle.csv",
+        "word-results-seeded/through-cancel-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 8560,
+        "rss_after_process_kib": 8560,
+        "process_peak_rss_kib": 118320,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "7fa5c5536b6651a5e90f4a0d564e225822c8286511dcd465e3aa3d52df56f9f8",
+      "raw_receipts_sha256": "5150716aab74a401dfbab487a256d1e31fcb95a511b087745d449d9089fd4f9f"
+    },
+    {
+      "job": "through-cancel",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "aec3",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 30.44590423905887,
+        "total_output_power": 1.0416712747087522e-06,
+        "raw_component_snr_improvement_db": 0.7218098720430193,
+        "near_projection": -0.06115447392183893,
+        "execution_ms": {
+          "p50": 0.081488,
+          "p95": 0.13869339999999997,
+          "p99": 0.15190556999999996,
+          "max": 0.173136
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "aec3",
+        "16000",
+        "word-seeded-a/through-cancel-mic.f32",
+        "word-seeded-a/through-cancel-ref.f32",
+        "word-results-seeded/through-cancel-aec3.f32",
+        "word-results-seeded/through-cancel-aec3.csv",
+        "word-results-seeded/through-cancel-aec3.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 0,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 9636,
+        "rss_after_process_kib": 9708,
+        "process_peak_rss_kib": 118320,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "7accaae84af95f255c1ee80a5bbedde1fc8b22df5c722a1d9857632a149ae356",
+      "raw_receipts_sha256": "dbf8d676ea2ae9d8551e96a7a93cc275ac9f6e060211a80bdb2983fee69d6448"
+    },
+    {
+      "job": "through-cancel",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 16.01864428934508,
+        "total_output_power": 2.887065806601084e-05,
+        "raw_component_snr_improvement_db": -9.97945192428375,
+        "near_projection": 0.2967729963186848,
+        "execution_ms": {
+          "p50": 0.020848,
+          "p95": 0.021552799999999997,
+          "p99": 0.02289631999999999,
+          "max": 0.025888
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "pipeline",
+        "16000",
+        "word-seeded-a/through-cancel-mic.f32",
+        "word-seeded-a/through-cancel-ref.f32",
+        "word-results-seeded/through-cancel-pipeline.f32",
+        "word-results-seeded/through-cancel-pipeline.csv",
+        "word-results-seeded/through-cancel-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8052,
+        "rss_after_init_kib": 8572,
+        "rss_after_process_kib": 8572,
+        "process_peak_rss_kib": 118320,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160
+      },
+      "output_sha256": "c2774a58c7c2f3bba9e36a841c0f3e151d326f11eff47110de45062b0494947d",
+      "raw_receipts_sha256": "c1cda11f3fcaf49d0396342509283c37dfa23f837686049bffaac5aa3e155294"
+    },
+    {
+      "job": "epoch-flush",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 31.915049087934804,
+        "total_output_power": 7.427047530654818e-07,
+        "raw_component_snr_improvement_db": 15.940921995636085,
+        "near_projection": 0.9806760993779322,
+        "execution_ms": {
+          "p50": 0.009024,
+          "p95": 0.026752,
+          "p99": 0.02811343999999997,
+          "max": 0.149599
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "baffle",
+        "16000",
+        "word-seeded-a/epoch-flush-mic.f32",
+        "word-seeded-a/epoch-flush-ref.f32",
+        "word-results-seeded/epoch-flush-baffle.f32",
+        "word-results-seeded/epoch-flush-baffle.csv",
+        "word-results-seeded/epoch-flush-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 8564,
+        "rss_after_process_kib": 8564,
+        "process_peak_rss_kib": 119280,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "f327b40acb36de1b499e85d8deb42cb9e75356208478150918e0f1057013022c",
+      "raw_receipts_sha256": "64529284a4e4a68239dbf36c548e39fe82d687cd84484cf233e46592d847d9e1"
+    },
+    {
+      "job": "epoch-flush",
+      "backend": "aec3",
+      "scope": "simulated-echo-provider-transcript",
+      "status": "UNSUPPORTED_TRANSPORT_CONTRACT",
+      "reason": "No qualified AEC3 generation/epoch adapter is implemented"
+    },
+    {
+      "job": "epoch-flush",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 16.01864428934508,
+        "total_output_power": 2.887065806601084e-05,
+        "raw_component_snr_improvement_db": -9.904744062870122,
+        "near_projection": 0.29244622426259326,
+        "execution_ms": {
+          "p50": 0.018048,
+          "p95": 0.021616,
+          "p99": 0.021825919999999954,
+          "max": 0.045664
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "pipeline",
+        "16000",
+        "word-seeded-a/epoch-flush-mic.f32",
+        "word-seeded-a/epoch-flush-ref.f32",
+        "word-results-seeded/epoch-flush-pipeline.f32",
+        "word-results-seeded/epoch-flush-pipeline.csv",
+        "word-results-seeded/epoch-flush-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 8576,
+        "rss_after_process_kib": 8576,
+        "process_peak_rss_kib": 119280,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160
+      },
+      "output_sha256": "0ba9c64acb131440c5765c5863cba4df4b503367c4e1e0d0c33c83416c4cec70",
+      "raw_receipts_sha256": "cf9f1d07348677f29a414845357e21dff3d7a2381bf0222d881b277220be9cdf"
+    },
+    {
+      "job": "epoch-restart",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 31.915049087934804,
+        "total_output_power": 7.427047530654818e-07,
+        "raw_component_snr_improvement_db": 9.063074085886774,
+        "near_projection": 0.9687115373208687,
+        "execution_ms": {
+          "p50": 0.012448,
+          "p95": 0.026752,
+          "p99": 0.027092479999999895,
+          "max": 0.183119
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "baffle",
+        "16000",
+        "word-seeded-a/epoch-restart-mic.f32",
+        "word-seeded-a/epoch-restart-ref.f32",
+        "word-results-seeded/epoch-restart-baffle.f32",
+        "word-results-seeded/epoch-restart-baffle.csv",
+        "word-results-seeded/epoch-restart-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": 8060,
+        "rss_after_init_kib": 8564,
+        "rss_after_process_kib": 8564,
+        "process_peak_rss_kib": 119280,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0
+      },
+      "output_sha256": "172f7db4693cad1d1f05ef046a118e0e0e3fe102854888633db77aee74e81cc4",
+      "raw_receipts_sha256": "907b7306856022a10bacc07858295c78dfa3868847b2fa298ee37abd8d6b8d55"
+    },
+    {
+      "job": "epoch-restart",
+      "backend": "aec3",
+      "scope": "simulated-echo-provider-transcript",
+      "status": "UNSUPPORTED_TRANSPORT_CONTRACT",
+      "reason": "No qualified AEC3 generation/epoch adapter is implemented"
+    },
+    {
+      "job": "epoch-restart",
+      "scope": "simulated-echo-provider-transcript",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 16.01864428934508,
+        "total_output_power": 2.887065806601084e-05,
+        "raw_component_snr_improvement_db": -4.921243071301667,
+        "near_projection": 0.2909982640340454,
+        "execution_ms": {
+          "p50": 0.021248,
+          "p95": 0.046831,
+          "p99": 0.04724831999999999,
+          "max": 0.175551
+        },
+        "observed_allocation_calls": 0
+      },
+      "command": [
+        "/tmp/baffle-acoustic-tools/compare-release/baffle_acoustic_runner",
+        "pipeline",
+        "16000",
+        "word-seeded-a/epoch-restart-mic.f32",
+        "word-seeded-a/epoch-restart-ref.f32",
+        "word-results-seeded/epoch-restart-pipeline.f32",
+        "word-results-seeded/epoch-restart-pipeline.csv",
+        "word-results-seeded/epoch-restart-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": 8056,
+        "rss_after_init_kib": 8576,
+        "rss_after_process_kib": 8580,
+        "process_peak_rss_kib": 119280,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160
+      },
+      "output_sha256": "96a412b2659c201747e305cd81e6a220fab52a9fa54d9fedb6883b01852bf8df",
+      "raw_receipts_sha256": "dde4709bc5bc086af1845fb01c943facb650b852c892e5d9e67d7a0f48b8cd0a"
+    }
+  ]
+}

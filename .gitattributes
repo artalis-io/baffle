@@ -1,0 +1,4 @@
+# Qualification checksums refer to recorded bytes, including native newlines.
+docs/evidence/** -text
+*.zip binary
+*.wav binary

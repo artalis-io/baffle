@@ -1,0 +1,10 @@
+--- a/webrtc/modules/audio_processing/audio_processing_impl.cc
++++ b/webrtc/modules/audio_processing/audio_processing_impl.cc
+@@ -1890,6 +1890,7 @@
+       RTC_DCHECK(submodules_.echo_controller);
+     } else {
+       EchoCanceller3Config config;
++      config.filter.export_linear_aec_output = config_.echo_canceller.export_linear_aec_output;
+       std::optional<EchoCanceller3Config> multichannel_config;
+       if (use_setup_specific_default_aec3_config_) {
+         multichannel_config = EchoCanceller3::CreateDefaultMultichannelConfig();

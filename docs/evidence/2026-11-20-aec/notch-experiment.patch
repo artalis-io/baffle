@@ -1,0 +1,52 @@
+diff --git a/cmake/SpeexDSP.cmake b/cmake/SpeexDSP.cmake
+index 4d2d8de..3f66c11 100644
+--- a/cmake/SpeexDSP.cmake
++++ b/cmake/SpeexDSP.cmake
+@@ -21,11 +21,14 @@ file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/speex-config")
+ file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/speex-config/speexdsp_config_types.h"
+   "#include <stdint.h>\ntypedef int16_t spx_int16_t; typedef uint16_t spx_uint16_t; typedef int32_t spx_int32_t; typedef uint32_t spx_uint32_t;\n")
+ add_library(baffle_speex_kernel OBJECT
+-  "${BF_SPEEXDSP_SOURCE_DIR}/libspeexdsp/mdf.c"
++  "${CMAKE_CURRENT_SOURCE_DIR}/src/speex/mdf_baffle.c"
+   "${BF_SPEEXDSP_SOURCE_DIR}/libspeexdsp/fftwrap.c"
+   "${BF_SPEEXDSP_SOURCE_DIR}/libspeexdsp/smallft.c")
+ set_target_properties(baffle_speex_kernel PROPERTIES C_VISIBILITY_PRESET hidden POSITION_INDEPENDENT_CODE ON)
+ target_compile_features(baffle_speex_kernel PRIVATE c_std_11)
++set(BF_EXPERIMENT_NOTCH_HZ 20 CACHE STRING "Controlled notch experiment")
++target_compile_definitions(baffle_speex_kernel PRIVATE BF_EXPERIMENT_NOTCH_HZ=${BF_EXPERIMENT_NOTCH_HZ})
++target_include_directories(baffle_speex_kernel PRIVATE "${BF_SPEEXDSP_SOURCE_DIR}/libspeexdsp")
+ target_compile_definitions(baffle_speex_kernel PRIVATE FLOATING_POINT USE_SMALLFT OS_SUPPORT_CUSTOM RELEASE _USE_MATH_DEFINES "EXPORT=")
+ foreach(symbol IN LISTS BF_SPEEX_SYMBOLS)
+   target_compile_definitions(baffle_speex_kernel PRIVATE "${symbol}=baffle_${symbol}")
+diff --git a/src/aec.c b/src/aec.c
+index 2263eaf..98b4c5d 100644
+--- a/src/aec.c
++++ b/src/aec.c
+@@ -4,6 +4,7 @@
+ #endif
+ #if BF_HAVE_SPEEXDSP
+ #include <speex/speex_echo.h>
++void baffle_speex_configure_notch(SpeexEchoState *s);
+ typedef struct baffle_speex_arena {
+     unsigned char *data;
+     size_t used, capacity;
+@@ -115,6 +116,7 @@ bf_result bf_aec_init(void *p, size_t bytes, const bf_aec_config *c, bf_aec **ou
+     int rate = (int)c->sample_rate;
+     if (speex_echo_ctl(s->echo, SPEEX_ECHO_SET_SAMPLING_RATE, &rate))
+         return BF_ERROR_STATE;
++    baffle_speex_configure_notch(s->echo);
+     s->magic = 0x42464145u;
+     *out = s;
+     return BF_OK;
+diff --git a/src/speex/mdf_baffle.c b/src/speex/mdf_baffle.c
+new file mode 100644
+index 0000000..4116183
+--- /dev/null
++++ b/src/speex/mdf_baffle.c
+@@ -0,0 +1,6 @@
++/* Controlled experiment: same pinned MDF, only the microphone DC-notch radius changes. */
++#include "mdf.c"
++void baffle_speex_configure_notch(SpeexEchoState *s)
++{
++    s->notch_radius = expf(-6.2831853071795864769f * BF_EXPERIMENT_NOTCH_HZ / (float)s->sampling_rate);
++}

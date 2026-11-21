@@ -1,0 +1,74 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file build-shared\baffle.dll
+
+File Type: DLL
+
+  Section contains the following exports for baffle.dll
+
+    00000000 characteristics
+           0 time date stamp
+        0.00 version
+           1 ordinal base
+          45 number of functions
+          45 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00016220 bf_aec_deinit
+          2    1 00016100 bf_aec_estimate_delay
+          3    2 00015500 bf_aec_init
+          4    3 00015780 bf_aec_process
+          5    4 00015720 bf_aec_reset
+          6    5 00015300 bf_aec_size
+          7    6 00013240 bf_agc_init
+          8    7 000135C0 bf_agc_process
+          9    8 00013590 bf_agc_reset
+         10    9 00013230 bf_agc_size
+         11    A 00012EB0 bf_channel_delay_init
+         12    B 00013000 bf_channel_delay_process
+         13    C 00012FB0 bf_channel_delay_reset
+         14    D 00012E80 bf_channel_delay_size
+         15    E 00012A80 bf_channel_matrix
+         16    F 00011A10 bf_clock_tracker_init
+         17   10 00011A90 bf_clock_tracker_observe
+         18   11 00011A70 bf_clock_tracker_reset
+         19   12 00011A00 bf_clock_tracker_size
+         20   13 00011070 bf_library_query
+         21   14 00014300 bf_noise_init
+         22   15 000146E0 bf_noise_process
+         23   16 00014640 bf_noise_reset
+         24   17 00014240 bf_noise_size
+         25   18 000114B0 bf_pcm_convert
+         26   19 000110C0 bf_pcm_validate
+         27   1A 000178E0 bf_pipeline_deinit
+         28   1B 00017690 bf_pipeline_flush
+         29   1C 00016510 bf_pipeline_init
+         30   1D 00016A70 bf_pipeline_process
+         31   1E 00016990 bf_pipeline_reset
+         32   1F 00016260 bf_pipeline_size
+         33   20 00012A50 bf_resampler_flush
+         34   21 00011FA0 bf_resampler_init
+         35   22 00011F10 bf_resampler_latency
+         36   23 000124F0 bf_resampler_process
+         37   24 00012440 bf_resampler_reset
+         38   25 000124B0 bf_resampler_set_drift
+         39   26 00011E70 bf_resampler_size
+         40   27 000110A0 bf_result_description
+         41   28 00011800 bf_timing_advance
+         42   29 00013CF0 bf_vad_init
+         43   2A 00013ED0 bf_vad_process
+         44   2B 00013E70 bf_vad_reset
+         45   2C 00013CE0 bf_vad_size
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        2000 .rdata
+        1000 .reloc
+        1000 .rsrc
+       18000 .text
+        1000 .tls
