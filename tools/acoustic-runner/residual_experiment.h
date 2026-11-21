@@ -27,14 +27,14 @@ class ResidualExperiment {
     }
     void reset() {
         seen_=0;std::fill(cross_.begin(),cross_.end(),Z{});
-        std::fill(px_.begin(),px_.end(),0);std::fill(py_.begin(),py_.end(),0);
-        std::fill(gain_.begin(),gain_.end(),1);
+        std::fill(px_.begin(),px_.end(),0.0f);std::fill(py_.begin(),py_.end(),0.0f);
+        std::fill(gain_.begin(),gain_.end(),1.0f);
     }
 public:
     ResidualExperiment(uint32_t rate,bool enabled):frames_(rate/100),enabled_(enabled) {
         while(n_<frames_)n_*=2;
         x_.resize(n_);y_.resize(n_);cross_.resize(n_);twiddle_.resize(n_/2);
-        px_.resize(n_);py_.resize(n_);gain_.resize(n_,1);residual_.resize(frames_);
+        px_.resize(n_);py_.resize(n_);gain_.resize(n_,1.0f);residual_.resize(frames_);
         constexpr double pi=3.14159265358979323846;
         for(uint32_t k=0;k<n_/2;++k)twiddle_[k]=Z(static_cast<float>(std::cos(-2*pi*k/n_)),static_cast<float>(std::sin(-2*pi*k/n_)));
         bf_aec_config c=BF_INIT(bf_aec_config);c.sample_rate=rate;c.frame_frames=frames_;
