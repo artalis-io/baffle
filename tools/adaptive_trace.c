@@ -5,9 +5,16 @@
 #include "../src/aec.c"
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 void baffle_speex_diagnostics(SpeexEchoState *, float *);
 void baffle_speex_counter_limit(SpeexEchoState *);
 static void require(int condition) { if (!condition) { fputs("adaptive trace failure\n", stderr); exit(1); } }
+static uint32_t number(const char *text)
+{
+    char *end=NULL;errno=0;unsigned long v=strtoul(text,&end,10);
+    require(text[0]!='-' && end!=text && *end==0 && errno==0 && v<=UINT32_MAX);
+    return (uint32_t)v;
+}
 static FILE *open_file(const char *path, const char *mode)
 {
 #ifdef _MSC_VER
@@ -28,9 +35,10 @@ int main(int argc, char **argv)
 {
     require(argc == 10 || argc == 11);
     const uint16_t endian=1; require(sizeof(float)==4 && *(const unsigned char *)&endian==1);
-    uint32_t rate = (uint32_t)strtoul(argv[1], NULL, 10), hop = (uint32_t)strtoul(argv[2], NULL, 10);
-    uint32_t tail = (uint32_t)strtoul(argv[3], NULL, 10), frames = rate/1000u*hop;
+    uint32_t rate = number(argv[1]), hop = number(argv[2]);
+    uint32_t tail = number(argv[3]);
     require((rate == 16000 || rate == 48000) && (hop == 10 || hop == 20));
+    uint32_t frames=rate/1000u*hop;
     size_t count, refs; float *mic = read_pcm(argv[4], &count), *ref = read_pcm(argv[5], &refs);
     require(count == refs);
     bf_aec_config c = BF_INIT(bf_aec_config); c.sample_rate = rate;c.frame_frames = frames;
@@ -42,7 +50,7 @@ int main(int argc, char **argv)
     if(argc==11) {require(strcmp(argv[10],"counter-limit")==0);baffle_speex_counter_limit(s->echo);}
     FILE *output = open_file(argv[6], "wb"), *trace = open_file(argv[7], "w"), *coeff = open_file(argv[8], "wb");
     require(output && trace && coeff);
-    int missing = atoi(argv[9]); /* 0, or one deterministic gap at 10..10.2s. */
+    uint32_t missing = number(argv[9]); require(missing<=1); /* gap at10..10.2s */
     fprintf(trace,"frame_position,frames,input_power,output_power,delay_valid,dominant_tap,adapted,cancel_count,leak_estimate,sum_adapt,saturated,screwed_up,resets,flags,coefficient_snapshot\n");
     float near[960], far[960], out[960];
     bf_audio_timing nt = BF_INIT(bf_audio_timing), ft = BF_INIT(bf_audio_timing);

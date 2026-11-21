@@ -237,6 +237,8 @@ BF_API bf_result bf_aec_reset(bf_aec *aec);
  * receipts have reference_generation=0 and never infer a generation change.
  * A valid reference generation change is reported even if a simultaneous
  * capture/reference discontinuity also resets the adaptive state.
+ * Native backend recovery increments info.resets and reports
+ * BF_AUDIO_DISCONTINUITY even if capture timing itself remains continuous.
  * Bypass preserves F32 headroom; S16 clipping flags describe processed audio only.
  * Backend uses saturated S16 internally. Input F32 headroom +/-16, not NaN/Inf. */
 BF_API bf_result bf_aec_process(bf_aec *aec, const float *capture,

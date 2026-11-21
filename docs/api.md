@@ -40,6 +40,15 @@ Public PCM permits inexpensive application/DSP-side level measurements without
 expanding the provisional ABI. Existing record layouts and 45 exports remain
 unchanged in Gate I.
 
+Gate K completes multichannel coefficient/reference clearing on lifecycle reset.
+Native backend recovery is now included in `bf_aec_info.resets` and reports
+`BF_AUDIO_DISCONTINUITY`; a successful call with that flag is an observable
+adaptive-state recovery, not proof of a device clock reset or acoustic silence.
+Source timing/domain/epoch are retained. The pipeline propagates AEC flags while
+preserving near-leg NS/AGC/VAD history on reference-only recovery. The schedule
+counter is normalized without resetting filters near its signed integer limit.
+No public fields or exports are added; ABI remains provisional.
+
 ## PCM and ownership
 
 ABI zero is provisional. Initialize every public record (including nested
