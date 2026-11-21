@@ -60,5 +60,12 @@ Double-talk improves over raw input, while near-only regressions, model-sensitiv
 blank hypotheses and assistant-only false transcripts remain explicit failures.
 Reviewed first-phone/syllable preservation remains open; no production claim.
 
+[Gate I](docs/gate-i.md) compares eight processing variants, protected NS startup,
+stage ordering and assistant-only recordings. Frozen NS initialization now honors
+foreground protection; the default paired PCM/ASR results remain unchanged.
+Near-only recognition regressions, assistant-only false transcripts and weak
+real-room AEC remain unresolved. New CPU-only 16/48 kHz inference trials retain
+execution, scheduling and the 10 ms NS delay separately. Gate I remains PARTIAL.
+
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.

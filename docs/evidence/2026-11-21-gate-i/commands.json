@@ -1,0 +1,348 @@
+{
+  "cwd": "C:/Users/Mark/artalis.io/src/baffle",
+  "source": "387eca5 (same measured production core as d01af75)",
+  "scope": "Top-level reproduction ledger reconstructed from protocol/receipts, not a complete shell transcript. Retained per-result native command arrays and checksums are authoritative. Use fresh output directories and pinned models/PCM. Remote build configuration is retained in logs/CI and preceding Gate H instructions.",
+  "commands": [
+    {
+      "label": "Eight-stage before",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-i/runner-before/baffle_acoustic_runner.exe",
+        "build-gate-i/runner-before/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-i/ablation-before",
+        "--stages",
+        "raw",
+        "baffle",
+        "ns-only",
+        "agc-only",
+        "aec-ns",
+        "aec-agc",
+        "ns-agc",
+        "pipeline"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Summarize before",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr_summary.py",
+        "build-gate-h/input/manifest.json",
+        "build-gate-i/ablation-before/results.json",
+        "build-gate-i/ablation-before-summary.json"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Eight-stage after",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-gate-i/runner-after/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-i/ablation-after",
+        "--stages",
+        "raw",
+        "baffle",
+        "ns-only",
+        "agc-only",
+        "aec-ns",
+        "aec-agc",
+        "ns-agc",
+        "pipeline"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Summarize after",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr_summary.py",
+        "build-gate-h/input/manifest.json",
+        "build-gate-i/ablation-after/results.json",
+        "build-gate-i/ablation-after-summary.json"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Protected NS and order",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/gate_i_experiments.py",
+        "build-gate-i/runner-before/baffle_noise_order.exe",
+        "build-gate-i/runner-after/baffle_noise_order.exe",
+        "build-acoustic/models",
+        "build-gate-h/input",
+        "build-gate-i/ablation-before",
+        "build-gate-i/hint-order"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Near spectral diagnostics",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/speech_preservation.py",
+        "build-gate-h/input",
+        "build-gate-i/ablation-after",
+        "build-gate-i/preservation.json"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Assistant-only preparation",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/assistant_only_fixtures.py",
+        "build-acoustic/word-seeded-a",
+        "build-gate-i/far-input"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Assistant-only scoring",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/paired_asr.py",
+        "run",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-gate-i/runner-after/baffle_vad_trace.exe",
+        "build-acoustic/models",
+        "build-gate-i/far-input",
+        "build-gate-i/far-results",
+        "--stages",
+        "raw",
+        "baffle",
+        "aec-ns",
+        "pipeline"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Recovery diagnostics",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/acoustic_recovery.py",
+        "build-gate-i/far-input",
+        "build-gate-i/far-results",
+        "build-gate-i/recovery-final.json"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Room replay",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/room_replay.py",
+        "replay",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-acoustic/rooms",
+        "build-gate-i/room-replay",
+        "--backends",
+        "baffle",
+        "aec-ns",
+        "pipeline"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "Real far ASR",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/recorded_far_asr.py",
+        "build-acoustic/models",
+        "build-acoustic/rooms",
+        "build-gate-i/room-replay",
+        "build-gate-i/recorded-far-asr.json"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "contention-16",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-i/contention-16",
+        "--sample-rate",
+        "16000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres"
+      ],
+      "note": "Reproducible wrapper configuration; original native invocation is preserved verbatim in each report.json. ASR input remains 16 kHz; use fresh output directories."
+    },
+    {
+      "label": "soak-16",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-16000-mic.f32",
+        "build-acoustic/rooms/controlled-16000-ref.f32",
+        "build-gate-i/soak-16",
+        "--sample-rate",
+        "16000",
+        "--seconds",
+        "300",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproducible wrapper configuration; original native invocation is preserved verbatim in each report.json. ASR input remains 16 kHz; use fresh output directories."
+    },
+    {
+      "label": "contention-48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-i/contention-48",
+        "--sample-rate",
+        "48000",
+        "--seconds",
+        "30",
+        "--wait-policy",
+        "highres"
+      ],
+      "note": "Reproducible wrapper configuration; original native invocation is preserved verbatim in each report.json. ASR input remains 16 kHz; use fresh output directories."
+    },
+    {
+      "label": "soak-48",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tools/inference_contention.py",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe",
+        "build-acoustic/models",
+        "build-acoustic/models/whisper/test_wavs/0.wav",
+        "build-acoustic/rooms/controlled-48000-mic.f32",
+        "build-acoustic/rooms/controlled-48000-ref.f32",
+        "build-gate-i/soak-48",
+        "--sample-rate",
+        "48000",
+        "--seconds",
+        "120",
+        "--wait-policy",
+        "highres",
+        "--workloads",
+        "whisper+parakeet+piper"
+      ],
+      "note": "Reproducible wrapper configuration; original native invocation is preserved verbatim in each report.json. ASR input remains 16 kHz; use fresh output directories."
+    },
+    {
+      "label": "CTest build-adapter",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-adapter",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction guard --no-tests=error is added; the retained initial empty shared-SDK run was not counted."
+    },
+    {
+      "label": "CTest build-shared",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-shared",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction guard --no-tests=error is added; the retained initial empty shared-SDK run was not counted."
+    },
+    {
+      "label": "CTest build-hail-consumer",
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build-hail-consumer",
+        "--output-on-failure",
+        "--no-tests=error"
+      ],
+      "note": "Reproduction guard --no-tests=error is added; the retained initial empty shared-SDK run was not counted."
+    },
+    {
+      "label": "MSVC tool smoke",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tests/acoustic_tools.py",
+        "build-gate-i/runner-msvc/Release/baffle_acoustic_runner.exe"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "clang-cl tool smoke",
+      "argv": [
+        "build-acoustic/venv/Scripts/python.exe",
+        "tests/acoustic_tools.py",
+        "build-gate-i/runner-after/baffle_acoustic_runner.exe"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "CI",
+      "argv": [
+        "gh",
+        "run",
+        "view",
+        "44840433515",
+        "--json",
+        "status,conclusion,url,headSha,jobs"
+      ],
+      "note": "Reproduction command; result receipts retain exact spawned native commands."
+    },
+    {
+      "label": "ARM64 fuzz pipeline",
+      "argv": [
+        "build-gate-i-fuzz/baffle_fuzz_pipeline",
+        "build-gate-i-corpus/pipeline",
+        "-runs=30000",
+        "-max_len=4096",
+        "-seed=722"
+      ],
+      "note": "Run on spark-7468 /tmp/baffle.fVOhT0 with Clang18 sanitizer configuration; retained log is authoritative for seed/arguments."
+    },
+    {
+      "label": "ARM64 fuzz transport",
+      "argv": [
+        "build-gate-i-fuzz/baffle_fuzz_transport",
+        "build-gate-i-corpus/transport",
+        "-runs=30000",
+        "-max_len=4096",
+        "-seed=721"
+      ],
+      "note": "Run on spark-7468 /tmp/baffle.fVOhT0 with Clang18 sanitizer configuration; retained log is authoritative for seed/arguments."
+    },
+    {
+      "label": "ARM64 fuzz aec",
+      "argv": [
+        "build-gate-i-fuzz/baffle_fuzz_aec",
+        "build-gate-i-corpus/aec",
+        "-runs=10000",
+        "-max_len=4096",
+        "-seed=723"
+      ],
+      "note": "Run on spark-7468 /tmp/baffle.fVOhT0 with Clang18 sanitizer configuration; retained log is authoritative for seed/arguments."
+    }
+  ]
+}

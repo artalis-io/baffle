@@ -139,6 +139,15 @@ remain deployment qualification work.
 
 ## Buffering and end-to-end latency
 
+Fresh [Gate I trials](gate-i.md#resources-verification-and-remaining-work) measure
+the complete pipeline under CPU Whisper+Parakeet+Piper contention: 16 kHz P99
+.13680 ms / maximum .32420 ms over 300 s; 48 kHz .38680 / .72020 ms over 120 s.
+Across all 14 trials (78,000 calls), no 10 ms completion or execution misses were
+observed. Workspace is 136,832 / 381,312 bytes, respectively, with the same 10 ms
+NS delay. These are finite mono replay trials, not guaranteed live latency.
+Raw execution, release lateness, sampled CPU/RSS and modeled queue receipts are
+retained separately in the Gate I evidence archive.
+
 SRC 48->16k group delay is 95.5 input frames =1.9896 ms; 16->48k is 31.5 input
 frames =1.96875 ms. AGC/limiter and VAD add no lookahead. Synchronous AEC requires
 a 10/20 ms input block but adds no Baffle output queue. NS adds one hop (10 ms

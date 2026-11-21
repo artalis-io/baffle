@@ -173,6 +173,12 @@ remain unavailable and should cause explicit bypass under strict policy.
 
 ## Speech conditioning and release blockers
 
+[Gate I](gate-i.md) adds paired stage/order tests, assistant-only recognition and
+16/48 kHz actual CPU inference contention. It does not close the physical room,
+independently reviewed interruption-onset or conversational release blockers.
+Default quiet-speech regressions and assistant-only transcripts remain failures;
+no stronger suppressor or speaker-attribution policy is inferred from RMS/VAD.
+
 Classical VAD confidence is not a calibrated probability. Evaluate real labelled
 speech/noise for false positives/negatives, onset/offset, fricatives, whispers,
 music and echo during double-talk. NS needs stationary/nonstationary noise and

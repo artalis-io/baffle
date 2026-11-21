@@ -1,0 +1,162 @@
+{
+  "frozen": [
+    {
+      "case": "protected-source0-0.025",
+      "recognizer": "whisper",
+      "error_before": 2.037451161738546e-05,
+      "error_after": 1.3080306731762992e-14,
+      "word_errors_before": 0,
+      "word_errors_after": 0,
+      "word_errors_raw": 0,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source0-0.025",
+      "recognizer": "parakeet",
+      "error_before": 2.037451161738546e-05,
+      "error_after": 1.3080306731762992e-14,
+      "word_errors_before": 0,
+      "word_errors_after": 0,
+      "word_errors_raw": 0,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source0-0.2",
+      "recognizer": "whisper",
+      "error_before": 2.037451161738546e-05,
+      "error_after": 1.3080306731762992e-14,
+      "word_errors_before": 0,
+      "word_errors_after": 0,
+      "word_errors_raw": 0,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source0-0.2",
+      "recognizer": "parakeet",
+      "error_before": 2.037451161738546e-05,
+      "error_after": 1.3080306731762992e-14,
+      "word_errors_before": 0,
+      "word_errors_after": 1,
+      "word_errors_raw": 1,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source0-0.65",
+      "recognizer": "whisper",
+      "error_before": 2.037448626145165e-05,
+      "error_after": 1.3030192881828528e-14,
+      "word_errors_before": 0,
+      "word_errors_after": 0,
+      "word_errors_raw": 0,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source0-0.65",
+      "recognizer": "parakeet",
+      "error_before": 2.037448626145165e-05,
+      "error_after": 1.3030192881828528e-14,
+      "word_errors_before": 1,
+      "word_errors_after": 1,
+      "word_errors_raw": 1,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.025",
+      "recognizer": "whisper",
+      "error_before": 0.0005087063052525494,
+      "error_after": 1.2814899855018213e-14,
+      "word_errors_before": 3,
+      "word_errors_after": 3,
+      "word_errors_raw": 3,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.025",
+      "recognizer": "parakeet",
+      "error_before": 0.0005087063052525494,
+      "error_after": 1.2814899855018213e-14,
+      "word_errors_before": 1,
+      "word_errors_after": 1,
+      "word_errors_raw": 1,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.2",
+      "recognizer": "whisper",
+      "error_before": 0.0005087063052525494,
+      "error_after": 1.2814899855018213e-14,
+      "word_errors_before": 3,
+      "word_errors_after": 3,
+      "word_errors_raw": 3,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.2",
+      "recognizer": "parakeet",
+      "error_before": 0.0005087063052525494,
+      "error_after": 1.2814899855018213e-14,
+      "word_errors_before": 1,
+      "word_errors_after": 1,
+      "word_errors_raw": 1,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.65",
+      "recognizer": "whisper",
+      "error_before": 0.0005087064965960265,
+      "error_after": 1.2981965579048615e-14,
+      "word_errors_before": 3,
+      "word_errors_after": 3,
+      "word_errors_raw": 3,
+      "normalized_hypothesis_matches_raw": true
+    },
+    {
+      "case": "protected-source1-0.65",
+      "recognizer": "parakeet",
+      "error_before": 0.0005087064965960265,
+      "error_after": 1.2981965579048615e-14,
+      "word_errors_before": 1,
+      "word_errors_after": 1,
+      "word_errors_raw": 1,
+      "normalized_hypothesis_matches_raw": true
+    }
+  ],
+  "order": {
+    "aec-agc-ns": [
+      {
+        "recognizer": "whisper",
+        "cases": 22,
+        "nonempty": 22,
+        "word_errors": 45,
+        "reference_words": 726
+      },
+      {
+        "recognizer": "parakeet",
+        "cases": 22,
+        "nonempty": 19,
+        "word_errors": 102,
+        "reference_words": 726
+      }
+    ],
+    "aec-ns-agc": [
+      {
+        "recognizer": "whisper",
+        "cases": 22,
+        "nonempty": 22,
+        "word_errors": 43,
+        "reference_words": 726
+      },
+      {
+        "recognizer": "parakeet",
+        "cases": 22,
+        "nonempty": 19,
+        "word_errors": 96,
+        "reference_words": 726
+      }
+    ]
+  },
+  "order_excluded_capture_epochs": true,
+  "asr_evaluations": 1120,
+  "committed_word_rate": null,
+  "new_default_order_or_suppressor": false
+}

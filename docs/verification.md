@@ -200,6 +200,14 @@ verification limits remain in the evidence ledger, not suppressed by tolerances.
 
 ## Reproduction
 
+[Gate I](gate-i.md) retains the before-fix NS regression, unchanged 8 dB AEC
+acceptance, eight-stage paired recognition, real/simulated assistant-only
+failures and fresh 16/48 kHz inference trials. Its
+[evidence ledger](evidence/2026-11-21-gate-i/README.md) separates local Windows /
+ARM64 sanitizer checks from cross-platform CI and unavailable physical evidence.
+The default recognition matrix is unchanged; this is a narrow NS contract fix,
+not production acoustic acceptance.
+
 ```sh
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBF_WITH_SPEEXDSP=ON
 cmake --build build --parallel

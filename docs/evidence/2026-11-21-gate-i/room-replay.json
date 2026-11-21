@@ -1,0 +1,3344 @@
+{
+  "runner_sha256": "a6463ed995a15800673a2636fb035c32629ffdae814c2c85d199806d8707d913",
+  "manifest_sha256": "e2d9fc9a7ca9bbe9af328682307e6a930c97245a2cc12e0505857cb4267b1c1f",
+  "metric_note": "Raw common-frame indexing; no output delay shifting or perceptual/phoneme inference",
+  "execution_verdict": "COMPLETE_MEASUREMENT",
+  "results": [
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 1.0753346224347815,
+        "total_output_power": 0.03875810049928259,
+        "execution_ms": {
+          "p50": 0.0215,
+          "p95": 0.02681499999999992,
+          "p99": 0.037,
+          "max": 0.0457
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "0ee56ff98a746b1dfc2ebd31c98c0007543bce882945764e8bb212c9fb15e101",
+      "raw_receipts_sha256": "c7f1277d4eb3119259cf42ac80c85f906d3e5755e2a63e6577c214184bc62e0e"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.8136756276083945,
+        "total_output_power": 0.020631385025188843,
+        "documented_delay_compensated_far_ratio_db": 3.820722355261512,
+        "execution_ms": {
+          "p50": 0.0366,
+          "p95": 0.04070499999999997,
+          "p99": 0.05730599999999986,
+          "max": 0.0684
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "aebdeeb968bc94b6e8ecf87b8e96a915f23ee931bcf3cc4f9585c2d2d0c2245d",
+      "raw_receipts_sha256": "de29eaa26d79e7762fcfd22635bbcb697bc35cde8c91322d56b4efe02b337baa"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.192686441748407,
+        "total_output_power": 0.0037724830972105257,
+        "documented_delay_compensated_far_ratio_db": 11.198893727775241,
+        "execution_ms": {
+          "p50": 0.0391,
+          "p95": 0.05470499999999997,
+          "p99": 0.0696,
+          "max": 0.0928
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "5bbf8398249ab0d01b11985cc7cd1e88abec5397c68b40370aae24158216b4a3",
+      "raw_receipts_sha256": "6b84875dc7622c09a2926192b75eda14002fb0f9cfae1b3d76bf6883dac642be"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.5440448790562183,
+        "total_output_power": 0.04380174967102721,
+        "execution_ms": {
+          "p50": 0.0209,
+          "p95": 0.0237,
+          "p99": 0.02910299999999993,
+          "max": 0.0453
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "755f8d593f1209f0883afefe9bd75d7f3771edf0c5bbe3736027dce007f4f824",
+      "raw_receipts_sha256": "a0241d1fc2ec9ca69eb87ff5abdf413c1c74c0e1d09a3a6055fb6907110172f5"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.205337593030848,
+        "total_output_power": 0.023733521789390186,
+        "documented_delay_compensated_far_ratio_db": 3.2116394875950345,
+        "execution_ms": {
+          "p50": 0.0367,
+          "p95": 0.043,
+          "p99": 0.057907999999999814,
+          "max": 0.0708
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "b37ef84619f0ed8f17ea35e277aa0f81a6753530e5368cfc511c21a1600f350c",
+      "raw_receipts_sha256": "012ef8d5b184ce786c1347ed575115ad056ae79ce5d79d1e19712ca2cdf2421b"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.307171799637231,
+        "total_output_power": 0.0036743351446526457,
+        "documented_delay_compensated_far_ratio_db": 11.313580593301008,
+        "execution_ms": {
+          "p50": 0.0381,
+          "p95": 0.0443,
+          "p99": 0.05810099999999997,
+          "max": 0.1968
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "4c5b06e049bc1f6036ea14f7c667b4ac31cc93a09edc177c8eb205114578dc7a",
+      "raw_receipts_sha256": "8a14d8ec1f3b441a88cf28ec6ccfb0d564075cea58360707648499f301feb0f6"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.0013461161113260194,
+        "total_output_power": 0.049662726451759225,
+        "execution_ms": {
+          "p50": 0.0204,
+          "p95": 0.023,
+          "p99": 0.03061099999999974,
+          "max": 0.0544
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "5d03f8f566520621a950eac6f74fd1bc612ea4163d878b02135f0bc5b19ea9d3",
+      "raw_receipts_sha256": "c3f30645076c8af15275e594635d5d691a96d090b5fa1290c3820c84896ba8f5"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.6226992982694357,
+        "total_output_power": 0.027141010741956215,
+        "documented_delay_compensated_far_ratio_db": 2.630353374958016,
+        "execution_ms": {
+          "p50": 0.0359,
+          "p95": 0.0394,
+          "p99": 0.04552399999999943,
+          "max": 0.0735
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "272529c1cdffc024e81f3d70f9892c3eab0b04fa4434ae72200355bd76879814",
+      "raw_receipts_sha256": "7ec712ecdab26ce57160f9eb8265d7bc2ab16bdbd58cb531a37ac1f58587dd8d"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.03607695507547,
+        "total_output_power": 0.00391100391996811,
+        "documented_delay_compensated_far_ratio_db": 11.04341643008568,
+        "execution_ms": {
+          "p50": 0.0379,
+          "p95": 0.0405,
+          "p99": 0.04390299999999993,
+          "max": 0.0756
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-16000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "44d8f088f3825cc10cd0b6f29ff308a857278d9235ef108109e71c9c3fa0f4d0",
+      "raw_receipts_sha256": "02d6cab4f15b7fdfcfbf32ad14453a518a65936de36cee410827f25142319d68"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.8044907895558371,
+        "total_output_power": 0.04575981000133834,
+        "execution_ms": {
+          "p50": 0.0637,
+          "p95": 0.07241499999999992,
+          "p99": 0.08780199999999995,
+          "max": 0.1554
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "6d2bd58078d3794c25ccfd65e1bfe4864a0dde300880dbd187bafa2154870f26",
+      "raw_receipts_sha256": "516788480b003c80e960dc4d0117f0ebedd7ee685903602fcdfc63e7fd4bae4e"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.454461015947233,
+        "total_output_power": 0.024859202377086023,
+        "documented_delay_compensated_far_ratio_db": 3.460134944073981,
+        "execution_ms": {
+          "p50": 0.1029,
+          "p95": 0.15000999999999995,
+          "p99": 0.18120299999999992,
+          "max": 0.2084
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "f84b39cd967b7f2dbffbc21ac6d0a32889f77881eea311e194f683b68e464033",
+      "raw_receipts_sha256": "87ca946f4603019399e87c5f7afc3e8a7a73fda76843b0d663f3ab26f7247514"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.254716003224573,
+        "total_output_power": 0.004125358460193078,
+        "documented_delay_compensated_far_ratio_db": 11.259512281436553,
+        "execution_ms": {
+          "p50": 0.1055,
+          "p95": 0.1184,
+          "p99": 0.16042599999999937,
+          "max": 0.2712
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "734459d20cb5d96d00dcac5014b8544d28cd07912dbfe6bca4932e31e4ce9237",
+      "raw_receipts_sha256": "d2f9e19574648466e6e84b4d0fa4fb1bd22af11caa6dcd8f2157a9816352c438"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.43930283366132783,
+        "total_output_power": 0.049774053257761505,
+        "execution_ms": {
+          "p50": 0.0636,
+          "p95": 0.08050999999999994,
+          "p99": 0.1083,
+          "max": 0.2869
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "a72220574b62ab5f87dc1edcce68e2bcccb6ae1568d9ec33f2a1a48bc9147a7d",
+      "raw_receipts_sha256": "a6b75b2c80eebce0a668127c9f0cab0d30199959ec0244f30f4a2e3873079274"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.0381411440248045,
+        "total_output_power": 0.02736019429290922,
+        "documented_delay_compensated_far_ratio_db": 3.0434339143065676,
+        "execution_ms": {
+          "p50": 0.0991,
+          "p95": 0.12341499999999991,
+          "p99": 0.1562,
+          "max": 0.2011
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "4a9595320d3fe9c4bf1ddfd9b5d76100522e494bf30b8a6c611d0757046498e0",
+      "raw_receipts_sha256": "fea43908b85e229b60a8ec7cef645f11b52fa269af028e48a073bbfbbd6c0f17"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.34646751734338,
+        "total_output_power": 0.004039117989005949,
+        "documented_delay_compensated_far_ratio_db": 11.351479948414697,
+        "execution_ms": {
+          "p50": 0.1075,
+          "p95": 0.11900999999999994,
+          "p99": 0.146801,
+          "max": 0.1941
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "894346c833fc7451123cbf2439bdadf6cec75efa8a92b0bde8f5d925fed733db",
+      "raw_receipts_sha256": "299a8d507a5afea0975db92a4e0b57d59c2fb5f70f88a90f00d74740b23b658c"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.003024444102183935,
+        "total_output_power": 0.05511067570993449,
+        "execution_ms": {
+          "p50": 0.0637,
+          "p95": 0.0718,
+          "p99": 0.083,
+          "max": 0.1171
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "23fa3de9cf45ca3e8c065397f38b64a078037ae108067c1cb6a344bfaf45f333",
+      "raw_receipts_sha256": "ab5dd7a28e28e02b9a79908599f423fd314e8be2e5db76cb1410f449ccdd45b7"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.5692379538834906,
+        "total_output_power": 0.030479616345393264,
+        "documented_delay_compensated_far_ratio_db": 2.5760703785490353,
+        "execution_ms": {
+          "p50": 0.1008,
+          "p95": 0.11190999999999994,
+          "p99": 0.1537,
+          "max": 0.2992
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "a8a7f32a9793c2e71014495497f6bad43318283a04ec7f7a04f3cf0c844ad3bf",
+      "raw_receipts_sha256": "fc6b544b9441c23350c75951a23a41dc3744ef531556dd32e296b062a25d4d31"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.187878659157013,
+        "total_output_power": 0.004189338236436292,
+        "documented_delay_compensated_far_ratio_db": 11.194912383998094,
+        "execution_ms": {
+          "p50": 0.1053,
+          "p95": 0.1162,
+          "p99": 0.1503199999999995,
+          "max": 0.1899
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_farend-singletalk-48000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "224ff3e4f7e3233afc77a8b086e18fe7a63dd5b734c98a5777d78c1bd669e356",
+      "raw_receipts_sha256": "6a66d986c542fad508383c34c023b5ff4476ab5fd0c41f1b75258b7486e23755"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.02921271488500428,
+        "total_output_power": 0.001680377508928359,
+        "execution_ms": {
+          "p50": 0.0247,
+          "p95": 0.0277,
+          "p99": 0.02935,
+          "max": 0.0422
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "44736478dfe914c774174149a38b8c679399ee7870af1cbcd4a72417c00d129b",
+      "raw_receipts_sha256": "ab020176a2a3cf01f6a943e28038cb78eb3aafa1034b16c7069a9a1829347b45"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.3043899767953833,
+        "total_output_power": 0.0009818532701257184,
+        "documented_delay_compensated_far_ratio_db": 2.3042251873876443,
+        "execution_ms": {
+          "p50": 0.0401,
+          "p95": 0.043,
+          "p99": 0.0482,
+          "max": 0.0739
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "27bdcde5e4128d9acc538fd36109c24a2a783654359e473efcaaf9ae0ccbdd23",
+      "raw_receipts_sha256": "545946a964fb7e3fff26849ca337450cbf7e711120564c2f865e094da099de93"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.7037026591537017,
+        "total_output_power": 0.001962708731409269,
+        "documented_delay_compensated_far_ratio_db": -0.7030180828587558,
+        "execution_ms": {
+          "p50": 0.042,
+          "p95": 0.0452,
+          "p99": 0.0497,
+          "max": 0.0699
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "bde8b53dec17d54584d0a23d7d213f1fc7e7ab67dbc62e70dbb3b67c550e6c6f",
+      "raw_receipts_sha256": "0d0408477319462b580c733c9ca2368bc62ab7fb0743f5a7118b35c05f927e0a"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.04083275353319077,
+        "total_output_power": 0.001684879568660108,
+        "execution_ms": {
+          "p50": 0.0244,
+          "p95": 0.0275,
+          "p99": 0.03065,
+          "max": 0.0419
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "98bede9e07420ea0197d1536a2ab47a045f1d28c484f2bf32bbd728b9bc9afd1",
+      "raw_receipts_sha256": "379d44843c364969409612921f80c735f885370c392d7410170a19aef5e0544e"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.3225381289171847,
+        "total_output_power": 0.0009777588952937894,
+        "documented_delay_compensated_far_ratio_db": 2.3223714629580856,
+        "execution_ms": {
+          "p50": 0.0402,
+          "p95": 0.0432,
+          "p99": 0.046475,
+          "max": 0.076
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "e5b53447d163f79248183205243da39a366bf153671f79554687c1ed69a3f538",
+      "raw_receipts_sha256": "c6c467b1fab9d7ce2691441bbeb5a0b32c433ad983a52cebfdaebcf10ba395c2"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.6321268397515531,
+        "total_output_power": 0.0019306265421920599,
+        "documented_delay_compensated_far_ratio_db": -0.6310154112414544,
+        "execution_ms": {
+          "p50": 0.042,
+          "p95": 0.045,
+          "p99": 0.061,
+          "max": 0.0944
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "165c810917ae95cd2c24fd764caf8c99a0a7e85c9e973b055ac13762c239b97b",
+      "raw_receipts_sha256": "4d49012e17e114edaf2de592ed09e9f2c629a0894de22c6fac1aa23c60690a3d"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.028835517752773872,
+        "total_output_power": 0.0016802315696913866,
+        "execution_ms": {
+          "p50": 0.0245,
+          "p95": 0.0276,
+          "p99": 0.0328,
+          "max": 0.0511
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "0117e1f6f4af07989bdbdebb2979a019528dc3c3d3b35784c7f1c71e5ff29578",
+      "raw_receipts_sha256": "7860d34be35fd5dcc92d4d09e16ad2328c7c6911ede7aaedbc76698c06e20c5c"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.333607115475061,
+        "total_output_power": 0.0009752700265559498,
+        "documented_delay_compensated_far_ratio_db": 2.333489189849745,
+        "execution_ms": {
+          "p50": 0.04,
+          "p95": 0.0431,
+          "p99": 0.0577,
+          "max": 0.0935
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "ab06d9c0e2bd30de432acfd6fdc8a63ff032647184107aa82fa9d31d6ef63603",
+      "raw_receipts_sha256": "623e901350ee2ad1a20e1285ee84e422a9e01104c5dfc549bf6e698becef5a4b"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.6825498355138743,
+        "total_output_power": 0.001953172370478676,
+        "documented_delay_compensated_far_ratio_db": -0.6766393444274187,
+        "execution_ms": {
+          "p50": 0.0417,
+          "p95": 0.0446,
+          "p99": 0.0542,
+          "max": 0.0675
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-16000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "93280b2f21de94cd249979052a158038967de3ff90979e38acd651fcb8ba54b5",
+      "raw_receipts_sha256": "f6e64785589d005a047e5c6d7791c332db2260fc1835b453a380311f471b0b2e"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.010248105120985581,
+        "total_output_power": 0.0016757575732966265,
+        "execution_ms": {
+          "p50": 0.0769,
+          "p95": 0.0854,
+          "p99": 0.106725,
+          "max": 0.135
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "3de7310c8f4731cd7a39f6fe59c4b3585da3c61b5af2e1a7a9f375977a6f5f10",
+      "raw_receipts_sha256": "b8e9dc6b8eadcc60692b4051442385eec25edc58f831f8f453c34e8ce8ed845a"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.3112439781644376,
+        "total_output_power": 0.0009818880679770311,
+        "documented_delay_compensated_far_ratio_db": 2.311074386313516,
+        "execution_ms": {
+          "p50": 0.1129,
+          "p95": 0.1213,
+          "p99": 0.134075,
+          "max": 0.1875
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "d5dd5fa436a410b3d68600d9aa683b43f419f8a1eb95edb773d60ae03c157f9f",
+      "raw_receipts_sha256": "d24cbdb492d65ca540cc6fbcb12e91ed9c69f892247a87d98fc69e7911b13673"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -2.674559195889956,
+        "total_output_power": 0.003094869206599854,
+        "documented_delay_compensated_far_ratio_db": -2.6739891903190136,
+        "execution_ms": {
+          "p50": 0.1185,
+          "p95": 0.127175,
+          "p99": 0.16285,
+          "max": 0.265
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "c5eac0c5eccf7e278b2ec42fce0102215f835855d75e75bd70ed170dec28f76b",
+      "raw_receipts_sha256": "9dcf938bc421ad7065ba73953c0f1bec03eed3571fbd2f577c3c2966ca9e6892"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.02221834602648229,
+        "total_output_power": 0.0016803827509623563,
+        "execution_ms": {
+          "p50": 0.0773,
+          "p95": 0.0852,
+          "p99": 0.0886,
+          "max": 0.1265
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "70fa9861e08f2379d3b21a44340b70bfb0c8671a20eb815d1bdb188b81839c4a",
+      "raw_receipts_sha256": "3b5d8d1800a781c7f186e75c64108cdf9cc9df3aaf15a530b5289e40edaee94e"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.352240346802947,
+        "total_output_power": 0.0009726628878481551,
+        "documented_delay_compensated_far_ratio_db": 2.352070673477379,
+        "execution_ms": {
+          "p50": 0.1132,
+          "p95": 0.121575,
+          "p99": 0.13175,
+          "max": 0.1959
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "7a3db7894fd4767272284432b22ae52801e57e0f7ee751d1ca390aa719401d01",
+      "raw_receipts_sha256": "f71d055cef48fe555970fa97cbeba6d76c7b3efb65ab83a142dcff17bc5d5315"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -2.613958001568948,
+        "total_output_power": 0.0030519834935323117,
+        "documented_delay_compensated_far_ratio_db": -2.61308814343052,
+        "execution_ms": {
+          "p50": 0.1183,
+          "p95": 0.127075,
+          "p99": 0.147725,
+          "max": 0.2114
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "f4712d3b36dc23fa01b25eeadf8991a0e035330bf5352703d635d394158a9575",
+      "raw_receipts_sha256": "97e07aa4eaeac2b0a1592018787b3ba1d8cc3f98b4c141c9b22be3691ff4658c"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -0.023967446718461755,
+        "total_output_power": 0.001681059653548194,
+        "execution_ms": {
+          "p50": 0.0769,
+          "p95": 0.086,
+          "p99": 0.11372499999999999,
+          "max": 0.14
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "8e548b2563c0b2ff0d93b312387f0fb844ee050910469cf3b10e8a9b075803a5",
+      "raw_receipts_sha256": "ffca82379f7bb54e263855d0cd000645e44f31132620ec083cb99d9eb8f10058"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 2.329093738347106,
+        "total_output_power": 0.0009778607318825007,
+        "documented_delay_compensated_far_ratio_db": 2.3289578607763617,
+        "execution_ms": {
+          "p50": 0.1127,
+          "p95": 0.120675,
+          "p99": 0.14115,
+          "max": 0.1824
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "6aed5890def51f0de2e017fb88a2e34ce5ab61be34c37f1a8530a5d3d15302fb",
+      "raw_receipts_sha256": "cd0c2131324f84516c3ae141585f70c5cb6634e97252268ade806c9d17d49f81"
+    },
+    {
+      "job": "00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": -2.7094513522617705,
+        "total_output_power": 0.003119834206839561,
+        "documented_delay_compensated_far_ratio_db": -2.706882869628842,
+        "execution_ms": {
+          "p50": 0.1177,
+          "p95": 0.1261,
+          "p99": 0.148825,
+          "max": 0.3055
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\00dPPLGk2UutnxcOfe5zTw_farend-singletalk-with-movement-48000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2426,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "a42e49f0e2189855984e9fba59eafdac7aadc2c691385ea16e45a512c0e1e44c",
+      "raw_receipts_sha256": "854f07d2dd4302b19c7631f8f6367052ae619c92e6ce7326ac438d1c84ef021c"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 7.441083061237686,
+        "total_output_power": 0.00615188739408768,
+        "execution_ms": {
+          "p50": 0.0252,
+          "p95": 0.0319,
+          "p99": 0.044703999999999904,
+          "max": 0.1872
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "34121d95f37654c76623ef16f567f623e43849319057d67df2aade43f0b7b05b",
+      "raw_receipts_sha256": "51ca751c29d8b2675e4726b188b5197ad78acdbff6bce6031870e129e503f9bf"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 9.980352005759006,
+        "total_output_power": 0.003428321031711425,
+        "documented_delay_compensated_far_ratio_db": 9.980352196900471,
+        "execution_ms": {
+          "p50": 0.0412,
+          "p95": 0.0446,
+          "p99": 0.05780499999999988,
+          "max": 0.0768
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "96a2d13be8e977d5f084eca15105549a1d3ffa713927ae44131114e7c405802e",
+      "raw_receipts_sha256": "74c57d9370d4660955670c938e4965caf36016a498084abad8d1f6a8580a49e4"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 13.695538191895052,
+        "total_output_power": 0.0014573466411391216,
+        "documented_delay_compensated_far_ratio_db": 13.695568730939474,
+        "execution_ms": {
+          "p50": 0.0426,
+          "p95": 0.0468,
+          "p99": 0.06120499999999988,
+          "max": 0.0786
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "7c27beb37a743b075d537215653f4804c44ec155ae8c2331c83249aa51c6a59f",
+      "raw_receipts_sha256": "18787cd24c9905bd92d0bc3f65d6fc0be4eb12f5b57d8c732b47b3987e27bb9d"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 1.6325498109511791,
+        "total_output_power": 0.023434824335090525,
+        "execution_ms": {
+          "p50": 0.0248,
+          "p95": 0.0274,
+          "p99": 0.03160399999999991,
+          "max": 0.0461
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "d881ba2ef4f9b6b9d82a10cd179e998b6f26d30f8405a42c01e8a037b94b168d",
+      "raw_receipts_sha256": "70c4267741bad8cb82dc488641556a57bd8d2b574f2618b308981149f663624c"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 4.465652464162208,
+        "total_output_power": 0.012205383707375575,
+        "documented_delay_compensated_far_ratio_db": 4.46565312202395,
+        "execution_ms": {
+          "p50": 0.0403,
+          "p95": 0.04310499999999997,
+          "p99": 0.0469,
+          "max": 0.067
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "2e931a5634ea61b633cdd8543e078f06e3e3da9945b18744828e4540364daa9e",
+      "raw_receipts_sha256": "a85d494161c161f56858baf738da1d2c3a573746e99b3a4c4d6c6019707fc13c"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 12.242563740520474,
+        "total_output_power": 0.0020363869699251027,
+        "documented_delay_compensated_far_ratio_db": 12.242565496447504,
+        "execution_ms": {
+          "p50": 0.0422,
+          "p95": 0.0449,
+          "p99": 0.052906999999999836,
+          "max": 0.1184
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "ee7320c269fbc4d52396a016e8ccd6d1a48329d63febfea2211c2ded0f5322eb",
+      "raw_receipts_sha256": "0e904fe9adf6267682ca2fc4bec61d293785f443edff05d06b23c62682fe1675"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.5567692844311612,
+        "total_output_power": 0.03002200929609535,
+        "execution_ms": {
+          "p50": 0.0247,
+          "p95": 0.0276,
+          "p99": 0.03360199999999995,
+          "max": 0.0561
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "2b8b08db0517c665715a1e860d2212e6aaf84488ae2f2ceaab33fd276dd71259",
+      "raw_receipts_sha256": "7759a4492366e9ce4ad9db2269a65b125c0e211df27f54f24550640e5d1cdbc7"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.4113691602810303,
+        "total_output_power": 0.01555893145479644,
+        "documented_delay_compensated_far_ratio_db": 3.4113687178768015,
+        "execution_ms": {
+          "p50": 0.0403,
+          "p95": 0.0459,
+          "p99": 0.0575,
+          "max": 0.0798
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "cd2eb5ad1ee33b27aa74269418dae816761b44aea4f3c6e1af562d78e8a17b04",
+      "raw_receipts_sha256": "95601f77f89991f4095f102a25937a6fc520b8906d2c57d0c588ba77846de628"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 11.420687646823637,
+        "total_output_power": 0.0024606390893082337,
+        "documented_delay_compensated_far_ratio_db": 11.420688780071501,
+        "execution_ms": {
+          "p50": 0.0427,
+          "p95": 0.049,
+          "p99": 0.06250299999999993,
+          "max": 0.0707
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-16000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "541b44c3aad212097e7a320305dfd358d2b64ccc8774dcf21eb302ac348271ec",
+      "raw_receipts_sha256": "3fc8ccd8aa409900d822df0e702eed7f4e734bf25004cd8f5a07fc4cc8245ee9"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 6.603174093790473,
+        "total_output_power": 0.007776851995754745,
+        "execution_ms": {
+          "p50": 0.0791,
+          "p95": 0.0874,
+          "p99": 0.0913,
+          "max": 0.147
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "f061bee4736c6434643b4b7833a342219934e64b35417c994ab37b1ca6bcb839",
+      "raw_receipts_sha256": "07949b047b942044df3a3d38dc36d0b0037605cb89e22e5faba67b3186ac6b92"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 9.129823460271616,
+        "total_output_power": 0.004346492125566744,
+        "documented_delay_compensated_far_ratio_db": 9.129823842622134,
+        "execution_ms": {
+          "p50": 0.1164,
+          "p95": 0.12730499999999997,
+          "p99": 0.1409,
+          "max": 0.1906
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "dd6f51d84d9a3c37e3f2e00e39034d115eb7a1bcaa56e6087c90c8cad30d0761",
+      "raw_receipts_sha256": "99af24fa7a861f2149f864d2b0e82e02526534b92ce2b7fa8a0e579c0ad623c5"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 12.371095544088991,
+        "total_output_power": 0.0020606853746535396,
+        "documented_delay_compensated_far_ratio_db": 12.371095943256687,
+        "execution_ms": {
+          "p50": 0.12004999999999999,
+          "p95": 0.12930499999999998,
+          "p99": 0.13820099999999996,
+          "max": 0.2018
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "035dac2491a358ea6df83903e1d5007448135da7d5634c3d2dfa87297ea35488",
+      "raw_receipts_sha256": "574df16ca6fce3f675b5067213302f9b780d6dcc33c767ea9568c553e3e53811"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 1.8052190344358607,
+        "total_output_power": 0.02347466156499771,
+        "execution_ms": {
+          "p50": 0.0776,
+          "p95": 0.0856,
+          "p99": 0.09421199999999973,
+          "max": 0.1353
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "961aad2467b8791e2be5ff6085a2ad78add72e87ea295bbdfaff6633660485ef",
+      "raw_receipts_sha256": "a2d96ebe0a13b5f560e8b8db4cd995120660c8d9c2a45b0e4841998d4a3530be"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 4.645347357202988,
+        "total_output_power": 0.012206369361860803,
+        "documented_delay_compensated_far_ratio_db": 4.645347568347332,
+        "execution_ms": {
+          "p50": 0.1135,
+          "p95": 0.1217,
+          "p99": 0.14370099999999997,
+          "max": 0.1871
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "2d41dc81aec61f61703fcbfcacf4daabcbed2b28ae566912a1cedfe2303691ae",
+      "raw_receipts_sha256": "d93c2a336443242de219e105f550c3479c6fde0bef63dcef44ff1c19e14d8771"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 9.908452630682811,
+        "total_output_power": 0.003633088524747959,
+        "documented_delay_compensated_far_ratio_db": 9.908457976189629,
+        "execution_ms": {
+          "p50": 0.1185,
+          "p95": 0.1274,
+          "p99": 0.1374049999999999,
+          "max": 0.199
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-fixed-offset-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "fe1faf069991681fdada299aa1ccb073670cd8ad251cdb353a4304bdca4614c1",
+      "raw_receipts_sha256": "de64f80d28a397c5e0e58489d5e6a5de3038e6d003254d08750b4a1fceec9208"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "baffle",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 0.5632822691622785,
+        "total_output_power": 0.031245898400365454,
+        "execution_ms": {
+          "p50": 0.0769,
+          "p95": 0.0851,
+          "p99": 0.09670499999999987,
+          "max": 0.1256
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-baffle.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-baffle.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "b9e4a00fe9dc970a65d1a1c5e79854bd9685f82c952dffdbc8592f8baf2ac8d4",
+      "raw_receipts_sha256": "19aea6018c0247f869d69ee8f25866681e0379b0a47acd65d9e607818fcf4227"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "aec-ns",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 3.3975350534126885,
+        "total_output_power": 0.01626925768304992,
+        "documented_delay_compensated_far_ratio_db": 3.3975341078859578,
+        "execution_ms": {
+          "p50": 0.1129,
+          "p95": 0.12170499999999998,
+          "p99": 0.1590039999999999,
+          "max": 0.1927
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-aec-ns.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-aec-ns.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "1f627abae573ee3d786c3f46a4edb49c8ff0c0e551ba135868c0fe9580a32d84",
+      "raw_receipts_sha256": "c241b442361cb4afb132d54332e2933480a25ecfe6d616deacc5dea1459c1d43"
+    },
+    {
+      "job": "02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine",
+      "scope": "recorded-far-only",
+      "backend": "pipeline",
+      "metrics": {
+        "far_only_mic_to_output_ratio_db": 9.608347780988023,
+        "total_output_power": 0.0038930184781027317,
+        "documented_delay_compensated_far_ratio_db": 9.608351011413543,
+        "execution_ms": {
+          "p50": 0.1173,
+          "p95": 0.126,
+          "p99": 0.14300499999999988,
+          "max": 0.1824
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-mic.f32",
+        "build-acoustic\\rooms\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-ref.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-pipeline.f32",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-pipeline.csv",
+        "build-gate-i\\room-replay\\02462e78-f05c-4ea4-be89-f69f283f6d1c_farend-singletalk-48000-training-affine-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "2233f887d5fb15b94b419dcf71c8f857d56102a95d596c36df5d5aa2a7dc3471",
+      "raw_receipts_sha256": "d07e97ca060a210cb9a7a88d8ed16866380e82634278be4d5a99188b06ab7629"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "baffle",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.0242,
+          "p95": 0.0271,
+          "p99": 0.029200999999999977,
+          "max": 0.1186
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "d1f95edbd413a7f6bb70e7a1b50a4f7dc63ebeab150cfbe05100e46a5eb76997",
+      "raw_receipts_sha256": "384e75fb51cd33d8a4484022658cb7f2458a45f468109c4eeedcd86847e28881"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "aec-ns",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.04,
+          "p95": 0.044,
+          "p99": 0.0534,
+          "max": 0.0896
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "1401299e8c9cbd4627219d7f03954fb6dbde822bf4a133f4d6a24e6009400107",
+      "raw_receipts_sha256": "78b92f29986f35e9bec4743ed4cac2e243a7a10cb6f8921ab6621cda961508b7"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "pipeline",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.0416,
+          "p95": 0.045,
+          "p99": 0.0533,
+          "max": 0.0706
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-16000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "a458d80888541851267486b9aa036a97b2a39de957142a2c29213c2afdc076ab",
+      "raw_receipts_sha256": "d584dae105accc875a8bf60b3e78c62d772c7ac41e3792e2f9cb74b63b573dd3"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "baffle",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.0769,
+          "p95": 0.0851,
+          "p99": 0.08990699999999983,
+          "max": 0.1229
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-baffle.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-baffle.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "5aaebe05dc25056919976d6f66e4514dbc622652a97233c8d8cd002041a01504",
+      "raw_receipts_sha256": "b874128f47a37fb1f7aade49a7032eec7e8fcaa791439f3e83fc1fe2ce68884a"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "aec-ns",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.1132,
+          "p95": 0.1216,
+          "p99": 0.13230199999999995,
+          "max": 0.182
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-aec-ns.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-aec-ns.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "6de8d7eecb27963b321bbe882e8f84402929e911ccf0ef112581b93b2636ed47",
+      "raw_receipts_sha256": "c5a83dff76ccf168a1dde9c242a7412613c2cb28036652da2e429aa8851ce734"
+    },
+    {
+      "job": "00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original",
+      "scope": "recorded-doubletalk-no-clean-oracle",
+      "backend": "pipeline",
+      "metrics": {
+        "execution_ms": {
+          "p50": 0.1179,
+          "p95": 0.12910499999999997,
+          "p99": 0.1586119999999997,
+          "max": 0.2473
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-mic.f32",
+        "build-acoustic\\rooms\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-ref.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-pipeline.f32",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-pipeline.csv",
+        "build-gate-i\\room-replay\\00113069-3e44-460a-be8d-9c252979a801_doubletalk-48000-original-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 3900,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "139f6dbe2410bea7a7bf1b905cd3bceb5936fa9409f15aa6736199d186f1e361",
+      "raw_receipts_sha256": "b6d1ffec0ea35264c095849c17eace0febf264e8121c731e585aee354a43cf51"
+    },
+    {
+      "job": "controlled-16000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "baffle",
+      "metrics": {
+        "raw_component_snr_improvement_db": 11.660800114742965,
+        "near_projection": 0.984345134597808,
+        "execution_ms": {
+          "p50": 0.0245,
+          "p95": 0.028004999999999974,
+          "p99": 0.0367,
+          "max": 0.0493
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-16000-baffle.f32",
+        "build-gate-i\\room-replay\\controlled-16000-baffle.csv",
+        "build-gate-i\\room-replay\\controlled-16000-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "d77a6b4e26275c11b4f1e5518746efb6be73eda3f592c6e6b483c41f08a054ef",
+      "raw_receipts_sha256": "b8cfe25c4220bd2f6769b2ec46aa062cf89306b7d3c53b7eef6cecaccb3e4b26"
+    },
+    {
+      "job": "controlled-16000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "aec-ns",
+      "metrics": {
+        "raw_component_snr_improvement_db": -2.585498463689148,
+        "near_projection": 0.18122278670210004,
+        "execution_ms": {
+          "p50": 0.04,
+          "p95": 0.0451,
+          "p99": 0.056500999999999975,
+          "max": 0.0752
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-16000-aec-ns.f32",
+        "build-gate-i\\room-replay\\controlled-16000-aec-ns.csv",
+        "build-gate-i\\room-replay\\controlled-16000-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "0e3a03c1e3d6c3bcf1f352ec2f092e8ab1453719f40b7fd86aa35e91fe7a99da",
+      "raw_receipts_sha256": "449578e8b97af4f97d35d3c4bb227f802ebf7ad3a30529f9850e7f5b1d36bdbd"
+    },
+    {
+      "job": "controlled-16000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "pipeline",
+      "metrics": {
+        "raw_component_snr_improvement_db": -11.03437610375142,
+        "near_projection": 0.6998834249631263,
+        "execution_ms": {
+          "p50": 0.0418,
+          "p95": 0.0447,
+          "p99": 0.046202999999999925,
+          "max": 0.0904
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\controlled-16000-mic.f32",
+        "build-acoustic\\rooms\\controlled-16000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-16000-pipeline.f32",
+        "build-gate-i\\room-replay\\controlled-16000-pipeline.csv",
+        "build-gate-i\\room-replay\\controlled-16000-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "7cce4ca7656ec20b326a7746f905fe16c78bafd5a765326ecc0199b72ce66648",
+      "raw_receipts_sha256": "c04fc937cd5fe773f9d3eb427f9ff9ac38582e0f1a92eca5173864fd2a7bbe4a"
+    },
+    {
+      "job": "controlled-48000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "baffle",
+      "metrics": {
+        "raw_component_snr_improvement_db": 14.603379278357984,
+        "near_projection": 0.9887244290492289,
+        "execution_ms": {
+          "p50": 0.0768,
+          "p95": 0.0928,
+          "p99": 0.11650499999999989,
+          "max": 0.1701
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\controlled-48000-mic.f32",
+        "build-acoustic\\rooms\\controlled-48000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-48000-baffle.f32",
+        "build-gate-i\\room-replay\\controlled-48000-baffle.csv",
+        "build-gate-i\\room-replay\\controlled-48000-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "e5a0b914d4fd4f0bb6679c57ade61f468384b023e241423811d0563c99eac1d5",
+      "raw_receipts_sha256": "e636b254307cfd3d75f8ed642a0f5a9c597ee6078a8a1b8d473327acc06cae6d"
+    },
+    {
+      "job": "controlled-48000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "aec-ns",
+      "metrics": {
+        "raw_component_snr_improvement_db": -2.394410630022196,
+        "near_projection": 0.18363509480655874,
+        "execution_ms": {
+          "p50": 0.1132,
+          "p95": 0.12260499999999998,
+          "p99": 0.13051599999999963,
+          "max": 0.1934
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\controlled-48000-mic.f32",
+        "build-acoustic\\rooms\\controlled-48000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-48000-aec-ns.f32",
+        "build-gate-i\\room-replay\\controlled-48000-aec-ns.csv",
+        "build-gate-i\\room-replay\\controlled-48000-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "cf2ec63eac4adc3dafcef412fa90cfb3415a543e3712ac100309213d66e28c91",
+      "raw_receipts_sha256": "3bd556db539169ec42881d340d0d8075f83f8402747a0a90c3423456ca00e2bd"
+    },
+    {
+      "job": "controlled-48000",
+      "scope": "simulated-echo-recorded-components",
+      "backend": "pipeline",
+      "metrics": {
+        "raw_component_snr_improvement_db": -11.061124748235518,
+        "near_projection": 0.7057796395235945,
+        "execution_ms": {
+          "p50": 0.1176,
+          "p95": 0.125905,
+          "p99": 0.13710999999999976,
+          "max": 0.254
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\controlled-48000-mic.f32",
+        "build-acoustic\\rooms\\controlled-48000-ref.f32",
+        "build-gate-i\\room-replay\\controlled-48000-pipeline.f32",
+        "build-gate-i\\room-replay\\controlled-48000-pipeline.csv",
+        "build-gate-i\\room-replay\\controlled-48000-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 2400,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "5c9f13396f178f0355552f9e165a2cf935ddf6fb5171d013e1ce809f0f0f0586",
+      "raw_receipts_sha256": "6138c2010c91d1bb75c51c3dbafbc1cf023b0d84f54fef0343b95ac4d02f7084"
+    },
+    {
+      "job": "near-impulse-16000",
+      "scope": "synthetic-latency-probe",
+      "backend": "baffle",
+      "metrics": {
+        "observed_near_peak_offset_frames": 0,
+        "near_peak": 0.099212646484375,
+        "execution_ms": {
+          "p50": 0.0204,
+          "p95": 0.025,
+          "p99": 0.03103499999999988,
+          "max": 0.0759
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "16000",
+        "build-acoustic\\rooms\\near-impulse-16000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-16000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-baffle.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-baffle.csv",
+        "build-gate-i\\room-replay\\near-impulse-16000-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 121968,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "aeff88cf910255c31c6ce751d98c611bbe2534d84e1a7a74fb51d16712ad98c2",
+      "raw_receipts_sha256": "78e0e2d3406516f1f16845e2a1924bec752e21b3f33fc14c3f13657af56a25c8"
+    },
+    {
+      "job": "near-impulse-16000",
+      "scope": "synthetic-latency-probe",
+      "backend": "aec-ns",
+      "metrics": {
+        "observed_near_peak_offset_frames": 160,
+        "near_peak": 0.0992126539349556,
+        "execution_ms": {
+          "p50": 0.03565,
+          "p95": 0.0374,
+          "p99": 0.04300199999999999,
+          "max": 0.0704
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "16000",
+        "build-acoustic\\rooms\\near-impulse-16000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-16000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-aec-ns.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-aec-ns.csv",
+        "build-gate-i\\room-replay\\near-impulse-16000-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136544,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 3
+      },
+      "output_sha256": "01114df157ba4c412c55c27d3cf0ff497952f826edeca04335867ae6b0e7302f",
+      "raw_receipts_sha256": "0c5ec46a6f53a836f1c46fed3cc8a91147a873926cbc271286cc9b6c0e4fade8"
+    },
+    {
+      "job": "near-impulse-16000",
+      "scope": "synthetic-latency-probe",
+      "backend": "pipeline",
+      "metrics": {
+        "observed_near_peak_offset_frames": 160,
+        "near_peak": 0.09819383919239044,
+        "execution_ms": {
+          "p50": 0.0376,
+          "p95": 0.05361,
+          "p99": 0.06483299999999996,
+          "max": 0.0739
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "16000",
+        "build-acoustic\\rooms\\near-impulse-16000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-16000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-pipeline.f32",
+        "build-gate-i\\room-replay\\near-impulse-16000-pipeline.csv",
+        "build-gate-i\\room-replay\\near-impulse-16000-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 16000,
+        "frames": 160,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 136832,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 160,
+        "stage_mask": 15
+      },
+      "output_sha256": "988f278e8e98f75d890c47b1134b12885d182406b246cd6d82b9dbd867de46b6",
+      "raw_receipts_sha256": "0a4fae2f0b7e9afcee781f6be0f0fee1bc7fcdbb593ae441f6b3a34d430edcbc"
+    },
+    {
+      "job": "near-impulse-48000",
+      "scope": "synthetic-latency-probe",
+      "backend": "baffle",
+      "metrics": {
+        "observed_near_peak_offset_frames": 0,
+        "near_peak": 0.0997314453125,
+        "execution_ms": {
+          "p50": 0.0631,
+          "p95": 0.070705,
+          "p99": 0.073109,
+          "max": 0.1046
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "baffle",
+        "48000",
+        "build-acoustic\\rooms\\near-impulse-48000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-48000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-baffle.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-baffle.csv",
+        "build-gate-i\\room-replay\\near-impulse-48000-baffle.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 348528,
+        "baffle_tail_ms": 200,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 0,
+        "stage_mask": 1
+      },
+      "output_sha256": "0b14cc105331be9b538a13b3dca6af84794d45859703b684472cd5c1cd5fd2c7",
+      "raw_receipts_sha256": "e8a8d76101335b384c4697d195356dd13701137e6f198254b715eb0c0bfd083d"
+    },
+    {
+      "job": "near-impulse-48000",
+      "scope": "synthetic-latency-probe",
+      "backend": "aec-ns",
+      "metrics": {
+        "observed_near_peak_offset_frames": 480,
+        "near_peak": 0.0997314378619194,
+        "execution_ms": {
+          "p50": 0.0989,
+          "p95": 0.1038,
+          "p99": 0.12038099999999993,
+          "max": 0.1397
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "aec-ns",
+        "48000",
+        "build-acoustic\\rooms\\near-impulse-48000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-48000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-aec-ns.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-aec-ns.csv",
+        "build-gate-i\\room-replay\\near-impulse-48000-aec-ns.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381024,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 3
+      },
+      "output_sha256": "6fbde15f129997d05c64eb8c043f4cb536bebea1414a4c1f02953ac46e450af9",
+      "raw_receipts_sha256": "0cd36f39d03dba0d0f0e23c3e5c898bb8d6424798205da5b7cb16be4745d9f6d"
+    },
+    {
+      "job": "near-impulse-48000",
+      "scope": "synthetic-latency-probe",
+      "backend": "pipeline",
+      "metrics": {
+        "observed_near_peak_offset_frames": 480,
+        "near_peak": 0.09870779514312744,
+        "execution_ms": {
+          "p50": 0.1043,
+          "p95": 0.11443999999999999,
+          "p99": 0.14551699999999998,
+          "max": 0.1508
+        },
+        "observed_allocation_calls": null
+      },
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-i\\runner-after\\baffle_acoustic_runner.exe",
+        "pipeline",
+        "48000",
+        "build-acoustic\\rooms\\near-impulse-48000-mic.f32",
+        "build-acoustic\\rooms\\near-impulse-48000-ref.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-pipeline.f32",
+        "build-gate-i\\room-replay\\near-impulse-48000-pipeline.csv",
+        "build-gate-i\\room-replay\\near-impulse-48000-pipeline.json"
+      ],
+      "stderr": "",
+      "native_summary": {
+        "rate": 48000,
+        "frames": 480,
+        "calls": 200,
+        "wait_policy": "standard-sleep",
+        "paced_seconds": 0,
+        "workspace_bytes": 381312,
+        "baffle_tail_ms": 0,
+        "rss_before_init_kib": -1,
+        "rss_after_init_kib": -1,
+        "rss_after_process_kib": -1,
+        "process_peak_rss_kib": -1,
+        "completion_deadline_misses": 0,
+        "execution_deadline_misses": 0,
+        "added_pipeline_delay_frames": 480,
+        "stage_mask": 15
+      },
+      "output_sha256": "292dceaf61a0379fd4475123b26c307f9992d3589c344b1e3065641a1bdabab5",
+      "raw_receipts_sha256": "5d6d41ace3fdeea6e58b049e0cba29d6e574229655593f5ac8b5938507c4024c"
+    }
+  ]
+}

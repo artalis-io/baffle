@@ -201,3 +201,42 @@ results remain retained; no model-specific gain workaround was added to DSP.
 See [Gate H](../../docs/gate-h.md) for the measured failures, calibrated-onset
 limits and actual workload timings. PCM, models and human review files are not
 automatically published or included in ordinary CI.
+
+## Gate I preservation and acoustic diagnostics
+
+The runner also accepts `agc-only`, `aec-agc` and `ns-agc`. Select all eight
+variants explicitly; the old five-stage command default is unchanged:
+
+```sh
+python tools/paired_asr.py run acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_vad_trace models paired-input eight-stage --stages raw baffle ns-only agc-only aec-ns aec-agc ns-agc pipeline
+python tools/paired_asr_summary.py paired-input/manifest.json eight-stage/results.json eight-stage-summary.json
+python tools/speech_preservation.py paired-input eight-stage preservation.json
+python tools/gate_i_experiments.py before-tools/baffle_noise_order acoustic-tools/baffle_noise_order models paired-input eight-stage hint-order
+python tools/assistant_only_fixtures.py seeded assistant-input
+python tools/paired_asr.py run acoustic-tools/baffle_acoustic_runner acoustic-tools/baffle_vad_trace models assistant-input assistant-results --stages raw baffle aec-ns pipeline
+python tools/acoustic_recovery.py assistant-input assistant-results recovery.json
+python tools/room_replay.py replay acoustic-tools/baffle_acoustic_runner room-input room-results --backends baffle aec-ns pipeline
+python tools/recorded_far_asr.py models room-input room-results recorded-far-asr.json
+```
+
+Build before/after tools against their respective installed SDKs, not private
+source headers. `baffle_noise_order protected RATE INPUT.f32 OUTPUT.f32 RECEIPT`
+explicitly freezes learning on foreground with no prior noise; `agc-ns` changes
+the ordering of the existing processors. Both accept mono 16/48 kHz, preallocate
+DSP memory, and retain the one-hop prefix plus real final samples. File and
+receipt work is outside processing calls. The order probe has no capture-epoch
+adapter: those cases remain in the complete eight-stage matrix, not the matched
+order comparison. Frozen learning does not bypass an existing noise estimate.
+
+The spectral diagnostic is 16 kHz only and does not certify phoneme preservation.
+Recovery curves use declared digital thresholds and complete integer-frame
+windows; they do not measure audible tails or provide convergence probabilities.
+Assistant-only recognized words are not committed words. Input/output PCM stays
+local; retained hashes and commands permit comparison without redistributing it.
+
+`inference_contention.py` additionally accepts `--sample-rate 48000`; default is
+16000. Supply matching DSP microphone/reference PCM while keeping ASR input at
+the fixed 16 kHz model rate. Use separate fresh directories for 30-second single
+workloads and longer combined trials. ASR remains rolling offline re-decoding,
+not a validated streaming engine. See [Gate I](../../docs/gate-i.md) and its
+command ledger for the executed configurations, failed cases and limitations.
