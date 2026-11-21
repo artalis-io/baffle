@@ -1,0 +1,23 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/baffle.fVOhT0/build-fuzz
+[  6%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 12%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 18%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 25%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 31%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 37%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 43%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 50%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 56%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[ 62%] Linking C static library libbaffle.a
+[ 62%] Built target baffle
+[ 68%] Building C object CMakeFiles/baffle_fuzz_aec.dir/fuzz/aec.c.o
+[ 75%] Building C object CMakeFiles/baffle_fuzz_transport.dir/fuzz/transport.c.o
+[ 81%] Building C object CMakeFiles/baffle_fuzz_pipeline.dir/fuzz/pipeline.c.o
+[ 87%] Linking C executable baffle_fuzz_transport
+[ 93%] Linking C executable baffle_fuzz_aec
+[100%] Linking C executable baffle_fuzz_pipeline
+[100%] Built target baffle_fuzz_transport
+[100%] Built target baffle_fuzz_aec
+[100%] Built target baffle_fuzz_pipeline

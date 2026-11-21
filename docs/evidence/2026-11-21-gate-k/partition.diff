@@ -1,0 +1,11 @@
+--- pinned/mdf.c
++++ partition/mdf.c
+@@ -365,7 +365,7 @@
+    }
+    for (i=0;i<M;i++)
+    {
+-      prop[i] += MULT16_16_Q15(QCONST16(.1f,15),max_sum);
++      prop[i] += MULT16_16_Q15(QCONST16(.3f,15),max_sum);
+       prop_sum += EXTEND32(prop[i]);
+    }
+    for (i=0;i<M;i++)

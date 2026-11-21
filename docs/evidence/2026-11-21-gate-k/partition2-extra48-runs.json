@@ -1,0 +1,60 @@
+{
+  "tool_sha256": "d4ac3e45d3aa6b1702b182ce9f38106c4d37185c2c6601baf21cf4668dc758fd",
+  "manifest_sha256": "70b400c8b9f0a4ca893d4ab07f2e62d50b077f280e94bad31b20f824f53c375c",
+  "results": [
+    {
+      "name": "stationary-48000",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\partition2-build\\baffle_adaptive_trace.exe",
+        "48000",
+        "10",
+        "200",
+        "build-gate-k\\extra48-input\\stationary-48000-mic.f32",
+        "build-gate-k\\extra48-input\\stationary-48000-ref.f32",
+        "build-gate-k\\partition2-extra48\\stationary-48000.f32",
+        "build-gate-k\\partition2-extra48\\stationary-48000.csv",
+        "build-gate-k\\partition2-extra48\\stationary-48000-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "abrupt-48000",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\partition2-build\\baffle_adaptive_trace.exe",
+        "48000",
+        "10",
+        "200",
+        "build-gate-k\\extra48-input\\abrupt-48000-mic.f32",
+        "build-gate-k\\extra48-input\\abrupt-48000-ref.f32",
+        "build-gate-k\\partition2-extra48\\abrupt-48000.f32",
+        "build-gate-k\\partition2-extra48\\abrupt-48000.csv",
+        "build-gate-k\\partition2-extra48\\abrupt-48000-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "doubletalk-48000",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\partition2-build\\baffle_adaptive_trace.exe",
+        "48000",
+        "10",
+        "200",
+        "build-gate-k\\extra48-input\\doubletalk-48000-mic.f32",
+        "build-gate-k\\extra48-input\\doubletalk-48000-ref.f32",
+        "build-gate-k\\partition2-extra48\\doubletalk-48000.f32",
+        "build-gate-k\\partition2-extra48\\doubletalk-48000.csv",
+        "build-gate-k\\partition2-extra48\\doubletalk-48000-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[  5%] Building C object CMakeFiles/baffle_speex_kernel.dir/src/speex/mdf_baffle.c.o
+[ 15%] Building C object CMakeFiles/baffle_speex_kernel.dir/build-aec/_deps/baffle_speex_source-src/libspeexdsp/smallft.c.o
+[ 15%] Building C object CMakeFiles/baffle_speex_kernel.dir/build-aec/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c.o
+[ 15%] Built target baffle_speex_kernel
+[ 21%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 31%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 31%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 36%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 42%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 47%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 52%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 57%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 63%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[ 68%] Linking C static library libbaffle.a
+[ 68%] Built target baffle
+[ 73%] Building C object CMakeFiles/baffle_fuzz_transport.dir/fuzz/transport.c.o
+[ 78%] Building C object CMakeFiles/baffle_fuzz_aec.dir/fuzz/aec.c.o
+[ 84%] Building C object CMakeFiles/baffle_fuzz_pipeline.dir/fuzz/pipeline.c.o
+[ 89%] Linking C executable baffle_fuzz_transport
+[ 94%] Linking C executable baffle_fuzz_aec
+[100%] Linking C executable baffle_fuzz_pipeline
+[100%] Built target baffle_fuzz_transport
+[100%] Built target baffle_fuzz_aec
+[100%] Built target baffle_fuzz_pipeline

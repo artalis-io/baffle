@@ -1,0 +1,18 @@
+-- Install configuration: "Release"
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/share/licenses/Baffle/SpeexDSP-COPYING
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/share/licenses/Baffle/SpeexDSP-source-notices.txt
+-- Installing: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/baffle.lib
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/include/baffle.h
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/share/licenses/Baffle/LICENSE
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/share/licenses/Baffle/NOTICE
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/Baffle/BaffleTargets.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/Baffle/BaffleTargets-release.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/Baffle/BaffleConfig.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/Baffle/BaffleConfigVersion.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/pkgconfig/baffle.pc
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/baffle_hail_adapter.lib
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/include/baffle/hail.h
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/BaffleHail/BaffleHailTargets.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/BaffleHail/BaffleHailTargets-release.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/BaffleHail/BaffleHailConfig.cmake
+-- Up-to-date: C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk/lib/cmake/BaffleHail/BaffleHailConfigVersion.cmake

@@ -1,0 +1,32 @@
+[1/32] Building C object CMakeFiles\baffle.dir\src\core.c.obj
+[2/32] Building C object CMakeFiles\baffle.dir\src\pcm.c.obj
+[3/32] Building C object CMakeFiles\baffle.dir\src\clock.c.obj
+[4/32] Building C object CMakeFiles\baffle.dir\src\resampler.c.obj
+[5/32] Building C object CMakeFiles\baffle.dir\src\channels.c.obj
+[6/32] Building C object CMakeFiles\baffle.dir\src\conditioning.c.obj
+[7/32] Building C object CMakeFiles\baffle.dir\src\noise.c.obj
+[8/32] Building C object CMakeFiles\baffle.dir\src\aec.c.obj
+[9/32] Building C object CMakeFiles\baffle.dir\src\pipeline.c.obj
+[10/32] Building C object CMakeFiles\baffle_conformance.dir\tests\conformance.c.obj
+[11/32] Building C object CMakeFiles\baffle_pcm.dir\tests\pcm.c.obj
+[12/32] Building C object CMakeFiles\baffle_numerical.dir\tests\numerical.c.obj
+[13/32] Building C object CMakeFiles\baffle_qualify.dir\tools\qualify.c.obj
+[14/32] Building C object CMakeFiles\baffle_pipeline.dir\tests\pipeline.c.obj
+[15/32] Building C object CMakeFiles\baffle_conditioning.dir\tests\conditioning.c.obj
+[16/32] Building C object CMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj
+[17/32] Building C object CMakeFiles\baffle_hail_adapter.dir\adapters\hail.c.obj
+[18/32] Linking C static library baffle.lib
+[19/32] Building C object CMakeFiles\baffle_aec.dir\tests\aec.c.obj
+[20/32] Building C object CMakeFiles\baffle_latency.dir\bench\latency.c.obj
+[21/32] Linking C executable baffle_conformance.exe
+[22/32] Linking C executable baffle_pcm.exe
+[23/32] Linking C static library baffle_hail_adapter.lib
+[24/32] Linking C executable baffle_numerical.exe
+[25/32] Linking C executable baffle_conditioning.exe
+[26/32] Linking C executable baffle_pipeline.exe
+[27/32] Linking C executable baffle_qualify.exe
+[28/32] Linking C executable baffle_adaptive_trace.exe
+[29/32] Linking C executable baffle_aec.exe
+[30/32] Linking C executable baffle_latency.exe
+[31/32] Building CXX object CMakeFiles\baffle_concurrency.dir\tests\concurrency.cpp.obj
+[32/32] Linking CXX executable baffle_concurrency.exe

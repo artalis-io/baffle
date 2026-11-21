@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Mark\artalis.io\src\baffle\tests\adaptive_tools.py", line 23, in <module>
+    subprocess.run([str(tool),'16000','10','200',str(p/'mic.f32'),str(p/'ref.f32'),str(p/'out.f32'),str(p/'trace.csv'),str(p/'coeff.f32'),'0'],check=True)
+  File "C:\Users\Mark\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mark\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\Mark\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified

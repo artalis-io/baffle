@@ -1,0 +1,2 @@
+/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/mdf.c:707:20: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior /tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/mdf.c:707:20 

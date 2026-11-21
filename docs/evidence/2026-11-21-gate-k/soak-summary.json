@@ -1,0 +1,10 @@
+{
+  "audio_seconds": 1800.0,
+  "calls": 180000,
+  "nonfinite_output": 0,
+  "peak": 0.17279052734375,
+  "native_recovery_events": 28,
+  "last_public_resets": 28,
+  "all_recovery_events_flagged": true,
+  "limits": "Accelerated virtual audio, not a 30-minute wall-clock or physical soak"
+}

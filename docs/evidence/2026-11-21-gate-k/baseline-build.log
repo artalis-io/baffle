@@ -1,0 +1,66 @@
+[1/17] Building C object CMakeFiles\baffle.dir\src\core.c.obj
+[2/17] Building C object CMakeFiles\baffle.dir\src\clock.c.obj
+[3/17] Building C object CMakeFiles\baffle.dir\src\pcm.c.obj
+[4/17] Building C object CMakeFiles\baffle.dir\src\channels.c.obj
+[5/17] Building C object CMakeFiles\baffle.dir\src\resampler.c.obj
+[6/17] Building C object CMakeFiles\baffle.dir\src\conditioning.c.obj
+[7/17] Building C object CMakeFiles\baffle.dir\src\aec.c.obj
+[8/17] Building C object CMakeFiles\baffle.dir\src\noise.c.obj
+[9/17] Building C object CMakeFiles\baffle_speex_kernel.dir\C_\Users\Mark\artalis.io\src\baffle\build-speex-source\libspeexdsp\fftwrap.c.obj
+[10/17] Building C object CMakeFiles\baffle.dir\src\pipeline.c.obj
+[11/17] Building C object CMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj
+FAILED: [code=1] CMakeFiles/baffle_adaptive_trace.dir/tools/adaptive_trace.c.obj 
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin\clang-cl.exe"  /nologo -DBF_HAVE_SPEEXDSP=1 -DBF_STATIC -Dspeex_echo_cancel=baffle_speex_echo_cancel -Dspeex_echo_cancellation=baffle_speex_echo_cancellation -Dspeex_echo_capture=baffle_speex_echo_capture -Dspeex_echo_ctl=baffle_speex_echo_ctl -Dspeex_echo_get_residual=baffle_speex_echo_get_residual -Dspeex_echo_playback=baffle_speex_echo_playback -Dspeex_echo_state_destroy=baffle_speex_echo_state_destroy -Dspeex_echo_state_init=baffle_speex_echo_state_init -Dspeex_echo_state_init_mc=baffle_speex_echo_state_init_mc -Dspeex_echo_state_reset=baffle_speex_echo_state_reset -Dspx_drft_backward=baffle_spx_drft_backward -Dspx_drft_clear=baffle_spx_drft_clear -Dspx_drft_forward=baffle_spx_drft_forward -Dspx_drft_init=baffle_spx_drft_init -Dspx_fft=baffle_spx_fft -Dspx_fft_destroy=baffle_spx_fft_destroy -Dspx_fft_float=baffle_spx_fft_float -Dspx_fft_init=baffle_spx_fft_init -Dspx_ifft=baffle_spx_ifft -Dspx_ifft_float=baffle_spx_ifft_float -IC:\Users\Mark\artalis.io\src\baffle\build-speex-source\include -IC:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-build\speex-config -IC:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /fp:precise -clang:-MD -clang:-MTCMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj -clang:-MFCMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj.d /FoCMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj /FdCMakeFiles\baffle_adaptive_trace.dir\ -c -- C:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\tools\adaptive_trace.c
+C:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\tools\adaptive_trace.c(12,15): error: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Werror,-Wdeprecated-declarations]
+   12 |     FILE *f = fopen(path, "rb"); require(f != NULL);
+      |               ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(212,20): note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+C:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\tools\adaptive_trace.c(33,20): error: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Werror,-Wdeprecated-declarations]
+   33 |     FILE *output = fopen(argv[6], "wb"), *trace = fopen(argv[7], "w"), *coeff = fopen(argv[8], "wb");
+      |                    ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(212,20): note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+C:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\tools\adaptive_trace.c(33,51): error: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Werror,-Wdeprecated-declarations]
+   33 |     FILE *output = fopen(argv[6], "wb"), *trace = fopen(argv[7], "w"), *coeff = fopen(argv[8], "wb");
+      |                                                   ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(212,20): note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+C:\Users\Mark\artalis.io\src\baffle\build-gate-k\baseline-source\tools\adaptive_trace.c(33,81): error: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Werror,-Wdeprecated-declarations]
+   33 |     FILE *output = fopen(argv[6], "wb"), *trace = fopen(argv[7], "w"), *coeff = fopen(argv[8], "wb");
+      |                                                                                 ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(212,20): note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+4 errors generated.
+[12/17] Building C object CMakeFiles\baffle_qualify.dir\tools\qualify.c.obj
+[13/17] Building C object CMakeFiles\baffle_speex_kernel.dir\src\speex\mdf_baffle.c.obj
+[14/17] Building C object CMakeFiles\baffle_speex_kernel.dir\C_\Users\Mark\artalis.io\src\baffle\build-speex-source\libspeexdsp\smallft.c.obj
+ninja: build stopped: subcommand failed.

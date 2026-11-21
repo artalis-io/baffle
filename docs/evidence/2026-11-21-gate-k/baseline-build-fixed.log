@@ -1,0 +1,4 @@
+[1/4] Linking C static library baffle.lib
+[2/4] Building C object CMakeFiles\baffle_adaptive_trace.dir\tools\adaptive_trace.c.obj
+[3/4] Linking C executable baffle_qualify.exe
+[4/4] Linking C executable baffle_adaptive_trace.exe

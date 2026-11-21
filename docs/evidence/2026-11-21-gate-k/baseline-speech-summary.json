@@ -1,0 +1,994 @@
+{
+  "groups": [
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 9,
+        "substitutions": 6,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.045454545454545456
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.125,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 293,
+        "substitutions": 180,
+        "deletions": 23,
+        "insertions": 90,
+        "reference_length": 264,
+        "rate": 1.1098484848484849
+      },
+      "character": {
+        "errors": 847,
+        "substitutions": 507,
+        "deletions": 132,
+        "insertions": 208,
+        "reference_length": 1156,
+        "rate": 0.7326989619377162
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.16666666666666666,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 157,
+        "substitutions": 77,
+        "deletions": 41,
+        "insertions": 39,
+        "reference_length": 198,
+        "rate": 0.7929292929292929
+      },
+      "character": {
+        "errors": 496,
+        "substitutions": 215,
+        "deletions": 184,
+        "insertions": 97,
+        "reference_length": 867,
+        "rate": 0.5720876585928489
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 190,
+        "substitutions": 126,
+        "deletions": 0,
+        "insertions": 64,
+        "reference_length": 132,
+        "rate": 1.4393939393939394
+      },
+      "character": {
+        "errors": 558,
+        "substitutions": 372,
+        "deletions": 22,
+        "insertions": 164,
+        "reference_length": 578,
+        "rate": 0.9653979238754326
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 103,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 103,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 374,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 374,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "raw",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 3,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 17,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 9,
+        "substitutions": 6,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.045454545454545456
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 12,
+        "substitutions": 8,
+        "deletions": 4,
+        "insertions": 0,
+        "reference_length": 264,
+        "rate": 0.045454545454545456
+      },
+      "character": {
+        "errors": 4,
+        "substitutions": 0,
+        "deletions": 4,
+        "insertions": 0,
+        "reference_length": 1156,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 12,
+        "substitutions": 8,
+        "deletions": 3,
+        "insertions": 1,
+        "reference_length": 198,
+        "rate": 0.06060606060606061
+      },
+      "character": {
+        "errors": 13,
+        "substitutions": 3,
+        "deletions": 4,
+        "insertions": 6,
+        "reference_length": 867,
+        "rate": 0.014994232987312572
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 8,
+        "substitutions": 5,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 132,
+        "rate": 0.06060606060606061
+      },
+      "character": {
+        "errors": 4,
+        "substitutions": 2,
+        "deletions": 2,
+        "insertions": 0,
+        "reference_length": 578,
+        "rate": 0.006920415224913495
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 29,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 29,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 145,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 145,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 3,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 17,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 10,
+        "substitutions": 7,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.050505050505050504
+      },
+      "character": {
+        "errors": 5,
+        "substitutions": 2,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0057670126874279125
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 12,
+        "substitutions": 8,
+        "deletions": 4,
+        "insertions": 0,
+        "reference_length": 264,
+        "rate": 0.045454545454545456
+      },
+      "character": {
+        "errors": 4,
+        "substitutions": 0,
+        "deletions": 4,
+        "insertions": 0,
+        "reference_length": 1156,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 13,
+        "substitutions": 9,
+        "deletions": 3,
+        "insertions": 1,
+        "reference_length": 198,
+        "rate": 0.06565656565656566
+      },
+      "character": {
+        "errors": 11,
+        "substitutions": 4,
+        "deletions": 4,
+        "insertions": 3,
+        "reference_length": 867,
+        "rate": 0.012687427912341407
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 13,
+        "substitutions": 9,
+        "deletions": 4,
+        "insertions": 0,
+        "reference_length": 132,
+        "rate": 0.09848484848484848
+      },
+      "character": {
+        "errors": 21,
+        "substitutions": 13,
+        "deletions": 6,
+        "insertions": 2,
+        "reference_length": 578,
+        "rate": 0.03633217993079585
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 2,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 10,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 3,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 17,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 3,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.015151515151515152
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.125,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 283,
+        "substitutions": 186,
+        "deletions": 45,
+        "insertions": 52,
+        "reference_length": 264,
+        "rate": 1.071969696969697
+      },
+      "character": {
+        "errors": 887,
+        "substitutions": 529,
+        "deletions": 244,
+        "insertions": 114,
+        "reference_length": 1156,
+        "rate": 0.7673010380622838
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 3,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 208,
+        "substitutions": 53,
+        "deletions": 142,
+        "insertions": 13,
+        "reference_length": 198,
+        "rate": 1.0505050505050506
+      },
+      "character": {
+        "errors": 799,
+        "substitutions": 132,
+        "deletions": 639,
+        "insertions": 28,
+        "reference_length": 867,
+        "rate": 0.9215686274509803
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 0.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 154,
+        "substitutions": 92,
+        "deletions": 36,
+        "insertions": 26,
+        "reference_length": 132,
+        "rate": 1.1666666666666667
+      },
+      "character": {
+        "errors": 480,
+        "substitutions": 250,
+        "deletions": 174,
+        "insertions": 56,
+        "reference_length": 578,
+        "rate": 0.8304498269896193
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 103,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 103,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 374,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 374,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "raw",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 2,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 0,
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 3,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.015151515151515152
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 2,
+      "new_empty_speech_vs_raw": 2,
+      "first_word_accuracy": 0.5,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 71,
+        "substitutions": 13,
+        "deletions": 53,
+        "insertions": 5,
+        "reference_length": 264,
+        "rate": 0.2689393939393939
+      },
+      "character": {
+        "errors": 265,
+        "substitutions": 5,
+        "deletions": 247,
+        "insertions": 13,
+        "reference_length": 1156,
+        "rate": 0.2292387543252595
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 6,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_length": 198,
+        "rate": 0.030303030303030304
+      },
+      "character": {
+        "errors": 5,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 2,
+        "reference_length": 867,
+        "rate": 0.0057670126874279125
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 7,
+        "substitutions": 4,
+        "deletions": 2,
+        "insertions": 1,
+        "reference_length": 132,
+        "rate": 0.05303030303030303
+      },
+      "character": {
+        "errors": 4,
+        "substitutions": 0,
+        "deletions": 2,
+        "insertions": 2,
+        "reference_length": 578,
+        "rate": 0.006920415224913495
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 2,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 0,
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 2,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 0,
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "near-only",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 3,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 198,
+        "rate": 0.015151515151515152
+      },
+      "character": {
+        "errors": 3,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 0,
+        "reference_length": 867,
+        "rate": 0.0034602076124567475
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "doubletalk",
+      "cases": 8,
+      "empty_hypotheses": 3,
+      "new_empty_speech_vs_raw": 3,
+      "first_word_accuracy": 0.25,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 151,
+        "substitutions": 9,
+        "deletions": 138,
+        "insertions": 4,
+        "reference_length": 264,
+        "rate": 0.571969696969697
+      },
+      "character": {
+        "errors": 632,
+        "substitutions": 7,
+        "deletions": 613,
+        "insertions": 12,
+        "reference_length": 1156,
+        "rate": 0.5467128027681661
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "cancellation",
+      "cases": 6,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": 1.0,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 6,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_length": 198,
+        "rate": 0.030303030303030304
+      },
+      "character": {
+        "errors": 5,
+        "substitutions": 0,
+        "deletions": 3,
+        "insertions": 2,
+        "reference_length": 867,
+        "rate": 0.0057670126874279125
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "recovery",
+      "cases": 4,
+      "empty_hypotheses": 1,
+      "new_empty_speech_vs_raw": 1,
+      "first_word_accuracy": 0.75,
+      "false_transcription_cases": null,
+      "word": {
+        "errors": 26,
+        "substitutions": 5,
+        "deletions": 20,
+        "insertions": 1,
+        "reference_length": 132,
+        "rate": 0.19696969696969696
+      },
+      "character": {
+        "errors": 92,
+        "substitutions": 1,
+        "deletions": 89,
+        "insertions": 2,
+        "reference_length": 578,
+        "rate": 0.15916955017301038
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "far-only",
+      "cases": 2,
+      "empty_hypotheses": 0,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 2,
+      "word": {
+        "errors": 40,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 40,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 148,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 148,
+        "reference_length": 0,
+        "rate": null
+      }
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "group": "silence",
+      "cases": 2,
+      "empty_hypotheses": 2,
+      "new_empty_speech_vs_raw": 0,
+      "first_word_accuracy": null,
+      "false_transcription_cases": 0,
+      "word": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      },
+      "character": {
+        "errors": 0,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_length": 0,
+        "rate": null
+      }
+    }
+  ],
+  "engineering_checks": [
+    {
+      "recognizer": "whisper",
+      "stage": "baffle",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "whisper",
+      "stage": "pipeline",
+      "near_only_regressions": [
+        "source1-near-quiet"
+      ],
+      "new_blank_speech_cases": [],
+      "near_nonregression": "FAIL",
+      "no_new_blanks": "PASS",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "baffle",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [
+        "source0-doubletalk",
+        "source0-loud-doubletalk"
+      ],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "PASS"
+    },
+    {
+      "recognizer": "parakeet",
+      "stage": "pipeline",
+      "near_only_regressions": [],
+      "new_blank_speech_cases": [
+        "source0-doubletalk",
+        "source0-loud-doubletalk",
+        "source0-capture-epoch",
+        "source1-doubletalk"
+      ],
+      "near_nonregression": "PASS",
+      "no_new_blanks": "FAIL",
+      "pooled_doubletalk_error_reduction": "PASS",
+      "far_only_zero_transcription": "FAIL"
+    }
+  ],
+  "gate_h": "PARTIAL",
+  "limits": "Conservative zero-added-error/blank checks; not app-approved onset or physical qualification. No WER/CER is defined for empty references; insertions and false-transcription counts remain explicit."
+}

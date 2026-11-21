@@ -1,0 +1,24 @@
+Internal ctest changing into directory: /tmp/baffle.fVOhT0/build-k-tsan
+Test project /tmp/baffle.fVOhT0/build-k-tsan
+    Start 1: conformance
+1/9 Test #1: conformance ......................   Passed    0.01 sec
+    Start 2: pcm
+2/9 Test #2: pcm ..............................   Passed    0.02 sec
+    Start 3: numerical
+3/9 Test #3: numerical ........................   Passed    2.84 sec
+    Start 4: conditioning
+4/9 Test #4: conditioning .....................   Passed    0.25 sec
+    Start 5: aec
+5/9 Test #5: aec ..............................   Passed   34.13 sec
+    Start 6: pipeline
+6/9 Test #6: pipeline .........................   Passed    5.03 sec
+    Start 7: concurrency
+7/9 Test #7: concurrency ......................   Passed    2.12 sec
+    Start 8: noalloc
+8/9 Test #8: noalloc ..........................   Passed    2.72 sec
+    Start 9: adaptive_recovery
+9/9 Test #9: adaptive_recovery ................   Passed    3.85 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =  50.97 sec

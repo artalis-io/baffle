@@ -1,0 +1,384 @@
+{
+  "tool_sha256": "5600f2a83ca9bd0286834bd972c28d90c4901d03f7fc6e981d28716b8f8466e0",
+  "manifest_sha256": "b482cd8b615fb3cc8862ee37049923bf3007026d4c8b9b469eb3b5555590960b",
+  "results": [
+    {
+      "name": "stationary",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\stationary-mic.f32",
+        "build-gate-k\\input\\stationary-ref.f32",
+        "build-gate-k\\readiness-paths\\stationary.f32",
+        "build-gate-k\\readiness-paths\\stationary.csv",
+        "build-gate-k\\readiness-paths\\stationary-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "abrupt",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\abrupt-mic.f32",
+        "build-gate-k\\input\\abrupt-ref.f32",
+        "build-gate-k\\readiness-paths\\abrupt.f32",
+        "build-gate-k\\readiness-paths\\abrupt.csv",
+        "build-gate-k\\readiness-paths\\abrupt-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "gradual",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\gradual-mic.f32",
+        "build-gate-k\\input\\gradual-ref.f32",
+        "build-gate-k\\readiness-paths\\gradual.f32",
+        "build-gate-k\\readiness-paths\\gradual.csv",
+        "build-gate-k\\readiness-paths\\gradual-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "gain-change",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\gain-change-mic.f32",
+        "build-gate-k\\input\\gain-change-ref.f32",
+        "build-gate-k\\readiness-paths\\gain-change.f32",
+        "build-gate-k\\readiness-paths\\gain-change.csv",
+        "build-gate-k\\readiness-paths\\gain-change-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "delay-change",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\delay-change-mic.f32",
+        "build-gate-k\\input\\delay-change-ref.f32",
+        "build-gate-k\\readiness-paths\\delay-change.f32",
+        "build-gate-k\\readiness-paths\\delay-change.csv",
+        "build-gate-k\\readiness-paths\\delay-change-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "long-tail",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\long-tail-mic.f32",
+        "build-gate-k\\input\\long-tail-ref.f32",
+        "build-gate-k\\readiness-paths\\long-tail.f32",
+        "build-gate-k\\readiness-paths\\long-tail.csv",
+        "build-gate-k\\readiness-paths\\long-tail-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "quiet-ref",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\quiet-ref-mic.f32",
+        "build-gate-k\\input\\quiet-ref-ref.f32",
+        "build-gate-k\\readiness-paths\\quiet-ref.f32",
+        "build-gate-k\\readiness-paths\\quiet-ref.csv",
+        "build-gate-k\\readiness-paths\\quiet-ref-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "very-quiet-ref",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\very-quiet-ref-mic.f32",
+        "build-gate-k\\input\\very-quiet-ref-ref.f32",
+        "build-gate-k\\readiness-paths\\very-quiet-ref.f32",
+        "build-gate-k\\readiness-paths\\very-quiet-ref.csv",
+        "build-gate-k\\readiness-paths\\very-quiet-ref-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "noise",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\noise-mic.f32",
+        "build-gate-k\\input\\noise-ref.f32",
+        "build-gate-k\\readiness-paths\\noise.f32",
+        "build-gate-k\\readiness-paths\\noise.csv",
+        "build-gate-k\\readiness-paths\\noise-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\doubletalk-mic.f32",
+        "build-gate-k\\input\\doubletalk-ref.f32",
+        "build-gate-k\\readiness-paths\\doubletalk.f32",
+        "build-gate-k\\readiness-paths\\doubletalk.csv",
+        "build-gate-k\\readiness-paths\\doubletalk-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "quiet-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\quiet-doubletalk-mic.f32",
+        "build-gate-k\\input\\quiet-doubletalk-ref.f32",
+        "build-gate-k\\readiness-paths\\quiet-doubletalk.f32",
+        "build-gate-k\\readiness-paths\\quiet-doubletalk.csv",
+        "build-gate-k\\readiness-paths\\quiet-doubletalk-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "loud-doubletalk",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\loud-doubletalk-mic.f32",
+        "build-gate-k\\input\\loud-doubletalk-ref.f32",
+        "build-gate-k\\readiness-paths\\loud-doubletalk.f32",
+        "build-gate-k\\readiness-paths\\loud-doubletalk.csv",
+        "build-gate-k\\readiness-paths\\loud-doubletalk-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "near-only",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\near-only-mic.f32",
+        "build-gate-k\\input\\near-only-ref.f32",
+        "build-gate-k\\readiness-paths\\near-only.f32",
+        "build-gate-k\\readiness-paths\\near-only.csv",
+        "build-gate-k\\readiness-paths\\near-only-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "reference-gap",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\reference-gap-mic.f32",
+        "build-gate-k\\input\\reference-gap-ref.f32",
+        "build-gate-k\\readiness-paths\\reference-gap.f32",
+        "build-gate-k\\readiness-paths\\reference-gap.csv",
+        "build-gate-k\\readiness-paths\\reference-gap-coeff.f32",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "drift-positive",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\drift-positive-mic.f32",
+        "build-gate-k\\input\\drift-positive-ref.f32",
+        "build-gate-k\\readiness-paths\\drift-positive.f32",
+        "build-gate-k\\readiness-paths\\drift-positive.csv",
+        "build-gate-k\\readiness-paths\\drift-positive-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "drift-negative",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\drift-negative-mic.f32",
+        "build-gate-k\\input\\drift-negative-ref.f32",
+        "build-gate-k\\readiness-paths\\drift-negative.f32",
+        "build-gate-k\\readiness-paths\\drift-negative.csv",
+        "build-gate-k\\readiness-paths\\drift-negative-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "holdout-reflections",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\holdout-reflections-mic.f32",
+        "build-gate-k\\input\\holdout-reflections-ref.f32",
+        "build-gate-k\\readiness-paths\\holdout-reflections.f32",
+        "build-gate-k\\readiness-paths\\holdout-reflections.csv",
+        "build-gate-k\\readiness-paths\\holdout-reflections-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "holdout-noise",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "200",
+        "build-gate-k\\input\\holdout-noise-mic.f32",
+        "build-gate-k\\input\\holdout-noise-ref.f32",
+        "build-gate-k\\readiness-paths\\holdout-noise.f32",
+        "build-gate-k\\readiness-paths\\holdout-noise.csv",
+        "build-gate-k\\readiness-paths\\holdout-noise-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "abrupt-hop20-tail200",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "20",
+        "200",
+        "build-gate-k\\input\\abrupt-mic.f32",
+        "build-gate-k\\input\\abrupt-ref.f32",
+        "build-gate-k\\readiness-paths\\abrupt-hop20-tail200.f32",
+        "build-gate-k\\readiness-paths\\abrupt-hop20-tail200.csv",
+        "build-gate-k\\readiness-paths\\abrupt-hop20-tail200-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "long-tail-hop10-tail500",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "500",
+        "build-gate-k\\input\\long-tail-mic.f32",
+        "build-gate-k\\input\\long-tail-ref.f32",
+        "build-gate-k\\readiness-paths\\long-tail-hop10-tail500.f32",
+        "build-gate-k\\readiness-paths\\long-tail-hop10-tail500.csv",
+        "build-gate-k\\readiness-paths\\long-tail-hop10-tail500-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "abrupt-hop10-tail40",
+      "command": [
+        "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-gate-k\\readiness-build\\baffle_adaptive_trace.exe",
+        "16000",
+        "10",
+        "40",
+        "build-gate-k\\input\\abrupt-mic.f32",
+        "build-gate-k\\input\\abrupt-ref.f32",
+        "build-gate-k\\readiness-paths\\abrupt-hop10-tail40.f32",
+        "build-gate-k\\readiness-paths\\abrupt-hop10-tail40.csv",
+        "build-gate-k\\readiness-paths\\abrupt-hop10-tail40-coeff.f32",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

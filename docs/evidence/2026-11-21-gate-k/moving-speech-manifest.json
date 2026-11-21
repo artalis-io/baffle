@@ -1,0 +1,115 @@
+{
+  "jobs": [
+    {
+      "name": "moving-source0-doubletalk",
+      "scenario": "moving-doubletalk",
+      "rate": 16000,
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "source_id": 0,
+      "constructed_insertion_frame_not_reviewed_onset": 128000,
+      "asr_frames": [
+        120000,
+        242000
+      ],
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "cancel_s": null,
+      "frames": 384000,
+      "mic": "moving-source0-doubletalk-mic.f32",
+      "mic_sha256": "bf4aea5d87cc5546bcb38e8c81e80b149c536110f7f6b78ac17bf731cf68b3b8",
+      "reference": "moving-source0-doubletalk-reference.f32",
+      "reference_sha256": "17d1bdd9ecee12d9632667a93f0ac51d44f0d32fad6cb61570f0fc3bd72796fa",
+      "oracle": "moving-source0-doubletalk-oracle.f32",
+      "oracle_sha256": "a383104328ac65b6d37446e76e40323a058a836334df47c31ade2da96242ea32"
+    },
+    {
+      "name": "moving-source0-quiet-doubletalk",
+      "scenario": "moving-quiet-doubletalk",
+      "rate": 16000,
+      "reference_transcript": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "source_id": 0,
+      "constructed_insertion_frame_not_reviewed_onset": 128000,
+      "asr_frames": [
+        120000,
+        242000
+      ],
+      "near_peak": 0.025,
+      "far_peak": 0.5,
+      "cancel_s": null,
+      "frames": 384000,
+      "mic": "moving-source0-quiet-doubletalk-mic.f32",
+      "mic_sha256": "2bcb45627867f6dedafdf3418a246c6a86e69d2d244375b8264710ef23319f32",
+      "reference": "moving-source0-quiet-doubletalk-reference.f32",
+      "reference_sha256": "31ecc583a48f76185a6f608d3dd9b1c5b386bc56ea962f7f1f4006a058ff37f2",
+      "oracle": "moving-source0-quiet-doubletalk-oracle.f32",
+      "oracle_sha256": "59137e9f6a49d27cda53e0552a5393b21ad9f01e997dda73c96c3796331f1cc6"
+    },
+    {
+      "name": "moving-source1-doubletalk",
+      "scenario": "moving-doubletalk",
+      "rate": 16000,
+      "reference_transcript": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONOURED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "source_id": 1,
+      "constructed_insertion_frame_not_reviewed_onset": 128000,
+      "asr_frames": [
+        120000,
+        403440
+      ],
+      "near_peak": 0.2,
+      "far_peak": 0.25,
+      "cancel_s": null,
+      "frames": 411520,
+      "mic": "moving-source1-doubletalk-mic.f32",
+      "mic_sha256": "c7671764a7f64bfad21c87020bffd11b5a0fee809e1efd724cfe403f18ba3dca",
+      "reference": "moving-source1-doubletalk-reference.f32",
+      "reference_sha256": "ffc324564f31b2752761fbaf85fb869abd8c50be249e6006a29fbcff04a34740",
+      "oracle": "moving-source1-doubletalk-oracle.f32",
+      "oracle_sha256": "3708fe68a55cb75a272ecd2f8acdb089a6f1a35b63a2fc0a6c904df37d390cfd"
+    },
+    {
+      "name": "moving-source1-quiet-doubletalk",
+      "scenario": "moving-quiet-doubletalk",
+      "rate": 16000,
+      "reference_transcript": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONOURED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "source_id": 1,
+      "constructed_insertion_frame_not_reviewed_onset": 128000,
+      "asr_frames": [
+        120000,
+        403440
+      ],
+      "near_peak": 0.025,
+      "far_peak": 0.5,
+      "cancel_s": null,
+      "frames": 411520,
+      "mic": "moving-source1-quiet-doubletalk-mic.f32",
+      "mic_sha256": "ca714934a3d81f6018a060c91a37d8e9122f02f54f43131413ecf4c1e15c61b2",
+      "reference": "moving-source1-quiet-doubletalk-reference.f32",
+      "reference_sha256": "e54c27bc3fd0daea57257f741ca8abc6253c64202411a22ddc529f5f7d666b54",
+      "oracle": "moving-source1-quiet-doubletalk-oracle.f32",
+      "oracle_sha256": "71ea7dc902fb563157740715b89d786664e4bf19f3bb9d76be9c29b1ee9e6c1a"
+    }
+  ],
+  "sources": [
+    {
+      "id": 0,
+      "sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS"
+    },
+    {
+      "id": 1,
+      "sha256": "5143a6ba93c4b274e2c4ac22deb75c2c48936c853f0519add1de828b6c79cc5a",
+      "reference": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONOURED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN"
+    }
+  ],
+  "policy": {
+    "near_only_max_added_word_errors_per_case": 0,
+    "maximum_added_empty_speech_cases": 0,
+    "doubletalk_requires_pooled_error_reduction": true,
+    "far_only_target_nonempty": 0,
+    "phone_onset_policy": null,
+    "physical_or_conversational_acceptance": false
+  },
+  "parent_manifest_sha256": "8883422d045c67e3c355eea3bb7e9b091d26b480f7cf9352256ae155cd2d04b3",
+  "preparation_script_sha256": "e4f3157e64fc504f33f9ec29479a01789f50a9047f9b3d151bd8aa464cdff488",
+  "scope": "Non-tuning extra moving-path mixtures, same independent provider transcripts and near/ref recordings. FIRs fixed by the holdout-reflections protocol, switch at12s. Not new blind speech or physical rooms."
+}
