@@ -3966,6 +3966,16 @@
       "file": "corrected-identity-far/startup-pipeline.f32",
       "bytes": 1536640,
       "sha256": "0e092ef275fecc855626d6957d1dca03441a29f24528ea3fb44f84e3298be4a6"
+    },
+    {
+      "file": "counter-before-coeff.f32",
+      "bytes": 614400,
+      "sha256": "33d9a21144d054f4aaf886c021b8cc5922921ce745d9fee985d1c198c642c58e"
+    },
+    {
+      "file": "counter-before.f32",
+      "bytes": 1536000,
+      "sha256": "4add17712dba03eddc62ccd003f5e1babc8e590da8f1933d9687a06e44de79ef"
     }
   ],
   "original_inputs": "Unchanged Gate H/I caches and pinned provider/model/transcript identities; see previous ledgers. Coefficient snapshots are F32 too, retained locally."
