@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=Néhány úgy vélék, igaza volt, de sokan hitték az ellenkezőjét, hogy a naprendszer a fölfelő farog, beleérve a napot, sőt, a többi csillagot is.
+validated_last_two_start_seconds=9.92000008
+decode_ms=1133

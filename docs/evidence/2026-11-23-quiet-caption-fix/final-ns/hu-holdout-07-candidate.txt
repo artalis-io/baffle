@@ -1,0 +1,43 @@
+REPLAY queue_capacity=512 input_frames=299520
+DECODE frames=5600 sha256=c10f8e29f0d7bb94421081f570d49374aed3e7ca68b5fbde30d26bdfdde54949 last_two=-1 text=Uh
+DECODE frames=16480 sha256=60936f58ec1e9123c3a32a7af1bfb9ee28337097aa723552a9d67a700619268e last_two=0.479999989 text=After what you
+DECODE frames=27520 sha256=88addcec775a300db3a48ad86ff0380787e156da956b96f37532411b4b71cf13 last_two=0.399999976 text=I startup Francia
+DECODE frames=39360 sha256=88dd1aac343177ae678b8d2565faf52051356323354f5b758e03d09490e60da1 last_two=-1 text=Francia
+DECODE frames=51840 sha256=45e93b4ab5eaaae93fee72d11acaa0e61b247669f363acc3a1dd62cfa616c05a last_two=-1 text=Francia
+DECODE frames=65280 sha256=4e4fb01a4081ca118c3702398809e85560582812a76c751f753fd1ca6b59e898 last_two=1.03999996 text=Francia. Francja.
+DECODE frames=79520 sha256=6e8f0c399efbc4bc13e699dc81e091e5a9b7d6dcd766526f56bd526a40e77c2a last_two=3.91999984 text=Francia Kurata Francia and Akurat
+DECODE frames=94720 sha256=00ff130389da323d5518c964a22b5f0a873fe0e118aa3de682e64e28295748ee last_two=1.67999995 text=Francia curata Francia.
+DECODE frames=110720 sha256=b45d4e742313329b5a53743852007d5922b8c42da7cc343b4bc18a22c688fe64 last_two=5.35999966 text=Francia Francia Quarto Azak Franza
+DECODE frames=128000 sha256=d17dd1e772ec054eab0c233b4bd1e570f7cd2140bd5a21444e55bb3922833122 last_two=1.03999996 text=Francia curata.
+DECODE frames=128000 sha256=a30a9e3a4eb5526dc3e4c287e20f86e46b3202d053421aefcd788db764daaaff last_two=7.5999999 text=Tavichi francia curvature. Ezek francia ember. Ezek nagymám pömpiik is kötöttek a min.
+DECODE frames=51360 sha256=e12ba2e360f4cfc98eb8d1f04642982b9b5328f5c0015bc552ab82425902a29b last_two=1.91999996 text=Vähän pämpiikytöttäkään ei ole.
+DECODE frames=64480 sha256=5da897865f7386ec6af2ebfb11c4c4e55861f12be385e873e36d908b7d739740 last_two=-1 text=
+DECODE frames=78400 sha256=92a0064dcc53b20450de60cb6dc447274e4f1abaeb652442e6864e2228deba7e last_two=-1 text=Vämpämpiikyttäkään.
+DECODE frames=93280 sha256=2fdbb9435e154b003eb44f07309dbdf6558bc8b7c9748871aec5315284a88cd0 last_two=4.71999979 text=Vämpämpiikyttäk. Mattäkkaa, jos on katsoa, kun tulkkaa tuo kohta.
+DECODE frames=109120 sha256=047076db45853d6a59bae236abd8739d37409d65a172250e0e457b2d223e9093 last_two=6.15999985 text=Is on tulkaa tulkosta, hogy haastan.
+DECODE frames=125920 sha256=aca184b23b3fd39adbb2108dd24c4244db7243861bbe8b561ceb83fc2ea08949 last_two=-1 text=
+DECODE frames=128000 sha256=5ccee40ab3100a79755a4a14527f8b15cdf61c9a956a1907ba09a68404f865e9 last_two=7.19999981 text=Is a patty ollaukkaa tulkosta ahajat, hogy haastorta kun äänellä.
+DECODE frames=44960 sha256=4bf931b508bb9e00fd868909f290643c5ee05ee9df535ecf2a11556aae81e160 last_two=1.27999997 text=hogy hátszoltak volna ellen.
+HISTORY=Tavichi francia curvature. Ezek francia ember. Ezek nagymám pömpiik is kötöttek Is a patty ollaukkaa tulkosta ahajat, hogy haastorta hogy hátszoltak volna ellen.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=90
+MEASURE index=0 decode_ms=50.166800 completed_after_source_start_ms=3063.358400
+MEASURE index=1 decode_ms=90.805400 completed_after_source_start_ms=3769.284100
+MEASURE index=2 decode_ms=129.591000 completed_after_source_start_ms=4499.357600
+MEASURE index=3 decode_ms=171.914800 completed_after_source_start_ms=5299.546500
+MEASURE index=4 decode_ms=221.356900 completed_after_source_start_ms=6133.014900
+MEASURE index=5 decode_ms=269.710000 completed_after_source_start_ms=7020.450000
+MEASURE index=6 decode_ms=324.180400 completed_after_source_start_ms=7960.352500
+MEASURE index=7 decode_ms=381.919500 completed_after_source_start_ms=8963.992700
+MEASURE index=8 decode_ms=440.735100 completed_after_source_start_ms=10031.357200
+MEASURE index=9 decode_ms=507.330100 completed_after_source_start_ms=11170.171800
+MEASURE index=10 decode_ms=511.303900 completed_after_source_start_ms=11681.773000
+MEASURE index=11 decode_ms=220.288300 completed_after_source_start_ms=12507.726000
+MEASURE index=12 decode_ms=266.727600 completed_after_source_start_ms=13375.774900
+MEASURE index=13 decode_ms=320.089000 completed_after_source_start_ms=14315.297700
+MEASURE index=14 decode_ms=378.690300 completed_after_source_start_ms=15304.897800
+MEASURE index=15 decode_ms=439.424500 completed_after_source_start_ms=16359.023300
+MEASURE index=16 decode_ms=501.903100 completed_after_source_start_ms=17465.958600
+MEASURE index=17 decode_ms=506.848500 completed_after_source_start_ms=17973.086300
+MEASURE index=18 decode_ms=197.248900 completed_after_source_start_ms=18170.630000

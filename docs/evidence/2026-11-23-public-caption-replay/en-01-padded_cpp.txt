@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.
+validated_last_two_start_seconds=9.28
+decode_ms=1357

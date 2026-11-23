@@ -1,0 +1,15 @@
+REPLAY queue_capacity=128 input_frames=168960
+DECODE frames=5600 sha256=e9b0e9fe82d205aa3756e5e38af95fcd67fdfb141b60878136898a2c6a76e207 last_two=-1 text=
+DECODE frames=16160 sha256=68ee38d3901ff00c5aa318e9bf62713df2d468ee541e32b56644c3308f23277e last_two=0.159999996 text=However, it
+DECODE frames=28000 sha256=2d06db4aafbb4745c9696b66c7e1a3f5f3b111aadd19fffa4c64963f36de3c28 last_two=1.12 text=However, due to the slow
+DECODE frames=40480 sha256=04d67a9eb9c5d06117bc94e9938abc05429d99c86a4fd903c87b4ae084afa6e1 last_two=1.51999998 text=However, due to the slow communication,
+DECODE frames=54560 sha256=4119396512a37ca2735d5aba8489f33b65b9c53a39a4599a1f176733f7e2c7fb last_two=1.91999996 text=However, due to the slow communication channels.
+DECODE frames=70240 sha256=e90e19c22c54af682ee28507f71e3e0d3b334d7eef7b384e05d0bd884e8448d2 last_two=3.3599999 text=However, due to the slow communication channels, styles is
+DECODE frames=87680 sha256=4846ab4e0d8da3b413edf4256d675d6a7f060c9e96f32f8419860b692d5fa158 last_two=4.71999979 text=However, due to the slow communication channels, styles in the West could lag.
+DECODE frames=104160 sha256=e3e5834029fcc38260ff068e23d427101b90c6139ebdbd0d6e2e0067e734fae9 last_two=5.51999998 text=However, due to the slow communication channels, styles in the West could lag behind by
+DECODE frames=121760 sha256=8929f5ff93109a4904b815017f53163fcc000681cb44e75a2eec57f6bf1e9a07 last_two=7.11999989 text=However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.
+DECODE frames=128000 sha256=1c08d497f75c8332820b558594cc8badbe735a92b2b9264a9b92d0165e78dc5d last_two=7.27999973 text=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DECODE frames=42880 sha256=9a1372c87a10b7ce44010d347358f97bb5c25dc67507424d97296085a0bd3815 last_two=-1 text=
+HISTORY=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DROPPED=0
+STATUS=Figyelek · felismerés: 216 ms

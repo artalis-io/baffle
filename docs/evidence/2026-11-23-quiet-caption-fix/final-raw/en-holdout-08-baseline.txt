@@ -1,0 +1,19 @@
+REPLAY queue_capacity=512 input_frames=180480
+DECODE frames=5600 sha256=e57c301db1abfcff9366dbdb48e32f841242b5401f352e592abd059d10803a7f last_two=-1 text=Wait.
+DECODE frames=16160 sha256=376f6016ac2f0381ab737acf866f842342c4a64723e46a6bc3880e048dfeb9ac last_two=0.239999995 text=For example each
+DECODE frames=19520 sha256=b902c57759f722420a2fd12024e5fa807e21a71afbd4170b598db7c7f2524083 last_two=0.560000002 text=For example, each year.
+DECODE frames=5600 sha256=28f95546825397dc55fc521291ee52f387684567f62afdcef248716e38981adf last_two=-1 text=
+DECODE frames=16000 sha256=bf05203bb8da0ccefcd81307aa30fde65d33adc497260016691d8afc7eec1227 last_two=0.479999989 text=Yeah the website gets
+DECODE frames=22400 sha256=f107866d8147ff7a742b860048d54107600bd602738671338ae98d4e9dd4a98a last_two=0.719999969 text=Yeah the website gets remodeled.
+HISTORY=For example, each year.
+
+Yeah the website gets remodeled.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=10
+MEASURE index=0 decode_ms=50.755900 completed_after_source_start_ms=1513.754100
+MEASURE index=1 decode_ms=87.204600 completed_after_source_start_ms=2214.098300
+MEASURE index=2 decode_ms=97.384200 completed_after_source_start_ms=2427.934700
+MEASURE index=3 decode_ms=47.987900 completed_after_source_start_ms=7735.860700
+MEASURE index=4 decode_ms=85.521800 completed_after_source_start_ms=8430.783500
+MEASURE index=5 decode_ms=108.589100 completed_after_source_start_ms=8831.703100

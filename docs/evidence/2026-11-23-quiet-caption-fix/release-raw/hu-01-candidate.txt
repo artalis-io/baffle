@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=192960 caption_profile=raw
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16160 sha256=97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=11360 sha256=565bea91c0171aa89235dba8bb57d2ccf920183324df320d7ab70286c47902fa last_two=0.0799999982 text=Um com
+DECODE frames=22080 sha256=16e22e381c7736196ed2b3b3dce5306bb5352cf9724283d8c9c88e8ae2b5490c last_two=0.159999996 text=Hun every
+DECODE frames=34080 sha256=104c4644a5395b96320e9ee70576a4fa18c00b6a889faa239ca77bc410e0d6b0 last_two=1.43999994 text=Hong Kong Maverick Hong Kong.
+DECODE frames=45920 sha256=c0f149aeb8313a092fcca4f28c9c1878516c1e3378d224d3df49b5ba08722b12 last_two=1.75999999 text=Hong Kong Member a Hong Kong Psychiatry
+DECODE frames=59040 sha256=31b50494df32b3a4b2f068a83d02f30f12b4f2512ed793af58e16639e2ddff25 last_two=2.15999985 text=Hongkong nevét, a Hongkong Secretary Katta
+DECODE frames=72640 sha256=de514a64ef9f014b9022c5ff439119a216cf64ebb6b50826bbe147e40e5df47f last_two=3.75999999 text=Hongkong nevét a Hongkong sziketről kapta és at ah.
+DECODE frames=87200 sha256=4ee66c6ac2742a8c69632c4297098616ebc2bf4aefcf737f1a6ca51e020c6df7 last_two=5.11999989 text=Hongkong nevét, a Hongkong szikatról kapta és ehár soktur is ta szánt.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=47840 sha256=cff3116470d4cdcd1dabd62a287a58cb568c593b0fa12c00616f63d29912a0f8 last_two=-1 text=
+DECODE frames=60960 sha256=11c562fd6b242b07b8ebd5a040ccf5889a651969f4a0baf81ad04b44f3860cb8 last_two=2.07999992 text=sok törista számára a figyelem középpontjában.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+DECODE frames=79200 sha256=9c54049112358a207b0da12c130fe5f0427671a863304b3fcb1d6929d3aed90b last_two=2.72000003 text=sok turista számára a figyelem kötéppontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok sok turista számára a figyelem kötéppontjában áll.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=38
+MEASURE index=0 decode_ms=49.831100 completed_after_source_start_ms=2092.666900
+MEASURE index=1 decode_ms=86.978300 completed_after_source_start_ms=2792.199700
+MEASURE index=2 decode_ms=93.364300 completed_after_source_start_ms=2925.176600
+MEASURE index=3 decode_ms=67.537000 completed_after_source_start_ms=3622.450000
+MEASURE index=4 decode_ms=109.807100 completed_after_source_start_ms=4340.876400
+MEASURE index=5 decode_ms=151.416200 completed_after_source_start_ms=5107.948800
+MEASURE index=6 decode_ms=194.060800 completed_after_source_start_ms=5910.450700
+MEASURE index=7 decode_ms=242.286400 completed_after_source_start_ms=6778.663000
+MEASURE index=8 decode_ms=293.032900 completed_after_source_start_ms=7679.492800
+MEASURE index=9 decode_ms=352.195700 completed_after_source_start_ms=8653.607200
+MEASURE index=10 decode_ms=387.156000 completed_after_source_start_ms=9335.494700
+MEASURE index=11 decode_ms=199.746000 completed_after_source_start_ms=10157.448900
+MEASURE index=12 decode_ms=243.292200 completed_after_source_start_ms=11007.266000
+MEASURE index=13 decode_ms=299.009600 completed_after_source_start_ms=11927.037800
+MEASURE index=14 decode_ms=313.734700 completed_after_source_start_ms=12240.958500

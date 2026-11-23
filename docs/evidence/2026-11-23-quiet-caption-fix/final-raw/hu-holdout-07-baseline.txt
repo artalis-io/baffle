@@ -1,0 +1,43 @@
+REPLAY queue_capacity=512 input_frames=299520
+DECODE frames=5600 sha256=ad5f6baab9e0a421a8ad3fc26682f4c1615f0bdc3982e15f8bb4d7b457a84e67 last_two=-1 text=Uh
+DECODE frames=16320 sha256=e478932f0affdb57102ac00219aa245f8ec46fd754fec51a76510ef02e85dd42 last_two=0.479999989 text=After which you
+DECODE frames=27360 sha256=6ac21ad09abefe0a54b58c3c483ec618cadf220562d4635e94e0bdca742db1e1 last_two=0.399999976 text=I startup Francia
+DECODE frames=39360 sha256=6b89a2aba303dfd2f7abbdfa778b2834bfb5516ef3737ec0abff009fe65f24ae last_two=1.03999996 text=Asta voi ci Franța curata.
+DECODE frames=51680 sha256=ad2193eb9145521b3cdf3b573f13326aeafa822ab262ebc9ed7ef36b377b0aee last_two=1.03999996 text=A stăci Francia curata.
+DECODE frames=64960 sha256=506c924d7121464424aa3b4ce8f09292a0a5ef4138db279400093efe843d3500 last_two=3.03999996 text=A stuccin Francja Kurata. A zak Francja.
+DECODE frames=78720 sha256=a9ee0a93296739583f9792d74130b5f6009b0b8566c3a6fea285fb811e8867a8 last_two=3.91999984 text=Ezt a Vici Francia kurata. Ezek Francia emberak volata.
+DECODE frames=93280 sha256=25d784686c37b8be6e26e11907320f15eee2c51c02d280ec5c829a366a3b20b4 last_two=4.96000004 text=Ezt a bicysi francia kurata. Ezek francia emberek voltak, akik ezek.
+DECODE frames=108960 sha256=0cf3472525441767a1afcbeaf525ce953bf50469958c7e7940e700f23fcd6b04 last_two=5.35999966 text=Ezt a bicsi francia kurata. Ezek francia emberek voltak, akik ezek 190.
+DECODE frames=125280 sha256=7d76e13919ddb34cf2f9343b8284f0c1bb464eb8bab39bfe6accb404aff951b5 last_two=7.03999996 text=Ezt a bicsi francia kurátá. Ezek francia emberek voltak, akik 1940 békés kötött.
+DECODE frames=128000 sha256=7cfc3cdf23a9ec02aee016fde138f799e02a031b93d261cab17dab0b120d8288 last_two=7.03999996 text=Ezt a bichi francia kuratá. Ezek francia emberek voltak, akik 150ben békés kötött.
+DECODE frames=54400 sha256=d31ae52b22e19e3833efd4d8c3fef28363bd21a671837304c2b0994af87ace81 last_two=2.31999993 text=Tässä on näitä vähän pämpiikytyttäkö, niin mattakkaa.
+DECODE frames=68000 sha256=91700640bf4b20ed9f3e562125ecb8fc0f602af8c5451fb499a28cf924da2950 last_two=2 text=Tämä on näitä van pämpiä kytöt, taki mattakään.
+DECODE frames=81920 sha256=7105dfd4c43868e8c5a3f79ab7ce1cf0db0a4b1a561f05d331de42043ae7047c last_two=4.23999977 text=Tämä on näitä vähän pämpiikki kytöt, taki mättäkka is opattu la kutuukkaan.
+DECODE frames=96000 sha256=d63efcb7821cf944eae4cfdf7318bffc39975cc4644f0b6dddaf8185f1b0ad03 last_two=4.4000001 text=Tässä on näitä vähempämpiikis kytöttäkään, niin mättäkää, és on katsoa kutukkaan tulkosta.
+DECODE frames=50400 sha256=85f8e48ab5f9a5af3dd166319698c6bc7801e3bf9796302723e82a804a834bff last_two=1.36000001 text=és a csapett a lakotókkal dolgozták, hogyha.
+DECODE frames=63840 sha256=cd504e56cc2535dd48a3f51bdca0067ebc16494fa63891f6ce7765e1e3500710 last_two=2.96000004 text=a pettől alakutókkal dolgoztak, ahelyett, hogy harcoltak valami.
+DECODE frames=77760 sha256=fa32a1062838f36be4874487395f7e779c82cd14f07a5f671ac979b2aa8d5fe4 last_two=3.91999984 text=csapett a lakotókkal dolgoztak, ahely, hogy harcoltak volna ellenük.
+DECODE frames=87040 sha256=7ea2dbe85ba13e7f30deccf41dd5f10d9beb3be4f049f85e05d5f95b3f83ff2b last_two=3.91999984 text=csapett a lakotókkal dolgoztak, ahely, hogy harcoltak volna ellenük.
+HISTORY=Ezt a bichi francia kuratá. Ezek francia emberek voltak, akik 150ben Tässä on näitä vähempämpiikis kytöttäkään, niin mättäkää, és on katsoa csapett a lakotókkal dolgoztak, ahely, hogy harcoltak volna ellenük.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=81
+MEASURE index=0 decode_ms=51.380600 completed_after_source_start_ms=3059.256100
+MEASURE index=1 decode_ms=85.974700 completed_after_source_start_ms=3770.072100
+MEASURE index=2 decode_ms=125.589000 completed_after_source_start_ms=4502.495500
+MEASURE index=3 decode_ms=166.742200 completed_after_source_start_ms=5281.088700
+MEASURE index=4 decode_ms=212.276800 completed_after_source_start_ms=6097.429900
+MEASURE index=5 decode_ms=257.397200 completed_after_source_start_ms=6962.891800
+MEASURE index=6 decode_ms=308.839000 completed_after_source_start_ms=7894.497200
+MEASURE index=7 decode_ms=363.046400 completed_after_source_start_ms=8861.660200
+MEASURE index=8 decode_ms=421.423500 completed_after_source_start_ms=9893.662800
+MEASURE index=9 decode_ms=478.582700 completed_after_source_start_ms=10975.331700
+MEASURE index=10 decode_ms=487.415800 completed_after_source_start_ms=11463.014300
+MEASURE index=11 decode_ms=225.451300 completed_after_source_start_ms=12296.343200
+MEASURE index=12 decode_ms=271.352400 completed_after_source_start_ms=13173.939400
+MEASURE index=13 decode_ms=317.288900 completed_after_source_start_ms=14104.709900
+MEASURE index=14 decode_ms=371.430600 completed_after_source_start_ms=15013.126100
+MEASURE index=15 decode_ms=206.010000 completed_after_source_start_ms=15823.831300
+MEASURE index=16 decode_ms=254.883500 completed_after_source_start_ms=16692.698700
+MEASURE index=17 decode_ms=313.644600 completed_after_source_start_ms=17635.535300
+MEASURE index=18 decode_ms=339.850400 completed_after_source_start_ms=18246.969900

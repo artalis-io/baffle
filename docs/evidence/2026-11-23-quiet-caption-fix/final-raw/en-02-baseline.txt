@@ -1,0 +1,31 @@
+REPLAY queue_capacity=512 input_frames=140160
+DECODE frames=5600 sha256=0a9d5566ae4c8234442e2d9033687e6b3dafad587e2b8e81b9bfa52175091ff9 last_two=-1 text=
+DECODE frames=16320 sha256=3189a45aba07ffe7090cd213dd65731dc7b482624b8a4f558811f8748678f074 last_two=-1 text=Only
+DECODE frames=27520 sha256=cf459e8f69743532e01edd023be5c4493908d8ceefe68b99b475df5bfbeba0b6 last_two=1.12 text=All now is almost
+DECODE frames=39520 sha256=1ed5ac14074d8ae594131e5c5bc6c8d74b70be603a27ce2a1d0375ed5f25193a last_two=1.75999999 text=All now's alongside the world
+DECODE frames=52160 sha256=27fb947de796797af453b16bad6a7285dddd7e814f670e441d498444badfb83d last_two=2.79999995 text=All nouns alongside the world say for you.
+DECODE frames=65280 sha256=8a66d0492b96181f689da9a150bdd66b2d73a97454f0ceea95b4bfc054de1f7f last_two=2.96000004 text=All nouns alongside the world say for you.
+DECODE frames=79040 sha256=a77ebd2db324c18dbe29f06b2fb0aeb772d2857e4cf94977cf14462e2ba2afd6 last_two=4.07999992 text=All nouns alongside the world say for you always begin with
+DECODE frames=93600 sha256=2acff466dccc877710937134fbf6cbfb295dde28088fa30ef79c988fdfefb03f last_two=4.96000004 text=All nouns alongside the world say for you always begin with a capital letter.
+DECODE frames=109280 sha256=161315564093ee8659d039581bc13b75e274b4ef81e4a09cc41bdb822c531bf3 last_two=5.03999996 text=All nouns alongside the world say for you always begin with a capital letter.
+DECODE frames=126240 sha256=66e09fd377cde47df427cc98f50f807817c8198f01c2a0686c5f9cfd2d9bb773 last_two=7.19999981 text=All nouns alongside the word say for you always begin with a capital letter, even in the middle of a sentence.
+DECODE frames=128000 sha256=8b4d69932e5d45c197f14358f017f074e7b914be10a867035a364584b45c16f3 last_two=7.19999981 text=All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence.
+DECODE frames=55360 sha256=0cb9dc022662fe0267e8ecd3b74ad7667530cf3d602f62b21e904855a318c5b5 last_two=1.19999993 text=even in the middle of a sentence.
+DECODE frames=58720 sha256=47125918389e881c1a4e637f66f682b5fbfa824945e833d6316cb29263085468 last_two=1.19999993 text=even in the middle of a sentence.
+HISTORY=All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=86
+MEASURE index=0 decode_ms=49.987100 completed_after_source_start_ms=1296.961400
+MEASURE index=1 decode_ms=85.543600 completed_after_source_start_ms=1991.211900
+MEASURE index=2 decode_ms=126.512000 completed_after_source_start_ms=2738.453900
+MEASURE index=3 decode_ms=167.966000 completed_after_source_start_ms=3535.134400
+MEASURE index=4 decode_ms=215.618500 completed_after_source_start_ms=4356.494200
+MEASURE index=5 decode_ms=259.771100 completed_after_source_start_ms=5234.612100
+MEASURE index=6 decode_ms=307.540200 completed_after_source_start_ms=6146.665800
+MEASURE index=7 decode_ms=368.152500 completed_after_source_start_ms=7117.991200
+MEASURE index=8 decode_ms=426.844800 completed_after_source_start_ms=8151.053900
+MEASURE index=9 decode_ms=481.781700 completed_after_source_start_ms=9247.387300
+MEASURE index=10 decode_ms=486.718600 completed_after_source_start_ms=9734.360100
+MEASURE index=11 decode_ms=224.829500 completed_after_source_start_ms=10585.696000
+MEASURE index=12 decode_ms=233.155100 completed_after_source_start_ms=10818.986600

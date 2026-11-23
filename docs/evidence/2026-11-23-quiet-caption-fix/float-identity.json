@@ -1,0 +1,134 @@
+[
+  {
+    "case": "en-01",
+    "folder": "fixtures-accepted-ns",
+    "frames": 168960,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-02",
+    "folder": "fixtures-accepted-ns",
+    "frames": 140160,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-03",
+    "folder": "fixtures-accepted-ns",
+    "frames": 183360,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-04",
+    "folder": "fixtures-accepted-ns",
+    "frames": 92160,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-01",
+    "folder": "fixtures-accepted-ns",
+    "frames": 192960,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-02",
+    "folder": "fixtures-accepted-ns",
+    "frames": 193920,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-03",
+    "folder": "fixtures-accepted-ns",
+    "frames": 162240,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-04",
+    "folder": "fixtures-accepted-ns",
+    "frames": 280320,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-holdout-09",
+    "folder": "fixtures-accepted-ns",
+    "frames": 174720,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-holdout-10",
+    "folder": "fixtures-accepted-ns",
+    "frames": 180480,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-holdout-11",
+    "folder": "fixtures-accepted-ns",
+    "frames": 91520,
+    "float_bits_identical": true
+  },
+  {
+    "case": "en-holdout-12",
+    "folder": "fixtures-accepted-ns",
+    "frames": 248960,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-holdout-09",
+    "folder": "fixtures-accepted-ns",
+    "frames": 250560,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-holdout-10",
+    "folder": "fixtures-accepted-ns",
+    "frames": 141120,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-holdout-11",
+    "folder": "fixtures-accepted-ns",
+    "frames": 191040,
+    "float_bits_identical": true
+  },
+  {
+    "case": "hu-holdout-12",
+    "folder": "fixtures-accepted-ns",
+    "frames": 112320,
+    "float_bits_identical": true
+  },
+  {
+    "case": "silence",
+    "folder": "fixtures-accepted-ns",
+    "frames": 80000,
+    "float_bits_identical": true
+  },
+  {
+    "case": "click",
+    "folder": "fixtures-accepted-ns",
+    "frames": 80000,
+    "float_bits_identical": true
+  },
+  {
+    "case": "quiet-noise",
+    "folder": "fixtures-accepted-ns",
+    "frames": 80000,
+    "float_bits_identical": true
+  },
+  {
+    "case": "noise",
+    "folder": "fixtures-accepted-ns",
+    "frames": 80000,
+    "float_bits_identical": true
+  },
+  {
+    "case": "speech-then-colored-noise",
+    "folder": "fixtures-background-ns",
+    "frames": 156160,
+    "float_bits_identical": true
+  },
+  {
+    "case": "speech-then-hum",
+    "folder": "fixtures-background-ns",
+    "frames": 156160,
+    "float_bits_identical": true
+  }
+]

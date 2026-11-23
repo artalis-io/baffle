@@ -1,0 +1,19 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16160 sha256=97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=10880 sha256=1c570e7da48bc5018b8ae20cf01d31be7a1b0440565126e96947b8d053402803 last_two=-1 text=Okay.
+DECODE frames=22080 sha256=16e22e381c7736196ed2b3b3dce5306bb5352cf9724283d8c9c88e8ae2b5490c last_two=0.159999996 text=Hun every
+DECODE frames=33760 sha256=2d0671643e92ad5f7b3e56e414a3d3ba86a25ed9421f7db983a83e8c9970a0f8 last_two=0.399999976 text=Hong Kong Maverick
+DECODE frames=45760 sha256=456a202983ba5858d72f18b0fa7567bda6404a1f8a7a68d5150b59cfd5af68dc last_two=1.75999999 text=Hong Kong Never a Hong Kong Psychiatry
+DECODE frames=58720 sha256=3fb5be44974eedabe42bd4262e38c737ed854808e89fcea8fea3a5c3e175a156 last_two=2.15999985 text=Hongkong nevét, a Hongkong Szikater katta.
+DECODE frames=72480 sha256=e80ec42fdaf559baa88628fdf28317368313a13ecd986715650bfa41eb5b33ca last_two=4 text=Hongkong nevét a Hongkong sziketről kapta és at a h
+DECODE frames=87040 sha256=07640e4a4ec5cbb1b99dfadd0e1b38488d02a440d4ba5762479daded3ed07afc last_two=4.48000002 text=Hongkong nevét a Hongkong szikatrial kapta és a sok turista.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=47520 sha256=ec46dd4b08c9a73432f53ae6df4291316d51b61705615e594dc3e23a09fefaea last_two=0.719999969 text=sok töreste számára.
+DECODE frames=60640 sha256=c2bc644e548acc44066d76d96d510b3f02a4d6af1d4bdab20842966063c4d3e3 last_two=2.07999992 text=sok törista számára a figyelem középpontjában.
+DECODE frames=74240 sha256=864ae48abb5496960976d9febf78aabb712600b8c0dd0f1b697e6c49ab899a19 last_two=2.72000003 text=a sok turista számára a figyelem középpontjában áll.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.
+DROPPED=0
+STATUS=Listening

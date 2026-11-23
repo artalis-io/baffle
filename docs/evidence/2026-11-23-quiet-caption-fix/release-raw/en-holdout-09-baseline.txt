@@ -1,0 +1,15 @@
+REPLAY queue_capacity=512 input_frames=174720
+DECODE frames=5600 sha256=677eaf481c6d40c324e1762d7c68a401783b96a3e8ae6cbf9a9e7fdb3d0df75d last_two=-1 text=
+DECODE frames=16160 sha256=2218cc9656fb25271fa9dcdc91fc2607a247411b4b3123e4845292c11bf4047b last_two=0.239999995 text=Pride X.
+DECODE frames=27040 sha256=9cb1174a2689f20d4825f82b25db6dd7a17867bb9a56210a9e35d7a1d259ab8c last_two=0.560000002 text=Pride's X like
+DECODE frames=38560 sha256=c374e95a384e08e5f079f2c15b9b53259a1ce22581a948156c81d665dca3471e last_two=1.83999991 text=Pride acts much like packs of wolves.
+DECODE frames=44000 sha256=d02b943671cfe1e4b93acb0be071f54c459da6d5df893435d4f6c064b41a412c last_two=2.24000001 text=Pride's acts much like the packs of wolves or dogs.
+HISTORY=Pride's acts much like the packs of wolves or dogs.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=19
+MEASURE index=0 decode_ms=49.147600 completed_after_source_start_ms=2558.308800
+MEASURE index=1 decode_ms=87.148400 completed_after_source_start_ms=3255.860100
+MEASURE index=2 decode_ms=126.911600 completed_after_source_start_ms=3990.113100
+MEASURE index=3 decode_ms=167.299200 completed_after_source_start_ms=4758.117600
+MEASURE index=4 decode_ms=188.992200 completed_after_source_start_ms=5094.178100

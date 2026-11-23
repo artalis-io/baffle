@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+validated_last_two_start_seconds=4.4000001
+decode_ms=631

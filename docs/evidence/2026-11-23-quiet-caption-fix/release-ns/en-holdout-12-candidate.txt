@@ -1,0 +1,45 @@
+REPLAY queue_capacity=512 input_frames=248960 caption_profile=ns
+DECODE frames=5600 sha256=ea0fab95e829e60bc2ba760207f1d1f45a88196ad644c09d96ff2a5af5568670 last_two=-1 text=Yeah.
+DECODE frames=16480 sha256=1570565f821e2660234f01ec4a975f6fd0e808aa37f308e74ad1d049f5ca9972 last_two=-1 text=Yeah.
+DECODE frames=27680 sha256=11b66e374ae44ecb9a0f924879a54aa88119fc45d5ddef53e7dfbf6eb396b096 last_two=0.879999995 text=These things.
+DECODE frames=39360 sha256=35a2bca0cd0712a20b6435930e5379061f1b66371467580353da48a55a6b4b54 last_two=0.879999995 text=These three
+DECODE frames=51680 sha256=712483b1f89c389b1175d80ddede9b01ef6f23440f1406f13b2569f6a096ff13 last_two=1.83999991 text=These three short but
+DECODE frames=65120 sha256=35dc59d9de97222025f81e70a2b9b418bd1454f248e2fdd9c67e9172d0fa861d last_two=3.19999981 text=These three should what it is about.
+DECODE frames=78880 sha256=de36769d937307efbe9bd54a185125669b436b493be126dc986d488b868ffc38 last_two=4.31999969 text=These look at what it is about certain people that
+DECODE frames=93600 sha256=7f743185ae4bb84d7523077557f88453c63028bba1c513172f1a081762ed9c2f last_two=5.19999981 text=These three so it is about certain people that make them want
+DECODE frames=109440 sha256=1ec8897c21da6ae00e80c2079b7339b2907b30271fd626b7f103c3d0aa57578b last_two=6.07999992 text=These three but it is about certain people that make them want the things that
+DECODE frames=125920 sha256=1ad7bfed02845cbbd1d9c0f6f9a5a8d2f0e69c853bb20ec530de0bb9d64a82f2 last_two=6.87999964 text=These three look at what it is about certain people that make them want the things that they do
+DECODE frames=128000 sha256=7af6c489dc6d136ae55f930b38302c7bd8077f89f017f0a63159b9b88167ff82 last_two=6.87999964 text=These three at what it is about certain people that make them want the things that they do
+DECODE frames=55520 sha256=ba3fb9bee8ea805a07407c85c203bb863fc3463a4d1de52740dd45426ddb1f73 last_two=-1 text=
+DECODE frames=69120 sha256=984bd39926a805961c943e6b7074330da9e984f1094fd3cd962495c8ca7733cc last_two=-1 text=
+DECODE frames=83200 sha256=b4a94e812e96b493a8777907d9a1e1e2826b975ab9e9f2a2ee27cac6c6c1c287 last_two=4.48000002 text=the things that they do and what things in their environment will make them do
+DECODE frames=98240 sha256=3e37cfcd5be40d2608061a3c3e37fbfc7eda1efc2f5abb01d13827a6fac7f012 last_two=5.44000006 text=the things that they do and what things in their environment will make them do or not do.
+DECODE frames=114240 sha256=5b7a6dfc6a5201618139c8ed0d761899bcd735f24face41853c62bf8270670fe last_two=6.23999977 text=of the things that they do and what things in their environment will make them do or not do certain things.
+DECODE frames=128000 sha256=763ee06bacbb02c70c3baa9528621874bb45f81eb7fe1d11e23f1a04d5b1ed4b last_two=6.23999977 text=The things that they do and what things in their environment will make them do or not do certain things.
+DECODE frames=55520 sha256=bee1bfbc7a81fe871e262453f7945cdc5d8a4a38706b0f0234a1f7314ef0ebbf last_two=-1 text=
+DECODE frames=68960 sha256=a965e57d214f35350da562b20f5db0ba14c2ac69bf24e5e2d15862699d053c4a last_two=-1 text=
+DECODE frames=76000 sha256=23c820ab888547748ef28cb57a896ccfdac9239c21152880ac204ab6320fc1db last_two=0.719999969 text=not do certain things.
+HISTORY=These three at what it is about certain people that make them want The things that they do and what things in their environment will make them do or not do certain things.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=87
+MEASURE index=0 decode_ms=51.262000 completed_after_source_start_ms=1295.783900
+MEASURE index=1 decode_ms=86.363800 completed_after_source_start_ms=2007.756100
+MEASURE index=2 decode_ms=126.622300 completed_after_source_start_ms=2740.693800
+MEASURE index=3 decode_ms=168.006500 completed_after_source_start_ms=3521.176500
+MEASURE index=4 decode_ms=216.491800 completed_after_source_start_ms=4342.557700
+MEASURE index=5 decode_ms=263.108300 completed_after_source_start_ms=5211.915200
+MEASURE index=6 decode_ms=311.446700 completed_after_source_start_ms=6143.218900
+MEASURE index=7 decode_ms=372.070300 completed_after_source_start_ms=7118.787200
+MEASURE index=8 decode_ms=427.388600 completed_after_source_start_ms=8165.752100
+MEASURE index=9 decode_ms=489.729900 completed_after_source_start_ms=9257.152200
+MEASURE index=10 decode_ms=494.648000 completed_after_source_start_ms=9752.066100
+MEASURE index=11 decode_ms=225.942200 completed_after_source_start_ms=10590.704700
+MEASURE index=12 decode_ms=272.960800 completed_after_source_start_ms=11472.472900
+MEASURE index=13 decode_ms=329.572000 completed_after_source_start_ms=12424.823300
+MEASURE index=14 decode_ms=384.667000 completed_after_source_start_ms=13424.331000
+MEASURE index=15 decode_ms=443.304200 completed_after_source_start_ms=14477.295800
+MEASURE index=16 decode_ms=494.597600 completed_after_source_start_ms=15366.948000
+MEASURE index=17 decode_ms=224.326900 completed_after_source_start_ms=16218.089900
+MEASURE index=18 decode_ms=273.006100 completed_after_source_start_ms=17106.329800
+MEASURE index=19 decode_ms=301.071500 completed_after_source_start_ms=17563.650200

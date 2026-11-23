@@ -1,0 +1,31 @@
+C:/Users/Mark/artalis.io/src/baffle/examples/win32-transcript/app.c
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin\clang-cl.exe" --analyze -Xclang -analyzer-output=text /nologo -DBF_LIVE_SOURCE_ONLY -DBF_STATIC -DHA_STATIC -DNOMINMAX -DUNICODE -DWIN32_LEAN_AND_MEAN -D_UNICODE -IC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\deps\sherpa-source -IC:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\..\..\tools\acoustic-runner -imsvcC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\sdk\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG /std:c11 -MT /W4 /WX /utf-8 /fp:precise -- C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\app.c
+C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\app.c(109,9): warning: Value stored to 'extra' is never read [deadcode.DeadStores]
+  109 |         extra = a->history.length ? 4u : 0u;
+      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\app.c(109,9): note: Value stored to 'extra' is never read
+  109 |         extra = a->history.length ? 4u : 0u;
+      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+
+exit=0
+C:/Users/Mark/artalis.io/src/baffle/examples/win32-transcript/speech.c
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin\clang-cl.exe" --analyze -Xclang -analyzer-output=text /nologo -DBF_LIVE_SOURCE_ONLY -DBF_STATIC -DHA_STATIC -DNOMINMAX -DUNICODE -DWIN32_LEAN_AND_MEAN -D_UNICODE -IC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\deps\sherpa-source -IC:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\..\..\tools\acoustic-runner -imsvcC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\sdk\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG /std:c11 -MT /W4 /WX /utf-8 /fp:precise -- C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\speech.c
+
+exit=0
+C:/Users/Mark/artalis.io/src/baffle/examples/win32-transcript/replay_test.c
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin\clang-cl.exe" --analyze -Xclang -analyzer-output=text /nologo -DBF_STATIC -DHA_STATIC -DNOMINMAX -DUNICODE -DWIN32_LEAN_AND_MEAN -D_UNICODE -IC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\deps\sherpa-source -imsvcC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\sdk\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG /std:c11 -MT /W4 /WX /utf-8 /fp:precise -- C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\replay_test.c
+In file included from C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\replay_test.c:18:
+C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\app.c(109,9): warning: Value stored to 'extra' is never read [deadcode.DeadStores]
+  109 |         extra = a->history.length ? 4u : 0u;
+      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\app.c(109,9): note: Value stored to 'extra' is never read
+  109 |         extra = a->history.length ? 4u : 0u;
+      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+
+exit=0
+C:/Users/Mark/artalis.io/src/baffle/examples/win32-transcript/speech.c
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin\clang-cl.exe" --analyze -Xclang -analyzer-output=text /nologo -DBF_STATIC -DHA_STATIC -DNOMINMAX -DUNICODE -DWIN32_LEAN_AND_MEAN -D_UNICODE -IC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\deps\sherpa-source -imsvcC:\Users\Mark\artalis.io\src\baffle\build-native-transcript\sdk\include /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG /std:c11 -MT /W4 /WX /utf-8 /fp:precise -- C:\Users\Mark\artalis.io\src\baffle\examples\win32-transcript\speech.c
+
+exit=0

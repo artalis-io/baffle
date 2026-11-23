@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=180480
+DECODE frames=5600 sha256=e57c301db1abfcff9366dbdb48e32f841242b5401f352e592abd059d10803a7f last_two=-1 text=Wait.
+DECODE frames=16160 sha256=376f6016ac2f0381ab737acf866f842342c4a64723e46a6bc3880e048dfeb9ac last_two=0.239999995 text=For example each
+DECODE frames=27040 sha256=6f8128ba7202897cf0d65d34226f99a49f6024d078c2fd6819052caa94067923 last_two=1.03999996 text=For example, each of your students.
+DECODE frames=38880 sha256=6554fb5c58219efa82d3b7a65c39c0af67ac7637987bdb15943b716fda0d8895 last_two=1.67999995 text=For example, each year students from Bennett School
+DECODE frames=51680 sha256=4ec3911fa7fd32a3ab7d47fa54def7bb046f34204c26bfd9fd0cfe13b84157f6 last_two=2.48000002 text=For example, each year students from Bennett School in North Carolina.
+DECODE frames=65120 sha256=a487f3d10244ce33d2c659525be537b25eae575bc6094d11a9d61f68d6765b18 last_two=3.51999998 text=For example, each year students from Bennett School in North Carolina design a website.
+DECODE frames=79200 sha256=102e3fdafb5de53319507a4f09357ebe6d32f764f8bfab9c10bd3d321e111dd6 last_two=4.48000002 text=For example, each year students from Bennett School in North Carolina design a website about their trips to the
+DECODE frames=94240 sha256=8ab564b0cef519e4e1b0508e9de810a92fb1a78b236e7439d7edb89f53da451b last_two=4.96000004 text=For example, each year students from Bennett School in North Carolina design a website about their trip to the state capitol.
+DECODE frames=96000 sha256=2b0b06715d1c548b5914f65809d3da25ba3f0b6e9ac026b08f490d3bd9eff50b last_two=4.96000004 text=For example, each year students from Bennett School in North Carolina designed a website about their trip to the state capitol.
+DECODE frames=52480 sha256=3dfd0d790a01b0549ec3b63d8d7254773ebb4623bff0c447f3655fe950bb4b04 last_two=0.959999979 text=about their trip to the state capitol.
+DECODE frames=65760 sha256=305ba724a6249e7b4dd4aeb15dbd9882a543bc6124b05eef67a7b6ccf265e36d last_two=0.959999979 text=about their trip to the state capital.
+DECODE frames=80160 sha256=986c80f21b673e9ac9d06122fa9528f53a96d8090afdfbb8d272af71dd10fd07 last_two=4.4000001 text=Each year the website gets remodeled, but old versions are kept.
+DECODE frames=94880 sha256=0ad8112662a2e46c6368f06406c1a94c738f1d3806687dcbacac7e0f65a34b31 last_two=5.27999973 text=Each year the website gets remodeled, but old versions are kept online to serve.
+DECODE frames=98880 sha256=76f8937285e28b16da155c56a3be335a677abfd4b11f76ac3c9f2a49918c1c7d last_two=5.83999968 text=about their trip to the state capitol. Each year the website gets remodeled, but old versions are kept online to service as well.
+DECODE frames=50720 sha256=e2192d196dc956e7efcc1f3376a43c9ca6696b4022b710cd906c07c660af8d3a last_two=1.75999999 text=Both versions are kept online to serve as a scrapbook.
+DECODE frames=51520 sha256=1de3f11a1fbb07ddca345881e3f2a48f4fcf519af710e202a18b3968f786d6f3 last_two=1.75999999 text=Both versions are kept online to serve as a scrapbook.
+HISTORY=For example, each year students from Bennett School in North Carolina designed a website about their trip to the state capitol. Each year the website gets remodeled, but old versions are kept online to service Both versions are kept online to serve as a scrapbook.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=68
+MEASURE index=0 decode_ms=50.464400 completed_after_source_start_ms=1516.421100
+MEASURE index=1 decode_ms=89.042600 completed_after_source_start_ms=2220.221100
+MEASURE index=2 decode_ms=129.914100 completed_after_source_start_ms=2954.949400
+MEASURE index=3 decode_ms=174.933000 completed_after_source_start_ms=3740.221500
+MEASURE index=4 decode_ms=222.933700 completed_after_source_start_ms=4576.208400
+MEASURE index=5 decode_ms=271.044400 completed_after_source_start_ms=5460.070600
+MEASURE index=6 decode_ms=323.431700 completed_after_source_start_ms=6411.015900
+MEASURE index=7 decode_ms=386.974600 completed_after_source_start_ms=7400.929800
+MEASURE index=8 decode_ms=390.734400 completed_after_source_start_ms=7791.876800
+MEASURE index=9 decode_ms=220.026300 completed_after_source_start_ms=8625.337400
+MEASURE index=10 decode_ms=270.067500 completed_after_source_start_ms=9512.963700
+MEASURE index=11 decode_ms=325.528300 completed_after_source_start_ms=10467.984600
+MEASURE index=12 decode_ms=386.204200 completed_after_source_start_ms=11456.727500
+MEASURE index=13 decode_ms=400.923000 completed_after_source_start_ms=11857.869700
+MEASURE index=14 decode_ms=212.789600 completed_after_source_start_ms=12682.301100
+MEASURE index=15 decode_ms=221.543000 completed_after_source_start_ms=12903.979300

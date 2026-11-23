@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=180480
+DECODE frames=5600 sha256=49c738f0c821887657aaca9a42e03bc47d7c638bb6864d2b5c2b94fbb5c52948 last_two=-1 text=What
+DECODE frames=15840 sha256=de224c11d139c23a424c71545f4fd6679f8573d2bf2b2521993d6862aea81991 last_two=0.239999995 text=For example each
+DECODE frames=26880 sha256=662588ed76fc86b21f11b85c7984f155275993b4a34ab8e3bf019e273768edb9 last_two=-1 text=Uh
+DECODE frames=38560 sha256=8efa975eac94110addb7449221605d7d914d14506ecd0070a618c47144f896b7 last_two=-1 text=
+DECODE frames=50880 sha256=adecb28a0a25bb1a6f48daaf81aa7fb0bb7df4e4deea9ad4bb5b1dc38a307b8f last_two=-1 text=
+DECODE frames=64160 sha256=5f5c4ae199301e9285ec2c040e6fcba9977282167016eecac2437c07a1cdab45 last_two=3.51999998 text=For example, each year students from Minnesota School in North Carolina design a website.
+DECODE frames=78560 sha256=6ba761de3662dcefe89bbc49fccc25c9da5794ec3d8121b58e59f57853b6bc0d last_two=4.4000001 text=For example, each year students from Minnesota School in North Carolina design a website about their trips with
+DECODE frames=93760 sha256=95cfd86d84cdf0a168ca48ab5a564ea222a99bfac8b431e5619e3785955c063b last_two=4.96000004 text=For example, each year students from Minute School in North Carolina design a website about their trip to the state capital.
+DECODE frames=96000 sha256=66f26b74b42b6d649276d3a33709639879d5a7c2f39828dc63a98749c2d44b9c last_two=4.96000004 text=For example, each year students from Minnesota School in North Carolina design a website about their trip to the state capitol.
+DECODE frames=51680 sha256=e38fd6addedf35d8d6f18bb39bc765624fdf48de0ea2468cc7dbec6d13183b9f last_two=1.03999996 text=about their trips to the state capital.
+DECODE frames=64800 sha256=541e8622b6bda0ed822ed8f1c37cc80a1d8a15a612927cab1ae7b27efeaf22bc last_two=2.96000004 text=about your trip to the state capitol. Each year the website gets remodeled.
+DECODE frames=79200 sha256=7c85890f93932aae21d990e46584b85810c03566d9f916b760f8b221ad6d89e2 last_two=4.31999969 text=Each year the website gets remodeled, but old versions are
+DECODE frames=94560 sha256=5dca7e6cc6c24575dce216918c9f6561547640fab2ec3ed9424917e1ad07a1a3 last_two=5.27999973 text=Each year the website gets remodeled, but both versions are kept online to serve.
+DECODE frames=98720 sha256=40dc997612e8b30257ae7225a1efa4895c00c6dcb6ad118f9408a1fc7c01e83e last_two=5.35999966 text=Each year the website gets remodeled, but old versions are kept online to services.
+DECODE frames=48640 sha256=e392d60d78f6799c9d7baad5c41c383d95ff5e17c50df2914124dd68d606a488 last_two=-1 text=
+HISTORY=For example, each year students from Minnesota School in North Carolina design a website about their trip to the Each year the website gets remodeled, but old versions are kept online to services.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=62
+MEASURE index=0 decode_ms=50.115000 completed_after_source_start_ms=1512.129900
+MEASURE index=1 decode_ms=89.124500 completed_after_source_start_ms=2214.848100
+MEASURE index=2 decode_ms=125.045200 completed_after_source_start_ms=2944.616300
+MEASURE index=3 decode_ms=169.886500 completed_after_source_start_ms=3715.024100
+MEASURE index=4 decode_ms=211.183000 completed_after_source_start_ms=4529.994600
+MEASURE index=5 decode_ms=270.291300 completed_after_source_start_ms=5420.992200
+MEASURE index=6 decode_ms=321.879700 completed_after_source_start_ms=6371.196800
+MEASURE index=7 decode_ms=384.881700 completed_after_source_start_ms=7363.790900
+MEASURE index=8 decode_ms=387.807500 completed_after_source_start_ms=7751.806500
+MEASURE index=9 decode_ms=227.733200 completed_after_source_start_ms=8581.542300
+MEASURE index=10 decode_ms=285.752300 completed_after_source_start_ms=9475.947800
+MEASURE index=11 decode_ms=331.662400 completed_after_source_start_ms=10420.201500
+MEASURE index=12 decode_ms=384.280300 completed_after_source_start_ms=11420.038400
+MEASURE index=13 decode_ms=401.774700 completed_after_source_start_ms=11822.035200
+MEASURE index=14 decode_ms=204.176800 completed_after_source_start_ms=12552.356000

@@ -1,0 +1,18 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=cbb1338a8cc309e2d39b9029e752eff074428cea9e2b811a54e3244f9502977e last_two=-1 text=So
+DECODE frames=16000 sha256=225f7d9d1d26fc02b2d92fbd09c68a3b17ce2ba136b3d4c8613fe2077d1300ed last_two=0.479999989 text=To the north and with
+DECODE frames=19200 sha256=a3ed77c3a0c918a0a84c5a680ce174bc1e0c7cc08eb6b00aac7a13105968e637 last_two=0.639999986 text=To the north and within east.
+DECODE frames=5600 sha256=fb8a0d770b4938f113f22f207150295b5992b7980ef0a9a7a95f75a5fa4b50ba last_two=-1 text=
+DECODE frames=16160 sha256=db3c5a505f5080e2eaf98ef45e04b82a24506542c3721d3e16a1a9faa1e311c9 last_two=-1 text=
+DECODE frames=22080 sha256=ce207c469aba6849f967241f466f507ea1e7fb831d7b616cda76a1bf5f04d214 last_two=0.799999952 text=To foreigners after a global
+DECODE frames=5600 sha256=c71090949dd5d02a059001e3804fb9b65c1e0672c71aa3f8cdf3aa1c8db331c1 last_two=-1 text=
+DECODE frames=15840 sha256=607a558e5a08a9d572233a5a239800007f9e4a01b707eb14059a4709aae3babf last_two=0.0799999982 text=Splinters recording.
+DECODE frames=27040 sha256=6e43a7902e8e5c7c5e9e7338b24c04e5f7326fdbf0fe0cce4ab5f2ba1cabed47 last_two=1.12 text=Splinter is recorded by Lord B.
+DECODE frames=28960 sha256=ca760d54d16168765ea9563440a0750296a1bb2037be1b85aeaa0b05a9f69aae last_two=1.12 text=Splinter is recorded by Lord Vi.
+HISTORY=To the north and within east.
+
+To foreigners after a global
+
+Splinter is recorded by Lord Vi.
+DROPPED=0
+STATUS=Listening

@@ -1,0 +1,39 @@
+REPLAY queue_capacity=512 input_frames=193920
+DECODE frames=5600 sha256=e97c27c5487e718a45526682b1f99fa02738cd5ca9b40c991fd494d768dffdbe last_two=-1 text=
+DECODE frames=15840 sha256=1d890ea29b1156a15bbeec9320e9793530bbf7815d2d5141616e984ea44a5e1c last_two=-1 text=
+DECODE frames=26880 sha256=0a1e62e0282ae4bc6b8e5084ad70883bb0d062f67d5e60255c36793700afe1f3 last_two=-1 text=
+DECODE frames=38880 sha256=9a3daae5156ea78e9fc97ef8ffa6c51edcbb957ed58730987cfc06b4ecc5b4e9 last_two=1.36000001 text=Me han muito
+DECODE frames=51200 sha256=df86c93e82b677bda17ab1380ad6c4606bd5fac9060b793424063ed3818e95d7 last_two=1.75999999 text=Néhány nem úgy fölött.
+DECODE frames=64320 sha256=78b88a71f2cb6b8b913fb5233a054954d8c6c2c0eeeb7f0066ecd73113da7112 last_two=2.55999994 text=Néhány nem úgy érték, igaza volt.
+DECODE frames=78400 sha256=029d534d1abcf8629f573e3fade467c43b073d4ccb79cc9b1cd1e5667d4f1295 last_two=4.15999985 text=Néhány nem úgy érték, igaza volt, de sokkal hitték, igazán.
+DECODE frames=93600 sha256=1089e4f3d5131d8fd2c2148bbeb35310768ea2604643f761f33c687d21db723d last_two=4.48000002 text=Néhány nem úgy érték, igaza volt, ez sokkal hitték az ellenkezőjét.
+DECODE frames=109120 sha256=0e26e80250230a75e1cab30fe4684693ba1b5234fff724129cbb28ec42379831 last_two=6.07999992 text=Néhány nem úgy félkék, igaza volt, de sokkal hitték az ellenkezőjét, hogy a na rendszerre földjük.
+DECODE frames=126240 sha256=3e2f45f9b62f7da767a5b5808256d6b0a4830198b523a7ab2df46ca667f87849 last_two=6.48000002 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földfelog.
+DECODE frames=128000 sha256=b894b408e9cb0d3510b5882f8ba48552723d9239392d0f14d1368c44f13b3cd6 last_two=6.48000002 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földszerül.
+DECODE frames=58240 sha256=b241503def90095ace98917eeccf7456c6e8859155e5002538063492383789dc last_two=2.48000002 text=A naprendszer a földterül forog, beleértve a napot, sőt,
+DECODE frames=71840 sha256=616c455ef20dc721fd32793f1291ad38b75194c92c08f286bda3ec746146990b last_two=3.75999999 text=Una prensa a Förley Forum. Bella étevot. Sit. Até a bicicletta.
+DECODE frames=86240 sha256=7a116c4c3827c2f91a50fdc78aec564c1057c1052f265855642b75aa2a592e1c last_two=4.07999992 text=A naprendszere fölterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=101920 sha256=e7f502e537119ad162346e354425125386b323715d22e3c198e85eaa4a668c8e last_two=4.07999992 text=A naprendszere fölfelő forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=104320 sha256=0d7afad08bb353bd9db42544f484dcae17105eb211d5f152818bb5f75b00ffa7 last_two=4.07999992 text=A naprendszere fölterő forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=59200 sha256=97ef94d3b380867f185fe43f0840f40cb1d0bfabcc430ed4b1d9b16589388208 last_two=0.399999976 text=Até a bitchilla wrath.
+HISTORY=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer A naprendszere fölterő forog, beleértve a napot, sőt, a többi Até a bitchilla wrath.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=89
+MEASURE index=0 decode_ms=49.911800 completed_after_source_start_ms=1362.608400
+MEASURE index=1 decode_ms=88.019400 completed_after_source_start_ms=2064.032400
+MEASURE index=2 decode_ms=126.026600 completed_after_source_start_ms=2793.178900
+MEASURE index=3 decode_ms=171.963500 completed_after_source_start_ms=3575.384300
+MEASURE index=4 decode_ms=213.765800 completed_after_source_start_ms=4395.075800
+MEASURE index=5 decode_ms=267.661200 completed_after_source_start_ms=5273.540100
+MEASURE index=6 decode_ms=320.892200 completed_after_source_start_ms=6208.117700
+MEASURE index=7 decode_ms=384.385700 completed_after_source_start_ms=7202.726400
+MEASURE index=8 decode_ms=442.753200 completed_after_source_start_ms=8251.584600
+MEASURE index=9 decode_ms=502.478400 completed_after_source_start_ms=9365.643800
+MEASURE index=10 decode_ms=507.631400 completed_after_source_start_ms=9873.542600
+MEASURE index=11 decode_ms=243.072900 completed_after_source_start_ms=10728.954400
+MEASURE index=12 decode_ms=300.823200 completed_after_source_start_ms=11656.750300
+MEASURE index=13 decode_ms=353.620400 completed_after_source_start_ms=12612.689000
+MEASURE index=14 decode_ms=406.818800 completed_after_source_start_ms=13624.710500
+MEASURE index=15 decode_ms=422.959800 completed_after_source_start_ms=14047.899500
+MEASURE index=16 decode_ms=246.833900 completed_after_source_start_ms=14294.991700

@@ -1,0 +1,15 @@
+DECODE frames=5600 sha256=cbb1338a8cc309e2d39b9029e752eff074428cea9e2b811a54e3244f9502977e last_two=-1 text=So
+DECODE frames=16800 sha256=b4d59ea07f302ca4bb0087f7831c98e4c5defb42f0ff50838e3f62c6afba2466 last_two=0.48 text=To the north and within.
+DECODE frames=19200 sha256=a3ed77c3a0c918a0a84c5a680ce174bc1e0c7cc08eb6b00aac7a13105968e637 last_two=0.64 text=To the north and within east.
+DECODE frames=5600 sha256=fb8a0d770b4938f113f22f207150295b5992b7980ef0a9a7a95f75a5fa4b50ba last_two=-1 text=
+DECODE frames=16640 sha256=1f7869c95b408e4c1a47f63a5d50c1ede01ed637e24a6ff52fc6ff9e8c0e6280 last_two=-1 text=
+DECODE frames=22080 sha256=ce207c469aba6849f967241f466f507ea1e7fb831d7b616cda76a1bf5f04d214 last_two=0.8 text=To foreigners after a global
+DECODE frames=5600 sha256=c71090949dd5d02a059001e3804fb9b65c1e0672c71aa3f8cdf3aa1c8db331c1 last_two=-1 text=
+DECODE frames=16320 sha256=f73a235647d0c14249d43828cd9481649dd9655cd71a8e6d8de785444704dcc0 last_two=0.56 text=Splinter is recording.
+DECODE frames=28640 sha256=f3044632c748bc5967b05f35b15369037aa4f71342beb554544da8a72be4a51c last_two=1.12 text=Splinter is recorded by Lord I
+DECODE frames=28960 sha256=ca760d54d16168765ea9563440a0750296a1bb2037be1b85aeaa0b05a9f69aae last_two=1.12 text=Splinter is recorded by Lord Vi.
+HISTORY=To the north and within east.
+HISTORY=To foreigners after a global
+HISTORY=Splinter is recorded by Lord Vi.
+DROPPED=0
+STATUS=Figyelek · felismerés: 204 ms

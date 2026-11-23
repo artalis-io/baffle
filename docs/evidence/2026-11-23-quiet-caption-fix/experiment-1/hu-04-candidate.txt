@@ -1,0 +1,26 @@
+REPLAY queue_capacity=512 input_frames=280320
+DECODE frames=5600 sha256=c8e57cf547d367a513d975601672ae045b2e10f80b143264c5cd2056f6252948 last_two=-1 text=
+DECODE frames=16000 sha256=a3ec780e0cac31b3f8ac4fe747fccbb9c58fe8785c7e089250431c66a28adcb6 last_two=-1 text=
+DECODE frames=27200 sha256=7acaedcc911a10daf5f58ad0698c55c3a67f24f91fb19e6c856a52b22e25a755 last_two=-1 text=
+DECODE frames=38880 sha256=6c7822ee1f951a0bc7078fe8f0bc483880c6dbc273d0ed1024643ebf2e1d1416 last_two=-1 text=Aspectroom.
+DECODE frames=51200 sha256=715bf6884e8d20bfeaeba36c353476356d0dee16e35b753bceb8abf9b35c9d91 last_two=2.48000002 text=Aspectrum magic oil.
+DECODE frames=64320 sha256=52e3fe5b9166756e83fa1f3597d1ddf55196e2fb5eae8f623ac510113c06b9a7 last_two=2.96000004 text=spektrum másik oldalán palaki
+DECODE frames=78080 sha256=cd8403204b90af35e87cf685176f8f9bde2ce7784c27fbe6c2f66e2791b76f14 last_two=2.96000004 text=A spektrum másik oldalán valaki.
+DECODE frames=92960 sha256=990ec70a32783ccd21d6951f543b81e79d002ef189f586132c9b0dfdc2b7ebe7 last_two=5.27999973 text=A spektrum másik oldalán valaki egy felismerhet a fán.
+DECODE frames=108480 sha256=fd7182d3c9d2ab536edcebcd0f95930a78e249495826d86bf28c3b598360fed5 last_two=5.75999975 text=A spektrum másik oldalán valaki egy felismerhetetlen személy alakul.
+DECODE frames=125280 sha256=168d3d12959fb21f315c4136a7634038cbcdd889f2279851954aec2f58db166d last_two=5.83999968 text=A spektrum másik oldalán valaki egy felismerhet személy alakul.
+DECODE frames=128000 sha256=8f52e24f69414aa30955339c2f5e5e31e1fed11f6952647cf0a331d48302ea80 last_two=7.19999981 text=A spektrum másik oldalán valaki egy felismerhet felé alakul, aki úgy...
+DECODE frames=55360 sha256=0e5e92bad69cf3af37c592f52494562407b20222e7440060f7ffcc3aabc0879f last_two=2.63999987 text=mennyi alakul, aki úgy érti, hogy mintán.
+DECODE frames=68480 sha256=a3e57855cac4f149ca0be1b5dfb2c389318f18a70efce5c359efc7970d6c8db0 last_two=3.43999982 text=alakul, aki úgy érti, hogy mintán a csoport.
+DECODE frames=82560 sha256=15512f63d1ce8840d1a1cf59b751cbeaa958fb0963b782f310f0db83b3703391 last_two=4.23999977 text=mennyi alakul, aki úgy érti, hogy mintán a csoport által létre.
+DECODE frames=97600 sha256=9ce246080079137c1a40553617fc8437b034c1f60ad93462e0000ae77b69d070 last_two=4.71999979 text=alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot.
+DECODE frames=113920 sha256=0f106f0b5da83ecc7989fde3b48579d33901cb8c410d482ad04954487cb584fc last_two=6.31999969 text=alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg kell változtan.
+DECODE frames=128000 sha256=2d0b7890fac99b12694623dbe0be62976308575bb23eb7d0216124e7b5f8cc2f last_two=6.31999969 text=alakul, aki úgy érzi, hogy mintán a csoport által létrehozott dolgot meg kell változtatni.
+DECODE frames=54560 sha256=e9ae992e36d9427cf6395c59ed0e8f03c2cd12555ca5c19687dc6387b93eac08 last_two=2.31999993 text=akkor meg kell váltott, és a saját távák.
+DECODE frames=68000 sha256=619339ce9bc9efe5811634dfce8b3d4fed730e868540769bd8903631d9b32932 last_two=3.3599999 text=okot meg kell váltotatnem, és a saját tává kell tennie.
+DECODE frames=80640 sha256=f40bfe488f749734d4f8a637e914857baaf9d5e4b3755f419ae7252fbd030dd0 last_two=3.3599999 text=meg kell váltott, és a saját tává kell tennie.
+DECODE frames=15200 sha256=447021bc8f80e5c6d3a89b6fba4bb8982fee95f81ef047d6bb66247a1f7b621a last_two=-1 text=
+DECODE frames=26400 sha256=061ff092eed757294b4d0ad7a7a1b629664d22098507095c1adebbe9d13efc6d last_two=-1 text=
+HISTORY=A spektrum másik oldalán valaki egy felismerhet felé alakul, alakul, aki úgy érzi, hogy mintán a csoport által létrehozott dolgot meg meg kell váltott, és a saját tává kell tennie.
+DROPPED=0
+STATUS=Listening

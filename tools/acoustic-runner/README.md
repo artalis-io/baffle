@@ -123,6 +123,43 @@ projection/error includes AGC and is not first-phoneme or acoustic-tail proof.
 
 ## Acquisition and reviewed onset admission
 
+### Local live captions (external demonstration)
+
+With `BF_QUALIFY_HAIL=ON`, `baffle_live_capture` consumes an explicitly selected
+WASAPI capture endpoint through installed public Hail and Baffle libraries.
+It applies NS -> AGC -> VAD at 16 kHz / 10 ms. It has no playback/reference leg
+and performs no AEC. The fixed binary pipe is private to this demonstration,
+not a public Hail/Baffle API. Capture timing is copied without inventing valid
+host timestamps; stream gaps reset processing and the caption context.
+
+From the Baffle root, in the existing optional acoustic Python environment:
+
+```
+python tools/live_transcript.py PATH/TO/baffle_live_capture.exe PATH/TO/models --device "EXACT_WASAPI_CAPTURE_KEY"
+```
+
+Uses the local Parakeet files described by `inference_contention.py`; `--model
+whisper` selects the existing English Whisper model, and `--raw` bypasses Baffle
+for the ASR input. Python, NumPy, Tk and sherpa-onnx are demonstration dependencies
+only. No download, network, audio file or transcript recording is performed.
+The native source exits after at most 30 minutes; Stop/closing the window signals
+graceful retirement, with forced termination only if the child fails to retire.
+
+These are **revisable buffered captions, not native streaming ASR or a dialogue
+runtime**. Decode windows are at most eight seconds, normally refreshed every
+600 ms subject to inference time. Energy-based demonstration endpointing uses
+900 ms silence and 250 ms onset context; long utterances split at eight seconds
+and word boundaries can be imperfect. Neither the energy test nor the transcript
+identifies a human speaker: assistant playback may also appear in captions.
+There is no spoken reply or automatic playback cancellation.
+
+The GUI retains at most 60 recent segments and at most one second of pending
+audio. The capture queue is bounded to 32 slots. An overloaded recognizer drops
+old pending audio, displays loss and clears the affected decode context. Pipe I/O
+and ASR run outside device callbacks; pipe backpressure can cause observable
+capture loss. NS contributes its existing 10 ms buffer. This smoke demonstration
+is not a latency, intelligibility, AEC, phoneme-onset or production qualification.
+
 First enumerate with `baffle_hail_acquire BACKEND --list`. Native recording requires
 explicit persistent endpoint keys; default endpoints are permitted only for the
 virtual self-test. Device names do not establish a physical speaker/mic route.
@@ -308,3 +345,14 @@ For matched actual CPU inference use `inference_contention.py --backend baffle`
 for AEC-only or the unchanged default `pipeline`, independently of
 `--sample-rate 16000|48000`. Execution, scheduling and NS's 10 ms queue remain
 separate; the harness is rolling offline ASR plus sentence-incremental Piper.
+
+## C11 migration audit
+
+The current qualification frontends and the rejected residual experiment are C11;
+[the audit](../../docs/c-audit-2026-11-21.md) retains bit-exact comparison evidence.
+`BF_COMPARE_WEBRTC` alone enables a small foreign C++ API shim. A manually built
+WebRTC installation must expose its Abseil headers as well as its pkg-config
+entry; the retained local comparison supplied the missing include prefix through
+`CMAKE_CXX_FLAGS`. Neither WebRTC nor a C++ compiler is needed for ordinary tools.
+With `BF_QUALIFY_HAIL=ON`, CTest runs the public virtual-backend pending-retirement
+regression. Acquisition metadata distinguishes requested and acknowledged flushes.

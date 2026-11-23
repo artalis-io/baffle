@@ -1,0 +1,19 @@
+REPLAY queue_capacity=512 input_frames=69120
+DECODE frames=5600 sha256=0d3777fd90fbf04f5603e6d9af960a901f11dc5127c6c4901de0f15bdc6877f0 last_two=-1 text=
+DECODE frames=16480 sha256=b327a1c9d3e4cdeef93489e558139ef74f5dd9c6b8c196431462763ef95f17d2 last_two=0.639999986 text=Maybe plus a
+DECODE frames=27360 sha256=419601604e1fd1d3a61c69cc0cbc2af58b7730d772e74f0eeaef4cf5d5d2182f last_two=1.19999993 text=Maybe people don't think about them.
+DECODE frames=39360 sha256=b6dfff0b12b104d581e32e96f9ff70c60b98bca84369d80e7dcc0bceba184e43 last_two=2.31999993 text=Many people don't think about them as senators because they're not going
+DECODE frames=52000 sha256=299cb19dc6fe53d34ae7d6d7eb8a75447ea7fd75f4de5562f4c61e7004ea5d02 last_two=2.63999987 text=Many people don't think about them as dinosaurs because they have other.
+DECODE frames=64960 sha256=b1fd81668efc54136dfd82ad0d3c2e04d0e0d0193fb8ae6c0c6f3680ff6c5142 last_two=3.43999982 text=Many people don't think about them as dinosaurs because they have others and can fly.
+DECODE frames=75680 sha256=8d4fd9580b8a2c49002afbb1a89dafafd7deab5a3de80f0098fd364d14998362 last_two=2.87999988 text=Many people don't think about them as senators because they have feathers and
+HISTORY=Many people don't think about them as senators because they have feathers and
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=32
+MEASURE index=0 decode_ms=49.570900 completed_after_source_start_ms=1198.117300
+MEASURE index=1 decode_ms=87.815700 completed_after_source_start_ms=1896.951000
+MEASURE index=2 decode_ms=129.017200 completed_after_source_start_ms=2632.590400
+MEASURE index=3 decode_ms=172.415100 completed_after_source_start_ms=3414.435000
+MEASURE index=4 decode_ms=220.282300 completed_after_source_start_ms=4248.637000
+MEASURE index=5 decode_ms=265.761000 completed_after_source_start_ms=5127.412400
+MEASURE index=6 decode_ms=306.721900 completed_after_source_start_ms=5828.890000

@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=d62d811f1bebc775e43da6f14105339c0c792af3729b5779e6dfdefa171a8b0b last_two=-1 text=
+DECODE frames=16160 sha256=2f96170b79ac1d9a23e8c9dbed78681790be37f9ba8ecac8270c250776f32d35 last_two=-1 text=
+DECODE frames=27040 sha256=4caa035b1dcacb8a33eedc917165ec0dd7906952052e3f50cf0971b3c52d9ef3 last_two=0.799999952 text=Musa diza.
+DECODE frames=39040 sha256=fba4b23caa429c2b061686e8769176ae852c51ecbad17960f6602b1b392dfbc4 last_two=1.19999993 text=What's the picture?
+DECODE frames=51520 sha256=c2044a172e39bb301bdfd2ff61e060fd9122bd314ca337a5b18babfbdfa13e19 last_two=2 text=Hussa del sata di cui atte.
+DECODE frames=64480 sha256=cb6b6fc605642deb01ff782f32c51a3b99756d5b90922fff880d5f81d8b12b61 last_two=2 text=Hussain sata di kutatásti, mutattä.
+DECODE frames=78080 sha256=670bd5b229b9c9b2a0d3208f1e190ebc320da735fa92aaef03423436360f9bb7 last_two=3.51999998 text=Huszan. századdi kutatás kimutatja, hogy a gyenékrai változata.
+DECODE frames=93120 sha256=1adeccc1be5ec51f719af2c4f5018cf8c54e43427dcad14a77bcc6a2bfbe4d6b last_two=4 text=Husz. századik kutatás kimutatna, hogy a lenáték raj változtatosságnak.
+DECODE frames=108800 sha256=d9c5e50fb91d3925189e38d9eacd63bf2b2df4958e71ca3c5e538dfed8a2ff70 last_two=5.67999983 text=20. századik mutatás kimutatna, hogy a lenáték változtatosságnak, két variációja van.
+DECODE frames=125120 sha256=6cda5002a52de63aaec53679942700a03e8e95d70b3528f532853fa3ce8a0f24 last_two=6.63999987 text=20. századik mutatás kimutatna, hogy a lenáték változtatosságnak két variációja van, rejtett.
+DECODE frames=128000 sha256=b08d238e0bcb19bd03051ee8125fbc0ca038620bda83fbb1158284993634ffcb last_two=6.63999987 text=2. századik utatás kimutatna, hogy a denatikai változtatosságnak két variációja van, rejtett.
+DECODE frames=54400 sha256=1e2d7a709f2af6c4d2415d9434f6002f2845d47df876204de9b23ea8b7e8f679 last_two=1.67999995 text=rejtett és kifejezett.
+DECODE frames=67680 sha256=787a77bfc45907d408d00b8daf6b6212265da34f06d84c884c6a197cd5ff7c4e last_two=1.67999995 text=Gója van, rejtett és kifejezett.
+DECODE frames=78080 sha256=2dcfb3de31a585a0dbc976b915c6d1094eccb3d1d00ff67875be7c7094675b17 last_two=1.67999995 text=A szója van rejtett és kifejezett.
+HISTORY=2. századik utatás kimutatna, hogy a denatikai változtatosságnak két variációja A szója van rejtett és kifejezett.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=81
+MEASURE index=0 decode_ms=50.054400 completed_after_source_start_ms=1563.063300
+MEASURE index=1 decode_ms=86.525100 completed_after_source_start_ms=2260.060900
+MEASURE index=2 decode_ms=126.702100 completed_after_source_start_ms=2992.196900
+MEASURE index=3 decode_ms=166.501200 completed_after_source_start_ms=3771.796800
+MEASURE index=4 decode_ms=215.458800 completed_after_source_start_ms=4592.735200
+MEASURE index=5 decode_ms=258.475000 completed_after_source_start_ms=5452.643200
+MEASURE index=6 decode_ms=309.642700 completed_after_source_start_ms=6368.695200
+MEASURE index=7 decode_ms=366.245500 completed_after_source_start_ms=7366.325900
+MEASURE index=8 decode_ms=419.786600 completed_after_source_start_ms=8393.804000
+MEASURE index=9 decode_ms=477.775800 completed_after_source_start_ms=9478.659300
+MEASURE index=10 decode_ms=486.986100 completed_after_source_start_ms=9965.910300
+MEASURE index=11 decode_ms=222.655200 completed_after_source_start_ms=10799.999100
+MEASURE index=12 decode_ms=266.509300 completed_after_source_start_ms=11675.400000
+MEASURE index=13 decode_ms=301.498700 completed_after_source_start_ms=12341.127800

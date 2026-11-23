@@ -1,0 +1,29 @@
+REPLAY queue_capacity=512 input_frames=156160
+DECODE frames=5600 sha256=078f26de0e2db9e90ea24cf67a60822ac95d57544491a75f308ed472a0bc1267 last_two=-1 text=
+DECODE frames=16000 sha256=b9bd1cf8bb8c09ce425ecc14b8722c2cb495e88b92e62a99044d6fd290183ca5 last_two=0.479999989 text=The cabbage juice change.
+DECODE frames=27040 sha256=0513fda065f3e3b66454fb0f9601376c4c7cd081ae1a00f070a4b8d9028cf185 last_two=0.479999989 text=Ha ha ha.
+DECODE frames=38560 sha256=7d3880163b1e05231a68441e4add352dd13bbec67f3f033566a2828abc5282e7 last_two=1.75999999 text=The cabbage juice changes color depending on how a
+DECODE frames=50880 sha256=2ca29a551f175e6a06e6268efef36d1bbe4481de7ea21119eafeae24b13e0e3a last_two=2 text=Cabbage juice changes color depending on how acidic basically
+DECODE frames=64000 sha256=84c400013a310f203a8feb811a1a82cfc48e31f3afe59c6ba5271264d00b1177 last_two=2.79999995 text=Cabbage juice changes color depending on how acidic basic alkaline
+DECODE frames=78080 sha256=80ce9a9379ad7d1d3d8ccc7a139f4f8f254b7159d1bc8457b3ed835584d0d247 last_two=4.07999992 text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DECODE frames=92480 sha256=a8bad9ddb2faaefe476153cc40ad21a079630cb9b58089bb3f839e4639c28717 last_two=4.07999992 text=The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.
+DECODE frames=96000 sha256=57e40886767b3818d981c3a6e747511212e2223f04280cabf78d0ce2ae2f87fc last_two=4.15999985 text=The cabbage juice changes color depending on how acidic basic alkaline the chemical is.
+DECODE frames=57440 sha256=45bf81475dea7b23bfc999af3e98186ec02aefb431f1bac83776e0a61e2a37c5 last_two=0.639999986 text=Alignment chemical is
+DECODE frames=71360 sha256=6cf06ca126ee9463e03285f1b548385df2d192316ec5bf23c588351b93b04c25 last_two=-1 text=
+DECODE frames=82880 sha256=70501cfe6448d81c872392a5aa4a070b4e98f784241212370507b6db467a9b49 last_two=0.159999996 text=I like it.
+HISTORY=The cabbage juice changes color depending on how acidic basic alkaline the I like it.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=55
+MEASURE index=0 decode_ms=50.560300 completed_after_source_start_ms=1680.960100
+MEASURE index=1 decode_ms=88.418600 completed_after_source_start_ms=2379.082300
+MEASURE index=2 decode_ms=126.166400 completed_after_source_start_ms=3111.153800
+MEASURE index=3 decode_ms=170.405600 completed_after_source_start_ms=3885.639000
+MEASURE index=4 decode_ms=210.570500 completed_after_source_start_ms=4702.336900
+MEASURE index=5 decode_ms=260.501200 completed_after_source_start_ms=5569.802900
+MEASURE index=6 decode_ms=314.071400 completed_after_source_start_ms=6488.404000
+MEASURE index=7 decode_ms=370.682100 completed_after_source_start_ms=7462.166300
+MEASURE index=8 decode_ms=377.095100 completed_after_source_start_ms=7839.466200
+MEASURE index=9 decode_ms=233.666200 completed_after_source_start_ms=8683.274500
+MEASURE index=10 decode_ms=281.912100 completed_after_source_start_ms=9595.470800
+MEASURE index=11 decode_ms=330.586500 completed_after_source_start_ms=10355.160200

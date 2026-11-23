@@ -1,0 +1,10 @@
+{
+  "status": "updated-original-path",
+  "executable": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-native-transcript\\portable\\BaffleLive.exe",
+  "sha256": "c0627f1e8643f77172156054e9393fd35d2eed89c8fde558a377c0f414099336",
+  "previous_sha256": "592eb4dcddf311ff92bc1a8ff6d6ede6adfd88b0ea662025c041c8a00e1db436",
+  "previous_image": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\BaffleLive.running-previous.exe",
+  "default_processing": "Noise reduction (unchanged)",
+  "quiet_continuations": "Raw microphone only",
+  "current_window": "Existing windows retain their loaded build; reopen to use this payload"
+}

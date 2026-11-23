@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=174720
+DECODE frames=5600 sha256=82d72daa4e168078a77363a33109aa0b911877947a308587a0268e4de26377f3 last_two=-1 text=
+DECODE frames=16160 sha256=c1e211441f1fa3cff5ad0736a0afb203d41a4c9c0e65a44032a477891df5b0c1 last_two=-1 text=Okay.
+DECODE frames=27040 sha256=e5b5dca2abfb3f23659710f64a6e9383e5e7203f8c341a25ede5ca0cdcb32997 last_two=-1 text=
+DECODE frames=38880 sha256=1774471f615269e3bb4c8892fa3d9657493baff1e5a3ccedbd46f9c9d1403cb4 last_two=1.5999999 text=Minden figyelembe vé.
+DECODE frames=51200 sha256=f74159d4afaa422848f08ef05dd736aeb22fc9eb0c15559c6df7f6d856672515 last_two=2.55999994 text=Minden figyelembe véve, nem lenne.
+DECODE frames=64640 sha256=1af4ffd0edcb1ecf8e5624c156ef867464d9e5c0e0cb1ba9f39ad9eaa3b84de2 last_two=2.79999995 text=Minden figyelembe véve, nem lenne nagylepő,
+DECODE frames=78560 sha256=741613a34da1bdd332c18c5452ab2fa7ec5bb2e9bf001aa6cf00dec247895f2b last_two=4.48000002 text=Minden figyelembe véve, nem lenne meglepő, ha őseint a fejét.
+DECODE frames=93440 sha256=316e614edbfe01996f511b5e7b4667ad69d3595765618769567fcaeffe85a366 last_two=5.11999989 text=Minden figyelembe véve nem lenne meglepő, ha őseink a fehér problémát ha.
+DECODE frames=109120 sha256=dc423bdcf5bdb6283a3349fbabdbfff15f7488d47a27d9cf6f1c5e454eda50be last_two=5.5999999 text=Minden figyelembe véve nem lenne meglepő a őseink a fehérje problémát hasonlóben oroták.
+DECODE frames=125920 sha256=fc83f965bfe163c9a46504f792e24de644422484b1c6abed106b2b1de9a3ed99 last_two=6.39999962 text=Minden figyelembe véve nem lenne meglepő a őseint, a fehér problémát hasonlópen odna med,
+DECODE frames=128000 sha256=d27eb7717f6deff259e54d871de4dfdaf18ac176bc40466fcff1bb6521a33000 last_two=7.44000006 text=Minden figyelembe véve, nem lenne meglepő, ha a öseint a fehér problémát hasonló éppen orották volna med, mint a
+DECODE frames=54720 sha256=ce9f8895475937bcab4f0a91104f3f68a030b9b740f51884282fabb3abf8781c last_two=2.72000003 text=Tippen odották volna meg, mint a majd simpánzott a szavannál.
+DECODE frames=68160 sha256=4fb06f29dea444971cd8b97d2cec18d968b6e00bc3d3a5d4286b0ddfa03210b0 last_two=-1 text=
+DECODE frames=82560 sha256=d819fe24ee2a03dd05a070d60f625d8cafcf642296d04e41435a7efb54dd798f last_two=2.15999985 text=Tippen oroták volna meg, mint a mai csimpánz oroszavannál.
+DECODE frames=85920 sha256=cbf550c44a0094c850968c4a095ffaf776997f24d0636923caec74e6555c0cb3 last_two=2.15999985 text=Éppen orották volna meg, mint a mai csimpánz oroszavannál.
+HISTORY=Minden figyelembe véve, nem lenne meglepő, ha a öseint a fehér problémát hasonló éppen orották volna med, Éppen orották volna meg, mint a mai csimpánz oroszavannál.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=83
+MEASURE index=0 decode_ms=50.241900 completed_after_source_start_ms=1452.154600
+MEASURE index=1 decode_ms=85.661600 completed_after_source_start_ms=2150.020400
+MEASURE index=2 decode_ms=125.653100 completed_after_source_start_ms=2883.700900
+MEASURE index=3 decode_ms=167.793000 completed_after_source_start_ms=3666.315500
+MEASURE index=4 decode_ms=207.450600 completed_after_source_start_ms=4477.496400
+MEASURE index=5 decode_ms=258.188600 completed_after_source_start_ms=5363.667800
+MEASURE index=6 decode_ms=307.722500 completed_after_source_start_ms=6289.190600
+MEASURE index=7 decode_ms=364.668900 completed_after_source_start_ms=7258.111500
+MEASURE index=8 decode_ms=427.102700 completed_after_source_start_ms=8310.047700
+MEASURE index=9 decode_ms=482.428400 completed_after_source_start_ms=9402.633000
+MEASURE index=10 decode_ms=488.037000 completed_after_source_start_ms=9890.935800
+MEASURE index=11 decode_ms=224.619900 completed_after_source_start_ms=10716.597300
+MEASURE index=12 decode_ms=276.330800 completed_after_source_start_ms=11604.212200
+MEASURE index=13 decode_ms=341.177400 completed_after_source_start_ms=12569.393100
+MEASURE index=14 decode_ms=351.439100 completed_after_source_start_ms=12921.038400

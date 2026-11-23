@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=80000
+DECODE frames=5600 sha256=ef6f99cfca916cbd6c26b9a4b10bccb99de048873e994c7480785d275ca2e297 last_two=-1 text=
+DECODE frames=16160 sha256=1d5980157eebb65b837d7efd20c9ab1f3f58deec8a96a5dcbb723f4af6585bf3 last_two=-1 text=
+DECODE frames=27520 sha256=c1becd5e6af74d99053a0a79210f87ffd91e6cf77317c319ac6f65fc13e94247 last_two=-1 text=
+DECODE frames=39360 sha256=bd69506e45078d9a139776a15e3d25b32465ad030edeb3fc0a45d5c0a51b0f63 last_two=-1 text=
+DECODE frames=51360 sha256=ec81a30eaecf3ad07d75ae138c9a83258a128cafab9e8217c4d9fd94f1a20fff last_two=-1 text=
+DECODE frames=64800 sha256=e7a5d00b2f701837bf90d6ee788de019505004734f33e18132285f66063cd341 last_two=-1 text=
+DECODE frames=78720 sha256=bb74038b45003a3f7defef4eab87c8d5e7bb836df6f55fe17722f330756a92c6 last_two=-1 text=
+DECODE frames=93280 sha256=b55d4abfa380314f59d581cd46071049ffbe98648b0a3f05c24374d901da504b last_two=-1 text=
+DECODE frames=96000 sha256=f61bb2c9e795ceac0dbecd300cfc2619a087a7183bf7abd76e3dcae310661c48 last_two=-1 text=
+DECODE frames=50240 sha256=085cc678fcb41e64369921578380d2a6d2c3bb314502d1a5f115169adb67ecb8 last_two=-1 text=But
+HISTORY=But
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=37
+MEASURE index=0 decode_ms=50.008600 completed_after_source_start_ms=1174.857200
+MEASURE index=1 decode_ms=85.440600 completed_after_source_start_ms=1870.279400
+MEASURE index=2 decode_ms=125.096800 completed_after_source_start_ms=2602.696700
+MEASURE index=3 decode_ms=165.487100 completed_after_source_start_ms=3383.039000
+MEASURE index=4 decode_ms=213.375500 completed_after_source_start_ms=4202.689900
+MEASURE index=5 decode_ms=256.290200 completed_after_source_start_ms=5066.849800
+MEASURE index=6 decode_ms=305.298200 completed_after_source_start_ms=6001.660000
+MEASURE index=7 decode_ms=359.791400 completed_after_source_start_ms=6968.437500
+MEASURE index=8 decode_ms=365.846000 completed_after_source_start_ms=7334.477600
+MEASURE index=9 decode_ms=204.164200 completed_after_source_start_ms=7538.851100

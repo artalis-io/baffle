@@ -1,0 +1,41 @@
+REPLAY queue_capacity=512 input_frames=261120
+DECODE frames=5600 sha256=d29cc7fb86681db4f2938d4168eea2b2a8fe96e52528af5d374aa162b27d8c9a last_two=-1 text=Yeah.
+DECODE frames=15840 sha256=c07b4e80d08e0a3cc6f25d010ed3c60921ff9e50c219027edaf7439bcb8c38bc last_two=0.319999993 text=Okay, should Russia.
+DECODE frames=26880 sha256=747cb0c9c0b6bb394aadeaccdac94df339fc15ad293e023b4abf15aa449131f1 last_two=0.959999979 text=Okay, should rush on up.
+DECODE frames=38560 sha256=6cfee45ddbbc38f8e396113a12755e66a51db34d345253a6d0791d0754123d40 last_two=1.43999994 text=Késő vasárnap az egyesült állam.
+DECODE frames=51200 sha256=715ca04122ce870247ba50a46709f7629b9afd9c78bf83850d3789f378014e34 last_two=2.63999987 text=Késő vasárnap, az egyesült államak, álnök át.
+DECODE frames=64320 sha256=3a73e35e5e87659c06603c9ea2c26bbf1b90403e115a0c2a0e209303c33a2dbd last_two=3.03999996 text=Késő vasárnap az egyesült államak állnök a tanártám.
+DECODE frames=78240 sha256=a5fcd5f2335da48d03ad7609146c4ae19b3bfaa84df1428d24e36b980ff59085 last_two=4.48000002 text=Késő vasárnap az egyesült államak álnöká, tanátrám egy a s...
+DECODE frames=93120 sha256=6cf811f60664df141eb3a9964b3b1e1c745b37d52d92ddef4691d4fea17d6754 last_two=4.63999987 text=Késő vasárnap az egyesült államak álnökát tanátrám egy a sajtótkár.
+DECODE frames=108800 sha256=607e8dc6a118de1f715941ee751b114df578a3470749b4a10e9e647b8496d94d last_two=5.92000008 text=Késő vasárnap az egyesült államak álnöká tanátrám egy a sajtótitkár által közve.
+DECODE frames=112320 sha256=0e8fa8eec38d966c9c95885b25fbad0b4758d531e35ddf89fec371980e3b5990 last_two=5.92000008 text=Késő vasárnap az egyesült államak álnök átanát rám egy a sajtótitkár által közvetik.
+DECODE frames=52000 sha256=3f03e47777a1de9db7ae50cedd91467def72c483919b1bba7013faa758653086 last_two=1.36000001 text=Tykkään aattää kyllä jatkotappa.
+DECODE frames=65280 sha256=05cb3277f61988661e417578bb11e26518aa6536dcd667affa37531871bf129a last_two=3.03999996 text=Tykkään aattää kyllä jatkota pan kieran.
+DECODE frames=79200 sha256=ca01c389560e0a8838ac086f98cee241753851f4d52422f92997a41a8b4b103a last_two=3.27999997 text=Tykkään átvätöntkoppaan kieran tätä.
+DECODE frames=93920 sha256=131d043053cef63fdddde28101d5455472fdd42f052a62a905abaf3382906aae last_two=3.27999997 text=Tykkään aattää kyllä jatkossa tapaan kieran tätä.
+DECODE frames=109600 sha256=e421d95bf6fd4201c3e9dda47f43367591638f3f88658b251126b97e7220928d last_two=5.51999998 text=Tykään áttaa közvetlen jatkozat panne. Amerikai katona edségek.
+DECODE frames=126240 sha256=99433a474aa350caa94e560d89d244151012e49b1a1cf6fb9e2ef2a6b96bc7b0 last_two=6.71999979 text=Tikkään áttal közvetünk jatkozatban kijelántette, hogy az amerikai katonai egységek elhagyták single.
+DECODE frames=128000 sha256=b8398788b3221d060a825032239ef8dc916c16605226fd5fcc0a51c4d8555e36 last_two=6.79999971 text=Tykán átal közvetünk jatkozat pan kielátö, hogy amerikkai katonai egységek elhagyták singon.
+DECODE frames=48640 sha256=dba30239719e125d32f4a841e4114df4a1b17e87dd1db344df075c7f6ba86394 last_two=1.5999999 text=I shake a hard tech thing react.
+HISTORY=Késő vasárnap az egyesült államak álnök átanát rám egy a sajtótitkár Tykán átal közvetünk jatkozat pan kielátö, hogy amerikkai katonai egységek I shake a hard tech thing react.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=88
+MEASURE index=0 decode_ms=50.998000 completed_after_source_start_ms=2558.308000
+MEASURE index=1 decode_ms=86.082900 completed_after_source_start_ms=3253.963600
+MEASURE index=2 decode_ms=123.785500 completed_after_source_start_ms=3978.727600
+MEASURE index=3 decode_ms=167.489200 completed_after_source_start_ms=4748.955900
+MEASURE index=4 decode_ms=209.010700 completed_after_source_start_ms=5587.166600
+MEASURE index=5 decode_ms=260.436800 completed_after_source_start_ms=6452.555100
+MEASURE index=6 decode_ms=311.681800 completed_after_source_start_ms=7375.636600
+MEASURE index=7 decode_ms=366.603300 completed_after_source_start_ms=8362.624300
+MEASURE index=8 decode_ms=421.804900 completed_after_source_start_ms=9385.010600
+MEASURE index=9 decode_ms=429.199700 completed_after_source_start_ms=9814.445900
+MEASURE index=10 decode_ms=215.028100 completed_after_source_start_ms=10659.793400
+MEASURE index=11 decode_ms=261.996100 completed_after_source_start_ms=11525.496100
+MEASURE index=12 decode_ms=310.554000 completed_after_source_start_ms=12454.657400
+MEASURE index=13 decode_ms=368.538400 completed_after_source_start_ms=13430.558200
+MEASURE index=14 decode_ms=426.837100 completed_after_source_start_ms=14459.569800
+MEASURE index=15 decode_ms=487.957700 completed_after_source_start_ms=15570.589200
+MEASURE index=16 decode_ms=490.953500 completed_after_source_start_ms=16061.811100
+MEASURE index=17 decode_ms=202.409900 completed_after_source_start_ms=16419.327800

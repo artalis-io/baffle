@@ -1,0 +1,19 @@
+REPLAY queue_capacity=512 input_frames=168960
+DECODE frames=5600 sha256=5334922dc8983ab7fb3ce664036a0ff65f5dca6b585265d7c36efca9e27c59d8 last_two=-1 text=Yeah.
+DECODE frames=15840 sha256=57653a7ab08512aef246e463a8339441ff7b354bd0d113b8af9f66f67c3f80ee last_two=-1 text=
+DECODE frames=27200 sha256=ba28e19b5fb81f8b1fa7a0db72a1b5c55e607abe1d8aebe659573520a925acf0 last_two=-1 text=Mm.
+DECODE frames=39040 sha256=d42cc4086b9063619c0caaa9c215113a5fce534bd93ca8515940f4303aabe5b3 last_two=2.31999993 text=However, it's not
+DECODE frames=51360 sha256=9d2fea43048678e56a5857c8fd17ed3f272d3a49a0304a1cb32fcf51d8597a4c last_two=2.39999986 text=However, due to the slow communication.
+DECODE frames=64480 sha256=22706df203329ddc7ab1976b3adad4da67ee4c374c1f430c7a4a0e99a8f7f3f6 last_two=2.96000004 text=However, due to the slow communication channel,
+DECODE frames=78080 sha256=038de4c4791198b1aa238f93f5bbcbd93b41301202115c64fb2abe26fac9c580 last_two=3.5999999 text=However, due to the slow communication channels, stop
+DECODE frames=93120 sha256=02d13bcda97bffecb1b1c5c924976a5f3cba2085f56230017b2eaa8926e0ce92 last_two=5.27999973 text=However, due to the slow communication channels, styles in the web
+DECODE frames=108800 sha256=056d91e4aaaf402f41d727581faac3bca44486b8fdc4ab150dce67259f7686b0 last_two=6 text=However, due to the slow communication channels, styles in the West could lag behind.
+DECODE frames=125600 sha256=88f80a06f99555726a23a20494f80299001d95cd1b2fdfca843f1a370cb7f8cc last_two=7.03999996 text=However, due to the slow communication channels, styles in the West could lag behind by twenty
+DECODE frames=128000 sha256=330b753a670182dcc9659876d167f771b0b07e136bfd2d338a5aaed3db0f5231 last_two=7.27999973 text=However due to the slow communication channels, styles in the West could lag behind by twenty five.
+DECODE frames=55360 sha256=2cba440befc766b458e5dfebbe9b73ed6809584211ffc6d4d66375d4b28e94a2 last_two=-1 text=
+DECODE frames=68960 sha256=1b1c9cc577f19454c8b053278343076c63998ab69ed5d0f149fd4889358f04cb last_two=2.39999986 text=could lag behind by twenty five to thirty years.
+DECODE frames=83040 sha256=6af10692dabfcb0e6e1a05b2eca497a89103f99ede55fee6d0ba04842bc70016 last_two=2.39999986 text=could lag behind by twenty five to thirty years.
+DECODE frames=91200 sha256=b79d14f065fbe506a0f60a453b50a1a1cd8781d3e33e526a7fa4291d966d2b71 last_two=2.39999986 text=could lag behind by twenty five to thirty years.
+HISTORY=However due to the slow communication channels, styles in the West could lag behind by could lag behind by twenty five to thirty years.
+DROPPED=0
+STATUS=Listening

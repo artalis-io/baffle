@@ -1,0 +1,93 @@
+{
+  "public_manifest_sha256": "381337669f5ff818ea05365ed6adb6016be6f3f5a1be29960b1d949edd7116c0",
+  "stage": "raw",
+  "source_license": "CC-BY-4.0",
+  "source_revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "recordings": [
+    {
+      "case": "en-01",
+      "language": "en",
+      "stage": "raw",
+      "reference": "However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year.",
+      "source_dataset_id": 1904,
+      "source_pcm_sha256": "7835bd6ffb54ce38a2a9bcde3905ba424faed94d50a474f21a9cbe9209b869df",
+      "supplied_wav_sha256": "7835bd6ffb54ce38a2a9bcde3905ba424faed94d50a474f21a9cbe9209b869df",
+      "frames": 168960,
+      "duration_s": 10.56
+    },
+    {
+      "case": "en-02",
+      "language": "en",
+      "stage": "raw",
+      "reference": "All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence.",
+      "source_dataset_id": 1675,
+      "source_pcm_sha256": "ffd32e9953ffb14bed7f4e3a2d037ea7ac7de1ba5ad25d4c0f678fd06b24aab0",
+      "supplied_wav_sha256": "ffd32e9953ffb14bed7f4e3a2d037ea7ac7de1ba5ad25d4c0f678fd06b24aab0",
+      "frames": 140160,
+      "duration_s": 8.76
+    },
+    {
+      "case": "en-03",
+      "language": "en",
+      "stage": "raw",
+      "reference": "To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron.",
+      "source_dataset_id": 1950,
+      "source_pcm_sha256": "b722d537c7eac36e3438f45e609676732ce4526b415d829347485a61030d6922",
+      "supplied_wav_sha256": "b722d537c7eac36e3438f45e609676732ce4526b415d829347485a61030d6922",
+      "frames": 183360,
+      "duration_s": 11.46
+    },
+    {
+      "case": "en-04",
+      "language": "en",
+      "stage": "raw",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "source_dataset_id": 1728,
+      "source_pcm_sha256": "f4e95852e336403001191b6dbfc9f00c5263cea304c10761608d6d5fce23da3f",
+      "supplied_wav_sha256": "f4e95852e336403001191b6dbfc9f00c5263cea304c10761608d6d5fce23da3f",
+      "frames": 92160,
+      "duration_s": 5.76
+    },
+    {
+      "case": "hu-01",
+      "language": "hu",
+      "stage": "raw",
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "source_dataset_id": 1742,
+      "source_pcm_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "supplied_wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06
+    }
+  ],
+  "executables": {
+    "cpp": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-c11-audit\\baseline-binaries\\BaffleLive-cpp.exe",
+      "sha256": "7c8a40b41d1f0a5d72a5438d30c509262a8daa7670fea6981ae79c5c7fb249f4"
+    },
+    "c11": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-c11-audit\\win32\\BaffleLive.exe",
+      "sha256": "adf296c9cd0ab7282914e2dd2a119b227d453f2dcf4131b7d800484faa9c5f1f"
+    },
+    "replay_cpp128": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\replay_cpp.exe",
+      "sha256": "43d4a5483e5f68306d0e64b00c85851cf69e24c205ff694791a4e71c73cbbb9e"
+    },
+    "replay_c128": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\replay_c128.exe",
+      "sha256": "a91e0dbc905686b371b458884240a60b54b1cb78f837fc2c6f46f626bdbbf7ac"
+    },
+    "replay_current512": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\native-app\\BaffleReplay.exe",
+      "sha256": "846599b4e34508344c53026d76d8e9ad3773129900d3de613c0cda68f7c13136"
+    }
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "scope": "Raw or fixed NS PCM, paced at 160 samples/10 ms into actual native caption workers. Capture seam replaced; no hardware/cloud.",
+  "references": "Independent publisher transcripts; not newly reviewed by a human; numeric/compound formatting retained in error counts"
+}

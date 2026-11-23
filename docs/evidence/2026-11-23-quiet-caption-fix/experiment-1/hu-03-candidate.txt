@@ -1,0 +1,18 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=2346c3c9413ebfda21a497cde8c97ca22bc52e370f91ee446f4a06f605843644 last_two=-1 text=Yeah.
+DECODE frames=16000 sha256=dc740c9e8297f64762b9d508bbf19b3d14f74f53e37fbe025cae6c8ab99fde8a last_two=0.159999996 text=Thank you.
+DECODE frames=27360 sha256=65b6689082b8f258b7505c8d913cda9d0c66c77bb3be61f83ab7bac0c7857c43 last_two=0.879999995 text=What's up?
+DECODE frames=39040 sha256=830d543b2dc3b9c9463dc94253cccc550bd124c9e658a2cc574dd25b5d2477ec last_two=1.36000001 text=Who's that died?
+DECODE frames=51360 sha256=a9a89ad305f320ef6497e17da411b3af4fd43faa2020c45b0f7aa39e1ef619f0 last_two=2.24000001 text=20. századik kutatás kimutat.
+DECODE frames=64640 sha256=312d457fb2ccf970be5883be0d8bbf9caf3cac6576482422c4a2a1ce37992e3a last_two=3.5999999 text=20. század. kutatás kimutatá, hogy a gyanú.
+DECODE frames=78720 sha256=e5b7d1f6b524d2286dfd981596445e8c25948075f88c57dfe244f463889db9dc last_two=3.67999983 text=20. század utatás kimutatta, hogy a gyenetékai változat
+DECODE frames=93760 sha256=fb7465c24b03882809caa91e08d1d0ba73912c6bc743aedd4d39e621af91cc21 last_two=4.48000002 text=20. század utatás kimutatá, hogy a gyenetéklai változatosságnak két.
+DECODE frames=109600 sha256=640f4adeaea8f71097e28515d4319194cc46e0e567ba62da9bfd24c4acbda44f last_two=5.92000008 text=20. század utatás kimutató, hogy a denetékai változtatosságnak két variációja van,
+DECODE frames=126400 sha256=c4c26e271b346ccf594b3c4e76e2d1f44a42bf1a9bb2de5fb9e4590697fa7543 last_two=6.79999971 text=20. század utatás kimutatá, hogy a denetikai változtatosságnak két variáció van rejtett.
+DECODE frames=128000 sha256=af65b64ca943117c92dc002f6c4da9310ddd994d7f6709ad5c53c11e2a92690b last_two=6.79999971 text=20. századi kutatás kimutatta, hogy a denetikai változtatosságnak két variáció van rejtett.
+DECODE frames=55680 sha256=ab40b3f7b32017d6f21030b4c8f6140938518052ea134ae40718f9c5af7879a9 last_two=1.83999991 text=variációja van, rejtett és kifejezet.
+DECODE frames=69600 sha256=9f7d8d76d398f6d45cc4f19fb48c41fdf7a9e32034f97abbed5638ee4d08b60a last_two=1.83999991 text=variációja van, rejtett és kifejezett.
+DECODE frames=81280 sha256=ff9273907747a60ad0e0f9cb73600866812b33cfda63cd16db16bbe53e08f99a last_two=1.83999991 text=variációja van, rejtett és kifejezett.
+HISTORY=20. századi kutatás kimutatta, hogy a denetikai változtatosságnak két variáció variációja van, rejtett és kifejezett.
+DROPPED=0
+STATUS=Listening

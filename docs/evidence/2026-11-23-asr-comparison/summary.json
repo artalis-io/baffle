@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-23",
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "host": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "AMD Ryzen 9 5950X, 16 cores/32 logical CPUs",
+    "gpu": "CPU execution provider; GPU use not sampled",
+    "background": "Uncontrolled desktop background; no intentional inference contention load"
+  },
+  "corpus": {
+    "source": "google/fleurs",
+    "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "license": "CC-BY-4.0",
+    "unique_recordings": 8,
+    "cases": 24,
+    "raw_processed_jobs": 48,
+    "request_audio_minutes": 9.638
+  },
+  "local_calls": {
+    "whisper_small": 96,
+    "whisper_tiny_en": 48
+  },
+  "cloud": {
+    "status": "NOT EXECUTED: no OPENAI_API_KEY configured",
+    "model_prepared": "gpt-transcribe",
+    "max_requests": 48,
+    "max_audio_minutes": 20,
+    "estimated_usd_for_this_plan_at_0_0045_per_minute": 0.04337099999999999,
+    "provider_hardware_efficiency": null
+  },
+  "hashes": {
+    "manifest.json": "381337669f5ff818ea05365ed6adb6016be6f3f5a1be29960b1d949edd7116c0",
+    "whisper-small.json": "46f08fee7355617ff6f379e878598c34e9f28d0215400a6a8635ab7f688449ad",
+    "whisper-tiny.json": "16618b802b440201ca9238f1720534af389815cc6690785c86a3445deb4af5e7"
+  },
+  "script_sha256": "353269c0cc37288d9bdf3c201595edeaa80d6a56e23c626b51868bd750ac558a",
+  "limits": [
+    "Pilot, four recordings per language; not independent speakers or large-scale acceptance",
+    "Batch fresh-stream decoding, not live captions or voice conversation",
+    "Echo/noise added synthetically; not physical full-duplex qualification",
+    "Provider compute/memory/power unobservable; client costs are not provider efficiency",
+    "Publisher transcripts, not new independent human review",
+    "Public benchmark exposure/training contamination cannot be ruled out",
+    "Quantized Whisper small and English-only tiny, not best possible Whisper accuracy",
+    "No GPT-vs-local winner until real API measurements exist"
+  ],
+  "repeatability": {
+    "small": {
+      "cases": 48,
+      "different_hypotheses_between_repeats": 0
+    },
+    "tiny.en": {
+      "cases": 24,
+      "different_hypotheses_between_repeats": 0
+    }
+  }
+}

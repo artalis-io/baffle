@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=182720
+DECODE frames=5600 sha256=a521475ac61c35f3d7844760fdef50c5f608993e44cea98b018461e9594810cf last_two=-1 text=
+DECODE frames=15840 sha256=499f152b1c040c94a2ec212c84024847584d6ec8d12c4ce581b5953b8aaea8e8 last_two=-1 text=
+DECODE frames=27200 sha256=dfd60955ca39d846043a5e60f468eff23db224937c1fe21fbeabf17e7caa8833 last_two=1.5999999 text=The hospital has been a little bit more
+DECODE frames=38720 sha256=3f7c4da0bacb954821a1637b9ea5c15a740400536af89ce7da5cc086d3de3d5b last_two=1.51999998 text=The hospital has followed the
+DECODE frames=51360 sha256=137a73600cf5ce83abf63ed33a22725660d8819a761ddd0cf39ec8f59b69de41 last_two=2.48000002 text=The hospital has followed protocol for infection.
+DECODE frames=64640 sha256=d1180341ff3615f6005755fc659ceb3044ba45ff2196a812482df7db8b5c8ae5 last_two=2.87999988 text=The hospital has followed protocol for infection control.
+DECODE frames=78880 sha256=bbaa862255c38490b86ea6ed0367e305335f8e2bbca88cc8844ac82cb72bc0c9 last_two=4.23999977 text=The hospital has followed protocol for infection control, including the
+DECODE frames=94080 sha256=18dc68ae0347de446d1c79cdc8d4c5070992f6d44a499cc8fcc7dc32d07ee570 last_two=4.88000011 text=The hospital has followed protocol for infection control, including separating the
+DECODE frames=109760 sha256=b2567fb0c4c4acb43d1fa93f4eb2ce4c643618f05b7341de83fb98968844e94e last_two=6.15999985 text=The hospital has followed protocol for infection control, including separating the patient from other
+DECODE frames=126400 sha256=87fbbc0c45a23d0c78c81a7be291b258032d5239159f6e081ccb4c681ff5b85d last_two=7.19999981 text=The hospital has followed protocol for infection control, including separating the patient from others to prevent
+DECODE frames=128000 sha256=08c67cbce03bfb6728cc8b0f5583ccad6d994f5021866d09f9ab02f36d7d164d last_two=7.19999981 text=The hospital has followed protocol for infection control, including separating the patient from others to prevent
+DECODE frames=56160 sha256=933be91e373e4e9b5ecc4bd5e0f95d0624e7de8c906bf90456009f7d74633095 last_two=-1 text=
+DECODE frames=69760 sha256=27fa9e76e57b3db30b3af03ff48a93f7783535d03c4c172d3d1d1e6262857b2c last_two=-1 text=
+DECODE frames=84320 sha256=d440f06ece3c65a0cedc061c3795a2b318ba3725bbb59d5929122629f0eb9ab8 last_two=3.43999982 text=from others to prevent possible infection of others.
+DECODE frames=96000 sha256=75cfdef5eed52534c2cd0e63251b19de9a3ac1af1b5732fcac6d5b0623d5e320 last_two=3.43999982 text=from others to prevent possible infection of others.
+DECODE frames=57440 sha256=142e5cca62cf9f9803476455fc99680cf2b065405e44605d649e3dcf50de7275 last_two=0.639999986 text=of others.
+HISTORY=The hospital has followed protocol for infection control, including separating the patient from others to prevent possible infection of others.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=92
+MEASURE index=0 decode_ms=49.634400 completed_after_source_start_ms=1290.268900
+MEASURE index=1 decode_ms=85.646000 completed_after_source_start_ms=1983.185000
+MEASURE index=2 decode_ms=128.556900 completed_after_source_start_ms=2717.297800
+MEASURE index=3 decode_ms=169.911600 completed_after_source_start_ms=3497.894900
+MEASURE index=4 decode_ms=219.198200 completed_after_source_start_ms=4333.778400
+MEASURE index=5 decode_ms=263.261700 completed_after_source_start_ms=5207.571200
+MEASURE index=6 decode_ms=314.231900 completed_after_source_start_ms=6152.859000
+MEASURE index=7 decode_ms=375.555000 completed_after_source_start_ms=7143.157200
+MEASURE index=8 decode_ms=431.525900 completed_after_source_start_ms=8199.641100
+MEASURE index=9 decode_ms=492.213200 completed_after_source_start_ms=9300.157200
+MEASURE index=10 decode_ms=507.024600 completed_after_source_start_ms=9807.445800
+MEASURE index=11 decode_ms=228.737800 completed_after_source_start_ms=10642.898100
+MEASURE index=12 decode_ms=285.710800 completed_after_source_start_ms=11549.750000
+MEASURE index=13 decode_ms=338.486300 completed_after_source_start_ms=12501.432300
+MEASURE index=14 decode_ms=381.785700 completed_after_source_start_ms=13271.841900
+MEASURE index=15 decode_ms=235.208200 completed_after_source_start_ms=13551.315200

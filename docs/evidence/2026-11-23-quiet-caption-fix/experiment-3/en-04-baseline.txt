@@ -1,0 +1,11 @@
+REPLAY queue_capacity=512 input_frames=92160
+DECODE frames=5600 sha256=0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf last_two=-1 text=
+DECODE frames=16160 sha256=ac79bc68893c4f09a5ddacc49e4fb38f811892598976a0248dd64749ad824bca last_two=0.479999989 text=The cabbage juice changes.
+DECODE frames=18720 sha256=ff050cfca6d40818d5197cab9612179e813d4c592140badb6833fe479ef7417d last_two=0.479999989 text=The cabbage juice changes.
+HISTORY=The cabbage juice changes.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=10
+MEASURE index=0 decode_ms=50.178500 completed_after_source_start_ms=1706.961200
+MEASURE index=1 decode_ms=86.256000 completed_after_source_start_ms=2404.618300
+MEASURE index=2 decode_ms=94.180900 completed_after_source_start_ms=2570.041900

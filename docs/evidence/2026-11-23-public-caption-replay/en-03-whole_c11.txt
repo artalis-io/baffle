@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=To the north and within easy reach is the romantic and fascinating town of Sintra, and which was made famous to foreigners, after a glowing account of the splendors recorded by Lord Byron.
+validated_last_two_start_seconds=9.92000008
+decode_ms=1250

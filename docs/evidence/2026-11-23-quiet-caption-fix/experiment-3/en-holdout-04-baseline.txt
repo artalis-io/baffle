@@ -1,0 +1,11 @@
+REPLAY queue_capacity=512 input_frames=111360
+DECODE frames=5600 sha256=efbcfc61bfc503132cf97ed99c4d563199bcca244c56a7801cbfc70a7871ed7f last_two=-1 text=Twenty.
+DECODE frames=16160 sha256=a276412e5b7e7b628f0303969efb060ca122ef2df20fd0616d97993e8d893d11 last_two=0.0799999982 text=Twin research.
+DECODE frames=18560 sha256=9095d0cc7daaf5e1730f135295677745cdc02f75d8807a838782466767ac03d7 last_two=0.399999976 text=Twiet century research.
+HISTORY=Twiet century research.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=10
+MEASURE index=0 decode_ms=50.278700 completed_after_source_start_ms=2607.472700
+MEASURE index=1 decode_ms=86.972000 completed_after_source_start_ms=3303.474500
+MEASURE index=2 decode_ms=93.603700 completed_after_source_start_ms=3482.622800

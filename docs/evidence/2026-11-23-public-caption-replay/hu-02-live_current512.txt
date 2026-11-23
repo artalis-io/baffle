@@ -1,0 +1,19 @@
+REPLAY queue_capacity=512 input_frames=193920
+DECODE frames=5600 sha256=e75a08e2be0936a76baca414b544daf5e3f3552bb4091c77281516cd790ab793 last_two=-1 text=
+DECODE frames=16160 sha256=86b451a5815109d0350ae411d52914718934695eaff41b93488891c71a270728 last_two=-1 text=
+DECODE frames=28480 sha256=b816340f75e93a10ebb058f6c19e8f922ccd85b13ff241eadb0ee2624054d9dc last_two=0.959999979 text=Me han
+DECODE frames=41600 sha256=449143c94d8e34abafcab52561af5e4109620b88e188a0af4340bb05db680fb2 last_two=1.75999999 text=Néhány nem úgy döntés.
+DECODE frames=55360 sha256=15325c148f8720e2fab305c2d1461a477fae8ecf819df2f54a4670296dfbf333 last_two=2.55999994 text=Néhány nem úgy vélem, igaza volt.
+DECODE frames=70080 sha256=a37b52122056ecfd3a67117e2bf1ccebee772c6f155a89f92e4548e471cf3a35 last_two=3.67999983 text=Néhány nem úgy érték, igaza volt, de sokkal hit.
+DECODE frames=85120 sha256=288685d8ff5b186b6ac5e3e0d5f774846eb0bd8dccd375731fad444337e1e6ef last_two=4.48000002 text=Néhány nem úgy véjék, igaza volt, de sokkal hitték az ellenkezőjét.
+DECODE frames=104320 sha256=ebe69bc902e82c0f67df703ab8ba0fd626a5c4e42207fe96e3a837f64de88789 last_two=5.83999968 text=Néhány nem úgy vérték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszerek.
+DECODE frames=125280 sha256=c5c0ec0ca317d5748dbf756bb75adbb0cab851f0de6cfef54d3dc23c56dc8170 last_two=6.48000002 text=Néhány úgy vézték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a földszerőforg.
+DECODE frames=128000 sha256=0e45e6983ffa3a3d0204a9ec7358c3a58bda68ed67c7c9f1a213048772f29a6c last_two=6.48000002 text=Néhány nem úgy vérték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földterőforg.
+DECODE frames=62880 sha256=fbec9676ed4a0b3d0696df30850c53dae462d2eeca1fcd649d065352a61cec3a last_two=3.43999982 text=Naprendszer a fölterő forog, beleértve a napot, sőt, a többi.
+DECODE frames=77440 sha256=9ac4afe164b959ede40dba3bbe36a48428074cd6f2cdaebc7e66f94f7c9f57f6 last_two=4 text=A naprendszer a fölterő forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=93760 sha256=ad9f7beb4404e3d279bac62d9457164e341a4a3c6d0f9461502123b64e7eedaf last_two=4 text=A naprendszer a földterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=104320 sha256=3b18bead30bc81e1dbb277c43be07a69f0f2509cdaaa4974593d87deb3a283d0 last_two=4 text=A naprendszer a földterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=60320 sha256=949bc0fc20942fdc64980836b33fd410080fe880ec018f874eac193bb75aa96f last_two=0.639999986 text=a többet csillagot is.
+HISTORY=Néhány nem úgy vérték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer A naprendszer a földterül forog, beleértve a napot, sőt, a többi a többet csillagot is.
+DROPPED=0
+STATUS=Listening

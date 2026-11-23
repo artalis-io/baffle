@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=172800
+DECODE frames=5600 sha256=8927e23151803c6bcfb4cf5d57a60ea63ff9bdcbfe2aa27202c2c0c4453bd895 last_two=-1 text=
+DECODE frames=15840 sha256=038232ca4f6f37d1c6226db293feb6aafcafa012673a53585d3793c0053c6d7b last_two=0.0799999982 text=The Northern
+DECODE frames=27360 sha256=5cc4a634e1e07f256d8b5006d60b0d8ee4e7c07500d3cd65ceb412eddbe55d93 last_two=0.319999993 text=The Northern Mariana.
+DECODE frames=39200 sha256=6d57780cb7e0516fd9eca03d3399df9496db899dd505f89b5d3b6a6751f75db0 last_two=0.959999979 text=The Northern Mariana's Emergency
+DECODE frames=51520 sha256=a499e4a18d572bc321d90f3576f04b6a4dab8fb9ac447d8fbb385285f001b240 last_two=-1 text=
+DECODE frames=64640 sha256=dd1167c62222587932ab36cf5b75e1c54e4c8f7afc24ac1175bc08aa79bad3fb last_two=3.03999996 text=The Northern Mariana's Emergency Management Office said.
+DECODE frames=78560 sha256=bb5689404988731cfb12a853a2793e2ad4d20af74b8c7b2042dbf3859cad0f1b last_two=4.23999977 text=The Northern Mariana's Emergency Management Office said that there were no.
+DECODE frames=93280 sha256=14830dab5361f09366a028db2b6dae940f7963c65b8b3a4ff8834e86881f5b9f last_two=4.71999979 text=The Northern Mariana's Emergency Management Office said that there were no damages reported.
+DECODE frames=96800 sha256=93c0e4555acb93b736cd63eb2f096e15db6a924806729159fa54e9ab09c0fde5 last_two=4.79999971 text=The Northern Mariana's Emergency Management Office said that there were no damages reported.
+DECODE frames=42400 sha256=9eb3ec919536a4e098d8aed765776d0b321be4895552423f588d9b641ff6886c last_two=2.07999992 text=that there were no damages reported in the nation.
+DECODE frames=8320 sha256=10bcfe676020ded08306e4c4d0e1737527426e06c84a01b584aa40fc5eea08e9 last_two=-1 text=
+DECODE frames=19200 sha256=9ea30d25ffa564090889d0c57ae37035f348d368a5d4b206e464e24e36fe2ee1 last_two=-1 text=
+DECODE frames=11360 sha256=84f30b78c3fe8f9374dd6f564b05563156876d66df3984defe928e59ac2d2e13 last_two=-1 text=Yeah.
+DECODE frames=15040 sha256=5b0279ccd5b8b6674df1cacb01add2d206d44dd2ba0239e457ccae8b128fb8ac last_two=-1 text=Uh
+HISTORY=The Northern Mariana's Emergency Management Office said that there were no that there were no damages reported in the nation.
+
+Uh
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=54
+MEASURE index=0 decode_ms=51.037500 completed_after_source_start_ms=2016.198200
+MEASURE index=1 decode_ms=88.607300 completed_after_source_start_ms=2718.301200
+MEASURE index=2 decode_ms=126.839000 completed_after_source_start_ms=3475.603200
+MEASURE index=3 decode_ms=168.011800 completed_after_source_start_ms=4254.070500
+MEASURE index=4 decode_ms=214.477900 completed_after_source_start_ms=5069.640300
+MEASURE index=5 decode_ms=260.078600 completed_after_source_start_ms=5934.146400
+MEASURE index=6 decode_ms=309.548100 completed_after_source_start_ms=6845.340300
+MEASURE index=7 decode_ms=367.047500 completed_after_source_start_ms=7834.217500
+MEASURE index=8 decode_ms=378.469900 completed_after_source_start_ms=8212.901400
+MEASURE index=9 decode_ms=185.034300 completed_after_source_start_ms=8499.504200
+MEASURE index=10 decode_ms=58.248300 completed_after_source_start_ms=9159.462600
+MEASURE index=11 decode_ms=94.061500 completed_after_source_start_ms=9852.860000
+MEASURE index=12 decode_ms=67.806700 completed_after_source_start_ms=10534.109500
+MEASURE index=13 decode_ms=79.223300 completed_after_source_start_ms=10793.623400

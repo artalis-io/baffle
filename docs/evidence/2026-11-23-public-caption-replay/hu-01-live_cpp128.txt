@@ -1,0 +1,16 @@
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16480 sha256=e988e26e6dfdd47904184d87c046d2d004782ab04f2d7513adf24b6ca9e8cef1 last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=11680 sha256=545c840ca8e3b95cf79fa8c246300b46016e7abaf9ca9aba8796308f665aa942 last_two=0.16 text=Um com
+DECODE frames=23360 sha256=149fe628a587750d1c1b3070ea14f82d0e300add92c477a0aefbf238b1dacad3 last_two=0.08 text=Hun command.
+DECODE frames=36320 sha256=4f67fca7cf9bf1bf465ae68a7fc0466ecfa021c4883391f527ac79068027f64f last_two=1.44 text=Hong Kong Maverick Hong Kong
+DECODE frames=50240 sha256=b28468f0bf5cb6203e6f1da68a39e7fb87c9d721b967f9dfbf7f677e2e9576be last_two=2.08 text=Hong Kong Never, a Hong Kong Psychiatral Cup.
+DECODE frames=65120 sha256=34f6cdf8003a64c3c8dee752e9228eee753adbbfd499d7e08c0cd22fee1d96e9 last_two=2.08 text=Hongkong nevét, a Hongkong sziketről kapta.
+DECODE frames=81600 sha256=4a282506fdf42aa0f977027304bd84c1a884d7502b7ddc3d72573347092b850a last_two=4.16 text=Hongkong nevét, a Hongkong szikatra kapta és át a Hoktór is.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.8 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=52320 sha256=88655e4bd101d7802086e30fbb55ef75ae4c0bfe07352abc6c3d726165a1d67f last_two=1.04 text=sokt a számára.
+DECODE frames=68160 sha256=0efa8ac2ad98270e54fd9eab2d9f56a72c40a23fcbced85617264f95b7f06887 last_two=2.72 text=a sok törista számára a figyelem középpontjában áll.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72 text=a sok törista számára a figyelem középpontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.
+DROPPED=0
+STATUS=Figyelek · felismerés: 473 ms

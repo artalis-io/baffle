@@ -1,0 +1,29 @@
+REPLAY queue_capacity=512 input_frames=168960
+DECODE frames=5600 sha256=69fba7836eb6746e6a2eb29094719dcfd3cb319424cc39fa8b7b96220c649f9b last_two=-1 text=H
+DECODE frames=15840 sha256=e6a20eca09b9fa5098df3ceb75198e14645b5c6b9b18ff8c7c8f5ff3674a1009 last_two=0.159999996 text=However, it
+DECODE frames=27200 sha256=56efea8e9b4bcbba043897f1ddf08580ffc96a53c11943cec954d99e481af227 last_two=1.19999993 text=However, due to the slow
+DECODE frames=39040 sha256=dfa17992bf0b4665eec674741aea7559ed852e208a6634d5de1742d93c964dd1 last_two=1.43999994 text=However, due to the slow communication.
+DECODE frames=51360 sha256=ec4f25625dd42521b78a5f6205ea0aefe2ab07b855e5f6a5318e7200dfe8bbe4 last_two=1.91999996 text=However, due to the slow communication channels.
+DECODE frames=64800 sha256=57d19315a56cc5234abc2d85a31a893ecfba23ffb5bbcf7bd5ff0701c688e1bd last_two=2.55999994 text=However, due to the slow communication channels, styles
+DECODE frames=79040 sha256=23ed9fd74327480f9c87c97574e77e90a9d14fe831fd213a3676af417aadb3d2 last_two=4.31999969 text=However, due to the slow communication channels, styles in the West.
+DECODE frames=93920 sha256=4c3d84b2fdf7e886822aaa0e83f8c2a6c65cbc57ec5d36340ed4c57326b1899f last_two=5.11999989 text=However, due to the slow communication channels, styles in the West could lag behind.
+DECODE frames=109600 sha256=15bd0c0b67e402ff8993a14172154ddeca46f753956eb8fe12b453bd6daa387f last_two=6.23999977 text=However, due to the slow communication channels, styles in the West could lag behind by twenty five.
+DECODE frames=126720 sha256=449a39e958c32a38bdd673a668a84fcc24732bc16c573e3aac0b32b3af62fe0d last_two=7.27999973 text=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DECODE frames=128000 sha256=01fba32ddacf5ebbeb93fbe14a3b288d8d09604626a1cf5b3588380565e94435 last_two=7.27999973 text=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DECODE frames=42880 sha256=041057632c15847d2fa2d88473df014f8a1fa64d71280859df21efb779531453 last_two=-1 text=
+HISTORY=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=93
+MEASURE index=0 decode_ms=51.016400 completed_after_source_start_ms=2223.410100
+MEASURE index=1 decode_ms=88.601500 completed_after_source_start_ms=2926.318600
+MEASURE index=2 decode_ms=129.272200 completed_after_source_start_ms=3675.894600
+MEASURE index=3 decode_ms=171.860900 completed_after_source_start_ms=4459.374700
+MEASURE index=4 decode_ms=221.983800 completed_after_source_start_ms=5282.293900
+MEASURE index=5 decode_ms=267.951700 completed_after_source_start_ms=6166.125400
+MEASURE index=6 decode_ms=321.385600 completed_after_source_start_ms=7088.160600
+MEASURE index=7 decode_ms=381.305300 completed_after_source_start_ms=8094.428600
+MEASURE index=8 decode_ms=449.098800 completed_after_source_start_ms=9145.166600
+MEASURE index=9 decode_ms=504.552900 completed_after_source_start_ms=10253.164100
+MEASURE index=10 decode_ms=507.980300 completed_after_source_start_ms=10761.418400
+MEASURE index=11 decode_ms=186.366600 completed_after_source_start_ms=10948.076200

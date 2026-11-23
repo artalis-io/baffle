@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=ce884f9bdae08a7c97f5b8493ef3ad8aa6ea65f5d6c48fb4e2ada65b091fe82f last_two=-1 text=
+DECODE frames=16160 sha256=82594206ed20645f30d7850e1493fcc5e7cb97d6fd102b91e2c681db5bbe4a1a last_two=-1 text=
+DECODE frames=18400 sha256=75561082ba4e6fd9f84c77b57312765352ae47e1d240a93bfbf55881a4b37e17 last_two=-1 text=
+DECODE frames=11520 sha256=5b1024d8067438e39ca9569108d2f3a74e9a2fa03900e454564f9dbac2e38f8f last_two=-1 text=Comment
+DECODE frames=22720 sha256=cc5ed65349bd26737798914cbdde55b35b549aab5fedfec91c48feca293a2c6e last_two=-1 text=
+DECODE frames=34080 sha256=0ed7d6f3dd1bcf16c9b3d83d6ad7d8665f02aec03e1928e1f9590e5e0cc37e60 last_two=0.399999976 text=Hong Kong Maverick.
+DECODE frames=46400 sha256=148ecc44aff821dbd6db2f5ac74e57ccae9e59c6c70a9ff4c8e2ce03ebdc299b last_two=1.75999999 text=Hong Kong Maverick a Hong Kong Psychiatry
+DECODE frames=59040 sha256=657c72c16a1849ac52fdbab9d8668a1523fedf0ce9c5cbdc93ae413a36013001 last_two=2.15999985 text=Hong Kong Member Hong Kong Secretary Kappa
+DECODE frames=72960 sha256=9ff88c9130c914ee06b46668a419264d40c9158a91a273b4de6c6c2f2dc34848 last_two=4 text=Hongkong nevét, a Hongkong sziketről kapta, és at a h
+DECODE frames=87360 sha256=f1aa3c92766348b62c549de63f99b085bf7a4a47819efa898a871db46f3ae6f8 last_two=4.15999985 text=Hongkong nevét, a Hongkong Szikateral kapta, és a hátsó turistet.
+DECODE frames=97920 sha256=21172f73c85c3f4356e0b6817bb9927ea9f631dfaee3f7284c63752d2042b8e8 last_two=4.88000011 text=Hongkong nävy a Hongkong Sector Katta ésok Turistä samára.
+DECODE frames=47840 sha256=b098917cb17621fe5ad7a8fdd1e289a3962589a9f10c18e8bbca6a0aa6a0f8ee last_two=-1 text=
+DECODE frames=60960 sha256=e4156b7dcbb3ca6240ff49a4e786355a3044be837db242826d5ecacf95010388 last_two=-1 text=
+DECODE frames=74560 sha256=5726354d705ac61a43d328956eaaa077297e44f7737e0681377e45ece5bfed14 last_two=-1 text=
+DECODE frames=79840 sha256=1ec255c1f57ce5308af8aec319524834f53b0b9b7eb930bd72a6986fbaef4cbf last_two=1.27999997 text=Tämä pan.
+HISTORY=Hongkong nävy a Hongkong Sector Katta ésok Tämä pan.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=39
+MEASURE index=0 decode_ms=49.816000 completed_after_source_start_ms=2075.517500
+MEASURE index=1 decode_ms=86.355000 completed_after_source_start_ms=2776.443400
+MEASURE index=2 decode_ms=93.524400 completed_after_source_start_ms=2941.412200
+MEASURE index=3 decode_ms=67.666600 completed_after_source_start_ms=3639.056900
+MEASURE index=4 decode_ms=110.060500 completed_after_source_start_ms=4355.293900
+MEASURE index=5 decode_ms=150.566300 completed_after_source_start_ms=5123.392400
+MEASURE index=6 decode_ms=199.930000 completed_after_source_start_ms=5932.144700
+MEASURE index=7 decode_ms=242.755900 completed_after_source_start_ms=6780.064000
+MEASURE index=8 decode_ms=291.191300 completed_after_source_start_ms=7678.086400
+MEASURE index=9 decode_ms=353.563300 completed_after_source_start_ms=8639.356300
+MEASURE index=10 decode_ms=385.736600 completed_after_source_start_ms=9346.640900
+MEASURE index=11 decode_ms=201.105900 completed_after_source_start_ms=10156.786900
+MEASURE index=12 decode_ms=244.084400 completed_after_source_start_ms=11002.755200
+MEASURE index=13 decode_ms=299.110000 completed_after_source_start_ms=11929.296800
+MEASURE index=14 decode_ms=317.468800 completed_after_source_start_ms=12262.305500

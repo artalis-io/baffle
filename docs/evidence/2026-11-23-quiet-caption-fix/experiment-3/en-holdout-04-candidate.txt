@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=111360
+DECODE frames=5600 sha256=ff774bc06efe8ee86a8e10f27c419660739211a44c3e195cc0d62df171d67b95 last_two=-1 text=
+DECODE frames=16160 sha256=8fd3c218dcb6b62afd6d5670d53510dadfa8141e4150d4994fced56ca223c803 last_two=-1 text=
+DECODE frames=27200 sha256=e9c525dd19efefe22feefdb107e7f1f30f98d000959d353400514c3ccb385ca3 last_two=-1 text=Twenty
+DECODE frames=38720 sha256=33630789449edf0abce5eeccf547284ecf0cb5e2cbbb39078fdcfe96f5c0845a last_two=1.67999995 text=Twentieth Century Research.
+DECODE frames=51360 sha256=dbf652121891dc8bdc9f7dbdd051e8e3d660da93c06ee9dc20cd37624b406ce7 last_two=2.55999994 text=Twentieth century research has shown that.
+DECODE frames=64640 sha256=435037eb54b11548670e973bbbd448ed9b6a8d0b5adbc26c8aa656ba162d5139 last_two=3.3599999 text=Twentieth century research has shown that there are two pools of
+DECODE frames=78560 sha256=f816b91a7aae7c249c72290244ca38640b5a2a35bf763f3d4d60813d0de23d8f last_two=4 text=Twentieth century research has shown that there are two pools of genetic variation.
+DECODE frames=93600 sha256=d3359d3c09d6e48e382096df37ee7a6efef471bf292e13ed0ce06271d527d16d last_two=5.27999973 text=Twentieth century research has shown that there are two pools of genetic variation hidden and expensive.
+DECODE frames=98880 sha256=2f4ec9379b6813e668c29a1732b63e170d501a3f8d1df3d7be782601f6231467 last_two=5.44000006 text=Twentieth century research has shown that there are two pools of genetic variation hidden and expressed.
+DECODE frames=42400 sha256=ef142ff1cf02e82b7ffd200d0f63916b725f664d8f351cc3c93fd6f507708624 last_two=-1 text=
+HISTORY=Twentieth century research has shown that there are two pools of genetic variation hidden and expressed.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=45
+MEASURE index=0 decode_ms=50.025100 completed_after_source_start_ms=1192.106400
+MEASURE index=1 decode_ms=87.287200 completed_after_source_start_ms=1886.480300
+MEASURE index=2 decode_ms=126.953600 completed_after_source_start_ms=2619.549300
+MEASURE index=3 decode_ms=170.530300 completed_after_source_start_ms=3396.795400
+MEASURE index=4 decode_ms=222.453700 completed_after_source_start_ms=4219.462000
+MEASURE index=5 decode_ms=264.210700 completed_after_source_start_ms=5093.048100
+MEASURE index=6 decode_ms=314.957800 completed_after_source_start_ms=6026.402200
+MEASURE index=7 decode_ms=384.043300 completed_after_source_start_ms=7022.591100
+MEASURE index=8 decode_ms=393.479500 completed_after_source_start_ms=7416.284300
+MEASURE index=9 decode_ms=183.558000 completed_after_source_start_ms=7802.987600

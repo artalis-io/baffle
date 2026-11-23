@@ -1,0 +1,637 @@
+#include "../../tools/common/demo.h"
+#include "app.h"
+#include <hail.h>
+#include <stdatomic.h>
+#include <wchar.h>
+typedef struct AppWork {
+    SpeechResult decoded;
+    CapScratch scratch;
+    CapAgreement agreement;
+    CapView view;
+    CapText prefix, carry, text, temp;
+    float utterance[128000], pre[25][160];
+    size_t utterance_count, pre_first, pre_count;
+    double prefix_until;
+    unsigned silent;
+    int active;
+} AppWork;
+int app_ring_push(AppRing *r, const AppFrame *f)
+{
+    uint32_t w = atomic_load_explicit(&r->write, memory_order_relaxed),
+             n = atomic_load_explicit(&r->read, memory_order_acquire);
+    if (w - n == APP_RING_CAPACITY)
+        return 0;
+    r->frames[w % APP_RING_CAPACITY] = *f;
+    atomic_store_explicit(&r->write, w + 1, memory_order_release);
+    return 1;
+}
+int app_ring_pop(AppRing *r, AppFrame *f)
+{
+    uint32_t n = atomic_load_explicit(&r->read, memory_order_relaxed),
+             w = atomic_load_explicit(&r->write, memory_order_acquire);
+    if (n == w)
+        return 0;
+    *f = r->frames[n % APP_RING_CAPACITY];
+    atomic_store_explicit(&r->read, n + 1, memory_order_release);
+    return 1;
+}
+void app_status(NativeApp *a, const wchar_t *text)
+{
+    EnterCriticalSection(&a->display);
+    (void)cap_set(&a->status, text);
+    LeaveCriticalSection(&a->display);
+}
+void app_snapshot(NativeApp *a, CapText *status, CapText *stable, CapText *draft, CapText *history)
+{
+    EnterCriticalSection(&a->display);
+    (void)cap_set(status, a->status.text);
+    (void)cap_set(stable, a->stable.text);
+    (void)cap_set(draft, a->draft.text);
+    (void)cap_set(history, a->history.text);
+    LeaveCriticalSection(&a->display);
+}
+static void history_append_locked(NativeApp *a, const wchar_t *text)
+{
+    if (!*text)
+        return;
+    size_t n = wcslen(text);
+    if (n > 64000) {
+        text += n - 64000;
+        while (*text && *text != L' ')
+            ++text;
+        if (*text)
+            ++text;
+        n = wcslen(text);
+    }
+    size_t extra = a->history.length ? 4u : 0u;
+    if (a->history.length + n + extra > 64000) {
+        size_t cut = a->history.length + n + extra - 64000;
+        while (cut < a->history.length && a->history.text[cut] != L'\n')
+            ++cut;
+        while (cut < a->history.length &&
+               (a->history.text[cut] == L'\r' || a->history.text[cut] == L'\n'))
+            ++cut;
+        if (cut >= a->history.length)
+            cap_clear(&a->history);
+        else {
+            memmove(a->history.text, a->history.text + cut,
+                    (a->history.length - cut + 1) * sizeof(wchar_t));
+            a->history.length -= cut;
+        }
+        extra = a->history.length ? 4u : 0u;
+    }
+    // At most 60 paragraphs; each comparison is still bounded by 64k text.
+    size_t paragraphs = 1;
+    for (size_t i = 0; i + 3 < a->history.length; ++i)
+        if (!wmemcmp(a->history.text + i, L"\r\n\r\n", 4))
+            ++paragraphs;
+    if (paragraphs >= 60) {
+        wchar_t *end = wcsstr(a->history.text, L"\r\n\r\n");
+        if (end) {
+            size_t cut = (size_t)(end - a->history.text) + 4;
+            memmove(a->history.text, a->history.text + cut,
+                    (a->history.length - cut + 1) * sizeof(wchar_t));
+            a->history.length -= cut;
+        }
+    }
+    if (a->history.length) {
+        memcpy(a->history.text + a->history.length, L"\r\n\r\n", 4 * sizeof(wchar_t));
+        a->history.length += 4;
+    }
+    memcpy(a->history.text + a->history.length, text, (n + 1) * sizeof(wchar_t));
+    a->history.length += n;
+}
+static int stopped(void *p)
+{
+    return atomic_load_explicit(&((NativeApp *)p)->stop, memory_order_relaxed);
+}
+static void level(NativeApp *a, float rms)
+{
+    unsigned v = isfinite(rms) && rms > 0 ? (unsigned)fminf(1000, rms * 12500) : 0;
+    atomic_store_explicit(&a->meter, v, memory_order_relaxed);
+}
+static int sink(const BaffleLiveBlock *b, void *p)
+{
+    NativeApp *a = p;
+    atomic_store_explicit(&a->receiving, 1, memory_order_relaxed);
+    level(a, b->rms);
+    atomic_store_explicit(&a->lost, b->capture_lost, memory_order_relaxed);
+    AppFrame f;
+    memcpy(f.samples, a->processing == 0 ? b->raw : b->processed, sizeof(f.samples));
+    f.position = b->timing.frame_position;
+    f.epoch = b->timing.epoch;
+    f.flags = b->timing.flags;
+    f.lost = b->capture_lost;
+    f.rms = b->rms;
+    if (!app_ring_push(&a->ring, &f))
+        atomic_fetch_add_explicit(&a->dropped, 1, memory_order_relaxed);
+    return !stopped(a);
+}
+static int trial_sink(const BaffleLiveBlock *b, void *p)
+{
+    NativeApp *a = p;
+    if (a->trial_count > SPEECH_SAMPLES - 160)
+        return 0;
+    if (a->trial_count && (a->trial_position > UINT64_MAX - 160 ||
+                           b->timing.frame_position != a->trial_position + 160 ||
+                           b->timing.epoch != a->trial_epoch || b->capture_lost))
+        a->trial_gap = 1;
+    a->trial_position = b->timing.frame_position;
+    a->trial_epoch = b->timing.epoch;
+    memcpy(a->trial_audio + a->trial_count, b->raw, 160 * sizeof(float));
+    a->trial_count += 160;
+    atomic_store_explicit(&a->trial_frames, (uint32_t)a->trial_count, memory_order_relaxed);
+    atomic_store_explicit(&a->receiving, 1, memory_order_relaxed);
+    level(a, b->rms);
+    atomic_store_explicit(&a->lost, b->capture_lost, memory_order_relaxed);
+    return !stopped(a) && a->trial_count < SPEECH_SAMPLES;
+}
+static void status_error(NativeApp *a, const char *error)
+{
+    wchar_t text[APP_ERROR];
+    if (!app_utf8_to_wide(error, text, APP_ERROR))
+        (void)wcscpy_s(text, APP_ERROR, L"Unknown processing error");
+    wchar_t prefixed[APP_ERROR + 16];
+    int n = swprintf(prefixed, APP_ERROR + 16, L"Error: %ls", text);
+    app_status(a, n > 0 ? prefixed : L"Processing error");
+}
+static int capture_owner(void *p)
+{
+    NativeApp *a = p;
+    char error[APP_ERROR] = {0};
+    int r = baffle_live_run(HA_BACKEND_WASAPI, a->key, 28800, sink, stopped, a, error,
+                            sizeof(error), a->processing != 1, 0);
+    if (r) {
+        if (r == 2)
+            atomic_store(&a->fatal, 1);
+        status_error(a, error);
+    }
+    atomic_store_explicit(&a->stop, 1, memory_order_relaxed);
+    return r;
+}
+static void reset_work(AppWork *w)
+{
+    w->utterance_count = w->pre_first = w->pre_count = 0;
+    w->active = 0;
+    w->silent = 0;
+    w->prefix_until = 0;
+    cap_clear(&w->text);
+    cap_clear(&w->prefix);
+    cap_clear(&w->carry);
+    cap_agreement_reset(&w->agreement);
+}
+static void complete(NativeApp *a, AppWork *w)
+{
+    EnterCriticalSection(&a->display);
+    history_append_locked(a, w->text.text);
+    cap_clear(&a->stable);
+    (void)cap_set(&a->draft, w->text.text);
+    LeaveCriticalSection(&a->display);
+    reset_work(w);
+}
+static int decode_caption(NativeApp *a, Speech *s, AppWork *w, int final, int roll, uint64_t *last,
+                          char *error)
+{
+    uint64_t begin, end;
+    if (!demo_now(&begin) ||
+        !speech_decode(s, w->utterance, w->utterance_count, &w->decoded, error, APP_ERROR) ||
+        !demo_now(&end) || end < begin)
+        return 0;
+    if (!cap_accept_hypothesis(w->prefix.text, w->decoded.text.text,
+                               speech_overlap_words(&w->decoded, w->prefix_until), &w->carry,
+                               &w->text, &w->scratch))
+        return 0;
+    if (!cap_agreement_update(&w->agreement, w->text.text, &w->view, &w->scratch))
+        return 0;
+    *last = end;
+    EnterCriticalSection(&a->display);
+    (void)cap_set(&a->stable, w->view.stable.text);
+    (void)cap_set(&a->draft, w->text.text);
+    if (!stopped(a)) {
+        wchar_t status[128];
+        swprintf(status, 128, L"Listening");
+        (void)cap_set(&a->status, status);
+    }
+    LeaveCriticalSection(&a->display);
+    if (roll && !final) {
+        if (!cap_hold_tail(w->text.text, &w->prefix, &w->scratch) ||
+            !cap_set(&w->carry, w->text.text))
+            return 0;
+        size_t cut = cap_retain_from(w->utterance_count, w->decoded.last_two_start);
+        if (cut > w->utterance_count)
+            return 0;
+        w->prefix_until =
+            w->decoded.last_two_start < 0 ? 0 : w->decoded.last_two_start - (double)cut / 16000;
+        memmove(w->utterance, w->utterance + cut, (w->utterance_count - cut) * sizeof(float));
+        w->utterance_count -= cut;
+    }
+    return 1;
+}
+static int join_capture(NativeApp *a)
+{
+    if (!a->capture.native)
+        return 1;
+    if (demo_thread_join(&a->capture, NULL)) {
+        atomic_store(&a->fatal, 1);
+        app_status(a, L"Audio shutdown could not be confirmed. Please restart Baffle.");
+        return 0;
+    }
+    return 1;
+}
+/* A producer's cumulative drop count may advance while OLD valid frames remain
+ * queued. Reset only when the consumed frame reaches the actual discontinuity. */
+static int frame_gap(const AppFrame *previous, const AppFrame *current)
+{
+    return previous->position > UINT64_MAX - 160 || current->position != previous->position + 160 ||
+           current->epoch != previous->epoch || current->lost != previous->lost ||
+           (current->flags & (BF_AUDIO_GAP | BF_AUDIO_DISCONTINUITY));
+}
+static int run_live(NativeApp *a, Speech *s, AppWork *w, char *error)
+{
+    if (demo_thread_start(&a->capture, capture_owner, a)) {
+        snprintf(error, APP_ERROR, "Capture thread creation failed");
+        return 0;
+    }
+    app_status(a, L"Opening microphone…");
+    AppFrame previous = {0};
+    int seen = 0;
+    uint64_t last = 0;
+    for (;;) {
+        AppFrame f;
+        if (!app_ring_pop(&a->ring, &f)) {
+            if (stopped(a)) {
+                if (!join_capture(a))
+                    return 0;
+                if (!app_ring_pop(&a->ring, &f))
+                    break;
+            } else {
+                Sleep(5);
+                continue;
+            }
+        }
+        int gap = seen && frame_gap(&previous, &f);
+        previous = f;
+        seen = 1;
+        if (gap) {
+            if (w->active && w->text.length) {
+                const wchar_t *marker = L" [audio gap]";
+                size_t n = wcslen(marker);
+                if (n < CAP_CHARS - w->text.length) {
+                    memcpy(w->text.text + w->text.length, marker, (n + 1) * sizeof(wchar_t));
+                    w->text.length += n;
+                }
+                complete(a, w);
+            }
+            reset_work(w);
+            EnterCriticalSection(&a->display);
+            cap_clear(&a->stable);
+            cap_clear(&a->draft);
+            (void)cap_set(&a->status, L"Audio gap — resuming");
+            LeaveCriticalSection(&a->display);
+        }
+        int voiced = f.rms >= .002f;
+        if (!w->active) {
+            if (w->pre_count == 25) {
+                w->pre_first = (w->pre_first + 1) % 25;
+                --w->pre_count;
+            }
+            memcpy(w->pre[(w->pre_first + w->pre_count) % 25], f.samples, sizeof(f.samples));
+            ++w->pre_count;
+            if (!voiced)
+                continue;
+            for (size_t i = 0; i < w->pre_count; ++i) {
+                memcpy(w->utterance + w->utterance_count, w->pre[(w->pre_first + i) % 25],
+                       sizeof(f.samples));
+                w->utterance_count += 160;
+            }
+            w->pre_count = w->pre_first = 0;
+            w->active = 1;
+        } else {
+            if (w->utterance_count > 128000 - 160) {
+                snprintf(error, APP_ERROR, "Caption window overflow");
+                return 0;
+            }
+            memcpy(w->utterance + w->utterance_count, f.samples, sizeof(f.samples));
+            w->utterance_count += 160;
+        }
+        w->silent = voiced ? 0 : w->silent + 1;
+        int final = w->silent >= 90,
+            roll = w->utterance_count >= 128000 || (w->utterance_count >= 96000 && w->silent >= 25);
+        uint64_t now;
+        if (!demo_now(&now))
+            return 0;
+        if ((w->utterance_count >= 5600 || final) && (final || roll || now - last >= 600000000u)) {
+            if (!decode_caption(a, s, w, final, roll, &last, error))
+                return 0;
+        }
+        if (final)
+            complete(a, w);
+    }
+    if (w->active && w->utterance_count >= 1600) {
+        if (!decode_caption(a, s, w, 1, 0, &last, error))
+            return 0;
+        complete(a, w);
+    }
+    return 1;
+}
+static int run_trial(NativeApp *a, Speech *s, AppWork *w, char *error)
+{
+    a->trial_audio = calloc(SPEECH_SAMPLES, sizeof(float));
+    if (!a->trial_audio) {
+        snprintf(error, APP_ERROR, "Trial memory");
+        return 0;
+    }
+    a->trial_count = 0;
+    a->trial_gap = 0;
+    atomic_store(&a->trial_frames, 0);
+    app_status(a, L"Read the sample aloud when the recording timer starts");
+    EnterCriticalSection(&a->display);
+    (void)cap_set(&a->stable, app_trial_prompt);
+    cap_clear(&a->draft);
+    LeaveCriticalSection(&a->display);
+    int r = baffle_live_run(HA_BACKEND_WASAPI, a->key, 20, trial_sink, stopped, a, error, APP_ERROR,
+                            1, 0);
+    atomic_store(&a->receiving, 0);
+    if (r) {
+        if (r == 2)
+            atomic_store(&a->fatal, 1);
+        return 0;
+    }
+    if (stopped(a))
+        return 1;
+    if (a->trial_gap) {
+        snprintf(error, APP_ERROR, "Trial has capture gaps; repeat before scoring");
+        return 0;
+    }
+    app_status(a, L"Comparing the three recordings…");
+    wchar_t *root = malloc(APP_PATH * sizeof(wchar_t)),
+            *directory = malloc(APP_PATH * sizeof(wchar_t));
+    int ok = 0;
+    if (!root || !directory || !app_exe_dir(directory, APP_PATH) ||
+        !app_join_path(root, APP_PATH, directory, L"test-results") || !app_make_directory(root))
+        goto done;
+    SYSTEMTIME time;
+    GetSystemTime(&time);
+    wchar_t name[160];
+    swprintf(name, 160, L"%u-%u-%u-%u-%u-%llu", time.wYear, time.wMonth, time.wDay, time.wHour,
+             time.wMinute, (unsigned long long)GetTickCount64());
+    if (!app_join_path(directory, APP_PATH, root, name) || !CreateDirectoryW(directory, NULL))
+        goto done;
+    if (!speech_compare(s, a->trial_audio, a->trial_count, directory, &a->stop, 0, &w->temp, error,
+                        APP_ERROR))
+        goto done;
+    EnterCriticalSection(&a->display);
+    history_append_locked(a, w->temp.text);
+    cap_clear(&a->stable);
+    cap_clear(&a->draft);
+    wchar_t *status = a->status.text;
+    int n = swprintf(status, CAP_CHARS, L"Comparison saved: %ls", directory);
+    if (n > 0)
+        a->status.length = (size_t)n;
+    LeaveCriticalSection(&a->display);
+    ok = 1;
+done:
+    free(root);
+    free(directory);
+    return ok;
+}
+static DWORD WINAPI worker_entry(LPVOID p)
+{
+    NativeApp *a = p;
+    Speech *s = NULL;
+    AppWork *w = calloc(1, sizeof(*w));
+    char error[APP_ERROR] = {0};
+    int ok = 0;
+    app_status(a, L"Loading recognizer…");
+    if (!w) {
+        snprintf(error, sizeof(error), "Caption working memory");
+        goto done;
+    }
+    if (!speech_open(a->models, &s, error, sizeof(error)))
+        goto done;
+    if (stopped(a)) {
+        ok = 1;
+        goto done;
+    }
+    ok = a->trial ? run_trial(a, s, w, error) : run_live(a, s, w, error);
+done:
+    if (!ok)
+        status_error(a, *error ? error : "Caption processing failed");
+    atomic_store_explicit(&a->stop, 1, memory_order_relaxed);
+    int joined = join_capture(a);
+    speech_close(s);
+    free(w);
+    free(a->trial_audio);
+    a->trial_audio = NULL;
+    atomic_store_explicit(&a->receiving, 0, memory_order_relaxed);
+    if (joined)
+        atomic_store_explicit(&a->finished, 1, memory_order_release);
+    return ok && joined ? 0 : 1;
+}
+void app_init(NativeApp *a)
+{
+    memset(a, 0, sizeof(*a));
+    InitializeCriticalSection(&a->display);
+    a->processing = 1;
+    atomic_init(&a->finished, 1);
+    atomic_init(&a->stop, 0);
+    atomic_init(&a->receiving, 0);
+    atomic_init(&a->fatal, 0);
+    atomic_init(&a->meter, 0);
+    atomic_init(&a->lost, 0);
+    atomic_init(&a->dropped, 0);
+    atomic_init(&a->trial_frames, 0);
+    atomic_init(&a->ring.read, 0);
+    atomic_init(&a->ring.write, 0);
+    (void)cap_set(&a->status, L"Ready");
+    if (!atomic_is_lock_free(&a->ring.write) || !atomic_is_lock_free(&a->ring.read) ||
+        !atomic_is_lock_free(&a->stop) || !atomic_is_lock_free(&a->lost) ||
+        !atomic_is_lock_free(&a->meter) || !atomic_is_lock_free(&a->dropped)) {
+        atomic_store(&a->fatal, 1);
+        (void)cap_set(&a->status, L"This platform cannot safely run audio processing.");
+    }
+}
+int app_join_finished(NativeApp *a)
+{
+    if (!a->worker)
+        return 1;
+    if (!atomic_load_explicit(&a->finished, memory_order_acquire))
+        return 0;
+    DWORD r = WaitForSingleObject(a->worker, 0);
+    if (r == WAIT_TIMEOUT)
+        return 0;
+    if (r != WAIT_OBJECT_0 || !CloseHandle(a->worker)) {
+        atomic_store(&a->fatal, 1);
+        app_status(a, L"Recognizer shutdown could not be confirmed.");
+        return 0;
+    }
+    a->worker = NULL;
+    return 1;
+}
+int app_start(NativeApp *a)
+{
+    if (atomic_load(&a->fatal) || !app_join_finished(a))
+        return 0;
+    atomic_store(&a->ring.read, 0);
+    atomic_store(&a->ring.write, 0);
+    atomic_store(&a->stop, 0);
+    atomic_store(&a->finished, 0);
+    atomic_store(&a->receiving, 0);
+    atomic_store(&a->lost, 0);
+    atomic_store(&a->dropped, 0);
+    atomic_store(&a->meter, 0);
+    EnterCriticalSection(&a->display);
+    cap_clear(&a->stable);
+    cap_clear(&a->draft);
+    LeaveCriticalSection(&a->display);
+    a->worker = CreateThread(NULL, 0, worker_entry, a, 0, NULL);
+    if (!a->worker) {
+        atomic_store(&a->finished, 1);
+        app_status(a, L"Could not start the recognizer.");
+        return 0;
+    }
+    return 1;
+}
+void app_request_stop(NativeApp *a)
+{
+    atomic_store_explicit(&a->stop, 1, memory_order_relaxed);
+}
+int app_destroy(NativeApp *a)
+{
+    if (!app_join_finished(a))
+        return 0;
+    DeleteCriticalSection(&a->display);
+    return 1;
+}
+typedef struct QueueTest {
+    AppRing ring;
+    _Atomic int done;
+    uint32_t accepted;
+} QueueTest;
+static int queue_producer(void *p)
+{
+    QueueTest *t = p;
+    for (uint32_t i = 0; i < 200000; ++i) {
+        AppFrame f = {0};
+        f.position = i;
+        f.samples[0] = (float)i;
+        if (app_ring_push(&t->ring, &f))
+            ++t->accepted;
+    }
+    atomic_store_explicit(&t->done, 1, memory_order_release);
+    return 0;
+}
+int app_queue_test(FILE *report)
+{
+    QueueTest *t = calloc(1, sizeof(*t));
+    if (!t)
+        return 1;
+    atomic_init(&t->done, 0);
+    atomic_init(&t->ring.read, 0);
+    atomic_init(&t->ring.write, 0);
+    demo_thread producer;
+    if (demo_thread_start(&producer, queue_producer, t)) {
+        free(t);
+        return 1;
+    }
+    uint32_t received = 0, errors = 0;
+    uint64_t previous = 0;
+    int seen = 0;
+    for (;;) {
+        AppFrame f;
+        if (!app_ring_pop(&t->ring, &f)) {
+            if (!atomic_load_explicit(&t->done, memory_order_acquire)) {
+                demo_thread_yield();
+                continue;
+            }
+            if (!app_ring_pop(&t->ring, &f))
+                break;
+        }
+        if ((seen && f.position <= previous) || f.samples[0] != (float)f.position)
+            ++errors;
+        previous = f.position;
+        seen = 1;
+        ++received;
+    }
+    if (demo_thread_join(&producer, NULL))
+        return 1;
+    if (report)
+        fprintf(report, "accepted=%u\nreceived=%u\nerrors=%u\n", t->accepted, received, errors);
+    int result = errors || received != t->accepted || !received;
+    free(t);
+    NativeApp *a = calloc(1, sizeof(*a));
+    CapText *full = calloc(1, sizeof(*full));
+    if (!a || !full) {
+        free(a);
+        free(full);
+        return 1;
+    }
+    app_init(a);
+    AppFrame continuity = {0}, next = {0}, readback;
+    continuity.epoch = next.epoch = 1;
+    for (uint32_t i = 0; i < APP_RING_CAPACITY; ++i) {
+        next.position = (uint64_t)i * 160;
+        if (!app_ring_push(&a->ring, &next))
+            result = 1;
+    }
+    next.position = (uint64_t)APP_RING_CAPACITY * 160;
+    if (app_ring_push(&a->ring, &next))
+        result = 1; /* Explicit bounded overrun. */
+    atomic_fetch_add(&a->dropped, 1);
+    for (uint32_t i = 0; i < APP_RING_CAPACITY; ++i) {
+        if (!app_ring_pop(&a->ring, &readback) || (i && frame_gap(&continuity, &readback)))
+            result = 1;
+        continuity = readback;
+    }
+    next.position += 160;
+    if (!app_ring_push(&a->ring, &next) || !app_ring_pop(&a->ring, &readback) ||
+        !frame_gap(&continuity, &readback))
+        result = 1;
+    if (report)
+        fprintf(report, "queue_capacity=%u\nordered_gap_boundary=%s\n", APP_RING_CAPACITY,
+                result ? "FAIL" : "PASS");
+    AppWork *partial = calloc(1, sizeof(*partial));
+    if (!partial) {
+        (void)app_destroy(a);
+        free(a);
+        free(full);
+        return 1;
+    }
+    (void)cap_set(&partial->text, L"Please stop the");
+    complete(a, partial);
+    int preserved = !wcscmp(a->draft.text, L"Please stop the") &&
+                    !wcscmp(a->history.text, L"Please stop the") && !partial->text.length;
+    if (!preserved)
+        result = 1;
+    if (report)
+        fprintf(report, "partial_completion=%s\n", preserved ? "PASS" : "FAIL");
+    free(partial);
+    cap_clear(&a->history);
+    cap_clear(&a->draft);
+    for (size_t i = 0; i < 64000; ++i)
+        full->text[i] = L'x';
+    full->text[64000] = 0;
+    full->length = 64000;
+    history_append_locked(a, L"old history");
+    history_append_locked(a, full->text);
+    if (a->history.length != 64000 || wcsncmp(a->history.text, full->text, 64001))
+        result = 1;
+    history_append_locked(a, L"new paragraph");
+    if (a->history.length > 64000 || !wcsstr(a->history.text, L"new paragraph"))
+        result = 1;
+    for (unsigned i = 0; i < 200; ++i)
+        history_append_locked(a, L"bounded paragraph");
+    size_t paragraphs = 1;
+    for (size_t i = 0; i + 3 < a->history.length; ++i)
+        if (!wmemcmp(a->history.text + i, L"\r\n\r\n", 4))
+            ++paragraphs;
+    if (paragraphs > 60 || a->history.length > 64000)
+        result = 1;
+    if (report)
+        fprintf(report, "history_bounds=%s\n", result ? "FAIL" : "PASS");
+    if (!app_destroy(a))
+        return 1;
+    free(a);
+    free(full);
+    return result ? 2 : 0;
+}

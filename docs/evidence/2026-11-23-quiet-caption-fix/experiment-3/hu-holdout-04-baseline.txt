@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=293760
+DECODE frames=5600 sha256=be8c835c464f65e7791fa2f50b39156322f2fae31d5ef3cd1adb18e986d3759c last_two=-1 text=H
+DECODE frames=16320 sha256=285776fe4e26f3a01eff3742efcc6735164af0c2a86b0aa0a72970d91cdbbdb3 last_two=0.239999995 text=Ha nincs hotel.
+DECODE frames=27360 sha256=bd6ba7c6a7b45adcc56d95fc7bc157594e8f5c43da7230b604df2c07f7d576dd last_two=-1 text=
+DECODE frames=39360 sha256=dafa6940efc9c7cff596209353ee43bf7bc5af28e300eb1da00f6e2d5161814e last_two=-1 text=
+DECODE frames=52000 sha256=1aeacf930b77d09aab6198a2a54a91a4b292742ce94544085d47b19671278674 last_two=-1 text=
+DECODE frames=64960 sha256=9b5aaacd45d022e2b24f54092bd1ea0894db19e74daef1680610573ce6a30994 last_two=2.72000003 text=Ha nincs hozzáfogva a vidéki utakon való vetettésre.
+DECODE frames=78880 sha256=f66cd2ea1c858d463ea46266d55de7bc77b45f262cb247c58a611227da9fc4ef last_two=3.11999989 text=Ha nincs hozzáfogva a vidéki utakon való vetettés, hát.
+DECODE frames=94080 sha256=244db7ecfb378440ed77e61b93a67ae15e1c06c55ed9187082e402985b1cace0 last_two=5.11999989 text=Ha nincs hozzáfogva a vidéki utakon való vetettés, ha tartsa jutva a szemét.
+DECODE frames=96000 sha256=a085bab74a9211ff716de47bfb31f28bdf9e4691b3b5916c9848830ba547f832 last_two=5.03999996 text=Ha nincs hozzáfogva a vidéki utakon való vetettés, ha tartsanítva a szemét.
+DECODE frames=51680 sha256=ccc46ae9d53aba390d275e82ba6a6a94ff08fe94a1149955cc8d0b9dfd4c98fb last_two=1.91999996 text=Tartson vasta meet. Märetäk Märkät.
+DECODE frames=65120 sha256=f95731219a6b5f419e5e4603bd53fee0d4230f5e472077a6760fb9ad90402e79 last_two=3.03999996 text=Tá chan. Märetäk M katry käsken.
+DECODE frames=79040 sha256=230a4c3b7130c7d3c519ed952d50fffb90ad2eb8c7d4d6b270e269b1e7b7d158 last_two=3.5999999 text=Tartsan ittva a szemét. Már atak, emelkötő, keskeny sávok.
+DECODE frames=93600 sha256=5898d49f0a72867afa2689a9e6a59358c427a4633523d34decf4416b4d0dd0c3 last_two=4.96000004 text=Tartsan ittva a szemét meretek, emel, kötő, keskeny sávok és igazkok.
+DECODE frames=109120 sha256=ac320e87a52fa61a0378da81bdb25f8f8f3745d08d9c52395e688b6b286e4b00 last_two=5.75999975 text=Tartsva a szemét. Meredek, emelkedő, keskeny sávok és illes kanyarok jelen.
+DECODE frames=115680 sha256=69345c1f0e4dc9f103883a7c022c9a76a6a737b75fb9dddf02f00a249508dbae last_two=6.31999969 text=Tártsanítva a szemét. Meredek, emelkedő, keskeny sávok és iles kanyarok jellemzik az.
+DECODE frames=48960 sha256=eb5dd8f28c506caa54f03687131127221af96c6f91b649d6c4b3d18d1530bb93 last_two=-1 text=Mm.
+HISTORY=Ha nincs hozzáfogva a vidéki utakon való vetettés, ha tartsanítva Tártsanítva a szemét. Meredek, emelkedő, keskeny sávok és iles kanyarok Mm.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=64
+MEASURE index=0 decode_ms=49.994200 completed_after_source_start_ms=6425.947700
+MEASURE index=1 decode_ms=86.831300 completed_after_source_start_ms=7140.646300
+MEASURE index=2 decode_ms=124.071200 completed_after_source_start_ms=7871.381400
+MEASURE index=3 decode_ms=165.656400 completed_after_source_start_ms=8660.944600
+MEASURE index=4 decode_ms=212.453500 completed_after_source_start_ms=9493.851800
+MEASURE index=5 decode_ms=260.873100 completed_after_source_start_ms=10356.789200
+MEASURE index=6 decode_ms=312.765500 completed_after_source_start_ms=11284.320400
+MEASURE index=7 decode_ms=370.261500 completed_after_source_start_ms=12283.237000
+MEASURE index=8 decode_ms=373.504700 completed_after_source_start_ms=12656.945100
+MEASURE index=9 decode_ms=215.131900 completed_after_source_start_ms=13484.951000
+MEASURE index=10 decode_ms=261.869700 completed_after_source_start_ms=14353.112200
+MEASURE index=11 decode_ms=314.219300 completed_after_source_start_ms=15269.634300
+MEASURE index=12 decode_ms=367.595100 completed_after_source_start_ms=16238.872300
+MEASURE index=13 decode_ms=423.305100 completed_after_source_start_ms=17284.851500
+MEASURE index=14 decode_ms=448.728300 completed_after_source_start_ms=17733.829200
+MEASURE index=15 decode_ms=208.941900 completed_after_source_start_ms=18536.333500

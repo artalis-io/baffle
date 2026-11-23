@@ -1,0 +1,427 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "fixture_manifest_sha256": "dc9cd2cec53446343ea79a00616c65aebe33e7f070cd011de80d5a801c98e8a1",
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "command": "tools/quiet_caption_check.py evaluate --fixtures build-quiet-caption/fixtures-final-ns --baseline build-quiet-caption/instrumented/ReplayBaseline.exe --baseline-results build-quiet-caption/final-ns --candidate build-quiet-caption/continuation-roll/BaffleReplay.exe --models build-acoustic/models/parakeet --cases hu-01 --output build-quiet-caption/roll-ablation-ns",
+  "executables": {
+    "baseline": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\instrumented\\ReplayBaseline.exe",
+      "sha256": "9a0d0720d3da8036ba3ecf5c165de0633f91cdce104e3495a3a6682a4d22ec42"
+    },
+    "candidate": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\continuation-roll\\BaffleReplay.exe",
+      "sha256": "ba31996d80247ef124a196b06e2bdce388b532c0da2ad21e7dbc67834d1c4ec9"
+    }
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "source_sha256": {
+    "examples\\win32-transcript\\app.c": "115451ef91e4528bf79282879c92e0a90516444bd5a56e88d4828c9cbef9cd26",
+    "examples\\win32-transcript\\speech.c": "4ed20381a2a19e313851c9adc6931f1146f7a1a4683a56cc87f96769e2b8a7d3",
+    "examples\\win32-transcript\\replay_test.c": "9ee1b199eee0d942d542439cf6435342ad99114a43a9e29cbe4c666ef1e5080a",
+    "tools\\quiet_caption_check.py": "5790df7bcacde4f5ec3f19820496cb97a23adb3191a005d003878e887668364e"
+  },
+  "rows": [
+    {
+      "name": "hu-01",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1742,
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "wav": "hu-01.wav",
+      "wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06,
+      "rms": 0.0019043138504751867,
+      "asr_wav": "hu-01-ns.wav",
+      "asr_wav_sha256": "90ee0a632d7030e0313b8bd478fae42ef8c13d209ade25670ab3ef7ee52c20e6",
+      "ns_receipt": "hu-01.json",
+      "ns_receipt_sha256": "9113feef88b64d9e95fa2a82fa1d44d6a3db66987bf892923df0ec008bad6637",
+      "profile": "baseline",
+      "hypothesis": "Hongkong nävy Hongkong seatro katto és sok sok trista számára.",
+      "metrics": {
+        "word": {
+          "errors": 12,
+          "substitutions": 5,
+          "deletions": 7,
+          "insertions": 0,
+          "reference_length": 17,
+          "rate": 0.7058823529411765
+        },
+        "character": {
+          "errors": 46,
+          "substitutions": 10,
+          "deletions": 36,
+          "insertions": 0,
+          "reference_length": 88,
+          "rate": 0.5227272727272727
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "cdb549e8d1c90bebe9b57d8bd60cda0368a45ec65010bcce4e9f9b1c4bafe864",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16320,
+          "pcm_sha256": "3bded63064dd608d873625eb330384959943bc560c98b9145216ce3855ad46b1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 18400,
+          "pcm_sha256": "9f6a7f244fdcabab80ace2c1317c62d1ebf7d1a8d1f8c138713d89dc8bd877e1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 11360,
+          "pcm_sha256": "ba66c5bf1d2e2c43f8b39542fa68fd25149eb069f9425ec5e1a480ba07cc3f3c",
+          "last_two_start": -1.0,
+          "hypothesis": "Comment"
+        },
+        {
+          "frames": 22240,
+          "pcm_sha256": "01b8d95d8a3db4b98076ecc79d39ac67155fb8c1cd465b07ad3c624c5fb5aa66",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 33760,
+          "pcm_sha256": "731d0bb88426bf6f65313d69f618172afbcb9daeb822afb289ab30130d1cd96f",
+          "last_two_start": 0.399999976,
+          "hypothesis": "Hong Kong Maverick."
+        },
+        {
+          "frames": 46080,
+          "pcm_sha256": "23a23a0a31e00ac39034609d68de9752ca55cb335c372f2b62bfce19628bcf0b",
+          "last_two_start": 1.75999999,
+          "hypothesis": "Hong Kong Member Hong Kong Psychiatry"
+        },
+        {
+          "frames": 58880,
+          "pcm_sha256": "27d54019e33f410bd4f1aaed7d1cce258334f0c370b65a07a7b34f0984534e8b",
+          "last_two_start": 2.15999985,
+          "hypothesis": "Hong Kong Maverick, a Hong Kong Psychiatral Captain"
+        },
+        {
+          "frames": 72480,
+          "pcm_sha256": "8c23ebd0343823d769d7ee27bc92ad6bdcdc3e44e1e0161961feb85c463406cb",
+          "last_two_start": 4.0,
+          "hypothesis": "Hongkong never a Hongkong seether katta is at the hair."
+        },
+        {
+          "frames": 87200,
+          "pcm_sha256": "4d6f9fc1471f569f7f9ac038c3395bba1f35796f1b88b115cf5f5e72ab4349fd",
+          "last_two_start": 4.15999985,
+          "hypothesis": "Hongkong nevét, a Hong Kong Szikator kapta, és a hátsó turistä."
+        },
+        {
+          "frames": 97920,
+          "pcm_sha256": "399fec13f3a15fb01bce390fcd74ab527dd676613f4839bb60386e81629e7120",
+          "last_two_start": 4.88000011,
+          "hypothesis": "Hongkong nävy Hongkong seatro katto és sok turista samára."
+        },
+        {
+          "frames": 48000,
+          "pcm_sha256": "d68b983064c2ca263953f93e1baeb7b8dbcd731bc92af5219b245804ab79b953",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 60480,
+          "pcm_sha256": "706e9fdb8805b7bf00f6f241cb6d0dc8d31790b50216d8c6324459be34fe4dab",
+          "last_two_start": 0.719999969,
+          "hypothesis": "sok trista számára."
+        },
+        {
+          "frames": 74080,
+          "pcm_sha256": "0fbe688bd63462b3da8c7980929dd56ac02e187005f59c627610ff5c54b4e1b1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 74560,
+          "pcm_sha256": "307334ee91284363179240ec233d97f901ece277576770be9f0a9d54038b20e6",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15776.310600020224,
+      "receipt": "hu-01-baseline.txt",
+      "receipt_sha256": "6ab9e4a71925d1814050e36be74d89a4c3e50b999480b6481abd124664c670a1",
+      "measurements": [
+        {
+          "decode_ms": 50.185,
+          "completed_after_source_start_ms": 2096.655
+        },
+        {
+          "decode_ms": 86.6435,
+          "completed_after_source_start_ms": 2790.8598
+        },
+        {
+          "decode_ms": 96.6407,
+          "completed_after_source_start_ms": 2926.3176
+        },
+        {
+          "decode_ms": 67.6005,
+          "completed_after_source_start_ms": 3607.6678
+        },
+        {
+          "decode_ms": 108.3639,
+          "completed_after_source_start_ms": 4340.1163
+        },
+        {
+          "decode_ms": 148.9831,
+          "completed_after_source_start_ms": 5107.8674
+        },
+        {
+          "decode_ms": 191.4015,
+          "completed_after_source_start_ms": 5921.4843
+        },
+        {
+          "decode_ms": 236.4874,
+          "completed_after_source_start_ms": 6765.1699
+        },
+        {
+          "decode_ms": 289.1198,
+          "completed_after_source_start_ms": 7669.7976
+        },
+        {
+          "decode_ms": 350.2661,
+          "completed_after_source_start_ms": 8630.5019
+        },
+        {
+          "decode_ms": 381.0089,
+          "completed_after_source_start_ms": 9335.8223
+        },
+        {
+          "decode_ms": 200.592,
+          "completed_after_source_start_ms": 10148.1996
+        },
+        {
+          "decode_ms": 242.8016,
+          "completed_after_source_start_ms": 10993.4357
+        },
+        {
+          "decode_ms": 290.9305,
+          "completed_after_source_start_ms": 11891.9694
+        },
+        {
+          "decode_ms": 295.9304,
+          "completed_after_source_start_ms": 12188.0682
+        }
+      ],
+      "peak_queued_blocks": 58,
+      "baseline_reused_from": "build-quiet-caption\\final-ns",
+      "baseline_results_sha256": "0d1d6ffe8719ad827c56c183537ad779289af660136a0b194741cb0d91064231"
+    },
+    {
+      "name": "hu-01",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1742,
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "wav": "hu-01.wav",
+      "wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06,
+      "rms": 0.0019043138504751867,
+      "asr_wav": "hu-01-ns.wav",
+      "asr_wav_sha256": "90ee0a632d7030e0313b8bd478fae42ef8c13d209ade25670ab3ef7ee52c20e6",
+      "ns_receipt": "hu-01.json",
+      "ns_receipt_sha256": "9113feef88b64d9e95fa2a82fa1d44d6a3db66987bf892923df0ec008bad6637",
+      "profile": "candidate",
+      "hypothesis": "Hongkong nävy Hongkong seatro katto és sok Sok turista samára.",
+      "metrics": {
+        "word": {
+          "errors": 12,
+          "substitutions": 5,
+          "deletions": 7,
+          "insertions": 0,
+          "reference_length": 17,
+          "rate": 0.7058823529411765
+        },
+        "character": {
+          "errors": 47,
+          "substitutions": 11,
+          "deletions": 36,
+          "insertions": 0,
+          "reference_length": 88,
+          "rate": 0.5340909090909091
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "cdb549e8d1c90bebe9b57d8bd60cda0368a45ec65010bcce4e9f9b1c4bafe864",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "45f09c34540aae3bf27f13b23a8275b42748c68c99904769222f1cec3542a55c",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 18400,
+          "pcm_sha256": "9f6a7f244fdcabab80ace2c1317c62d1ebf7d1a8d1f8c138713d89dc8bd877e1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 11520,
+          "pcm_sha256": "1b51d8b096c3e5692f4d6b89559cbc7a9c3a94e71520d128db654acf28b74adf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 22560,
+          "pcm_sha256": "cc7a6899d9fd392e719a4c21b186182b463ea11dbe63121e4289a492daf22c42",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 33920,
+          "pcm_sha256": "69556f233b245de7a5d087fb4cf79287ab16f0cc7d3f749da145b550795fe6c9",
+          "last_two_start": 0.399999976,
+          "hypothesis": "Hong Kong Mother."
+        },
+        {
+          "frames": 45760,
+          "pcm_sha256": "2e83bb295df24c76be7bfe8a152f20788f662527bb7e7aa37302ade77dabe4b2",
+          "last_two_start": 1.75999999,
+          "hypothesis": "Hong Kong Maverick a Hong Kong Psychiatry"
+        },
+        {
+          "frames": 58880,
+          "pcm_sha256": "27d54019e33f410bd4f1aaed7d1cce258334f0c370b65a07a7b34f0984534e8b",
+          "last_two_start": 2.15999985,
+          "hypothesis": "Hong Kong Maverick, a Hong Kong Psychiatral Captain"
+        },
+        {
+          "frames": 72480,
+          "pcm_sha256": "8c23ebd0343823d769d7ee27bc92ad6bdcdc3e44e1e0161961feb85c463406cb",
+          "last_two_start": 4.0,
+          "hypothesis": "Hongkong never a Hongkong seether katta is at the hair."
+        },
+        {
+          "frames": 86880,
+          "pcm_sha256": "24af4ba29e851b8a17c362948e335fa76dcc2c203e7e13a0d83bf33879abc77b",
+          "last_two_start": 4.07999992,
+          "hypothesis": "Hongkong nevyt, a Hong Kong Secretary Katta, és a Härsoktorista."
+        },
+        {
+          "frames": 97920,
+          "pcm_sha256": "399fec13f3a15fb01bce390fcd74ab527dd676613f4839bb60386e81629e7120",
+          "last_two_start": 4.88000011,
+          "hypothesis": "Hongkong nävy Hongkong seatro katto és sok turista samára."
+        },
+        {
+          "frames": 48160,
+          "pcm_sha256": "d7b3228e01392b990b667859612daaf03a34137ec96c1287f971f73e4bb3cb09",
+          "last_two_start": 0.479999989,
+          "hypothesis": "sok trista."
+        },
+        {
+          "frames": 60960,
+          "pcm_sha256": "63f6216b64a1a40c962525ca159033fc6bacec95273afbf815d711f7dcefd0d3",
+          "last_two_start": 0.719999969,
+          "hypothesis": "Sok turista samára."
+        },
+        {
+          "frames": 74880,
+          "pcm_sha256": "e6b9406e8c85b76c82ccb0a018719ff87614f7ff887fff855a433326bc0b9ead",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 79840,
+          "pcm_sha256": "60f7c607b31e6df1224ba57a2474e4d0dc15660adcfa7bd01cf764a576439ed9",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15881.378499994753,
+      "receipt": "hu-01-candidate.txt",
+      "receipt_sha256": "23a22088db949a2b423fd4b859ca7b647fa8301453693422125498b1da660a21",
+      "measurements": [
+        {
+          "decode_ms": 50.1101,
+          "completed_after_source_start_ms": 2070.8567
+        },
+        {
+          "decode_ms": 87.4514,
+          "completed_after_source_start_ms": 2771.0984
+        },
+        {
+          "decode_ms": 92.8898,
+          "completed_after_source_start_ms": 2933.8725
+        },
+        {
+          "decode_ms": 67.8949,
+          "completed_after_source_start_ms": 3631.9841
+        },
+        {
+          "decode_ms": 110.0456,
+          "completed_after_source_start_ms": 4350.2887
+        },
+        {
+          "decode_ms": 151.8898,
+          "completed_after_source_start_ms": 5102.5472
+        },
+        {
+          "decode_ms": 196.3973,
+          "completed_after_source_start_ms": 5901.7353
+        },
+        {
+          "decode_ms": 240.1862,
+          "completed_after_source_start_ms": 6749.9716
+        },
+        {
+          "decode_ms": 294.7836,
+          "completed_after_source_start_ms": 7673.1063
+        },
+        {
+          "decode_ms": 348.2174,
+          "completed_after_source_start_ms": 8625.0621
+        },
+        {
+          "decode_ms": 388.193,
+          "completed_after_source_start_ms": 9358.1706
+        },
+        {
+          "decode_ms": 201.8783,
+          "completed_after_source_start_ms": 10160.7255
+        },
+        {
+          "decode_ms": 244.985,
+          "completed_after_source_start_ms": 11024.738
+        },
+        {
+          "decode_ms": 300.2361,
+          "completed_after_source_start_ms": 11932.5418
+        },
+        {
+          "decode_ms": 320.1427,
+          "completed_after_source_start_ms": 12252.8685
+        }
+      ],
+      "peak_queued_blocks": 40
+    }
+  ]
+}

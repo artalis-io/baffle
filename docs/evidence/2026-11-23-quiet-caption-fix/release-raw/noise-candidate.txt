@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=80000 caption_profile=raw
+DECODE frames=5600 sha256=ef6f99cfca916cbd6c26b9a4b10bccb99de048873e994c7480785d275ca2e297 last_two=-1 text=
+DECODE frames=16000 sha256=72727c35aa1c0a75bfa02ae0a79e66f86f52a0eb5cbff91d8bdbc3fd22dff826 last_two=-1 text=
+DECODE frames=27360 sha256=d21e06a495093d6194fcb6c8a3e0767cac8fb8fa9f891247eea7d1000da33689 last_two=-1 text=
+DECODE frames=39040 sha256=70fb8dcf4f193e54fd18b0643f34a2c5f2e0de3513bb73c2825f591bf275ced2 last_two=-1 text=
+DECODE frames=51360 sha256=ec81a30eaecf3ad07d75ae138c9a83258a128cafab9e8217c4d9fd94f1a20fff last_two=-1 text=
+DECODE frames=64960 sha256=fc09318cc5954874acb716791a76fd38a7268d6c834f17c37a5f047e4ab9bd82 last_two=-1 text=
+DECODE frames=78880 sha256=d845e154ec2afa9b9b520435747427662bef5af1ba98b4d651d2753b3161ec9e last_two=-1 text=
+DECODE frames=93120 sha256=be7f34cbfd1c9fce9954fc328c49a7f35791e4bdf8aa5499a18172fafe68f63e last_two=-1 text=
+DECODE frames=96000 sha256=f61bb2c9e795ceac0dbecd300cfc2619a087a7183bf7abd76e3dcae310661c48 last_two=-1 text=
+DECODE frames=50240 sha256=085cc678fcb41e64369921578380d2a6d2c3bb314502d1a5f115169adb67ecb8 last_two=-1 text=But
+HISTORY=But
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=39
+MEASURE index=0 decode_ms=49.928500 completed_after_source_start_ms=1160.590800
+MEASURE index=1 decode_ms=86.356500 completed_after_source_start_ms=1861.499600
+MEASURE index=2 decode_ms=124.687500 completed_after_source_start_ms=2590.738400
+MEASURE index=3 decode_ms=167.208900 completed_after_source_start_ms=3370.560200
+MEASURE index=4 decode_ms=219.796200 completed_after_source_start_ms=4209.953300
+MEASURE index=5 decode_ms=260.456500 completed_after_source_start_ms=5083.832900
+MEASURE index=6 decode_ms=309.942600 completed_after_source_start_ms=5997.867000
+MEASURE index=7 decode_ms=366.912500 completed_after_source_start_ms=6968.093200
+MEASURE index=8 decode_ms=372.397100 completed_after_source_start_ms=7340.708400
+MEASURE index=9 decode_ms=207.340700 completed_after_source_start_ms=7548.275700

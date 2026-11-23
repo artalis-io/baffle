@@ -1,0 +1,86 @@
+[
+  {
+    "case": "hungarian-1",
+    "mode": "raw",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319840
+  },
+  {
+    "case": "hungarian-1",
+    "mode": "ns",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319840
+  },
+  {
+    "case": "hungarian-1",
+    "mode": "ns-agc",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319840
+  },
+  {
+    "case": "hungarian-2",
+    "mode": "raw",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319520
+  },
+  {
+    "case": "hungarian-2",
+    "mode": "ns",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319520
+  },
+  {
+    "case": "hungarian-2",
+    "mode": "ns-agc",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 319520
+  },
+  {
+    "case": "english-0",
+    "mode": "raw",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 106000
+  },
+  {
+    "case": "english-0",
+    "mode": "ns",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 106000
+  },
+  {
+    "case": "english-0",
+    "mode": "ns-agc",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 106000
+  },
+  {
+    "case": "english-1",
+    "mode": "raw",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 267440
+  },
+  {
+    "case": "english-1",
+    "mode": "ns",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 267440
+  },
+  {
+    "case": "english-1",
+    "mode": "ns-agc",
+    "same_pcm": true,
+    "same_transcript": true,
+    "frames": 267440
+  }
+]

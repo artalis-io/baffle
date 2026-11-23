@@ -1,0 +1,6 @@
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+Traceback (most recent call last):
+  File "C:\Users\Mark\artalis.io\src\baffle\tests\acoustic_tools.py", line 86, in <module>
+    assert session["flush_requested"] == (behavior!="none")
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'flush_requested'

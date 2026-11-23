@@ -13,8 +13,9 @@ cmake --install build --prefix /your/prefix
 
 Installed consumers use `find_package(Baffle 0.1.0 EXACT CONFIG REQUIRED)` and
 `Baffle::baffle`. ABI 0.1 is provisional. Static and shared builds are supported
-(`-DBF_BUILD_SHARED=ON`). Set `BF_BUILD_TESTS=OFF` for a C-only build; the session
-stress test uses C++ threads. The library creates no background threads.
+(`-DBF_BUILD_SHARED=ON`). Core builds and session stress tests use C11; the latter
+use C11 atomics with native Windows/POSIX test threads. The library creates no
+background threads.
 
 Implemented: streaming windowed-sinc resampling and smooth drift adjustment,
 channel matrices/delays, linked AGC/limiting, classical VAD, spectral noise
@@ -80,3 +81,17 @@ moving-room and conversational readiness remain PARTIAL.
 
 MIT licensed; see LICENSE and NOTICE. Hail's engineering conventions are adapted,
 not its audio-device implementation.
+## C11 migration and audits (2026-11-21)
+
+The owned native implementations, including the optional Win32 caption application
+and qualification frontends, now compile as C11. The two explicit foreign C++
+boundaries (optional C++ consumer test and optional WebRTC API shim) and the
+third-party C++ inference engines are identified in the
+[C audit](docs/c-audit-2026-11-21.md) and [axis audit](docs/axis-audit.md).
+Default core builds do not enable C++. External Python evaluation scripts remain
+optional QA tooling. These audits do not establish acoustic production readiness.
+
+The [public-speech ASR comparison](docs/asr-cloud-comparison.md) retains paired
+Whisper/Baffle accuracy and CPU measurements on English/Hungarian FLEURS samples.
+The prepared GPT API comparison remains explicitly unexecuted until an API
+credential is available; no ChatGPT-internal or cloud/local winner is claimed.

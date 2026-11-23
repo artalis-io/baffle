@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=cdb549e8d1c90bebe9b57d8bd60cda0368a45ec65010bcce4e9f9b1c4bafe864 last_two=-1 text=
+DECODE frames=16000 sha256=1ed1028f8adb78a3eaa041a5ee35e746b048ea36f1950995f420791fd0895f4a last_two=-1 text=
+DECODE frames=18400 sha256=9f6a7f244fdcabab80ace2c1317c62d1ebf7d1a8d1f8c138713d89dc8bd877e1 last_two=-1 text=
+DECODE frames=11040 sha256=a7bb35630d172b95955b717f8ac160677aa6c586ee4c68ed0fbb9c8a491bdb73 last_two=-1 text=Com.
+DECODE frames=21920 sha256=7a6a091dc376fa5ced3fad65784d0098a8ea1747ea8cc89d800acaf59d11d301 last_two=0.159999996 text=Uncle Mary
+DECODE frames=33600 sha256=a21c8e730c2d15f4f18b60cb34a2c50793939e9ba31bf65b36ea0b5f654cc1b2 last_two=-1 text=
+DECODE frames=45760 sha256=2e83bb295df24c76be7bfe8a152f20788f662527bb7e7aa37302ade77dabe4b2 last_two=1.75999999 text=Hong Kong Maverick a Hong Kong Psychiatry
+DECODE frames=58880 sha256=27d54019e33f410bd4f1aaed7d1cce258334f0c370b65a07a7b34f0984534e8b last_two=2.15999985 text=Hong Kong Maverick, a Hong Kong Psychiatral Captain
+DECODE frames=72800 sha256=0e41d1009a11dc9f34913764ce3d564148267994552404d34e0d0c103637d863 last_two=4 text=Hongkong nevét, a Hong Kong sziketről katta, és at a h
+DECODE frames=87200 sha256=4d6f9fc1471f569f7f9ac038c3395bba1f35796f1b88b115cf5f5e72ab4349fd last_two=4.15999985 text=Hongkong nevét, a Hong Kong Szikator kapta, és a hátsó turistä.
+DECODE frames=98080 sha256=0a9ea35f8de2108eb06140a32bd676800eba540a2f96790858e0292435a53378 last_two=4.55999994 text=Hongkong nävy a Hong Kong Cikr katta és soktoristä samára.
+DECODE frames=51200 sha256=d1dd0de36c3027fe8c81e5972d05b7e48159e8c3d520c39e5cd38ff75c602ad9 last_two=-1 text=
+DECODE frames=64480 sha256=f302577b0cc5d2de0607f04dd9111c5bb464bea59460d7ac5936ca7ba2333f01 last_two=1.83999991 text=Tämä on kötelepana.
+DECODE frames=78720 sha256=c5675271db4bc7a1637d5bde5e1f3b8d62487b7130770b44bc8bfc427b261e34 last_two=2.87999988 text=Tämä c'est point.
+DECODE frames=82560 sha256=23c5cf0140128152a737f251781137fc1899488ed2887943aa3a2cdc4e5464d4 last_two=-1 text=
+HISTORY=Hongkong nävy a Hong Kong Cikr katta és Tämä c'est point.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=41
+MEASURE index=0 decode_ms=50.525900 completed_after_source_start_ms=2071.768000
+MEASURE index=1 decode_ms=88.996400 completed_after_source_start_ms=2774.430800
+MEASURE index=2 decode_ms=95.035500 completed_after_source_start_ms=2921.825500
+MEASURE index=3 decode_ms=69.280300 completed_after_source_start_ms=3606.142700
+MEASURE index=4 decode_ms=111.620200 completed_after_source_start_ms=4324.296400
+MEASURE index=5 decode_ms=151.860400 completed_after_source_start_ms=5100.927500
+MEASURE index=6 decode_ms=197.977400 completed_after_source_start_ms=5903.560400
+MEASURE index=7 decode_ms=244.403900 completed_after_source_start_ms=6772.318400
+MEASURE index=8 decode_ms=299.626500 completed_after_source_start_ms=7678.522500
+MEASURE index=9 decode_ms=361.065300 completed_after_source_start_ms=8654.697100
+MEASURE index=10 decode_ms=394.753100 completed_after_source_start_ms=9366.198900
+MEASURE index=11 decode_ms=213.737800 completed_after_source_start_ms=10207.673600
+MEASURE index=12 decode_ms=268.522300 completed_after_source_start_ms=11096.488700
+MEASURE index=13 decode_ms=320.900900 completed_after_source_start_ms=12017.890300
+MEASURE index=14 decode_ms=336.425100 completed_after_source_start_ms=12354.498100

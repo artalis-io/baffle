@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checked_calls": 144,
+  "metrics_recomputed": true,
+  "aggregates_recomputed": true,
+  "wav_hash_geometry_budget_checks": "48/48",
+  "cloud_executed": false,
+  "native_tool_build": {
+    "CMAKE_BUILD_TYPE:STRING": "Release",
+    "CMAKE_C_COMPILER:STRING": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/Llvm/x64/bin/clang-cl.exe",
+    "CMAKE_C_FLAGS:STRING": "/DWIN32 /D_WINDOWS",
+    "CMAKE_PREFIX_PATH:UNINITIALIZED": "C:/Users/Mark/artalis.io/src/baffle/build-gate-k/corrected-sdk;C:/Users/Mark/artalis.io/src/hail/build-gate-e/convergence/windows-final/OFF-Release/installed"
+  },
+  "qa_packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "soundfile": "0.13.1",
+    "pyarrow": "26.0.1",
+    "psutil": "7.1.3",
+    "sherpa-onnx": "1.12.40"
+  }
+}

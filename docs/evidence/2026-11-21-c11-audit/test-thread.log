@@ -1,0 +1,49 @@
+Internal ctest changing into directory: /tmp/baffle-c11-20261121/build-thread
+Test project /tmp/baffle-c11-20261121/build-thread
+    Start 1: conformance
+1/8 Test #1: conformance ......................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xb609118f0000-0xb609118f2000
+
+    Start 2: pcm
+2/8 Test #2: pcm ..............................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xca68a1b50000-0xca68a1b57000
+
+    Start 3: numerical
+3/8 Test #3: numerical ........................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xb83d57a60000-0xb83d57a66000
+
+    Start 4: conditioning
+4/8 Test #4: conditioning .....................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xaf6070610000-0xaf6070619000
+
+    Start 5: aec
+5/8 Test #5: aec ..............................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xb4c683db0000-0xb4c683dc8000
+
+    Start 6: pipeline
+6/8 Test #6: pipeline .........................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xb1a263190000-0xb1a2631af000
+
+    Start 7: concurrency
+7/8 Test #7: concurrency ......................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xc9b243700000-0xc9b24371d000
+
+    Start 8: noalloc
+8/8 Test #8: noalloc ..........................***Failed    0.01 sec
+FATAL: ThreadSanitizer: unexpected memory mapping 0xc2df00170000-0xc2df0018d000
+
+
+0% tests passed, 8 tests failed out of 8
+
+Total Test time (real) =   0.06 sec
+
+The following tests FAILED:
+	  1 - conformance (Failed)
+	  2 - pcm (Failed)
+	  3 - numerical (Failed)
+	  4 - conditioning (Failed)
+	  5 - aec (Failed)
+	  6 - pipeline (Failed)
+	  7 - concurrency (Failed)
+	  8 - noalloc (Failed)
+Errors while running CTest

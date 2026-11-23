@@ -1,0 +1,288 @@
+"""External unattended caption-gate regression and held-out public-speech QA.
+
+Uses cached, pinned FLEURS parquet files. No microphone/network/cloud calls.
+Prepare before evaluating; references are publisher transcripts, never ASR hints.
+"""
+import argparse
+import io
+import json
+import pathlib
+import platform
+import re
+import subprocess
+import os
+import shutil
+
+import numpy as np
+import soundfile as sf
+from public_caption_replay import sha, dump, execute, trace_text, metrics, report_text
+
+REVISION = '70bb2e84b976b7e960aa89f1c648e09c59f894dd'
+
+
+def prepare(a):
+    import pyarrow.parquet as pq
+    if a.output.exists():
+        raise ValueError('Keep prior evidence; use a new output directory')
+    pilot = json.loads((a.pilot / 'manifest.json').read_text(encoding='utf8'))
+    if pilot['revision'] != REVISION:
+        raise ValueError('Unexpected public corpus revision')
+    a.output.mkdir(parents=True)
+    cases = []
+    for source in pilot['sources']:
+        job = next(j for j in pilot['jobs'] if j['source'] == source['name'] and
+                   j['condition'] == 'clean' and j['stage'] == 'raw')
+        wav = a.pilot / job['wav']
+        if sha(wav) != job['wav_sha256']:
+            raise ValueError('Pilot PCM identity mismatch')
+        x, rate = sf.read(wav, dtype='float32')
+        cases.append(dict(name=source['name'], split='regression', language=source['language'],
+                          dataset_id=source['dataset_id'], reference=source['publisher_reference'],
+                          audio=x[8000:-8000], rate=rate))
+    for lang, config in [('en', 'en_us'), ('hu', 'hu_hu')]:
+        parquet = a.dataset / 'parquet-data' / config / 'test-00000-of-00001.parquet'
+        if sha(parquet) != pilot['dataset_parquet_sha256'][f'test-00000-of-00001.parquet:{config}']:
+            raise ValueError('Cached parquet identity mismatch')
+        seen = {s['dataset_id'] for s in pilot['sources'] if s['language'] == lang}
+        selected = 0
+        skipped = 0
+        for batch in pq.ParquetFile(parquet).iter_batches(batch_size=32):
+            for row in batch.to_pylist():
+                if row['id'] in seen:
+                    continue
+                x, rate = sf.read(io.BytesIO(row['audio']['bytes']), dtype='float32')
+                if rate != 16000 or x.ndim != 1 or not 2 <= len(x) / rate <= 20:
+                    continue
+                seen.add(row['id'])
+                if skipped < a.skip_holdouts:
+                    skipped += 1
+                    continue
+                selected += 1
+                cases.append(dict(name=f'{lang}-holdout-{a.skip_holdouts+selected:02d}', split='holdout',
+                                  language=lang, dataset_id=row['id'],
+                                  reference=row['raw_transcription'], audio=x, rate=rate))
+                if selected == 4:
+                    break
+            if selected == 4:
+                break
+        if selected != 4:
+            raise ValueError('Missing holdouts')
+    rng = np.random.default_rng(231123)
+    noise = rng.normal(size=80000).astype(np.float32)
+    noise /= np.sqrt(np.mean(noise.astype(np.float64) ** 2))
+    click = np.zeros(80000, dtype=np.float32)
+    click[32000] = .3
+    for name, x in [('silence', click * 0), ('click', click),
+                    ('quiet-noise', noise * .0005), ('noise', noise * .004)]:
+        cases.append(dict(name=name, split='nonspeech', language=None, reference='',
+                          audio=x, rate=16000))
+    for c in cases:
+        x, rate = c.pop('audio'), c.pop('rate')
+        if rate != 16000 or x.ndim != 1 or not np.isfinite(x).all():
+            raise ValueError('Invalid mono PCM')
+        path = a.output / (c['name'] + '.wav')
+        sf.write(path, x, rate, subtype='PCM_16')
+        c.update(wav=path.name, wav_sha256=sha(path), frames=len(x),
+                 duration_s=len(x)/rate, rms=float(np.sqrt(np.mean(x.astype(np.float64)**2))))
+    dump(a.output / 'manifest.json', dict(dataset='google/fleurs', revision=REVISION,
+         license='CC-BY-4.0', attribution='Google Research, FLEURS',
+         pilot_manifest_sha256=sha(a.pilot / 'manifest.json'),
+         holdout_selection=f'After excluding pilot IDs and skipping {a.skip_holdouts} previous holdouts per language, next four unique valid 2..20s mono16k IDs; before recognition',
+         references='Publisher transcripts, not newly human reviewed; no ASR reference hints',
+         criteria=['Reduce regression word errors, including quiet en-03/en-04',
+                   'Holdout pooled WER must not worsen; disclose every per-case regression',
+                   'No new speech blanks or first-word losses relative to baseline',
+                   'No false non-speech captions, no dropped frames',
+                   'Unchanged 250ms preroll/900ms endpoint/600ms refresh/8s window; no new lookahead'],
+         cases=cases))
+    print('Prepared', len(cases), 'cases before recognition', flush=True)
+
+
+def evaluate(a):
+    if a.output.exists():
+        raise ValueError('Use fresh results; preserve failures')
+    public = json.loads((a.fixtures / 'manifest.json').read_text(encoding='utf8'))
+    if a.cases and set(a.cases)-{c['name'] for c in public['cases']}:
+        raise ValueError('Unknown selected case')
+    a.output.mkdir(parents=True)
+    metadata = dict(platform=platform.platform(), fixture_manifest_sha256=sha(a.fixtures/'manifest.json'),
+        source_base=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+        working_tree=True, command=subprocess.list2cmdline(__import__('sys').argv),
+        executables={name:dict(path=str(path.resolve()), sha256=sha(path))
+                     for name,path in [('baseline',a.baseline),('candidate',a.candidate)]},
+        models={p.name:sha(p) for p in a.models.glob('*') if p.suffix in ('.onnx','.txt')},
+        source_sha256={str(p):sha(p) for p in map(pathlib.Path,[
+            'examples/win32-transcript/app.c','examples/win32-transcript/speech.c',
+            'examples/win32-transcript/replay_test.c',
+            'tools/quiet_caption_check.py'])}, rows=[])
+    dump(a.output/'results.json',metadata)
+    reuse={}
+    if a.baseline_results:
+        previous=json.loads((a.baseline_results/'results.json').read_text(encoding='utf8'))
+        if previous['executables']['baseline']['sha256']!=sha(a.baseline) or previous['models']!=metadata['models']:
+            raise ValueError('Historical baseline binary/model mismatch')
+        reuse={r['name']:r for r in previous['rows'] if r['profile']=='baseline'}
+    for case in public['cases']:
+        if case['split'] not in a.split:
+            continue
+        if a.cases and case['name'] not in a.cases:
+            continue
+        wav = (a.fixtures / case['wav']).resolve()
+        if not wav.is_relative_to(a.fixtures.resolve()) or sha(wav) != case['wav_sha256']:
+            raise ValueError('Fixture identity mismatch')
+        supplied = (a.fixtures / case.get('asr_wav',case['wav'])).resolve()
+        if not supplied.is_relative_to(a.fixtures.resolve()) or sha(supplied) != case.get('asr_wav_sha256',case['wav_sha256']):
+            raise ValueError('ASR PCM identity mismatch')
+        for name,exe in [('baseline',a.baseline),('candidate',a.candidate)]:
+            receipt = a.output / (case['name'] + '-' + name + '.txt')
+            old=reuse.get(case['name']) if name=='baseline' else None
+            if old and old['wav_sha256']==case['wav_sha256'] and old.get('asr_wav_sha256',old['wav_sha256'])==case.get('asr_wav_sha256',case['wav_sha256']):
+                origin=a.baseline_results/old['receipt']
+                if sha(origin)!=old['receipt_sha256']:
+                    raise ValueError('Historical baseline receipt mismatch')
+                shutil.copyfile(origin,receipt)
+                row={**old,'receipt':receipt.name,'baseline_reused_from':str(a.baseline_results),
+                     'baseline_results_sha256':sha(a.baseline_results/'results.json')}
+                metadata['rows'].append(row)
+                dump(a.output/'results.json',metadata)
+                print(case['name'],'baseline reused, errors',row['metrics']['word']['errors'],flush=True)
+                continue
+            command=[exe,wav,supplied,a.models.resolve(),receipt.resolve()]
+            if name=='candidate' and a.candidate_profile_auto:
+                command.append('ns' if 'asr_wav' in case else 'raw')
+            text,wall = execute(command,receipt,90)
+            hyp,drops,decodes = trace_text(text)
+            row = {**case, 'profile':name, 'hypothesis':hyp, 'metrics':metrics(case['reference'],hyp),
+                   'dropped_blocks':drops,'decode_windows':decodes,
+                   'wall_ms_including_model_init_and_realtime_pacing':wall,
+                   'receipt':receipt.name,'receipt_sha256':sha(receipt)}
+            timings = [dict(decode_ms=float(m[1]), completed_after_source_start_ms=float(m[2]))
+                       for m in re.finditer(r'^MEASURE index=\d+ decode_ms=([\d.]+) completed_after_source_start_ms=([\d.]+)',text,re.M)]
+            queue = re.search(r'^PEAK_QUEUED=(\d+)',text,re.M)
+            row.update(measurements=timings, peak_queued_blocks=int(queue[1]) if queue else None)
+            metadata['rows'].append(row)
+            dump(a.output/'results.json',metadata)
+            print(case['name'],name,'errors',row['metrics']['word']['errors'],
+                  'first',row['metrics']['first_word_correct'],'drops',drops,flush=True)
+
+
+def condition(a):
+    """Match live_capture.c: pair delayed NS output with its previous raw block."""
+    if a.output.exists():
+        raise ValueError('Keep previous inputs')
+    public=json.loads((a.fixtures/'manifest.json').read_text(encoding='utf8'))
+    a.output.mkdir(parents=True)
+    public.update(condition='Installed Baffle NS-only 18dB, VAD feedback disabled; raw/NS pairs aligned as live_capture.c previous/output; physical NS delay remains 10ms; ASR waveform preserves native F32 output',
+                  input_manifest_sha256=sha(a.fixtures/'manifest.json'),runner_sha256=sha(a.runner))
+    for c in public['cases']:
+        source=a.fixtures/c['wav']
+        if sha(source)!=c['wav_sha256']:
+            raise ValueError('Source PCM identity mismatch')
+        x,rate=sf.read(source,dtype='float32')
+        stem=a.output/c['name']
+        mic=stem.with_suffix('.f32');ref=stem.with_suffix('.ref.f32')
+        padded=np.pad(x,(16000,16000))
+        padded.astype('<f4').tofile(mic)
+        np.zeros(len(padded),dtype='<f4').tofile(ref)
+        processed=stem.with_suffix('.out.f32');timing=stem.with_suffix('.csv');receipt=stem.with_suffix('.json')
+        env=os.environ.copy();env.pop('BF_QUALIFICATION_TRANSPORT_EVENTS',None)
+        subprocess.run([str(a.runner.resolve()),'ns-only','16000',str(mic.resolve()),str(ref.resolve()),
+                        str(processed.resolve()),str(timing.resolve()),str(receipt.resolve())],
+                       check=True,capture_output=True,timeout=60,env=env)
+        native=json.loads(receipt.read_text())
+        if native['stage_mask']!=2 or native['added_pipeline_delay_frames']!=160:
+            raise ValueError('Unexpected NS profile')
+        y=np.fromfile(processed,dtype='<f4')[16160:16160+len(x)]
+        if len(y)!=len(x) or not np.isfinite(y).all():
+            raise ValueError('Invalid processed PCM')
+        raw=a.output/c['wav'];asr=a.output/(c['name']+'-ns.wav')
+        sf.write(raw,x,rate,subtype='PCM_16')
+        sf.write(asr,y,rate,subtype='FLOAT')
+        c.update(wav_sha256=sha(raw),asr_wav=asr.name,asr_wav_sha256=sha(asr),frames=len(y),
+                 duration_s=len(y)/rate,asr_wav_sample_format='F32',ns_receipt=receipt.name,ns_receipt_sha256=sha(receipt))
+    dump(a.output/'manifest.json',public)
+    print('Prepared causal NS fixtures',len(public['cases']))
+
+
+def summarize(a):
+    campaigns=[]
+    for path in a.campaign:
+        data=json.loads((path/'results.json').read_text(encoding='utf8'))
+        for row in data['rows']:
+            receipt=path/row['receipt']
+            if sha(receipt)!=row['receipt_sha256']:
+                raise ValueError('Receipt identity mismatch')
+            hyp,drops,_=trace_text(receipt.read_text(encoding='utf8'))
+            if hyp!=row['hypothesis'] or drops!=row['dropped_blocks'] or metrics(row['reference'],hyp)!=row['metrics']:
+                raise ValueError('Derived metrics mismatch')
+        table={}
+        for row in data['rows']:
+            key=row['name']
+            table.setdefault(key,{})[row['profile']]=row
+        if any(set(pair)!= {'baseline','candidate'} for pair in table.values()):
+            raise ValueError('Incomplete paired campaign')
+        summary=dict(campaign=str(path),results_sha256=sha(path/'results.json'),
+                     pairs=len(table),aggregates=[],worse_cases=[],new_first_word_losses=[],new_blanks=[])
+        for key,pair in table.items():
+            b,c=pair['baseline'],pair['candidate']
+            if c['metrics']['word']['errors']>b['metrics']['word']['errors']:
+                summary['worse_cases'].append(key)
+            if b['metrics']['first_word_correct'] and not c['metrics']['first_word_correct']:
+                summary['new_first_word_losses'].append(key)
+            if b['reference'] and not b['metrics']['empty'] and c['metrics']['empty']:
+                summary['new_blanks'].append(key)
+        for split in ['regression','holdout','nonspeech']:
+            for name in ['baseline','candidate']:
+                rows=[r for r in data['rows'] if r['split']==split and r['profile']==name]
+                if not rows:
+                    continue
+                errors=sum(r['metrics']['word']['errors'] for r in rows)
+                count=sum(r['metrics']['word']['reference_length'] for r in rows)
+                timing=[t['decode_ms'] for r in rows for t in r.get('measurements',[])]
+                summary['aggregates'].append(dict(split=split,profile=name,cases=len(rows),
+                    word_errors=errors,reference_words=count,wer=errors/count if count else None,
+                    first_words_correct=sum(r['metrics']['first_word_correct'] is True for r in rows),
+                    blanks=sum(r['metrics']['empty'] for r in rows),
+                    dropped_blocks=sum(r['dropped_blocks'] for r in rows),
+                    decoder_calls=sum(len(r['decode_windows']) for r in rows),
+                    peak_queued_blocks=max((r.get('peak_queued_blocks') or 0) for r in rows),
+                    decode_wall_ms={k:float(np.percentile(timing,p)) for k,p in [('p50',50),('p95',95),('p99',99),('max',100)]} if timing else None))
+        summary['by_language']=[]
+        for split in ['regression','holdout']:
+            for language in ['en','hu']:
+                for name in ['baseline','candidate']:
+                    rows=[r for r in data['rows'] if r['split']==split and r['language']==language and r['profile']==name]
+                    if rows:
+                        errors=sum(r['metrics']['word']['errors'] for r in rows)
+                        count=sum(r['metrics']['word']['reference_length'] for r in rows)
+                        summary['by_language'].append(dict(split=split,language=language,profile=name,
+                            word_errors=errors,reference_words=count,wer=errors/count))
+        campaigns.append(summary)
+    dump(a.output,dict(scope='Public caption-wrapper QA; not physical microphone/onset qualification',campaigns=campaigns))
+    print(json.dumps(campaigns,ensure_ascii=False,indent=2))
+
+
+if __name__ == '__main__':
+    p=argparse.ArgumentParser(description=__doc__)
+    sub=p.add_subparsers(dest='action',required=True)
+    prep=sub.add_parser('prepare')
+    prep.add_argument('--pilot',type=pathlib.Path,required=True)
+    prep.add_argument('--dataset',type=pathlib.Path,required=True)
+    prep.add_argument('--output',type=pathlib.Path,required=True)
+    prep.add_argument('--skip-holdouts',type=int,default=0)
+    run=sub.add_parser('evaluate')
+    for flag in ['fixtures','baseline','candidate','models','output']:
+        run.add_argument('--'+flag,type=pathlib.Path,required=True)
+    run.add_argument('--split',nargs='+',choices=['regression','holdout','nonspeech'],
+                     default=['regression','holdout','nonspeech'])
+    run.add_argument('--baseline-results',type=pathlib.Path)
+    run.add_argument('--cases',nargs='+')
+    run.add_argument('--candidate-profile-auto',action='store_true',help='New replay ABI: explicitly select raw/ns caption profile from fixture metadata')
+    ns=sub.add_parser('condition')
+    for flag in ['fixtures','runner','output']:
+        ns.add_argument('--'+flag,type=pathlib.Path,required=True)
+    summary=sub.add_parser('summarize')
+    summary.add_argument('--campaign',type=pathlib.Path,nargs='+',required=True)
+    summary.add_argument('--output',type=pathlib.Path,required=True)
+    args=p.parse_args()
+    {'prepare':prepare,'evaluate':evaluate,'condition':condition,'summarize':summarize}[args.action](args)

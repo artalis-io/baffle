@@ -1,0 +1,6 @@
+DECODE frames=5600 sha256=0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf last_two=-1 text=
+DECODE frames=16640 sha256=8519afaf8301391aff0c3ec52000e1330a25ee81bbf69b31266b7e00a9c22e55 last_two=0.48 text=The cabbage juice changes.
+DECODE frames=18720 sha256=ff050cfca6d40818d5197cab9612179e813d4c592140badb6833fe479ef7417d last_two=0.48 text=The cabbage juice changes.
+HISTORY=The cabbage juice changes.
+DROPPED=0
+STATUS=Figyelek · felismerés: 158 ms

@@ -1,0 +1,18 @@
+REPLAY queue_capacity=128 input_frames=192960
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16160 sha256=97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=12320 sha256=5ef2bafe23170d65f55579de3b1819fd87d12b6d3610f3266bf3a9c805df9e41 last_two=0.159999996 text=Um com
+DECODE frames=24160 sha256=947a6d0e3ada79512f31f8c46b749b8425fe114980bfebda2385eaf8f7bbc67a last_two=0.0799999982 text=Hun command.
+DECODE frames=37120 sha256=7b996457d74c8b4b5fe28bdd1bdd2a5f073548e21b946bb30ba6a32d84b562e0 last_two=0.319999993 text=Hong Kong Maverick
+DECODE frames=51200 sha256=9a85c030d4b5d7001dbb5c01ef35e4cc6e9922a5cec0cef854c8e48e7eed68e2 last_two=2.07999992 text=Hong Kong Never, a Hong Kong Psychiatral Cup.
+DECODE frames=66080 sha256=cefaf42b3b663cd4b1e2ae9e57be3b2547691f4043aca9913ddd8547a4cdaf62 last_two=3.51999998 text=Hongkong nevét a Hongkong sziketről kapta, és át.
+DECODE frames=81120 sha256=6a9390250c86b58f21c7254438911eb6e6adff5d916aea63845a6684f9145f90 last_two=4.15999985 text=Hongkong nevét, a Hongkong szikatrial kapta és át a Hoktór is.
+DECODE frames=97280 sha256=f2140c8c92431fbdd179c16adeeb080e00d8640b6514006b3d052bd13cb4dabb last_two=4.79999971 text=Hongkong nevét a Hongkong szikatrial kapta, és a sok turista számára.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=56160 sha256=22561e642a29134e15bb0715cca49baa74e720faa4887ad773b1d5c58b2331a5 last_two=-1 text=
+DECODE frames=71840 sha256=0199fd96008f7772e81fef18154b76ba57e68ad1a88bbae0d766f5bdae851ba9 last_two=2.72000003 text=sok turista számára a figyelem középpontjában áll.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.
+DROPPED=0
+STATUS=Figyelek · felismerés: 502 ms

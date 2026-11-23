@@ -1,0 +1,342 @@
+{
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "date": "2026-11-23",
+  "scope": "Eight public FLEURS recordings, raw PCM; no microphones, playback devices or cloud. Parakeet CPU/two threads. Not Whisper/GPT comparison or physical qualification.",
+  "corpus": {
+    "dataset": "google/fleurs",
+    "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "license": "CC-BY-4.0",
+    "recordings": 8,
+    "languages": [
+      "en",
+      "hu"
+    ],
+    "publisher_references_not_new_human_review": true
+  },
+  "canonical_executions": 64,
+  "paced_native_replays": 24,
+  "whole_file_and_control_runs": 40,
+  "pairs": [
+    {
+      "case": "en-01",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 3,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "en-02",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 3,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "en-03",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": false,
+      "cpp_current_final_identical": false,
+      "shared_pcm_windows": 6,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "en-04",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 2,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "hu-01",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 4,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "hu-02",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 6,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "hu-03",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": false,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 4,
+      "shared_window_text_mismatches": 0
+    },
+    {
+      "case": "hu-04",
+      "whole_identical": true,
+      "padded_whole_identical": true,
+      "cpp_c128_final_identical": true,
+      "cpp_current_final_identical": true,
+      "shared_pcm_windows": 7,
+      "shared_window_text_mismatches": 0
+    }
+  ],
+  "levels": [
+    {
+      "case": "en-01",
+      "rms": 0.0037235167144883084,
+      "peak": 0.037994384765625,
+      "fraction_blocks_below_0_002": 0.5975378787878788
+    },
+    {
+      "case": "en-02",
+      "rms": 0.08370841449936087,
+      "peak": 0.425506591796875,
+      "fraction_blocks_below_0_002": 0.11529680365296803
+    },
+    {
+      "case": "en-03",
+      "rms": 0.0007916560360563224,
+      "peak": 0.006072998046875,
+      "fraction_blocks_below_0_002": 0.981675392670157
+    },
+    {
+      "case": "en-04",
+      "rms": 0.0006946896093476182,
+      "peak": 0.00604248046875,
+      "fraction_blocks_below_0_002": 0.9947916666666666
+    },
+    {
+      "case": "hu-01",
+      "rms": 0.0019043138504751867,
+      "peak": 0.0279541015625,
+      "fraction_blocks_below_0_002": 0.7470978441127695
+    },
+    {
+      "case": "hu-02",
+      "rms": 0.04617825709047476,
+      "peak": 0.549072265625,
+      "fraction_blocks_below_0_002": 0.23102310231023102
+    },
+    {
+      "case": "hu-03",
+      "rms": 0.039598723489820326,
+      "peak": 0.32672119140625,
+      "fraction_blocks_below_0_002": 0.29289940828402367
+    },
+    {
+      "case": "hu-04",
+      "rms": 0.002608505980346228,
+      "peak": 0.037109375,
+      "fraction_blocks_below_0_002": 0.6038812785388128
+    }
+  ],
+  "aggregates": [
+    {
+      "profile": "whole_cpp",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 6,
+      "reference_words": 88,
+      "wer": 0.06818181818181818,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "whole_cpp",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 34,
+      "reference_words": 83,
+      "wer": 0.40963855421686746,
+      "empty": 1,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "whole_c11",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 6,
+      "reference_words": 88,
+      "wer": 0.06818181818181818,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "whole_c11",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 34,
+      "reference_words": 83,
+      "wer": 0.40963855421686746,
+      "empty": 1,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "live_cpp128",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 38,
+      "reference_words": 88,
+      "wer": 0.4318181818181818,
+      "empty": 0,
+      "dropped_blocks": 1
+    },
+    {
+      "profile": "live_cpp128",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 32,
+      "reference_words": 83,
+      "wer": 0.3855421686746988,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "live_c128",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 38,
+      "reference_words": 88,
+      "wer": 0.4318181818181818,
+      "empty": 0,
+      "dropped_blocks": 31
+    },
+    {
+      "profile": "live_c128",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 34,
+      "reference_words": 83,
+      "wer": 0.40963855421686746,
+      "empty": 0,
+      "dropped_blocks": 26
+    },
+    {
+      "profile": "live_current512",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 38,
+      "reference_words": 88,
+      "wer": 0.4318181818181818,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "live_current512",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 32,
+      "reference_words": 83,
+      "wer": 0.3855421686746988,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "padded_cpp",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 5,
+      "reference_words": 88,
+      "wer": 0.056818181818181816,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "padded_cpp",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 36,
+      "reference_words": 83,
+      "wer": 0.43373493975903615,
+      "empty": 1,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "padded_c11",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 5,
+      "reference_words": 88,
+      "wer": 0.056818181818181816,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "padded_c11",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 36,
+      "reference_words": 83,
+      "wer": 0.43373493975903615,
+      "empty": 1,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "level_c11",
+      "language": "en",
+      "cases": 4,
+      "word_errors": 4,
+      "reference_words": 88,
+      "wer": 0.045454545454545456,
+      "empty": 0,
+      "dropped_blocks": 0
+    },
+    {
+      "profile": "level_c11",
+      "language": "hu",
+      "cases": 4,
+      "word_errors": 25,
+      "reference_words": 83,
+      "wer": 0.30120481927710846,
+      "empty": 0,
+      "dropped_blocks": 0
+    }
+  ],
+  "counts": {
+    "whole_identical": 8,
+    "padded_whole_identical": 8,
+    "cpp_current_final_identical": 7,
+    "matched_windows": 35,
+    "matched_window_text_mismatches": 0
+  },
+  "source_sha256": {
+    "tools/public_caption_replay.py": "44c5577fcde8e50343c096f40af4de0c1d93669e493b233a6e2a2b529e9e94ea",
+    "tests/public_caption_replay.py": "43f95ef0c0fbf8bf65c7d8bc28d42d3b017927dad8bdf3a8c9f7f97891abbf98",
+    "examples/win32-transcript/replay_test.c": "87206c1047a19034a9a93267ace2eeec6cd53b11a14803288ef60a3a71a025be",
+    "examples/win32-transcript/app.c": "15f259fcb80fd4a43634b849149f5970d65306407b8dff8c73d68261f5cf7a21",
+    "examples/win32-transcript/app.h": "d038a703a8ff1177f3ed6cdbb2f73cd21766981c962b61d15b1a008a3c1a10f8"
+  },
+  "frozen_replay_binaries": {
+    "BaffleReplay.exe": "846599b4e34508344c53026d76d8e9ad3773129900d3de613c0cda68f7c13136",
+    "replay_c128.exe": "a91e0dbc905686b371b458884240a60b54b1cb78f837fc2c6f46f626bdbbf7ac",
+    "replay_cpp.exe": "43d4a5483e5f68306d0e64b00c85851cf69e24c205ff694791a4e71c73cbbb9e"
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "limitations": [
+    "One paced run per recording/profile on an uncontrolled desktop; scheduling differs, no language speed attribution",
+    "Raw bypasses DSP; no live NS-state or physical capture qualification",
+    "Historical C++ and early-C11 source/binaries remain local, not cold-checkout artifacts",
+    "Peak normalization is offline/lookahead diagnostic only, not a proposed live fix",
+    "Production energy gate and model settings remain unchanged"
+  ],
+  "retained_harness_failures": [
+    "Initial driver treated legitimate empty whole-file result (exit 2) as infrastructure failure. Corrected; Hungarian cases rerun; empty case retained as word deletions.",
+    "Temporary controls driver iterated an incomplete manifest case twice; output-exists guard prevented overwrite. Maintained collector now uses completed rows and deduplicates by input identity; remaining three cases run separately."
+  ]
+}

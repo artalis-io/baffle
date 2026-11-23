@@ -1,0 +1,14 @@
+{
+  "qa_versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "soundfile": "0.13.1",
+    "pyarrow": "26.0.1"
+  },
+  "files": {
+    "build-native-transcript/sdk/lib/baffle.lib": "8d6a7c22d753dcff9fde1866d87cc14f9eb2e39b25194f8054511a6ae08ae775",
+    "build-native-transcript/sdk/lib/hail.lib": "296b3adc8a1051370399f9e863c789b2d88db526c0a7d12a84027c5ae833888e",
+    "build-quiet-caption/release-candidate/BaffleLive.exe": "c0627f1e8643f77172156054e9393fd35d2eed89c8fde558a377c0f414099336",
+    "build-quiet-caption/asan/BaffleReplay.exe": "b8a1c126e401a8b960be55191e4a447e6cd343634fd629d6695d7556ccb43d1a"
+  }
+}

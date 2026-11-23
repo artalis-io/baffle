@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=70d7974c83479a32991bf693126b08422b25a42da01b93b1709d02d9494b5761 last_two=-1 text=
+DECODE frames=16160 sha256=a0cc90ceeb6c7708666c75094dcaad849b8a78bf0784b66fe9fd264ea53872c6 last_two=-1 text=
+DECODE frames=27520 sha256=ea2f991c1aedb0e60084e72433c325d9b5ffe5beb3c44852fc6502f319cf42fc last_two=0.799999952 text=Musta billet.
+DECODE frames=39200 sha256=1772871ffdedc1efe7372ec928fc2aea687375cb5efd0431589b30f890a3dcf0 last_two=1.27999997 text=Cum să delsează decută?
+DECODE frames=51520 sha256=3f76ab7233eb2a36a91aeb9739eaff5ac0fec3bcb2b343ac11ac5d129439cf39 last_two=-1 text=
+DECODE frames=64480 sha256=a80445f8fcd4e4b5685c2870dd79d33369956e4291f8e23d1bdc9dc7e0d1140f last_two=1.51999998 text=Hussain says, Mutata.
+DECODE frames=78400 sha256=35fdcaab787aa4af0f65a8610ef4bf131831a119a63cb04b3b7f1258f4afedc4 last_two=4 text=20. századik kutatás kimutatna, hogy a gyanakék raj változatoss.
+DECODE frames=92960 sha256=00ab91aac4756dd6417b6ebc32e91d4af366af1295962ce492601554e962db85 last_two=4 text=Husz. századik kutatás kimutatja, hogy a lenáték raj változtatosságnak.
+DECODE frames=108800 sha256=c7a3ab4dab5bc69ef06ccfa32363b76b868e1b700d140cb2686d648a69347808 last_two=5.67999983 text=20. század kutatás kimutatna, hogy a lenátikai változatosságnak, két variációja van.
+DECODE frames=124960 sha256=026001f2ac91632358422c84edf2a850e5606c83ab795939a21a9d62961b3708 last_two=6.63999987 text=20. századik mutatás kimutatna, hogy a lenátikai változatosságnak két variációja van, rejtett.
+DECODE frames=128000 sha256=6ca965461089a63ef07ecc2fac46249f4c443eb6f3cb5ec00face090cb294765 last_two=6.63999987 text=20. századik utatás kimutatna, hogy a lenatikai változatosságnak két variációja van, rejtett.
+DECODE frames=54560 sha256=a0109d11f2a8982513c6571a06dea6d524033d028ea89ad2b89c0a30fef6a0c7 last_two=1.67999995 text=Kációja van, rejtett és kifejezett.
+DECODE frames=67840 sha256=8730661b286c87d12bb9c08e3ee975d56ca6a7e1631c71d2774e4a347fd4f3da last_two=1.67999995 text=Gója van, rejtett és kifejezett.
+DECODE frames=78080 sha256=5263a51046a20707c5f8376bf66e61cae4135282a3b62344669df3b1359cad52 last_two=1.67999995 text=Rajtett és kifejezet.
+HISTORY=20. századik utatás kimutatna, hogy a lenatikai változatosságnak két variációja Rajtett és kifejezet.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=80
+MEASURE index=0 decode_ms=49.519300 completed_after_source_start_ms=1563.747200
+MEASURE index=1 decode_ms=85.878700 completed_after_source_start_ms=2275.676400
+MEASURE index=2 decode_ms=126.438000 completed_after_source_start_ms=3009.715900
+MEASURE index=3 decode_ms=168.714600 completed_after_source_start_ms=3780.019200
+MEASURE index=4 decode_ms=214.121000 completed_after_source_start_ms=4597.976900
+MEASURE index=5 decode_ms=258.641300 completed_after_source_start_ms=5464.629700
+MEASURE index=6 decode_ms=309.192000 completed_after_source_start_ms=6383.710300
+MEASURE index=7 decode_ms=366.424200 completed_after_source_start_ms=7351.879200
+MEASURE index=8 decode_ms=421.918900 completed_after_source_start_ms=8386.482300
+MEASURE index=9 decode_ms=479.707300 completed_after_source_start_ms=9469.537500
+MEASURE index=10 decode_ms=487.714200 completed_after_source_start_ms=9957.513600
+MEASURE index=11 decode_ms=223.639700 completed_after_source_start_ms=10806.908800
+MEASURE index=12 decode_ms=268.133600 completed_after_source_start_ms=11688.585500
+MEASURE index=13 decode_ms=302.699100 completed_after_source_start_ms=12338.061900

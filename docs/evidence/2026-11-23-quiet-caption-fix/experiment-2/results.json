@@ -1,0 +1,2044 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "fixture_manifest_sha256": "c694b4f62fe7e5ee63e00e9560784c819f62c2d3aa7c3bf001727047a75e296d",
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "command": "tools/quiet_caption_check.py evaluate --fixtures build-quiet-caption/fixtures --baseline build-quiet-caption/baseline/BaffleReplay.exe --candidate build-quiet-caption/vad/BaffleReplay.exe --models build-acoustic/models/parakeet --split regression --output build-quiet-caption/experiment-2",
+  "executables": {
+    "baseline": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\baseline\\BaffleReplay.exe",
+      "sha256": "1f6eb77de641d00ef9bda771294a4bb1d89aecf1bbb414bdb9a7562bdd97fea1"
+    },
+    "candidate": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\vad\\BaffleReplay.exe",
+      "sha256": "786ca2c13bfe91ab67b178b7844a6648bfaf02189353c47102959677f8c53532"
+    }
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "source_sha256": {
+    "examples\\win32-transcript\\app.c": "a25ea146bd829d7fa18d2fb2f58d3aae24d5c7594be09edb3efd92c4b9983250",
+    "examples\\win32-transcript\\replay_test.c": "9ee1b199eee0d942d542439cf6435342ad99114a43a9e29cbe4c666ef1e5080a",
+    "tools\\quiet_caption_check.py": "759d9cfd17df21fe93a7346bd815d59bd1d1755f03ada89b56b912e5d08a6568"
+  },
+  "rows": [
+    {
+      "name": "en-01",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1904,
+      "reference": "However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year.",
+      "wav": "en-01.wav",
+      "wav_sha256": "7835bd6ffb54ce38a2a9bcde3905ba424faed94d50a474f21a9cbe9209b869df",
+      "frames": 168960,
+      "duration_s": 10.56,
+      "rms": 0.0037235167144883084,
+      "profile": "baseline",
+      "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.",
+      "metrics": {
+        "word": {
+          "errors": 4,
+          "substitutions": 3,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_length": 19,
+          "rate": 0.21052631578947367
+        },
+        "character": {
+          "errors": 17,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 13,
+          "reference_length": 81,
+          "rate": 0.20987654320987653
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "e9b0e9fe82d205aa3756e5e38af95fcd67fdfb141b60878136898a2c6a76e207",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16320,
+          "pcm_sha256": "ebd0003768c2af8781b0e4a6144e6e00684b722eeecc56f5bd5814b21426252b",
+          "last_two_start": -1.0,
+          "hypothesis": "However."
+        },
+        {
+          "frames": 27680,
+          "pcm_sha256": "12dd1d01b471ec31485ba0bc6a30d8de3c0d745c5b3bee49e9b634c5248d6ce4",
+          "last_two_start": 1.12,
+          "hypothesis": "However, due to the slow"
+        },
+        {
+          "frames": 39840,
+          "pcm_sha256": "4e1bb1ab6e5d8bd2cb364ca44a29bb19392d438283c43dd767923700c89aa6d8",
+          "last_two_start": 1.51999998,
+          "hypothesis": "However, due to the slow communication."
+        },
+        {
+          "frames": 52320,
+          "pcm_sha256": "099ea05badafda71b07672a46bb90c2b029933e076c299db3cd6f5aabc67f2d7",
+          "last_two_start": 1.91999996,
+          "hypothesis": "However, due to the slow communication channels"
+        },
+        {
+          "frames": 65920,
+          "pcm_sha256": "d70def4a397573f5c78859df6f90bcd7ba389db36361d4ba6e2120e0a6bfd323",
+          "last_two_start": 2.55999994,
+          "hypothesis": "However, due to the slow communication channels, styles"
+        },
+        {
+          "frames": 79840,
+          "pcm_sha256": "d988872def25f1c1747240eda2c25dadb702e3f9b78fca0602b3288de31f8bc8",
+          "last_two_start": 4.23999977,
+          "hypothesis": "However, due to the slow communication channels, styles in the West"
+        },
+        {
+          "frames": 94560,
+          "pcm_sha256": "e2330dd13a33f6645d3a290d6308507b7685cffb54f5421800dc1f08e0ed0800",
+          "last_two_start": 5.11999989,
+          "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind."
+        },
+        {
+          "frames": 110720,
+          "pcm_sha256": "1b196ed2a799ba7254027154cb30b50299fb7e0a111e375d993b683a409130da",
+          "last_two_start": 6.23999977,
+          "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind by twenty five."
+        },
+        {
+          "frames": 127360,
+          "pcm_sha256": "54bba39974649344e4046801b5b4f54de8440cdfa997576594968110e52e6d1a",
+          "last_two_start": 7.35999966,
+          "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "1c08d497f75c8332820b558594cc8badbe735a92b2b9264a9b92d0165e78dc5d",
+          "last_two_start": 7.27999973,
+          "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years."
+        },
+        {
+          "frames": 42880,
+          "pcm_sha256": "9a1372c87a10b7ce44010d347358f97bb5c25dc67507424d97296085a0bd3815",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 14359.64700000477,
+      "receipt": "en-01-baseline.txt",
+      "receipt_sha256": "7973755ecc45a272c0e72e43673276e8bbe7d399b683c72998989290c42587f5"
+    },
+    {
+      "name": "en-01",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1904,
+      "reference": "However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year.",
+      "wav": "en-01.wav",
+      "wav_sha256": "7835bd6ffb54ce38a2a9bcde3905ba424faed94d50a474f21a9cbe9209b869df",
+      "frames": 168960,
+      "duration_s": 10.56,
+      "rms": 0.0037235167144883084,
+      "profile": "candidate",
+      "hypothesis": "However due to the slow communication channels, styles in the West could lag behind by could lag behind by twenty five to thirty years.",
+      "metrics": {
+        "word": {
+          "errors": 8,
+          "substitutions": 3,
+          "deletions": 0,
+          "insertions": 5,
+          "reference_length": 19,
+          "rate": 0.42105263157894735
+        },
+        "character": {
+          "errors": 33,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 29,
+          "reference_length": 81,
+          "rate": 0.4074074074074074
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "5334922dc8983ab7fb3ce664036a0ff65f5dca6b585265d7c36efca9e27c59d8",
+          "last_two_start": -1.0,
+          "hypothesis": "Yeah."
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "1612340e52311fc41e8d08035a6cadc705c813a15938051b36d859d45dca42c7",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27520,
+          "pcm_sha256": "e02cadf32109897fa1e485562238412e12867e37daf33e7dec6ede7ae9888780",
+          "last_two_start": -1.0,
+          "hypothesis": "Mm."
+        },
+        {
+          "frames": 39520,
+          "pcm_sha256": "9041bccfafb28878238ae0a90328e43bb569950fb794851e8f3d054eb9537aaf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 52320,
+          "pcm_sha256": "f342fadcbc079ee04da995c59307ca64ba3cf38735914b225e9b1808b83b8c40",
+          "last_two_start": 2.39999986,
+          "hypothesis": "However, due to the slow communication"
+        },
+        {
+          "frames": 65760,
+          "pcm_sha256": "a6b35d89870983c835a4cc7ffa1780ed40c9e2654623dc0e57b3d7869223eb32",
+          "last_two_start": 2.96000004,
+          "hypothesis": "However, due to the slow communication channels,"
+        },
+        {
+          "frames": 79840,
+          "pcm_sha256": "387961f8ebdccd1f74b57b392d1ce6d0397b2699b16d4ea5ab932951fd26270e",
+          "last_two_start": 3.5999999,
+          "hypothesis": "However, due to the slow communication channels, style"
+        },
+        {
+          "frames": 94720,
+          "pcm_sha256": "0e9454fac5616df2881049d22b1360c2ad012b0086e81fb892a63e54e24eaf8e",
+          "last_two_start": 5.27999973,
+          "hypothesis": "However, due to the slow communication channels, styles in the West"
+        },
+        {
+          "frames": 110720,
+          "pcm_sha256": "f01b0a251a7697d859aec5af83144888e3d14dc0e866f57e89ec18303e5303bf",
+          "last_two_start": 6.15999985,
+          "hypothesis": "However, due to the slow communication channels, styles in the West could lag behind."
+        },
+        {
+          "frames": 127200,
+          "pcm_sha256": "0884f722bf1e0a7d1acf5fba11bd5f327ca40dbd6cad940b623cb2237a2712e2",
+          "last_two_start": 7.27999973,
+          "hypothesis": "However due to the slow communication channels, styles in the West could lag behind by twenty five"
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "330b753a670182dcc9659876d167f771b0b07e136bfd2d338a5aaed3db0f5231",
+          "last_two_start": 7.27999973,
+          "hypothesis": "However due to the slow communication channels, styles in the West could lag behind by twenty five."
+        },
+        {
+          "frames": 56960,
+          "pcm_sha256": "fbb47fd05e5ec606dafe5704e15a9e28fe4c912fb2bcc14e3c3a2159d48cb8f3",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 60000,
+          "pcm_sha256": "a39781ee9efdb3cb698459c703b2bcbf3fb8d7fa3e5f97c12cca78fd0fb726bd",
+          "last_two_start": 2.39999986,
+          "hypothesis": "could lag behind by twenty five to thirty years."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 14333.202399982838,
+      "receipt": "en-01-candidate.txt",
+      "receipt_sha256": "f1db096cd71e441f74899c17c163d4588f531138c7a0b744c57fc7a8a7ffe909"
+    },
+    {
+      "name": "en-02",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1675,
+      "reference": "All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence.",
+      "wav": "en-02.wav",
+      "wav_sha256": "ffd32e9953ffb14bed7f4e3a2d037ea7ac7de1ba5ad25d4c0f678fd06b24aab0",
+      "frames": 140160,
+      "duration_s": 8.76,
+      "rms": 0.08370841449936087,
+      "profile": "baseline",
+      "hypothesis": "All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence.",
+      "metrics": {
+        "word": {
+          "errors": 2,
+          "substitutions": 2,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_length": 21,
+          "rate": 0.09523809523809523
+        },
+        "character": {
+          "errors": 3,
+          "substitutions": 2,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_length": 88,
+          "rate": 0.03409090909090909
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0a9d5566ae4c8234442e2d9033687e6b3dafad587e2b8e81b9bfa52175091ff9",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "2cf3b3e5d419b38220bdda6d14559accccb0291c41f2698d1bc7674512106529",
+          "last_two_start": -1.0,
+          "hypothesis": "Only"
+        },
+        {
+          "frames": 26880,
+          "pcm_sha256": "f990b208640e2c4658aa88ae61cdac1b0eec94ee2f23a18b773dca6e03a4bce1",
+          "last_two_start": 0.799999952,
+          "hypothesis": "All now's along"
+        },
+        {
+          "frames": 38720,
+          "pcm_sha256": "c50fed3129f1b631c868e3ff6a5c6079a672c1e79bebb92051396a4bf9875c04",
+          "last_two_start": 1.83999991,
+          "hypothesis": "All now's alongside the world"
+        },
+        {
+          "frames": 51040,
+          "pcm_sha256": "b790657dce3129d5335da4479f7f0779c464dc15b117668738991e09ad41e7aa",
+          "last_two_start": 2.72000003,
+          "hypothesis": "All nouns alongside the world say for you."
+        },
+        {
+          "frames": 63840,
+          "pcm_sha256": "fd812094239e6f7fcdb6a7911b1a88eda432df92e28e41134d630cd6c4c4365e",
+          "last_two_start": 2.96000004,
+          "hypothesis": "All nouns alongside the world say for you."
+        },
+        {
+          "frames": 78240,
+          "pcm_sha256": "89211f3a0923f2ffc11590295dc31bc631e1a51a344d9fd36239d5d21bd4ec34",
+          "last_two_start": 4.07999992,
+          "hypothesis": "All nouns alongside the world say for you always begin with"
+        },
+        {
+          "frames": 92960,
+          "pcm_sha256": "2c642801d05d8b8466df4f9e559745693ef22661b6e16579e0a4da3e26ee1a71",
+          "last_two_start": 4.96000004,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter."
+        },
+        {
+          "frames": 108640,
+          "pcm_sha256": "8707252cf1ca1d47a2fab82b88d528d841444f2e03101b2d992305dcc0a2b7c3",
+          "last_two_start": 5.03999996,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter."
+        },
+        {
+          "frames": 125120,
+          "pcm_sha256": "3828f705ded8ce43e21deedadf1616ef0c5f900b46123b94da5b096713b61707",
+          "last_two_start": 7.11999989,
+          "hypothesis": "All nouns alongside the word say for you always begin with a capital letter, even in the middle of a sentence."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "8b4d69932e5d45c197f14358f017f074e7b914be10a867035a364584b45c16f3",
+          "last_two_start": 7.19999981,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence."
+        },
+        {
+          "frames": 54560,
+          "pcm_sha256": "62fbacd0644a672ee761583a61c7d2b2fdbf8c04b10d3a5cdf9e94420f3334dd",
+          "last_two_start": 1.19999993,
+          "hypothesis": "even in the middle of a sentence."
+        },
+        {
+          "frames": 58720,
+          "pcm_sha256": "47125918389e881c1a4e637f66f682b5fbfa824945e833d6316cb29263085468",
+          "last_two_start": 1.19999993,
+          "hypothesis": "even in the middle of a sentence."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 12492.616200004704,
+      "receipt": "en-02-baseline.txt",
+      "receipt_sha256": "da2b571b284aad396197f7f5a0c664a47ffc023427885ddcaa416ac166f0d132"
+    },
+    {
+      "name": "en-02",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1675,
+      "reference": "All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence.",
+      "wav": "en-02.wav",
+      "wav_sha256": "ffd32e9953ffb14bed7f4e3a2d037ea7ac7de1ba5ad25d4c0f678fd06b24aab0",
+      "frames": 140160,
+      "duration_s": 8.76,
+      "rms": 0.08370841449936087,
+      "profile": "candidate",
+      "hypothesis": "All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence.",
+      "metrics": {
+        "word": {
+          "errors": 2,
+          "substitutions": 2,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_length": 21,
+          "rate": 0.09523809523809523
+        },
+        "character": {
+          "errors": 3,
+          "substitutions": 2,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_length": 88,
+          "rate": 0.03409090909090909
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0a9d5566ae4c8234442e2d9033687e6b3dafad587e2b8e81b9bfa52175091ff9",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16000,
+          "pcm_sha256": "ea2d6a7784b50d42bb1c68a54522a19bacc7bc3d9283368cada87f681c812382",
+          "last_two_start": -1.0,
+          "hypothesis": "Only"
+        },
+        {
+          "frames": 27360,
+          "pcm_sha256": "bece800656b89ccf325c707e02fe10d0a8638fd2f2c56c6451917ca7a2eef216",
+          "last_two_start": 1.12,
+          "hypothesis": "All now is almost"
+        },
+        {
+          "frames": 39360,
+          "pcm_sha256": "924fbe89e4981d8ec1d9b1f470a6ee2685bc6acc1bf5eab5bc3bb2bd74888a2f",
+          "last_two_start": 1.83999991,
+          "hypothesis": "All now's alongside the world"
+        },
+        {
+          "frames": 51680,
+          "pcm_sha256": "8af6e3a2fe42351dc8f9b12f2f4905d83315d679c1cf14850e48324460114c4a",
+          "last_two_start": 2.79999995,
+          "hypothesis": "All nouns alongside the world say for you."
+        },
+        {
+          "frames": 65280,
+          "pcm_sha256": "8a66d0492b96181f689da9a150bdd66b2d73a97454f0ceea95b4bfc054de1f7f",
+          "last_two_start": 2.96000004,
+          "hypothesis": "All nouns alongside the world say for you."
+        },
+        {
+          "frames": 78880,
+          "pcm_sha256": "a20ae9bf27688e02588a95993f69c61e65e789805497aaa024d4b0a80f880d93",
+          "last_two_start": 4.07999992,
+          "hypothesis": "All nouns alongside the world say for you always begin with"
+        },
+        {
+          "frames": 93920,
+          "pcm_sha256": "1a004cc2e57852584552150e03a3afdc5ec0978af96e0a66477f08a2d3307e4d",
+          "last_two_start": 4.96000004,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter."
+        },
+        {
+          "frames": 109760,
+          "pcm_sha256": "e748fdd47e94a1e6e166223aa2eeeb6684fb0e65e72130be92bd44633022b84b",
+          "last_two_start": 5.03999996,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter."
+        },
+        {
+          "frames": 126400,
+          "pcm_sha256": "cc5b77eba01910030f7eef7832ba4b3fbe4769a00408e8929918a519a4c2cf4e",
+          "last_two_start": 7.19999981,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "8b4d69932e5d45c197f14358f017f074e7b914be10a867035a364584b45c16f3",
+          "last_two_start": 7.19999981,
+          "hypothesis": "All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence."
+        },
+        {
+          "frames": 56000,
+          "pcm_sha256": "3dd83fe47e1b7c7295c6bc01ef83d56fd64015733d2a54c0123f83aef44d1191",
+          "last_two_start": 1.19999993,
+          "hypothesis": "even in the middle of a sentence."
+        },
+        {
+          "frames": 58720,
+          "pcm_sha256": "47125918389e881c1a4e637f66f682b5fbfa824945e833d6316cb29263085468",
+          "last_two_start": 1.19999993,
+          "hypothesis": "even in the middle of a sentence."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 12577.871799992863,
+      "receipt": "en-02-candidate.txt",
+      "receipt_sha256": "1b0f620016085cc2a6c3cf7449426fbb875faf8e72cae1d645e891b40c80a8c8"
+    },
+    {
+      "name": "en-03",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1950,
+      "reference": "To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron.",
+      "wav": "en-03.wav",
+      "wav_sha256": "b722d537c7eac36e3438f45e609676732ce4526b415d829347485a61030d6922",
+      "frames": 183360,
+      "duration_s": 11.46,
+      "rms": 0.0007916560360563224,
+      "profile": "baseline",
+      "hypothesis": "To the north and within east.\n\nTo foreigners after a global\n\nSplinter is recorded by Lord Vi.",
+      "metrics": {
+        "word": {
+          "errors": 21,
+          "substitutions": 5,
+          "deletions": 16,
+          "insertions": 0,
+          "reference_length": 33,
+          "rate": 0.6363636363636364
+        },
+        "character": {
+          "errors": 90,
+          "substitutions": 9,
+          "deletions": 81,
+          "insertions": 0,
+          "reference_length": 154,
+          "rate": 0.5844155844155844
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "cbb1338a8cc309e2d39b9029e752eff074428cea9e2b811a54e3244f9502977e",
+          "last_two_start": -1.0,
+          "hypothesis": "So"
+        },
+        {
+          "frames": 16000,
+          "pcm_sha256": "225f7d9d1d26fc02b2d92fbd09c68a3b17ce2ba136b3d4c8613fe2077d1300ed",
+          "last_two_start": 0.479999989,
+          "hypothesis": "To the north and with"
+        },
+        {
+          "frames": 19200,
+          "pcm_sha256": "a3ed77c3a0c918a0a84c5a680ce174bc1e0c7cc08eb6b00aac7a13105968e637",
+          "last_two_start": 0.639999986,
+          "hypothesis": "To the north and within east."
+        },
+        {
+          "frames": 5600,
+          "pcm_sha256": "fb8a0d770b4938f113f22f207150295b5992b7980ef0a9a7a95f75a5fa4b50ba",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "db3c5a505f5080e2eaf98ef45e04b82a24506542c3721d3e16a1a9faa1e311c9",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 22080,
+          "pcm_sha256": "ce207c469aba6849f967241f466f507ea1e7fb831d7b616cda76a1bf5f04d214",
+          "last_two_start": 0.799999952,
+          "hypothesis": "To foreigners after a global"
+        },
+        {
+          "frames": 5600,
+          "pcm_sha256": "c71090949dd5d02a059001e3804fb9b65c1e0672c71aa3f8cdf3aa1c8db331c1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "607a558e5a08a9d572233a5a239800007f9e4a01b707eb14059a4709aae3babf",
+          "last_two_start": 0.0799999982,
+          "hypothesis": "Splinters recording."
+        },
+        {
+          "frames": 27040,
+          "pcm_sha256": "6e43a7902e8e5c7c5e9e7338b24c04e5f7326fdbf0fe0cce4ab5f2ba1cabed47",
+          "last_two_start": 1.12,
+          "hypothesis": "Splinter is recorded by Lord B."
+        },
+        {
+          "frames": 28960,
+          "pcm_sha256": "ca760d54d16168765ea9563440a0750296a1bb2037be1b85aeaa0b05a9f69aae",
+          "last_two_start": 1.12,
+          "hypothesis": "Splinter is recorded by Lord Vi."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15221.227700007148,
+      "receipt": "en-03-baseline.txt",
+      "receipt_sha256": "ce9dde66bf9608c507ddd547dd3ee2a82094e5c2006f3ef0c2da0e85fd72e016"
+    },
+    {
+      "name": "en-03",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1950,
+      "reference": "To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron.",
+      "wav": "en-03.wav",
+      "wav_sha256": "b722d537c7eac36e3438f45e609676732ce4526b415d829347485a61030d6922",
+      "frames": 183360,
+      "duration_s": 11.46,
+      "rms": 0.0007916560360563224,
+      "profile": "candidate",
+      "hypothesis": "To the north and within easy reach is the romantic and fascinating town of Sintra, and which was Intra and which was made famous to foreigners after a glowing account of the splinters recorded by Splinter is recorded by Lord Byron.",
+      "metrics": {
+        "word": {
+          "errors": 10,
+          "substitutions": 2,
+          "deletions": 0,
+          "insertions": 8,
+          "reference_length": 33,
+          "rate": 0.30303030303030304
+        },
+        "character": {
+          "errors": 40,
+          "substitutions": 5,
+          "deletions": 0,
+          "insertions": 35,
+          "reference_length": 154,
+          "rate": 0.2597402597402597
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "d09ce5bb69651a90c4a867dc9d78818dbdb0e078515201244311a2ec65309075",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "0651b5f4e906d32e5d1afbaab4e114287338d9baa4838f70dccebd53e0f46287",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27200,
+          "pcm_sha256": "536e15c08e4632c6d2798780d150980d768bcdcbb7ec6b77435bc3a61a7a262c",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 39360,
+          "pcm_sha256": "1c556a6cf77b994cc6aabf5473c6a7f0b18e5a18e416f6e83d8823c92bc0efd9",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 52000,
+          "pcm_sha256": "23de69fcb0b64716dcbd2ca37893cec1e2282a7dddc323e1063c62a92244ffb8",
+          "last_two_start": 2.31999993,
+          "hypothesis": "To the north and within easy reach is the romantic and"
+        },
+        {
+          "frames": 64960,
+          "pcm_sha256": "c4946e27e608b3fe3564ffc12d42518fae3a29c9803b1b10b648c10375e3b1d5",
+          "last_two_start": 3.11999989,
+          "hypothesis": "To the north and within easy reach is a romantic and fascinating town."
+        },
+        {
+          "frames": 79040,
+          "pcm_sha256": "66094b97d1acb1d144540aac7ee539b2093ca69b8e00675fffba09b07016336e",
+          "last_two_start": 4.0,
+          "hypothesis": "To the north and within easy reach is the romantic and fascinating town of Sintra and"
+        },
+        {
+          "frames": 94240,
+          "pcm_sha256": "a4b24ee800359472481caf2dc0ab965f7de16882e35ac5db1f2885c2e8a51096",
+          "last_two_start": 5.11999989,
+          "hypothesis": "To the north and within easy reach is the romantic and fascinating town of Sintra and which was bad"
+        },
+        {
+          "frames": 103200,
+          "pcm_sha256": "5f499affc4531d2dc4f075473d30d5767a615ed517095a102f5ecd392b82627c",
+          "last_two_start": 5.51999998,
+          "hypothesis": "To the north and within easy reach is the romantic and fascinating town of Sintra, and which was made famous,"
+        },
+        {
+          "frames": 48480,
+          "pcm_sha256": "10b4a3d8d6b97b81faf98e0e1c0ceefccd440cd5e6f9d3653cbafd03a3a1736e",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 61280,
+          "pcm_sha256": "7a7ae7a4b7bc2965fb57894ff2af0029e68ef76b9d15e770d02800b701112a24",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 75040,
+          "pcm_sha256": "29607c3a9a3b646077dcc5611357160542b15bdbae845037c55e968d298d15be",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 89760,
+          "pcm_sha256": "96ea1a8a148bf4d4f3e4f968bc163feda79d071e04f4fa01f9c81fab4502210f",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 104480,
+          "pcm_sha256": "af730a6e0d2f21b95c9e9ea4ecaaf1c8e9f24c2052866df703c9be3b833f99fe",
+          "last_two_start": 5.5999999,
+          "hypothesis": "Intra and which was made famous to foreigners after a glowing account of the splinters recorded by Lord Byron."
+        },
+        {
+          "frames": 42400,
+          "pcm_sha256": "dbb325715acf3a11b580d705222158da106cab03a6333c0a1064819864ccf4b8",
+          "last_two_start": 1.12,
+          "hypothesis": "Splinter is recorded by Lord Byron."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15209.378200001083,
+      "receipt": "en-03-candidate.txt",
+      "receipt_sha256": "fb495fb8fc860605fb79893e3cb8ac6978e33f7088d17fefa8d5a7f27a2af4dc"
+    },
+    {
+      "name": "en-04",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1728,
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "wav": "en-04.wav",
+      "wav_sha256": "f4e95852e336403001191b6dbfc9f00c5263cea304c10761608d6d5fce23da3f",
+      "frames": 92160,
+      "duration_s": 5.76,
+      "rms": 0.0006946896093476182,
+      "profile": "baseline",
+      "hypothesis": "The cabbage juice changes.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 0,
+          "deletions": 11,
+          "insertions": 0,
+          "reference_length": 15,
+          "rate": 0.7333333333333333
+        },
+        "character": {
+          "errors": 53,
+          "substitutions": 0,
+          "deletions": 53,
+          "insertions": 0,
+          "reference_length": 75,
+          "rate": 0.7066666666666667
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16000,
+          "pcm_sha256": "4c777bde146e08e5ac9c9fd6b4eaca5fd3488605a059e3c2832433a723f97171",
+          "last_two_start": 0.399999976,
+          "hypothesis": "Cabbage juice change."
+        },
+        {
+          "frames": 18720,
+          "pcm_sha256": "ff050cfca6d40818d5197cab9612179e813d4c592140badb6833fe479ef7417d",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 9516.05040000868,
+      "receipt": "en-04-baseline.txt",
+      "receipt_sha256": "5c9d4a41bd0b711163c97610dc9919c8c97b3f965f54be7e2bff84507a7cc54a"
+    },
+    {
+      "name": "en-04",
+      "split": "regression",
+      "language": "en",
+      "dataset_id": 1728,
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "wav": "en-04.wav",
+      "wav_sha256": "f4e95852e336403001191b6dbfc9f00c5263cea304c10761608d6d5fce23da3f",
+      "frames": 92160,
+      "duration_s": 5.76,
+      "rms": 0.0006946896093476182,
+      "profile": "candidate",
+      "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the aline the chemical is.",
+      "metrics": {
+        "word": {
+          "errors": 3,
+          "substitutions": 0,
+          "deletions": 1,
+          "insertions": 2,
+          "reference_length": 15,
+          "rate": 0.2
+        },
+        "character": {
+          "errors": 10,
+          "substitutions": 0,
+          "deletions": 2,
+          "insertions": 8,
+          "reference_length": 75,
+          "rate": 0.13333333333333333
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "e2f6857134bc178c64a5f48b784d207c56b9799342685757f25844d622c4f846",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "0eda3697470bc6480748602fa2db4f71e1e59dcedfb8e1ca25f10e024b6dbfb7",
+          "last_two_start": 0.879999995,
+          "hypothesis": "The cab is a little bit of a"
+        },
+        {
+          "frames": 27360,
+          "pcm_sha256": "a8e9b5e00042fd333cba8c20e0c6e944eb639966ae8124a97482e6d488db464f",
+          "last_two_start": 0.879999995,
+          "hypothesis": "The cabbage juice changes."
+        },
+        {
+          "frames": 38880,
+          "pcm_sha256": "9b7b7cdad5b274082c987d74bc02902439ef39c378ce5e85382edc397a23ac5b",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 51680,
+          "pcm_sha256": "46f21ba80f25c0b5e607f49deb1e0d777e9bb534ee3927e072653175ad5199ed",
+          "last_two_start": 2.31999993,
+          "hypothesis": "The cabbage juice changes color depending on how aesthetics."
+        },
+        {
+          "frames": 65280,
+          "pcm_sha256": "139cf72dc4720216db1e549ebb8b93d7fe4122acd8113bf0330f69436b2568b8",
+          "last_two_start": 3.19999981,
+          "hypothesis": "The cabbage juice changes color depending on how acidic basic alcohol."
+        },
+        {
+          "frames": 79360,
+          "pcm_sha256": "2e3c7fb1cf4b656179aff280561edb022d932904959330d2824fd61752da3ed1",
+          "last_two_start": 4.23999977,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical."
+        },
+        {
+          "frames": 94560,
+          "pcm_sha256": "0ef69a3cc0a12f4c49507ba594b926fe2103c4d8eb7b82c78ee67b15a88c2684",
+          "last_two_start": 4.63999987,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "f665323e4f1682b574aa48409e2aeca66cda6c08d515832c6779458a50d32f02",
+          "last_two_start": 4.63999987,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is."
+        },
+        {
+          "frames": 33760,
+          "pcm_sha256": "2928747414cb78db55dce0a800c17ce8bdba84a87cd39a6a925d682968e2df25",
+          "last_two_start": 0.719999969,
+          "hypothesis": "aline the chemical is."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 9483.551499986788,
+      "receipt": "en-04-candidate.txt",
+      "receipt_sha256": "5d41e96a80f4580aacc9f1075cc1a410880b707ad00cf812db0be376b9e23dfa"
+    },
+    {
+      "name": "hu-01",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1742,
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "wav": "hu-01.wav",
+      "wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06,
+      "rms": 0.0019043138504751867,
+      "profile": "baseline",
+      "hypothesis": "Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.",
+      "metrics": {
+        "word": {
+          "errors": 4,
+          "substitutions": 3,
+          "deletions": 1,
+          "insertions": 0,
+          "reference_length": 17,
+          "rate": 0.23529411764705882
+        },
+        "character": {
+          "errors": 9,
+          "substitutions": 5,
+          "deletions": 4,
+          "insertions": 0,
+          "reference_length": 88,
+          "rate": 0.10227272727272728
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 18400,
+          "pcm_sha256": "94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 10880,
+          "pcm_sha256": "1c570e7da48bc5018b8ae20cf01d31be7a1b0440565126e96947b8d053402803",
+          "last_two_start": -1.0,
+          "hypothesis": "Okay."
+        },
+        {
+          "frames": 22080,
+          "pcm_sha256": "16e22e381c7736196ed2b3b3dce5306bb5352cf9724283d8c9c88e8ae2b5490c",
+          "last_two_start": 0.159999996,
+          "hypothesis": "Hun every"
+        },
+        {
+          "frames": 33760,
+          "pcm_sha256": "2d0671643e92ad5f7b3e56e414a3d3ba86a25ed9421f7db983a83e8c9970a0f8",
+          "last_two_start": 0.399999976,
+          "hypothesis": "Hong Kong Maverick"
+        },
+        {
+          "frames": 45760,
+          "pcm_sha256": "456a202983ba5858d72f18b0fa7567bda6404a1f8a7a68d5150b59cfd5af68dc",
+          "last_two_start": 1.75999999,
+          "hypothesis": "Hong Kong Never a Hong Kong Psychiatry"
+        },
+        {
+          "frames": 58720,
+          "pcm_sha256": "3fb5be44974eedabe42bd4262e38c737ed854808e89fcea8fea3a5c3e175a156",
+          "last_two_start": 2.15999985,
+          "hypothesis": "Hongkong nevét, a Hongkong Szikater katta."
+        },
+        {
+          "frames": 72480,
+          "pcm_sha256": "e80ec42fdaf559baa88628fdf28317368313a13ecd986715650bfa41eb5b33ca",
+          "last_two_start": 4.0,
+          "hypothesis": "Hongkong nevét a Hongkong sziketről kapta és at a h"
+        },
+        {
+          "frames": 87040,
+          "pcm_sha256": "07640e4a4ec5cbb1b99dfadd0e1b38488d02a440d4ba5762479daded3ed07afc",
+          "last_two_start": 4.48000002,
+          "hypothesis": "Hongkong nevét a Hongkong szikatrial kapta és a sok turista."
+        },
+        {
+          "frames": 97920,
+          "pcm_sha256": "0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c",
+          "last_two_start": 4.79999971,
+          "hypothesis": "Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára."
+        },
+        {
+          "frames": 47520,
+          "pcm_sha256": "ec46dd4b08c9a73432f53ae6df4291316d51b61705615e594dc3e23a09fefaea",
+          "last_two_start": 0.719999969,
+          "hypothesis": "sok töreste számára."
+        },
+        {
+          "frames": 60640,
+          "pcm_sha256": "c2bc644e548acc44066d76d96d510b3f02a4d6af1d4bdab20842966063c4d3e3",
+          "last_two_start": 2.07999992,
+          "hypothesis": "sok törista számára a figyelem középpontjában."
+        },
+        {
+          "frames": 74240,
+          "pcm_sha256": "864ae48abb5496960976d9febf78aabb712600b8c0dd0f1b697e6c49ab899a19",
+          "last_two_start": 2.72000003,
+          "hypothesis": "a sok turista számára a figyelem középpontjában áll."
+        },
+        {
+          "frames": 74560,
+          "pcm_sha256": "c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100",
+          "last_two_start": 2.72000003,
+          "hypothesis": "a sok törista számára a figyelem középpontjában áll."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15891.988499992294,
+      "receipt": "hu-01-baseline.txt",
+      "receipt_sha256": "823384687337dc082b19b8bc59b9bc5b313cc46f70d2fbd057de7d85a1d2cffb"
+    },
+    {
+      "name": "hu-01",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1742,
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "wav": "hu-01.wav",
+      "wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06,
+      "rms": 0.0019043138504751867,
+      "profile": "candidate",
+      "hypothesis": "Hongkong nevét a Hongkong sziketról kapta, és át a sok sok turista számára a figyelem kötéppontjában áll.\n\nOh",
+      "metrics": {
+        "word": {
+          "errors": 5,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_length": 17,
+          "rate": 0.29411764705882354
+        },
+        "character": {
+          "errors": 11,
+          "substitutions": 8,
+          "deletions": 1,
+          "insertions": 2,
+          "reference_length": 88,
+          "rate": 0.125
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 18400,
+          "pcm_sha256": "94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 11360,
+          "pcm_sha256": "565bea91c0171aa89235dba8bb57d2ccf920183324df320d7ab70286c47902fa",
+          "last_two_start": 0.0799999982,
+          "hypothesis": "Um com"
+        },
+        {
+          "frames": 22400,
+          "pcm_sha256": "d2d8ef3f20da5f94ee83cb5cd428910cb1e0fa97396b185bdcb5e3e3ae6b6d44",
+          "last_two_start": 0.0799999982,
+          "hypothesis": "Hun command"
+        },
+        {
+          "frames": 34080,
+          "pcm_sha256": "104c4644a5395b96320e9ee70576a4fa18c00b6a889faa239ca77bc410e0d6b0",
+          "last_two_start": 1.43999994,
+          "hypothesis": "Hong Kong Maverick Hong Kong."
+        },
+        {
+          "frames": 46400,
+          "pcm_sha256": "2ca9e5ac5af86b0d8be2d23b6ea678465d2fa05fcc0b362f7238c55978b82b4b",
+          "last_two_start": 1.75999999,
+          "hypothesis": "Hong Kong Never, a Hong Kong psychiatric."
+        },
+        {
+          "frames": 59360,
+          "pcm_sha256": "336980cec0035f0fb50a5916569467ce6f3868791b2d3ccd9b85ea4e90ef7146",
+          "last_two_start": 2.15999985,
+          "hypothesis": "Hongkong nevyt, a Hongkong Secretary Katta"
+        },
+        {
+          "frames": 73120,
+          "pcm_sha256": "361cc42e2fabcfc4b5609f72f717826545a9ad61788c7d3476d54ea8a577f6b1",
+          "last_two_start": 3.5999999,
+          "hypothesis": "Hongkong nevét, a Hongkong sziketről kapta és ehás."
+        },
+        {
+          "frames": 87680,
+          "pcm_sha256": "d81b8cb37d677c53d4d59396ae7b2f1e9b14b5b7710feae6503704c8f7594313",
+          "last_two_start": 4.48000002,
+          "hypothesis": "Hongkong nevét a Hongkong szikatról kapta, és ehági sokturista tanítán."
+        },
+        {
+          "frames": 97920,
+          "pcm_sha256": "0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c",
+          "last_two_start": 4.79999971,
+          "hypothesis": "Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára."
+        },
+        {
+          "frames": 48000,
+          "pcm_sha256": "81734a5b0fc3c2def298dab165aa0c2267026691d2a802e4b5cc625282270dd1",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 61120,
+          "pcm_sha256": "930cb264c8b31ee8af35861c178a136de3154f9c52468034647446518b8574f9",
+          "last_two_start": 2.07999992,
+          "hypothesis": "sok törista számára a figyelem középpontjában."
+        },
+        {
+          "frames": 74560,
+          "pcm_sha256": "c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100",
+          "last_two_start": 2.72000003,
+          "hypothesis": "a sok törista számára a figyelem középpontjában áll."
+        },
+        {
+          "frames": 79200,
+          "pcm_sha256": "9c54049112358a207b0da12c130fe5f0427671a863304b3fcb1d6929d3aed90b",
+          "last_two_start": 2.72000003,
+          "hypothesis": "sok turista számára a figyelem kötéppontjában áll."
+        },
+        {
+          "frames": 10080,
+          "pcm_sha256": "73beea72132c00f1e9fd1154662938490b34a5def2afb534703c99d0cc5e6bb0",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 20960,
+          "pcm_sha256": "e639695f053c2dc6d1a9fc674042b335e16cc22e7f38c2f6263fef7f94b8b8ec",
+          "last_two_start": -1.0,
+          "hypothesis": "Oh"
+        },
+        {
+          "frames": 24640,
+          "pcm_sha256": "8683a376a9d10a60b3813a79851dd4eaf293b8d324789f1a1eba05bcf2d9525c",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15772.196000005351,
+      "receipt": "hu-01-candidate.txt",
+      "receipt_sha256": "5f6d346ed2ec671b7f159e28063457981ab62a8a9f3f96fc55c93ac04fc54dce"
+    },
+    {
+      "name": "hu-02",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1874,
+      "reference": "Néhányan úgy vélték, igaza volt, de sokan hitték az ellenkezőjét; hogy a Naprendszer a Föld körül forog, beleértve a Napot (sőt, a többi csillagot is).",
+      "wav": "hu-02.wav",
+      "wav_sha256": "a908c352b6ffa741ba2ebd4cfa8596172c1e6376e0cda84aa174e4f4f2bdd208",
+      "frames": 193920,
+      "duration_s": 12.12,
+      "rms": 0.04617825709047476,
+      "profile": "baseline",
+      "hypothesis": "Néhány nem úgy vérték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer A naprendszer a földterül forog, beleértve a napot, sőt, a többi a többet csillagot is.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 6,
+          "deletions": 0,
+          "insertions": 5,
+          "reference_length": 25,
+          "rate": 0.44
+        },
+        "character": {
+          "errors": 27,
+          "substitutions": 6,
+          "deletions": 0,
+          "insertions": 21,
+          "reference_length": 119,
+          "rate": 0.226890756302521
+        },
+        "empty": false,
+        "first_word_correct": false
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "e75a08e2be0936a76baca414b544daf5e3f3552bb4091c77281516cd790ab793",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "86b451a5815109d0350ae411d52914718934695eaff41b93488891c71a270728",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27520,
+          "pcm_sha256": "fe5f8f0ff6c0210c4321ae7e453401447e956e539600cd5d725bd08cd4953448",
+          "last_two_start": 0.879999995,
+          "hypothesis": "Me han..."
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "ad696b089deba63f478cfc7139e3d69d05540c7ec2c0d17cf963d5289d9d3669",
+          "last_two_start": 1.75999999,
+          "hypothesis": "Néhány am úgy börtön."
+        },
+        {
+          "frames": 51520,
+          "pcm_sha256": "38cb37b44af3b854d34480dd7acff68c11ca558a7bafe8b9015a0359bdda6748",
+          "last_two_start": 2.55999994,
+          "hypothesis": "Néhány nem úgy vélem, igaza volt."
+        },
+        {
+          "frames": 65120,
+          "pcm_sha256": "c53cb7bc28da94ec5fdbe1c52f5878b0435c5241b4045edd0fd7cabc5f4d241e",
+          "last_two_start": 2.55999994,
+          "hypothesis": "Néhány nem úgy érték, igaza volt."
+        },
+        {
+          "frames": 79200,
+          "pcm_sha256": "5ad990960eeaba7ae232b649c8e242127b20cd9f9caeab4ff31ff333a6099a29",
+          "last_two_start": 4.4000001,
+          "hypothesis": "Néhány nem úgy véljé, igaza volt, de sokkal hitték az ellenke."
+        },
+        {
+          "frames": 93600,
+          "pcm_sha256": "9e5cef4af03e20fff55e1f2672bda60c5faf340d652f5c47c7d82cbb0a8c0d1c",
+          "last_two_start": 4.48000002,
+          "hypothesis": "Néhány nem úgy véltek, igaza volt, de sokkal hitték az ellenkezőjét."
+        },
+        {
+          "frames": 109760,
+          "pcm_sha256": "da869925e33e6804b365b24a9d4c225d7389f6aea977c1c43c80eafbf0d6856e",
+          "last_two_start": 6.39999962,
+          "hypothesis": "Néhány nem úgy vézték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földek."
+        },
+        {
+          "frames": 126880,
+          "pcm_sha256": "c4cb2fc96bf05f89af47bd3176c31ebe03af9782c5e328374794501b2de5f437",
+          "last_two_start": 6.48000002,
+          "hypothesis": "Néhány úgy vézték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a fölterőforgés."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "0e45e6983ffa3a3d0204a9ec7358c3a58bda68ed67c7c9f1a213048772f29a6c",
+          "last_two_start": 6.48000002,
+          "hypothesis": "Néhány nem úgy vérték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földterőforg."
+        },
+        {
+          "frames": 58560,
+          "pcm_sha256": "b940a1c8de9d91efd2a60eedf58028adf60b177c189040a14427f4ed38e803f4",
+          "last_two_start": 2.48000002,
+          "hypothesis": "A naprendszer a fölterő forog, beleértve a napot, sőt,"
+        },
+        {
+          "frames": 72000,
+          "pcm_sha256": "1dab1f124efa754d7aad13cc499a1a78f833d7a55e39732eb120ae60e9631eaf",
+          "last_two_start": 4.0,
+          "hypothesis": "Naprendszer a földterő forog, beleértve a napot, sőt, a többi csillag volt,"
+        },
+        {
+          "frames": 86400,
+          "pcm_sha256": "162d3b97b466fa2d37b360b9f026997a3b20ebff5b82ff80d6adfe9babf096cb",
+          "last_two_start": 4.0,
+          "hypothesis": "A naprendszer a fölterül forog, beleértve a napot, sőt, a többi csillagot is."
+        },
+        {
+          "frames": 101760,
+          "pcm_sha256": "a3b3955ed2c5ee807d4c3fd104958b3abd00bce7d482d2f9551acc585036b9f4",
+          "last_two_start": 4.0,
+          "hypothesis": "A naprendszer a fölterül forog, beleértve a napot, sőt, a többi csillagot is."
+        },
+        {
+          "frames": 104320,
+          "pcm_sha256": "3b18bead30bc81e1dbb277c43be07a69f0f2509cdaaa4974593d87deb3a283d0",
+          "last_two_start": 4.0,
+          "hypothesis": "A naprendszer a földterül forog, beleértve a napot, sőt, a többi csillagot is."
+        },
+        {
+          "frames": 60320,
+          "pcm_sha256": "949bc0fc20942fdc64980836b33fd410080fe880ec018f874eac193bb75aa96f",
+          "last_two_start": 0.639999986,
+          "hypothesis": "a többet csillagot is."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 16057.953199982876,
+      "receipt": "hu-02-baseline.txt",
+      "receipt_sha256": "7107cd0687af7d45558da23a93c3a9b39a156a128b7cf2642ff31900a3973d52"
+    },
+    {
+      "name": "hu-02",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1874,
+      "reference": "Néhányan úgy vélték, igaza volt, de sokan hitték az ellenkezőjét; hogy a Naprendszer a Föld körül forog, beleértve a Napot (sőt, a többi csillagot is).",
+      "wav": "hu-02.wav",
+      "wav_sha256": "a908c352b6ffa741ba2ebd4cfa8596172c1e6376e0cda84aa174e4f4f2bdd208",
+      "frames": 193920,
+      "duration_s": 12.12,
+      "rms": 0.04617825709047476,
+      "profile": "candidate",
+      "hypothesis": "Néhány úgy vékék, igaza volt, de sokkal hitték az ellenkezőjét, hogy A naprendszer a fölterő forog, beleértve a napot, sőt, a több a többé csillagot is.",
+      "metrics": {
+        "word": {
+          "errors": 8,
+          "substitutions": 5,
+          "deletions": 1,
+          "insertions": 2,
+          "reference_length": 25,
+          "rate": 0.32
+        },
+        "character": {
+          "errors": 17,
+          "substitutions": 6,
+          "deletions": 5,
+          "insertions": 6,
+          "reference_length": 119,
+          "rate": 0.14285714285714285
+        },
+        "empty": false,
+        "first_word_correct": false
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "ea94134b226f2992bd709bf309bf1b65b71d73deb8e5a11e9da35b1687f6ee15",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "e67c2af4310f261553d51d1bfe9199dde7122baf01888acd020a68f9931d07b3",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27200,
+          "pcm_sha256": "7f245bde44e40b4774e4786ca5228e9c2bfdc00faee5c8d6224a9006b2d836e6",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 39040,
+          "pcm_sha256": "c353f25267be683d5f164ebf22cd9b2c86d27bc4a7c7247c06085edab7ab2990",
+          "last_two_start": -1.0,
+          "hypothesis": "Néhány."
+        },
+        {
+          "frames": 51520,
+          "pcm_sha256": "1c4810f0d299c8e8506ed7494fead56c80489a817071d61384a8ffc25067aeab",
+          "last_two_start": 2.55999994,
+          "hypothesis": "Néhány nem úgy vélem, igaza volt."
+        },
+        {
+          "frames": 64640,
+          "pcm_sha256": "80dd52c74c4ace5f10868980864794fabc5f8a043767a0af2ddec29daa1c1f5b",
+          "last_two_start": 2.55999994,
+          "hypothesis": "Néhány nem úgy érték, igaza volt."
+        },
+        {
+          "frames": 78880,
+          "pcm_sha256": "201d4569f793b723dcff1e79a998873e512b2585203bf1c6d4599d7280145ab7",
+          "last_two_start": 4.48000002,
+          "hypothesis": "Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenke."
+        },
+        {
+          "frames": 93760,
+          "pcm_sha256": "9f4a654fb3dfefbc7d0027b74fcdad4e61504de8e92b313b98877bd956b29e51",
+          "last_two_start": 4.48000002,
+          "hypothesis": "Néhány nem úgy véljé, igaza volt, de sokkal hitték az ellenkezőjét."
+        },
+        {
+          "frames": 109280,
+          "pcm_sha256": "76e5acab32e2ef736ece632fedce7c0008083891284b48b6a8cb717003128c7b",
+          "last_two_start": 6.39999962,
+          "hypothesis": "Néhány nem úgy véjék, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a föld."
+        },
+        {
+          "frames": 125920,
+          "pcm_sha256": "19673cf2f93d8fcfb65812c24d0c57828cdfae5f0250a82ea69ec06112156f9d",
+          "last_two_start": 6.48000002,
+          "hypothesis": "Néhány nem úgy véjék, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a földszerőforg."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "f1513a5de29106ffcd58b3e4803d255c413d49f1910c7ee31f4f267437f3b530",
+          "last_two_start": 6.48000002,
+          "hypothesis": "Néhány úgy vékék, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a fölterőforg."
+        },
+        {
+          "frames": 57600,
+          "pcm_sha256": "ee7bb48e1719a6e03f6e82bcbc98ed59f468231c4aac3255ae75c69a201787ef",
+          "last_two_start": 2.48000002,
+          "hypothesis": "Naprendszerre fölterő forog, beleértve a napot, sőt,"
+        },
+        {
+          "frames": 70880,
+          "pcm_sha256": "8aa005ac662c14a5cf3d8c7401ea461e79a2a56192921d1fa6bc4e45fb884ffb",
+          "last_two_start": 3.91999984,
+          "hypothesis": "A Naprendszerre fölterő forog, beleértve a napot, sőt, a többi csillag volt."
+        },
+        {
+          "frames": 85120,
+          "pcm_sha256": "c5f1d06a7135d34ad8e43ff7602e2c84c74dd29990ee5749846a16c9916446b3",
+          "last_two_start": 4.07999992,
+          "hypothesis": "A naprendszer a fölterő forog, beleértve a napot, sőt, a többi csillagot is."
+        },
+        {
+          "frames": 100320,
+          "pcm_sha256": "c214c8ec27985ec94ad817f24b63630dd601c63efee3ecec84acfb2e0e50df5f",
+          "last_two_start": 4.07999992,
+          "hypothesis": "A naprendszer a fölterő forog, beleértve a napot, sőt, a több csillagot is."
+        },
+        {
+          "frames": 104480,
+          "pcm_sha256": "0e396682f326a1c6270598b6c0a644395f68fc5de52d9efb4a21d9e10ae68e62",
+          "last_two_start": 4.07999992,
+          "hypothesis": "A naprendszer a fölterő forog, beleértve a napot, sőt, a több csillagot is."
+        },
+        {
+          "frames": 59360,
+          "pcm_sha256": "80a159b8ae80de8e473f4671d5a9b238bfa6ab893e1f45e0424a31c19af794d2",
+          "last_two_start": 0.560000002,
+          "hypothesis": "a többé csillagot is."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 15980.916399974376,
+      "receipt": "hu-02-candidate.txt",
+      "receipt_sha256": "d312e5d8e00011e6ff0facb905e2d1a40add9371ab302581a10038b5ff3fbc05"
+    },
+    {
+      "name": "hu-03",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1914,
+      "reference": "Huszadik századi kutatás kimutatta, hogy a genetikai változatosságnak két variációja van: rejtett és kifejezett.",
+      "wav": "hu-03.wav",
+      "wav_sha256": "c0d0502026d440a313eac63d6909b78d3ccc06798962c9211bfee19ae61fdb97",
+      "frames": 162240,
+      "duration_s": 10.14,
+      "rms": 0.039598723489820326,
+      "profile": "baseline",
+      "hypothesis": "20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, rejtett és kifejezett.",
+      "metrics": {
+        "word": {
+          "errors": 6,
+          "substitutions": 5,
+          "deletions": 1,
+          "insertions": 0,
+          "reference_length": 14,
+          "rate": 0.42857142857142855
+        },
+        "character": {
+          "errors": 15,
+          "substitutions": 5,
+          "deletions": 10,
+          "insertions": 0,
+          "reference_length": 96,
+          "rate": 0.15625
+        },
+        "empty": false,
+        "first_word_correct": false
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "c6a2857effc0a3354a4a3bd50d5f7313aab40ecc7503ab4cb1ef29836d803f3b",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27040,
+          "pcm_sha256": "8bffc3c7ad6c93548c494ff3415c377c570127fcd50ab47598022980dffa8cf5",
+          "last_two_start": -1.0,
+          "hypothesis": "Mussadilla."
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "892126af191c25c4f638f31e924283fb63e5c81b314c4624a6f27fc297c3f482",
+          "last_two_start": 1.83999991,
+          "hypothesis": "Who sa di sa di quest'aște?"
+        },
+        {
+          "frames": 51680,
+          "pcm_sha256": "11c035fc47d7aeece73e89d5c904e4734b0d50accc568afe14a479fccdaece28",
+          "last_two_start": 2.0,
+          "hypothesis": "Hussa del sata di quiltă stimuta."
+        },
+        {
+          "frames": 64960,
+          "pcm_sha256": "68976a928a192cd14e205e64d7121d8364796cc881fdfeb3adc00b32b4847036",
+          "last_two_start": -1.0,
+          "hypothesis": "20."
+        },
+        {
+          "frames": 79200,
+          "pcm_sha256": "675ba1c30326cc7a23cb754d01544a0ddf68595b5825c6159c4929f5a2fd24f8",
+          "last_two_start": 3.51999998,
+          "hypothesis": "20. századik utatás kimutatna, hogy a gyeneté változás."
+        },
+        {
+          "frames": 93920,
+          "pcm_sha256": "c07ae9f723ec26af2354e669f0620d54c5668eba0d08d06bb651ac6dd9dddbca",
+          "last_two_start": 5.35999966,
+          "hypothesis": "20. századik utatás ki mutatna, hogy a denatikai változtatosságnak két van."
+        },
+        {
+          "frames": 109920,
+          "pcm_sha256": "c6356fc1500572d758876f9c0fab238a6078e6429505435bf27574201d5cce1f",
+          "last_two_start": 5.75999975,
+          "hypothesis": "20. századik utatás kimutatna, hogy a denatikai változtatosságnak, két variációja van,"
+        },
+        {
+          "frames": 126720,
+          "pcm_sha256": "eb54a8e4c06ebd6bc1fc6f5b9919848d04e99a569ed52a1773a7360d8a15f12e",
+          "last_two_start": 6.63999987,
+          "hypothesis": "20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett."
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d",
+          "last_two_start": 6.96000004,
+          "hypothesis": "20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és"
+        },
+        {
+          "frames": 56320,
+          "pcm_sha256": "09b367344a7fe5bcfe30966b2f9a3b89db40f191592f81c9a3b8fbc4b9ad938d",
+          "last_two_start": 1.67999995,
+          "hypothesis": "Rajtett és kifejezet."
+        },
+        {
+          "frames": 69760,
+          "pcm_sha256": "61e91b219c5010710fd7f9f15572bee9b2862ee6aeb906d64c9916818ae96799",
+          "last_two_start": 1.67999995,
+          "hypothesis": "Rejtett és kifejezet."
+        },
+        {
+          "frames": 78080,
+          "pcm_sha256": "ed4528e433b8b1e12a56e41123f85974a37b96554e5fd9559ce8b3583d539efd",
+          "last_two_start": 1.67999995,
+          "hypothesis": "rejtett és kifejezett."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 14088.071300007869,
+      "receipt": "hu-03-baseline.txt",
+      "receipt_sha256": "2530e00059cfef7380f5617d8556e52e7870d2a763c088b4508d6d72a8b5ba65"
+    },
+    {
+      "name": "hu-03",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1914,
+      "reference": "Huszadik századi kutatás kimutatta, hogy a genetikai változatosságnak két variációja van: rejtett és kifejezett.",
+      "wav": "hu-03.wav",
+      "wav_sha256": "c0d0502026d440a313eac63d6909b78d3ccc06798962c9211bfee19ae61fdb97",
+      "frames": 162240,
+      "duration_s": 10.14,
+      "rms": 0.039598723489820326,
+      "profile": "candidate",
+      "hypothesis": "20. század kutatás kimutatá, hogy a denatikai változtatosságnak két variáció van, rejtett és kifejezett.",
+      "metrics": {
+        "word": {
+          "errors": 6,
+          "substitutions": 6,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_length": 14,
+          "rate": 0.42857142857142855
+        },
+        "character": {
+          "errors": 16,
+          "substitutions": 5,
+          "deletions": 10,
+          "insertions": 1,
+          "reference_length": 96,
+          "rate": 0.16666666666666666
+        },
+        "empty": false,
+        "first_word_correct": false
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "b29bce55d98bc09c29a2d7c26ec05655b4c8392cec8b0957af59239585b26d56",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "59f653d23655c6a225f7aefbedd20400950040a2bb9a2dcdc3dc4bcbb399a934",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27200,
+          "pcm_sha256": "3a426b9bef9ddef5d9ffde757bd14b35377ffe9a543dfd88823fcfd2c59b723c",
+          "last_two_start": 0.959999979,
+          "hypothesis": "Who's that?"
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "8b89799704cceed68e5160cf07f299d0f54a7d705c9892499548617244f97de1",
+          "last_two_start": 2.0,
+          "hypothesis": "Musa Dictata di Kut."
+        },
+        {
+          "frames": 52000,
+          "pcm_sha256": "89302fd2d83f23f82c7737ddf8c275b3c8f783f6efc3ca7a9e2cad289e6eee53",
+          "last_two_start": 2.07999992,
+          "hypothesis": "Hussa dix a di kutatástimatá."
+        },
+        {
+          "frames": 65280,
+          "pcm_sha256": "746c11cb105b12bcd8b19ab6a94ad926aa945158793381167abb94becf8b6c96",
+          "last_two_start": 3.5999999,
+          "hypothesis": "20. század. kutatás kimutatá, hogy a gyanú"
+        },
+        {
+          "frames": 79360,
+          "pcm_sha256": "36f753d0e89570e90853f018e6d8fa52776c50e00280bb3620ea89247cf3a912",
+          "last_two_start": 3.67999983,
+          "hypothesis": "20. század kutatás kimutató, hogy a gyenetéklai változat."
+        },
+        {
+          "frames": 94400,
+          "pcm_sha256": "a38c998195da46115adebedfce735881cee4436172f3eb467bc1b0d4ba984e83",
+          "last_two_start": 3.75999999,
+          "hypothesis": "20. század kutatás kimutatá, hogy a jennáték változatosságnak,"
+        },
+        {
+          "frames": 110240,
+          "pcm_sha256": "e36c55425e150c426476b56ff480ad34908482fe58af9a7530ca5146e6e05b23",
+          "last_two_start": 5.92000008,
+          "hypothesis": "20. század utatás kimutatá, hogy a denatikai változtatosságnak, két variációja van,"
+        },
+        {
+          "frames": 126720,
+          "pcm_sha256": "012445b7cf9e1c446561f53407edccbd2cb089cbb66eb9ea188faaf7e064659a",
+          "last_two_start": 6.79999971,
+          "hypothesis": "20. század kutatás kimutató, hogy a denetékai változatosságnak két variációja van rejtett,"
+        },
+        {
+          "frames": 128000,
+          "pcm_sha256": "73148d03542f9adb4ddf63140512369b771c52e543e0c64dfaee9e6c3443a3c2",
+          "last_two_start": 6.79999971,
+          "hypothesis": "20. század kutatás kimutatá, hogy a denatikai változtatosságnak két variáció van rejtett."
+        },
+        {
+          "frames": 56640,
+          "pcm_sha256": "7fb3e0505cfe6aa330e711c5e03dd74ef5a96786aeb4d8a1976014c4887da5cb",
+          "last_two_start": 1.83999991,
+          "hypothesis": "variációja van rejtett és kifejezett."
+        },
+        {
+          "frames": 69920,
+          "pcm_sha256": "1812d4332d1378e9082f3a14b7e933e431721739d9b4610f2d564385ac3a9949",
+          "last_two_start": 1.83999991,
+          "hypothesis": "variációja van rejtett és kifejezett."
+        },
+        {
+          "frames": 81120,
+          "pcm_sha256": "5a161ba6ba072b3214db617750a5e37c1027e677d2881da887260d39b7f9eb6c",
+          "last_two_start": 1.83999991,
+          "hypothesis": "van, rejtett és kifejezett."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 14393.118600011803,
+      "receipt": "hu-03-candidate.txt",
+      "receipt_sha256": "31a51ae6a7b453345d894eae05a2b63a8a972da1b3870428bc2ddb9b07d303d0"
+    },
+    {
+      "name": "hu-04",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1868,
+      "reference": "A spektrum másik oldalán valaki egy felismerhetetlen személlyé alakul, aki úgy érzi, hogy minden, a csoport által létrehozott dolgot meg kell változtatnia és a sajátjává kell tennie.",
+      "wav": "hu-04.wav",
+      "wav_sha256": "5284ccac89d6ca11651dbf334073215a9411c448740050afc8059befb34cc7a1",
+      "frames": 280320,
+      "duration_s": 17.52,
+      "rms": 0.002608505980346228,
+      "profile": "baseline",
+      "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 6,
+          "deletions": 0,
+          "insertions": 5,
+          "reference_length": 27,
+          "rate": 0.4074074074074074
+        },
+        "character": {
+          "errors": 30,
+          "substitutions": 6,
+          "deletions": 6,
+          "insertions": 18,
+          "reference_length": 152,
+          "rate": 0.19736842105263158
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0cb1ddbe55a6f52eff23997a570fcd9b51aeb71ce826e3832def31aa6ead90b5",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16000,
+          "pcm_sha256": "03619bced2bbd251c834437babf9ba8270ffead946bb8b7cdaa1ec7a97b18d60",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27200,
+          "pcm_sha256": "c2b19724832908069c9d79000f1ca9c3d2e4f5e08c22fcfe5ece2465325ef41b",
+          "last_two_start": -1.0,
+          "hypothesis": "Okay."
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "9bcd5e24cea73a00bbcb068a5050f7aab7544dc34e3cf9a7a2518911da8f0913",
+          "last_two_start": 1.43999994,
+          "hypothesis": "Spectrum Maast."
+        },
+        {
+          "frames": 51360,
+          "pcm_sha256": "1eb006e7454d5d8293bda392e3da1229c8a617038bccc4c1b3c690e3d021f334",
+          "last_two_start": 2.07999992,
+          "hypothesis": "A spektrum másik oldalán."
+        },
+        {
+          "frames": 64480,
+          "pcm_sha256": "9612ab76213de986081ad964f7ab72159ba92a9becdd9a297e0f35bd6b93e241",
+          "last_two_start": 2.55999994,
+          "hypothesis": "A spektrum másik oldalán valaki"
+        },
+        {
+          "frames": 78400,
+          "pcm_sha256": "c0dfb1419c6fef2dfba0a5782cf886b2be956184511018a969d26fb849737bae",
+          "last_two_start": 3.83999991,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhet."
+        },
+        {
+          "frames": 93280,
+          "pcm_sha256": "3e81e83c41e3ac701bbca129160358aebf966b47fc35fde274bca4368494048f",
+          "last_two_start": 4.07999992,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen személy."
+        },
+        {
+          "frames": 108320,
+          "pcm_sha256": "bb65a10cbed5331fb1cd99746c5a7611ac1ace81362441a406b39b3457cb2881",
+          "last_two_start": 5.44000006,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen személy alakul."
+        },
+        {
+          "frames": 48640,
+          "pcm_sha256": "cb81ac7ef522153edbbc88fe84835adf41e6061a136bde387b56c3f3b433f341",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 61600,
+          "pcm_sha256": "62f9ece04f99095a882b30e573b0d1b477e7a4deb24a612fcc5e8ba9950d6153",
+          "last_two_start": 2.79999995,
+          "hypothesis": "Hát a fán személy alakul, aki úgy érti, hogy..."
+        },
+        {
+          "frames": 75200,
+          "pcm_sha256": "537a72e244547b964b966e806676af4ba159eb540f3ed0511c3a254422cbec2a",
+          "last_two_start": 3.75999999,
+          "hypothesis": "hát a személy alakul, aki úgy érti, hogy mintán a."
+        },
+        {
+          "frames": 90080,
+          "pcm_sha256": "4b1f4dd11de70453e1816b82f6d53c9e05b67212c1759ed66ee92f24a20053a5",
+          "last_two_start": 4.48000002,
+          "hypothesis": "hát a személy alakul, aki úgy érti, hogy mintán a csoport által."
+        },
+        {
+          "frames": 105920,
+          "pcm_sha256": "7cc2ba7128cf1c8cadeb48389f9e4c30a9b8607bd3f3ecb76dc410ead881ef39",
+          "last_two_start": 5.11999989,
+          "hypothesis": "hát a fánsztán még alakul, aki úgy érti, hogy mintán a csoport által létrehozhatók."
+        },
+        {
+          "frames": 116480,
+          "pcm_sha256": "4c09dd6713c9bac8887f71ac6e90ae3f94baa965ef541c06e77af9390e534b85",
+          "last_two_start": 6.39999962,
+          "hypothesis": "hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg."
+        },
+        {
+          "frames": 48960,
+          "pcm_sha256": "e7adef443253199204f3f4870ed55ddead80fa38abdb0a1fe43a0b3632fb3baf",
+          "last_two_start": 1.67999995,
+          "hypothesis": "Tämä on tulkot, näkkää päätöstä."
+        },
+        {
+          "frames": 62080,
+          "pcm_sha256": "10e57391ef63590adc785ed4684f7209957613e80f904052dea9abbe47fa9ce6",
+          "last_two_start": 1.91999996,
+          "hypothesis": "Tá legittengatott dolgot, meg kell váltotta."
+        },
+        {
+          "frames": 75680,
+          "pcm_sha256": "74d3a3509217ecb9268daa028f277106de273a2cd6da694890399c3707a47ab9",
+          "last_two_start": 4.07999992,
+          "hypothesis": "Tán létre dolgot, meg kell váltottam, és a saját tává kell."
+        },
+        {
+          "frames": 90560,
+          "pcm_sha256": "5d12258966fea3f8c372c8ace5b6ccbc7bdcb95f88f06001e5256ebbc5f7fbe3",
+          "last_two_start": 4.63999987,
+          "hypothesis": "Tá létrágott dolgot meg kell váltottam, és a saját tává kell tenni."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "fbec776270ffbd0f25376283eb7aa8c01bf0f48bc59a1c0f8efe6cb683c83955",
+          "last_two_start": 4.63999987,
+          "hypothesis": "Létregatott dolgot meg kell váltottam, és a saját tává kell tenni."
+        },
+        {
+          "frames": 35680,
+          "pcm_sha256": "a2596033be0bbafba9d815fec83ccf3e7b700bc0c56be784d805a75187ad7aa4",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 21247.37389999791,
+      "receipt": "hu-04-baseline.txt",
+      "receipt_sha256": "7809e9b86136e07d90aa840ae9d27b76493011fadabdc4a33ba4f5a9a0af06ff"
+    },
+    {
+      "name": "hu-04",
+      "split": "regression",
+      "language": "hu",
+      "dataset_id": 1868,
+      "reference": "A spektrum másik oldalán valaki egy felismerhetetlen személlyé alakul, aki úgy érzi, hogy minden, a csoport által létrehozott dolgot meg kell változtatnia és a sajátjává kell tennie.",
+      "wav": "hu-04.wav",
+      "wav_sha256": "5284ccac89d6ca11651dbf334073215a9411c448740050afc8059befb34cc7a1",
+      "frames": 280320,
+      "duration_s": 17.52,
+      "rms": 0.002608505980346228,
+      "profile": "candidate",
+      "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen, hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 6,
+          "deletions": 0,
+          "insertions": 5,
+          "reference_length": 27,
+          "rate": 0.4074074074074074
+        },
+        "character": {
+          "errors": 30,
+          "substitutions": 6,
+          "deletions": 6,
+          "insertions": 18,
+          "reference_length": 152,
+          "rate": 0.19736842105263158
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "c8e57cf547d367a513d975601672ae045b2e10f80b143264c5cd2056f6252948",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16320,
+          "pcm_sha256": "96357713e5c26ea24a0d9211a4611ef8674fdcb509b1c4012a170610459e03c8",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 27040,
+          "pcm_sha256": "eb160bceecbd062f67e88703c9c228fe06a3a038bbe9b3854feea508d40a4963",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "c5a3f5bfc9efb97532bc695249ebc0a71da993563d38ae1a465aaff70b0384db",
+          "last_two_start": -1.0,
+          "hypothesis": "Alspectrum."
+        },
+        {
+          "frames": 51520,
+          "pcm_sha256": "ee1778f15a688fb978a9933192342d7f6a856dc0c747b406d0703f423e2ded7c",
+          "last_two_start": 2.48000002,
+          "hypothesis": "Als spectrum magic wordt."
+        },
+        {
+          "frames": 64480,
+          "pcm_sha256": "f7ae7da5c80e35aac0229e9ebe7c86106ebd88061dacb45733ce6467ae9d2a35",
+          "last_two_start": 2.96000004,
+          "hypothesis": "A spektrum másik oldalán valaki."
+        },
+        {
+          "frames": 78560,
+          "pcm_sha256": "cac8257faab93d1338a2bcddc4e72c93e43181dac966919b1d05a358867e3640",
+          "last_two_start": 2.96000004,
+          "hypothesis": "A spektrum másik oldalán valaki."
+        },
+        {
+          "frames": 93440,
+          "pcm_sha256": "01fcb6fe814e120333c05bb37b5bb3f79ac0ab8394ea4f12cf035f1b50a75542",
+          "last_two_start": 5.27999973,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhet a fán."
+        },
+        {
+          "frames": 109440,
+          "pcm_sha256": "6136e2af872571bcdac11c0b969a58132c92b8e8123b0ae8e53c47dd334b8572",
+          "last_two_start": 5.75999975,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen személy alakul."
+        },
+        {
+          "frames": 114560,
+          "pcm_sha256": "ab3a77b1f005ac086f00d3d185a6aa79e4d194697d74191195e056fd450cbb5e",
+          "last_two_start": 6.07999992,
+          "hypothesis": "A spektrum másik oldalán valaki egy felismerhetetlen, mi alakul."
+        },
+        {
+          "frames": 51040,
+          "pcm_sha256": "1ea4ba9074b1302beb36360882f470bafe4c27e7a6f9b2468795ada009456248",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 64000,
+          "pcm_sha256": "506fee1b9c3858b86611a5a15973437ff164a9ba94039f3dfe758d4790600f29",
+          "last_two_start": 3.3599999,
+          "hypothesis": "Hát a személy alakul, aki úgy érzi, hogy ment."
+        },
+        {
+          "frames": 78240,
+          "pcm_sha256": "45fc0982ba7e73fd58da32cb6100dcc0059769962b902b7425556420dc5d5dd9",
+          "last_two_start": 4.23999977,
+          "hypothesis": "hát a fán személy alakul, aki úgy érti, hogy mintán a csoport."
+        },
+        {
+          "frames": 92800,
+          "pcm_sha256": "af5f097fb64e78ec5e01d26c4f1347f9a66fd56d24022b217d78bf65ed77abae",
+          "last_two_start": 5.03999996,
+          "hypothesis": "hát a fán személy alakul, aki úgy érzi, hogy minden a csoport által léte."
+        },
+        {
+          "frames": 108800,
+          "pcm_sha256": "aba08c58b2820500b28240ffe7e93735c20a5113ae6af8382503b573dc20c9f8",
+          "last_two_start": 5.5999999,
+          "hypothesis": "hát a személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot."
+        },
+        {
+          "frames": 116480,
+          "pcm_sha256": "4c09dd6713c9bac8887f71ac6e90ae3f94baa965ef541c06e77af9390e534b85",
+          "last_two_start": 6.39999962,
+          "hypothesis": "hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg."
+        },
+        {
+          "frames": 49440,
+          "pcm_sha256": "fc3926d8ebd39e3c61e2a3c93029461dde79570a3fea4955dc3475b53051e0d0",
+          "last_two_start": 1.67999995,
+          "hypothesis": "Tämä on nyt tulkot, näkkää päätöstä."
+        },
+        {
+          "frames": 62400,
+          "pcm_sha256": "36847dd77e1c4c4a0592c7f4a6b906178af1314802fde1e801b331d9af4a0cc7",
+          "last_two_start": 3.3599999,
+          "hypothesis": "Tá létre dolgot, meg kell váltottem, és a saját."
+        },
+        {
+          "frames": 76160,
+          "pcm_sha256": "3b5a880111768cf54bab61ec53e506616e0f12bf289aa42d311698a597bcf822",
+          "last_two_start": 4.07999992,
+          "hypothesis": "Tá létre dolgot, meg kell váltott, és a saját tává kell."
+        },
+        {
+          "frames": 91040,
+          "pcm_sha256": "8846c85d9622980103f60f525d1528b5016c2668019bf2694105d67853bd1969",
+          "last_two_start": 4.63999987,
+          "hypothesis": "Tá létraotott dolgot, meg kell váltottam, és a saját tává kell tennem."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "fbec776270ffbd0f25376283eb7aa8c01bf0f48bc59a1c0f8efe6cb683c83955",
+          "last_two_start": 4.63999987,
+          "hypothesis": "Létregatott dolgot meg kell váltottam, és a saját tává kell tenni."
+        },
+        {
+          "frames": 35680,
+          "pcm_sha256": "a2596033be0bbafba9d815fec83ccf3e7b700bc0c56be784d805a75187ad7aa4",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15360,
+          "pcm_sha256": "6d8cef62b11a7f8837bf99e2be5424299b28137cde52c1bbdbdb5e25afd53127",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 18560,
+          "pcm_sha256": "9b5619493a3dbc6228f509e34d7e2f27ca880382476a091b4ec805a40003efc0",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 21228.571899991948,
+      "receipt": "hu-04-candidate.txt",
+      "receipt_sha256": "8b43c1a8a7fbde62b2d5e04fd9e84a807bff3ba186cec16127ba96321e1eb4fe"
+    }
+  ]
+}

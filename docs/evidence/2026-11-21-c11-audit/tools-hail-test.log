@@ -1,0 +1,12 @@
+Internal ctest changing into directory: /tmp/baffle-c11-20261121/build-tools-hail
+Test project /tmp/baffle-c11-20261121/build-tools-hail
+    Start 1: hail_retirement_ownership
+1/1 Test #1: hail_retirement_ownership ........   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+Captured 48000 frames; reference 48000 frames. No acoustic silence or timing calibration inferred.
+PASS raw replay/EOS, VAD receipts, retained-output guard and unreviewed-onset rejection; optional virtual cancellation

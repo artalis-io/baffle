@@ -1,0 +1,16 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c last_two=-1 text=
+DECODE frames=16320 sha256=61aaf8561566bb91fc2c5e89a58491a183e03c853c5f5a6c137c45ad5784eea3 last_two=-1 text=
+DECODE frames=27840 sha256=5f899b56b314c25c9dd6e89bb2064bd18cf9f392016230249906409b8e2957d2 last_two=0.799999952 text=Musa dilsa.
+DECODE frames=40960 sha256=152a6112ce5ea492eb4d8f72adee74106375037c518fb954db834a7c4598734b last_two=1.83999991 text=Cum să dilsază decută așa?
+DECODE frames=55040 sha256=917b2772dd316ef5e30d312c2e9ac729b6b20586fe209a178c8752065c946561 last_two=2.39999986 text=Hussa dial sata di quiltata sti mutat.
+DECODE frames=70720 sha256=0946d04c614df32f1dde4dba8867be49169af7fa2ae7ec7ced586fe393046615 last_two=3.51999998 text=20. századik utatás kimutatása, hogy a lenátikai város.
+DECODE frames=88000 sha256=e2648a5d5a535b01830426a979a8548c5c8130f8f00eacfa71e0cd6621825529 last_two=3.5999999 text=20. századik utatás kimutatna, hogy a lenatikai változtatosságnak.
+DECODE frames=107040 sha256=aa06f31e547630577a3fb3774d9c9fecece7ce337401e71eb4734d4f8bc1ae59 last_two=5.67999983 text=20. századik utatás kimutatna, hogy a denatikai változatosságnak, két variációja van,
+DECODE frames=127840 sha256=89b305ef94ca04a89c9f1b88975710277d890f09347403d34cc76163638ddad2 last_two=6.96000004 text=20. századik utatás kimutatna, hogy a denatikai változatosságnak két variációja van, retett és
+DECODE frames=128000 sha256=fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d last_two=6.96000004 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és
+DECODE frames=67520 sha256=58e7f3c2ae1910f374652b6bcee238653da25400bff54ba73b06ddcf51355b67 last_two=1.67999995 text=A szója van, rejtett és kifejezet.
+DECODE frames=78080 sha256=ed4528e433b8b1e12a56e41123f85974a37b96554e5fd9559ce8b3583d539efd last_two=1.67999995 text=rejtett és kifejezett.
+HISTORY=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, rejtett és kifejezett.
+DROPPED=0
+STATUS=Listening

@@ -1,0 +1,43 @@
+{
+  "dataset": "google/fleurs",
+  "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "license": "CC-BY-4.0",
+  "attribution": "Google Research, FLEURS",
+  "pilot_manifest_sha256": "381337669f5ff818ea05365ed6adb6016be6f3f5a1be29960b1d949edd7116c0",
+  "holdout_selection": "After excluding pilot IDs and skipping 4 previous holdouts per language, next four unique valid 2..20s mono16k IDs; before recognition",
+  "references": "Publisher transcripts, not newly human reviewed; no ASR reference hints",
+  "criteria": [
+    "Reduce regression word errors, including quiet en-03/en-04",
+    "Holdout pooled WER must not worsen; disclose every per-case regression",
+    "No new speech blanks or first-word losses relative to baseline",
+    "No false non-speech captions, no dropped frames",
+    "Unchanged 250ms preroll/900ms endpoint/600ms refresh/8s window; no new lookahead"
+  ],
+  "cases": [
+    {
+      "name": "speech-then-colored-noise",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-colored-noise.wav",
+      "wav_sha256": "73dda292376dd0e0d0d6ebdab2bd40d451e93e29e862ab407e2957106b113ac6",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement"
+    },
+    {
+      "name": "speech-then-hum",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-hum.wav",
+      "wav_sha256": "6fbf473e8de93070a139c7b1af0cf9bd499cf1993c78f386d496160fc93dea2d",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement"
+    }
+  ],
+  "selection": "Predeclared follow-up: same quiet speech then stationary background, no parameter tuning"
+}

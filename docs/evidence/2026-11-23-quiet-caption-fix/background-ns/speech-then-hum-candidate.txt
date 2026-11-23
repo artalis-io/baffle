@@ -1,0 +1,27 @@
+REPLAY queue_capacity=512 input_frames=156160
+DECODE frames=5600 sha256=078f26de0e2db9e90ea24cf67a60822ac95d57544491a75f308ed472a0bc1267 last_two=-1 text=
+DECODE frames=16000 sha256=b9bd1cf8bb8c09ce425ecc14b8722c2cb495e88b92e62a99044d6fd290183ca5 last_two=0.479999989 text=The cabbage juice change.
+DECODE frames=27200 sha256=53cb95a6443223080b3273decfd099a6aa96fde3f1dc7f21245bf1ce9064431e last_two=0.639999986 text=Ha ha ha
+DECODE frames=39040 sha256=1326522451bb35906ea71777b01b931147eb31d096f1fdd2e95d13e3613a3048 last_two=1.5999999 text=The cabbage juice changes color depending on how
+DECODE frames=51520 sha256=4b87338c2b06658c312b55f5fb5058693c8d6ed5d19d491358c29ecb26f3dc84 last_two=2.07999992 text=Cabbage juice changes color depending on how acidic basically.
+DECODE frames=64960 sha256=abc0e4b4501163abd76fc3893a6a2f597bf2c86f77a925ea7d3ff8f5d816cdc2 last_two=3.19999981 text=The cabbage juice changes color depending on how acidic basic alkaline they
+DECODE frames=78880 sha256=40f4a9b0f8fbb3862462c1a4722c39e4910825e6037e8931191de1731bcd11cd last_two=4.07999992 text=The cabbage changes color depending on how acidic, basic, alkaline the chemical is.
+DECODE frames=93440 sha256=b0db9c4ff227f7b3ae2f5afe5dcb6b5a5d7cadb51850cdb0e44c65f85cf0d2a5 last_two=4.15999985 text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DECODE frames=96000 sha256=e421bc7debdd005a28aa7c095128a5eeef028cdf10c66c77b43daa44da689c8c last_two=4.15999985 text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DECODE frames=58400 sha256=991a00c439ae5aa9e04675a3c779f68f87752c1266ca836b95d0c4f91271605a last_two=-1 text=
+DECODE frames=61760 sha256=410d501c33cdea198fde7fe158110d2540e11bcf40d70ed322d85af819ed8cb8 last_two=-1 text=
+HISTORY=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=59
+MEASURE index=0 decode_ms=49.827000 completed_after_source_start_ms=1701.488000
+MEASURE index=1 decode_ms=87.806800 completed_after_source_start_ms=2398.017800
+MEASURE index=2 decode_ms=127.029300 completed_after_source_start_ms=3131.793400
+MEASURE index=3 decode_ms=170.476600 completed_after_source_start_ms=3917.552300
+MEASURE index=4 decode_ms=219.439200 completed_after_source_start_ms=4740.519400
+MEASURE index=5 decode_ms=264.564700 completed_after_source_start_ms=5613.928900
+MEASURE index=6 decode_ms=314.469800 completed_after_source_start_ms=6531.048300
+MEASURE index=7 decode_ms=373.137200 completed_after_source_start_ms=7506.180000
+MEASURE index=8 decode_ms=379.294000 completed_after_source_start_ms=7885.679500
+MEASURE index=9 decode_ms=234.901900 completed_after_source_start_ms=8738.832900
+MEASURE index=10 decode_ms=253.342700 completed_after_source_start_ms=8992.335000

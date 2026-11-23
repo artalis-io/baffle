@@ -1,0 +1,43 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16160 sha256=97616c606df17bf43d152f8432d40700bab1fa2877240ec5eecd66dfb548c7af last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=11360 sha256=565bea91c0171aa89235dba8bb57d2ccf920183324df320d7ab70286c47902fa last_two=0.0799999982 text=Um com
+DECODE frames=22400 sha256=d2d8ef3f20da5f94ee83cb5cd428910cb1e0fa97396b185bdcb5e3e3ae6b6d44 last_two=0.0799999982 text=Hun command
+DECODE frames=34080 sha256=104c4644a5395b96320e9ee70576a4fa18c00b6a889faa239ca77bc410e0d6b0 last_two=1.43999994 text=Hong Kong Maverick Hong Kong.
+DECODE frames=46400 sha256=2ca9e5ac5af86b0d8be2d23b6ea678465d2fa05fcc0b362f7238c55978b82b4b last_two=1.75999999 text=Hong Kong Never, a Hong Kong psychiatric.
+DECODE frames=59360 sha256=336980cec0035f0fb50a5916569467ce6f3868791b2d3ccd9b85ea4e90ef7146 last_two=2.15999985 text=Hongkong nevyt, a Hongkong Secretary Katta
+DECODE frames=73120 sha256=361cc42e2fabcfc4b5609f72f717826545a9ad61788c7d3476d54ea8a577f6b1 last_two=3.5999999 text=Hongkong nevét, a Hongkong sziketről kapta és ehás.
+DECODE frames=87680 sha256=d81b8cb37d677c53d4d59396ae7b2f1e9b14b5b7710feae6503704c8f7594313 last_two=4.48000002 text=Hongkong nevét a Hongkong szikatról kapta, és ehági sokturista tanítán.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=48000 sha256=81734a5b0fc3c2def298dab165aa0c2267026691d2a802e4b5cc625282270dd1 last_two=-1 text=
+DECODE frames=61120 sha256=930cb264c8b31ee8af35861c178a136de3154f9c52468034647446518b8574f9 last_two=2.07999992 text=sok törista számára a figyelem középpontjában.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+DECODE frames=79200 sha256=9c54049112358a207b0da12c130fe5f0427671a863304b3fcb1d6929d3aed90b last_two=2.72000003 text=sok turista számára a figyelem kötéppontjában áll.
+DECODE frames=10080 sha256=73beea72132c00f1e9fd1154662938490b34a5def2afb534703c99d0cc5e6bb0 last_two=-1 text=
+DECODE frames=20960 sha256=e639695f053c2dc6d1a9fc674042b335e16cc22e7f38c2f6263fef7f94b8b8ec last_two=-1 text=Oh
+DECODE frames=24640 sha256=8683a376a9d10a60b3813a79851dd4eaf293b8d324789f1a1eba05bcf2d9525c last_two=-1 text=
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok sok turista számára a figyelem kötéppontjában áll.
+
+Oh
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=38
+MEASURE index=0 decode_ms=49.654200 completed_after_source_start_ms=2099.746500
+MEASURE index=1 decode_ms=86.555700 completed_after_source_start_ms=2793.357700
+MEASURE index=2 decode_ms=94.104300 completed_after_source_start_ms=2926.311400
+MEASURE index=3 decode_ms=68.682200 completed_after_source_start_ms=3624.596600
+MEASURE index=4 decode_ms=109.680300 completed_after_source_start_ms=4359.851900
+MEASURE index=5 decode_ms=151.868900 completed_after_source_start_ms=5124.712000
+MEASURE index=6 decode_ms=201.395200 completed_after_source_start_ms=5928.632600
+MEASURE index=7 decode_ms=243.037000 completed_after_source_start_ms=6801.774000
+MEASURE index=8 decode_ms=297.511100 completed_after_source_start_ms=7710.482800
+MEASURE index=9 decode_ms=353.732700 completed_after_source_start_ms=8665.095200
+MEASURE index=10 decode_ms=391.466000 completed_after_source_start_ms=9332.271800
+MEASURE index=11 decode_ms=200.631800 completed_after_source_start_ms=10163.290600
+MEASURE index=12 decode_ms=244.847000 completed_after_source_start_ms=11026.886800
+MEASURE index=13 decode_ms=301.247400 completed_after_source_start_ms=11928.445500
+MEASURE index=14 decode_ms=317.301000 completed_after_source_start_ms=12245.927200
+MEASURE index=15 decode_ms=60.273900 completed_after_source_start_ms=12912.352400
+MEASURE index=16 decode_ms=106.670300 completed_after_source_start_ms=13649.173600
+MEASURE index=17 decode_ms=118.007700 completed_after_source_start_ms=13882.329800

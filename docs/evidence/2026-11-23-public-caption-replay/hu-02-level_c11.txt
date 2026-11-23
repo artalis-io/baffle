@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=Néhány nem úgy érzék, igaza volt, de sokan hitték az ellenkezőjét, hogy a na rendszer a fölfelő for, beleértve a napot, sőt, a több csillabait is.
+validated_last_two_start_seconds=10.8800001
+decode_ms=1396

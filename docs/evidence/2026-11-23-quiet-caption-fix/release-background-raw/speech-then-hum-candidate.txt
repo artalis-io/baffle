@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=156160 caption_profile=raw
+DECODE frames=5600 sha256=0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf last_two=-1 text=
+DECODE frames=16160 sha256=ac79bc68893c4f09a5ddacc49e4fb38f811892598976a0248dd64749ad824bca last_two=0.479999989 text=The cabbage juice changes.
+DECODE frames=27040 sha256=a7873c0db26c250f5176af58efa903e7d952da9f81e9d2b9a7ebf3cc8c077fdb last_two=0.479999989 text=Ha ha ha
+DECODE frames=39200 sha256=decd25afa7ef0e72d5383f4c41b8371e8988d2778136a38d6a6eadc2fc6a9c89 last_two=1.67999995 text=The cabbage juice changes color depending on how a
+DECODE frames=51520 sha256=b87ec9018e46e065c560851e924a9ad986409452d6e6600e1e1ff1ea6595fbc8 last_two=2.07999992 text=The cabbage juice changes color depending on how acidic, basically.
+DECODE frames=64800 sha256=0b32a93148cd3207b2417bf2e2db47925e29cf940bdb9491deabe8a107f184af last_two=3.19999981 text=The cabbage juice changes color depending on how acidic, basic alkaline that.
+DECODE frames=79200 sha256=7c6d56bc5f16e71de864f0ca75b396edf161611955bdafbf07e05328770ce488 last_two=4.07999992 text=The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.
+DECODE frames=93760 sha256=b4e8596cd2156d4194848fd6895a4256af31eb7554cf4d1444a114bb350a610c last_two=4.15999985 text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DECODE frames=96000 sha256=9bec2e8fd76b7a6baecc6b774ad36d2a37d2c3a8a1dc91a2ba482fdefd947d6e last_two=4.15999985 text=The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.
+DECODE frames=58400 sha256=f11be88c40b2cde3813ff439e2892fee56bbb685b8ab6be8379ab9f144b3c0bb last_two=-1 text=
+DECODE frames=72320 sha256=25266b3d5b0fb1ba39490d29644c8addf2a58f1cc9f586fa14fe1e2d23f9c66b last_two=-1 text=
+DECODE frames=86560 sha256=e0dc81c19e3cba4877e18ae94312b49785ccc9307441bb8647340deeee93d223 last_two=-1 text=
+DECODE frames=96000 sha256=28599b0610300b08fab2d2e39758e88491207d04d0d1f4412f685adc816eee18 last_two=-1 text=
+DECODE frames=61120 sha256=74af1879552ea333dace56e23ef919ece848ccfd1b671870953a72450e61a1a7 last_two=-1 text=
+HISTORY=The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=61
+MEASURE index=0 decode_ms=50.875700 completed_after_source_start_ms=1691.982200
+MEASURE index=1 decode_ms=88.166200 completed_after_source_start_ms=2391.202100
+MEASURE index=2 decode_ms=127.078600 completed_after_source_start_ms=3122.764100
+MEASURE index=3 decode_ms=170.976200 completed_after_source_start_ms=3909.267500
+MEASURE index=4 decode_ms=219.795400 completed_after_source_start_ms=4750.791000
+MEASURE index=5 decode_ms=264.023500 completed_after_source_start_ms=5624.189100
+MEASURE index=6 decode_ms=313.858500 completed_after_source_start_ms=6553.056700
+MEASURE index=7 decode_ms=374.203100 completed_after_source_start_ms=7528.646200
+MEASURE index=8 decode_ms=378.538300 completed_after_source_start_ms=7907.405000
+MEASURE index=9 decode_ms=235.653800 completed_after_source_start_ms=8745.268500
+MEASURE index=10 decode_ms=288.608000 completed_after_source_start_ms=9663.031600
+MEASURE index=11 decode_ms=339.910200 completed_after_source_start_ms=10607.354500
+MEASURE index=12 decode_ms=370.911500 completed_after_source_start_ms=11206.901200
+MEASURE index=13 decode_ms=241.039500 completed_after_source_start_ms=11895.463600

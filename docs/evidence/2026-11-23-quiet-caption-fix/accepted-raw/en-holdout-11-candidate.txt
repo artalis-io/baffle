@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=91520
+DECODE frames=5600 sha256=751681f8a5197b09ef1be98b53e62780e0b0241a117543bfeb6823461ddd1bcc last_two=-1 text=
+DECODE frames=16160 sha256=6ab66e0d105981a177ae13947f5c5f93fc8111dec9137d13bd2d92879f350efc last_two=-1 text=
+DECODE frames=27520 sha256=7440b309bc5868511d80fe67f8c763d95172fe50e266ea751acc94ef69ffe625 last_two=0.959999979 text=The Internet.
+DECODE frames=39360 sha256=289502d481efe428de5ee74957d52bd7eee817f204e772bec367341263cfb969 last_two=-1 text=
+DECODE frames=51680 sha256=bc2bc5fa49564ae549de5956c6cedc9ed27730e2ad58e802c807ef999fd407e6 last_two=-1 text=
+DECODE frames=65120 sha256=d89a20c6718e4ea56f0c1974763d2c1d1918ba9745e22f81b33e61d5ee028118 last_two=3.27999997 text=The Internet combines elements of both mass and inner.
+DECODE frames=78720 sha256=5e5a3a34beab748d8c62ac015ce606b48465fb48fcb2ab0119a68975676c7976 last_two=3.83999991 text=The Internet combines elements of both mass and interpersonal communication.
+DECODE frames=93600 sha256=41c99845b9f2d62acb66b011e22a269e154ae156800ff38c254f9fc966fec8ba last_two=3.83999991 text=The Internet combines elements of both mass and interpersonal communication.
+DECODE frames=96000 sha256=b427ed8809d81e6934bb55486b959c79ae7526989116a26e9ecd571f854c260d last_two=3.83999991 text=The Internet combines elements of both mass and interpersonal communication.
+DECODE frames=48000 sha256=806a23b728eab7b24798f272d84c359f60e45f5bcd639358ccc7786d00edcc5f last_two=-1 text=
+HISTORY=The Internet combines elements of both mass and interpersonal communication.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=60
+MEASURE index=0 decode_ms=49.901500 completed_after_source_start_ms=1353.303200
+MEASURE index=1 decode_ms=87.080200 completed_after_source_start_ms=2071.520300
+MEASURE index=2 decode_ms=127.766000 completed_after_source_start_ms=2807.063800
+MEASURE index=3 decode_ms=167.626300 completed_after_source_start_ms=3585.900100
+MEASURE index=4 decode_ms=217.119600 completed_after_source_start_ms=4424.505000
+MEASURE index=5 decode_ms=263.850100 completed_after_source_start_ms=5291.509000
+MEASURE index=6 decode_ms=312.524100 completed_after_source_start_ms=6205.329100
+MEASURE index=7 decode_ms=372.785200 completed_after_source_start_ms=7179.704000
+MEASURE index=8 decode_ms=374.343200 completed_after_source_start_ms=7554.258000
+MEASURE index=9 decode_ms=200.320800 completed_after_source_start_ms=7754.802500

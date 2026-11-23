@@ -1,0 +1,14 @@
+DECODE frames=5600 sha256=e9b0e9fe82d205aa3756e5e38af95fcd67fdfb141b60878136898a2c6a76e207 last_two=-1 text=
+DECODE frames=16000 sha256=c04550423d7bbf72dcf5d64097baea35332f52b999fddeda6f2ebcb7afb95718 last_two=0.16 text=However, it
+DECODE frames=27840 sha256=4ded033afe59c54123451ae5a8fc23932ed2eaabec68760c342e7787e102ef6c last_two=1.12 text=However, due to the slow
+DECODE frames=40960 sha256=d9e2330d3a385710a8b99e3cf4c983315ab4a903d0c2fdc5fd06102929e44fa2 last_two=1.52 text=However, due to the slow communication,
+DECODE frames=55040 sha256=af2250e84295870eba3ae4c466210d9a9596a0e47bccaae9386e593b5ffe2dd1 last_two=1.92 text=However, due to the slow communication channels.
+DECODE frames=70720 sha256=0787fe65edc6298f6cea3d9ae0a70bcb962399de39e797aec1ef518e33c21253 last_two=3.92 text=However, due to the slow communication channels, styles in the
+DECODE frames=86720 sha256=074e7611a13d899419d64324dc4c035cf8637778d7c045a9a6a7f18695977eb6 last_two=4.72 text=However, due to the slow communication channels, styles in the West could last
+DECODE frames=105280 sha256=0862d5fea282dc512389d8d9f87470ef972b58a65abd53c4f584196ff350a16d last_two=6 text=However, due to the slow communication channels, styles in the West could lag behind by twenty.
+DECODE frames=126400 sha256=0a4c0c27ef1d14599604214173110b454306442786cea1527606554237292b7e last_two=7.36 text=However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.
+DECODE frames=128000 sha256=1c08d497f75c8332820b558594cc8badbe735a92b2b9264a9b92d0165e78dc5d last_two=7.28 text=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DECODE frames=42880 sha256=9a1372c87a10b7ce44010d347358f97bb5c25dc67507424d97296085a0bd3815 last_two=-1 text=
+HISTORY=However, due to the slow communication channels, styles in the West could lag behind by twenty five to thirty years.
+DROPPED=0
+STATUS=Figyelek · felismerés: 210 ms

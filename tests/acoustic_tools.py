@@ -78,15 +78,18 @@ with tempfile.TemporaryDirectory(prefix="owned-",dir=parent) as temporary:
     assert result["verdict"]=="UNQUALIFIED" and result["measurements"] is None
     if len(sys.argv)>3:
         acquire=str(pathlib.Path(sys.argv[3]).resolve()); stereo=d/"stereo.f32"; stereo.write_bytes(bytes(48000*8))
-        for behavior in ("stop","restart"):
+        for behavior in ("stop","restart","none"):
             prefix=d/behavior
-            subprocess.run([acquire,"1","-","-",str(stereo),"1",str(prefix),"100",behavior],check=True)
+            subprocess.run([acquire,"1","-","-",str(stereo),"1",str(prefix)]+([] if behavior=="none" else ["100",behavior]),check=True)
             metadata=[json.loads(line) for line in pathlib.Path(str(prefix)+".jsonl").read_text().splitlines()]
             session=metadata[0]; assert session["virtual"] and session["capture_frames"]>0
+            assert session["flush_requested"] == (behavior!="none")
+            assert session["flush_acknowledged"] == (behavior!="none")
+            assert session["acoustic_calibration"] is None
             assert session["capture_lost_frames"]==0 and session["reference_lost_frames"]==0
             capture=[r for r in metadata if r["type"]=="block" and r["leg"]==0]
             assert sum(r["frames"] for r in capture)==session["capture_frames"]
             assert len({r["epoch"] for r in capture})==1
             events=[r for r in metadata if r["type"]=="event"]
-            assert any(r["state"]==4 and r["generation"]==2 and r["result"]==0 for r in events)
+            assert any(r["state"]==4 and r["generation"]==2 and r["result"]==0 for r in events) == (behavior!="none")
 print("PASS raw replay/EOS, VAD receipts, retained-output guard and unreviewed-onset rejection; optional virtual cancellation")

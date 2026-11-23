@@ -1,0 +1,20 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=d09ce5bb69651a90c4a867dc9d78818dbdb0e078515201244311a2ec65309075 last_two=-1 text=
+DECODE frames=15840 sha256=0651b5f4e906d32e5d1afbaab4e114287338d9baa4838f70dccebd53e0f46287 last_two=-1 text=
+DECODE frames=26880 sha256=04d1807454196a9f3354b8e3a38450daaed86d918fcf6ad8c1f4f83db605332e last_two=-1 text=
+DECODE frames=38880 sha256=267aae5d3d63401c141546a70cde7e67c43e54755be2725b601350a552e1da19 last_two=-1 text=
+DECODE frames=51360 sha256=fcd17d6e628b6e270ea1d5898a05c536f91c70ea864ecaaf4281645b3c72a90c last_two=2.31999993 text=To the north and within easy reach is the romantic and
+DECODE frames=64960 sha256=c4946e27e608b3fe3564ffc12d42518fae3a29c9803b1b10b648c10375e3b1d5 last_two=3.11999989 text=To the north and within easy reach is a romantic and fascinating town.
+DECODE frames=78720 sha256=7ab20c8fc4c3b7bccfc261688b060f4c4a788be60e08501f842bb4b70c546f27 last_two=4 text=To the north and within easy reach is the romantic and fascinating town of Sintra and
+DECODE frames=93600 sha256=e26e605034987808f96cdbbf5030c463b897b377c9a2328ca7d3f406e483a95a last_two=5.19999981 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was baby.
+DECODE frames=109440 sha256=b629670c8933e4e7088b47c5d7f10ee7f7df5e1e38e10282543e0dd452cda766 last_two=5.5999999 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous.
+DECODE frames=126400 sha256=c6948ae33420aebe20f0c66be6991de7c2cd2082e7cc6d02e1d99c500fc56d7c last_two=6.87999964 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous. To foreigners after
+DECODE frames=128000 sha256=31760ddba36bb75fa84312350df847a982a31a07e2db5959e2ec0dd9aeafbe1f last_two=7.44000006 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous. To foreigners after a glow
+DECODE frames=56160 sha256=2148ec4bf6ebde4fe0077c90d8392eab7d8540beb358ef798111a09053ec50d2 last_two=-1 text=
+DECODE frames=69760 sha256=0914fbaf05407620b350b5f9a02ec42b05a354b27928acb62a83798ccb560b2c last_two=-1 text=
+DECODE frames=84320 sha256=3b995d2adfdf2ad87ed18de7f30c4ae6e0329e24434dc67fb60f86a15e256cad last_two=4.07999992 text=to foreigners after a glowing account of the splinters recorded by Lord Byron.
+DECODE frames=96000 sha256=49de80c0ce5ff3ebdb97796c9eaf2a415d33e9567fa5addcaf162be0c1f4d716 last_two=-1 text=
+DECODE frames=57120 sha256=6d7d8ebb988d4a79552133b7d318fc1e25cb3191f225d67e1fd4cb209a80cf13 last_two=1.12 text=Splinter is recorded by Lord Byron.
+HISTORY=To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous. To foreigners after to foreigners after a glowing account of the splinters recorded by Splinter is recorded by Lord Byron.
+DROPPED=0
+STATUS=Listening

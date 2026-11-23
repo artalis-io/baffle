@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16000 sha256=476d05c2bd90403314ec315706334d6ad86a399b477406514c097655c1488440 last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=11200 sha256=911d761c53b51060cfc4319d381a64ab5e247f4865375160d4a7f13fcc732c58 last_two=-1 text=Okay.
+DECODE frames=21920 sha256=3b0a3c729a171065d2e5c3c2f6419dc5b4f855d7fa982da172a2787a7a596cc0 last_two=-1 text=Hunka
+DECODE frames=33440 sha256=e58f58410fefc99fcfa05c3160a2ad95f303eee78f127abf9e9ce6369b46bad2 last_two=0.399999976 text=Hong Kong Maverick
+DECODE frames=45920 sha256=c0f149aeb8313a092fcca4f28c9c1878516c1e3378d224d3df49b5ba08722b12 last_two=1.75999999 text=Hong Kong Member a Hong Kong Psychiatry
+DECODE frames=58720 sha256=3fb5be44974eedabe42bd4262e38c737ed854808e89fcea8fea3a5c3e175a156 last_two=2.15999985 text=Hongkong nevét, a Hongkong Szikater katta.
+DECODE frames=72160 sha256=3d0ec5222283b375d158850406d5622871d760bab54a1b89b03c743df86f8a74 last_two=4 text=Hongkong nevét a Hongkong Sziketről kapta és at a hers.
+DECODE frames=86240 sha256=e7f46e0c40c314631af9bfd834aff23a843c031bbf350169a8ad589f1ea991fd last_two=4.48000002 text=Hongkong nevét a Hongkong Sziketra kapta és a sok turista.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=47840 sha256=cff3116470d4cdcd1dabd62a287a58cb568c593b0fa12c00616f63d29912a0f8 last_two=-1 text=
+DECODE frames=60960 sha256=11c562fd6b242b07b8ebd5a040ccf5889a651969f4a0baf81ad04b44f3860cb8 last_two=2.07999992 text=sok törista számára a figyelem középpontjában.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=38
+MEASURE index=0 decode_ms=49.763400 completed_after_source_start_ms=2070.760800
+MEASURE index=1 decode_ms=85.719300 completed_after_source_start_ms=2781.960800
+MEASURE index=2 decode_ms=92.918600 completed_after_source_start_ms=2915.707300
+MEASURE index=3 decode_ms=67.041800 completed_after_source_start_ms=3596.076600
+MEASURE index=4 decode_ms=108.274700 completed_after_source_start_ms=4325.987900
+MEASURE index=5 decode_ms=148.781800 completed_after_source_start_ms=5085.379600
+MEASURE index=6 decode_ms=191.573000 completed_after_source_start_ms=5891.234700
+MEASURE index=7 decode_ms=236.739100 completed_after_source_start_ms=6739.886300
+MEASURE index=8 decode_ms=286.962600 completed_after_source_start_ms=7627.390800
+MEASURE index=9 decode_ms=339.863900 completed_after_source_start_ms=8577.511500
+MEASURE index=10 decode_ms=378.998000 completed_after_source_start_ms=9341.934400
+MEASURE index=11 decode_ms=197.426800 completed_after_source_start_ms=10154.388900
+MEASURE index=12 decode_ms=239.342800 completed_after_source_start_ms=11016.228700
+MEASURE index=13 decode_ms=294.892200 completed_after_source_start_ms=11904.344200

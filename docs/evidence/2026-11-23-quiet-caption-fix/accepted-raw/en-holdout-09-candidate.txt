@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=174720
+DECODE frames=5600 sha256=677eaf481c6d40c324e1762d7c68a401783b96a3e8ae6cbf9a9e7fdb3d0df75d last_two=-1 text=
+DECODE frames=16160 sha256=2218cc9656fb25271fa9dcdc91fc2607a247411b4b3123e4845292c11bf4047b last_two=0.239999995 text=Pride X.
+DECODE frames=27200 sha256=46f1570b409b7752631cd15b8f49f44af25bcded9496e6b9883db1250530d9c0 last_two=1.03999996 text=Prize X much like
+DECODE frames=39360 sha256=b9ab93558139261b06c9cef61da1f8e5e7eefdc1d938e634710dde1a0e17ceac last_two=-1 text=
+DECODE frames=51840 sha256=c0c4aaa49aa2b91a5caa13813702a15b46b040ce7a7e5a89376ba83323da9763 last_two=2.48000002 text=prides acts much like in packs of wolves or dogs, animal.
+DECODE frames=65120 sha256=b3bde30e30377c80d25b503d7afb5e6fef95be4dd1e21bc500e48de37439d925 last_two=2.96000004 text=prides actually much like packs of wolves or dogs, animals surprisingly.
+DECODE frames=78880 sha256=59153361556b54fdcd7108c77321147f45c3b6844e999837e4f7c3aa6025a364 last_two=4.23999977 text=prides acts much like the packs of wolves or dogs, animals surprisingly sim similar to
+DECODE frames=93760 sha256=f414ea76a1ffdedbd3dc0e129197b7cf31d63b86ef452df35640b89f8267e0d7 last_two=5.19999981 text=prides acts much like the packs of wolves or dogs, animals surprisingly simil similar to lions but not other
+DECODE frames=96000 sha256=311f7db53fcaecfd361ac1b1c0dfeaf3f3084f74d94ba99638a790145120548b last_two=5.35999966 text=prides acts much like the packs of wolves or dogs, animals surprisingly similar similar to lions, but not other things.
+DECODE frames=51840 sha256=b38b7c08f59437a451762fa5d0d9ea63af36e97538600db10929fba876f02d89 last_two=-1 text=
+DECODE frames=65280 sha256=6c82c9de36b091acb3fc7d9397ba48a50a1982b573327662c9682819e63a9a16 last_two=-1 text=
+DECODE frames=79360 sha256=73446d49bb8bb3518e1f66fa73ca4ef634effebce408874a1bb86340e2a10729 last_two=4.23999977 text=similar to lions, but not other big cats in behavior, and also very deadly to the thread.
+DECODE frames=93920 sha256=d46240867443ca285da6dc9725afb6e038504da1a3d05bb970ce6fb53d3c21f6 last_two=4.31999969 text=And also very deadly to the clay.
+DECODE frames=96000 sha256=5573dd0905ababb3750e36375ad99ff84d5f5903c075a9070cf61d5f6f864a26 last_two=-1 text=
+DECODE frames=51040 sha256=8a699801b6f68756c565497c001e8a1fc8a95077627fec954aae328c3e0d492a last_two=-1 text=
+HISTORY=prides acts much like the packs of wolves or dogs, animals surprisingly similar similar to lions, but not And also very deadly to the clay.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=65
+MEASURE index=0 decode_ms=51.505500 completed_after_source_start_ms=2572.188800
+MEASURE index=1 decode_ms=88.331300 completed_after_source_start_ms=3274.540600
+MEASURE index=2 decode_ms=128.056600 completed_after_source_start_ms=4008.060600
+MEASURE index=3 decode_ms=168.314200 completed_after_source_start_ms=4802.697000
+MEASURE index=4 decode_ms=219.117800 completed_after_source_start_ms=5624.614400
+MEASURE index=5 decode_ms=265.053600 completed_after_source_start_ms=6509.295400
+MEASURE index=6 decode_ms=315.921500 completed_after_source_start_ms=7427.060700
+MEASURE index=7 decode_ms=375.532300 completed_after_source_start_ms=8416.915600
+MEASURE index=8 decode_ms=385.485600 completed_after_source_start_ms=8802.611300
+MEASURE index=9 decode_ms=212.445700 completed_after_source_start_ms=9628.663500
+MEASURE index=10 decode_ms=261.719800 completed_after_source_start_ms=10514.035300
+MEASURE index=11 decode_ms=315.870500 completed_after_source_start_ms=11432.105700
+MEASURE index=12 decode_ms=371.317400 completed_after_source_start_ms=12404.102200
+MEASURE index=13 decode_ms=374.172800 completed_after_source_start_ms=12778.485700
+MEASURE index=14 decode_ms=208.209500 completed_after_source_start_ms=12986.919100

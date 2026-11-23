@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=80000 caption_profile=ns
+DECODE frames=5600 sha256=9bb8c7f313025a0722819ffb333399b776e58fb0dd0ba54f4a5af6670a411b96 last_two=-1 text=
+DECODE frames=16160 sha256=0e56802554acf96d03b6e177e9a315729236b8be01c99a53c7c0206012af4d0f last_two=-1 text=
+DECODE frames=26880 sha256=a2abf85ae5af8a9cef833c803628303b2815d51a12fcf44c66e33dd9f7390866 last_two=-1 text=
+DECODE frames=39040 sha256=19b8d21f5d536bda0682befebce3c73c01603c949d71706214b0c41874117d90 last_two=-1 text=
+DECODE frames=51200 sha256=4d66931835d56c72a3a00557df2b18c397f22e6ed596884e94c60c15e768d9f8 last_two=-1 text=
+DECODE frames=64160 sha256=06f77e6341f9da8d9ccdeb96eca09be68c96ab056bad74962a4bc9e493d4032d last_two=-1 text=
+DECODE frames=78080 sha256=580a52892449cbc77a30af8d2b7453a9d41c41b25f38a4dd97ad90bc591095c5 last_two=-1 text=
+DECODE frames=92640 sha256=a403302e748bc291bf5f9a712b57b1441bd05e66c43f783a09d6519602ac5e8b last_two=-1 text=
+DECODE frames=96000 sha256=b0ccef31708f4448056764783c6d0783ed93a6d09f0e2060df9c582ce5a76c10 last_two=-1 text=
+DECODE frames=50240 sha256=9f1bc287a5683028c6c197c2ef176f302e085a93674fee9182fd60428a6abe86 last_two=-1 text=
+HISTORY=
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=39
+MEASURE index=0 decode_ms=50.105800 completed_after_source_start_ms=1157.560900
+MEASURE index=1 decode_ms=85.932300 completed_after_source_start_ms=1855.019500
+MEASURE index=2 decode_ms=122.861200 completed_after_source_start_ms=2583.817900
+MEASURE index=3 decode_ms=167.584700 completed_after_source_start_ms=3365.064400
+MEASURE index=4 decode_ms=206.238500 completed_after_source_start_ms=4187.160000
+MEASURE index=5 decode_ms=259.204000 completed_after_source_start_ms=5047.404600
+MEASURE index=6 decode_ms=305.563000 completed_after_source_start_ms=5960.612000
+MEASURE index=7 decode_ms=365.374900 completed_after_source_start_ms=6935.000300
+MEASURE index=8 decode_ms=372.516500 completed_after_source_start_ms=7307.727900
+MEASURE index=9 decode_ms=206.614800 completed_after_source_start_ms=7514.601900

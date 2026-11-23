@@ -1,0 +1,29 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=51237b31a29e75ff70ff37c356342f90afafc940131e666af3b0e7bb1591692c last_two=-1 text=So
+DECODE frames=16480 sha256=d6fc6d52a516c0cd59fbcb2c14b5c976953870d2a6fdf0e431ca80503e833dcd last_two=0.479999989 text=To the north and with
+DECODE frames=19200 sha256=ff2e0eaaf0f4dcc4f75eecb6aec437f555bddd22f1c575ae2f916ec2af85fda8 last_two=0.639999986 text=To the north and within east.
+DECODE frames=5600 sha256=de648c53f083cc0b8ad10ba63c3bfba9b496ce9a7e313a315a3c7546826068ce last_two=-1 text=
+DECODE frames=15840 sha256=72a33663d903aa5ed61957e360e3e6eba28a413647ad1fd6870335ee2215812e last_two=0.319999993 text=So foreigners up.
+DECODE frames=22080 sha256=f2fa331c2bc53f59acd590828b45094e6ad327602732ce9ac83254fc0aa0869b last_two=-1 text=
+DECODE frames=5600 sha256=9ef28bd6cac26b014d9a183faf17a96a842071e4b330b0bd977aab1e7756df16 last_two=-1 text=
+DECODE frames=16320 sha256=9dcf88cb28b1fbb096432ee4646149839213221730363bec2f76e7fe8c1971e1 last_two=0.0799999982 text=Splendid recording.
+DECODE frames=27680 sha256=137a75a72d14f65376541569074be4f3c3afe97fb5d492af3df9ecb8426d31b9 last_two=1.12 text=Splinter is recorded by Lord W.
+DECODE frames=28960 sha256=83eb6876911fa9b92c7905a1e8e4a101d3b1195917614302181d87407701a161 last_two=1.12 text=Splinter is recorded by Lord Wy
+HISTORY=To the north and within east.
+
+So foreigners up.
+
+Splinter is recorded by Lord Wy
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=20
+MEASURE index=0 decode_ms=50.156900 completed_after_source_start_ms=1616.880900
+MEASURE index=1 decode_ms=86.084500 completed_after_source_start_ms=2330.632200
+MEASURE index=2 decode_ms=94.149900 completed_after_source_start_ms=2497.565600
+MEASURE index=3 decode_ms=48.548400 completed_after_source_start_ms=7821.017200
+MEASURE index=4 decode_ms=86.269600 completed_after_source_start_ms=8521.946300
+MEASURE index=5 decode_ms=106.832700 completed_after_source_start_ms=8918.928400
+MEASURE index=6 decode_ms=48.032000 completed_after_source_start_ms=10118.946800
+MEASURE index=7 decode_ms=85.679800 completed_after_source_start_ms=10832.520300
+MEASURE index=8 decode_ms=125.688200 completed_after_source_start_ms=11585.377900
+MEASURE index=9 decode_ms=130.975100 completed_after_source_start_ms=11716.447000

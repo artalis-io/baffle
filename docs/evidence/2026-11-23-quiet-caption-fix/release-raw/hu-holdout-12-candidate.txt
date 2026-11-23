@@ -1,0 +1,27 @@
+REPLAY queue_capacity=512 input_frames=112320 caption_profile=raw
+DECODE frames=5600 sha256=051bbe2d8a95b574e2a7ffdb74f030c8914c35ed424afb8fee7d770bac5a430c last_two=-1 text=
+DECODE frames=16160 sha256=2351941911e36edec6a96a440b9baaada952e491ea3378d2ebcd3fa6335a96bd last_two=-1 text=
+DECODE frames=27200 sha256=4634eb36b7da752941141394a0064a54536a8f34b55103026d85aa4441a94535 last_two=-1 text=
+DECODE frames=38720 sha256=689431daa1d18b77d016d9ae88f9225f7b046fe7a5801d6424e9d75d7799923c last_two=-1 text=
+DECODE frames=51200 sha256=d27d3eb7480aea008ffd52d71e2eae941352c6ea4475b0a606bc9e764babbcc9 last_two=2.07999992 text=Az óceánokba öml.
+DECODE frames=64480 sha256=dccbe4547ca0293b0eca07b2c71cbdc50f57f2a48106563627792d0e594d354a last_two=2.87999988 text=Az óceánokba ömlő folyóvizek.
+DECODE frames=78720 sha256=3a0ed4615324eea55e5f50d78a95dbd5eef2796d07bfc2db55eacc029838bb3b last_two=3.91999984 text=Az óceánokba ömlő folyóvizek 20% azon.
+DECODE frames=93760 sha256=381ed4e64fdf48c3e3533f8633db250eecc755e41a5a124784cae026d466a391 last_two=4.79999971 text=Az óceánokba ömlő folyóvizek 20%-a az amazonasból ered.
+DECODE frames=109760 sha256=444ba641546830b20cc987611f5b2efe11b68d578b48132aba25308dd4c23471 last_two=4.79999971 text=Az óceánokba ömlő folyóvizek 20%-a az Amazonasból ered.
+DECODE frames=119680 sha256=0be317ccb843e8554f034e80e025007629c8a68157c56ab0e48b621664c1df33 last_two=4.79999971 text=Az óceánokba ömlő folyóvizek 20%-a az Amazonasból ered.
+DECODE frames=63040 sha256=af7cd6a0a29b3ea9c216a357e373d45b850b8f71209e4a4f7b0e4bdaad27f936 last_two=0.639999986 text=Az amazonaszból ered.
+HISTORY=Az óceánokba ömlő folyóvizek 20%-a az Az amazonaszból ered.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=46
+MEASURE index=0 decode_ms=49.886000 completed_after_source_start_ms=1185.761800
+MEASURE index=1 decode_ms=85.790900 completed_after_source_start_ms=1883.565900
+MEASURE index=2 decode_ms=125.703200 completed_after_source_start_ms=2615.929700
+MEASURE index=3 decode_ms=167.351100 completed_after_source_start_ms=3398.925700
+MEASURE index=4 decode_ms=209.765200 completed_after_source_start_ms=4213.316600
+MEASURE index=5 decode_ms=263.358700 completed_after_source_start_ms=5105.229500
+MEASURE index=6 decode_ms=314.534600 completed_after_source_start_ms=6039.830800
+MEASURE index=7 decode_ms=374.967900 completed_after_source_start_ms=7045.924600
+MEASURE index=8 decode_ms=430.512600 completed_after_source_start_ms=8077.207400
+MEASURE index=9 decode_ms=465.530500 completed_after_source_start_ms=8730.137300
+MEASURE index=10 decode_ms=258.343500 completed_after_source_start_ms=9170.419200

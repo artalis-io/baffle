@@ -1,0 +1,47 @@
+REPLAY queue_capacity=512 input_frames=293760
+DECODE frames=5600 sha256=6643063b112b87a84b806e801c1b7e654ae37b2ec3500036a2847f33cea3a8b1 last_two=-1 text=
+DECODE frames=16160 sha256=79b1b6dc2a55b5eb136b332800717e8a765cb93797544d84ca834266775b5938 last_two=-1 text=
+DECODE frames=20320 sha256=d07386fd7bf2b196d64708b95457dfafaaf34a7b52edd6da03662c72ac23e957 last_two=-1 text=
+DECODE frames=5600 sha256=7f91cc950a1451d6f08635c13f6fe885acbfd36d64b19afaeeab531abb2d2066 last_two=-1 text=Okay.
+DECODE frames=16320 sha256=2a71970007aa87bb5ee7d6df8dfe0a2b70da95abea0be94364e782f8c0fc9eee last_two=-1 text=
+DECODE frames=27040 sha256=a6749be18b331fc22c113b773c9345d14143f9b3c614e08fce6eed1a5c19ddc2 last_two=-1 text=
+DECODE frames=39200 sha256=891bcd60b8165f4afe0b757bc67f399a300f8e519c5557349bebdfcb6dedb00c last_two=-1 text=
+DECODE frames=51520 sha256=d0ff0c59d0e50937c46d642e09c94bd2dc6e36dc8045c8b221ae6b6107407353 last_two=-1 text=
+DECODE frames=64800 sha256=6c7fc1aa3e9ca4f93a1f5d598984708d663a1dee7a0755a7e8b7013245ebab5c last_two=3.11999989 text=Ha nincs hozzáztokva a vidéki utakon való vetetés, ha...
+DECODE frames=78720 sha256=20d8cc7a3e95098be657c472a370584b1d789dd0f62c699349cd519b6d29edce last_two=3.83999991 text=Ha nincs hozzáztokva a vidéki utakon való vetettés, ha tartsan.
+DECODE frames=93600 sha256=f263bee8c1c95bf0bfe7b4a225b5d0f0109621e5a14ee41f832028599cf52ef8 last_two=5.11999989 text=Ha nincs hozzátokva a vidéki utakon való vetettés, ha tartsanítva a szemét.
+DECODE frames=96000 sha256=1ba72d465db4b6cbc93139d4efea9003bb93bc97e6a908b5121c78f9d4f40b17 last_two=5.11999989 text=Ha nincs hozzáztokva a vidéki utakon való vetettés, ha tartsanítva a szemét.
+DECODE frames=51520 sha256=c4eced6be2a9d7d15e4d78deae40fcb4f10663ffb2bb72512c93099fdc9422a9 last_two=2 text=Tarts. Meratek ML.
+DECODE frames=64640 sha256=2edda3458fc2c01564d339d59df867b0f56998803d974d25bfb09a90a7c700d7 last_two=0.159999996 text=Tarts tämän.
+DECODE frames=78560 sha256=db86a139e3e963501ebaf89184c477476d45fc155a50f8675d6b15f40b8e1372 last_two=3.67999983 text=Tarts ittva a szemét. Meredek, emelkötő, keskeny sávok.
+DECODE frames=93280 sha256=de34d1c6ddd7b4b791396af9b1e9382bfe1795946fe651b0bbaae94a22381d2f last_two=4.96000004 text=Tartsva a szemét. Meredek, ML kötő, keskeny sávok és igazkok.
+DECODE frames=109120 sha256=5d226f54d3994f32fe6892a3c953018dfbf603effb20ae78ebf22c49081c9ae4 last_two=5.83999968 text=Tartsítva a szemét. Meretek, emelkötő, keskeny sávok és illes kanyarok jelen.
+DECODE frames=116480 sha256=742c2804b70c4210d47ff0fe3fbc859e8c1d12e68b7c619e7eb6c27b3307445f last_two=6.87999964 text=Tartsva a szemét. Meredek, emelkötő, keskeny sávok és illes kanyarok jellemzők az új.
+DECODE frames=48960 sha256=eb5dd8f28c506caa54f03687131127221af96c6f91b649d6c4b3d18d1530bb93 last_two=-1 text=Mm.
+DECODE frames=9280 sha256=62289382eaa81bb1326a827d94d7e2d9bf0373e82136141a47495af0687dc026 last_two=-1 text=
+DECODE frames=18720 sha256=3526b3321f0b242c77c413d1a252b57a6e420b32a4ef9c962d05103f545b2319 last_two=-1 text=
+HISTORY=Ha nincs hozzáztokva a vidéki utakon való vetettés, ha tartsanítva Tartsva a szemét. Meredek, emelkötő, keskeny sávok és illes kanyarok jellemzők Mm.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=61
+MEASURE index=0 decode_ms=50.143700 completed_after_source_start_ms=1404.066700
+MEASURE index=1 decode_ms=87.119800 completed_after_source_start_ms=2116.964800
+MEASURE index=2 decode_ms=95.291300 completed_after_source_start_ms=2361.836900
+MEASURE index=3 decode_ms=48.556000 completed_after_source_start_ms=6373.715700
+MEASURE index=4 decode_ms=88.742600 completed_after_source_start_ms=7074.734300
+MEASURE index=5 decode_ms=127.297100 completed_after_source_start_ms=7806.498000
+MEASURE index=6 decode_ms=168.659500 completed_after_source_start_ms=8606.191000
+MEASURE index=7 decode_ms=214.756400 completed_after_source_start_ms=9423.234900
+MEASURE index=8 decode_ms=265.617100 completed_after_source_start_ms=10306.051000
+MEASURE index=9 decode_ms=314.808600 completed_after_source_start_ms=11221.600500
+MEASURE index=10 decode_ms=376.968000 completed_after_source_start_ms=12211.940500
+MEASURE index=11 decode_ms=380.321400 completed_after_source_start_ms=12592.475300
+MEASURE index=12 decode_ms=215.025100 completed_after_source_start_ms=13422.758500
+MEASURE index=13 decode_ms=261.879600 completed_after_source_start_ms=14288.510600
+MEASURE index=14 decode_ms=315.508800 completed_after_source_start_ms=15213.128300
+MEASURE index=15 decode_ms=372.198200 completed_after_source_start_ms=16186.888300
+MEASURE index=16 decode_ms=431.048600 completed_after_source_start_ms=17234.798800
+MEASURE index=17 decode_ms=454.501700 completed_after_source_start_ms=17721.371100
+MEASURE index=18 decode_ms=206.136100 completed_after_source_start_ms=18534.802400
+MEASURE index=19 decode_ms=60.590700 completed_after_source_start_ms=19223.688700
+MEASURE index=20 decode_ms=94.209500 completed_after_source_start_ms=19824.368300

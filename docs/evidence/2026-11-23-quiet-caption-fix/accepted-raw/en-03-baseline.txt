@@ -1,0 +1,29 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=cbb1338a8cc309e2d39b9029e752eff074428cea9e2b811a54e3244f9502977e last_two=-1 text=So
+DECODE frames=16480 sha256=d370907d3e61ce7c113f1293910c0009921ea15768a6f9e32582157702609651 last_two=0.479999989 text=To the north and with
+DECODE frames=19200 sha256=a3ed77c3a0c918a0a84c5a680ce174bc1e0c7cc08eb6b00aac7a13105968e637 last_two=0.639999986 text=To the north and within east.
+DECODE frames=5600 sha256=fb8a0d770b4938f113f22f207150295b5992b7980ef0a9a7a95f75a5fa4b50ba last_two=-1 text=
+DECODE frames=16320 sha256=9fb50a76cadb358f8285c8f759679064cc0c39b97b2974412fa0f00ed10b54bf last_two=-1 text=
+DECODE frames=22080 sha256=ce207c469aba6849f967241f466f507ea1e7fb831d7b616cda76a1bf5f04d214 last_two=0.799999952 text=To foreigners after a global
+DECODE frames=5600 sha256=c71090949dd5d02a059001e3804fb9b65c1e0672c71aa3f8cdf3aa1c8db331c1 last_two=-1 text=
+DECODE frames=16160 sha256=d4870ed98e19b586e5f2118f22d545cff1a670e7ef4987ddcd37bc9b962be85b last_two=0.560000002 text=Splinter is recording.
+DECODE frames=27200 sha256=d6533c79253dc0d9fd26145dda08c7bc746dc1ccec21f2a9ef814b63825e963d last_two=1.12 text=Splinter is recorded by Lord B.
+DECODE frames=28960 sha256=ca760d54d16168765ea9563440a0750296a1bb2037be1b85aeaa0b05a9f69aae last_two=1.12 text=Splinter is recorded by Lord Vi.
+HISTORY=To the north and within east.
+
+To foreigners after a global
+
+Splinter is recorded by Lord Vi.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=17
+MEASURE index=0 decode_ms=54.439600 completed_after_source_start_ms=1623.377700
+MEASURE index=1 decode_ms=151.158000 completed_after_source_start_ms=2401.562700
+MEASURE index=2 decode_ms=100.059300 completed_after_source_start_ms=2501.724800
+MEASURE index=3 decode_ms=47.778100 completed_after_source_start_ms=7835.774100
+MEASURE index=4 decode_ms=85.211600 completed_after_source_start_ms=8532.186300
+MEASURE index=5 decode_ms=109.148000 completed_after_source_start_ms=8934.041700
+MEASURE index=6 decode_ms=50.559300 completed_after_source_start_ms=10116.181200
+MEASURE index=7 decode_ms=89.970700 completed_after_source_start_ms=10828.002700
+MEASURE index=8 decode_ms=126.969100 completed_after_source_start_ms=11556.306400
+MEASURE index=9 decode_ms=130.958700 completed_after_source_start_ms=11687.350400

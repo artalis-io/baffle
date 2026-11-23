@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=280320
+DECODE frames=5600 sha256=0cb1ddbe55a6f52eff23997a570fcd9b51aeb71ce826e3832def31aa6ead90b5 last_two=-1 text=
+DECODE frames=16320 sha256=af483933982517ea7f26ac8a8c66d2efb4078cc335addb94ad793acddeab7725 last_two=-1 text=
+DECODE frames=27520 sha256=61149f3916f034dc7e9ac93081158f33ee53e765361aac186a2d0ff415e47545 last_two=-1 text=
+DECODE frames=39680 sha256=a04b35f031e56dc7b74ec6f6728df50fcf9b9a25d8b831db9342d03e9ee98906 last_two=1.43999994 text=Spectrum Maast.
+DECODE frames=51680 sha256=635f302175420b7ed0fe554a68a40b1ca97d27b7ff6bb045187d8f689fe57b93 last_two=2.07999992 text=A spektrum másik oldalán.
+DECODE frames=64800 sha256=5cbd643a144662548a30db195c45eb8d2ab74d0873efc84433ffed9ac5978c9d last_two=2.55999994 text=A spektrum másik oldalán valaki
+DECODE frames=79040 sha256=5f34b6cd0616ad9fcb8cd811e54936c3504f50dfd2339693980495c259fabda5 last_two=3.83999991 text=A spektrum másik oldalán valaki egy felismerhet.
+DECODE frames=93920 sha256=0270791e5f210ce551a19ccde329d1bfe219b63a5674baf5f312e519cfc79cdf last_two=4.07999992 text=A spektrum másik oldalán valaki egy felismerhetetlen személy.
+DECODE frames=108320 sha256=bb65a10cbed5331fb1cd99746c5a7611ac1ace81362441a406b39b3457cb2881 last_two=5.44000006 text=A spektrum másik oldalán valaki egy felismerhetetlen személy alakul.
+DECODE frames=48640 sha256=cb81ac7ef522153edbbc88fe84835adf41e6061a136bde387b56c3f3b433f341 last_two=-1 text=
+DECODE frames=61440 sha256=ebbc39f5832693494e004c5d327705fbdbb92ad21a714769f6f5c3f9ef5e98ba last_two=2.79999995 text=Hát a személy alakul, aki úgy érzi, hogy...
+DECODE frames=75040 sha256=30497f8bb0505655a49ff13505a87dc028e155d9c10a1ca799f90fecf18bedac last_two=3.75999999 text=hát a személy alakul, aki úgy érti, hogy mintán a.
+DECODE frames=89760 sha256=928d64f24366bf528ab125cd9c1405ef67ce73f68d9544687b417b96e02ad7be last_two=4.48000002 text=hát a személy alakul, aki úgy érti, hogy mintán a csoport által.
+DECODE frames=105440 sha256=325088781df85979007428c411ca17f0219ac58120487a5c1879d09542e046a9 last_two=5.11999989 text=hát a fán személy alakul, aki úgy érti, hogy minden a csoport által létrehozottó.
+DECODE frames=116480 sha256=4c09dd6713c9bac8887f71ac6e90ae3f94baa965ef541c06e77af9390e534b85 last_two=6.39999962 text=hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg.
+DECODE frames=48640 sha256=5665e6967471c9fc94c3af2181fe8d5f5c8948c35d8ef38f3e2afb80fba4126f last_two=-1 text=
+DECODE frames=61760 sha256=b62aecdec5a3203c6f46471922afec70fa5e72dbe4b8988ec0de014543a88dab last_two=3.3599999 text=Tá legittengatott dolgot, meg kell váltotem, és a saját...
+DECODE frames=75520 sha256=99aab61975c89b2a70625036810bfd04614825dc0f598e446ce294af77cb110c last_two=4.07999992 text=Tál létre dolgot meg kell váltottam, és a saját tává kell.
+DECODE frames=89920 sha256=781ac3e60e9535eadbbf8ef478030ec8621c07cf15dbed1335aed9bbcccfdbac last_two=4.63999987 text=Tá létemotott dolgot, meg kell váltottem, és a saját tává kell tennem.
+DECODE frames=96000 sha256=fbec776270ffbd0f25376283eb7aa8c01bf0f48bc59a1c0f8efe6cb683c83955 last_two=4.63999987 text=Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.
+DECODE frames=35680 sha256=a2596033be0bbafba9d815fec83ccf3e7b700bc0c56be784d805a75187ad7aa4 last_two=-1 text=
+HISTORY=A spektrum másik oldalán valaki egy felismerhetetlen hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.
+DROPPED=0
+STATUS=Listening

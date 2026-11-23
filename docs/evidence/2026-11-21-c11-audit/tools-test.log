@@ -1,0 +1,2 @@
+PASS raw replay/EOS, VAD receipts, retained-output guard and unreviewed-onset rejection; optional virtual cancellation
+PASS 16/48k split identity, zero-reference bypass, finite partial EOS, deterministic generation/epoch/missing-reference recovery

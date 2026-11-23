@@ -1,0 +1,29 @@
+REPLAY queue_capacity=512 input_frames=158400
+DECODE frames=5600 sha256=3c1e546573a5d0093b866483882d6c299582743241cbdde307f35d0dea0fe4d7 last_two=-1 text=As
+DECODE frames=16160 sha256=5d6bf61fd000cce766769c71036afd791a7d3bb06446dee4fab0dca335ebb1a6 last_two=0.399999976 text=As I push it.
+DECODE frames=27520 sha256=c5ae8be64912e556f34d5d8584ec314cf6811448453f465a8dbb12ed811bc733 last_two=-1 text=Oh
+DECODE frames=39360 sha256=a222b9315301332b41ba9f1843286d61f5a410f8c3de80a0774b341434322930 last_two=-1 text=
+DECODE frames=51680 sha256=058edffec82547a7bd2d8bfb24fba222ab5a1e5c4a5bddd1897c53a37a336428 last_two=-1 text=
+DECODE frames=65120 sha256=6245d4ffc6873e2d2acdbb9ce1c390291a7fca42d904b27c0a5005d3d5ae439e last_two=3.3599999 text=As light pollution in their heyday was not the kind of problem it is today, they are using local.
+DECODE frames=79520 sha256=aa083a6a002ced85ffffad50f7afdd23cc89ac4a19ad4179105a2275a3516591 last_two=4.23999977 text=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or
+DECODE frames=94560 sha256=fc9f2ed4d263d17f2c431fb844c930212fa646ee49435b8def59cf8619871e3f last_two=5.03999996 text=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses easier.
+DECODE frames=110560 sha256=1be44375d248a572cff8271954b0f6c4029a43f18820adac8c16c66706a2f4cb last_two=6.31999969 text=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses easier to reach than those.
+DECODE frames=127200 sha256=0149affc77ecbdf3cfa105489548a5a373ff88428b77c098f36b88da641a4e4a last_two=7.27999973 text=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses easier to reach than those built in modern times.
+DECODE frames=128000 sha256=e16677d77b723780949efdd30c13b3b5623ec748ff10eee8009829d11344da75 last_two=7.27999973 text=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses easier to reach than those built in modern times.
+DECODE frames=42400 sha256=6e89d2fb393ec7038f02fc65dbf9d35e2199ddf5772b20965fb799ceb8ac90a1 last_two=-1 text=
+HISTORY=As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses easier to reach than those built in modern times.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=98
+MEASURE index=0 decode_ms=49.874900 completed_after_source_start_ms=1972.351800
+MEASURE index=1 decode_ms=88.902400 completed_after_source_start_ms=2686.623600
+MEASURE index=2 decode_ms=129.089300 completed_after_source_start_ms=3434.452600
+MEASURE index=3 decode_ms=172.489700 completed_after_source_start_ms=4218.496700
+MEASURE index=4 decode_ms=219.601400 completed_after_source_start_ms=5039.513500
+MEASURE index=5 decode_ms=270.836200 completed_after_source_start_ms=5925.588400
+MEASURE index=6 decode_ms=325.876200 completed_after_source_start_ms=6879.580200
+MEASURE index=7 decode_ms=386.477300 completed_after_source_start_ms=7868.974900
+MEASURE index=8 decode_ms=447.106100 completed_after_source_start_ms=8923.852000
+MEASURE index=9 decode_ms=509.191000 completed_after_source_start_ms=10044.707400
+MEASURE index=10 decode_ms=510.301400 completed_after_source_start_ms=10555.292100
+MEASURE index=11 decode_ms=185.624200 completed_after_source_start_ms=10741.205400

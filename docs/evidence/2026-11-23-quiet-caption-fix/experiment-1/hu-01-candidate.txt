@@ -1,0 +1,21 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=8fdbb5a5f108fd4577d4ab4ac999d5d3dbc2bb3a94d273c1a60f290661ae4f30 last_two=-1 text=
+DECODE frames=16160 sha256=4a9b47086a12407195da79d5b6f4ae809b1f9297a1cb73973ccadf286878caff last_two=-1 text=
+DECODE frames=26880 sha256=4d78b9cdc893a4f3aef613e10198cf1d205cf596bec44ad4bb817ba5c7914b18 last_two=-1 text=
+DECODE frames=38720 sha256=447e13c469c6490e412e4a0d5fa5905a91b1f23c51bd4376441be9fdafa1e38f last_two=-1 text=Okay.
+DECODE frames=51360 sha256=252103979d5fd9311266335c26b1b3fc1921ec5287e70ead8e0aac7be3cba00c last_two=-1 text=
+DECODE frames=64640 sha256=63257fd6f1f78490678af480f3ec76193363ed0a054d550c80c5ee38b41cdba3 last_two=3.27999997 text=Hong Kong Maverick a Hong Kong
+DECODE frames=78400 sha256=459d51385435ebe18d1bd7710a1dc1b7734653145c9a85052c6a237064343a23 last_two=3.5999999 text=Hong Kong never a Hong Kong psychiatric
+DECODE frames=92960 sha256=bbb611a7f1d7fd2661cb01b19c445b7e5297c3b991b963ded68814520799cb28 last_two=4 text=Hongkong nevét, a Hongkong Sziketra kapta.
+DECODE frames=108800 sha256=c0955f71421151e8a1bba10d8beef35060808aadf3aad241982319be10a92a92 last_two=5.92000008 text=Hongkong nevét a Hongkong szikatrió kapta és a hátsok
+DECODE frames=125440 sha256=a66f100abedf1eeec7319c2e26fccddc9d0b95b05321d779ae807a1af8a9b2fb last_two=6.63999987 text=Hongkong nevét a Hongkong sziketről kapta és a sok turista számára.
+DECODE frames=128000 sha256=f46a1f480381aff5c6021d8e1bcfc496f9362e16256634c1f2f6276bb27261c8 last_two=6.63999987 text=Hong nevét a Hongkong Szikator kapta és a sok turista számára.
+DECODE frames=54880 sha256=d1086aa4ae31ce0a31b4583a10d28a23dc24d90bc34a4d377388d3744a39e8d1 last_two=2 text=soktől is a számára a figyelem középpontjára.
+DECODE frames=68160 sha256=13d61ad59acad656e5e5d90e281f4cbc5cdd7e96a12608198a8ded50312afbc5 last_two=2.63999987 text=soktől is a számára a figyelem középpontjában áll.
+DECODE frames=81920 sha256=a9814445f4d44b6569dcb3ed81db13cdd60cdae4d235be895bbf1494cdda3b88 last_two=2.63999987 text=sok turista számára a figyelem közökkentjában áll.
+DECODE frames=85920 sha256=6dc0db9d00f1dd71711759efe318c192f1b2755a696e0ade60ccf3ebb2aeff1d last_two=3.11999989 text=sok turista számára a figyelemközök pontjában áll.
+DECODE frames=16640 sha256=4beaa933ea313f51c6e7ac2ae334442e7e521d24b440e718ff031c45c40bdb29 last_two=-1 text=
+DECODE frames=25600 sha256=87de169d6a50abae28fdda90cfa9eef4b78bf01a5acf52319b7e7f2d50094c33 last_two=-1 text=
+HISTORY=Hong nevét a Hongkong Szikator kapta és a sok sok turista számára a figyelemközök pontjában áll.
+DROPPED=0
+STATUS=Listening

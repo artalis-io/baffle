@@ -1,0 +1,17 @@
+REPLAY queue_capacity=128 input_frames=162240
+DECODE frames=5600 sha256=a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c last_two=-1 text=
+DECODE frames=16640 sha256=4f698a2ad4ff5fe9224a6b2364b875fa2d4b684c271d7da5ea4fcfb18a05a8f7 last_two=-1 text=
+DECODE frames=28320 sha256=3d6e0cb7539d20c3d4dc8df5a787cbac14b95938c14dde8324a7a4771168dccc last_two=1.27999997 text=Hussa de ça.
+DECODE frames=40960 sha256=152a6112ce5ea492eb4d8f72adee74106375037c518fb954db834a7c4598734b last_two=1.83999991 text=Cum să dilsază decută așa?
+DECODE frames=54400 sha256=dd078ae0b6bd69703f924b6db17852b667e830e47e52fad71038cdcb0e4f6315 last_two=2 text=Hussa di sata di kutatása, mutat.
+DECODE frames=70080 sha256=f60031b1c94a89200786b939a5c69db34cd3c18cbe17c8f0ae8c842a86554b75 last_two=3.67999983 text=20. századik utatás kimutatna, hogy a jön a tjárt.
+DECODE frames=86720 sha256=8176662b52033891227fdf4e693b09299820d779425e0a67c67965c2a0d56fd4 last_two=3.5999999 text=20. századik utatás kimutatna, hogy a lenátikai változtatosságnak.
+DECODE frames=105440 sha256=b8431455411937c3f6bcbf91a0c05b262e484d2bc4a23c3b109014859ae20eae last_two=5.67999983 text=20. századik utatás kimutatna, hogy a denatéj változtatosságnak két variációja van,
+DECODE frames=126560 sha256=78de363926b9e3ac94fffe514fbb3755b068b4da517394971118342bc92c2bab last_two=6.96000004 text=20. századik utatás kutatna, hogy a denatikai változtatosságnak két variációja van, retett és
+DECODE frames=128000 sha256=fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d last_two=6.96000004 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és
+DECODE frames=9760 sha256=a135c88b126df9f446bd15c7353e3412ca6b6f789ab9bd5dd0675333a49705be last_two=-1 text=
+DECODE frames=21280 sha256=c93e3883d47dbdaac8d29b6ca9f97aca7b98367ae7c94fbbf66af14827324463 last_two=0.399999976 text=Thank you.
+DECODE frames=21440 sha256=eb1e2df4bb7e76d8a739bc5b47f1fdfc80d84e633997fb83b142447e878d8428 last_two=-1 text=
+HISTORY=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és [hangkimaradás]
+DROPPED=26
+STATUS=Figyelek · felismerés: 94 ms

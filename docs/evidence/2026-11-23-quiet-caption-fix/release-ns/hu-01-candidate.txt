@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=192960 caption_profile=ns
+DECODE frames=5600 sha256=ce884f9bdae08a7c97f5b8493ef3ad8aa6ea65f5d6c48fb4e2ada65b091fe82f last_two=-1 text=
+DECODE frames=16000 sha256=a246b20b1f030207bf7b8d3ab8bba09b5f1f1d09684f7157d4e716173982d04a last_two=-1 text=
+DECODE frames=18400 sha256=75561082ba4e6fd9f84c77b57312765352ae47e1d240a93bfbf55881a4b37e17 last_two=-1 text=
+DECODE frames=11040 sha256=fb1a6369ed545b8ff8a19db2b3e77610de51ef6258cf044504ac89effb0620c5 last_two=-1 text=Comment.
+DECODE frames=22080 sha256=64b0655e2a0a070cdc0283f1684ba57f1a15ea9468a728fff8a368a582e279fd last_two=-1 text=Un
+DECODE frames=33280 sha256=dece1cd9e39e5077a7c021c31bc06a08c8ad3fd6b4c0fca5e4dab9098b7aec31 last_two=-1 text=Yeah.
+DECODE frames=45600 sha256=1e004bee8e38f04cdb8168498dde603e0cf46b9d54fa6aedf5baa2c8bbd6d21e last_two=1.75999999 text=Hong Kong Maverick a Hong Kong Psychiatry
+DECODE frames=58560 sha256=0f2415cf54dfbf732e35a3dffd05b30096135ea89dc8a6fbec9fa8bdeba0629c last_two=2.15999985 text=Hong Kong Maverick, a Hong Kong Psychiatral Cupta.
+DECODE frames=72160 sha256=fce3d23c73cfba2b382effd21af6051364c81ae2a36a5231e91479eeceff274a last_two=2.15999985 text=Hongkong never a Hongkong seeker katto.
+DECODE frames=86720 sha256=9abf242ab659c6c059bc6723cd1942f7dd250436436a6bd394e1c3ed2dd8abef last_two=4.15999985 text=Hongkong nevét, a Hongkong Szikator katta, és a Hárok turistata.
+DECODE frames=97920 sha256=21172f73c85c3f4356e0b6817bb9927ea9f631dfaee3f7284c63752d2042b8e8 last_two=4.88000011 text=Hongkong nävy a Hongkong Sector Katta ésok Turistä samára.
+DECODE frames=47840 sha256=b098917cb17621fe5ad7a8fdd1e289a3962589a9f10c18e8bbca6a0aa6a0f8ee last_two=-1 text=
+DECODE frames=60800 sha256=37aca97b96ab5ed381a47c463aa660d5d9f10ca559add10bc37cc429d61b8876 last_two=0.719999969 text=Sok turista samára.
+DECODE frames=74400 sha256=de2433933c8982ca18697afcaab605ca74bf10d0453019232f45a11da7ebe48f last_two=-1 text=
+DECODE frames=74560 sha256=5726354d705ac61a43d328956eaaa077297e44f7737e0681377e45ece5bfed14 last_two=-1 text=
+HISTORY=Hongkong nävy a Hongkong Sector Katta ésok Sok turista samára.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=61
+MEASURE index=0 decode_ms=50.280100 completed_after_source_start_ms=2095.887300
+MEASURE index=1 decode_ms=86.884600 completed_after_source_start_ms=2783.090700
+MEASURE index=2 decode_ms=92.758300 completed_after_source_start_ms=2916.396000
+MEASURE index=3 decode_ms=69.614200 completed_after_source_start_ms=3603.035900
+MEASURE index=4 decode_ms=109.289800 completed_after_source_start_ms=4322.005700
+MEASURE index=5 decode_ms=146.382800 completed_after_source_start_ms=5073.100600
+MEASURE index=6 decode_ms=196.183700 completed_after_source_start_ms=5896.575500
+MEASURE index=7 decode_ms=238.567700 completed_after_source_start_ms=6743.756500
+MEASURE index=8 decode_ms=292.016900 completed_after_source_start_ms=7646.840200
+MEASURE index=9 decode_ms=348.918000 completed_after_source_start_ms=8617.918400
+MEASURE index=10 decode_ms=386.211300 completed_after_source_start_ms=9350.256300
+MEASURE index=11 decode_ms=200.973100 completed_after_source_start_ms=10159.538300
+MEASURE index=12 decode_ms=243.628900 completed_after_source_start_ms=11005.933400
+MEASURE index=13 decode_ms=299.188900 completed_after_source_start_ms=11911.835700
+MEASURE index=14 decode_ms=299.272500 completed_after_source_start_ms=12211.280400

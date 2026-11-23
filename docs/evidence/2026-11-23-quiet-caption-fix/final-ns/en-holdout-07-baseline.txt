@@ -1,0 +1,5 @@
+REPLAY queue_capacity=512 input_frames=76800
+HISTORY=
+DROPPED=0
+STATUS=Opening microphone…
+PEAK_QUEUED=4

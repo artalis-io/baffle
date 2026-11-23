@@ -1,0 +1,557 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "fixture_manifest_sha256": "3ebf259053829d70dba05c802fc6a9df6cf021c818f717bf93786de5909fef4f",
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "command": "tools/quiet_caption_check.py evaluate --fixtures build-quiet-caption/fixtures-background --baseline build-quiet-caption/instrumented/ReplayBaseline.exe --baseline-results build-quiet-caption/background-raw --candidate build-quiet-caption/release-candidate/BaffleReplay.exe --candidate-profile-auto --models build-acoustic/models/parakeet --output build-quiet-caption/release-background-raw",
+  "executables": {
+    "baseline": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\instrumented\\ReplayBaseline.exe",
+      "sha256": "9a0d0720d3da8036ba3ecf5c165de0633f91cdce104e3495a3a6682a4d22ec42"
+    },
+    "candidate": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-quiet-caption\\release-candidate\\BaffleReplay.exe",
+      "sha256": "9ef0072c77401597004596009b21b8588f1546d48d107967157a44e174c97550"
+    }
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "source_sha256": {
+    "examples\\win32-transcript\\app.c": "e92f98d226be46e93913f51db3c4c84ff3e12a06aa5c07e75c3604699d1f5915",
+    "examples\\win32-transcript\\speech.c": "4ed20381a2a19e313851c9adc6931f1146f7a1a4683a56cc87f96769e2b8a7d3",
+    "examples\\win32-transcript\\replay_test.c": "70b17981deb680296ae2c7584d6a73e7bad00f1e65ec7aa167385a8cdb3ae23f",
+    "tools\\quiet_caption_check.py": "b3e04c256962315d4518405843d1f4eef95d844a9a75f8d9122bdeda8c82e5e9"
+  },
+  "rows": [
+    {
+      "name": "speech-then-colored-noise",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-colored-noise.wav",
+      "wav_sha256": "73dda292376dd0e0d0d6ebdab2bd40d451e93e29e862ab407e2957106b113ac6",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement",
+      "profile": "baseline",
+      "hypothesis": "The cabbage juice changes.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 0,
+          "deletions": 11,
+          "insertions": 0,
+          "reference_length": 15,
+          "rate": 0.7333333333333333
+        },
+        "character": {
+          "errors": 53,
+          "substitutions": 0,
+          "deletions": 53,
+          "insertions": 0,
+          "reference_length": 75,
+          "rate": 0.7066666666666667
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 15840,
+          "pcm_sha256": "406bb0b9ccdea6d9d8757da02513372a34ec166beeb72ec0de1f04e7829f912a",
+          "last_two_start": 0.399999976,
+          "hypothesis": "Cabbage juice change."
+        },
+        {
+          "frames": 18720,
+          "pcm_sha256": "ff050cfca6d40818d5197cab9612179e813d4c592140badb6833fe479ef7417d",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 13445.257100014715,
+      "receipt": "speech-then-colored-noise-baseline.txt",
+      "receipt_sha256": "9975805c5240c39944a9b8fb673f685fe4d2a83f5cc561fe887dc6b53afc815f",
+      "measurements": [
+        {
+          "decode_ms": 49.5328,
+          "completed_after_source_start_ms": 1686.2963
+        },
+        {
+          "decode_ms": 87.2066,
+          "completed_after_source_start_ms": 2386.9631
+        },
+        {
+          "decode_ms": 93.8259,
+          "completed_after_source_start_ms": 2567.0939
+        }
+      ],
+      "peak_queued_blocks": 10,
+      "baseline_reused_from": "build-quiet-caption\\background-raw",
+      "baseline_results_sha256": "4343ca08cf8d6464e06b3507efb2513ae1e06defe82128325e7aee9597bbf00c"
+    },
+    {
+      "name": "speech-then-colored-noise",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-colored-noise.wav",
+      "wav_sha256": "73dda292376dd0e0d0d6ebdab2bd40d451e93e29e862ab407e2957106b113ac6",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement",
+      "profile": "candidate",
+      "hypothesis": "The cabbage juice changes color depending on how acidic, basic, alkaline the Fine the chemical is.",
+      "metrics": {
+        "word": {
+          "errors": 3,
+          "substitutions": 0,
+          "deletions": 1,
+          "insertions": 2,
+          "reference_length": 15,
+          "rate": 0.2
+        },
+        "character": {
+          "errors": 9,
+          "substitutions": 0,
+          "deletions": 2,
+          "insertions": 7,
+          "reference_length": 75,
+          "rate": 0.12
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "ac79bc68893c4f09a5ddacc49e4fb38f811892598976a0248dd64749ad824bca",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        },
+        {
+          "frames": 27360,
+          "pcm_sha256": "4129e84135e0799ed5bf43780e1c19ae689006d3e138cc8d92804e28c05d5f7e",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 39360,
+          "pcm_sha256": "4912cfd2907edaddefc12bad8314792542b5e1f1abb1a64984c84eb2b14a0f2a",
+          "last_two_start": 1.67999995,
+          "hypothesis": "The cabbage juice changes color depending on how a"
+        },
+        {
+          "frames": 51680,
+          "pcm_sha256": "21829ed08a9b6a60155d3999408413fad86f4b76bc7e2b6beb1d0b74e4c1ce28",
+          "last_two_start": 2.07999992,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basically."
+        },
+        {
+          "frames": 64800,
+          "pcm_sha256": "0b32a93148cd3207b2417bf2e2db47925e29cf940bdb9491deabe8a107f184af",
+          "last_two_start": 3.19999981,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline that."
+        },
+        {
+          "frames": 78880,
+          "pcm_sha256": "5b98cf3c39047c0f7858bcd0f196331d6e62c99be89e777480438846bd112613",
+          "last_two_start": 4.07999992,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is."
+        },
+        {
+          "frames": 93760,
+          "pcm_sha256": "d3f618efbbc8103d56d2096d5259113432389ca12291a72bbf20e76722eae6e9",
+          "last_two_start": 4.15999985,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "e58fb7dc22db35d3b95934d75cc524ccabc446732edb8f4cdd8c618cf3782edf",
+          "last_two_start": 4.15999985,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is."
+        },
+        {
+          "frames": 58880,
+          "pcm_sha256": "7296d62cb90275da5ef0af40142c654cb770702cb3188687d165659b0cea44c9",
+          "last_two_start": 0.639999986,
+          "hypothesis": "the chemical is."
+        },
+        {
+          "frames": 72160,
+          "pcm_sha256": "790c29404dbd64fb97d5c0dfdfc5c6afdda29cd0c7fc0c347efa3dc94467a4ef",
+          "last_two_start": 0.639999986,
+          "hypothesis": "The chemical is."
+        },
+        {
+          "frames": 86880,
+          "pcm_sha256": "da49f483eb1f123a4edb1462830c5b8d75ac1899e605123499ef419eb8704f41",
+          "last_two_start": 0.639999986,
+          "hypothesis": "The chemical is"
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "5d31dc36dcd365541f2a8aa59f83cb18b2a94d4ac8bd5ef81f5f2c2d05ec3c11",
+          "last_two_start": 0.639999986,
+          "hypothesis": "Fine the chemical is."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "567e70f332bcb1d003859857dc721d3cd43ca9b110f894625c67e84120759636",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 56960,
+          "pcm_sha256": "c3b33b3bda0ca0de0d5f8482d6c0a67963f359e66400a67d2da2b3da192a3305",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 13593.72869998333,
+      "receipt": "speech-then-colored-noise-candidate.txt",
+      "receipt_sha256": "9288346d53c9e99b683b104ce76bef7e416736403114b428b925ff8ec194dfc1",
+      "measurements": [
+        {
+          "decode_ms": 49.6653,
+          "completed_after_source_start_ms": 1689.4478
+        },
+        {
+          "decode_ms": 88.321,
+          "completed_after_source_start_ms": 2403.7466
+        },
+        {
+          "decode_ms": 126.1969,
+          "completed_after_source_start_ms": 3131.3204
+        },
+        {
+          "decode_ms": 170.2253,
+          "completed_after_source_start_ms": 3932.7914
+        },
+        {
+          "decode_ms": 219.32,
+          "completed_after_source_start_ms": 4753.0125
+        },
+        {
+          "decode_ms": 265.2374,
+          "completed_after_source_start_ms": 5621.8451
+        },
+        {
+          "decode_ms": 315.1913,
+          "completed_after_source_start_ms": 6551.4232
+        },
+        {
+          "decode_ms": 374.6369,
+          "completed_after_source_start_ms": 7537.3564
+        },
+        {
+          "decode_ms": 380.0786,
+          "completed_after_source_start_ms": 7917.6444
+        },
+        {
+          "decode_ms": 236.6125,
+          "completed_after_source_start_ms": 8757.3681
+        },
+        {
+          "decode_ms": 291.1758,
+          "completed_after_source_start_ms": 9660.5968
+        },
+        {
+          "decode_ms": 341.3719,
+          "completed_after_source_start_ms": 10624.4824
+        },
+        {
+          "decode_ms": 372.8021,
+          "completed_after_source_start_ms": 11213.4526
+        },
+        {
+          "decode_ms": 373.5328,
+          "completed_after_source_start_ms": 11587.2106
+        },
+        {
+          "decode_ms": 232.5115,
+          "completed_after_source_start_ms": 11877.83
+        }
+      ],
+      "peak_queued_blocks": 62
+    },
+    {
+      "name": "speech-then-hum",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-hum.wav",
+      "wav_sha256": "6fbf473e8de93070a139c7b1af0cf9bd499cf1993c78f386d496160fc93dea2d",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement",
+      "profile": "baseline",
+      "hypothesis": "The cabbage juice changes.",
+      "metrics": {
+        "word": {
+          "errors": 11,
+          "substitutions": 0,
+          "deletions": 11,
+          "insertions": 0,
+          "reference_length": 15,
+          "rate": 0.7333333333333333
+        },
+        "character": {
+          "errors": 53,
+          "substitutions": 0,
+          "deletions": 53,
+          "insertions": 0,
+          "reference_length": 75,
+          "rate": 0.7066666666666667
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "ac79bc68893c4f09a5ddacc49e4fb38f811892598976a0248dd64749ad824bca",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        },
+        {
+          "frames": 18720,
+          "pcm_sha256": "ff050cfca6d40818d5197cab9612179e813d4c592140badb6833fe479ef7417d",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 13504.887300019618,
+      "receipt": "speech-then-hum-baseline.txt",
+      "receipt_sha256": "78566a755c0f21d76fc3b954d8928867b8dcc0de9b4998b62fab3c38669f55f0",
+      "measurements": [
+        {
+          "decode_ms": 49.6328,
+          "completed_after_source_start_ms": 1704.7268
+        },
+        {
+          "decode_ms": 86.9844,
+          "completed_after_source_start_ms": 2407.0354
+        },
+        {
+          "decode_ms": 94.4882,
+          "completed_after_source_start_ms": 2574.1653
+        }
+      ],
+      "peak_queued_blocks": 12,
+      "baseline_reused_from": "build-quiet-caption\\background-raw",
+      "baseline_results_sha256": "4343ca08cf8d6464e06b3507efb2513ae1e06defe82128325e7aee9597bbf00c"
+    },
+    {
+      "name": "speech-then-hum",
+      "split": "regression",
+      "language": "en",
+      "reference": "The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is.",
+      "dataset_id": 1728,
+      "wav": "speech-then-hum.wav",
+      "wav_sha256": "6fbf473e8de93070a139c7b1af0cf9bd499cf1993c78f386d496160fc93dea2d",
+      "frames": 156160,
+      "duration_s": 9.76,
+      "scenario": "Recorded en-04 followed by four seconds synthetic low-level background, RMS 0.0005; not physical acoustic measurement",
+      "profile": "candidate",
+      "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.",
+      "metrics": {
+        "word": {
+          "errors": 1,
+          "substitutions": 0,
+          "deletions": 1,
+          "insertions": 0,
+          "reference_length": 15,
+          "rate": 0.06666666666666667
+        },
+        "character": {
+          "errors": 2,
+          "substitutions": 0,
+          "deletions": 2,
+          "insertions": 0,
+          "reference_length": 75,
+          "rate": 0.02666666666666667
+        },
+        "empty": false,
+        "first_word_correct": true
+      },
+      "dropped_blocks": 0,
+      "decode_windows": [
+        {
+          "frames": 5600,
+          "pcm_sha256": "0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 16160,
+          "pcm_sha256": "ac79bc68893c4f09a5ddacc49e4fb38f811892598976a0248dd64749ad824bca",
+          "last_two_start": 0.479999989,
+          "hypothesis": "The cabbage juice changes."
+        },
+        {
+          "frames": 27040,
+          "pcm_sha256": "a7873c0db26c250f5176af58efa903e7d952da9f81e9d2b9a7ebf3cc8c077fdb",
+          "last_two_start": 0.479999989,
+          "hypothesis": "Ha ha ha"
+        },
+        {
+          "frames": 39200,
+          "pcm_sha256": "decd25afa7ef0e72d5383f4c41b8371e8988d2778136a38d6a6eadc2fc6a9c89",
+          "last_two_start": 1.67999995,
+          "hypothesis": "The cabbage juice changes color depending on how a"
+        },
+        {
+          "frames": 51520,
+          "pcm_sha256": "b87ec9018e46e065c560851e924a9ad986409452d6e6600e1e1ff1ea6595fbc8",
+          "last_two_start": 2.07999992,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basically."
+        },
+        {
+          "frames": 64800,
+          "pcm_sha256": "0b32a93148cd3207b2417bf2e2db47925e29cf940bdb9491deabe8a107f184af",
+          "last_two_start": 3.19999981,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline that."
+        },
+        {
+          "frames": 79200,
+          "pcm_sha256": "7c6d56bc5f16e71de864f0ca75b396edf161611955bdafbf07e05328770ce488",
+          "last_two_start": 4.07999992,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is."
+        },
+        {
+          "frames": 93760,
+          "pcm_sha256": "b4e8596cd2156d4194848fd6895a4256af31eb7554cf4d1444a114bb350a610c",
+          "last_two_start": 4.15999985,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is."
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "9bec2e8fd76b7a6baecc6b774ad36d2a37d2c3a8a1dc91a2ba482fdefd947d6e",
+          "last_two_start": 4.15999985,
+          "hypothesis": "The cabbage juice changes color depending on how acidic, basic alkaline the chemical is."
+        },
+        {
+          "frames": 58400,
+          "pcm_sha256": "f11be88c40b2cde3813ff439e2892fee56bbb685b8ab6be8379ab9f144b3c0bb",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 72320,
+          "pcm_sha256": "25266b3d5b0fb1ba39490d29644c8addf2a58f1cc9f586fa14fe1e2d23f9c66b",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 86560,
+          "pcm_sha256": "e0dc81c19e3cba4877e18ae94312b49785ccc9307441bb8647340deeee93d223",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 96000,
+          "pcm_sha256": "28599b0610300b08fab2d2e39758e88491207d04d0d1f4412f685adc816eee18",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        },
+        {
+          "frames": 61120,
+          "pcm_sha256": "74af1879552ea333dace56e23ef919ece848ccfd1b671870953a72450e61a1a7",
+          "last_two_start": -1.0,
+          "hypothesis": ""
+        }
+      ],
+      "wall_ms_including_model_init_and_realtime_pacing": 13641.116600017995,
+      "receipt": "speech-then-hum-candidate.txt",
+      "receipt_sha256": "762f9efacaa5d18b20dd6c6cf198b66ba40b655c47cc82627dbf30772be997ce",
+      "measurements": [
+        {
+          "decode_ms": 50.8757,
+          "completed_after_source_start_ms": 1691.9822
+        },
+        {
+          "decode_ms": 88.1662,
+          "completed_after_source_start_ms": 2391.2021
+        },
+        {
+          "decode_ms": 127.0786,
+          "completed_after_source_start_ms": 3122.7641
+        },
+        {
+          "decode_ms": 170.9762,
+          "completed_after_source_start_ms": 3909.2675
+        },
+        {
+          "decode_ms": 219.7954,
+          "completed_after_source_start_ms": 4750.791
+        },
+        {
+          "decode_ms": 264.0235,
+          "completed_after_source_start_ms": 5624.1891
+        },
+        {
+          "decode_ms": 313.8585,
+          "completed_after_source_start_ms": 6553.0567
+        },
+        {
+          "decode_ms": 374.2031,
+          "completed_after_source_start_ms": 7528.6462
+        },
+        {
+          "decode_ms": 378.5383,
+          "completed_after_source_start_ms": 7907.405
+        },
+        {
+          "decode_ms": 235.6538,
+          "completed_after_source_start_ms": 8745.2685
+        },
+        {
+          "decode_ms": 288.608,
+          "completed_after_source_start_ms": 9663.0316
+        },
+        {
+          "decode_ms": 339.9102,
+          "completed_after_source_start_ms": 10607.3545
+        },
+        {
+          "decode_ms": 370.9115,
+          "completed_after_source_start_ms": 11206.9012
+        },
+        {
+          "decode_ms": 241.0395,
+          "completed_after_source_start_ms": 11895.4636
+        }
+      ],
+      "peak_queued_blocks": 61
+    }
+  ]
+}

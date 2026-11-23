@@ -1,0 +1,39 @@
+REPLAY queue_capacity=512 input_frames=193920
+DECODE frames=5600 sha256=e536e6167d865847f1be3cc5790dcce80f75f490b76b6f87a09778b132ca26f5 last_two=-1 text=
+DECODE frames=16320 sha256=125792e2d61fb67e223e262fbdade3722f9034300d477e38de90223ed6136e69 last_two=-1 text=
+DECODE frames=27200 sha256=8f9e025e274b922e8708f7c65dcd81432bbc1f5653ebe6c2e2293baf46cb8a7a last_two=-1 text=
+DECODE frames=39200 sha256=5361df16ea076d6d9d392c3274d2658a8eaff0edca27721c849c5774e2a0f739 last_two=1.36000001 text=Nee, han moet.
+DECODE frames=51680 sha256=eb340301a1201114fbe0f463cbe943624b83646f206eefcadf7c7e476b08363b last_two=2.55999994 text=Néhány nem úgy félék, igaza volt.
+DECODE frames=64800 sha256=c79154107a32f9b8410e268fe0d0bde2d444259a6c2b936ca4355c2020179ff5 last_two=2.55999994 text=Néhány nem úgy érték, igaza volt.
+DECODE frames=78560 sha256=34122cb58528e31c7fec30bd9c99213f6405c4a55a2b01b2395577bdb1b585d2 last_two=4.15999985 text=Néhány nem úgy érték, igaza volt? De sokkal hitték, igazán.
+DECODE frames=93280 sha256=3ef4042fa5d324cee508bef3a87c2bc521b79ff9f9cd98e4bc7f27c6fb79013f last_two=4.48000002 text=Néhány nem úgy érték, igaza volt. De sokkal hitték az ellenkezőjét.
+DECODE frames=109280 sha256=d110b791f26dc104f815ef77c8059b3e3616bbed6abcc6a7347de711c6d516f8 last_two=6.07999992 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszerre földjük.
+DECODE frames=125760 sha256=e32b50298dcfc84d178139ab9e276be90e327bf5b291aa95c4a567868c741c3e last_two=6.48000002 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a nap rendszer a földfelog.
+DECODE frames=128000 sha256=74673955d006c2a707a441dfd0e31a974c4b8be1fc05a94b7605db36e277c1de last_two=6.48000002 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a földmarog.
+DECODE frames=56800 sha256=9efa32e535d6593eab43508628e29b569b03efed027599848b61ff40eca60010 last_two=2.48000002 text=A naprendszerre fölterül forog, beleértve a napot, sőt,
+DECODE frames=70240 sha256=be3c1a94ea312c1e2e8aed28435a9d685dc49837b5b1bebfc7dda48c210110d0 last_two=3.5999999 text=Na rendszer a földforum. Beleértve a napot. Sit, a többi csille.
+DECODE frames=84320 sha256=1da3cec9daa70a6374064df19cdf7b598bd4558052be2d1a67c778175415ed16 last_two=4.07999992 text=A naprendszer a fölterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=99520 sha256=1ad315a0e5e5122dcaa53e0dd01844e32d61ff5ea50b95987bc3c8100880fad0 last_two=4.07999992 text=A naprendszere fölfelő forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=104320 sha256=4683bc7cbf843a46b7a40122da8fd924050d42810b46c91dbea239538c0d210c last_two=4.07999992 text=A naprendszere fölterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=59200 sha256=8ca865867d8f2e63d68ace3592e3c5f73521d44ae766627db4360649962d12fd last_two=0.399999976 text=Até a bitchilla wrath.
+HISTORY=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer A naprendszere fölterül forog, beleértve a napot, sőt, a többi Até a bitchilla wrath.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=84
+MEASURE index=0 decode_ms=49.124700 completed_after_source_start_ms=1383.049700
+MEASURE index=1 decode_ms=85.977700 completed_after_source_start_ms=2079.532500
+MEASURE index=2 decode_ms=125.442300 completed_after_source_start_ms=2809.808800
+MEASURE index=3 decode_ms=167.203700 completed_after_source_start_ms=3608.548500
+MEASURE index=4 decode_ms=214.865300 completed_after_source_start_ms=4426.719500
+MEASURE index=5 decode_ms=257.938800 completed_after_source_start_ms=5289.969300
+MEASURE index=6 decode_ms=309.639600 completed_after_source_start_ms=6206.051100
+MEASURE index=7 decode_ms=365.573500 completed_after_source_start_ms=7187.415800
+MEASURE index=8 decode_ms=424.331300 completed_after_source_start_ms=8223.511500
+MEASURE index=9 decode_ms=483.220900 completed_after_source_start_ms=9326.496400
+MEASURE index=10 decode_ms=487.430800 completed_after_source_start_ms=9814.195000
+MEASURE index=11 decode_ms=232.088700 completed_after_source_start_ms=10651.921400
+MEASURE index=12 decode_ms=279.819600 completed_after_source_start_ms=11533.448100
+MEASURE index=13 decode_ms=331.819700 completed_after_source_start_ms=12469.138500
+MEASURE index=14 decode_ms=383.305400 completed_after_source_start_ms=13456.948100
+MEASURE index=15 decode_ms=406.832800 completed_after_source_start_ms=13864.003800
+MEASURE index=16 decode_ms=238.658100 completed_after_source_start_ms=14260.903500

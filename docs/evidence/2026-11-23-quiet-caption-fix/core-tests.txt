@@ -1,0 +1,133 @@
+Start testing: Nov 23 14:25 Central Europe Standard Time
+----------------------------------------------------------
+1/7 Testing: conformance
+1/7 Test: conformance
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_conformance.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"conformance" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+foundation conformance passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"conformance" end time: Nov 23 14:25 Central Europe Standard Time
+"conformance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: pcm
+2/7 Test: pcm
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_pcm.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"pcm" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+PCM conversion, transactional errors, metadata, independent-clock slopes and epochs passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"pcm" end time: Nov 23 14:25 Central Europe Standard Time
+"pcm" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: numerical
+3/7 Test: numerical
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_numerical.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"numerical" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+SRC 48->16k 1kHz relative_error_db=-154.837
+SRC 48->16k 12kHz stopband_db=-133.076
+SRC 44100->16000 tone 100 gain_db=-0.000
+SRC 44100->16000 tone 1000 gain_db=-0.000
+SRC 44100->16000 tone 3000 gain_db=-0.000
+SRC 44100->16000 tone 6000 gain_db=-0.000
+SRC 44100->16000 tone 9000 gain_db=-114.288
+SRC 44100->16000 tone 12000 gain_db=-143.565
+SRC 44100->16000 tone 18000 gain_db=-146.271
+SRC 48000->16000 tone 100 gain_db=-0.000
+SRC 48000->16000 tone 1000 gain_db=0.000
+SRC 48000->16000 tone 3000 gain_db=-0.000
+SRC 48000->16000 tone 6000 gain_db=0.000
+SRC 48000->16000 tone 9000 gain_db=-111.871
+SRC 48000->16000 tone 12000 gain_db=-133.076
+SRC 48000->16000 tone 18000 gain_db=-157.065
+SRC accounting, chunk invariance, drift, nonfinite rejection, flush and reset passed
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"numerical" end time: Nov 23 14:25 Central Europe Standard Time
+"numerical" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: conditioning
+4/7 Test: conditioning
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_conditioning.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"conditioning" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+NS disabled overlap-add relative_error_db=-138.98
+NS known stationary noise reduction_db=9.423
+NS voiced tone projection=0.99043
+NS numerical/quality fixtures, AGC limiting/target and classical VAD onset/hangover passed
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"conditioning" end time: Nov 23 14:25 Central Europe Standard Time
+"conditioning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: aec
+5/7 Test: aec
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_aec.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"aec" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+AEC backend explicitly unavailable in CPU-core-only build
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"aec" end time: Nov 23 14:25 Central Europe Standard Time
+"aec" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: pipeline
+6/7 Test: pipeline
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_pipeline.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"pipeline" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+Pipeline stage combinations, channels, timing, exact EOS drain, reset and missing references passed
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"pipeline" end time: Nov 23 14:25 Central Europe Standard Time
+"pipeline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: concurrency
+7/7 Test: concurrency
+Command: "C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default/baffle_concurrency.exe"
+Directory: C:/Users/Mark/artalis.io/src/baffle/build-c11-audit/core-default
+"concurrency" start time: Nov 23 14:25 Central Europe Standard Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"concurrency" end time: Nov 23 14:25 Central Europe Standard Time
+"concurrency" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 23 14:25 Central Europe Standard Time

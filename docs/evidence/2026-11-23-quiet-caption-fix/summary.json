@@ -1,0 +1,1891 @@
+{
+  "source_base": "b20eaf7f0b7e562d620a8dfddb99f46dd0386f0b",
+  "working_tree": true,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "hardware": "AMD Ryzen 9 5950X, 16 cores/32 logical processors",
+  "corpus": "Google FLEURS CC-BY-4.0; recorded read speech, not physical microphone qualification",
+  "native_executions": 273,
+  "scored_rows_including_explicitly_reused_baselines": 330,
+  "source_sha256": {
+    "examples/win32-transcript/app.c": "e92f98d226be46e93913f51db3c4c84ff3e12a06aa5c07e75c3604699d1f5915",
+    "examples/win32-transcript/speech.c": "4ed20381a2a19e313851c9adc6931f1146f7a1a4683a56cc87f96769e2b8a7d3",
+    "examples/win32-transcript/replay_test.c": "70b17981deb680296ae2c7584d6a73e7bad00f1e65ec7aa167385a8cdb3ae23f",
+    "tools/quiet_caption_check.py": "b3e04c256962315d4518405843d1f4eef95d844a9a75f8d9122bdeda8c82e5e9",
+    "tests/public_caption_replay.py": "e4fe8c3e293aa0e5f6f5dfc4928e328bb190e61f1098559c2939a242b5937a38",
+    "tools/public_caption_replay.py": "192ef9496b01ac4a41a570ae171d1075a9d947fd9eb1461ce36c9c4af5225c18"
+  },
+  "build": "Windows x64, clang-cl 19.1.5, Release /O2 /std:c11 /MT /W4 /WX /fp:precise; static installed public SDKs; CPU Parakeet, 2 threads",
+  "iterations": [
+    "Rejected rolling-minimum onset: hu-01 new first-word error",
+    "Rejected unrestricted VAD onset: duplication and errors",
+    "Rejected unrestricted onset + overlap correction: hu-holdout-01 new first-word error",
+    "Rejected coupled continuation/rolling policy: NS trade-offs retained in final-raw/final-ns",
+    "Continuation-only VAD, independent original-energy rolling pauses and overlap correction; Raw qualified but processed-profile comparisons unfavorable",
+    "Release: Raw-only continuation detector; NS/NS+AGC keep original endpointing; overlap correction retained"
+  ],
+  "campaigns": [
+    {
+      "campaign": "build-quiet-caption\\experiment-1",
+      "results_sha256": "46cd6dc069bee2b3567c56872ac4ea11e6f715262a99df974f26a35c47e4611a",
+      "pairs": 8,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 0,
+          "decode_wall_ms": null
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 46,
+          "reference_words": 171,
+          "wer": 0.26900584795321636,
+          "first_words_correct": 5,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 124,
+          "peak_queued_blocks": 0,
+          "decode_wall_ms": null
+        }
+      ],
+      "worse_cases": [
+        "en-01",
+        "hu-01"
+      ],
+      "new_first_word_losses": [
+        "hu-01"
+      ],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 88,
+          "wer": 0.22727272727272727
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 26,
+          "reference_words": 83,
+          "wer": 0.3132530120481928
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\experiment-2",
+      "results_sha256": "7bcdd33edff9057b4a02b9d1194175ae5d6478601ceff7dac560666ab5a333d5",
+      "pairs": 8,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 0,
+          "decode_wall_ms": null
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 53,
+          "reference_words": 171,
+          "wer": 0.30994152046783624,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 124,
+          "peak_queued_blocks": 0,
+          "decode_wall_ms": null
+        }
+      ],
+      "worse_cases": [
+        "en-01",
+        "hu-01"
+      ],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 23,
+          "reference_words": 88,
+          "wer": 0.26136363636363635
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 30,
+          "reference_words": 83,
+          "wer": 0.3614457831325301
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\experiment-3",
+      "results_sha256": "a88b6f54cb20e95224b595a2a9a0c76820b09133946d8d7d51b0ba5aaf0db928",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 104,
+          "peak_queued_blocks": 90,
+          "decode_wall_ms": {
+            "p50": 227.08454999999998,
+            "p95": 481.38021000000003,
+            "p99": 487.098717,
+            "max": 489.0508
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 48,
+          "reference_words": 171,
+          "wer": 0.2807017543859649,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 124,
+          "peak_queued_blocks": 92,
+          "decode_wall_ms": {
+            "p50": 250.02085,
+            "p95": 486.61985,
+            "p99": 500.06260499999996,
+            "max": 502.0542
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 56,
+          "reference_words": 132,
+          "wer": 0.42424242424242425,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 96,
+          "peak_queued_blocks": 94,
+          "decode_wall_ms": {
+            "p50": 216.5746,
+            "p95": 478.16945000000004,
+            "p99": 485.895895,
+            "max": 488.7382
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 42,
+          "reference_words": 132,
+          "wer": 0.3181818181818182,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 114,
+          "peak_queued_blocks": 92,
+          "decode_wall_ms": {
+            "p50": 237.9555,
+            "p95": 433.00272499999994,
+            "p99": 497.398052,
+            "max": 507.0246
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 165.4871,
+            "p95": 362.21324,
+            "p99": 365.119448,
+            "max": 365.846
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 167.7881,
+            "p95": 370.163,
+            "p99": 371.06708,
+            "max": 371.2931
+          }
+        }
+      ],
+      "worse_cases": [
+        "hu-holdout-01",
+        "hu-holdout-02"
+      ],
+      "new_first_word_losses": [
+        "hu-holdout-01"
+      ],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 19,
+          "reference_words": 88,
+          "wer": 0.2159090909090909
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 29,
+          "reference_words": 83,
+          "wer": 0.3493975903614458
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 30,
+          "reference_words": 67,
+          "wer": 0.44776119402985076
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 8,
+          "reference_words": 67,
+          "wer": 0.11940298507462686
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 26,
+          "reference_words": 65,
+          "wer": 0.4
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 34,
+          "reference_words": 65,
+          "wer": 0.5230769230769231
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\final-raw",
+      "results_sha256": "4805ea2b4f2cb6c64dce9ec224f58d9a5960163086ad6cdc74954ace33d634e2",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 89,
+          "decode_wall_ms": {
+            "p50": 233.1551,
+            "p95": 481.03267999999997,
+            "p99": 489.207208,
+            "max": 492.5059
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 49,
+          "reference_words": 171,
+          "wer": 0.28654970760233917,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 115,
+          "peak_queued_blocks": 100,
+          "decode_wall_ms": {
+            "p50": 264.115,
+            "p95": 502.77536999999995,
+            "p99": 508.35186999999996,
+            "max": 509.9523
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 129,
+          "reference_words": 200,
+          "wer": 0.645,
+          "first_words_correct": 6,
+          "blanks": 1,
+          "dropped_blocks": 0,
+          "decoder_calls": 102,
+          "peak_queued_blocks": 88,
+          "decode_wall_ms": {
+            "p50": 258.98465,
+            "p95": 485.78486999999996,
+            "p99": 490.923542,
+            "max": 494.9428
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 87,
+          "reference_words": 200,
+          "wer": 0.435,
+          "first_words_correct": 6,
+          "blanks": 1,
+          "dropped_blocks": 0,
+          "decoder_calls": 114,
+          "peak_queued_blocks": 100,
+          "decode_wall_ms": {
+            "p50": 290.50725,
+            "p95": 506.74885,
+            "p99": 511.13268899999997,
+            "max": 513.1161
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 36,
+          "decode_wall_ms": {
+            "p50": 166.1633,
+            "p95": 365.3667,
+            "p99": 365.85774,
+            "max": 365.9805
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 1,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 3,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 33,
+          "decode_wall_ms": {
+            "p50": 170.8728,
+            "p95": 379.6535,
+            "p99": 381.04622,
+            "max": 381.3944
+          }
+        }
+      ],
+      "worse_cases": [
+        "en-holdout-05"
+      ],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 17,
+          "reference_words": 88,
+          "wer": 0.19318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 74,
+          "reference_words": 109,
+          "wer": 0.6788990825688074
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 32,
+          "reference_words": 109,
+          "wer": 0.29357798165137616
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 55,
+          "reference_words": 91,
+          "wer": 0.6043956043956044
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 55,
+          "reference_words": 91,
+          "wer": 0.6043956043956044
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\final-ns",
+      "results_sha256": "0d1d6ffe8719ad827c56c183537ad779289af660136a0b194741cb0d91064231",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 88,
+          "reference_words": 171,
+          "wer": 0.5146198830409356,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 87,
+          "decode_wall_ms": {
+            "p50": 234.6763,
+            "p95": 482.55288,
+            "p99": 489.086636,
+            "max": 497.022
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 68,
+          "reference_words": 171,
+          "wer": 0.39766081871345027,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 115,
+          "peak_queued_blocks": 99,
+          "decode_wall_ms": {
+            "p50": 265.0222,
+            "p95": 503.10075,
+            "p99": 508.85612399999997,
+            "max": 533.6846
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 142,
+          "reference_words": 200,
+          "wer": 0.71,
+          "first_words_correct": 5,
+          "blanks": 1,
+          "dropped_blocks": 0,
+          "decoder_calls": 102,
+          "peak_queued_blocks": 95,
+          "decode_wall_ms": {
+            "p50": 260.09164999999996,
+            "p95": 487.857675,
+            "p99": 503.155764,
+            "max": 517.759
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 99,
+          "reference_words": 200,
+          "wer": 0.495,
+          "first_words_correct": 5,
+          "blanks": 1,
+          "dropped_blocks": 0,
+          "decoder_calls": 112,
+          "peak_queued_blocks": 98,
+          "decode_wall_ms": {
+            "p50": 293.29314999999997,
+            "p95": 509.837475,
+            "p99": 514.164668,
+            "max": 523.7511
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 1,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 3,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 36,
+          "decode_wall_ms": {
+            "p50": 164.8561,
+            "p95": 365.94276,
+            "p99": 367.170072,
+            "max": 367.4769
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 1,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 3,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 38,
+          "decode_wall_ms": {
+            "p50": 170.1444,
+            "p95": 378.86064,
+            "p99": 380.17564799999997,
+            "max": 380.5044
+          }
+        }
+      ],
+      "worse_cases": [
+        "hu-01",
+        "hu-04",
+        "hu-holdout-06"
+      ],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 41,
+          "reference_words": 88,
+          "wer": 0.4659090909090909
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 17,
+          "reference_words": 88,
+          "wer": 0.19318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 47,
+          "reference_words": 83,
+          "wer": 0.5662650602409639
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 51,
+          "reference_words": 83,
+          "wer": 0.6144578313253012
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 78,
+          "reference_words": 109,
+          "wer": 0.7155963302752294
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 28,
+          "reference_words": 109,
+          "wer": 0.25688073394495414
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 64,
+          "reference_words": 91,
+          "wer": 0.7032967032967034
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 71,
+          "reference_words": 91,
+          "wer": 0.7802197802197802
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\roll-ablation-ns",
+      "results_sha256": "ff5e61b89b516a244e4ea92bd4f54a6c6a2cf778d15c2f772c2d5ca97961675f",
+      "pairs": 1,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 1,
+          "word_errors": 12,
+          "reference_words": 17,
+          "wer": 0.7058823529411765,
+          "first_words_correct": 1,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 15,
+          "peak_queued_blocks": 58,
+          "decode_wall_ms": {
+            "p50": 200.592,
+            "p95": 359.48893999999996,
+            "p99": 376.704908,
+            "max": 381.0089
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 1,
+          "word_errors": 12,
+          "reference_words": 17,
+          "wer": 0.7058823529411765,
+          "first_words_correct": 1,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 15,
+          "peak_queued_blocks": 40,
+          "decode_wall_ms": {
+            "p50": 201.8783,
+            "p95": 360.21007999999995,
+            "p99": 382.596416,
+            "max": 388.193
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 12,
+          "reference_words": 17,
+          "wer": 0.7058823529411765
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 12,
+          "reference_words": 17,
+          "wer": 0.7058823529411765
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\accepted-raw",
+      "results_sha256": "5fdfe20e5d9fc9cb5e5e6a8f0cb932aa3603d4c154d59318c9d8eed3b5314354",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 89,
+          "decode_wall_ms": {
+            "p50": 233.1551,
+            "p95": 481.03267999999997,
+            "p99": 489.207208,
+            "max": 492.5059
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 52,
+          "reference_words": 171,
+          "wer": 0.30409356725146197,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 115,
+          "peak_queued_blocks": 100,
+          "decode_wall_ms": {
+            "p50": 260.4195,
+            "p95": 492.48468,
+            "p99": 502.67467600000003,
+            "max": 507.7271
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 52,
+          "reference_words": 173,
+          "wer": 0.30057803468208094,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 109,
+          "peak_queued_blocks": 87,
+          "decode_wall_ms": {
+            "p50": 258.8099,
+            "p95": 485.92663999999996,
+            "p99": 492.06273600000003,
+            "max": 493.7186
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 40,
+          "reference_words": 173,
+          "wer": 0.23121387283236994,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 119,
+          "peak_queued_blocks": 88,
+          "decode_wall_ms": {
+            "p50": 263.3554,
+            "p95": 492.67823000000004,
+            "p99": 498.53646200000003,
+            "max": 504.1782
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 36,
+          "decode_wall_ms": {
+            "p50": 166.1633,
+            "p95": 365.3667,
+            "p99": 365.85774,
+            "max": 365.9805
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 168.4615,
+            "p95": 367.89366,
+            "p99": 371.062572,
+            "max": 371.8548
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 88,
+          "wer": 0.22727272727272727
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 95,
+          "wer": 0.3368421052631579
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 95,
+          "wer": 0.21052631578947367
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\accepted-ns",
+      "results_sha256": "f41094164c116f616975769f802e8716f11cd81528d7b55695cb736b191e6784",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 86,
+          "reference_words": 171,
+          "wer": 0.5029239766081871,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 104,
+          "peak_queued_blocks": 89,
+          "decode_wall_ms": {
+            "p50": 227.37195,
+            "p95": 482.56038499999994,
+            "p99": 487.23713599999996,
+            "max": 487.4308
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 117,
+          "peak_queued_blocks": 108,
+          "decode_wall_ms": {
+            "p50": 262.8128,
+            "p95": 491.7802,
+            "p99": 498.127532,
+            "max": 499.6716
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 55,
+          "reference_words": 173,
+          "wer": 0.3179190751445087,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 109,
+          "peak_queued_blocks": 92,
+          "decode_wall_ms": {
+            "p50": 257.3655,
+            "p95": 487.47614,
+            "p99": 490.56226799999996,
+            "max": 494.9475
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 45,
+          "reference_words": 173,
+          "wer": 0.26011560693641617,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 119,
+          "peak_queued_blocks": 90,
+          "decode_wall_ms": {
+            "p50": 263.2916,
+            "p95": 494.46986,
+            "p99": 500.47670999999997,
+            "max": 504.8433
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 0,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 4,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 165.1475,
+            "p95": 362.31602,
+            "p99": 365.464004,
+            "max": 366.251
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 1,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 3,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 167.5821,
+            "p95": 369.17154,
+            "p99": 374.10790799999995,
+            "max": 375.342
+          }
+        }
+      ],
+      "worse_cases": [
+        "hu-01",
+        "click"
+      ],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 40,
+          "reference_words": 88,
+          "wer": 0.45454545454545453
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 22,
+          "reference_words": 88,
+          "wer": 0.25
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 46,
+          "reference_words": 83,
+          "wer": 0.5542168674698795
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 48,
+          "reference_words": 83,
+          "wer": 0.5783132530120482
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 35,
+          "reference_words": 95,
+          "wer": 0.3684210526315789
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 25,
+          "reference_words": 95,
+          "wer": 0.2631578947368421
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\background-raw",
+      "results_sha256": "4343ca08cf8d6464e06b3507efb2513ae1e06defe82128325e7aee9597bbf00c",
+      "pairs": 2,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 2,
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 6,
+          "peak_queued_blocks": 12,
+          "decode_wall_ms": {
+            "p50": 87.09549999999999,
+            "p95": 94.322625,
+            "p99": 94.45508500000001,
+            "max": 94.4882
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 2,
+          "word_errors": 4,
+          "reference_words": 30,
+          "wer": 0.13333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 29,
+          "peak_queued_blocks": 73,
+          "decode_wall_ms": {
+            "p50": 265.4455,
+            "p95": 382.09765999999996,
+            "p99": 389.21770000000004,
+            "max": 390.4938
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 4,
+          "reference_words": 30,
+          "wer": 0.13333333333333333
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\background-ns",
+      "results_sha256": "9f45a4119aeb63c88e15a535b189ed15d9089cf421741e77c979481c10425341",
+      "pairs": 2,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 2,
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 6,
+          "peak_queued_blocks": 10,
+          "decode_wall_ms": {
+            "p50": 87.33725,
+            "p95": 94.017325,
+            "p99": 94.10394500000001,
+            "max": 94.1256
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 2,
+          "word_errors": 5,
+          "reference_words": 30,
+          "wer": 0.16666666666666666,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 23,
+          "peak_queued_blocks": 59,
+          "decode_wall_ms": {
+            "p50": 234.9019,
+            "p95": 376.69931,
+            "p99": 378.810242,
+            "max": 379.294
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 5,
+          "reference_words": 30,
+          "wer": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\release-raw",
+      "results_sha256": "1063268805b271ed7138cea139dceb2d542df45f2b802749c8ba884e6ebd4861",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 70,
+          "reference_words": 171,
+          "wer": 0.4093567251461988,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 105,
+          "peak_queued_blocks": 89,
+          "decode_wall_ms": {
+            "p50": 233.1551,
+            "p95": 481.03267999999997,
+            "p99": 489.207208,
+            "max": 492.5059
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 52,
+          "reference_words": 171,
+          "wer": 0.30409356725146197,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 115,
+          "peak_queued_blocks": 96,
+          "decode_wall_ms": {
+            "p50": 261.1248,
+            "p95": 491.82617,
+            "p99": 496.101018,
+            "max": 497.7492
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 52,
+          "reference_words": 173,
+          "wer": 0.30057803468208094,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 109,
+          "peak_queued_blocks": 87,
+          "decode_wall_ms": {
+            "p50": 258.8099,
+            "p95": 485.92663999999996,
+            "p99": 492.06273600000003,
+            "max": 493.7186
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 40,
+          "reference_words": 173,
+          "wer": 0.23121387283236994,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 119,
+          "peak_queued_blocks": 84,
+          "decode_wall_ms": {
+            "p50": 262.7562,
+            "p95": 494.09594,
+            "p99": 499.14070599999997,
+            "max": 503.6818
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 36,
+          "decode_wall_ms": {
+            "p50": 166.1633,
+            "p95": 365.3667,
+            "p99": 365.85774,
+            "max": 365.9805
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 2,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 2,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 39,
+          "decode_wall_ms": {
+            "p50": 167.2089,
+            "p95": 369.10634,
+            "p99": 371.738948,
+            "max": 372.3971
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 38,
+          "reference_words": 88,
+          "wer": 0.4318181818181818
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 88,
+          "wer": 0.22727272727272727
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 32,
+          "reference_words": 83,
+          "wer": 0.3855421686746988
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 32,
+          "reference_words": 95,
+          "wer": 0.3368421052631579
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 95,
+          "wer": 0.21052631578947367
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\release-ns",
+      "results_sha256": "22d641ddff1e14ffadb335647d8b0ac212fed0fae0d03a8295a8b3f2dc769149",
+      "pairs": 20,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 86,
+          "reference_words": 171,
+          "wer": 0.5029239766081871,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 104,
+          "peak_queued_blocks": 89,
+          "decode_wall_ms": {
+            "p50": 227.37195,
+            "p95": 482.56038499999994,
+            "p99": 487.23713599999996,
+            "max": 487.4308
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 85,
+          "reference_words": 171,
+          "wer": 0.49707602339181284,
+          "first_words_correct": 6,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 104,
+          "peak_queued_blocks": 90,
+          "decode_wall_ms": {
+            "p50": 231.7457,
+            "p95": 491.8302,
+            "p99": 497.384216,
+            "max": 498.1121
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "baseline",
+          "cases": 8,
+          "word_errors": 55,
+          "reference_words": 173,
+          "wer": 0.3179190751445087,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 109,
+          "peak_queued_blocks": 92,
+          "decode_wall_ms": {
+            "p50": 257.3655,
+            "p95": 487.47614,
+            "p99": 490.56226799999996,
+            "max": 494.9475
+          }
+        },
+        {
+          "split": "holdout",
+          "profile": "candidate",
+          "cases": 8,
+          "word_errors": 55,
+          "reference_words": 173,
+          "wer": 0.3179190751445087,
+          "first_words_correct": 7,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 108,
+          "peak_queued_blocks": 87,
+          "decode_wall_ms": {
+            "p50": 262.44525,
+            "p95": 493.25975999999997,
+            "p99": 498.262948,
+            "max": 505.653
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "baseline",
+          "cases": 4,
+          "word_errors": 0,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 4,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 37,
+          "decode_wall_ms": {
+            "p50": 165.1475,
+            "p95": 362.31602,
+            "p99": 365.464004,
+            "max": 366.251
+          }
+        },
+        {
+          "split": "nonspeech",
+          "profile": "candidate",
+          "cases": 4,
+          "word_errors": 0,
+          "reference_words": 0,
+          "wer": null,
+          "first_words_correct": 0,
+          "blanks": 4,
+          "dropped_blocks": 0,
+          "decoder_calls": 13,
+          "peak_queued_blocks": 39,
+          "decode_wall_ms": {
+            "p50": 167.5847,
+            "p95": 368.23154,
+            "p99": 371.659508,
+            "max": 372.5165
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 40,
+          "reference_words": 88,
+          "wer": 0.45454545454545453
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 39,
+          "reference_words": 88,
+          "wer": 0.4431818181818182
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 46,
+          "reference_words": 83,
+          "wer": 0.5542168674698795
+        },
+        {
+          "split": "regression",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 46,
+          "reference_words": 83,
+          "wer": 0.5542168674698795
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 35,
+          "reference_words": 95,
+          "wer": 0.3684210526315789
+        },
+        {
+          "split": "holdout",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 35,
+          "reference_words": 95,
+          "wer": 0.3684210526315789
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "baseline",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        },
+        {
+          "split": "holdout",
+          "language": "hu",
+          "profile": "candidate",
+          "word_errors": 20,
+          "reference_words": 78,
+          "wer": 0.2564102564102564
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\release-background-raw",
+      "results_sha256": "406d0632e2693a5ba147d11886f01c11f1fe8eb4c696cc56bbe41089394ba70c",
+      "pairs": 2,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 2,
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 6,
+          "peak_queued_blocks": 12,
+          "decode_wall_ms": {
+            "p50": 87.09549999999999,
+            "p95": 94.322625,
+            "p99": 94.45508500000001,
+            "max": 94.4882
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 2,
+          "word_errors": 4,
+          "reference_words": 30,
+          "wer": 0.13333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 29,
+          "peak_queued_blocks": 62,
+          "decode_wall_ms": {
+            "p50": 264.0235,
+            "p95": 376.97774,
+            "p99": 379.647316,
+            "max": 380.0786
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 4,
+          "reference_words": 30,
+          "wer": 0.13333333333333333
+        }
+      ]
+    },
+    {
+      "campaign": "build-quiet-caption\\release-background-ns",
+      "results_sha256": "4083be78851adec5956166fff277b23287af83d9796969bc1919b56be39ea1c7",
+      "pairs": 2,
+      "aggregates": [
+        {
+          "split": "regression",
+          "profile": "baseline",
+          "cases": 2,
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 6,
+          "peak_queued_blocks": 10,
+          "decode_wall_ms": {
+            "p50": 87.33725,
+            "p95": 94.017325,
+            "p99": 94.10394500000001,
+            "max": 94.1256
+          }
+        },
+        {
+          "split": "regression",
+          "profile": "candidate",
+          "cases": 2,
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333,
+          "first_words_correct": 2,
+          "blanks": 0,
+          "dropped_blocks": 0,
+          "decoder_calls": 6,
+          "peak_queued_blocks": 10,
+          "decode_wall_ms": {
+            "p50": 87.70775,
+            "p95": 95.44005,
+            "p99": 95.79257,
+            "max": 95.8807
+          }
+        }
+      ],
+      "worse_cases": [],
+      "new_first_word_losses": [],
+      "new_blanks": [],
+      "by_language": [
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "baseline",
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333
+        },
+        {
+          "split": "regression",
+          "language": "en",
+          "profile": "candidate",
+          "word_errors": 22,
+          "reference_words": 30,
+          "wer": 0.7333333333333333
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Original fixed onset threshold remains; entirely subthreshold speech can still fail to start",
+    "English/Hungarian publisher references are not newly human reviewed",
+    "Clicks/noise can still create false captions in the baseline and candidate",
+    "Word-level checks do not establish phoneme preservation",
+    "Window/model timing and desktop scheduling remain variable",
+    "ASan instruments owned example sources, not prebuilt model/SDK internals",
+    "Static analyzer reports one pre-existing dead-store warning",
+    "No new physical Shure, remote CI, GPU or other-platform qualification",
+    "Historical NS condition strings use physical delay to mean the 160-frame algorithmic NS delay; no device/acoustic latency was measured"
+  ],
+  "production_readiness": "PARTIAL",
+  "targeted_release_verdict": "PASS for Raw quiet-continuation and overlap regression checks; full speech readiness PARTIAL",
+  "release_scope": "Raw microphone detector only; processed endpointing unchanged",
+  "release_speech_word_errors": {
+    "raw": [
+      122,
+      92
+    ],
+    "ns": [
+      141,
+      140
+    ],
+    "raw_hungarian": [
+      52,
+      52
+    ]
+  },
+  "verification": {
+    "native_example": "3/3",
+    "windows_owned_source_asan": "3/3",
+    "existing_core_tests": "7/7",
+    "installed_hail_consumers": "3/3",
+    "recorded_raw_asan_smoke": "exit 0 with interception_win unhandled-instruction warning; coverage limitation",
+    "remote_ci": "not run"
+  },
+  "maintained_driver_after_metadata_wording_sha256": "e2bd20cc120189dcad206dbac277ce5c62239bfdbca54527b72c3b3c68af6d3f"
+}

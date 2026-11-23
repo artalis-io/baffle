@@ -1,0 +1,39 @@
+REPLAY queue_capacity=512 input_frames=193920
+DECODE frames=5600 sha256=e536e6167d865847f1be3cc5790dcce80f75f490b76b6f87a09778b132ca26f5 last_two=-1 text=
+DECODE frames=15680 sha256=98c32d50f396620a548625f5031d9045594f18b9d3eae24a7ad60f4b1e086b56 last_two=-1 text=
+DECODE frames=26880 sha256=dd104da2a8b850d88ec0a6297ea3840b3fb2d1846267474d561c43ef136161e0 last_two=-1 text=
+DECODE frames=38720 sha256=bff710e700badba4e422ef252065d2156d338e23de53333e293b52701b963c04 last_two=1.36000001 text=Me han ditado.
+DECODE frames=51200 sha256=cfc827b1e00afc7ccad88e2f9f4a950510a82c12c080347eae29dba1472b059e last_two=2.48000002 text=Néhány nem úgy érték. Igaza vagy.
+DECODE frames=64160 sha256=e95c7b904dbe495df7e6d380162e0ebe4d2573d8a6fe13c0f414ac8ec1b8ec01 last_two=2.55999994 text=Néhány nem úgy érték, igaza volt.
+DECODE frames=78080 sha256=e1f4fca1273fb3e1bfa29f83506a2f9966cd1e68fbe84d357c121546414adb4f last_two=4.07999992 text=Néhány nem úgy érték, igaza volt. Te sokkal hitték, igazán.
+DECODE frames=92960 sha256=901ad240864fb2618eebb6dfc19ab0cc642562e8ad21d5823723e24b1677ba91 last_two=4.48000002 text=Néhány nem úgy érték, igaza volt. De sokkal hitték az ellenkezőjét.
+DECODE frames=108960 sha256=4ffa3a952d8d98b19ecc0ecbbabb70c4a77ca7eb253e6b2159d8d09e13ab4d40 last_two=5.83999968 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszere föl.
+DECODE frames=125280 sha256=bc7867dcc5a436a8f962948db776d1107cf57668d1ab5194545364f0634ccf2f last_two=6.48000002 text=Néhány nem úgy érdek, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a földfelog.
+DECODE frames=128000 sha256=74673955d006c2a707a441dfd0e31a974c4b8be1fc05a94b7605db36e277c1de last_two=6.48000002 text=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer a földmarog.
+DECODE frames=56960 sha256=0a251323dd5754f965100740b5d5880f15f69f140db3884da119d6f863be91a6 last_two=2.48000002 text=A naprendszer a fölterül forog, beleértve a napot, sőt,
+DECODE frames=70560 sha256=f105dd495227867fd6b6f09da9a4767dbae10960fb96ae1e204db86f90435747 last_two=3.51999998 text=Una prensa forte forum. Bella ierface. Sit. A tecille.
+DECODE frames=84960 sha256=65a731597f29fd2b328ba3801f466cb4d1a35cb0b6d1742834a6bfff2c258f68 last_two=4.07999992 text=A naprendszerre fölterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=99840 sha256=713491b5b147c894459ce53ad1af6cbe8455fb1e4551ae3d85e4a74dd6f4655b last_two=4.07999992 text=A naprendszer a fölfelő forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=104320 sha256=4683bc7cbf843a46b7a40122da8fd924050d42810b46c91dbea239538c0d210c last_two=4.07999992 text=A naprendszere fölterül forog, beleértve a napot, sőt, a többi csillagot is.
+DECODE frames=59200 sha256=8ca865867d8f2e63d68ace3592e3c5f73521d44ae766627db4360649962d12fd last_two=0.399999976 text=Até a bitchilla wrath.
+HISTORY=Néhány nem úgy érték, igaza volt, de sokkal hitték az ellenkezőjét, hogy a naprendszer A naprendszere fölterül forog, beleértve a napot, sőt, a többi Até a bitchilla wrath.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=83
+MEASURE index=0 decode_ms=49.942100 completed_after_source_start_ms=1369.363300
+MEASURE index=1 decode_ms=85.793500 completed_after_source_start_ms=2056.040200
+MEASURE index=2 decode_ms=123.291100 completed_after_source_start_ms=2789.719500
+MEASURE index=3 decode_ms=168.592100 completed_after_source_start_ms=3579.246000
+MEASURE index=4 decode_ms=209.352500 completed_after_source_start_ms=4392.662100
+MEASURE index=5 decode_ms=263.714500 completed_after_source_start_ms=5263.152800
+MEASURE index=6 decode_ms=311.665800 completed_after_source_start_ms=6180.393200
+MEASURE index=7 decode_ms=373.107100 completed_after_source_start_ms=7172.814800
+MEASURE index=8 decode_ms=433.080700 completed_after_source_start_ms=8211.293100
+MEASURE index=9 decode_ms=489.893200 completed_after_source_start_ms=9307.289700
+MEASURE index=10 decode_ms=498.139500 completed_after_source_start_ms=9805.704100
+MEASURE index=11 decode_ms=237.317500 completed_after_source_start_ms=10647.327500
+MEASURE index=12 decode_ms=288.412500 completed_after_source_start_ms=11548.773500
+MEASURE index=13 decode_ms=344.749700 completed_after_source_start_ms=12502.670900
+MEASURE index=14 decode_ms=391.646000 completed_after_source_start_ms=13494.543200
+MEASURE index=15 decode_ms=415.753600 completed_after_source_start_ms=13910.521400
+MEASURE index=16 decode_ms=242.326400 completed_after_source_start_ms=14260.587300

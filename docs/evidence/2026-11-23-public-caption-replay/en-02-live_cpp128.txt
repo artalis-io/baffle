@@ -1,0 +1,13 @@
+DECODE frames=5600 sha256=0a9d5566ae4c8234442e2d9033687e6b3dafad587e2b8e81b9bfa52175091ff9 last_two=-1 text=
+DECODE frames=16160 sha256=f23e1377bd8b87f3adc4c43e578d3388ccca3151e2fb2c81a4bb5775a0346ede last_two=-1 text=Only
+DECODE frames=28000 sha256=71f5e621621bbc60281ff97f3e3a603cc61cb372ba8434dcbad07579858bbeba last_two=1.12 text=All now is almost
+DECODE frames=41120 sha256=d6f0f34891fd6f7acb7e6a2b43f9dcc3b289e69c5cc09496759abaf3be2a105d last_two=0.56 text=All now
+DECODE frames=55840 sha256=26e1d3e150de3a3c1802d0e444ce21ec982d9ffb0c7fcc219debaf551911dfb1 last_two=2.96 text=All nouns alongside the world say for you.
+DECODE frames=71680 sha256=5fdce8e01164dcde7ec26facaeddd11ba41474e97b99f14e11b4b3afa930ed47 last_two=2.96 text=All nouns alongside the world say for you.
+DECODE frames=87360 sha256=fa05f21e40e1f7f86b694d8a4d82af6c3a405841c50e0b5673d6b1861521fc57 last_two=4.72 text=All nouns alongside the world say for you. Always begin with a capital.
+DECODE frames=106240 sha256=05ef5c476ec874e19291470b4a6742d963ad2d1201b6119b617a62d59979ae4f last_two=5.04 text=All nouns alongside the world say for you always begin with a capital letter.
+DECODE frames=124800 sha256=866205abc43bc913c4cd81c56165d7a489c23c1162850ea6dddb99165c5a896f last_two=7.12 text=All nouns alongside the word say for you always begin with a capital letter even in the middle of a sentence.
+DECODE frames=128000 sha256=8b4d69932e5d45c197f14358f017f074e7b914be10a867035a364584b45c16f3 last_two=7.2 text=All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence.
+HISTORY=All nouns alongside the world say for you always begin with a capital letter, even in the middle of a sentence. [hangkimaradás]
+DROPPED=1
+STATUS=Hangkimaradás — folytatás

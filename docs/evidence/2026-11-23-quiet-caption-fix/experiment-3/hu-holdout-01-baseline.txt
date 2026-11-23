@@ -1,0 +1,41 @@
+REPLAY queue_capacity=512 input_frames=192000
+DECODE frames=5600 sha256=5d45a7eb94715eb1a530db6e3b665c36c910aa6c29645f8ae4087f210229cb14 last_two=-1 text=
+DECODE frames=16160 sha256=da7cdfac282edcae7cd4b93999545a06b39f530cb231e772e5f215281a5c19c0 last_two=-1 text=
+DECODE frames=18400 sha256=27e50a64552645e5dd97f0c1333b0cecb56157434db1cb49903867e102b042ec last_two=-1 text=
+DECODE frames=5600 sha256=f5f8e9001930d34aeb86a740a5f90b9ddab9b71d1e317659df40e3a1776f1973 last_two=-1 text=What.
+DECODE frames=16320 sha256=70cf7d496c74b909d345a5202e65261101f0a9ac3cbfaa474296efb3c1c643a7 last_two=0.159999996 text=What amber.
+DECODE frames=27200 sha256=6319daae62172d3e7e940f37abf063b19593312d929a7e14bbe5b63645ae5076 last_two=-1 text=A
+DECODE frames=39360 sha256=3845ebe268a7af25c911499be99c672d0c427c8f9b2edd3ea9974ac85ea05f32 last_two=1.83999991 text=Az emberek manapság már a számít.
+DECODE frames=51840 sha256=27fe352b76bf99396f3737cf02dd651648ebcadb7eccd51be2d6b29aba6a3b88 last_two=1.83999991 text=Az emberek manapság már a számítógéképpen.
+DECODE frames=64960 sha256=9cdc6c4127666d0ff45b2865677f3b3e5c2f4ced3d4f7bf530a35bb2ac9ed9c8 last_two=1.91999996 text=Az emberek manapság már a számítógép képernyőire.
+DECODE frames=79040 sha256=1fc29c96cee9a166cdaa517c4a1b01434c5b6a73a71b7847725164648903a744 last_two=2.87999988 text=Az emberek manapság már a számítógép képernyőre ütenete.
+DECODE frames=93280 sha256=da74525ad8c2454bc985ab34fb2b76428789424051c4fe07c4e8992fbe5d4e3e last_two=5.11999989 text=Az emberek manapság már a számítógép képernyőre írnak ütenetek, és sosem.
+DECODE frames=109280 sha256=9aaec131bd2738225e8e49e3ce8bad5fb9e7d8dc25826a540888aec7045dd870 last_two=5.83999968 text=Az emberek manapság már a számítógép képernyői írnak ütenetek, és sosem kerülnek egy...
+DECODE frames=125280 sha256=11c21a889799d46939cf7bc0acf3774e2e52282f232840de21dd9549a62f9ce3 last_two=6.63999987 text=Az emberek manapság már a számítógép képernyői írnak ütenetek, és sosem kerülnek egy hegyező közelé.
+DECODE frames=125920 sha256=5420bd8b0d59bf1103631faae782c1d44b2bd93bcafa75a7bd5566351013e78f last_two=6.63999987 text=Az emberek manapság már a számítógép képernyői írnak ütenetek, és sosem kerülnek egy hegyező közelé.
+DECODE frames=47840 sha256=1483c486616ae567dc4bf96fbffaaeed604508456fad563a04e81977c38296b5 last_two=0.879999995 text=Kerülnek egy hegyező közelébe.
+DECODE frames=5600 sha256=d96f8d74404cf3468854bc8fe207cea931fd24654b678b3572fbfeb359c95441 last_two=-1 text=
+DECODE frames=16160 sha256=a07faec7e94e830acbf93f51a580d6c9c884cc0fddf15d646e6c1b16c76b0843 last_two=-1 text=
+DECODE frames=18560 sha256=67f3fbeed20e27c15f4182c11ab511713334e0595dd823563106a134ce11eb97 last_two=-1 text=
+HISTORY=Az emberek manapság már a számítógép képernyői írnak ütenetek, és sosem kerülnek egy Kerülnek egy hegyező közelébe.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=94
+MEASURE index=0 decode_ms=49.945700 completed_after_source_start_ms=1405.154800
+MEASURE index=1 decode_ms=86.392300 completed_after_source_start_ms=2102.646900
+MEASURE index=2 decode_ms=94.071300 completed_after_source_start_ms=2253.311900
+MEASURE index=3 decode_ms=48.037300 completed_after_source_start_ms=3057.606400
+MEASURE index=4 decode_ms=86.219300 completed_after_source_start_ms=3758.242100
+MEASURE index=5 decode_ms=125.723300 completed_after_source_start_ms=4492.193900
+MEASURE index=6 decode_ms=166.756600 completed_after_source_start_ms=5273.405000
+MEASURE index=7 decode_ms=220.031300 completed_after_source_start_ms=6107.957000
+MEASURE index=8 decode_ms=258.972500 completed_after_source_start_ms=6982.056400
+MEASURE index=9 decode_ms=310.250800 completed_after_source_start_ms=7896.722700
+MEASURE index=10 decode_ms=364.721100 completed_after_source_start_ms=8862.536600
+MEASURE index=11 decode_ms=421.750500 completed_after_source_start_ms=9898.992700
+MEASURE index=12 decode_ms=477.911800 completed_after_source_start_ms=10978.097900
+MEASURE index=13 decode_ms=482.142500 completed_after_source_start_ms=11460.515000
+MEASURE index=14 decode_ms=201.677200 completed_after_source_start_ms=11706.183600
+MEASURE index=15 decode_ms=48.344600 completed_after_source_start_ms=12512.780000
+MEASURE index=16 decode_ms=83.776600 completed_after_source_start_ms=13222.515500
+MEASURE index=17 decode_ms=92.952200 completed_after_source_start_ms=13358.043700

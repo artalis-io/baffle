@@ -1,0 +1,21 @@
+REPLAY queue_capacity=512 input_frames=92160 caption_profile=raw
+DECODE frames=5600 sha256=0e87fc1f802dfc22749b3916a84966ba15154ea38b550154e3d9727741f861cf last_two=-1 text=
+DECODE frames=16000 sha256=4c777bde146e08e5ac9c9fd6b4eaca5fd3488605a059e3c2832433a723f97171 last_two=0.399999976 text=Cabbage juice change.
+DECODE frames=27360 sha256=4129e84135e0799ed5bf43780e1c19ae689006d3e138cc8d92804e28c05d5f7e last_two=-1 text=
+DECODE frames=39200 sha256=decd25afa7ef0e72d5383f4c41b8371e8988d2778136a38d6a6eadc2fc6a9c89 last_two=1.67999995 text=The cabbage juice changes color depending on how a
+DECODE frames=51840 sha256=9bcb69959bb907b6b6fed34b2fbffe597f7d8b44cc2ff64a274b7302592b5dcb last_two=2.07999992 text=The cabbage juice changes color depending on how acidic, basically
+DECODE frames=64800 sha256=0b32a93148cd3207b2417bf2e2db47925e29cf940bdb9491deabe8a107f184af last_two=3.19999981 text=The cabbage juice changes color depending on how acidic, basic alkaline that.
+DECODE frames=78880 sha256=5b98cf3c39047c0f7858bcd0f196331d6e62c99be89e777480438846bd112613 last_two=4.07999992 text=The cabbage juice changes color depending on how acidic, basic alkaline the chemical is.
+DECODE frames=89600 sha256=cff3bc1952f32e0561141927775ab0ea5bfe31ebdb792e145c753171ba0b3b6f last_two=4.15999985 text=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+HISTORY=The cabbage juice changes color depending on how acidic, basic, alkaline the chemical is.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=36
+MEASURE index=0 decode_ms=49.516000 completed_after_source_start_ms=1689.748000
+MEASURE index=1 decode_ms=88.650300 completed_after_source_start_ms=2393.155400
+MEASURE index=2 decode_ms=125.873800 completed_after_source_start_ms=3126.585200
+MEASURE index=3 decode_ms=170.286400 completed_after_source_start_ms=3927.229100
+MEASURE index=4 decode_ms=220.019000 completed_after_source_start_ms=4751.920500
+MEASURE index=5 decode_ms=264.200100 completed_after_source_start_ms=5618.862400
+MEASURE index=6 decode_ms=315.212500 completed_after_source_start_ms=6553.286200
+MEASURE index=7 decode_ms=355.514000 completed_after_source_start_ms=7257.137000

@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=cdb549e8d1c90bebe9b57d8bd60cda0368a45ec65010bcce4e9f9b1c4bafe864 last_two=-1 text=
+DECODE frames=15840 sha256=45f09c34540aae3bf27f13b23a8275b42748c68c99904769222f1cec3542a55c last_two=-1 text=
+DECODE frames=18400 sha256=9f6a7f244fdcabab80ace2c1317c62d1ebf7d1a8d1f8c138713d89dc8bd877e1 last_two=-1 text=
+DECODE frames=11520 sha256=1b51d8b096c3e5692f4d6b89559cbc7a9c3a94e71520d128db654acf28b74adf last_two=-1 text=
+DECODE frames=22560 sha256=cc7a6899d9fd392e719a4c21b186182b463ea11dbe63121e4289a492daf22c42 last_two=-1 text=
+DECODE frames=33920 sha256=69556f233b245de7a5d087fb4cf79287ab16f0cc7d3f749da145b550795fe6c9 last_two=0.399999976 text=Hong Kong Mother.
+DECODE frames=45760 sha256=2e83bb295df24c76be7bfe8a152f20788f662527bb7e7aa37302ade77dabe4b2 last_two=1.75999999 text=Hong Kong Maverick a Hong Kong Psychiatry
+DECODE frames=58880 sha256=27d54019e33f410bd4f1aaed7d1cce258334f0c370b65a07a7b34f0984534e8b last_two=2.15999985 text=Hong Kong Maverick, a Hong Kong Psychiatral Captain
+DECODE frames=72480 sha256=8c23ebd0343823d769d7ee27bc92ad6bdcdc3e44e1e0161961feb85c463406cb last_two=4 text=Hongkong never a Hongkong seether katta is at the hair.
+DECODE frames=86880 sha256=24af4ba29e851b8a17c362948e335fa76dcc2c203e7e13a0d83bf33879abc77b last_two=4.07999992 text=Hongkong nevyt, a Hong Kong Secretary Katta, és a Härsoktorista.
+DECODE frames=97920 sha256=399fec13f3a15fb01bce390fcd74ab527dd676613f4839bb60386e81629e7120 last_two=4.88000011 text=Hongkong nävy Hongkong seatro katto és sok turista samára.
+DECODE frames=48160 sha256=d7b3228e01392b990b667859612daaf03a34137ec96c1287f971f73e4bb3cb09 last_two=0.479999989 text=sok trista.
+DECODE frames=60960 sha256=63f6216b64a1a40c962525ca159033fc6bacec95273afbf815d711f7dcefd0d3 last_two=0.719999969 text=Sok turista samára.
+DECODE frames=74880 sha256=e6b9406e8c85b76c82ccb0a018719ff87614f7ff887fff855a433326bc0b9ead last_two=-1 text=
+DECODE frames=79840 sha256=60f7c607b31e6df1224ba57a2474e4d0dc15660adcfa7bd01cf764a576439ed9 last_two=-1 text=
+HISTORY=Hongkong nävy Hongkong seatro katto és sok Sok turista samára.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=40
+MEASURE index=0 decode_ms=50.110100 completed_after_source_start_ms=2070.856700
+MEASURE index=1 decode_ms=87.451400 completed_after_source_start_ms=2771.098400
+MEASURE index=2 decode_ms=92.889800 completed_after_source_start_ms=2933.872500
+MEASURE index=3 decode_ms=67.894900 completed_after_source_start_ms=3631.984100
+MEASURE index=4 decode_ms=110.045600 completed_after_source_start_ms=4350.288700
+MEASURE index=5 decode_ms=151.889800 completed_after_source_start_ms=5102.547200
+MEASURE index=6 decode_ms=196.397300 completed_after_source_start_ms=5901.735300
+MEASURE index=7 decode_ms=240.186200 completed_after_source_start_ms=6749.971600
+MEASURE index=8 decode_ms=294.783600 completed_after_source_start_ms=7673.106300
+MEASURE index=9 decode_ms=348.217400 completed_after_source_start_ms=8625.062100
+MEASURE index=10 decode_ms=388.193000 completed_after_source_start_ms=9358.170600
+MEASURE index=11 decode_ms=201.878300 completed_after_source_start_ms=10160.725500
+MEASURE index=12 decode_ms=244.985000 completed_after_source_start_ms=11024.738000
+MEASURE index=13 decode_ms=300.236100 completed_after_source_start_ms=11932.541800
+MEASURE index=14 decode_ms=320.142700 completed_after_source_start_ms=12252.868500

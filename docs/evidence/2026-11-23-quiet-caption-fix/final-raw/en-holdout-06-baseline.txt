@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=158400
+DECODE frames=5600 sha256=eed6094d1d2fc370d4194c2c72f5c9b3fc4698e9961cb4b0308c20a541aabef8 last_two=-1 text=As
+DECODE frames=16320 sha256=dec73b7db8c41b64b97498658b838e1aa6cd210e12713a0375e048a8719aaee2 last_two=0.399999976 text=As light pollution is.
+DECODE frames=22080 sha256=11c5c5d403d61b34147a0fefbfdea571a745a8fdb24c676ec0eb42670f77ea07 last_two=0.879999995 text=As light pollution in their home.
+DECODE frames=5600 sha256=8a78e4a041479d549556cde6971d13a462437422f3da93b27ad364b34d80551d last_two=-1 text=
+DECODE frames=16000 sha256=c31dddc2ac88d0e4bc40f90fadb668a2e106ba3cc4cd9956d3d5347a4496fbe8 last_two=0.560000002 text=The problem it is today.
+DECODE frames=19520 sha256=b711c15c4b03cc19d1cb0e34e16c564bb62d0cb6b91ded4dd1cf136cf6ab216f last_two=0.639999986 text=The problem it is today.
+DECODE frames=6080 sha256=284eaa2d90633d4b530f37461a1420f067970837f571706dff7e98b2ad16dccd last_two=-1 text=
+DECODE frames=16800 sha256=f9895b7af4c70a887279336bdd374f4ceb158abbf7d5b2ba56727963f7f44a53 last_two=-1 text=
+DECODE frames=18720 sha256=865ab987362696c30733fde86a5c2895b83d9ac0ed6165960bf4ce1dccc845b6 last_two=-1 text=
+HISTORY=As light pollution in their home.
+
+The problem it is today.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=11
+MEASURE index=0 decode_ms=50.581500 completed_after_source_start_ms=1977.516900
+MEASURE index=1 decode_ms=86.341700 completed_after_source_start_ms=2692.682200
+MEASURE index=2 decode_ms=108.756000 completed_after_source_start_ms=3049.788100
+MEASURE index=3 decode_ms=47.937700 completed_after_source_start_ms=4090.699300
+MEASURE index=4 decode_ms=86.103100 completed_after_source_start_ms=4789.796400
+MEASURE index=5 decode_ms=95.607700 completed_after_source_start_ms=5004.720400
+MEASURE index=6 decode_ms=50.060000 completed_after_source_start_ms=5667.635300
+MEASURE index=7 decode_ms=87.741700 completed_after_source_start_ms=6379.159800
+MEASURE index=8 decode_ms=92.744500 completed_after_source_start_ms=6495.692800

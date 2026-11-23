@@ -1,0 +1,22 @@
+en-01 padded_cpp 1 blank= False
+en-01 padded_c11 1 blank= False
+en-01 level_c11 1 blank= False
+en-02 padded_cpp 1 blank= False
+en-02 padded_c11 1 blank= False
+en-02 level_c11 1 blank= False
+en-03 padded_cpp 2 blank= False
+en-03 padded_c11 2 blank= False
+en-03 level_c11 1 blank= False
+en-04 padded_cpp 1 blank= False
+en-04 padded_c11 1 blank= False
+en-04 level_c11 1 blank= False
+hu-01 padded_cpp 17 blank= True
+hu-01 padded_c11 17 blank= True
+hu-01 level_c11 5 blank= False
+Traceback (most recent call last):
+  File "C:\Users\Mark\artalis.io\src\baffle\build-public-live\controls.py", line 18, in <module>
+    directory=out/job['case'];directory.mkdir()
+                              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mark\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\controls\\hu-01'

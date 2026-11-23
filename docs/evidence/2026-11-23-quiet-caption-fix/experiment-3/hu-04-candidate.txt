@@ -1,0 +1,53 @@
+REPLAY queue_capacity=512 input_frames=280320
+DECODE frames=5600 sha256=c8e57cf547d367a513d975601672ae045b2e10f80b143264c5cd2056f6252948 last_two=-1 text=
+DECODE frames=15840 sha256=5a22730d224e647af51b3133e82168c1622ea11cf6ce303923b6b574d5a89229 last_two=-1 text=
+DECODE frames=27200 sha256=7acaedcc911a10daf5f58ad0698c55c3a67f24f91fb19e6c856a52b22e25a755 last_two=-1 text=
+DECODE frames=39040 sha256=215acdfe5aa0fc9c9ff0fb0b9a3f6d8b5e3c2caad504a47110b7a94997895d06 last_two=-1 text=Aspect.
+DECODE frames=51360 sha256=7a9a105e01ab982c439fe8b4b17aa552365be1f29df3de4418b35935ad2da0d9 last_two=2.48000002 text=Als spectrum magic order
+DECODE frames=64640 sha256=5226988e1a54c24f79d4b6b77875929753e2a247b3a68e83f2d00d00123bef46 last_two=2.96000004 text=A spektrum másik oldalán valaki.
+DECODE frames=78560 sha256=cac8257faab93d1338a2bcddc4e72c93e43181dac966919b1d05a358867e3640 last_two=2.96000004 text=A spektrum másik oldalán valaki.
+DECODE frames=93120 sha256=2bb3ebd0de509a2b84a7058393e34ebd9816af4060f56bce62d322b60b5d23b6 last_two=5.27999973 text=A spektrum másik oldalán valaki egy felismerhet a fán.
+DECODE frames=108960 sha256=256fb2109232a84be3555d00340a032c4af1433674596f772ff4b2fc97b59e46 last_two=5.75999975 text=A spektrum másik oldalán valaki egy felismerhetetlen személy alakul.
+DECODE frames=114560 sha256=ab3a77b1f005ac086f00d3d185a6aa79e4d194697d74191195e056fd450cbb5e last_two=6.07999992 text=A spektrum másik oldalán valaki egy felismerhetetlen, mi alakul.
+DECODE frames=50240 sha256=f72d2384e627709cc2f04ae13f042c0d99ba816eb79c3b628e063a0e679691af last_two=-1 text=
+DECODE frames=63520 sha256=c5f6f6aa5c99d184959d16993acba24413c0d7b7136b21ec82841a5fcd6fb8a8 last_two=3.3599999 text=Hát aztán szemben alakul, aki úgy érti, hogy ment.
+DECODE frames=77440 sha256=94f5bd077200f34f04796bd3b9b8220902a08284c15e8fec073e2317d0e5ca9a last_two=4.23999977 text=Hát a személy alakul, aki úgy érti, hogy mintán a csomag.
+DECODE frames=92320 sha256=10817c4160aae6f026a33a0b7e3b711d8e404d93e4b562d6f9e4a9543828c8a1 last_two=5.03999996 text=hát ha személy alakul, aki úgy érzi, hogy mintán a csoport által léta.
+DECODE frames=107680 sha256=448a22541585b938cc64864f2d4245febf69e1460e0c88ea2dca5e399aed2214 last_two=5.5999999 text=Hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot.
+DECODE frames=116480 sha256=4c09dd6713c9bac8887f71ac6e90ae3f94baa965ef541c06e77af9390e534b85 last_two=6.39999962 text=hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg.
+DECODE frames=49120 sha256=a38b63e30faa3f6fc53bf14fd4443e9cfaf92d9c3b1ab0a8bb400aa1e244cece last_two=1.67999995 text=Tämä on tulkot, näkkää päätöstä.
+DECODE frames=62080 sha256=10e57391ef63590adc785ed4684f7209957613e80f904052dea9abbe47fa9ce6 last_two=1.91999996 text=Tá legittengatott dolgot, meg kell váltotta.
+DECODE frames=76320 sha256=878887c8f6fbdcf15294e16a97e1a65c34597ddfcddb9ea8ed6ee1a02563e52a last_two=4.07999992 text=Tán létre dolgot, meg kell váltottam, és a saját tává kell.
+DECODE frames=91200 sha256=a2dff098be569598e7e24001fe95b85e7bb5f646353dc370dc8ccaabd672caea last_two=4.63999987 text=Tá létemotott dolgot, meg kell váltottem, és a saját tává kell tennjen.
+DECODE frames=96000 sha256=fbec776270ffbd0f25376283eb7aa8c01bf0f48bc59a1c0f8efe6cb683c83955 last_two=4.63999987 text=Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.
+DECODE frames=35680 sha256=a2596033be0bbafba9d815fec83ccf3e7b700bc0c56be784d805a75187ad7aa4 last_two=-1 text=
+DECODE frames=15200 sha256=21d6761b29bd2d0e0b04ed63b260d682a863ad8b7f0c4fedfd4e89a630194048 last_two=-1 text=
+DECODE frames=18560 sha256=9b5619493a3dbc6228f509e34d7e2f27ca880382476a091b4ec805a40003efc0 last_two=-1 text=
+HISTORY=A spektrum másik oldalán valaki egy felismerhetetlen, hát a fán személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott Létregatott dolgot meg kell váltottam, és a saját tává kell tenni.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=55
+MEASURE index=0 decode_ms=49.835500 completed_after_source_start_ms=1388.035300
+MEASURE index=1 decode_ms=86.655600 completed_after_source_start_ms=2086.166800
+MEASURE index=2 decode_ms=126.619100 completed_after_source_start_ms=2816.530200
+MEASURE index=3 decode_ms=167.038800 completed_after_source_start_ms=3597.481300
+MEASURE index=4 decode_ms=217.110500 completed_after_source_start_ms=4429.572800
+MEASURE index=5 decode_ms=260.848200 completed_after_source_start_ms=5291.419500
+MEASURE index=6 decode_ms=312.609500 completed_after_source_start_ms=6209.208500
+MEASURE index=7 decode_ms=370.231600 completed_after_source_start_ms=7195.674600
+MEASURE index=8 decode_ms=428.679500 completed_after_source_start_ms=8248.199000
+MEASURE index=9 decode_ms=446.642700 completed_after_source_start_ms=8695.103600
+MEASURE index=10 decode_ms=204.978800 completed_after_source_start_ms=9507.723300
+MEASURE index=11 decode_ms=259.174000 completed_after_source_start_ms=10380.208300
+MEASURE index=12 decode_ms=311.138800 completed_after_source_start_ms=11314.046700
+MEASURE index=13 decode_ms=369.700900 completed_after_source_start_ms=12286.020500
+MEASURE index=14 decode_ms=430.847400 completed_after_source_start_ms=13325.513600
+MEASURE index=15 decode_ms=453.354200 completed_after_source_start_ms=13883.640300
+MEASURE index=16 decode_ms=206.993000 completed_after_source_start_ms=14702.919400
+MEASURE index=17 decode_ms=256.620400 completed_after_source_start_ms=15586.493000
+MEASURE index=18 decode_ms=305.291900 completed_after_source_start_ms=16517.727500
+MEASURE index=19 decode_ms=360.542000 completed_after_source_start_ms=17502.423300
+MEASURE index=20 decode_ms=379.519800 completed_after_source_start_ms=17882.167800
+MEASURE index=21 decode_ms=154.582600 completed_after_source_start_ms=18036.974000
+MEASURE index=22 decode_ms=79.367300 completed_after_source_start_ms=18730.751700
+MEASURE index=23 decode_ms=94.191300 completed_after_source_start_ms=18964.240600

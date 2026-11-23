@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=176640
+DECODE frames=5600 sha256=601d63188827c1f4d94253baab9c9b065548a3b6eb263e14d028a2545eb8f80c last_two=-1 text=
+DECODE frames=16160 sha256=c8fc8fefda55035c38e4533758c40f1ec9d2c8907d521c7666b6a97fbb463778 last_two=-1 text=
+DECODE frames=27200 sha256=d96d5c39195aee63739365a77652dd022f7c4a0ffe816e9e4aa558ba901a9222 last_two=0.879999995 text=The aspect
+DECODE frames=39200 sha256=d860c4f5c126ce3714de7fed47d6558c139d6d9de2046cab54d15940b8c15239 last_two=1.83999991 text=The aspect ratio of this.
+DECODE frames=51520 sha256=c0613741225e075e1e16eacb81eb66f3455c80ce38eeb6cd5c58626e2721f631 last_two=2.31999993 text=The aspect ratio of this format the
+DECODE frames=64640 sha256=a906b8ffa60f80e98471c0967c3449a1e626299eac475db16820d6da8f968f9d last_two=-1 text=
+DECODE frames=78400 sha256=fffe5f49375534dc7d62ce239f20d81ddc00145fe22093fa1e9b82e190b5f6cf last_two=-1 text=
+DECODE frames=93280 sha256=d80ae3f28b34a1b513c8d085fb1752473a1bad2caa473d2336085c5612402d5f last_two=-1 text=
+DECODE frames=108960 sha256=1032e61a1a861b73e0dd7994195a4dd302f355221c7a1281a0353ba08b7b8310 last_two=6.23999977 text=The aspect ratio of this format dividing by twelve to obtain the simplest whole number ratio.
+DECODE frames=125600 sha256=663ecaea506157e0fefcedbd5471c41ee59ac230f81051798f9b6051d27f21df last_two=6.71999979 text=The aspect ratio of this format dividing by twelve to obtain the simplest whole number ratio is
+DECODE frames=128000 sha256=7db21929fa149399d92af8548c308f4286e8345d788673c1e8b2bcd741c2ba1d last_two=-1 text=
+DECODE frames=70880 sha256=2d2afc2e6792ccb94097f65c67c2d4de31acbfd56a62949ef6c13fcb1d489009 last_two=-1 text=
+DECODE frames=84640 sha256=133b9bb43d8fad7e327e617873eac4a5c3ce959ac7e89bb3dad09242eed690ac last_two=-1 text=
+DECODE frames=100160 sha256=09b14a9e4910accdf705b9a5b5aff9a0d36ab0168f611e9615311dfebf136295 last_two=-1 text=
+DECODE frames=101600 sha256=c878977d66f0404f5e25be04226b17ae1bab4b6a243b03b35c6a4e8a48176fea last_two=-1 text=
+DECODE frames=58560 sha256=73ff831ce62565915efa62d7ff9cd0f2ecb66ea0677cd231f0c96bc8029bbadc last_two=-1 text=
+HISTORY=The aspect ratio of this format dividing by twelve to obtain the simplest whole number ratio is
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=82
+MEASURE index=0 decode_ms=49.317000 completed_after_source_start_ms=1329.333000
+MEASURE index=1 decode_ms=84.994300 completed_after_source_start_ms=2028.440900
+MEASURE index=2 decode_ms=126.225400 completed_after_source_start_ms=2761.940200
+MEASURE index=3 decode_ms=167.261100 completed_after_source_start_ms=3543.412900
+MEASURE index=4 decode_ms=216.106300 completed_after_source_start_ms=4368.928000
+MEASURE index=5 decode_ms=257.692300 completed_after_source_start_ms=5239.504100
+MEASURE index=6 decode_ms=305.758800 completed_after_source_start_ms=6153.837100
+MEASURE index=7 decode_ms=363.153800 completed_after_source_start_ms=7125.473700
+MEASURE index=8 decode_ms=426.233300 completed_after_source_start_ms=8164.832800
+MEASURE index=9 decode_ms=482.708300 completed_after_source_start_ms=9261.901400
+MEASURE index=10 decode_ms=483.692200 completed_after_source_start_ms=9745.859200
+MEASURE index=11 decode_ms=277.402900 completed_after_source_start_ms=10634.216900
+MEASURE index=12 decode_ms=335.732300 completed_after_source_start_ms=11576.598800
+MEASURE index=13 decode_ms=383.510900 completed_after_source_start_ms=12585.369600
+MEASURE index=14 decode_ms=387.606400 completed_after_source_start_ms=12973.198000
+MEASURE index=15 decode_ms=233.674900 completed_after_source_start_ms=13207.110600

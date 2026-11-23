@@ -1,0 +1,43 @@
+REPLAY queue_capacity=512 input_frames=229440
+DECODE frames=5600 sha256=d13f2db80be2a5f55b22c9b049f5e9941fffdcf28f413709472e479386f7a283 last_two=-1 text=
+DECODE frames=15840 sha256=e492107c35eeb01be2aff8403d1f86fcedc93648763892e0001040aef95557f2 last_two=-1 text=
+DECODE frames=27200 sha256=32af3f3753ed851c2669f46b4d86f43c54d385bb81e5d67046c3f51c268962c5 last_two=-1 text=Uh.
+DECODE frames=38880 sha256=f1212004fa480470884aa6fb0e7e3a9cb2999536234009500e8292a92bfda6ee last_two=-1 text=
+DECODE frames=51520 sha256=96a724bd4ad4a4c410fbf60ee3f7731ac15a24e07e9c7b4ea89216567b68185e last_two=2.24000001 text=Az ausztrál Mitsel Görly.
+DECODE frames=64800 sha256=d59137496feab306810ab3d9b1209e2af8497641cf887b9050b98181ab94e91d last_two=2.79999995 text=Az ausztrál Michel Görly 11-ye.
+DECODE frames=78720 sha256=d2ad9c1fdd916a727ee27649b3b3ba7bfc64bcaad6ae774bf0fb4b192ea10979 last_two=4.15999985 text=Az ausztrál Michel Görli, 11. helyen végzett.
+DECODE frames=93280 sha256=6ffd6db0b54663910dfb39cddf227f9ef167f3ba0e2cba65a04e52b7778b67b2 last_two=4.96000004 text=Az ausztrál Michel Görli 11. helyen végzett a férfi álló.
+DECODE frames=108960 sha256=41551dfaf3ed55fdcea51277350c74644012abb83a00f174be88e61c67b805d9 last_two=5.44000006 text=Az ausztrál Michelle Girli 11. helyen végzett a férfi álló Supercben.
+DECODE frames=125760 sha256=66d1b07716d02aacdf49156ca4741911984b7d8ac20452e8e972c559d5fb0ac2 last_two=5.44000006 text=Az ausztrál Michael Girley 11. helyen végzett a férfi álló szupergyben.
+DECODE frames=128000 sha256=b86a00c6f3150c9dee8b159b6aa60a20bd4c61063c53d399ddeed0c9a91f9928 last_two=5.44000006 text=Az ausztrál Michael Girley 11. helyen végzett a férfi álló Czupergyben.
+DECODE frames=73280 sha256=db272c955eff0e66e3984ca8b1dae7b92228a27eac674a926ceef55dea47d84e last_two=2.96000004 text=A férfi álló szuper G-ben. Olgrich Jelinek.
+DECODE frames=87840 sha256=5c5dc76f424cdf36c49ba4443de25c236403320c537bfddd423de2094999a8b8 last_two=4.55999994 text=A férfi álló szuper G-ben. Olrich Jelinek, cseh versenyző.
+DECODE frames=102880 sha256=0680101c3d7ff501690d35ff112b49aadfbffaca4c5aeb4762c7735900df03df last_two=4.96000004 text=A férfi álló szuper G-ben. Uoldrich Jelének, cseh versenyző, 16-re.
+DECODE frames=119200 sha256=c4e3c58463a198656c81c8c9f9bb73a37e2f2651dff4b401055aee3cc27f09d9 last_two=6.55999994 text=A férfi álló szuper G-ben. Uoldrich Jelének, cseh versenyző, 16-ett a férfi ülő.
+DECODE frames=128000 sha256=c84ba744920ad5315b4659eef1a16cbaef293cdf9e9a2180b5682dc216eb2b0c last_two=7.03999996 text=A férfi álló szuper Gben. Olrich Jelének cseh versenyző 16-let a férfi ülő szuperz.
+DECODE frames=49600 sha256=2a7ab421b773a1d96b30d883edf1a48d380a80ea8e6a48d778c8a26f9d916d62 last_two=1.12 text=lett a férfi üszuperzsí számban.
+DECODE frames=62400 sha256=ddd65aee3e3f7c22a030c10ff2a25431c6ae50820b18bcf6881ce7b8520b8c2c last_two=1.43999994 text=A férfi ülő szuper zsámba.
+DECODE frames=74240 sha256=da28e0ba48155c754a71144db8d235d56ee28e90663c6f0042f451454cf5c48a last_two=1.43999994 text=a férfi ülő szuper zsámba.
+HISTORY=Az ausztrál Michael Girley 11. helyen végzett A férfi álló szuper Gben. Olrich Jelének cseh versenyző 16-let a férfi ülő szuper zsámba.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=82
+MEASURE index=0 decode_ms=49.403400 completed_after_source_start_ms=1151.416200
+MEASURE index=1 decode_ms=87.017500 completed_after_source_start_ms=1850.337800
+MEASURE index=2 decode_ms=125.712300 completed_after_source_start_ms=2581.514100
+MEASURE index=3 decode_ms=165.753800 completed_after_source_start_ms=3368.430300
+MEASURE index=4 decode_ms=215.840400 completed_after_source_start_ms=4207.889900
+MEASURE index=5 decode_ms=258.542400 completed_after_source_start_ms=5070.301800
+MEASURE index=6 decode_ms=307.983400 completed_after_source_start_ms=5984.997600
+MEASURE index=7 decode_ms=363.613400 completed_after_source_start_ms=6972.587400
+MEASURE index=8 decode_ms=422.684200 completed_after_source_start_ms=8011.335500
+MEASURE index=9 decode_ms=479.491500 completed_after_source_start_ms=9095.750000
+MEASURE index=10 decode_ms=486.924300 completed_after_source_start_ms=9582.942800
+MEASURE index=11 decode_ms=290.435400 completed_after_source_start_ms=10484.843300
+MEASURE index=12 decode_ms=342.927900 completed_after_source_start_ms=11438.850800
+MEASURE index=13 decode_ms=403.991200 completed_after_source_start_ms=12446.134800
+MEASURE index=14 decode_ms=458.483600 completed_after_source_start_ms=13528.889200
+MEASURE index=15 decode_ms=491.598100 completed_after_source_start_ms=14084.579100
+MEASURE index=16 decode_ms=203.277000 completed_after_source_start_ms=14898.838500
+MEASURE index=17 decode_ms=250.616400 completed_after_source_start_ms=15764.750100
+MEASURE index=18 decode_ms=291.474900 completed_after_source_start_ms=16548.601500

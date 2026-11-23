@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=174720
+DECODE frames=5600 sha256=50ad92f2cc577e73a5a7d43966b92a5d07cec3d9ef547cce909d8a78193f8233 last_two=-1 text=
+DECODE frames=16320 sha256=593523e2892efbd2bdd1a0a16a2265208e19b821295b15dcb9b3e48a74bef91e last_two=-1 text=Okay.
+DECODE frames=27520 sha256=af6a0dcf53d84621e11dc6f061fb918517e987f3d626e80ffd3466c15d50c2e6 last_two=-1 text=Minä.
+DECODE frames=39360 sha256=6b4c63e4fe6c9f1ed46fa60f53be0524d53e42a84b08927ee0dd643dd41931cc last_two=1.51999998 text=Minden figyelembe véve.
+DECODE frames=51680 sha256=8dc869d75ed1d79bf228b6e11e587756e951cd972481aa2ec35eb2c5a990463e last_two=2.72000003 text=Minden figyelembe véve, nem lenne meg.
+DECODE frames=65280 sha256=25359560b2c3e8970ee9d64724e8e0375ff7641064ae25fb9dcf552a3251cd0c last_two=3.11999989 text=Minden figyelembe véve nem lenne meglepő, ha.
+DECODE frames=79680 sha256=db29a8827729dbc303389692416fcd07126bfdef6cc840ab56112c433219b0c4 last_two=4.48000002 text=Minden figyelembe véve nem lenne meglepő, ha őseink a fehér.
+DECODE frames=94400 sha256=6628f87a352d1dd9979cb986ee43a1944901a4c6975271602157af8ee4ea6eae last_two=5.51999998 text=Minden figyelembe véve nem lenne meglepő, ha őseink, a fehérje problémát, ha sólját.
+DECODE frames=110400 sha256=763b640acd698bb05df8a693744ee6c9823f898460efca2e9b87659780a02ffd last_two=5.5999999 text=Minden figyelembe véve, nem lenne meglepő, ha őseink, a fehérje problémát hasonlóképpen ordoták,
+DECODE frames=127200 sha256=c9ca080464ea75671afdcdbe32e6e90ec1448059425b1fd3be51b0f7c28a0cb4 last_two=7.44000006 text=Minden figyelembe véve nem lenne meglepő ha őseint a fehér problémát hasonlóképpen ordották volna meg, mint a
+DECODE frames=128000 sha256=53ea1943d18a338059a569717d4c0f830fa6c451282b8a9731c8271ca3fbf826 last_two=7.44000006 text=Minden figyelembe véve nem lenne meglepő ha őseint a fehérje problémát hasonlóképpen ordották volna meg, mint a
+DECODE frames=57120 sha256=ba66056b90a12f22da4d290989a24a769f7cb13a9503d423058509271eea2c07 last_two=2.15999985 text=Éppen orották volna meg, mint a mai csimpánzóra szavannál.
+DECODE frames=70560 sha256=b53709a0501a7e26cb6a0d5c53f27c61f1fa5ff90cbd1ea4914ae190841ed1a4 last_two=2.55999994 text=Éppen orották volna meg, mint a mai csimpán szóra szavannál.
+DECODE frames=85280 sha256=8e2e4b376f44e1bc632a4ded670317fbbb87aa71f587ee30f55dadfb563da0a9 last_two=2.55999994 text=éppen orották volna meg, mint a mai csimpán szóra szavannál.
+DECODE frames=85920 sha256=a076dc3568a888f6dc3ecbf5474c0f7cd35d3b6cafd852ed8b4c0a2728bdfb76 last_two=2.55999994 text=éppen orolották volna meg, mint a mai csimpán szóra szavannál.
+HISTORY=Minden figyelembe véve nem lenne meglepő ha őseint a fehérje problémát hasonlóképpen ordották volna meg, éppen orolották volna meg, mint a mai csimpán szóra szavannál.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=98
+MEASURE index=0 decode_ms=49.884500 completed_after_source_start_ms=1458.860200
+MEASURE index=1 decode_ms=88.714900 completed_after_source_start_ms=2159.275600
+MEASURE index=2 decode_ms=126.805800 completed_after_source_start_ms=2894.806300
+MEASURE index=3 decode_ms=172.803100 completed_after_source_start_ms=3683.604600
+MEASURE index=4 decode_ms=222.027100 completed_after_source_start_ms=4521.414200
+MEASURE index=5 decode_ms=268.222500 completed_after_source_start_ms=5419.793600
+MEASURE index=6 decode_ms=324.423600 completed_after_source_start_ms=6359.333900
+MEASURE index=7 decode_ms=384.782200 completed_after_source_start_ms=7348.994700
+MEASURE index=8 decode_ms=444.223400 completed_after_source_start_ms=8397.344100
+MEASURE index=9 decode_ms=505.705100 completed_after_source_start_ms=9517.205100
+MEASURE index=10 decode_ms=509.312700 completed_after_source_start_ms=10026.777000
+MEASURE index=11 decode_ms=238.525700 completed_after_source_start_ms=10871.141800
+MEASURE index=12 decode_ms=290.572000 completed_after_source_start_ms=11767.503300
+MEASURE index=13 decode_ms=349.340300 completed_after_source_start_ms=12742.005700
+MEASURE index=14 decode_ms=351.928600 completed_after_source_start_ms=13094.130500

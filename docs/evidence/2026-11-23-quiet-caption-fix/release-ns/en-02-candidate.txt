@@ -1,0 +1,31 @@
+REPLAY queue_capacity=512 input_frames=140160 caption_profile=ns
+DECODE frames=5600 sha256=df9277e34dc5a8e3de71bea82f8fa464caa586d29a1943b711370d955b9e3d90 last_two=-1 text=
+DECODE frames=16320 sha256=b9c7dbbaa1076e306c021970bf873bd3de68b8a688cd55b058e89a46094bed66 last_two=-1 text=Only
+DECODE frames=27680 sha256=626639fb95b6aa624635b3a6d46d31df56e2364271675931d95bea1f385687a4 last_two=-1 text=
+DECODE frames=39200 sha256=1e020957768da5dbb582c234d1358c21180058229f748359223c52de367b0a1b last_two=-1 text=
+DECODE frames=51520 sha256=0bc1436ab3d0a0fd643fe3ca3de70ca735201d6e3f28cafec8877e0acebe06ce last_two=2.79999995 text=All nouns alongside the world say for you.
+DECODE frames=64960 sha256=0e86801bea28a0d9219eee3f2149519f03680ec6c2e4b3cdd268aec0533a546d last_two=2.96000004 text=All nouns alongside the world say for you.
+DECODE frames=78880 sha256=62362f613a3e9ca8eb8b75868da9255dc8015df75ab36de0db2345ef617862d0 last_two=4.07999992 text=All nouns alongside the world say for you always begin with
+DECODE frames=93920 sha256=99a8928ca7f7fcc9f21c7580daf7f7d1cbac86102e2bc90e3eb4a261aebbef72 last_two=4.96000004 text=All nouns alongside the word say for you always begin with a capital letter.
+DECODE frames=109600 sha256=bd5819a4abd1c44a02aa6fd2fa37a3514cd436aea2ecdc180476d60667fe81a9 last_two=5.03999996 text=All nouns alongside the word say for you always begin with a capital letter.
+DECODE frames=126400 sha256=dfe7c8906e0c1a47d6b7bca3864575ca141d28107ac351e20166f0890c1a0c8a last_two=7.11999989 text=All nouns alongside the word say for you always begin with a capital letter, even in the middle of a sentence.
+DECODE frames=128000 sha256=d2518859646fb4f4191f568eb5f3f33b12641ae2d57acb8ea6be811fd7c69e9e last_two=7.19999981 text=All nouns alongside the word say for you always begin with a capital letter, even in the middle of a sentence.
+DECODE frames=55840 sha256=05889f2273fa88bce285424c8374b096c2552d0ddb36d8cbe459b38f2907441c last_two=1.19999993 text=even in the middle of a sentence.
+DECODE frames=58720 sha256=7df8bce83d1f41aeaebc9d1d9808a986d976a085e641a0fcd8b93898c7c73ffc last_two=1.19999993 text=even in the middle of a sentence.
+HISTORY=All nouns alongside the word say for you always begin with a capital letter, even in the middle of a sentence.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=90
+MEASURE index=0 decode_ms=49.786200 completed_after_source_start_ms=1287.438400
+MEASURE index=1 decode_ms=86.669900 completed_after_source_start_ms=2003.522600
+MEASURE index=2 decode_ms=125.951200 completed_after_source_start_ms=2736.626300
+MEASURE index=3 decode_ms=168.066800 completed_after_source_start_ms=3515.500800
+MEASURE index=4 decode_ms=218.179600 completed_after_source_start_ms=4336.938500
+MEASURE index=5 decode_ms=263.433600 completed_after_source_start_ms=5204.738000
+MEASURE index=6 decode_ms=314.924500 completed_after_source_start_ms=6138.778300
+MEASURE index=7 decode_ms=375.573500 completed_after_source_start_ms=7145.646600
+MEASURE index=8 decode_ms=434.028200 completed_after_source_start_ms=8183.814600
+MEASURE index=9 decode_ms=491.716300 completed_after_source_start_ms=9285.493900
+MEASURE index=10 decode_ms=497.447300 completed_after_source_start_ms=9783.207500
+MEASURE index=11 decode_ms=229.165200 completed_after_source_start_ms=10619.183200
+MEASURE index=12 decode_ms=239.885400 completed_after_source_start_ms=10859.217100

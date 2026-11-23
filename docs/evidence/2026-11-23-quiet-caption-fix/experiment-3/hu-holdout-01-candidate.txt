@@ -1,0 +1,41 @@
+REPLAY queue_capacity=512 input_frames=192000
+DECODE frames=5600 sha256=5d45a7eb94715eb1a530db6e3b665c36c910aa6c29645f8ae4087f210229cb14 last_two=-1 text=
+DECODE frames=16320 sha256=518e1965e98bc9429248806ee338340862e4fbcc2bf5d16011edfcf62914682c last_two=-1 text=
+DECODE frames=27680 sha256=06c93accd8c3cd5052e434fde320414e05ddcc12ca0c0a4c4c901a57206435c2 last_two=-1 text=
+DECODE frames=39520 sha256=fe23f035473bbaf5ac92303f29f4a6851a0cd99efb932fb8531c22ac70e26db5 last_two=1.91999996 text=What am I
+DECODE frames=51680 sha256=16d6515955eb3c179fd918f900578dde9dfae8d224c8e55119db31056ce807f6 last_two=2.72000003 text=Amber one up shak.
+DECODE frames=64960 sha256=2d6f81c79ebf8ca865f87e2b85dd0b9c58d5314d4892c14d48cb20958dd54982 last_two=3.51999998 text=Ember monapság maar a fan.
+DECODE frames=79040 sha256=fdd39a47f62bde7e10d515858c3b956849545f18beb0f1e70be4ff50e2474604 last_two=3.27999997 text=Ember manapság mára számítógépképp.
+DECODE frames=93440 sha256=f37259e299facb6bda10fb9d6d6500337db24e2c66589ab87a31ca95dfe21d73 last_two=3.27999997 text=Ember a manapság mára számítógépképernyörnek.
+DECODE frames=108480 sha256=e50d643f1b63b9fdb2a4304d964dde0b1bf8a1ec93cdfd12b1a1e938541ba146 last_two=4.71999979 text=Ember a manapság mára számítógé pernyőrnak ütenett.
+DECODE frames=59360 sha256=a2f10535ad02ce582cb75f531f6bdc0f745a5626cf26ba8165aaafeedcb18c12 last_two=-1 text=
+DECODE frames=72960 sha256=dfd23e1727c4c20986e7db9c1d5c2b7c980915b5be81a719e0008e6f8c6a950e last_two=3.91999984 text=Gépképernyőire nyírnak üzenettek, és sosem kerülnek egy hegy.
+DECODE frames=87520 sha256=5f9c4f86e9dd48062cdcfde9df3978cabc4cc99b80949e110d479469b4265260 last_two=4.23999977 text=Gépképernyőire nyírnak ütemette, és sosem kerülnek egy hegyező közelébe.
+DECODE frames=96000 sha256=697f392bb85374feb19de4f6bef51df768a01ff25bd33ce36e8a6bbad2e67e3d last_two=4.23999977 text=nyírnak ütenettek, és sosem kerülnek egy hegyező közelébe.
+DECODE frames=44480 sha256=071d7174cba54c502e517d5a4995ec860bf9a9aecb91aa7b36ba1f621f83a757 last_two=0.639999986 text=egy hegyező közelébe.
+DECODE frames=9120 sha256=887de85a36fd7631a623d0e97e54b9f7caa1208eee270cc176184bd010169763 last_two=-1 text=
+DECODE frames=19680 sha256=99434d0f523b430ba36fac62d5eddd5d21cf1206ec66e8d2975936b08a1a2fd1 last_two=-1 text=
+DECODE frames=31360 sha256=6ee52bbdfb36026c770798032a41ca9e792786cd7dea517a8a39886d27025014 last_two=-1 text=
+DECODE frames=32960 sha256=010b96479ea1e6ce25941e45dcd3c3f01e4b02b0921d6eb4bbf5ba83c5a341ff last_two=-1 text=
+HISTORY=Ember a manapság mára számítógé nyírnak ütenettek, és sosem kerülnek egy egy hegyező közelébe.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=43
+MEASURE index=0 decode_ms=49.422100 completed_after_source_start_ms=1403.536900
+MEASURE index=1 decode_ms=87.276700 completed_after_source_start_ms=2114.533300
+MEASURE index=2 decode_ms=127.203000 completed_after_source_start_ms=2846.299400
+MEASURE index=3 decode_ms=170.466000 completed_after_source_start_ms=3631.001700
+MEASURE index=4 decode_ms=216.694600 completed_after_source_start_ms=4450.187700
+MEASURE index=5 decode_ms=262.680200 completed_after_source_start_ms=5327.601100
+MEASURE index=6 decode_ms=313.382600 completed_after_source_start_ms=6243.957400
+MEASURE index=7 decode_ms=370.293600 completed_after_source_start_ms=7215.535000
+MEASURE index=8 decode_ms=427.476400 completed_after_source_start_ms=8201.588100
+MEASURE index=9 decode_ms=240.702800 completed_after_source_start_ms=9049.442200
+MEASURE index=10 decode_ms=295.283900 completed_after_source_start_ms=9966.364100
+MEASURE index=11 decode_ms=351.547700 completed_after_source_start_ms=10934.590400
+MEASURE index=12 decode_ms=381.240700 completed_after_source_start_ms=11487.068600
+MEASURE index=13 decode_ms=190.108800 completed_after_source_start_ms=11690.700800
+MEASURE index=14 decode_ms=59.766500 completed_after_source_start_ms=12381.230900
+MEASURE index=15 decode_ms=96.497500 completed_after_source_start_ms=13080.919100
+MEASURE index=16 decode_ms=143.692400 completed_after_source_start_ms=13856.521400
+MEASURE index=17 decode_ms=146.364300 completed_after_source_start_ms=14002.985100

@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=182400
+DECODE frames=5600 sha256=e888e139171fed4cdb3ec21b9fb288c71998d67be840ee70ad70fc195a6fd14f last_two=-1 text=
+DECODE frames=16160 sha256=bb6f0758fd91c30b53651e7bfada2ee14ebe29a634fc2294eeef0cf017f10a24 last_two=-1 text=
+DECODE frames=27200 sha256=0436dc463320cb2505350af366cb825a2dbe5f5bc4d664d1396496006a9c5591 last_two=-1 text=
+DECODE frames=39040 sha256=6d9e1ec14a5f9c16e27452301e9b10ea77937fbfad6c4eccc2ef3a09b165ab36 last_two=1.36000001 text=A Sunderburn.
+DECODE frames=51360 sha256=2383aebc707c394fabf71c1e71ea0f56c33007e92aaa17bab49a514bf1316f11 last_two=2.48000002 text=A standard buns a világ legnagyobb
+DECODE frames=64960 sha256=2c9ba3eacfcee6d89277e77ca50e744d27cbb03f9f1928c7574a47c0aa6d4c13 last_two=3.27999997 text=A szundsz a világ legnagyobb manglóve vezető.
+DECODE frames=79040 sha256=f3d61bba875563aedc4b036c02964757e5dd9a9b0d63459d02a25a3a5f639ad7 last_two=3.83999991 text=A szandorban, a világ legnagyobb mankróve vezete, amely
+DECODE frames=94080 sha256=f67f53f9c90066d850e8a04659804c75678c64c0ec41f024cc11606070dc0d54 last_two=4.88000011 text=A Szandalbans a világ legnagyobb mankróve vezete, amely a tenerparton.
+DECODE frames=109760 sha256=78de4144241d2f7cfd627a77bbdb74e2de094a12a0eb316381e20886715a1cdb last_two=6 text=A Sandbas a világ legnagyobb mankróve vezete, amely a tenerpartól 80 kilométer.
+DECODE frames=126720 sha256=e16808552b3ecefce0e06647761b2b521bc2d57526f5d2d6500e944e7d2d2d8f last_two=6.96000004 text=A standburs a világ legnagyobb manúvezete, amely a tenerpartól 80 kilométerre nyújt be.
+DECODE frames=128000 sha256=6a9f4463d2d8deba85911f34395ede051449fd798a0c8a13145ca0e125b2abc1 last_two=6.96000004 text=A standbens a világ legnagyobb manúvezete, amely a tenerparttól 80 kilométerre nyújt be.
+DECODE frames=56320 sha256=9a4fd7cf76584f971f2e9d46bb7e5b4a7f20c4dde9c5eb5a3c8b39f8996c5242 last_two=2.63999987 text=80 km-re nyúlít be, Banglades és India hátország.
+DECODE frames=69760 sha256=cf2b8471b67965d728750fd96b5968e9c0a223bbec7b089b36817649e241d91f last_two=2.63999987 text=80 kmre nyúlít be, Banglades és India hátországába.
+DECODE frames=84320 sha256=da8aa234ad011b40e2d52dadd301d1f45ed23cf25a7590b230500108408362c2 last_two=2.63999987 text=80 km nyúlik be, Banglades és India hátországá.
+DECODE frames=96000 sha256=a30ae71a2f99b9dad9b84c194c1881246443f27a4680f2a34c6dff25561632f7 last_two=2.63999987 text=20 km nyul be, Banglades és India hátországá.
+DECODE frames=68320 sha256=bb1ed6c916b2afaf4ebfdb519106a317317f2fcd04f74bed8190c8010624aad0 last_two=1.03999996 text=és India hát országába.
+HISTORY=A standbens a világ legnagyobb manúvezete, amely a tenerparttól 80 kilométerre 20 km nyul be, Banglades és és India hát országába.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=91
+MEASURE index=0 decode_ms=49.609600 completed_after_source_start_ms=1358.967100
+MEASURE index=1 decode_ms=86.727400 completed_after_source_start_ms=2058.013300
+MEASURE index=2 decode_ms=125.530100 completed_after_source_start_ms=2804.411900
+MEASURE index=3 decode_ms=169.017700 completed_after_source_start_ms=3587.142700
+MEASURE index=4 decode_ms=217.191200 completed_after_source_start_ms=4405.407100
+MEASURE index=5 decode_ms=265.069400 completed_after_source_start_ms=5302.000800
+MEASURE index=6 decode_ms=312.895200 completed_after_source_start_ms=6230.257100
+MEASURE index=7 decode_ms=374.990500 completed_after_source_start_ms=7227.747700
+MEASURE index=8 decode_ms=430.471700 completed_after_source_start_ms=8266.770400
+MEASURE index=9 decode_ms=491.623300 completed_after_source_start_ms=9369.849900
+MEASURE index=10 decode_ms=498.172800 completed_after_source_start_ms=9868.291300
+MEASURE index=11 decode_ms=231.965400 completed_after_source_start_ms=10723.832400
+MEASURE index=12 decode_ms=283.005900 completed_after_source_start_ms=11619.958300
+MEASURE index=13 decode_ms=334.225600 completed_after_source_start_ms=12577.880100
+MEASURE index=14 decode_ms=374.815300 completed_after_source_start_ms=13341.979700
+MEASURE index=15 decode_ms=275.430600 completed_after_source_start_ms=13617.637100

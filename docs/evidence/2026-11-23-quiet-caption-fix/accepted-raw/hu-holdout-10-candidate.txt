@@ -1,0 +1,31 @@
+REPLAY queue_capacity=512 input_frames=141120
+DECODE frames=5600 sha256=9ec8872a535507e882b1dac06768a928dcf9c761c5fad4db01e59ce6ab31d73e last_two=-1 text=Yeah.
+DECODE frames=16160 sha256=3e32bee935ba6bf80870e674083f36ce4ec9cb1ee6c86dc1efbd7ab673bd2cb5 last_two=-1 text=
+DECODE frames=27520 sha256=2ee77c8908515d9bcd4533de0cdc65d723f7516181a5c20a3f9a407ed8d313be last_two=0.639999986 text=A fucking.
+DECODE frames=39360 sha256=7496c899fd4fc1bf2bcff7de67e2a805a8c87033725a173e7c69f8fb117e6e38 last_two=1.67999995 text=A falkák egy három.
+DECODE frames=51840 sha256=0ef51aeaf01a5d3eda28181dda1ed68c56ea027ffa73cf46e65a0d7bda5ef95c last_two=1.91999996 text=A falkák egy három, egymással,
+DECODE frames=65280 sha256=42b2ca11719e18ddfd35ae83a6a63cd45947063da5a92495734c2317897353aa last_two=3.27999997 text=A falkák egy három, egymással rakoni kapcsolatban álló.
+DECODE frames=79200 sha256=0474ff1a89ef32671da7b8642819f144a11c654e18c4e42412bae66aa4501dd1 last_two=3.83999991 text=A falkák egy három, egymással rokoni kapcsolatban álló hímből,
+DECODE frames=93760 sha256=92eefc889f3a410a07feae50c3dab577c127987878bba6c0e89a59050164d38d last_two=5.27999973 text=A falkák egy három, egymással rokoni kapcsolatban álló hímből, és akár 30 nők.
+DECODE frames=109760 sha256=f4825e9f68241b1bfd303ad706c692db227623bf325332b329b239e4624a23b1 last_two=6.31999969 text=A falkák egy három, egymással rokoni kapcsolatban álló hímből, és akár 30 nőstényből és köjökből.
+DECODE frames=126080 sha256=26b926edeae7e57806143e504cb6bf7d15c701031649f5c9f7242e69c1b5680c last_two=6.48000002 text=A falkák egy három egymással rokoni kapcsolatban álló hímből, és akár harminc nőstényből és könyvből állnak.
+DECODE frames=128000 sha256=9d3f26e241e19ea596a68b36e5e34b0aebca36ef0c1aa518719fca1cf4d5cda2 last_two=6.48000002 text=A falkák egy három egymással rokoni kapcsolatban álló hímből, és akár harminc nőstényből és könyvből állnak.
+DECODE frames=57760 sha256=d3b51e6fd443e468698bf057584ba1e249e045bf5505c2733e08c62cbd70cfd4 last_two=0.639999986 text=és tényből és köekből állnak.
+DECODE frames=63840 sha256=6606836d74d0a9e5879d9f7cb8102b29c9638bc34ef8f076976c63dc768f341e last_two=0.639999986 text=és tényből és köekből állnak.
+HISTORY=A falkák egy három egymással rokoni kapcsolatban álló hímből, és akár harminc nőstényből és és tényből és köekből állnak.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=88
+MEASURE index=0 decode_ms=50.320400 completed_after_source_start_ms=1253.365700
+MEASURE index=1 decode_ms=86.244200 completed_after_source_start_ms=1952.231900
+MEASURE index=2 decode_ms=127.541000 completed_after_source_start_ms=2686.300500
+MEASURE index=3 decode_ms=169.252700 completed_after_source_start_ms=3469.539900
+MEASURE index=4 decode_ms=217.228900 completed_after_source_start_ms=4317.262300
+MEASURE index=5 decode_ms=263.414200 completed_after_source_start_ms=5185.786200
+MEASURE index=6 decode_ms=313.244400 completed_after_source_start_ms=6116.767100
+MEASURE index=7 decode_ms=374.229900 completed_after_source_start_ms=7091.952700
+MEASURE index=8 decode_ms=432.714100 completed_after_source_start_ms=8131.893200
+MEASURE index=9 decode_ms=493.404800 completed_after_source_start_ms=9232.486600
+MEASURE index=10 decode_ms=497.277300 completed_after_source_start_ms=9730.038300
+MEASURE index=11 decode_ms=235.524700 completed_after_source_start_ms=10570.413500
+MEASURE index=12 decode_ms=258.359600 completed_after_source_start_ms=10970.132800

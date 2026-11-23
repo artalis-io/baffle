@@ -1,0 +1,23 @@
+en-01 live_cpp128 word_errors= 4 dropped= 0
+en-01 live_c128 word_errors= 4 dropped= 0
+en-01 live_current512 word_errors= 4 dropped= 0
+en-02 live_cpp128 word_errors= 2 dropped= 1
+en-02 live_c128 word_errors= 2 dropped= 31
+en-02 live_current512 word_errors= 2 dropped= 0
+en-03 live_cpp128 word_errors= 21 dropped= 0
+en-03 live_c128 word_errors= 21 dropped= 0
+en-03 live_current512 word_errors= 21 dropped= 0
+en-04 live_cpp128 word_errors= 11 dropped= 0
+en-04 live_c128 word_errors= 11 dropped= 0
+en-04 live_current512 word_errors= 11 dropped= 0
+Traceback (most recent call last):
+  File "C:\Users\Mark\artalis.io\src\baffle\tools\public_caption_replay.py", line 151, in <module>
+    p.add_argument('--output', type=pathlib.Path, required=True)
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mark\artalis.io\src\baffle\tools\public_caption_replay.py", line 105, in run
+    receipt = case_dir/(name+'.txt')
+                 ~~~~~^^~~~~~~~~~~~~~
+  File "C:\Users\Mark\artalis.io\src\baffle\tools\public_caption_replay.py", line 59, in execute
+    if result.returncode not in allowed or not report.exists():
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Native diagnostic failed: exit=2, report=whole_cpp.txt

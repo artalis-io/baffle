@@ -1,0 +1,32 @@
+#include <baffle.h>
+#include "../../tools/common/demo.h"
+static int compare(const void *a, const void *b)
+{
+    double x=*(const double *)a,y=*(const double *)b;
+    return (x>y)-(x<y);
+}
+int main(void)
+{
+    for (unsigned rate=16000;rate<=48000;rate+=32000) {
+        bf_vad_config c=BF_INIT(bf_vad_config);
+        c.sample_rate=rate;c.channels=1;c.max_frames=rate/100;
+        c.threshold=.4f;c.noise_floor_dbfs=-80;
+        demo_arena arena={0};bf_vad *vad=NULL;
+        size_t bytes=bf_vad_size();
+        if (!demo_arena_init(&arena,bytes,BF_ALIGNMENT)||
+            bf_vad_init(arena.aligned,bytes,&c,&vad)!=BF_OK) return 1;
+        float x[480];double times[20000];unsigned active=0;
+        for (unsigned i=0;i<c.max_frames;++i)
+            x[i]=.0008f*sinf((float)i*(float)(1256.6370614/rate));
+        for (unsigned k=0;k<20000;++k) {
+            uint64_t a,b;bf_vad_info v=BF_INIT(bf_vad_info);
+            if (!demo_now(&a)||bf_vad_process(vad,x,c.max_frames,&v)!=BF_OK||!demo_now(&b)||b<a) return 1;
+            active+=v.active;times[k]=(double)(b-a)/1000;
+        }
+        qsort(times,20000,sizeof(double),compare);
+        printf("rate=%u frames=%u calls=20000 workspace=%zu p50_us=%.6f p95_us=%.6f p99_us=%.6f max_us=%.6f active=%u\n",
+               rate,c.max_frames,bytes,times[10000],times[19000],times[19800],times[19999],active);
+        demo_arena_free(&arena);
+    }
+    return 0;
+}

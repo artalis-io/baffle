@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=Hongkong nevét a Hongkong sziketről kapta, és át a háturista számára a figyelem középpontjában áll.
+validated_last_two_start_seconds=9.59999943
+decode_ms=1516

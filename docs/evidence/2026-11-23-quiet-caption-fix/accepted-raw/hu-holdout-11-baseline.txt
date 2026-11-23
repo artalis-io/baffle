@@ -1,0 +1,39 @@
+REPLAY queue_capacity=512 input_frames=191040
+DECODE frames=5600 sha256=73a36a95ad806240e6348d0ef4026eefcb256c92397e42b0c245f615c831e094 last_two=-1 text=
+DECODE frames=15840 sha256=cfb4a3189a9c5181d0ffdd1cc53f796eee32255bc76358628264358b56b3321d last_two=-1 text=
+DECODE frames=27040 sha256=5b62818b5e737c2747372a983ecba641cf21e0444cd656b4b8fd1697254c1877 last_two=1.5999999 text=What is it?
+DECODE frames=38880 sha256=0191b0ca0283efb97c122e910215564636cd6212f8a606503e55fa3e2608797d last_two=1.12 text=Aristóteles afirmación.
+DECODE frames=51360 sha256=b8439e57f9a1f2120f9a4189aa8537d820e6b04518fe8623fa72eb06292039f9 last_two=2.24000001 text=Arisztotelész a filozófus úgy.
+DECODE frames=64480 sha256=d22afdf5c33e896fdcb60b6fbb58f25905083c8436217993934e3a1566dba86c last_two=2.96000004 text=Arisztotelész, a filozófus, úgy gondolta,
+DECODE frames=78400 sha256=64258eaf26116fbdca8ce5595d8a340fceef8ee3903ba9cb2ff36a0c64d0a2d9 last_two=4.4000001 text=Arisztotelész, a filozófus úgy gondolta, hogy minden a négyelő
+DECODE frames=93280 sha256=24a213dff0db3f83f954fb6e3fcff09f46886f7be2594e0ed97aca58543fa037 last_two=5.27999973 text=Arisztotelész a filozófus úgy gondolta, hogy minden a négyelem egy vagy több tagja.
+DECODE frames=109120 sha256=3910792ca65c2987ff3dacc3e61af3cd80a665481e6bde1153161ccc848646da last_two=5.5999999 text=Arisztotelész a filozófus úgy gondolta, hogy minden a négyelem egy vagy több tagjának keverékébá.
+DECODE frames=125600 sha256=29fd1f361f8460f9b3e520de273d8b01e96102646b5b318a6768eaacc6d59ef8 last_two=6.07999992 text=Arisztotelész a filozófus úgy gondolta, hogy minden a négy elem egy vagy több tagjának keverékébál össze.
+DECODE frames=128000 sha256=3f4fca13f71edf3d2802577acfd1f1f6a9e00ecb07edd5ade5456f45e2344bc6 last_two=6.79999971 text=Arisztotelész a filozófus úgy gondolta, hogy minden a négy elem egy vagy több tagjának keverékéből áll össze.
+DECODE frames=54880 sha256=2dd68b935177328052f0923929b4d24e62e758914038c43f7417b18789fd85a2 last_two=2.79999995 text=Ezek a föld, a víz, a levegő,
+DECODE frames=68480 sha256=c40e90779d6524b63aa7225678dbcea3768e9a3497722f9ebc13fe01584259a5 last_two=3.75999999 text=Keverékéből áll össze. Ezek a föld, a víz, a levegő és a tűz.
+DECODE frames=82400 sha256=338e4a4bd26791c5f4c5f42cbedfc8d79e74b9ca4d0d5f01b95f8949d29a5f1d last_two=3.83999991 text=Keverékével áll össze. Ezek a föld, a víz, a levegő, és a tűz.
+DECODE frames=97280 sha256=12b6883fb74ee1a9d7540b6c27c4a810c272f880309c69a0c3893ad14f58bb55 last_two=3.83999991 text=keverékével áll össze. Ezek a föld, a víz, a levegő, és a tűz.
+DECODE frames=102240 sha256=54abc7fcdcd1f384250608a95fc758b228b2845a90407b346d6c87c87b03a75f last_two=3.83999991 text=Keverékéből áll össze. Ezek a föld, a víz, a levegő, és a tűz.
+DECODE frames=60960 sha256=b930207d9db1ce0bc7081d14bcb7043fa3e3173477f48bde03932d77939c2f48 last_two=0.560000002 text=Ögő és a tűz!
+HISTORY=Arisztotelész a filozófus úgy gondolta, hogy minden a négy elem egy vagy több tagjának keverékéből Keverékéből áll össze. Ezek a föld, a víz, a levegő, és Ögő és a tűz!
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=83
+MEASURE index=0 decode_ms=49.468200 completed_after_source_start_ms=1196.468000
+MEASURE index=1 decode_ms=85.136400 completed_after_source_start_ms=1888.161500
+MEASURE index=2 decode_ms=127.653600 completed_after_source_start_ms=2621.160700
+MEASURE index=3 decode_ms=166.694300 completed_after_source_start_ms=3401.260100
+MEASURE index=4 decode_ms=217.650400 completed_after_source_start_ms=4222.952700
+MEASURE index=5 decode_ms=260.371300 completed_after_source_start_ms=5104.525900
+MEASURE index=6 decode_ms=309.521700 completed_after_source_start_ms=6021.284800
+MEASURE index=7 decode_ms=368.873500 completed_after_source_start_ms=7011.407400
+MEASURE index=8 decode_ms=422.762000 completed_after_source_start_ms=8044.290000
+MEASURE index=9 decode_ms=482.740300 completed_after_source_start_ms=9144.300500
+MEASURE index=10 decode_ms=489.168400 completed_after_source_start_ms=9633.732200
+MEASURE index=11 decode_ms=224.620400 completed_after_source_start_ms=10467.301700
+MEASURE index=12 decode_ms=275.463900 completed_after_source_start_ms=11355.724500
+MEASURE index=13 decode_ms=328.366000 completed_after_source_start_ms=12291.444900
+MEASURE index=14 decode_ms=376.110700 completed_after_source_start_ms=13268.743200
+MEASURE index=15 decode_ms=397.155000 completed_after_source_start_ms=13666.112600
+MEASURE index=16 decode_ms=242.896400 completed_after_source_start_ms=14082.378900

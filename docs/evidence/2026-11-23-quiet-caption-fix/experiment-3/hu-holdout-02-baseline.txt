@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=182400
+DECODE frames=5600 sha256=0f09ef6e64ebb3c5de2ab5bce9ca2bac279edd055fecaab3604d3da4f283f496 last_two=-1 text=Yeah.
+DECODE frames=15680 sha256=4a64c63e055ae2a6e710c0b50c9d19e6ba640b6a5834581757c503441685a51f last_two=-1 text=Uh.
+DECODE frames=26720 sha256=294a6b2bfac19ea8c8cd7dbb15d42e3c7d6686ceeaa6d92f3dbfd8888e59ed38 last_two=-1 text=Okay.
+DECODE frames=38720 sha256=d2d4ab97e7cd3ca7995188223d80e56c9fcf2750ab58f4b19c03aec3f6a9b353 last_two=0.639999986 text=A standard legnagyobb
+DECODE frames=50720 sha256=348dc9ee82debde5d9aeffbfb1f0a9e39fa25432be5dfc1e5dc7e2a9ef5a9dff last_two=2.31999993 text=A számolvens a világ legnagyobb mandó bevezetem,
+DECODE frames=63840 sha256=021b8b733a055b1a2fb90d4d17a3b168d8366b6dc23fc26ce34db1b466b9dcd3 last_two=2.79999995 text=A standard a világ legnagyobb mandó bevezete, amely
+DECODE frames=77600 sha256=ba5b4273464e12e974dcd6b7c432c8ecbed438a26034ca2441a97bc190510390 last_two=3.91999984 text=A standard a világ legnagyobb mandróvezete, amely a tenerparton.
+DECODE frames=92480 sha256=876d4254fc5f0f026dc2e0a396d88cf85e83e1a1eb5fb1da69468daa0040cf38 last_two=5.03999996 text=A standardbans a világ legnagyobb mandróvezete, amely a tengerpartól 80 km.
+DECODE frames=108320 sha256=f754f7715762e19627a2bab6a3193a6b4283e2357463606bd9154b50b7f21183 last_two=6 text=A Sundorbus a világ legnagyobb mandróvezete, amely a tengerpartól 80 km-re nyúlít be,
+DECODE frames=124480 sha256=c08cb6a6110a31f6c9dd5a3d98a2848287dd7c6e3b16968aa41261b67048e829 last_two=6.48000002 text=A Sundarbans a világ legnagyobb mandróvezete, amely a tengerpartól 80 km-re nyúlít be, banradás.
+DECODE frames=128000 sha256=638e101cf9841f10aa29d8018283c067840da326d401909c9fe402c48b79bac0 last_two=7.44000006 text=A Sundarbans a világ legnagyobb mandróvezete, amely a tengerpartól 80 km nyújt be, Bandlades és Indiák.
+DECODE frames=53760 sha256=32139a7a1dd0cec7ecb85d7d5283e9609bca01cca56fe6edf3d368f29ec3a810 last_two=1.75999999 text=Nyújt be, Banglades és India hátországába.
+DECODE frames=66720 sha256=091aaf6a8962a75f1a2bee3b3efb942cd5862cc510646078762829081dc90c2e last_two=1.75999999 text=nyulít be, Banglades és India hátországá.
+DECODE frames=81120 sha256=d297f785b6658ef9c503fecc33e10f6ba68d5829b214010f7c0c1d1f3b88b9a3 last_two=1.75999999 text=nyulít be, Banglades és India hátországá.
+DECODE frames=85920 sha256=ecff14f162149c88994c941ac6877b3aced8fae02e95b2be7831791092409737 last_two=1.75999999 text=nyulít be, Banglades és India hátországá.
+HISTORY=A Sundarbans a világ legnagyobb mandróvezete, amely a tengerpartól 80 km nyújt be, Bandlades nyulít be, Banglades és India hátországá.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=76
+MEASURE index=0 decode_ms=50.406700 completed_after_source_start_ms=2281.732600
+MEASURE index=1 decode_ms=86.171900 completed_after_source_start_ms=2974.808300
+MEASURE index=2 decode_ms=121.594300 completed_after_source_start_ms=3702.349400
+MEASURE index=3 decode_ms=166.446200 completed_after_source_start_ms=4473.210000
+MEASURE index=4 decode_ms=207.511900 completed_after_source_start_ms=5284.467900
+MEASURE index=5 decode_ms=255.694600 completed_after_source_start_ms=6149.239400
+MEASURE index=6 decode_ms=306.149900 completed_after_source_start_ms=7063.084200
+MEASURE index=7 decode_ms=368.044600 completed_after_source_start_ms=8051.970700
+MEASURE index=8 decode_ms=421.462300 completed_after_source_start_ms=9080.734900
+MEASURE index=9 decode_ms=478.942400 completed_after_source_start_ms=10162.301100
+MEASURE index=10 decode_ms=488.738200 completed_after_source_start_ms=10651.307800
+MEASURE index=11 decode_ms=217.879600 completed_after_source_start_ms=11481.113600
+MEASURE index=12 decode_ms=267.285700 completed_after_source_start_ms=12349.234000
+MEASURE index=13 decode_ms=313.286800 completed_after_source_start_ms=13289.690500
+MEASURE index=14 decode_ms=338.019400 completed_after_source_start_ms=13627.903000

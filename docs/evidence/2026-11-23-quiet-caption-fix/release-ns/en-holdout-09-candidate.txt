@@ -1,0 +1,15 @@
+REPLAY queue_capacity=512 input_frames=174720 caption_profile=ns
+DECODE frames=5600 sha256=0fc8e810c05c839b97c3613719be325accd5fc5a73439bdcc8da81548c2113f8 last_two=-1 text=
+DECODE frames=16160 sha256=2363cd28b37f5ed8eedb755fe7b85166773051da8e77dab1cc96ac2f0dd2be8d last_two=0.239999995 text=Pride X.
+DECODE frames=27040 sha256=21970380f49b04ae447b50c9ce5de831d19dd42eefd36fbe2ceeeb7b2835de8c last_two=0.959999979 text=Pride's X much like
+DECODE frames=39200 sha256=bedf43f77ad561c3daee8af1f5d22f1293d9a99b48092b29f1f81e9c6138222a last_two=-1 text=
+DECODE frames=44000 sha256=6ce8e34ec480e2287edbd839b145a87f6aa7a6995b425d84bd8641293a092000 last_two=2.31999993 text=Pride's X much like the axe of wolves or dogs.
+HISTORY=Pride's X much like the axe of wolves or dogs.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=19
+MEASURE index=0 decode_ms=49.747300 completed_after_source_start_ms=2555.597900
+MEASURE index=1 decode_ms=87.411100 completed_after_source_start_ms=3258.175800
+MEASURE index=2 decode_ms=127.416700 completed_after_source_start_ms=3994.682800
+MEASURE index=3 decode_ms=167.855600 completed_after_source_start_ms=4775.414900
+MEASURE index=4 decode_ms=190.348500 completed_after_source_start_ms=5095.570100

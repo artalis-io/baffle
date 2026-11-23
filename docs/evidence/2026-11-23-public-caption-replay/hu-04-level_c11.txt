@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=A spektrum másik oldalán valaki egy felismerhetetlen személy alakul, aki úgy érti, hogy mintán a csoport által létrehozott dolgot meg kell változtatni, és a saját jává kell tennie.
+validated_last_two_start_seconds=16.0799999
+decode_ms=2071

@@ -1,0 +1,14 @@
+  Name: USER32.dll
+  Name: GDI32.dll
+  Name: COMCTL32.dll
+  Name: UxTheme.dll
+  Name: dwmapi.dll
+  Name: SHELL32.dll
+  Name: bcrypt.dll
+  Name: KERNEL32.dll
+  Name: ole32.dll
+  Name: ADVAPI32.dll
+  Name: dbghelp.dll
+  Name: api-ms-win-core-path-l1-1-0.dll
+  Name: SETUPAPI.dll
+  Name: dxgi.dll

@@ -1,0 +1,10 @@
+Internal ctest changing into directory: /tmp/baffle-c11-20261121/build-consumer
+Test project /tmp/baffle-c11-20261121/build-consumer
+    Start 1: consumer_c
+1/2 Test #1: consumer_c .......................   Passed    0.00 sec
+    Start 2: consumer_cpp
+2/2 Test #2: consumer_cpp .....................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec

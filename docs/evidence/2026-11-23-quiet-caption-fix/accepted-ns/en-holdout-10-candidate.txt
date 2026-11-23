@@ -1,0 +1,31 @@
+REPLAY queue_capacity=512 input_frames=180480
+DECODE frames=5600 sha256=c6d51f7e4572e390912a1775236b0d6e84ebddb11e2c6d1de99902eadb8fc6c7 last_two=-1 text=
+DECODE frames=16160 sha256=e95e6751295c84e1dccf9e5c9320f81770de537a1cd2d9669137ff0ed197673a last_two=0.239999995 text=The city is
+DECODE frames=27520 sha256=15893b9fdab9b111fdd67968bee93c89002ba68a6f04298f9fce36f6677372fd last_two=1.03999996 text=The city is also the base.
+DECODE frames=39040 sha256=da825907335ac263b38bdf25d6e74630121c77974a30ced0f48077cb0968e488 last_two=1.5999999 text=The city is also the base to climb.
+DECODE frames=51680 sha256=35126e7beecb1e7584187f4bb5a5cd936731bd17a5e8eae7b6358a8b9ac99da5 last_two=2.31999993 text=The city is also the base to climb the Naira.
+DECODE frames=64960 sha256=99da26529f78bde45abe01ad1fce2f4c8e047ffe22c5dc60da1ddf060a5fc276 last_two=2.63999987 text=The city is also the base to climb the Nai Gango.
+DECODE frames=79040 sha256=c9ca7411db0da6eeb30922878cfa7be955b8713a2849525367a8ae329b648f20 last_two=4.71999979 text=The city is also the base to climb the Nairigango volcano along the city.
+DECODE frames=93600 sha256=d5c6040e4946762d6078e29a90b0e534e46f03df48acadffdc6e95777ac1ce73 last_two=5.19999981 text=The city is also the base to climb the Nairigango volcano along with some of the cheap
+DECODE frames=96000 sha256=8e8edc1bf594d3029b048edf4840680735b9bf2617b0124245e42e2a3530a833 last_two=5.27999973 text=The city is also the base to climb the Nairagango volcano along with some of the cheap
+DECODE frames=51680 sha256=da28bb59878033fcd06a291756213ace3ee154ed4e3927e1f96ad2827ec42a80 last_two=2.48000002 text=volcano along with some of the cheapest mountain gorilla traps
+DECODE frames=64800 sha256=f5d0d08ebd732f815d62710630a5949e260778fad2e3f19c862ee22176401894 last_two=3.11999989 text=Volcano along with some of the cheapest mountain gorilla trafficking in
+DECODE frames=78720 sha256=6c17cc0ba098d8d973223b60701e55acdbdaba46f12684df5c2628d1dc48ce9c last_two=3.75999999 text=volcano along with some of the cheapest mountain gorilla trafficking in Africa.
+DECODE frames=84800 sha256=f2fdc49897c85fe9f2b9394c28a67e19c0eb97e9f97eac94a6abdbbe82b3cc37 last_two=3.83999991 text=volcano along with some of the cheapest mountain gorilla trafficking in Africa.
+HISTORY=The city is also the base to climb the Nairagango volcano along with some of volcano along with some of the cheapest mountain gorilla trafficking in Africa.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=63
+MEASURE index=0 decode_ms=50.527300 completed_after_source_start_ms=2595.043700
+MEASURE index=1 decode_ms=87.698500 completed_after_source_start_ms=3310.668000
+MEASURE index=2 decode_ms=128.244700 completed_after_source_start_ms=4045.235700
+MEASURE index=3 decode_ms=170.900400 completed_after_source_start_ms=4829.529200
+MEASURE index=4 decode_ms=218.126700 completed_after_source_start_ms=5667.658800
+MEASURE index=5 decode_ms=264.157500 completed_after_source_start_ms=6536.294500
+MEASURE index=6 decode_ms=317.317500 completed_after_source_start_ms=7455.856200
+MEASURE index=7 decode_ms=376.682000 completed_after_source_start_ms=8445.328900
+MEASURE index=8 decode_ms=383.196500 completed_after_source_start_ms=8828.735800
+MEASURE index=9 decode_ms=217.276100 completed_after_source_start_ms=9660.036200
+MEASURE index=10 decode_ms=264.936000 completed_after_source_start_ms=10530.789500
+MEASURE index=11 decode_ms=315.299900 completed_after_source_start_ms=11450.490700
+MEASURE index=12 decode_ms=344.805100 completed_after_source_start_ms=11842.239300

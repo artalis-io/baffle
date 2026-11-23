@@ -1,0 +1,7 @@
+runtime=1.12.40
+source=d795ccd1
+provider=cpu
+threads=2
+text=All nouns alongside the word say for you always begin with a capital letter even in the middle of a sentence.
+validated_last_two_start_seconds=8.16
+decode_ms=1181

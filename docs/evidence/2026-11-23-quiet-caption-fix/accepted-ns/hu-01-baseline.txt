@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=ce884f9bdae08a7c97f5b8493ef3ad8aa6ea65f5d6c48fb4e2ada65b091fe82f last_two=-1 text=
+DECODE frames=16320 sha256=da9c7fb5d365a4ff08ef1cffae97a6e23a341e8f97c98b43ab36e0789c4dfc95 last_two=-1 text=
+DECODE frames=18400 sha256=75561082ba4e6fd9f84c77b57312765352ae47e1d240a93bfbf55881a4b37e17 last_two=-1 text=
+DECODE frames=11040 sha256=fb1a6369ed545b8ff8a19db2b3e77610de51ef6258cf044504ac89effb0620c5 last_two=-1 text=Comment.
+DECODE frames=22240 sha256=9fd748e34c1503446ad8ddd0247395ac5943be4e7db5f14859e59afbf981ad10 last_two=-1 text=
+DECODE frames=33760 sha256=c564ddf5e605d19a8cc5cdedebf86ec0d156815394a5305495a99fbac195d397 last_two=0.399999976 text=Hong Kong Maverick.
+DECODE frames=45600 sha256=1e004bee8e38f04cdb8168498dde603e0cf46b9d54fa6aedf5baa2c8bbd6d21e last_two=1.75999999 text=Hong Kong Maverick a Hong Kong Psychiatry
+DECODE frames=58720 sha256=5b78779627cb93dd7b4ee41af7457b96c02bf0160a4f170320a6b9c821fbe24a last_two=2.15999985 text=Hong Kong Member Hong Kong Psychiatral Captain
+DECODE frames=72480 sha256=862590a38e3f0574ca827c7759895b1a9300bb53f280513d8b988fab31a5499a last_two=1.43999994 text=Hongkong nevyt, a Hongkong seket.
+DECODE frames=87200 sha256=5158f5e1436b3ef7d41828ee3544155586e49fa6796984d81d545b19d88a5d45 last_two=4.15999985 text=Hongkong nevyt, a Hongkong Sziketra katta, és a H turistään.
+DECODE frames=97920 sha256=21172f73c85c3f4356e0b6817bb9927ea9f631dfaee3f7284c63752d2042b8e8 last_two=4.88000011 text=Hongkong nävy a Hongkong Sector Katta ésok Turistä samára.
+DECODE frames=48160 sha256=d4330c655a8b566f05c514b3f942a0d680707a55db5c5d7575ef0331c3b90bd3 last_two=0.719999969 text=sok trista számára.
+DECODE frames=61120 sha256=542a8b16c42ddf7e362b1dc0e4f1387fb38a0627b9cf861ff16980891b7bfabb last_two=-1 text=
+DECODE frames=74560 sha256=5726354d705ac61a43d328956eaaa077297e44f7737e0681377e45ece5bfed14 last_two=-1 text=
+HISTORY=Hongkong nävy a Hongkong Sector Katta ésok sok trista számára.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=41
+MEASURE index=0 decode_ms=51.125700 completed_after_source_start_ms=2095.274100
+MEASURE index=1 decode_ms=89.217800 completed_after_source_start_ms=2806.066600
+MEASURE index=2 decode_ms=96.591700 completed_after_source_start_ms=2923.868000
+MEASURE index=3 decode_ms=69.133400 completed_after_source_start_ms=3606.348800
+MEASURE index=4 decode_ms=112.255100 completed_after_source_start_ms=4329.429200
+MEASURE index=5 decode_ms=153.935100 completed_after_source_start_ms=5096.959400
+MEASURE index=6 decode_ms=205.908600 completed_after_source_start_ms=5903.020300
+MEASURE index=7 decode_ms=253.161800 completed_after_source_start_ms=6764.973600
+MEASURE index=8 decode_ms=302.406300 completed_after_source_start_ms=7683.713800
+MEASURE index=9 decode_ms=361.525000 completed_after_source_start_ms=8657.729800
+MEASURE index=10 decode_ms=401.247100 completed_after_source_start_ms=9357.501100
+MEASURE index=11 decode_ms=216.950300 completed_after_source_start_ms=10180.292900
+MEASURE index=12 decode_ms=251.450500 completed_after_source_start_ms=11039.177400
+MEASURE index=13 decode_ms=304.872100 completed_after_source_start_ms=11929.408000

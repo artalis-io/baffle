@@ -1,0 +1,11 @@
+REPLAY queue_capacity=512 input_frames=80000
+DECODE frames=5600 sha256=60e134dda7c49e77df81907c2656aa1a060a0ca5466b8d335296eb1e588e4825 last_two=-1 text=
+DECODE frames=16160 sha256=1474b97683e5bd8a51ac11d09915fbafe60bf4aacd3a1e38d8714d56496e54c5 last_two=-1 text=No.
+DECODE frames=18400 sha256=81d54f4dc4d7198e0f5517be6079c2b686e878e51393cbe93be2c85d715bb6c8 last_two=-1 text=
+HISTORY=No.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=12
+MEASURE index=0 decode_ms=49.602700 completed_after_source_start_ms=3162.695400
+MEASURE index=1 decode_ms=88.966900 completed_after_source_start_ms=3863.562900
+MEASURE index=2 decode_ms=95.920900 completed_after_source_start_ms=4027.891500

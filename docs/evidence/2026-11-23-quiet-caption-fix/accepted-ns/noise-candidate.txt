@@ -1,0 +1,25 @@
+REPLAY queue_capacity=512 input_frames=80000
+DECODE frames=5600 sha256=9bb8c7f313025a0722819ffb333399b776e58fb0dd0ba54f4a5af6670a411b96 last_two=-1 text=
+DECODE frames=16320 sha256=874dd1b83c041f7893a5166cfe02c0cb8f0a9fd00c743e974dc5a791e57557b2 last_two=-1 text=
+DECODE frames=27200 sha256=91e8488264f4209b63c55d5c7486a7420c8572d3dc699c4ec1a30e282e510b21 last_two=-1 text=
+DECODE frames=39040 sha256=19b8d21f5d536bda0682befebce3c73c01603c949d71706214b0c41874117d90 last_two=-1 text=
+DECODE frames=51360 sha256=8bdac1c8f3399cd0e204d6e5ddd2c3fcfab3061353a175a299e961c302a17d10 last_two=-1 text=
+DECODE frames=64800 sha256=666e30c13b6781334ae0573a13748e5323fe07d6069d4a1b761f7858aa20f5da last_two=-1 text=
+DECODE frames=78880 sha256=b6ba2198a84a97a1c4add2f56563da131d855b4ee9532ce29510eb163c4d92e2 last_two=-1 text=
+DECODE frames=93440 sha256=f7f6f853416f7ef017fd0826fbd16a4665b9d3e59b454995cb6f96b4b656a4c7 last_two=-1 text=
+DECODE frames=96000 sha256=b0ccef31708f4448056764783c6d0783ed93a6d09f0e2060df9c582ce5a76c10 last_two=-1 text=
+DECODE frames=50240 sha256=9f1bc287a5683028c6c197c2ef176f302e085a93674fee9182fd60428a6abe86 last_two=-1 text=
+HISTORY=
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=37
+MEASURE index=0 decode_ms=50.017900 completed_after_source_start_ms=1165.140100
+MEASURE index=1 decode_ms=86.590700 completed_after_source_start_ms=1866.047400
+MEASURE index=2 decode_ms=125.969000 completed_after_source_start_ms=2599.842100
+MEASURE index=3 decode_ms=167.582100 completed_after_source_start_ms=3384.383300
+MEASURE index=4 decode_ms=216.032100 completed_after_source_start_ms=4207.163100
+MEASURE index=5 decode_ms=261.583700 completed_after_source_start_ms=5085.297300
+MEASURE index=6 decode_ms=309.235900 completed_after_source_start_ms=5998.407300
+MEASURE index=7 decode_ms=365.057900 completed_after_source_start_ms=6965.898400
+MEASURE index=8 decode_ms=375.342000 completed_after_source_start_ms=7341.447400
+MEASURE index=9 decode_ms=206.309600 completed_after_source_start_ms=7547.974000

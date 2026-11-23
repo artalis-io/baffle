@@ -1,0 +1,4 @@
+title=Baffle — élő átirat (natív C11 / Win32)
+status=Indításra kész
+loaded_modules=Windows system modules only
+exit=0

@@ -1,0 +1,45 @@
+REPLAY queue_capacity=512 input_frames=250560 caption_profile=ns
+DECODE frames=5600 sha256=90b8f667c5baecdfe247743bb1bdfafcd981d422b2c4187f1f30aed2a32519a8 last_two=-1 text=
+DECODE frames=16320 sha256=cf4a87d97faefbc3db9155631ba57f9f94a72ff68fb544d99ce3006de2e442ba last_two=-1 text=
+DECODE frames=27360 sha256=967bda089537246c1b6d613b7930a3de06429b4ed2a1c33169df88ac36d888d4 last_two=-1 text=
+DECODE frames=39200 sha256=2611ec28f5655cd1e93e3003fa4baaaedc58b7153e18e57a5b92c191f256ff44 last_two=1.5999999 text=Pasón da...
+DECODE frames=51520 sha256=7fbb8463a3be068e5e72ee2c460b347adf48255bfd910811e0a62c6cfd1afdfe last_two=1.91999996 text=A Sundarban St.
+DECODE frames=64640 sha256=005ac9f318088779eb3f7089a9ff0656053a661a4b8941af81d1579cdad49156 last_two=2.87999988 text=A Szundarbans térség 1999.
+DECODE frames=78560 sha256=0837a2eb9cf9cc2aa1ae4a759a153816477331ffc1b68b9b49cf9d13f79591da last_two=3.51999998 text=A Szunderbans térség 1966 óta.
+DECODE frames=93440 sha256=9510e90bee1c9fb642a5d44d5da69c353b177ab26ac02b858cc0ede599921506 last_two=5.19999981 text=A Szundarbáns térség 1966 óta a vadon élő állat.
+DECODE frames=108960 sha256=c01bade491949f6800de0e3db40b9ef7e54a1e4aae7af48e6e7cc5267188f10c last_two=5.92000008 text=A Szundárbans térség 1966 óta a vadon élő állatok menedékeként szóra.
+DECODE frames=125600 sha256=fb27dadd1ef1e3356931bce666f25342f04a4ff2eba4dba76ff65b809974ef9d last_two=7.19999981 text=A Szunderbans térség 1966 óta a vadon élő állatok menedékeként szolgál, és bescsét.
+DECODE frames=128000 sha256=f853b548423e8098bda257305e3c76e8fdc8805aaefdccce30621893687946cb last_two=7.19999981 text=A Szundárbans térség 1966 óta a vadon élő állatok menedékeként szolgál, és becslés.
+DECODE frames=54880 sha256=49d72d0ddd6be81f509368a7def74804ff677ab6d3e26c6794be2a563be7584c last_two=2.39999986 text=Edékeként szolgál, és becslések szerint jelenleg 400.
+DECODE frames=68320 sha256=b4649a25618fd3177004fd5827bb80eb0e3a83b88e142332d2cf8e87ae5d8cb3 last_two=3.3599999 text=Edékeként szolgál, és becslések szerint jelenleg 400 vengári tigrés,
+DECODE frames=82720 sha256=7b8f9425dc52d5cb3d4844c4b004008a4d3932310b4304ed123f25c23013fbaf last_two=4.23999977 text=Szolgál, és becslések szerint jelenleg 400 vengári tigris, és hozzávetőleget.
+DECODE frames=97600 sha256=009cc54f70be439f7d806cbf11c71977c649efbbbcc7a08e485932d0609d999b last_two=4.4000001 text=Szolgál, és becsések szerint jelenleg 400 vengári tigris, és hozzávetőlegesen 30.
+DECODE frames=113760 sha256=d3665cef9da78aeea889e6b89bb03d636b6b2d5ac773976f63b1ebdb55184fc6 last_two=6.23999977 text=Szolgál, és becsések szerint jelenleg 400 vengári tigris, és hozzávetőlegesen 30 ezer betjes szarva.
+DECODE frames=128000 sha256=a6432c8a46a80309011a9b1434ea98052a82105eb9a9b9a29470204e33798a3a last_two=7.5999999 text=Szolgál, és becsések szerint jelenleg 400 vengári tigris, és hozzávetőlegesen 30.000 1-es szarvas található a terül.
+DECODE frames=49920 sha256=f105cc5d3b0d28cfee7e742f35e094f596a54ec5fe847df6710b87cf3135aba8 last_two=1.75999999 text=102-es szarvas található a területen.
+DECODE frames=63200 sha256=2f47c4a1b189dc2f7b7a3adbbb48689d84c4fedf40bc2b0a839742627757c21e last_two=1.75999999 text=12 szarvast található a területen.
+DECODE frames=75680 sha256=5dfb48a6118e2ac35b105b09eec5bf233cc2f510025b7f74f81e8484fa553c25 last_two=1.75999999 text=12 szarvast található a területen.
+HISTORY=A Szundárbans térség 1966 óta a vadon élő állatok menedékeként szolgál, Szolgál, és becsések szerint jelenleg 400 vengári tigris, és hozzávetőlegesen 30.000 1-es szarvas található 12 szarvast található a területen.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=84
+MEASURE index=0 decode_ms=49.411700 completed_after_source_start_ms=1240.157900
+MEASURE index=1 decode_ms=87.006600 completed_after_source_start_ms=1950.897600
+MEASURE index=2 decode_ms=125.600900 completed_after_source_start_ms=2678.889700
+MEASURE index=3 decode_ms=168.665500 completed_after_source_start_ms=3463.609200
+MEASURE index=4 decode_ms=216.986000 completed_after_source_start_ms=4282.681900
+MEASURE index=5 decode_ms=262.651300 completed_after_source_start_ms=5145.708500
+MEASURE index=6 decode_ms=314.430900 completed_after_source_start_ms=6069.431800
+MEASURE index=7 decode_ms=370.161400 completed_after_source_start_ms=7039.940100
+MEASURE index=8 decode_ms=428.716100 completed_after_source_start_ms=8071.859800
+MEASURE index=9 decode_ms=489.886000 completed_after_source_start_ms=9174.397700
+MEASURE index=10 decode_ms=498.008500 completed_after_source_start_ms=9672.684500
+MEASURE index=11 decode_ms=227.771700 completed_after_source_start_ms=10502.684600
+MEASURE index=12 decode_ms=278.249700 completed_after_source_start_ms=11391.035600
+MEASURE index=13 decode_ms=332.583900 completed_after_source_start_ms=12346.799000
+MEASURE index=14 decode_ms=387.167100 completed_after_source_start_ms=13334.348300
+MEASURE index=15 decode_ms=444.438500 completed_after_source_start_ms=14400.574100
+MEASURE index=16 decode_ms=505.653000 completed_after_source_start_ms=15347.040200
+MEASURE index=17 decode_ms=205.464700 completed_after_source_start_ms=16168.648700
+MEASURE index=18 decode_ms=257.911000 completed_after_source_start_ms=17051.562500
+MEASURE index=19 decode_ms=301.895800 completed_after_source_start_ms=17867.579700

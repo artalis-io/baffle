@@ -1,0 +1,17 @@
+REPLAY queue_capacity=512 input_frames=192960
+DECODE frames=5600 sha256=b010d18433e831f6a0ca72b87b404379b1cd950ef0ce735634b14370c9b2758d last_two=-1 text=
+DECODE frames=16640 sha256=dd88324cbbd6dae0601e25e382cf587c864187a92e55f86d03310423f4de7200 last_two=-1 text=
+DECODE frames=18400 sha256=94a07b89866665764b15514db1fc605ac3703bad51f3f919a4c4aa660990f903 last_two=-1 text=
+DECODE frames=11520 sha256=f8749f0fe7ed5488e429d4b6ad986866547fa76408f5c12375d19a37dc2465f0 last_two=0.0799999982 text=Um com
+DECODE frames=22880 sha256=00e244f7fd4df05fa8d4857ec1762ef1b6c3fea040e690966274b1d611dfd6c7 last_two=0.0799999982 text=Hun command.
+DECODE frames=35200 sha256=e668a282f174c5f8b0909e60904c6ec26f33f847c4536e4852311d070630201b last_two=1.43999994 text=Hong Kong Maverick a Hong Kong
+DECODE frames=48960 sha256=35b116b1d09c545ae198184106256aa01d93e79fe2c08f5396996a4560491bb8 last_two=2.07999992 text=Hong Kong Never, a Hong Kong Szikatrial Cup.
+DECODE frames=62560 sha256=bfbc39dc47e4fe2b65647ae349e504267abb165aa0f3231378e8b7cf91c94b00 last_two=2.15999985 text=Hongkong nevét, a Hongkong Szikator kapta
+DECODE frames=79040 sha256=2e1ec249d56fbecfa15fd52b0da87ea82e70694fed92e616315b1f118676b255 last_two=4 text=Hongkong nevét, a Hongkong szikateral kapta és a hátsokt.
+DECODE frames=95680 sha256=3877e3526048e9cc86ee150780b0641ccb66f73452f11bf2b97eaa74fe5b044a last_two=4.79999971 text=Hongkong nevét a Hongkong szikatrial kapta és a sok turista számára.
+DECODE frames=97920 sha256=0d29ab47df4de8b38ab96a81222788ccc2d0b789ee02142bce676d59d9f9884c last_two=4.79999971 text=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára.
+DECODE frames=60960 sha256=11c562fd6b242b07b8ebd5a040ccf5889a651969f4a0baf81ad04b44f3860cb8 last_two=2.07999992 text=sok törista számára a figyelem középpontjában.
+DECODE frames=74560 sha256=c1ccab62aa38d1996495bbe915fdf319cfe7cc7491f00e03058b1093f4e27100 last_two=2.72000003 text=a sok törista számára a figyelem középpontjában áll.
+HISTORY=Hongkong nevét a Hongkong sziketról kapta, és át a sok törista számára a figyelem középpontjában áll.
+DROPPED=0
+STATUS=Listening

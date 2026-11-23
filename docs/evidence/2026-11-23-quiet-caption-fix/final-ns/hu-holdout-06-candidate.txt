@@ -1,0 +1,39 @@
+REPLAY queue_capacity=512 input_frames=261120
+DECODE frames=5600 sha256=8372ceccbce16325fc5c5ec36b92f96c93a89981ea97fdba037aad37c59bcfc5 last_two=-1 text=Yeah.
+DECODE frames=16160 sha256=a33f3b607b68aa7f19137b0b7b7c744d3c544af97951b12bd6d6aa4099d8d0f0 last_two=0.560000002 text=Okay, should rush out.
+DECODE frames=27520 sha256=458b583909f43e315499ff0ede81fe673a49881779fc9ed08e73876a57bc976f last_two=1.27999997 text=Okay, should wash on up a pet.
+DECODE frames=39360 sha256=a9986beecbf3d2580713002865798a9dde5300d2615db931f11cc0bdf5364cca last_two=1.43999994 text=Késő vasárnap a ejtő állom.
+DECODE frames=52320 sha256=6c7135905d834347ae631a1b55eec59961a19df8a266893e7bdfaf76337c089a last_two=2.63999987 text=Késő vasának a egyesült államak, álnök át.
+DECODE frames=65600 sha256=74af7920c93adbd749a1a5ece1e46c91db56a7f7716710e6519411e7d2ab5307 last_two=2.63999987 text=Késő vasárnap a egyesült államak, álnökát, tanátám.
+DECODE frames=79680 sha256=17dc65ae5772790014167c5756c746c55e28144473557dfe06a3f5280dbd22ec last_two=2.63999987 text=Késő vasána, egyesült államak, álnökát, tanátkám.
+DECODE frames=94880 sha256=26da23c558a287266acb292bb46619aa5c215759aa42cc6e489df900ffdfb83a last_two=4.79999971 text=Késő vasána, egyesült államak, álnak tanátkám. Egy a saját áll.
+DECODE frames=111360 sha256=c2642a9d5aab2e49c759c6dfffd16eeb7c27e70a9ec113cf043d8e2a02ccf99a last_two=5.92000008 text=Késő vasárnap a egyesült államak álnak, tanátkám. Egy a sárkótikkár áttal közvetik.
+DECODE frames=128000 sha256=06e7f518a67b6476dd4adba44e45ecdbea0abb48d77361a01b68318579ec4918 last_two=5.92000008 text=Késő vasárnak a egyesült államnak álnak tanátán. Egy a sajtótár áttal közvetintetokat.
+DECODE frames=60800 sha256=91337b2db26cbf65130c215e0a74eb38b31e2f31d380e4a5da42b0075dffd4d3 last_two=2.07999992 text=Kyllä, että jatkot saattaa.
+DECODE frames=74560 sha256=e4841892f4877031efd63b1211266304459c49cf44830ca6c53a1c507eeea3e5 last_two=1.03999996 text=Kykkään ajattaa kyllä saattaa.
+DECODE frames=89120 sha256=81ad17e3f2f35499776b5f586a1cdee6b220ede9b667e05461d62c9083488166 last_two=4.48000002 text=Kykkään aattaa kyllä, että jatkot saattaa Amerikkaan katsoa.
+DECODE frames=104800 sha256=42d4ed3711431ce73d16783de1712e44e35bb70c355517a6909993c611f8461a last_two=5.75999975 text=Kykkään aattää kyllä, että jatkot saattaa pankkier tätä. Amerikka ja katsomaan et sikäkään.
+DECODE frames=121760 sha256=fb4b4b05092bded23efe38a2e968eb9d3459282668dac6b1ae49fa20b2fcbf8a last_two=5.83999968 text=Kykkään aattää kyllä jatko saapankkä. Amerikkaan katsomaan et secätain.
+DECODE frames=128000 sha256=ad11e3f9c939af49d9b60fde592da9a16ae6fc136e83866640dae61de3e3b19f last_two=6.07999992 text=Kykkään aattää kyllä, että jatko saappaan tätä. Tässä Amerikkaan katsomaan et seikäcksin rij.
+DECODE frames=52320 sha256=3a902976281791469ad7479abcb459f75a89cae456de77e2e7e3fb78f6d07516 last_two=1.83999991 text=And I shake our tech thing react.
+HISTORY=Késő vasárnak a egyesült államnak álnak tanátán. Egy a sajtótár Kykkään aattää kyllä, että jatko saappaan tätä. Tässä Amerikkaan katsomaan et And I shake our tech thing react.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=64
+MEASURE index=0 decode_ms=50.244000 completed_after_source_start_ms=2573.237100
+MEASURE index=1 decode_ms=89.384100 completed_after_source_start_ms=3274.310800
+MEASURE index=2 decode_ms=130.631900 completed_after_source_start_ms=4025.264600
+MEASURE index=3 decode_ms=173.424500 completed_after_source_start_ms=4810.621000
+MEASURE index=4 decode_ms=224.045700 completed_after_source_start_ms=5665.200900
+MEASURE index=5 decode_ms=274.451300 completed_after_source_start_ms=6548.762900
+MEASURE index=6 decode_ms=328.031500 completed_after_source_start_ms=7488.247200
+MEASURE index=7 decode_ms=399.726300 completed_after_source_start_ms=8508.728100
+MEASURE index=8 decode_ms=449.424300 completed_after_source_start_ms=9572.428800
+MEASURE index=9 decode_ms=512.463700 completed_after_source_start_ms=10674.386700
+MEASURE index=10 decode_ms=250.677600 completed_after_source_start_ms=11536.197000
+MEASURE index=11 decode_ms=308.676000 completed_after_source_start_ms=12461.208500
+MEASURE index=12 decode_ms=367.609200 completed_after_source_start_ms=13438.970100
+MEASURE index=13 decode_ms=428.697500 completed_after_source_start_ms=14477.858000
+MEASURE index=14 decode_ms=494.246900 completed_after_source_start_ms=15601.153500
+MEASURE index=15 decode_ms=523.751100 completed_after_source_start_ms=16125.177900
+MEASURE index=16 decode_ms=224.057200 completed_after_source_start_ms=16448.039100

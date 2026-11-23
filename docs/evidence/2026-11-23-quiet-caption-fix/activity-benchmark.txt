@@ -1,0 +1,2 @@
+rate=16000 frames=160 calls=20000 workspace=192 p50_us=0.300000 p95_us=0.400000 p99_us=0.400000 max_us=16.800000 active=742
+rate=48000 frames=480 calls=20000 workspace=192 p50_us=0.800000 p95_us=0.900000 p99_us=0.900000 max_us=5.700000 active=745

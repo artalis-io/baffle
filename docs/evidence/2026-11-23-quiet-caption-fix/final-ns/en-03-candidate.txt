@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=02c0fa945a614c283c2c74492cc41e72faa9418b7bd0e0c56b54e54ee16de30b last_two=-1 text=So
+DECODE frames=16160 sha256=29e61a498351f831ece07b3d4a3e605d192b94f8458a6d5bbe5ec846a0e9d3e9 last_two=0.479999989 text=To the north and with
+DECODE frames=27520 sha256=4a67652bac7324d7b9292f701e7c28790e89ad966dedf69d1202b336a45a197b last_two=1.03999996 text=To the north and within easy reach.
+DECODE frames=39680 sha256=85f6537bedfa4a1a5d8e2e9ffbf2180483ff24762e0522d20222f557d79dec9b last_two=0.319999993 text=Thank you.
+DECODE frames=51840 sha256=630395e7a477dead613b5e74525631c67f74562a74baef8259d9645ba2e934f3 last_two=2.39999986 text=To the north and within easy reach is a romantic and fascinating
+DECODE frames=65120 sha256=259c85beee1382ee45fcb0c59a8f4b2b4b588b89ec5a3780ed7d9858d403c965 last_two=3.43999982 text=To the north and within easy reach is the romantic and fascinating town of C.
+DECODE frames=79520 sha256=bf3bedc258dd9b0486a1ea849e74146a133e7642c22d2b0da0cc08a2c54c11d5 last_two=4.31999969 text=To the north and within easy reach is the romantic and fascinating town of Sintra and its
+DECODE frames=94400 sha256=a56be14a3fd92ce727a3b5b9b564471a50de17cdce7a2c6611e514a29db0fac8 last_two=4.79999971 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was famous.
+DECODE frames=96640 sha256=12e831724958d5abc1bb7d270fbce810d5ee52701325d2ec8c4eefe18e1c2e71 last_two=4.79999971 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which was famous.
+DECODE frames=51840 sha256=38da43a3b2b91cafcf3ae92183634df3f785c347dd25ddea24fd43367fde6561 last_two=-1 text=U
+DECODE frames=65120 sha256=81027df99de5aed9faad78ab8c464e55057c1d16e661f9e1b1909f4a3a3a40e7 last_two=-1 text=
+DECODE frames=79040 sha256=3d147fb9c1e986854e4af243cc9995d5e1c819b2bd38b070ba45fb10938d4c0a last_two=4.15999985 text=The foreigners after a glowing account of the splinter.
+DECODE frames=93760 sha256=3c4d880235145998e3e9f16e11abf268c665dbab4d42c36cd5c9844b32bcc20f last_two=-1 text=
+DECODE frames=104320 sha256=a1feb6d97bae729267008f720e754da67ece1e3a2d2dbdce01f154c9f4645d36 last_two=-1 text=
+DECODE frames=58560 sha256=ad469a1c7eaf6c4ff0bc0201c848ac32d649db4fa74f0dccbe5ed9ab362ecbab last_two=-1 text=
+HISTORY=To the north and within easy reach is the romantic and fascinating town of Sintra and which The foreigners after a glowing account of the splinter.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=65
+MEASURE index=0 decode_ms=50.723000 completed_after_source_start_ms=1604.367300
+MEASURE index=1 decode_ms=88.803700 completed_after_source_start_ms=2317.397400
+MEASURE index=2 decode_ms=130.470000 completed_after_source_start_ms=3066.323500
+MEASURE index=3 decode_ms=172.626000 completed_after_source_start_ms=3852.611600
+MEASURE index=4 decode_ms=224.300000 completed_after_source_start_ms=4678.410800
+MEASURE index=5 decode_ms=271.446800 completed_after_source_start_ms=5561.765100
+MEASURE index=6 decode_ms=327.946900 completed_after_source_start_ms=6501.849300
+MEASURE index=7 decode_ms=387.247300 completed_after_source_start_ms=7491.441600
+MEASURE index=8 decode_ms=393.439800 completed_after_source_start_ms=7885.091800
+MEASURE index=9 decode_ms=217.167300 completed_after_source_start_ms=8710.684400
+MEASURE index=10 decode_ms=265.022200 completed_after_source_start_ms=9576.716600
+MEASURE index=11 decode_ms=323.146100 completed_after_source_start_ms=10500.073700
+MEASURE index=12 decode_ms=377.183700 completed_after_source_start_ms=11481.931400
+MEASURE index=13 decode_ms=420.287300 completed_after_source_start_ms=12187.860700
+MEASURE index=14 decode_ms=242.231100 completed_after_source_start_ms=12660.506400

@@ -1,0 +1,16 @@
+DECODE frames=5600 sha256=a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c last_two=-1 text=
+DECODE frames=16160 sha256=c6a2857effc0a3354a4a3bd50d5f7313aab40ecc7503ab4cb1ef29836d803f3b last_two=-1 text=
+DECODE frames=28160 sha256=369dee9cd7a47ae163224436ed623abad0cd0978bf9e4abcf143c04c9eb840c1 last_two=0.8 text=Musa de...
+DECODE frames=41280 sha256=4a4b107139a3d1d41aba38b13e667427a20f0e30e38e9e85655df45f93631738 last_two=2.24 text=Cum să dilsază de cuță ta știi?
+DECODE frames=55840 sha256=3172f65e3524a23f4c823bed362efae379b143441905555592c65201fa296486 last_two=2.4 text=Hussa dixa di quiltata, sti mutat.
+DECODE frames=71840 sha256=ce23a63b33f5bd6a9ba9e8933d47f82177c163d14f059323d77f9877465fdce4 last_two=3.6 text=20. századik utatás kimutatna, hogy a lenátik rajta,
+DECODE frames=87360 sha256=b9347f42565ad6f0d688d8b10d739b16dd3dc35b4c7c39dc3d430a5cf001ae67 last_two=3.6 text=20. századik oktatás kimutatna, hogy a lenatikai változtatosságnak.
+DECODE frames=103840 sha256=e112a0e76f50df058955f8df17dc9fbc9192868a36bcefda292e539b6a1f15e8 last_two=5.44 text=20. századik utatás kimutatna, hogy a lenáték a változtatosságnak két variáció,
+DECODE frames=120960 sha256=eacc4dcb2710023228031b6a7212457b54d133bf4ab228e939ae218c6410ca6a last_two=6.56 text=20. századik utatás kimutatna, hogy a denatéklány változtatosságnak két variációja van rejtett.
+DECODE frames=128000 sha256=fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d last_two=6.96 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és
+DECODE frames=58240 sha256=c26ffcf922407e75a29db9bef580f41fa64d154d4d4bd6e6e6e4d59c2a65e303 last_two=1.68 text=Rajtett és kifejezet.
+DECODE frames=73760 sha256=63e561dfe8e667b0c68826bae271b6aae350878a742f53e76c2dc47ffec2435d last_two=1.68 text=Rejtett és kifejezet.
+DECODE frames=78080 sha256=ed4528e433b8b1e12a56e41123f85974a37b96554e5fd9559ce8b3583d539efd last_two=1.68 text=rejtett és kifejezett.
+HISTORY=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, rejtett és kifejezett.
+DROPPED=0
+STATUS=Figyelek · felismerés: 338 ms

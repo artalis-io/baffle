@@ -1,0 +1,35 @@
+REPLAY queue_capacity=512 input_frames=174720
+DECODE frames=5600 sha256=0fc8e810c05c839b97c3613719be325accd5fc5a73439bdcc8da81548c2113f8 last_two=-1 text=
+DECODE frames=16160 sha256=2363cd28b37f5ed8eedb755fe7b85166773051da8e77dab1cc96ac2f0dd2be8d last_two=0.239999995 text=Pride X.
+DECODE frames=27520 sha256=317f6216b2a100d55e5ef12fb9dd46cdcb6066010591480be6f60ce73452e61c last_two=0.959999979 text=Pride's X much like
+DECODE frames=38880 sha256=d65b907110f3fbdaea86ac22d6aa083a6bd25cfe00abef2fe23aa5f98df80345 last_two=-1 text=
+DECODE frames=51360 sha256=92d66bbce3952d53163d97102f6529637bde21e96385c9a455351117711188c4 last_two=-1 text=
+DECODE frames=64640 sha256=b1c98ddee381edda0bb22a71a122af6abd082892ede6ac2d5a1045db3263e8e0 last_two=-1 text=
+DECODE frames=78240 sha256=5395bd89dc2d8bc42f48f0b826eaa1fd5753e102a75430a684d7d552d95cd769 last_two=4.31999969 text=prize acts much like the acts of wolves or dogs, animals surprisingly similar to
+DECODE frames=93440 sha256=7f2d1942b1327c56c095fb2f714781d8e706eda58d68198a6f30d29c4879a251 last_two=5.27999973 text=prides acts much like the acts of wolves or dogs, animals surprisingly seem similar to lions, but not other
+DECODE frames=96000 sha256=19461bdc726b83378c83697838126a11f9fa8eba82498a3417f6c60bb589a634 last_two=5.27999973 text=prides acts much like the acts of wolves or dogs, animals surprisingly seem similar to lions, but not other
+DECODE frames=50880 sha256=435a4bca4a08122accdee6570cb26b2d0dc9a87f4736def2608f58028f159a2d last_two=-1 text=
+DECODE frames=64160 sha256=3f2520a6f2c3046e4515aaf4e7ec1bb9a1ec0dc022c6f491ab3bf506618c1a8e last_two=-1 text=
+DECODE frames=77920 sha256=2945188ab02ba8ffbca9842057dc671cd2f17b0dd3dea19f968afd987dd0ca6e last_two=3.67999983 text=Similar to lions, but not other big cats in behavior. Also very good.
+DECODE frames=92800 sha256=57518351d79402328d58553f68be315414fd6b75eb212598222d3c77d662e0d4 last_two=2.07999992 text=Similar to lions, but not other big cat behavior.
+DECODE frames=96000 sha256=74d928470a123df8f2e0bdb1eba63184f95e8959efcead4b39fe78bb984438e3 last_two=3.67999983 text=Similar to lions, but not other big cats in behavior. Also very good.
+DECODE frames=49920 sha256=d31933c85600c899fadcd32084f2ad23e1a5968fe5813a6a871b7658ae219fc1 last_two=-1 text=
+HISTORY=prides acts much like the acts of wolves or dogs, animals surprisingly seem similar to lions, but Similar to lions, but not other big cats in behavior. Also very good.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=59
+MEASURE index=0 decode_ms=49.210200 completed_after_source_start_ms=2570.411300
+MEASURE index=1 decode_ms=87.927800 completed_after_source_start_ms=3270.598000
+MEASURE index=2 decode_ms=127.874800 completed_after_source_start_ms=4008.704800
+MEASURE index=3 decode_ms=167.578300 completed_after_source_start_ms=4776.583300
+MEASURE index=4 decode_ms=215.543100 completed_after_source_start_ms=5597.666600
+MEASURE index=5 decode_ms=261.089300 completed_after_source_start_ms=6460.685900
+MEASURE index=6 decode_ms=314.604500 completed_after_source_start_ms=7386.191900
+MEASURE index=7 decode_ms=372.787000 completed_after_source_start_ms=8375.204400
+MEASURE index=8 decode_ms=380.962100 completed_after_source_start_ms=8756.375300
+MEASURE index=9 decode_ms=207.456500 completed_after_source_start_ms=9568.856500
+MEASURE index=10 decode_ms=261.690300 completed_after_source_start_ms=10445.191500
+MEASURE index=11 decode_ms=311.535500 completed_after_source_start_ms=11358.454100
+MEASURE index=12 decode_ms=368.537000 completed_after_source_start_ms=12330.092400
+MEASURE index=13 decode_ms=376.226800 completed_after_source_start_ms=12706.532800
+MEASURE index=14 decode_ms=204.245200 completed_after_source_start_ms=12911.002100

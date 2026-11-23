@@ -1,0 +1,27 @@
+REPLAY queue_capacity=512 input_frames=158400
+DECODE frames=5600 sha256=3c1e546573a5d0093b866483882d6c299582743241cbdde307f35d0dea0fe4d7 last_two=-1 text=As
+DECODE frames=16320 sha256=2f7be2328b082c0f28ad263c33e73d4c47d6339f1b4718224f42ab7dc816c965 last_two=0.479999989 text=As I push it.
+DECODE frames=22080 sha256=3333a05e3074d52e2ae80c62de6cdbf11495c121e33bc05f609573b517cb85ed last_two=-1 text=
+DECODE frames=5600 sha256=0f38cc65d1273f1f0ce86cf2549e22aeda2975eaab31c6671c6d7e3d655c94ea last_two=-1 text=Uh.
+DECODE frames=16000 sha256=d7db5786e430e7000168f58086f70de8339cc5bd4917746ea529ab7644f87f73 last_two=0.560000002 text=The party is today.
+DECODE frames=19520 sha256=3b0f72e307711776b5b1e622b2c573e7687726c1dffd53bb7ce61b4b3c1e3d1f last_two=0.639999986 text=The farm it is today.
+DECODE frames=5920 sha256=4bc20b6f75b5683de6afada9ec1d4dc7983918e9e14fb8dc2d17b8c88f7976d7 last_two=-1 text=
+DECODE frames=16800 sha256=470a1b6adb7f857c1b1d35fecf72a836b1a9127b2589d398b3c45fbe6c026835 last_two=0.560000002 text=We're located in city.
+DECODE frames=18720 sha256=6a927a48c0ed1139dbd85099f7d9b054da9e08ddacdd2352997e91a0b7e179cc last_two=-1 text=
+HISTORY=As I push it.
+
+The farm it is today.
+
+We're located in city.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=11
+MEASURE index=0 decode_ms=50.962700 completed_after_source_start_ms=1982.639500
+MEASURE index=1 decode_ms=86.662500 completed_after_source_start_ms=2681.232400
+MEASURE index=2 decode_ms=107.490500 completed_after_source_start_ms=3063.770800
+MEASURE index=3 decode_ms=48.950200 completed_after_source_start_ms=4080.255300
+MEASURE index=4 decode_ms=87.267300 completed_after_source_start_ms=4795.371400
+MEASURE index=5 decode_ms=97.101300 completed_after_source_start_ms=5009.159100
+MEASURE index=6 decode_ms=49.242900 completed_after_source_start_ms=5659.539800
+MEASURE index=7 decode_ms=89.402900 completed_after_source_start_ms=6379.131900
+MEASURE index=8 decode_ms=92.906500 completed_after_source_start_ms=6492.125800

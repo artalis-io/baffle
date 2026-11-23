@@ -1,0 +1,18 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c last_two=-1 text=
+DECODE frames=16160 sha256=c6a2857effc0a3354a4a3bd50d5f7313aab40ecc7503ab4cb1ef29836d803f3b last_two=-1 text=
+DECODE frames=27040 sha256=8bffc3c7ad6c93548c494ff3415c377c570127fcd50ab47598022980dffa8cf5 last_two=-1 text=Mussadilla.
+DECODE frames=39200 sha256=892126af191c25c4f638f31e924283fb63e5c81b314c4624a6f27fc297c3f482 last_two=1.83999991 text=Who sa di sa di quest'aște?
+DECODE frames=51680 sha256=11c035fc47d7aeece73e89d5c904e4734b0d50accc568afe14a479fccdaece28 last_two=2 text=Hussa del sata di quiltă stimuta.
+DECODE frames=64960 sha256=68976a928a192cd14e205e64d7121d8364796cc881fdfeb3adc00b32b4847036 last_two=-1 text=20.
+DECODE frames=79200 sha256=675ba1c30326cc7a23cb754d01544a0ddf68595b5825c6159c4929f5a2fd24f8 last_two=3.51999998 text=20. századik utatás kimutatna, hogy a gyeneté változás.
+DECODE frames=93920 sha256=c07ae9f723ec26af2354e669f0620d54c5668eba0d08d06bb651ac6dd9dddbca last_two=5.35999966 text=20. századik utatás ki mutatna, hogy a denatikai változtatosságnak két van.
+DECODE frames=109920 sha256=c6356fc1500572d758876f9c0fab238a6078e6429505435bf27574201d5cce1f last_two=5.75999975 text=20. századik utatás kimutatna, hogy a denatikai változtatosságnak, két variációja van,
+DECODE frames=126720 sha256=eb54a8e4c06ebd6bc1fc6f5b9919848d04e99a569ed52a1773a7360d8a15f12e last_two=6.63999987 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett.
+DECODE frames=128000 sha256=fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d last_two=6.96000004 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és
+DECODE frames=56320 sha256=09b367344a7fe5bcfe30966b2f9a3b89db40f191592f81c9a3b8fbc4b9ad938d last_two=1.67999995 text=Rajtett és kifejezet.
+DECODE frames=69760 sha256=61e91b219c5010710fd7f9f15572bee9b2862ee6aeb906d64c9916818ae96799 last_two=1.67999995 text=Rejtett és kifejezet.
+DECODE frames=78080 sha256=ed4528e433b8b1e12a56e41123f85974a37b96554e5fd9559ce8b3583d539efd last_two=1.67999995 text=rejtett és kifejezett.
+HISTORY=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, rejtett és kifejezett.
+DROPPED=0
+STATUS=Listening

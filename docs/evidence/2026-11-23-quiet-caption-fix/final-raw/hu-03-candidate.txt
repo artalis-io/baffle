@@ -1,0 +1,33 @@
+REPLAY queue_capacity=512 input_frames=162240
+DECODE frames=5600 sha256=a8c64d24ebb561ecf1d4092873b846e913be5ca050f405b66b0f78bcb5a80b7c last_two=-1 text=
+DECODE frames=16320 sha256=61aaf8561566bb91fc2c5e89a58491a183e03c853c5f5a6c137c45ad5784eea3 last_two=-1 text=
+DECODE frames=27360 sha256=a78ac1911a15b295df007f922773038cb407569d2336cbde0e15672c421d447d last_two=-1 text=Mussadilla.
+DECODE frames=39040 sha256=068b7e34c593c71ff9b44563d8f51b48e09991191ef3d16f9a871c141ea7ec5c last_two=1.83999991 text=Who's a deal sada di quota?
+DECODE frames=51840 sha256=87f0eee376bd193eb93a15e703a8935285b66adef1f98a6e7242dfda3c103239 last_two=2.39999986 text=Hussa del sata de culata, știi mutat.
+DECODE frames=65440 sha256=ca442ada8a172cae85a2e3d41f6ababdf5a6685243550b3576211fe523a26e12 last_two=3.43999982 text=20. századik utatása kimutatna, hogy a deneték.
+DECODE frames=79840 sha256=bfcc518c45daba0c1ca29ecb70da53c72388e7213bfd312f7cf1828e1a066811 last_two=3.51999998 text=20. századik utatás kimutatna, hogy a lenaté változatosság.
+DECODE frames=94880 sha256=5d70a4a43f2248702e1719bbb5cec08ed12f4dec4441b7f1c8911d69257d741e last_two=5.35999966 text=20. századik utatás kimutatna, hogy a denatiklai változtatosságnak két far.
+DECODE frames=111040 sha256=e791a8f7a37cccb7931ddba5dacc3ea4f8b17c7bc7ebb243c1801dec3d307eb7 last_two=5.75999975 text=20. századik utatás kimutatna, hogy a denatikai változatosságnak, két variációja van,
+DECODE frames=128000 sha256=fd7993d29551ee6053cae57bb25c6a53375c64d478e0a734c7d8bfc764f7bb0d last_two=6.96000004 text=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, retett és
+DECODE frames=49920 sha256=5b5641366e8ea69ef1ec1e7f36e72b4a5810e3ffd30450379cceba032eb3ad6b last_two=1.67999995 text=rejtett és kifejezett.
+DECODE frames=62880 sha256=2a73b0c57857e83406a0c8d273d657fc9d5bb3a192da8c93c383714c5c98f3df last_two=1.67999995 text=A szója van, rejtett és kifejezet.
+DECODE frames=77280 sha256=471bfd1035ab366cfe7f79bed530816068a84ef43e916b33d9fe46dcf1f8545b last_two=1.67999995 text=Rejtett és kifejezett.
+DECODE frames=78080 sha256=ed4528e433b8b1e12a56e41123f85974a37b96554e5fd9559ce8b3583d539efd last_two=1.67999995 text=rejtett és kifejezett.
+HISTORY=20. századik utatás kimutatna, a denatikai változatosságnak két variációja van, rejtett és kifejezett.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=51
+MEASURE index=0 decode_ms=52.299500 completed_after_source_start_ms=1565.158100
+MEASURE index=1 decode_ms=91.484500 completed_after_source_start_ms=2285.916500
+MEASURE index=2 decode_ms=129.798400 completed_after_source_start_ms=3016.287900
+MEASURE index=3 decode_ms=173.940700 completed_after_source_start_ms=3793.384300
+MEASURE index=4 decode_ms=223.311900 completed_after_source_start_ms=4644.731700
+MEASURE index=5 decode_ms=274.235700 completed_after_source_start_ms=5543.573100
+MEASURE index=6 decode_ms=326.895400 completed_after_source_start_ms=6494.746800
+MEASURE index=7 decode_ms=392.207900 completed_after_source_start_ms=7502.813800
+MEASURE index=8 decode_ms=446.900600 completed_after_source_start_ms=8565.947100
+MEASURE index=9 decode_ms=509.952300 completed_after_source_start_ms=9669.386100
+MEASURE index=10 decode_ms=209.205300 completed_after_source_start_ms=10500.880800
+MEASURE index=11 decode_ms=264.115000 completed_after_source_start_ms=11371.304900
+MEASURE index=12 decode_ms=316.353400 completed_after_source_start_ms=12302.184600
+MEASURE index=13 decode_ms=317.241300 completed_after_source_start_ms=12619.604500

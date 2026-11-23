@@ -1,0 +1,41 @@
+REPLAY queue_capacity=512 input_frames=183360
+DECODE frames=5600 sha256=51237b31a29e75ff70ff37c356342f90afafc940131e666af3b0e7bb1591692c last_two=-1 text=So
+DECODE frames=16160 sha256=1d5aef94f18d653ed04808ad10c08100a9f391a1c370e2e84f3a7788533ff816 last_two=0.479999989 text=To the north and with
+DECODE frames=27360 sha256=975ae58a2f40f764dc2aa8d24cd0b729fe54e131570e1fe51ebc939470ae510b last_two=1.03999996 text=To the north and within easy reach.
+DECODE frames=39360 sha256=4785355a4934c5b7787dfb03404d5a4ac4f1ec846299015207b1555530a1dafa last_two=1.75999999 text=To the north and within easy reach is a romantic
+DECODE frames=52000 sha256=920f97a0dcd9c72f4317da7cccad4caf20612cc1cfa000d7430c1892758fc830 last_two=2.48000002 text=To the north and within easy reach is a romantic and fascinating.
+DECODE frames=65600 sha256=1c19649ced7c5c332f5dbe600f3ac6b7d783cdd2804d5bbe77b73f6c6b0e4d0c last_two=3.43999982 text=To the north and within easy reach is the romantic and fascinating town of C
+DECODE frames=79680 sha256=f60026e5aa01b18e23b127f8efc28f100ea3a8a5fb3443bd1137ae065421f05b last_two=4.31999969 text=To the north and within easy reach is the romantic and fascinating town of Sintra and its
+DECODE frames=94720 sha256=2ef2e63b7d81938068fd0209dc160f80e36cdf87274a8c2092416c53414a2f63 last_two=4.79999971 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which is famous.
+DECODE frames=96000 sha256=5dac918029556d71c7e91ce741a6c88c5e7adc229a5a00865174085752afeb9f last_two=4.71999979 text=To the north and within easy reach is the romantic and fascinating town of Sintra and which is famous.
+DECODE frames=52800 sha256=56c3cc99db26f5101b87497b8acbd2bf30b73e91fc528af58be73fd23dcbd4d2 last_two=-1 text=
+DECODE frames=66240 sha256=196ca59c5fc4890e3146434614fc656c47d7a8966e25e7429cb1991a383c86a6 last_two=-1 text=
+DECODE frames=80640 sha256=5d83e01ce9b51942850457366e85140e98811a43def92ec77a3e393891a4ea8f last_two=-1 text=
+DECODE frames=95360 sha256=cca678b123a6d6558e89907d09a0b6e90871ef67c0de895b04d21c2f99166637 last_two=5.11999989 text=Intra and it's just a famous to foreigners after a glowing account of the splinters recorded by
+DECODE frames=96000 sha256=f660520e3a41e28137ef569c68915685f1b4d7b9caf9c7115ee44427bd379388 last_two=0.799999952 text=Intra and it's just famous.
+DECODE frames=96000 sha256=d5db00a8c11c6ea8f55a1c7e8f08f9c9282661314ed3ea85564251d26a41a241 last_two=0.560000002 text=And it's just famous.
+DECODE frames=96000 sha256=6a8cf8136e4a44e40a68b701dc3c5e3a2032d90a8272ee7da155f77ecd9943d1 last_two=0.319999993 text=This was famous.
+DECODE frames=96000 sha256=7a9b76ffee5331507e95e23eeab62bd8ffb668388cef6b64c9a91b8fc25607d8 last_two=-1 text=
+DECODE frames=55360 sha256=391b0bc69da7e82f2cc4a9bdfa91696ca5b78c6e8f71f02c49f78cd72228cc0b last_two=-1 text=
+HISTORY=To the north and within easy reach is the romantic and fascinating town of Sintra and which Intra And it's This was famous.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=108
+MEASURE index=0 decode_ms=49.901500 completed_after_source_start_ms=1614.732100
+MEASURE index=1 decode_ms=87.314900 completed_after_source_start_ms=2315.721700
+MEASURE index=2 decode_ms=128.978900 completed_after_source_start_ms=3050.583500
+MEASURE index=3 decode_ms=169.865200 completed_after_source_start_ms=3834.896600
+MEASURE index=4 decode_ms=220.187300 completed_after_source_start_ms=4685.773800
+MEASURE index=5 decode_ms=268.724300 completed_after_source_start_ms=5569.335900
+MEASURE index=6 decode_ms=320.037600 completed_after_source_start_ms=6520.068300
+MEASURE index=7 decode_ms=375.754000 completed_after_source_start_ms=7509.893700
+MEASURE index=8 decode_ms=379.166900 completed_after_source_start_ms=7889.271800
+MEASURE index=9 decode_ms=219.054600 completed_after_source_start_ms=8738.621100
+MEASURE index=10 decode_ms=268.762200 completed_after_source_start_ms=9625.162600
+MEASURE index=11 decode_ms=316.468000 completed_after_source_start_ms=10556.237700
+MEASURE index=12 decode_ms=378.921400 completed_after_source_start_ms=11538.263300
+MEASURE index=13 decode_ms=374.700700 completed_after_source_start_ms=11913.192400
+MEASURE index=14 decode_ms=373.008800 completed_after_source_start_ms=12286.426000
+MEASURE index=15 decode_ms=372.386200 completed_after_source_start_ms=12659.036400
+MEASURE index=16 decode_ms=372.147600 completed_after_source_start_ms=13031.404800
+MEASURE index=17 decode_ms=229.045600 completed_after_source_start_ms=13260.682100

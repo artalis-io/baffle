@@ -1,0 +1,27 @@
+REPLAY queue_capacity=512 input_frames=104640
+DECODE frames=5600 sha256=5c9916d58aa3657014fb22c372f794b9f6f9304ef966dda791f8a459a3cae2bc last_two=-1 text=
+DECODE frames=16160 sha256=4f2dff863f50ef1439dcc0c834cb7b8b653ecbc7b3cb118728c7d6c5a8cc15f7 last_two=-1 text=
+DECODE frames=26880 sha256=00375a9775198f736bbe94c7b60df938ab6da50c18d2af470f86e077c5229645 last_two=-1 text=Hello.
+DECODE frames=38720 sha256=bb8f527a2209cbc8b2f7bdf12563d30441616e13a44c174d79ae0950def29888 last_two=2 text=E lo sarà gredi di Arm.
+DECODE frames=51360 sha256=16c00130bf4daa1a7eb3305c2dd5969223a040b8af0cacefff114fbc372ffde6 last_two=2.07999992 text=Először a Grét jármusban lévő.
+DECODE frames=64480 sha256=b4f050d73969648e94837f7286a45ad468ae253c55e4a5533cffc880c2c482ab last_two=2.79999995 text=Először a Grate Jármuszban lévő James.
+DECODE frames=78400 sha256=5e46f0e4b28e04f0ba509078280ba27abbd95d4778c864e928ae18a8e345ed1d last_two=3.91999984 text=Először a great jármusban lévő James Badet kórház.
+DECODE frames=92960 sha256=5f0015e498303f85b6d86ec172722211bba4be24b0e1d8c1ec3be57f9d77cd6c last_two=4.55999994 text=Először a Great Yarmuthban lévő James Badget kórházban kezelték.
+DECODE frames=108800 sha256=3ffc8c374d9c3770ba1e4fadef850155826e8ae84a68c7bd5958e785ba198120 last_two=4.55999994 text=Először a Great Yarmuthban lévő James Badget kórházban kezelték.
+DECODE frames=112480 sha256=67f9a691f974ca4fbfd98a0c32ec2c62b5f33f95919ed9e84a0ae8e9e4733d4c last_two=3.91999984 text=Először a Great Yarmuthban lévő James Badgett-kórházban kezelték.
+DECODE frames=69920 sha256=d5e235e42da659291d524520e00296aed67475210d9e59ea8032477239341bf0 last_two=1.19999993 text=James Peggy kórházban kezelték.
+HISTORY=Először a Great Yarmuthban lévő James James Peggy kórházban kezelték.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=63
+MEASURE index=0 decode_ms=52.447700 completed_after_source_start_ms=1158.321600
+MEASURE index=1 decode_ms=85.370900 completed_after_source_start_ms=1854.135400
+MEASURE index=2 decode_ms=124.360000 completed_after_source_start_ms=2585.097300
+MEASURE index=3 decode_ms=169.289800 completed_after_source_start_ms=3368.817400
+MEASURE index=4 decode_ms=217.584100 completed_after_source_start_ms=4190.457600
+MEASURE index=5 decode_ms=264.164000 completed_after_source_start_ms=5056.204500
+MEASURE index=6 decode_ms=313.025700 completed_after_source_start_ms=5972.990500
+MEASURE index=7 decode_ms=371.718600 completed_after_source_start_ms=6962.561700
+MEASURE index=8 decode_ms=428.675300 completed_after_source_start_ms=7992.066100
+MEASURE index=9 decode_ms=435.745400 completed_after_source_start_ms=8428.052500
+MEASURE index=10 decode_ms=282.206700 completed_after_source_start_ms=8727.091800

@@ -1,0 +1,24 @@
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/baffle-c11-20261121/build-analysis
+[  7%] Building C object CMakeFiles/baffle_speex_kernel.dir/src/speex/mdf_baffle.c.o
+[ 15%] Building C object CMakeFiles/baffle_speex_kernel.dir/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/fftwrap.c.o
+[ 23%] Building C object CMakeFiles/baffle_speex_kernel.dir/tmp/baffle.fVOhT0/build-aec/_deps/baffle_speex_source-src/libspeexdsp/smallft.c.o
+[ 23%] Built target baffle_speex_kernel
+[ 30%] Building C object CMakeFiles/baffle.dir/src/pcm.c.o
+[ 53%] Building C object CMakeFiles/baffle.dir/src/channels.c.o
+[ 53%] Building C object CMakeFiles/baffle.dir/src/core.c.o
+[ 53%] Building C object CMakeFiles/baffle.dir/src/clock.c.o
+[ 69%] Building C object CMakeFiles/baffle.dir/src/conditioning.c.o
+[ 69%] Building C object CMakeFiles/baffle.dir/src/resampler.c.o
+[ 76%] Building C object CMakeFiles/baffle.dir/src/noise.c.o
+[ 84%] Building C object CMakeFiles/baffle.dir/src/aec.c.o
+[ 92%] Building C object CMakeFiles/baffle.dir/src/pipeline.c.o
+[100%] Linking C static library libbaffle.a
+[100%] Built target baffle

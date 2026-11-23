@@ -1,0 +1,85 @@
+{
+  "public_manifest_sha256": "381337669f5ff818ea05365ed6adb6016be6f3f5a1be29960b1d949edd7116c0",
+  "stage": "raw",
+  "source_license": "CC-BY-4.0",
+  "source_revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "recordings": [
+    {
+      "case": "hu-01",
+      "language": "hu",
+      "stage": "raw",
+      "reference": "Hongkong nevét a Hongkong-szigetről kapta, és ez a hely sok turista számára a figyelem középpontjában áll.",
+      "source_dataset_id": 1742,
+      "source_pcm_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "supplied_wav_sha256": "835aba35d4e0e708a5916fd78dd54439f171132b4fecae964584055ff3956e15",
+      "frames": 192960,
+      "duration_s": 12.06
+    },
+    {
+      "case": "hu-02",
+      "language": "hu",
+      "stage": "raw",
+      "reference": "Néhányan úgy vélték, igaza volt, de sokan hitték az ellenkezőjét; hogy a Naprendszer a Föld körül forog, beleértve a Napot (sőt, a többi csillagot is).",
+      "source_dataset_id": 1874,
+      "source_pcm_sha256": "a908c352b6ffa741ba2ebd4cfa8596172c1e6376e0cda84aa174e4f4f2bdd208",
+      "supplied_wav_sha256": "a908c352b6ffa741ba2ebd4cfa8596172c1e6376e0cda84aa174e4f4f2bdd208",
+      "frames": 193920,
+      "duration_s": 12.12
+    },
+    {
+      "case": "hu-03",
+      "language": "hu",
+      "stage": "raw",
+      "reference": "Huszadik századi kutatás kimutatta, hogy a genetikai változatosságnak két variációja van: rejtett és kifejezett.",
+      "source_dataset_id": 1914,
+      "source_pcm_sha256": "c0d0502026d440a313eac63d6909b78d3ccc06798962c9211bfee19ae61fdb97",
+      "supplied_wav_sha256": "c0d0502026d440a313eac63d6909b78d3ccc06798962c9211bfee19ae61fdb97",
+      "frames": 162240,
+      "duration_s": 10.14
+    },
+    {
+      "case": "hu-04",
+      "language": "hu",
+      "stage": "raw",
+      "reference": "A spektrum másik oldalán valaki egy felismerhetetlen személlyé alakul, aki úgy érzi, hogy minden, a csoport által létrehozott dolgot meg kell változtatnia és a sajátjává kell tennie.",
+      "source_dataset_id": 1868,
+      "source_pcm_sha256": "5284ccac89d6ca11651dbf334073215a9411c448740050afc8059befb34cc7a1",
+      "supplied_wav_sha256": "5284ccac89d6ca11651dbf334073215a9411c448740050afc8059befb34cc7a1",
+      "frames": 280320,
+      "duration_s": 17.52
+    }
+  ],
+  "executables": {
+    "cpp": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-c11-audit\\baseline-binaries\\BaffleLive-cpp.exe",
+      "sha256": "7c8a40b41d1f0a5d72a5438d30c509262a8daa7670fea6981ae79c5c7fb249f4"
+    },
+    "c11": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-c11-audit\\win32\\BaffleLive.exe",
+      "sha256": "adf296c9cd0ab7282914e2dd2a119b227d453f2dcf4131b7d800484faa9c5f1f"
+    },
+    "replay_cpp128": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\replay_cpp.exe",
+      "sha256": "43d4a5483e5f68306d0e64b00c85851cf69e24c205ff694791a4e71c73cbbb9e"
+    },
+    "replay_c128": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\replay_c128.exe",
+      "sha256": "a91e0dbc905686b371b458884240a60b54b1cb78f837fc2c6f46f626bdbbf7ac"
+    },
+    "replay_current512": {
+      "path": "C:\\Users\\Mark\\artalis.io\\src\\baffle\\build-public-live\\build\\native-app\\BaffleReplay.exe",
+      "sha256": "846599b4e34508344c53026d76d8e9ad3773129900d3de613c0cda68f7c13136"
+    }
+  },
+  "models": {
+    "decoder.int8.onnx": "0222a86147299d4dee90edf95b6d13827edb42ad8b7c9cf0b2582f030937c0b5",
+    "encoder.int8.onnx": "1afbe69c1ffdabee94755f42e4daf1d93549131a3da11356bda84fcef0f2c479",
+    "joiner.int8.onnx": "cbd02f3696e9944970111fb439d9c3fd365a80374565f13f2b9c7007d253fc98",
+    "tokens.txt": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+  },
+  "scope": "Raw or fixed NS PCM, paced at 160 samples/10 ms into actual native caption workers. Capture seam replaced; no hardware/cloud.",
+  "references": "Independent publisher transcripts; not newly reviewed by a human; numeric/compound formatting retained in error counts",
+  "selected_languages": [
+    "hu"
+  ]
+}

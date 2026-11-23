@@ -1,0 +1,37 @@
+REPLAY queue_capacity=512 input_frames=176640
+DECODE frames=5600 sha256=45972760f940db4a1ea3c9a169c5cb9c46d5edf5cfacfaa9be07aad5c22898e5 last_two=-1 text=
+DECODE frames=16000 sha256=3ecb4234bbda8f1d183b6271b062a2b4474e0f03fb32a38a0465fccf8885026b last_two=-1 text=
+DECODE frames=27360 sha256=d0332c9c20efab858f111256997ed9c7844cb25b15a4a3cd08dad7ecf586faf3 last_two=0.799999952 text=The aspect
+DECODE frames=39200 sha256=05c06b8b8cbd59fdd0342825276f7f2e8fb436b9eab0a88f71a9d3cb609c2c85 last_two=1.91999996 text=The aspect ratio of this
+DECODE frames=51520 sha256=661c261411a848386294635e37ce14eceb8e7fdea4f2886141fe72f0cee35170 last_two=2.31999993 text=The aspect ratio of this format the
+DECODE frames=64320 sha256=7aad19e353a0f648022d6c124cfc20d8cdf4b1d40492b2bc84038294fca44411 last_two=2.39999986 text=The aspect ratio of this format diving
+DECODE frames=78240 sha256=336a35a74ef2a34005e616dcc286b0bcbff920710e5bbfcd487ae18b25170c22 last_two=4.4000001 text=The aspect ratio of this format dividing by twelve to the
+DECODE frames=92960 sha256=30986f3c94aec291a7b9938e30c121944fed4736c74b6ac61864c1e63e01405b last_two=-1 text=
+DECODE frames=108480 sha256=404963767c565f0620488d2310370594ef4d76543d4293d3b0a90e63e33135b9 last_two=6.15999985 text=The aspect ratio of this format dividing by twelve to obtain the simplest whole number ratio.
+DECODE frames=125280 sha256=2cde6a75d16f0aff49ea11d256cfa4f2e55a697d6a1699451c519d3ce5a88d69 last_two=6.71999979 text=The aspect ratio of this format dividing by twelve to obtain the simplest whole number ratio is
+DECODE frames=128000 sha256=fe53f599d360ed94dd43d0bd1b083ecc8cbe12cd37b521c52ce209ec7d019a36 last_two=-1 text=
+DECODE frames=70080 sha256=0b136da102731ba43efbe471d2317040fac7b4304f93546d61a13a337d089f08 last_two=-1 text=
+DECODE frames=84160 sha256=1c4a3690c665524d354281c390ebb4eeb2df75478cf665b3fc070e97e6008c3f last_two=-1 text=
+DECODE frames=99200 sha256=6f832c6a736b86cbfa216364c72ce8916f0263eb721105fde5757fd49d1dd3f5 last_two=-1 text=
+DECODE frames=101600 sha256=e3a7d2abd38cf9f9913ba16e101539cf857c1dd5d21406fff39b73cbfb6df999 last_two=-1 text=
+DECODE frames=58560 sha256=87857b3d4f1ad1350ad1c5ed6e4dbb408f760c0a6ae1cc382a6a73e2e303708d last_two=1.03999996 text=said to be free to two.
+HISTORY=The aspect ratio of this format dividing by twelve to obtain the simplest whole number said to be free to two.
+DROPPED=0
+STATUS=Listening
+PEAK_QUEUED=80
+MEASURE index=0 decode_ms=50.513400 completed_after_source_start_ms=1321.497000
+MEASURE index=1 decode_ms=84.825300 completed_after_source_start_ms=2032.210400
+MEASURE index=2 decode_ms=125.611000 completed_after_source_start_ms=2778.797400
+MEASURE index=3 decode_ms=166.126300 completed_after_source_start_ms=3546.497900
+MEASURE index=4 decode_ms=213.817600 completed_after_source_start_ms=4364.897100
+MEASURE index=5 decode_ms=258.557000 completed_after_source_start_ms=5226.880600
+MEASURE index=6 decode_ms=307.939000 completed_after_source_start_ms=6141.079200
+MEASURE index=7 decode_ms=360.544100 completed_after_source_start_ms=7105.680800
+MEASURE index=8 decode_ms=419.396900 completed_after_source_start_ms=8143.866500
+MEASURE index=9 decode_ms=477.740800 completed_after_source_start_ms=9236.991100
+MEASURE index=10 decode_ms=483.719000 completed_after_source_start_ms=9720.981000
+MEASURE index=11 decode_ms=274.696300 completed_after_source_start_ms=10597.058700
+MEASURE index=12 decode_ms=325.304900 completed_after_source_start_ms=11530.314400
+MEASURE index=13 decode_ms=377.169800 completed_after_source_start_ms=12527.720800
+MEASURE index=14 decode_ms=384.809700 completed_after_source_start_ms=12912.750900
+MEASURE index=15 decode_ms=233.714900 completed_after_source_start_ms=13161.443800
